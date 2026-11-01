@@ -5,6 +5,7 @@
 - 参考記事：[Giving AI agents design system context from the terminal](https://www.atlassian.com/blog/ai-at-work/giving-ai-agents-design-system-context-from-the-terminal-what-we-learned-building-a-cli)
 - 原本：`src/pages/CTApp.tsx`（1,094行）＋ `styles.css`（1,282行）＋ DADS サンプル部品 5 種
 - ADS 版：[`src/CTApp.tsx`](src/CTApp.tsx)（1 ファイル、**自前 CSS 0 行**。レイアウトはすべて `xcss` とトークンで指定）
+- デザイン判断の言語化：[docs/design-decisions.md](docs/design-decisions.md)
 - 原本の props、状態、固定データ（[`src/fixtures.ts`](src/fixtures.ts)）はそのまま使いました。見た目だけを ADS に置き換えています。
 
 ## 結論（要約）
