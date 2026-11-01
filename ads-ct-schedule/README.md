@@ -6,6 +6,7 @@
 - 原本：`src/pages/CTApp.tsx`（1,094行）＋ `styles.css`（1,282行）＋ DADS サンプル部品 5 種
 - ADS 版：[`src/CTApp.tsx`](src/CTApp.tsx)（1 ファイル、**自前 CSS 0 行**。レイアウトはすべて `xcss` とトークンで指定）
 - デザイン判断の言語化：[docs/design-decisions.md](docs/design-decisions.md)
+- AI にデザイン意図を届ける仕組みの比較（ADS／DADS）：[docs/ai-design-intent-mechanisms.md](docs/ai-design-intent-mechanisms.md)
 - 原本の props、状態、固定データ（[`src/fixtures.ts`](src/fixtures.ts)）はそのまま使いました。見た目だけを ADS に置き換えています。
 
 ## 結論（要約）
