@@ -1,0 +1,9 @@
+$ npx @atlaskit/ads-cli search spinner --type component
+Results (2):
+
+Spinner  @atlaskit/spinner
+   ADS  ·  component  ·  4 props  ·  1 example
+   → npx @atlaskit/ads-cli component Spinner
+Skeleton  @atlaskit/avatar
+   ADS  ·  component  ·  4 props  ·  1 example
+   → npx @atlaskit/ads-cli component Skeleton

@@ -1,0 +1,27 @@
+$ npx @atlaskit/ads-cli search japanese font
+Results (4):
+
+Components (1):
+
+MetricText  @atlaskit/primitives
+   ADS  ·  component  ·  6 props  ·  1 example
+   → npx @atlaskit/ads-cli component MetricText
+
+Tokens (1):
+
+font.code
+   ADS  ·  token  ·  = normal 400 0.875em/1 "Atlassian Mono", ui-monospace, Menlo, "Segoe UI Mono", "U…
+   → npx @atlaskit/ads-cli token font.code
+
+Icons (1):
+
+TextIcon  @atlaskit/icon/core/text
+   ADS  ·  icon  ·  Single purpose - Reserved for representing text objects.
+   → npx @atlaskit/ads-cli icon TextIcon
+
+Docs (1):
+
+Japanese font
+   ADS  ·  docs
+   Our typefaces We use two typefaces, Atlassian Sans for headings and body copy a…
+   → npx @atlaskit/ads-cli docs japanese font

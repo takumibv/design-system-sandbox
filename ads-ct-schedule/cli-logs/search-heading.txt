@@ -1,0 +1,9 @@
+$ npx @atlaskit/ads-cli search heading --type component
+Results (2):
+
+Heading  @atlaskit/heading
+   ADS  ·  component  ·  5 props  ·  1 example
+   → npx @atlaskit/ads-cli component Heading
+HeadingContextProvider  @atlaskit/heading
+   ADS  ·  component  ·  2 props  ·  1 example
+   → npx @atlaskit/ads-cli component HeadingContextProvider

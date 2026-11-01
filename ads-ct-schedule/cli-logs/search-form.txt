@@ -1,0 +1,9 @@
+$ npx @atlaskit/ads-cli search form --type component
+Results (2):
+
+Form  @atlaskit/form
+   ADS  ·  component  ·  13 props  ·  1 example
+   → npx @atlaskit/ads-cli component Form
+FormSection  @atlaskit/form
+   ADS  ·  component  ·  3 props  ·  1 example
+   → npx @atlaskit/ads-cli component FormSection

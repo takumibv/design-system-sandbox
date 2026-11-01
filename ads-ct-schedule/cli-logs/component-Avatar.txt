@@ -1,0 +1,67 @@
+$ npx @atlaskit/ads-cli component Avatar
+Avatar
+@atlaskit/avatar
+
+Props (20)
+  appearance     AppearanceType | undefined
+  Indicates the shape of the avatar. Most avatars are circular, but square avatars can be used for 'container' objects.
+  aria-controls  string | undefined
+  Identifies the popup element that the trigger controls. Should match the `id` of the popup content for screen readers to understand the relationship.
+  aria-expanded  boolean | undefined
+  Announces to assistive technology whether the popup is currently open or closed.
+  aria-haspopup  boolean | "grid" | "dialog" | "menu" | "listbox" | "tree" | undefined
+  Informs assistive technology that this element triggers a popup. With `platform-dst-top-layer`, it is not set when the popup has no `role`.
+  as             keyof JSX.IntrinsicElements | React.ComponentType<React.AllHTMLAttributes<HTMLElement>> | undefined
+  Replace the wrapping element. This accepts the name of a html tag which will be used to wrap the element.
+  borderColor    string | undefined
+  Used to override the default border color around the avatar body. Accepts any color argument that the border-color CSS property accepts.
+  children       string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | It…
+  Supply a custom avatar component instead of the default.
+  href           string | undefined
+  Provides a url for avatars being used as a link.
+  imgLoading     "lazy" | "eager" | undefined
+  Defines the loading behaviour of the avatar image. Default value is eager.
+  isDisabled     boolean | undefined
+  Change the style to indicate the avatar is disabled.
+  label          string | undefined
+  Used to provide custom content to screen readers. Status or presence is not added to the label by default if it passed as nodes. If status or presence is passed as a string, the default content format is "John Smith (online)".
+  name           string | undefined
+  Provides alt text for the avatar image.
+  onClick        AvatarClickEventHandler | undefined
+  Handler to be called on click.
+  presence       (string & {}) | Presence | Omit<ReactNode, string> | null | undefined
+  Indicates a user's online status by showing a small icon on the avatar. Refer to presence values on the presence component. Alternatively accepts any React element. For best results, it is recommended to use square content with height and width of 100%.
+  size           SizeType | undefined
+  Defines the size of the avatar. Default value is `medium`. Available sizes (in pixels): `xxsmall` (16), `small` (24), `medium` (32), `large` (40), `xlarge` (96), `xxlarge` (128). The `xsmall` size is deprecated. Use `xxsmall` for 16px avatars. The `UNSAFE_xsmall` (20px) size is an unsafe, transitional value and is intentionally not documented for general use — see `SizeType`. This can also be controlled by the `size` property of the `AvatarContext` export from this package. If no prop is given when the `size` is set via this context, the context's value will be used.
+  src            string | undefined
+  A url to load an image from (this can also be a base64 encoded image).
+  stackIndex     number | undefined
+  The index of where this avatar is in the group `stack`.
+  status         (string & {}) | Omit<ReactNode, string> | Status | null | undefined
+  Indicates contextual information by showing a small icon on the avatar. Refer to status values on the Status component.
+  tabIndex       number | undefined
+  Assign specific tabIndex order to the underlying node.
+  target         "_blank" | "_self" | "_top" | "_parent" | undefined
+  Pass target down to the anchor, if href is provided.
+
+Examples (1):
+
+Example 1
+  tsx                                                                                               
+  import Avatar from '@atlaskit/avatar/avatar';                                                     
+  const Examples = (): React.JSX.Element => (                                                       
+    <>                                                                                              
+      <Avatar src="https://example.com/avatar.jpg" name="John Doe" />                               
+      <Avatar name="Jane Smith" appearance="hexagon" size="large" status="locked" />                
+      <Avatar                                                                                       
+        name="Bob Wilson"                                                                           
+        appearance="square"                                                                         
+        size="small"                                                                                
+        presence="online"                                                                           
+        status="approved"                                                                           
+      />                                                                                            
+    </>                                                                                             
+  );                                                                                                
+  export default Examples;                                                                          
+
+Design: https://go.atlassian.com/figma-library-ads-11159-23191

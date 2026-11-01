@@ -1,0 +1,9 @@
+$ npx @atlaskit/ads-cli search modal dialog --type component
+Results (2):
+
+Modal  @atlaskit/modal-dialog
+   ADS  ·  component  ·  15 props  ·  1 example
+   → npx @atlaskit/ads-cli component Modal
+ModalFooter  @atlaskit/modal-dialog
+   ADS  ·  component  ·  1 prop  ·  1 example
+   → npx @atlaskit/ads-cli component ModalFooter

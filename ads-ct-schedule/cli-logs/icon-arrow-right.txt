@@ -1,0 +1,15 @@
+$ npx @atlaskit/ads-cli search arrow right --type icon
+Results (4):
+
+ArrowCurvedDownLeftIcon  @atlaskit/icon-lab/core/arrow-curved-down-left
+   ADS  ·  icon
+   → npx @atlaskit/ads-cli icon ArrowCurvedDownLeftIcon
+ShapeParallelogramSkewRightIcon  @atlaskit/icon-lab/core/shape-parallelogram-skew-right
+   ADS  ·  icon  ·  Right parallelogram shape tool in Whiteboards
+   → npx @atlaskit/ads-cli icon ShapeParallelogramSkewRightIcon
+ArrowRightIcon  @atlaskit/icon/core/arrow-right
+   ADS  ·  icon  ·  Multi purpose - Known uses: link to nested menu item, a linked menu item, next…
+   → npx @atlaskit/ads-cli icon ArrowRightIcon
+ArrowUpRightIcon  @atlaskit/icon/core/arrow-up-right
+   ADS  ·  icon  ·  Multi purpose
+   → npx @atlaskit/ads-cli icon ArrowUpRightIcon

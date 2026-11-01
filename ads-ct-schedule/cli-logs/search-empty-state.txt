@@ -1,0 +1,9 @@
+$ npx @atlaskit/ads-cli search empty state --type component
+Results (2):
+
+EmptyState  @atlaskit/empty-state
+   ADS  ·  component  ·  16 props  ·  1 example
+   → npx @atlaskit/ads-cli component EmptyState
+Flag  @atlaskit/flag
+   ADS  ·  component  ·  15 props  ·  1 example
+   → npx @atlaskit/ads-cli component Flag

@@ -1,0 +1,15 @@
+$ npx @atlaskit/ads-cli search section message --type component
+Results (4):
+
+Section  @atlaskit/menu
+   ADS  ·  component  ·  8 props  ·  1 example
+   → npx @atlaskit/ads-cli component Section
+MessageWrapper  @atlaskit/form
+   ADS  ·  component  ·  1 prop  ·  1 example
+   → npx @atlaskit/ads-cli component MessageWrapper
+SectionMessage  @atlaskit/section-message
+   ADS  ·  component  ·  8 props  ·  1 example
+   → npx @atlaskit/ads-cli component SectionMessage
+ErrorMessage  @atlaskit/form
+   ADS  ·  component  ·  2 props  ·  1 example
+   → npx @atlaskit/ads-cli component ErrorMessage

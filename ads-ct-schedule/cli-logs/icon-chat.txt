@@ -1,0 +1,9 @@
+$ npx @atlaskit/ads-cli search chat --type icon
+Results (2):
+
+ChatWidgetIcon  @atlaskit/icon/core/chat-widget
+   ADS  ·  icon  ·  Reserved for representing a chat widget triggered by a floating action button.
+   → npx @atlaskit/ads-cli icon ChatWidgetIcon
+RovoChatDashedIcon  @atlaskit/icon-lab/core/rovo-chat-dashed
+   ADS  ·  icon  ·  Reserved for temporary chats in Rovo
+   → npx @atlaskit/ads-cli icon RovoChatDashedIcon

@@ -1,0 +1,9 @@
+$ npx @atlaskit/ads-cli search font.heading --type token
+Results (2):
+
+font.heading.xxlarge
+   ADS  ·  token  ·  = normal 653 2rem/2.25rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMa…
+   → npx @atlaskit/ads-cli token font.heading.xxlarge
+font.heading.xlarge
+   ADS  ·  token  ·  = normal 653 1.75rem/2rem "Atlassian Sans", ui-sans-serif, -apple-system, BlinkMa…
+   → npx @atlaskit/ads-cli token font.heading.xlarge

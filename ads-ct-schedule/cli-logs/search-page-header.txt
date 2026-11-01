@@ -1,0 +1,12 @@
+$ npx @atlaskit/ads-cli search page header --type component
+Results (3):
+
+Header  @atlaskit/table-tree
+   ADS  ·  component  ·  6 props  ·  0 examples
+   → npx @atlaskit/ads-cli component Header
+PageHeader  @atlaskit/page-header
+   ADS  ·  component  ·  8 props  ·  1 example
+   → npx @atlaskit/ads-cli component PageHeader
+ModalHeader  @atlaskit/modal-dialog
+   ADS  ·  component  ·  3 props  ·  1 example
+   → npx @atlaskit/ads-cli component ModalHeader

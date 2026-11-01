@@ -1,0 +1,9 @@
+$ npx @atlaskit/ads-cli search breadcrumbs --type component
+Results (2):
+
+Breadcrumbs  @atlaskit/breadcrumbs
+   ADS  ·  component  ·  4 props  ·  1 example
+   → npx @atlaskit/ads-cli component Breadcrumbs
+BreadcrumbsItem  @atlaskit/breadcrumbs
+   ADS  ·  component  ·  12 props  ·  1 example
+   → npx @atlaskit/ads-cli component BreadcrumbsItem

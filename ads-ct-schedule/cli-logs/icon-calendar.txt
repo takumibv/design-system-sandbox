@@ -1,0 +1,9 @@
+$ npx @atlaskit/ads-cli search calendar --type icon
+Results (2):
+
+CalendarPlusIcon  @atlaskit/icon/core/calendar-plus
+   ADS  ·  icon  ·  Known uses: Auto-scheduling in Jira Plans. Scheduled dates.
+   → npx @atlaskit/ads-cli icon CalendarPlusIcon
+CalendarUnavailableIcon  @atlaskit/icon-lab/core/calendar-unavailable
+   ADS  ·  icon  ·  Known uses: Any kind of time off, such as personal leave or public holidays in…
+   → npx @atlaskit/ads-cli icon CalendarUnavailableIcon

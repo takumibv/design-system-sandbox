@@ -1,0 +1,9 @@
+$ npx @atlaskit/ads-cli search space.200 --type token
+Results (2):
+
+space.200
+   ADS  ·  token  ·  = 1rem
+   → npx @atlaskit/ads-cli token space.200
+space.100
+   ADS  ·  token  ·  = 0.5rem
+   → npx @atlaskit/ads-cli token space.100

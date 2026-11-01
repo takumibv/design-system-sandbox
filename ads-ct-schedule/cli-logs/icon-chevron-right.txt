@@ -1,0 +1,15 @@
+$ npx @atlaskit/ads-cli search chevron right --type icon
+Results (4):
+
+ShapeParallelogramSkewRightIcon  @atlaskit/icon-lab/core/shape-parallelogram-skew-right
+   ADS  ·  icon  ·  Right parallelogram shape tool in Whiteboards
+   → npx @atlaskit/ads-cli icon ShapeParallelogramSkewRightIcon
+ChevronRightIcon  @atlaskit/icon/core/chevron-right
+   ADS  ·  icon  ·  Do not use 16px chevrons within buttons, icon buttons, or dropdowns to maintain…
+   → npx @atlaskit/ads-cli icon ChevronRightIcon
+ChevronDownIcon  @atlaskit/icon/core/chevron-down
+   ADS  ·  icon  ·  Do not use 16px chevrons within buttons, icon buttons, or dropdowns to maintain…
+   → npx @atlaskit/ads-cli icon ChevronDownIcon
+ChevronLeftIcon  @atlaskit/icon/core/chevron-left
+   ADS  ·  icon  ·  Do not use 16px chevrons within buttons, icon buttons, or dropdowns to maintain…
+   → npx @atlaskit/ads-cli icon ChevronLeftIcon

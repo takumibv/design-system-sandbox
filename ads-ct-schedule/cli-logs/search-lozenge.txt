@@ -1,0 +1,9 @@
+$ npx @atlaskit/ads-cli search lozenge --type component
+Results (2):
+
+Lozenge  @atlaskit/lozenge
+   ADS  ·  component  ·  7 props  ·  1 example
+   → npx @atlaskit/ads-cli component Lozenge
+LozengeDropdownTrigger  @atlaskit/lozenge
+   ADS  ·  component  ·  14 props  ·  1 example
+   → npx @atlaskit/ads-cli component LozengeDropdownTrigger

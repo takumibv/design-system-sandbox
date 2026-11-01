@@ -1,0 +1,9 @@
+$ npx @atlaskit/ads-cli search color.background.brand --type token
+Results (2):
+
+color.background.brand.subtlest.hovered
+   ADS  ·  token  ·  = #CFE1FD
+   → npx @atlaskit/ads-cli token color.background.brand.subtlest.hovered
+color.background.brand.subtlest.pressed
+   ADS  ·  token  ·  = #ADCBFB
+   → npx @atlaskit/ads-cli token color.background.brand.subtlest.pressed

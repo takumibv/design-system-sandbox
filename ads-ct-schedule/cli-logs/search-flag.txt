@@ -1,0 +1,9 @@
+$ npx @atlaskit/ads-cli search flag --type component
+Results (2):
+
+Flag  @atlaskit/flag
+   ADS  ·  component  ·  15 props  ·  1 example
+   → npx @atlaskit/ads-cli component Flag
+Banner  @atlaskit/banner
+   ADS  ·  component  ·  3 props  ·  1 example
+   → npx @atlaskit/ads-cli component Banner

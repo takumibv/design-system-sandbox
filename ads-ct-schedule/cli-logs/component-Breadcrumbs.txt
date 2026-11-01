@@ -1,0 +1,32 @@
+$ npx @atlaskit/ads-cli component Breadcrumbs
+Breadcrumbs
+@atlaskit/breadcrumbs
+
+Props (4)
+  children       string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<React…
+  The items to be included inside the Breadcrumbs wrapper.
+  ellipsisLabel  string | undefined
+  Text to be used as an accessible label for the ellipsis button that reveals collapsed breadcrumb items in a popup.
+  label          string | undefined
+  Text to be used as label of navigation region that wraps the breadcrumbs.
+  size           "small" | "medium" | undefined
+  The size variant of the breadcrumbs. Use `'small'` for a compact presentation with smaller text (`font.body.small`) and smaller icons.
+
+Examples (1):
+
+Example 1
+  tsx                                                                                               
+  import Breadcrumbs from '@atlaskit/breadcrumbs/breadcrumbs';                                      
+  import { BreadcrumbsCurrentItem } from '@atlaskit/breadcrumbs/breadcrumbs-current-item';          
+  import { BreadcrumbsItem } from '@atlaskit/breadcrumbs/breadcrumbs-item';                         
+  const Example = (): React.JSX.Element => (                                                        
+    <Breadcrumbs maxItems={3}>                                                                      
+      <BreadcrumbsItem href="/" text="Home" />                                                      
+      <BreadcrumbsItem href="/category" text="Category" />                                          
+      <BreadcrumbsItem href="/category/products" text="Products" />                                 
+      <BreadcrumbsCurrentItem href="/category/products/current-page" text="Current Page" />         
+    </Breadcrumbs>                                                                                  
+  );                                                                                                
+  export default Example;                                                                           
+
+Design: https://go.atlassian.com/figma-library-ads-144167-2564

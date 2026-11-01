@@ -1,0 +1,38 @@
+$ npx @atlaskit/ads-cli component Text
+Text
+@atlaskit/primitives
+
+Props (10)
+  align     TextAlign | undefined
+  Text alignment.
+  as        "em" | "p" | "span" | "strong" | undefined
+  HTML tag to be rendered. Defaults to `span`.
+  children  string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<React…
+  Elements rendered within the Text element.
+  color     "inherit" | TextColor | undefined
+  Token representing text color with a built-in fallback value. Will apply inverse text color automatically if placed within a Box with bold background color. Defaults to `color.text` if not nested in other Text components.
+  id        string | undefined
+  The [HTML `id` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id).
+  maxLines  number | undefined
+  The number of lines to limit the provided text to. Text will be truncated with an ellipsis. When `maxLines={1}`, `wordBreak` defaults to `break-all` to match the behaviour of `text-overflow: ellipsis`.
+  role      string | undefined
+  Accessible role.
+  size      FontSize | undefined
+  Text size.
+  weight    FontWeight | undefined
+  The [HTML `font-weight` attribute](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight).
+  xcss      false | (XCSSValue<"fontVariantNumeric" | "overflowWrap" | "textDecorationLine", DesignTokenStyles,…
+  Bounded style overrides.
+
+Examples (1):
+
+Example 1
+  tsx                                                                                               
+  import { Text } from '@atlaskit/primitives/compiled/text';                                        
+  const _default_1: React.JSX.Element[] = [                                                         
+    <Text>Default text</Text>,                                                                      
+    <Text size="large" weight="bold">                                                               
+      Large bold text                                                                               
+    </Text>,                                                                                        
+  ];                                                                                                
+  export default _default_1;                                                                        

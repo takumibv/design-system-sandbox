@@ -1,0 +1,9 @@
+$ npx @atlaskit/ads-cli search select --type component
+Results (2):
+
+Select  @atlaskit/select
+   ADS  ·  component  ·  72 props  ·  1 example
+   → npx @atlaskit/ads-cli component Select
+PopupSelect  @atlaskit/select
+   ADS  ·  component  ·  71 props  ·  1 example
+   → npx @atlaskit/ads-cli component PopupSelect

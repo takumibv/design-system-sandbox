@@ -1,0 +1,137 @@
+$ npx @atlaskit/ads-cli component Dynamic table
+Dynamic table
+@atlaskit/dynamic-table
+
+Props (25)
+  caption              string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<React…
+  Caption for the table styled as a heading. This appears before the table header, and is announced when people who use assistive technology land on the table. If you don’t want the caption to appear on the page but do want it to be available for assistive technology, surround the caption with `<VisuallyHidden>`.
+  defaultPage          number | undefined
+  When the table is initially rendered, use this to set which page number is shown by default. In most circumstances, people will expect this to be page `1`.
+  defaultSortKey       string | undefined
+  Sets which column the rows should be sorted by when the table is initially rendered. Corresponds to the `key`'s defined in the `head` prop.
+  defaultSortOrder     SortOrderType | undefined
+  Default column sort order used when initially rendering. Defaults to `"ASC"`.
+  emptyView            ReactElement<any, string | JSXElementConstructor<any>> | undefined
+  Shown when the table has no content.
+  head                 HeadType | undefined
+  Cells to be placed in the head of the table. Never put controls, like links and buttons in the table header. Each element in the head creates a new column.
+  highlightedRowIndex  number | number[] | undefined
+  Use this to set if the row will be highlighted. Never use highlighted rows to indicate that a person has selected or focused on the row.
+  isFixedSize          boolean | undefined
+  Use this to force columns to use their initial width regardless of the size of the content that loads in.
+  isLoading            boolean | undefined
+  Displays a loading spinner overlaid on top of the current page.
+  isRankable           boolean | undefined
+  Use this to enable drag and drop sorting of table rows.
+  isRankingDisabled    boolean | undefined
+  Disables being able to drop rows on the table. We recommend using `isRankable` instead of this prop, and it will be deprecated in a future release.
+  label                string | undefined
+  If you don’t use a caption, then you’ll need to use label to describe the table for assistive technologies. Avoid using both at the same time as they may conflict. Rather than a screen reader speaking "Entering table", passing in an label allows a custom message like "Entering Jira work items table".
+  loadingLabel         string | undefined
+  Use this to set a label for assistive technology that describes the loading state. The default label is "Loading table". You can customize this to be more specific to your table, for example “Loading work items table”.
+  loadingSpinnerSize   LoadingSpinnerSizeType | undefined
+  Configuration of the loading spinner shown when `isLoading` is true. Defaults to `"large"` when a page has more than two rows, else `"small"`.
+  onPageRowsUpdate     ((pageRows: RowType[]) => void) | undefined
+  A callback that happens when the rows displayed on a page have changed.
+  onRankEnd            ((rankEnd: RankEnd) => void) | undefined
+  A callback that happens when a drop of a row has completed.
+  onRankStart          ((rankStart: RankStart) => void) | undefined
+  A callback that happens when a drag of a row has started.
+  onSetPage            ((page: number, UIAnalyticsEvent?: UIAnalyticsEvent | undefined) => void) | undefined
+  A callback that happens when the table page has changed.
+  onSort               ((data: any, UIAnalyticsEvent?: UIAnalyticsEvent | undefined) => void) | undefined
+  A callback that happens when a column heading has been sorted. Use this to provide custom sorting.
+  page                 number | undefined
+  Page the table should show.
+  paginationi18n       I18nShape | undefined
+  Labels for the previous and next buttons used in pagination. Defaults to `"Previous"` and `"Next"`.
+  rows                 RowType[] | undefined
+  Rows to be placed in the table. Each row contains cells which should map to the ones defined in the head. Rows accept standard HTML <tr> props in addition to those listed below. Ensure each cell has a unique `key` per column - this is used for both React's reconciliation of lists and column sorting.
+  rowsPerPage          number | undefined
+  Use this to control how many rows should be displayed per page. If the number of rows exceed one page, this will enable pagination.
+  sortKey              string | undefined
+  Column key that the rows should be sorted by. Corresponds to the `key`'s defined in the `head` prop.
+  sortOrder            SortOrderType | undefined
+  Column sort order.
+
+Examples (2):
+
+Example 1
+  tsx                                                                                               
+  import DynamicTable from '@atlaskit/dynamic-table/stateful';                                      
+  import { head, rows } from './content/sample-data';                                               
+  export default function TableUncontrolled(): React.JSX.Element {                                  
+    return (                                                                                        
+      <DynamicTable                                                                                 
+        head={head}                                                                                 
+        rows={rows}                                                                                 
+        rowsPerPage={5}                                                                             
+        defaultPage={1}                                                                             
+        loadingSpinnerSize="large"                                                                  
+        isRankable                                                                                  
+        testId="table"                                                                              
+      />                                                                                            
+    );                                                                                              
+  }                                                                                                 
+Example 2
+  tsx                                                                                                   
+  import React, { useState } from 'react';                                                              
+  import Banner from '@atlaskit/banner/banner';                                                         
+  import ButtonGroup from '@atlaskit/button/button-group';                                              
+  import Button from '@atlaskit/button/default/button';                                                 
+  import { cssMap } from '@atlaskit/css';                                                               
+  import DynamicTableStateless from '@atlaskit/dynamic-table/stateless';                                
+  import WarningIcon from '@atlaskit/icon/core/status-warning';                                         
+  import { Flex } from '@atlaskit/primitives/compiled/flex';                                            
+  import { token } from '@atlaskit/tokens';                                                             
+  import { head, rows } from './content/sample-data';                                                   
+  const iconSpacingStyles = cssMap({                                                                    
+    space050: {                                                                                         
+      paddingBlock: token('space.050'),                                                                 
+      paddingInline: token('space.050'),                                                                
+    },                                                                                                  
+  });                                                                                                   
+  export default function TableControlled(): React.JSX.Element {                                        
+    const [pageNumber, setPageNumber] = useState(3);                                                    
+    const navigateTo = (pageNumber: number) => {                                                        
+      setPageNumber(pageNumber);                                                                        
+    };                                                                                                  
+    return (                                                                                            
+      <>                                                                                                
+        <Banner                                                                                         
+          appearance="warning"                                                                          
+          icon={                                                                                        
+            <Flex xcss={iconSpacingStyles.space050}>                                                    
+              <WarningIcon label="" />                                                                  
+            </Flex>                                                                                     
+          }                                                                                             
+        >                                                                                               
+          This is a stateless table example, which doesn't have pagination support. To navigate pages,  
+          use the "Previous page" and "Next page" buttons.                                              
+        </Banner>                                                                                       
+        <ButtonGroup label="Paging navigation">                                                         
+          <Button isDisabled={pageNumber === 1} onClick={() => navigateTo(pageNumber - 1)}>             
+            Previous Page                                                                               
+          </Button>                                                                                     
+          <Button isDisabled={pageNumber === 5} onClick={() => navigateTo(pageNumber + 1)}>             
+            Next Page                                                                                   
+          </Button>                                                                                     
+        </ButtonGroup>                                                                                  
+        <DynamicTableStateless                                                                          
+          head={head}                                                                                   
+          rows={rows}                                                                                   
+          rowsPerPage={5}                                                                               
+          page={pageNumber}                                                                             
+          loadingSpinnerSize="large"                                                                    
+          isLoading={false}                                                                             
+          isFixedSize                                                                                   
+          sortKey="term"                                                                                
+          sortOrder="DESC"                                                                              
+          onSort={() => console.log('onSort')}                                                          
+          onSetPage={() => console.log('onSetPage')}                                                    
+        />                                                                                              
+      </>                                                                                               
+    );                                                                                                  
+  }                                                                                                     
+
+Design: https://go.atlassian.com/figma-library-ads-76953-155820

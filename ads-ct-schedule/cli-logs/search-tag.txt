@@ -1,0 +1,9 @@
+$ npx @atlaskit/ads-cli search tag --type component
+Results (2):
+
+Tag  @atlaskit/tag
+   ADS  ·  component  ·  15 props  ·  1 example
+   → npx @atlaskit/ads-cli component Tag
+TagGroup  @atlaskit/tag-group
+   ADS  ·  component  ·  4 props  ·  1 example
+   → npx @atlaskit/ads-cli component TagGroup

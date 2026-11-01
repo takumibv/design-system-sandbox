@@ -1,0 +1,9 @@
+$ npx @atlaskit/ads-cli search toggle --type component
+Results (2):
+
+Toggle  @atlaskit/toggle
+   ADS  ·  component  ·  13 props  ·  1 example
+   → npx @atlaskit/ads-cli component Toggle
+DropdownItemCheckbox  @atlaskit/dropdown-menu
+   ADS  ·  component  ·  10 props  ·  1 example
+   → npx @atlaskit/ads-cli component DropdownItemCheckbox

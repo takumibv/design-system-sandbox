@@ -1,0 +1,9 @@
+$ npx @atlaskit/ads-cli search link --type component
+Results (2):
+
+Link  @atlaskit/link
+   ADS  ·  component  ·  5 props  ·  1 example
+   → npx @atlaskit/ads-cli component Link
+LinkButton  @atlaskit/button
+   ADS  ·  component  ·  13 props  ·  1 example
+   → npx @atlaskit/ads-cli component LinkButton

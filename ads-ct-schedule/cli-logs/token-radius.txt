@@ -1,0 +1,33 @@
+$ npx @atlaskit/ads-cli search radius --type token --limit 10
+Results (10):
+
+radius.tile
+   ADS  ·  token  ·  = 25%
+   → npx @atlaskit/ads-cli token radius.tile
+radius.xsmall
+   ADS  ·  token  ·  = 0.125rem
+   → npx @atlaskit/ads-cli token radius.xsmall
+radius.small
+   ADS  ·  token  ·  = 0.25rem
+   → npx @atlaskit/ads-cli token radius.small
+radius.medium
+   ADS  ·  token  ·  = 0.375rem
+   → npx @atlaskit/ads-cli token radius.medium
+radius.large
+   ADS  ·  token  ·  = 0.5rem
+   → npx @atlaskit/ads-cli token radius.large
+radius.xlarge
+   ADS  ·  token  ·  = 0.75rem
+   → npx @atlaskit/ads-cli token radius.xlarge
+radius.xxlarge
+   ADS  ·  token  ·  = 1rem
+   → npx @atlaskit/ads-cli token radius.xxlarge
+radius.full
+   ADS  ·  token  ·  = 624.9375rem
+   → npx @atlaskit/ads-cli token radius.full
+elevation.surface.raised
+   ADS  ·  token  ·  = #FFFFFF
+   → npx @atlaskit/ads-cli token elevation.surface.raised
+elevation.surface.raised.hovered
+   ADS  ·  token  ·  = #F0F1F2
+   → npx @atlaskit/ads-cli token elevation.surface.raised.hovered

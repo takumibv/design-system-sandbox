@@ -1,0 +1,9 @@
+$ npx @atlaskit/ads-cli search people --type icon
+Results (2):
+
+PeopleGroupIcon  @atlaskit/icon/core/people-group
+   ADS  ·  icon  ·  Single purpose - Known uses: representing a group or collection of people or us…
+   → npx @atlaskit/ads-cli icon PeopleGroupIcon
+TeamsIcon  @atlaskit/icon/core/teams
+   ADS  ·  icon  ·  Single purpose - Reserved for teams in Atlassian.
+   → npx @atlaskit/ads-cli icon TeamsIcon

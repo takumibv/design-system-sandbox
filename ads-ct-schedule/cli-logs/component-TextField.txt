@@ -1,0 +1,58 @@
+$ npx @atlaskit/ads-cli component TextField
+TextField
+@atlaskit/textfield
+
+Props (14)
+  appearance       Appearance | undefined
+  Controls the appearance of the field. Subtle shows styling on hover. None prevents all field styling. Take care when using the none appearance as this doesn't include accessible interactions.
+  elemAfterInput   string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<React…
+  Element after input in text field.
+  elemBeforeInput  string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<React…
+  Element before input in text field.
+  isCompact        boolean | undefined
+  Applies compact styling, making the field smaller.
+  isDisabled       boolean | undefined
+  Sets the field as to appear disabled, people will not be able to interact with the text field and it won't appear in the focus order. Wherever possible, prefer using validation and error messaging over disabled fields for a more accessible experience.
+  isInvalid        boolean | undefined
+  Changes the text field to have a border indicating that its value is invalid.
+  isMonospaced     boolean | undefined
+  Sets content text value to appear monospaced.
+  isReadOnly       boolean | undefined
+  If true, prevents the value of the input from being edited.
+  isRequired       boolean | undefined
+  Set required for form that the field is part of.
+  name             string | undefined
+  Name of the input element.
+  onChange         FormEventHandler<HTMLInputElement> | undefined
+  Handler called when the inputs value changes.
+  onMouseDown      MouseEventHandler<HTMLElement> | undefined
+  Handler called when the mouse down event is triggered on the input element.
+  placeholder      string | undefined
+  Placeholder text to display in the text field whenever it is empty.
+  width            string | number | undefined
+  Sets maximum width of input.
+
+Examples (1):
+
+Example 1
+  tsx                                                                                               
+  import TextField from '@atlaskit/textfield/text-field';                                           
+  const Examples = (): React.JSX.Element => (                                                       
+    <>                                                                                              
+      {                                                                                             
+      <TextField label="Name" placeholder="Enter your name" />                                      
+      {                                                                                             
+      <TextField                                                                                    
+        label="Email"                                                                               
+        type="email"                                                                                
+        placeholder="Enter your email address"                                                      
+        isRequired                                                                                  
+        autoComplete="email"                                                                        
+      />                                                                                            
+      {                                                                                             
+      <TextField label="Password" type="password" placeholder="Enter your password" isRequired />   
+    </>                                                                                             
+  );                                                                                                
+  export default Examples;                                                                          
+
+Design: https://go.atlassian.com/figma-library-ads-13076-28181

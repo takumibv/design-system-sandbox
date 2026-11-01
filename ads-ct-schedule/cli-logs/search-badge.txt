@@ -1,0 +1,9 @@
+$ npx @atlaskit/ads-cli search badge --type component
+Results (2):
+
+Badge  @atlaskit/badge
+   ADS  ·  component  ·  3 props  ·  1 example
+   → npx @atlaskit/ads-cli component Badge
+Lozenge  @atlaskit/lozenge
+   ADS  ·  component  ·  7 props  ·  1 example
+   → npx @atlaskit/ads-cli component Lozenge

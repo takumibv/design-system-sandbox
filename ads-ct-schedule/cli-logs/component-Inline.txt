@@ -1,0 +1,44 @@
+$ npx @atlaskit/ads-cli component Inline
+Inline
+@atlaskit/primitives
+
+Props (12)
+  alignBlock   AlignBlock | undefined
+  Used to align children along the block axis (typically vertical).
+  alignInline  AlignInline | undefined
+  Used to align children along the inline axis (typically horizontal).
+  as           "div" | "dl" | "li" | "ol" | "span" | "ul" | undefined
+  The DOM element to render as the Inline. Defaults to `div`.
+  children     string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<React…
+  Elements to be rendered inside the Inline.
+  grow         Grow | undefined
+  Used to set whether the container should grow to fill the available space.
+  role         string | undefined
+  Accessible role.
+  rowSpace     GapToken | undefined
+  Represents the space between rows when content wraps. Used to override the `space` value in between rows.
+  separator    string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<React…
+  Renders a separator string between each child. Avoid using `separator="•"` when `as="ul" | "ol" | "dl"` to preserve proper list semantics.
+  shouldWrap   boolean | undefined
+  Used to set whether children are forced onto one line or will wrap onto multiple lines.
+  space        GapToken | undefined
+  Represents the space between each child.
+  spread       "space-between" | undefined
+  Used to distribute the children along the main axis.
+  xcss         false | (XCSSValue<"appearance" | "grid" | "clipPath" | "filter" | "marker" | "mask" | "borderColor…
+  Apply a subset of permitted styles powered by Atlassian Design System design tokens.
+
+Examples (1):
+
+Example 1
+  tsx                                                                                               
+  import AddIcon from '@atlaskit/icon/core/add';                                                    
+  import { Inline } from '@atlaskit/primitives/compiled/inline';                                    
+  import { Text } from '@atlaskit/primitives/compiled/text';                                        
+  const _default_1: React.JSX.Element[] = [                                                         
+    <Inline space="space.100">                                                                      
+      <AddIcon label="Add item" />                                                                  
+      <Text>Add item</Text>                                                                         
+    </Inline>,                                                                                      
+  ];                                                                                                
+  export default _default_1;                                                                        

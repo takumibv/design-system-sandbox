@@ -1,0 +1,29 @@
+$ npx @atlaskit/ads-cli search button
+Results (6):
+
+Components (2):
+
+Button  @atlaskit/button
+   ADS  ·  component  ·  13 props  ·  3 examples
+   → npx @atlaskit/ads-cli component Button
+ButtonGroup  @atlaskit/button
+   ADS  ·  component  ·  3 props  ·  1 example
+   → npx @atlaskit/ads-cli component ButtonGroup
+
+Tokens (2):
+
+motion.button.hovered
+   ADS  ·  token  ·  = background-color 150ms cubic-bezier(0.4, 1, 0.6, 1), border-color 150ms cubic-b…
+   → npx @atlaskit/ads-cli token motion.button.hovered
+motion.button.pressed
+   ADS  ·  token  ·  = background-color 150ms cubic-bezier(0.4, 1, 0.6, 1), border-color 150ms cubic-b…
+   → npx @atlaskit/ads-cli token motion.button.pressed
+
+Icons (2):
+
+LayoutOneColumnIcon  @atlaskit/icon/core/layout-one-column
+   ADS  ·  icon  ·  Reserved for single column layout option in Confluence Editor
+   → npx @atlaskit/ads-cli icon LayoutOneColumnIcon
+TakeoutContainerIcon  @atlaskit/icon-lab/core/takeout-container
+   ADS  ·  icon  ·  Known usages: Alternative option for food emoji category.
+   → npx @atlaskit/ads-cli icon TakeoutContainerIcon

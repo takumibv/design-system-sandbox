@@ -1,0 +1,9 @@
+$ npx @atlaskit/ads-cli search navigation --type component
+Results (2):
+
+Pagination  @atlaskit/pagination
+   ADS  ·  component  ·  13 props  ·  1 example
+   → npx @atlaskit/ads-cli component Pagination
+Breadcrumbs  @atlaskit/breadcrumbs
+   ADS  ·  component  ·  4 props  ·  1 example
+   → npx @atlaskit/ads-cli component Breadcrumbs

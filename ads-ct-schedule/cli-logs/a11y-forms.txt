@@ -1,0 +1,50 @@
+$ npx @atlaskit/ads-cli docs a11y forms
+Form and Input Accessibility
+============================
+
+Guidelines for making forms and inputs accessible
+
+Guidelines:
+  - Use TextField component for consistent labeling
+  - Associate labels with inputs using id and htmlFor
+  - Provide clear error messages with aria-describedby
+  - Use MessageWrapper for form validation announcements
+  - Use aria-required for required fields
+  - Group related form elements with fieldset and legend
+
+Code Examples:
+  - Accessible Text Field
+  tsx                                                                                               
+  import { TextField } from '@atlaskit/textfield';                                                  
+                                                                                                    
+  <TextField                                                                                        
+    label="Email address"                                                                           
+    isRequired                                                                                      
+    aria-describedby="email-help"                                                                   
+    id="email-input"                                                                                
+  />                                                                                                
+  <div id="email-help">Enter your work email address</div>                                          
+  - Form Validation with Error Messages
+  tsx                                                                                               
+  import { TextField } from '@atlaskit/textfield';                                                  
+                                                                                                    
+  <TextField                                                                                        
+    label="Password"                                                                                
+    isInvalid                                                                                       
+    aria-invalid="true"                                                                             
+    aria-describedby="password-error"                                                               
+  />                                                                                                
+  <div id="password-error" role="alert">                                                            
+    Password must be at least 8 characters long                                                     
+  </div>                                                                                            
+
+Best Practices:
+  - Never rely on placeholder text for critical information
+  - Provide helpful error messages and descriptions
+  - Use proper form validation with aria-invalid
+  - Test form completion with screen readers
+
+Additional Resources:
+  - https://atlassian.design/llms-a11y.txt - Complete ADS accessibility documentation
+  - https://atlassian.design/foundations/accessibility - ADS accessibility foundation
+  - https://www.w3.org/WAI/WCAG21/quickref/ - WCAG 2.1 guidelines

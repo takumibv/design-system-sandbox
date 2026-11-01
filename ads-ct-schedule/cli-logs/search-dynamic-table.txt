@@ -1,0 +1,12 @@
+$ npx @atlaskit/ads-cli search dynamic table --type component
+Results (3):
+
+Dynamic table  @atlaskit/dynamic-table
+   ADS  ·  component  ·  25 props  ·  2 examples
+   → npx @atlaskit/ads-cli component Dynamic table
+Table tree  @atlaskit/table-tree
+   ADS  ·  component  ·  9 props  ·  1 example
+   → npx @atlaskit/ads-cli component Table tree
+DynamicTableStateless  @atlaskit/dynamic-table
+   ADS  ·  component  ·  23 props  ·  1 example
+   → npx @atlaskit/ads-cli component DynamicTableStateless

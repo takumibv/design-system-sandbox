@@ -1,0 +1,12 @@
+$ npx @atlaskit/ads-cli search external link --type icon
+Results (3):
+
+LinkRestrictedAccessIcon  @atlaskit/icon-lab/core/link-restricted-access
+   ADS  ·  icon  ·  Reserved for when there is limited link permissions
+   → npx @atlaskit/ads-cli icon LinkRestrictedAccessIcon
+LinkExternalIcon  @atlaskit/icon/core/link-external
+   ADS  ·  icon  ·  Single purpose - Reserved for links that open up a new tab.
+   → npx @atlaskit/ads-cli icon LinkExternalIcon
+AppIcon  @atlaskit/icon/core/app
+   ADS  ·  icon  ·  Single purpose - Reserved for marketplace apps and integrations across apps.
+   → npx @atlaskit/ads-cli icon AppIcon

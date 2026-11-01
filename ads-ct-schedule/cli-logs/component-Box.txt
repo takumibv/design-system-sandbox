@@ -1,0 +1,40 @@
+$ npx @atlaskit/ads-cli component Box
+Box
+@atlaskit/primitives
+
+Props (3)
+  as               T | undefined
+  The DOM element to render as the Box. - This cannot be any SVG-related element such as `'svg'`, `'animate', `'circle'`, and many more - This cannot be a `'a'` (use the `Anchor` primitive instead) - This cannot be a `'button'` (use the `Anchor` primitive instead)
+  backgroundColor  "utility.elevation.surface.current" | "elevation.surface" | "elevation.surface.container" | "elevat…
+  Token representing background color with a built-in fallback value.
+  xcss             false | (XCSSValue<"appearance" | "grid" | "clipPath" | "filter" | "marker" | "mask" | "borderColor…
+  Apply a subset of permitted styles powered by Atlassian Design System design tokens. It's preferred you do not use `background` in `xcss` or `cssMap()` and instead use `props.backgroundColor` for surface awareness.
+
+Examples (1):
+
+Example 1
+  tsx                                                                                               
+  /**                                                                                               
+   * @jsxRuntime classic                                                                            
+   * @jsx jsx                                                                                       
+   */                                                                                               
+  import type { JSX } from 'react';                                                                 
+  import { cssMap, jsx } from '@atlaskit/css';                                                      
+  import { Box } from '@atlaskit/primitives/compiled/box';                                          
+  import { token } from '@atlaskit/tokens';                                                         
+  const styles = cssMap({                                                                           
+    box: {                                                                                          
+      paddingTop: token('space.200'),                                                               
+      paddingRight: token('space.200'),                                                             
+      paddingBottom: token('space.200'),                                                            
+      paddingLeft: token('space.200'),                                                              
+      backgroundColor: token('color.background.neutral.subtle'),                                    
+    },                                                                                              
+  });                                                                                               
+  const _default_1: JSX.Element[] = [                                                               
+    <Box padding="space.200" backgroundColor="color.background.neutral.subtle">                     
+      Basic box                                                                                     
+    </Box>,                                                                                         
+    <Box xcss={styles.box}>Styled box</Box>,                                                        
+  ];                                                                                                
+  export default _default_1;                                                                        

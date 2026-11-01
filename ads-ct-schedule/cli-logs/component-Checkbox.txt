@@ -1,0 +1,44 @@
+$ npx @atlaskit/ads-cli component Checkbox
+Checkbox
+@atlaskit/checkbox
+
+Props (12)
+  defaultChecked   boolean | undefined
+  Sets whether the checkbox begins as checked or unchecked.
+  id               string | undefined
+  The ID assigned to the input.
+  isChecked        boolean | undefined
+  Sets whether the checkbox is checked or unchecked.
+  isDisabled       boolean | undefined
+  Sets whether the checkbox is disabled. Don’t use a disabled checkbox if it needs to remain in the tab order for assistive technologies.
+  isIndeterminate  boolean | undefined
+  Sets whether the checkbox is indeterminate. This only affects the style and does not modify the isChecked property.
+  isInvalid        boolean | undefined
+  Marks the field as invalid. Changes style of unchecked component.
+  isRequired       boolean | undefined
+  Marks the field as required & changes the label style.
+  label            ReactChild | undefined
+  The label to be displayed to the right of the checkbox. The label is part of the clickable element to select the checkbox.
+  name             string | undefined
+  The name of the submitted field in a checkbox.
+  onChange         ((e: ChangeEvent<HTMLInputElement>, analyticsEvent: UIAnalyticsEvent) => void) | undefined
+  Function that is called whenever the state of the checkbox changes. It will be called with an object containing the react synthetic event. Use `currentTarget` to get value, name and checked.
+  value            string | number | undefined
+  The value to be used in the checkbox input. This is the value that will be returned on form submission.
+  xcss             false | (XCSSValue<"alignItems", DesignTokenStyles, ""> & {} & XCSSPseudo<"alignItems", never, neve…
+  Bounded style API. Defining allowed styles through this prop will be supported for future component iterations. Any styles that are not allowed by this API will result in type and land blocking violations.
+
+Examples (1):
+
+Example 1
+  tsx                                                                                               
+  import Checkbox from '@atlaskit/checkbox/checkbox';                                               
+  const Examples = (): React.JSX.Element => (                                                       
+    <>                                                                                              
+      <Checkbox label="Basic checkbox" />                                                           
+      <Checkbox label="Checked checkbox" isChecked />                                               
+    </>                                                                                             
+  );                                                                                                
+  export default Examples;                                                                          
+
+Design: https://go.atlassian.com/figma-library-ads-13135-34359
