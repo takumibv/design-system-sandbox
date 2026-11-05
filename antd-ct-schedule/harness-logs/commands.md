@@ -110,3 +110,15 @@
 | `npx antd lint --help` | lint のオプションとルール分類を確認 | [23-lint-help.txt](23-lint-help.txt) |
 | `npx design.md lint harness-logs/web-design.md` | 公式 DESIGN.md を Google の DESIGN.md 形式検査にかける | [24-designmd-lint.txt](24-designmd-lint.txt) |
 | `npx design.md lint DESIGN.md` | プロジェクト用 DESIGN.md（公式からの差分）を検査し、コントラストが AA を満たすか確認 | [25-designmd-lint-project.txt](25-designmd-lint-project.txt) |
+
+## コマンド以外で使ったハーネス（手動で記録）
+
+| 手段 | 目的 | 出力 |
+| --- | --- | --- |
+| `curl https://ant.design/design.md` | Web 版 DESIGN.md と CLI 同梱版の差分確認（末尾の空行以外は同一） | [web-design.md](web-design.md) |
+| `curl https://ant.design/llms.txt` | 文書の索引から設計仕様（spec）と React 文書を探す | [web-llms.txt](web-llms.txt) |
+| `curl https://ant.design/docs/{spec,react}/*.md`（16 本） | ボタン・フィードバック・フォント・色・文言・空状態・例外ページ・フォーム・For Agents・MCP・テーマ・i18n・reset.css の扱い | [web/](web/) |
+| `node scripts/mcp-probe.mjs`（`antd mcp` を stdio で起動し JSON-RPC で呼ぶ） | MCP のツール 8 つ・プロンプト 2 つの中身を確認（エージェントの MCP 設定には登録できなかったため） | [10-mcp-list.json](10-mcp-list.json)、[11-mcp-prompts.json](11-mcp-prompts.json) |
+| `theme.getDesignToken()`（node から実行） | `antd token` が既定値を出さなかったため、実行時の値を確認 | [18-runtime-token-values.txt](18-runtime-token-values.txt) |
+| `node_modules/@ant-design/cli/skills/antd/SKILL.md` を読む | スキルを .claude/skills に置けなかったため、本文を手で読み手順に従う | [skill-antd-SKILL.md](skill-antd-SKILL.md) |
+| `scripts/screenshots.mjs`（axe） | 初回の axe 結果（コントラスト違反 26 件／画面 など）を保存 | [30-axe-initial-report.json](30-axe-initial-report.json) |
