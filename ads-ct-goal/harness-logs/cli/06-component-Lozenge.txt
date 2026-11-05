@@ -1,0 +1,35 @@
+$ npx ads-cli component Lozenge
+Lozenge
+@atlaskit/lozenge
+
+Props (7)
+  appearance                "warning" | "default" | "removed" | "discovery" | "danger" | "neutral" | "success" | "information" …
+  The appearance of the lozenge. Supports legacy semantic appearances and new semantic colors. Accent appearance values.
+  children                  string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | It…
+  Elements to be rendered inside the lozenge. This should ideally be just a word or two.
+  iconBefore                IconProp | undefined
+  Icon to display before the text content. Should be an ADS icon component.
+  maxWidth                  string | number | undefined
+  max-width of lozenge container. Default to 200px.
+  spacing                   LozengeSpacing | undefined
+  Controls the overall spacing (padding + height) of the lozenge. - `default` matches the current visual appearance. - `spacious` increases padding and sets the lozenge height to 32px.
+  trailingMetric            string | undefined
+  Numeric metric displayed at the end of the lozenge as a badge. Trailing metric is not supported for accent lozenges.
+  trailingMetricAppearance  "warning" | "default" | "removed" | "discovery" | "danger" | "neutral" | "success" | "information" …
+  Overrides the appearance of the trailing metric badge. If not specified, the trailing metric badge inherits the lozenge appearance. This prop is not supported for accent lozenges. Trailing metric appearance is not supported for accent lozenges.
+
+Examples (1):
+
+Example 1
+  tsx                                                                                               
+  import Lozenge from '@atlaskit/lozenge/new/lozenge';                                              
+  const _default_1: React.JSX.Element[] = [                                                         
+    <Lozenge appearance="success">Done</Lozenge>,                                                   
+    <Lozenge appearance="inprogress" isBold>                                                        
+      In Progress                                                                                   
+    </Lozenge>,                                                                                     
+  ];                                                                                                
+  export default _default_1;                                                                        
+
+Design: https://go.atlassian.com/figma-library-ads-116954-2709
+# exit=0

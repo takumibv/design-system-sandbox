@@ -1,0 +1,554 @@
+{
+  "transport": "remote https://mcp.atlassian.com/v1/ads/public/mcp",
+  "server": {
+    "name": "atlassian-mcp-server",
+    "icons": [
+      {
+        "src": "data:image/png;base64,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",
+        "mimeType": "image/png",
+        "sizes": [
+          "192x192"
+        ]
+      }
+    ],
+    "version": "1.0.0"
+  },
+  "tools": [
+    {
+      "name": "ads_analyze_a11y",
+      "description": "Analyzes a **string of React/JSX** code for likely accessibility issues (heuristics and/or axe-related paths) and returns hints that often **point to** `ads_suggest_a11y_fixes` or generic axe/WCAG-style context—not every finding maps to a specific ADS component fix.\n\nWHEN TO USE:\nYou have component source as text and want automated checks or heuristics before or during a code review.\n\nLIMITATIONS:\n- Does not replace testing in a real browser with assistive technologies or full keyboard traversal.\n- For rendered UI, `ads_analyze_localhost_a11y` (live URL + axe) is preferable when available—it is **only exposed when this MCP runs locally**, not in the remote MCP deployment.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "Source code of a React component or JSX snippet to analyze (string content only—no file path)."
+          },
+          "componentName": {
+            "type": "string",
+            "description": "Optional label for the component under review (for summaries and reports)."
+          },
+          "context": {
+            "type": "string",
+            "description": "Optional: how the component is used (e.g. in a form, modal) to improve suggestions."
+          },
+          "includePatternAnalysis": {
+            "type": "boolean",
+            "default": true,
+            "description": "When true (default), runs regex-based heuristics on the code string (e.g. unlabeled buttons, missing alt) in addition to other analysis."
+          }
+        },
+        "required": [
+          "code"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "ads_analyze_a11y",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "ads_get_a11y_guidelines",
+      "description": "Returns Atlassian Design System (ADS) accessibility guidance: best practices and patterns for buttons, interactions, color contrast, forms, and other design-system topics shipped in this tool.\n\nUse this alongside the Context Engine MCP tool `get_accessibility_docs` for Atlassian-wide accessibility standards (e.g. A11YKB); this tool supplies ADS-specific component and pattern guidance.\n\nWHEN TO USE:\nYou MUST call this when generating or substantially changing a new interactive or visual user interface built with ADS, or when you need topic-specific ADS guidance (e.g. focus, forms, motion).\n\nDO NOT rely on generic web accessibility advice alone—ADS conventions may differ. Use `get_accessibility_docs` for org-wide standards and this tool for ADS-topic guidance.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "topic": {
+            "type": "string",
+            "description": "ADS accessibility topic key. Omit to receive all topics and the full guideline bundle. Pass a valid key (see response `availableTopics`) or `general` for a focused overview when supported. Known topics: buttons, forms, images, colors, focus, keyboard, screenReaders, aria, wcag, general."
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "ads_get_a11y_guidelines",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "ads_get_all_components",
+      "description": "Returns **every** Atlassian Design System component record as separate JSON text chunks (full catalog; large payload).\n\nWHEN TO USE:\nLast resort when `ads_plan` / `ads_search_components` is insufficient and you must enumerate all components. Prefer search for normal component picking.\n\nNo parameters.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "ads_get_all_components",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "ads_plan",
+      "description": "Runs **ads_search_tokens**, **ads_search_icons**, **ads_search_components**, and **ads_search_atlaskit_components** in one call and returns a single JSON payload (each section only if that list was non-empty). Use this as the default way to discover ADS **tokens**, **icons**, and **components** (including legacy/broader Atlaskit) for a UI task.\n\nWHEN TO USE:\n**Implementing or iterating on a UI**—new screen, feature, or polish—and you need candidate **token** names, **icon** imports, and **component** packages/props in one pass. Also use when exploring ADS building blocks before you write code.\n\nAt least one of `tokens`, `icons`, `components`, or `atlaskitComponents` must contain search terms (use `[]` for lists you do not need).\n\nPrefer supplying **multiple** terms per non-empty array when you know them—broader queries improve recall. Some queries return no rows where metadata is thin; try alternate wording.\n\nThis is equivalent to calling the individual search tools; there are no extra merge semantics beyond concatenating results.\n\nExample request:\n```json\n{\n\t\"tokens\": [\"spacing\", \"inverted text\", \"background primary\", \"animation\"],\n\t\"icons\": [\"search\", \"folder\", \"user\"],\n\t\"components\": [\"button\", \"input\", \"select\", \"heading\"],\n\t\"atlaskitComponents\": [\"inline-dialog\", \"onboarding\", \"page-layout\"]\n}\n```\n\nExample token usage:\n```tsx\nimport { token } from '@atlaskit/tokens';\nconst styles = css({ color: token('color.text'), padding: token('space.100') });\n```\n\nExample icon usage:\n```tsx\nimport AddIcon from '@atlaskit/icon/core/add';\n<AddIcon label=\"Add work item\" size=\"small\" />\n```",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "tokens": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Search terms for ADS design tokens (fuzzy by default). Use `[]` if you only need icons or components. Prefer **at least two** terms per non-empty list when you know what you need."
+          },
+          "icons": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Search terms for ADS icons. Use `[]` if you only need tokens or components. Prefer **at least two** terms per non-empty list when known."
+          },
+          "components": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Search terms for ADS components. Use `[]` if you only need tokens or icons. Prefer **at least two** terms per non-empty list when known."
+          },
+          "atlaskitComponents": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Search terms for Atlaskit components. Use `[]` if you only need core ADS components. Prefer **at least two** terms per non-empty list when known."
+          },
+          "limit": {
+            "type": "number",
+            "default": 2,
+            "description": "Max matches **per term** for each non-empty list (default 2). Same limit applies to tokens, icons, and both ADS and atlaskit component searches."
+          }
+        },
+        "required": [
+          "tokens",
+          "icons",
+          "components",
+          "atlaskitComponents"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "ads_plan",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "ads_search_components",
+      "description": "Searches the bundled Atlassian Design System (ADS) component catalog. Returns JSON objects with **name**, **package**, **examples**, and **props** for each match (trimmed payload).\n\nWHEN TO USE:\n**Selecting which ADS component to use**—package name, examples, and props—before implementation. Use when composing a new view or swapping a primitive. Prefer `ads_plan` when you also need token and icon discovery in one shot.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "terms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Required: one or more search terms (fuzzy over name, package, category, description, keywords, examples). Example: `[\"button\", \"modal\", \"select\"]`."
+          },
+          "limit": {
+            "type": "number",
+            "default": 2,
+            "description": "Max matches **per term** (default 2)."
+          }
+        },
+        "required": [
+          "terms"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "ads_search_components",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "ads_search_icons",
+      "description": "Searches the bundled Atlassian Design System **icon** catalog. Returns JSON with **componentName**, **package**, and **usage** for each match.\n\nWHEN TO USE:\n**Choosing an icon** for a control, nav item, empty state, or illustration—find `@atlaskit/icon` import paths and usage notes. Prefer `ads_plan` when you also need tokens and components together.\n\nExample:\n```tsx\nimport AddIcon from '@atlaskit/icon/core/add';\n<AddIcon label=\"Add work item\" size=\"small\" />\n```",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "terms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Required: one or more terms; fuzzy match on icon **componentName**, **iconName**, **keywords**, **categorization**, **type**, and **usage**. Example: `[\"search\", \"folder\", \"user\"]`."
+          },
+          "limit": {
+            "type": "number",
+            "default": 2,
+            "description": "Max matches **per term** (default 2)."
+          }
+        },
+        "required": [
+          "terms"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "ads_search_icons",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "ads_search_tokens",
+      "description": "Searches Atlassian Design System **design tokens** from bundled metadata. Returns JSON objects with **name** and **exampleValue** for each match (search also considers description, usage guidelines, and CSS property hints in metadata).\n\nWHEN TO USE:\n**Styling or theming in code**—you need the right `token('…')` names for colors, space, typography, etc. Use during layout and visual work when tokens must match ADS. Prefer `ads_plan` when you also need icons and components in the same step.\n\nExample:\n```tsx\nimport { token } from '@atlaskit/tokens';\nconst styles = css({ color: token('color.text'), padding: token('space.100') });\n```",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "terms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Required: one or more terms; fuzzy match on token **name**, **description**, **exampleValue**, **usageGuidelines.usage**, and **usageGuidelines.cssProperties**. Example: `[\"spacing\", \"color.text\", \"background\"]`."
+          },
+          "limit": {
+            "type": "number",
+            "default": 2,
+            "description": "Max matches **per term** (default 2)."
+          }
+        },
+        "required": [
+          "terms"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "ads_search_tokens",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "ads_suggest_a11y_fixes",
+      "description": "Suggests remediation steps for an accessibility issue described in natural language (often pasted from **axe-core**, ESLint, or review).\n\nWHAT YOU GET (varies by match):\n- **Curated hit:** ADS-biased examples and patterns from this server’s recipe map (components, tokens, common fixes).\n- **No strong match:** Generic guidance (e.g. “use ADS components”, labeling, testing)—still useful, but **not** guaranteed to be ADS-specific. May reference axe/atlassian.design resources.\n\nWHEN TO USE:\nAfter `ads_analyze_a11y` or `ads_analyze_localhost_a11y`, or whenever you have a violation string. For **topic-level** Atlassian Design System accessibility guidance, call `ads_get_a11y_guidelines` (this tool is fix-oriented, not a full guideline browse).\n\nDoes not replace manual testing with assistive technologies or keyboard-only navigation.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "violation": {
+            "type": "string",
+            "description": "Human-readable description of the issue (e.g. axe rule help text, \"button has no accessible name\", \"missing alt\"). Used to match curated recipes when possible; otherwise the tool falls back to generic guidance."
+          },
+          "code": {
+            "type": "string",
+            "description": "Snippet of the problematic code or markup so the response can be tailored (may be shown in the output for traceability)."
+          },
+          "component": {
+            "type": "string",
+            "description": "Optional: React component name involved (e.g. `Button`, `TextField`)—may be ADS or app-specific."
+          },
+          "context": {
+            "type": "string",
+            "description": "Optional: where this appears (e.g. modal, table row, page section) or constraints."
+          }
+        },
+        "required": [
+          "violation",
+          "code"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "ads_suggest_a11y_fixes",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "ads_migration_guides",
+      "description": "Returns a structured Atlassian Design System (ADS) **migration guide** for a known package or API migration (before/after examples, best practices, links).\n\nWHEN TO USE:\nYou are upgrading or refactoring code between ADS packages or APIs and need the official migration pattern for a specific id listed below.\n\nPass **both** `migration` and `description` using a **matching pair** from the enum (schema enforces valid combinations).\n\nAvailable migrations:\n- \"jira-spotlight\": Use when code contains `JiraSpotlight` import from `@atlassian/jira-spotlight`,- \"single-step\": Use when code ONLY has `Spotlight` from `@atlaskit/onboarding` (no JiraSpotlight),- \"multi-step\": Migrate a multi-step spotlight tour from @atlaskit/onboarding to @atlaskit/spotlight,- \"motion\": Migrate a single step spotlight with entrance animation from @atlaskit/onboarding to @atlaskit/spotlight using @atlaskit/motion",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "migration": {
+            "type": "string",
+            "enum": [
+              "jira-spotlight",
+              "single-step",
+              "multi-step",
+              "motion"
+            ],
+            "description": "Migration id from the registry. Must match the guide you want (see tool description list)."
+          },
+          "description": {
+            "type": "string",
+            "enum": [
+              "- \"jira-spotlight\": Use when code contains `JiraSpotlight` import from `@atlassian/jira-spotlight`",
+              "- \"single-step\": Use when code ONLY has `Spotlight` from `@atlaskit/onboarding` (no JiraSpotlight)",
+              "- \"multi-step\": Migrate a multi-step spotlight tour from @atlaskit/onboarding to @atlaskit/spotlight",
+              "- \"motion\": Migrate a single step spotlight with entrance animation from @atlaskit/onboarding to @atlaskit/spotlight using @atlaskit/motion"
+            ],
+            "description": "Human-readable migration label that pairs with `migration` in the schema—choose the entry that matches the selected id."
+          }
+        },
+        "required": [
+          "migration",
+          "description"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "ads_migration_guides",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "ads_i18n_conversion_guide",
+      "description": "Returns a **bundled** step-by-step guide for replacing hardcoded UI strings with `formatMessage` (and related patterns) using @atlassian/jira-intl or react-intl-next: message constants, placeholders, descriptions, and scope/limitations for systematic refactors.\n\nWhen working with i18n or hardcoded UI strings, use this tool alongside the Context Engine MCP tool `get_i18n_docs` for Atlassian-wide Traduki / i18n standards (message definition, extraction, pluralisation, formatting, workflow); this tool supplies the concrete hardcoded-string → `formatMessage` playbook bundled in ADS MCP.\n\nWHEN TO USE / TYPICAL TRIGGERS:\n- Refactoring JSX or TS literals to i18n; \"fix hardcoded string(s)\", \"convert hardcoded string in [file]\", \"literal string in JSX\".\n- \"Convert to i18n\", \"convert to formatMessage\", \"translate this string\", \"internationalize this string\", \"i18n this string\".\n- \"Use formatMessage\", \"use FormattedMessage\", \"wrap in formatMessage\", \"fix literal string\".\n- ESLint: `Literal string in JSX content should be internationalized. Use FormattedMessage or intl.formatMessage()`.\n- ESLint: `@atlassian/i18n/no-literal-string-in-jsx`.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "guide": {
+            "type": "string",
+            "enum": [
+              "hardcoded-string-to-formatmessage"
+            ],
+            "description": "Which bundled guide to return. Currently only `hardcoded-string-to-formatmessage` (JSX literals → `formatMessage` / intl patterns)."
+          }
+        },
+        "required": [
+          "guide"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "ads_i18n_conversion_guide",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "ads_get_guidelines",
+      "description": "Returns Atlassian Design System (ADS) **foundations** guidelines as Markdown: the bundled design-system-docs foundations set (not component API docs).\n\nTOPIC COVERAGE:\n- **Content & UX writing**: messaging types (empty state, error, success, warning, info, feature discovery), voice and tone, inclusive language, grammar and style, date/time copy handoff, vocabulary pointers.\n- **Visual foundations**: color (roles, accents, palette, charts, pickers), borders and radius, elevation and z-index, spacing and layout primitives (box/inline/stack), grid, iconography, logos.\n- **Design tokens**: concepts, themes, migration, using tokens in code and in Figma.\n- **Typography**: typefaces, scale, applying text styles and tokens.\n- **Accessibility overview**: building accessible apps and related foundations pages bundled here.\n\nWhen working with content, use this tool alongside the Context Engine MCP tool `get_content_standards_docs` for Atlassian-wide content standards (CDSTD/BAIT-style org guidance); this tool supplies ADS-specific foundations.\n\nWHAT YOU GET:\n- With `terms`: fuzzy search over keywords and content; concatenated Markdown for matches.\n- Without `terms` (or empty): the full guideline set as Markdown.\n\nWHEN TO USE:\nUse this when you are **building or updating a visual interface**, **writing or reviewing user-facing copy**, or need to **answer foundations questions** about ADS: content patterns, visual appearance, design tokens, typography, spacing, color, grid, motion, and related topics shipped in this bundle.\n\nIt is **not** for picking a component’s props or package (use `ads_plan` / `ads_search_components`) or for interactive accessibility rules and patterns (use `ads_get_a11y_guidelines`, with Context Engine `get_accessibility_docs` for org-wide a11y standards).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "terms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "default": [],
+            "description": "Search terms matched against guideline keywords and body (fuzzy). Examples: `[\"empty state\", \"voice tone\"]`, `[\"color tokens\", \"spacing\"]`, `[\"elevation\", \"grid\"]`. Omit or use an empty array to return **all** guidelines as Markdown."
+          },
+          "limit": {
+            "type": "number",
+            "default": 1,
+            "description": "Max matches **per term** when `terms` is non-empty (default 1). Ignored when returning all guidelines."
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "ads_get_guidelines",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "ads_get_all_tokens",
+      "description": "Returns **every** ADS design token from bundled metadata (name, example value, usage guidelines)—one JSON object per token, **very large** output.\n\nWHEN TO USE:\nLast resort when `ads_plan` / `ads_search_tokens` cannot answer the question and you need the full list (e.g. exhaustive audit). Prefer targeted search for normal development.\n\nNo parameters.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "ads_get_all_tokens",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "ads_get_all_icons",
+      "description": "Returns **every** ADS icon record as separate JSON text chunks (full catalog; large payload).\n\nWHEN TO USE:\nLast resort when `ads_plan` / `ads_search_icons` is insufficient and you must enumerate all icons. Prefer search for normal icon picking.\n\nNo parameters.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "ads_get_all_icons",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "ads_get_lint_rules",
+      "description": "Returns documentation for **Constellation** (Atlassian Design System) ESLint rules shipped with this MCP—rule purpose, examples, and fixes where available.\n\nWHAT YOU GET:\n- No `terms`: JSON array of all rule payloads.\n- With `terms`: fuzzy search (or exact rule name when `exactName` is true); JSON for one or more matching rules.\n\nWHEN TO USE:\nExplaining or fixing an ESLint message from ADS rules (e.g. `icon-label`, `ensure-proper-xcss-usage`, `no-deprecated-apis`), or browsing rule docs without opening the repo. Prefer this over guessing from rule id alone.\n\nThis tool does not run ESLint; it only returns bundled documentation.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "terms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "default": [],
+            "description": "Search terms matched against rule name, description, and docs body (fuzzy unless `exactName` is true). Example: `[\"icon-label\", \"xcss\", \"design token\"]`. Omit or empty: return **all** rules as JSON."
+          },
+          "limit": {
+            "type": "number",
+            "default": 1,
+            "description": "Max matches **per term** when searching (default 1). Not used when returning all rules."
+          },
+          "exactName": {
+            "type": "boolean",
+            "default": false,
+            "description": "If true, resolve each term by **exact** ESLint rule name (case-insensitive). If false, fuzzy search across name, description, and content."
+          }
+        },
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "ads_get_lint_rules",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "atlaskit_get_components",
+      "description": "Returns the names and packages of all atlaskit components excluding components covered by the Atlassian Design System.\n\nWHEN TO USE:\nUse this when you want to see what components are available without the full metadata payload.\n\nNo parameters.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "atlaskit_get_components",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "atlaskit_search_components",
+      "description": "Searches the bundled Atlaskit component catalog. Returns JSON objects with **name**, **package**, **examples**, and **props** for each match (trimmed payload).\n\nWHEN TO USE:\n**Selecting which Atlaskit component to use**—package name, examples, and props—before implementation. Use when searching for specific Atlaskit components that might not be in the core ADS catalog.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "terms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Required: one or more search terms (fuzzy over name, package, category, description, keywords, examples). Example: `[\"button\", \"modal\", \"select\"]`."
+          },
+          "limit": {
+            "type": "number",
+            "default": 2,
+            "description": "Max matches **per term** (default 2)."
+          }
+        },
+        "required": [
+          "terms"
+        ],
+        "additionalProperties": false,
+        "$schema": "http://json-schema.org/draft-07/schema#"
+      },
+      "annotations": {
+        "title": "atlaskit_search_components",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    }
+  ]
+}

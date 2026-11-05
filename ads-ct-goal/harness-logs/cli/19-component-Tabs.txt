@@ -1,0 +1,40 @@
+$ npx ads-cli component Tabs
+Tabs
+@atlaskit/tabs
+
+Props (6)
+  children                       string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | It…
+  The children of Tabs. The first child should be a `TabList` filled with `Tab`'s. Subsequent children should be `TabPanel`'s. There should be a `Tab` for each `TabPanel`. If you want to customize `Tab` or `TabPanel`, refer to the examples in the documentation.
+  defaultSelected                number | undefined
+  The index of the tab that will be selected by default when the component mounts. If not set the first tab will be displayed by default.
+  id                             string
+  A unique ID that will be used to generate IDs for tabs and tab panels. This is required for accessibility purposes.
+  onChange                       OnChangeCallback | undefined
+  A callback function which will be fired when a changed. It will be passed the index of the selected tab and a `UIAnalyticsEvent`.
+  selected                       number | undefined
+  The selected tab's index. If this prop is set the component behaves as a controlled component. It will be up to you to listen to `onChange`.
+  shouldUnmountTabPanelOnChange  boolean | undefined
+  Tabs by default leaves `TabPanel`'s mounted on the page after they have been selected. If you would like to unmount a `TabPanel` when it is not selected, set this prop to be true.
+
+Examples (1):
+
+Example 1
+  tsx                                                                                               
+  import Tab from '@atlaskit/tabs/tab';                                                             
+  import TabList from '@atlaskit/tabs/tab-list';                                                    
+  import TabPanel from '@atlaskit/tabs/tab-panel';                                                  
+  import Tabs from '@atlaskit/tabs/tabs';                                                           
+  const Example = (): React.JSX.Element => (                                                        
+    <Tabs id="tabs">                                                                                
+      <TabList>                                                                                     
+        <Tab>Tab 1</Tab>                                                                            
+        <Tab>Tab 2</Tab>                                                                            
+      </TabList>                                                                                    
+      <TabPanel>Content for Tab 1</TabPanel>                                                        
+      <TabPanel>Content for Tab 2</TabPanel>                                                        
+    </Tabs>                                                                                         
+  );                                                                                                
+  export default Example;                                                                           
+
+Design: https://go.atlassian.com/figma-library-ads-5775-8556
+# exit=0

@@ -1,0 +1,61 @@
+$ npx ads-cli component PageHeader
+PageHeader
+@atlaskit/page-header
+
+Props (8)
+  actions             React.ReactElement<any, string | React.JSXElementConstructor<any>> | undefined
+  Contents of the action bar to be rendered next to the page title.
+  bottomBar           React.ReactElement<any, string | React.JSXElementConstructor<any>> | undefined
+  Contents of the action bar to be rendered next to the page title. Typically a button group.
+  breadcrumbs         React.ReactElement<any, string | React.JSXElementConstructor<any>> | undefined
+  Page breadcrumbs to be rendered above the title.
+  children            string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | It…
+  Contents of the bottom bar to be rendered below the page title. Typically contains a search bar and/or filters.
+  disableTitleStyles  boolean | undefined
+  Content of the page title. The text wraps by default.
+  id                  string | undefined
+  Used as the ID of the inner h1 tag. This is exposed so the header text can be used as label of other elements by aria-labelledby.
+  innerRef            ((element: HTMLElement) => void) | undefined
+  Returns the inner ref to the DOM element of the title. This is exposed so the focus can be set.
+  truncateTitle       boolean | undefined
+  Prevent the title from wrapping across lines. Avoid using this wherever possible, as truncation can make page headings inaccessible.
+
+Examples (1):
+
+Example 1
+  tsx                                                                                               
+  import Breadcrumbs from '@atlaskit/breadcrumbs/breadcrumbs';                                      
+  import { BreadcrumbsItem } from '@atlaskit/breadcrumbs/breadcrumbs-item';                         
+  import Button from '@atlaskit/button/default/button';                                             
+  import PageHeader from '@atlaskit/page-header/page-header';                                       
+  const Examples = (): React.JSX.Element => (                                                       
+    <>                                                                                              
+      <PageHeader>Page Title</PageHeader>                                                           
+      <PageHeader                                                                                   
+        breadcrumbs={                                                                               
+          <Breadcrumbs>                                                                             
+            <BreadcrumbsItem href="/" text="Home" />                                                
+            <BreadcrumbsItem href="/projects" text="Projects" />                                    
+            <BreadcrumbsItem text="Current Project" />                                              
+          </Breadcrumbs>                                                                            
+        }                                                                                           
+        actions={<Button appearance="primary">Create</Button>}                                      
+      >                                                                                             
+        Project Settings                                                                            
+      </PageHeader>                                                                                 
+      <PageHeader                                                                                   
+        actions={                                                                                   
+          <>                                                                                        
+            <Button appearance="subtle">Cancel</Button>                                             
+            <Button appearance="primary">Save Changes</Button>                                      
+          </>                                                                                       
+        }                                                                                           
+      >                                                                                             
+        Edit Profile                                                                                
+      </PageHeader>                                                                                 
+    </>                                                                                             
+  );                                                                                                
+  export default Examples;                                                                          
+
+Design: https://go.atlassian.com/figma-library-ads-82097-75325
+# exit=0

@@ -1,0 +1,13 @@
+$ npx ads-cli search navigation layout top navigation header --type component --limit 3
+Results (3):
+
+Header  @atlaskit/table-tree
+   ADS  ·  component  ·  6 props  ·  0 examples
+   → npx @atlaskit/ads-cli component Header
+Pagination  @atlaskit/pagination
+   ADS  ·  component  ·  13 props  ·  1 example
+   → npx @atlaskit/ads-cli component Pagination
+Box  @atlaskit/primitives
+   ADS  ·  component  ·  3 props  ·  1 example
+   → npx @atlaskit/ads-cli component Box
+# exit=0

@@ -1,0 +1,45 @@
+$ npx ads-cli component Banner
+Banner
+@atlaskit/banner
+
+Props (3)
+  appearance  Appearance | undefined
+  Visual style to be used for the banner
+  children    string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<React…
+  Content to be shown next to the icon. Typically text content but can contain links.
+  icon        ReactElement<any, string | JSXElementConstructor<any>> | undefined
+  Icon to be shown left of the main content. Typically an Atlaskit [@atlaskit/icon](packages/design-system/icon)
+
+Examples (1):
+
+Example 1
+  tsx                                                                                               
+  import Banner from '@atlaskit/banner/banner';                                                     
+  import { cssMap } from '@atlaskit/css';                                                           
+  import WarningIcon from '@atlaskit/icon/core/status-warning';                                     
+  import Box from '@atlaskit/primitives/box';                                                       
+  import { Flex } from '@atlaskit/primitives/compiled/flex';                                        
+  import { token } from '@atlaskit/tokens';                                                         
+  const iconSpacingStyles = cssMap({                                                                
+    space050: {                                                                                     
+      paddingBlock: token('space.050'),                                                             
+      paddingInline: token('space.050'),                                                            
+    },                                                                                              
+  });                                                                                               
+  export default (): React.JSX.Element => (                                                         
+    <Box>                                                                                           
+      <Banner                                                                                       
+        icon={                                                                                      
+          <Flex xcss={iconSpacingStyles.space050}>                                                  
+            <WarningIcon label="Warning" />                                                         
+          </Flex>                                                                                   
+        }                                                                                           
+        testId="basicTestId"                                                                        
+      >                                                                                             
+        Your license is about to expire. Please renew your license within the next week.            
+      </Banner>                                                                                     
+    </Box>                                                                                          
+  );                                                                                                
+
+Design: https://go.atlassian.com/figma-library-ads-13174-35360
+# exit=0

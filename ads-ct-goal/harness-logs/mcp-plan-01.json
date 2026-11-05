@@ -1,0 +1,10 @@
+[
+ {"name":"01-guidelines-layout-hierarchy","tool":"ads_get_guidelines","args":{"terms":["page layout","visual hierarchy","primary action","information density"],"limit":2}},
+ {"name":"02-guidelines-messages","tool":"ads_get_guidelines","args":{"terms":["error message","success message","warning message","empty state","info message"],"limit":1}},
+ {"name":"03-guidelines-voice-datetime","tool":"ads_get_guidelines","args":{"terms":["voice tone","date time","button label","inclusive language"],"limit":1}},
+ {"name":"04-guidelines-color","tool":"ads_get_guidelines","args":{"terms":["color roles","accent colors","lozenge color meaning"],"limit":1}},
+ {"name":"05-guidelines-spacing-grid","tool":"ads_get_guidelines","args":{"terms":["spacing","grid","responsive breakpoints","typography"],"limit":1}},
+ {"name":"06-plan-components","tool":"ads_plan","args":{"tokens":["space","text subtle","background neutral","border"],"icons":["video","calendar","people","log out","settings","clock"],"components":["button","avatar","lozenge","modal dialog","section message","flag","form","textfield","select","checkbox","empty state","spinner","heading","toggle","badge","skeleton","banner","navigation","page header","tabs","dropdown menu","table"],"atlaskitComponents":["page layout","navigation","side navigation","page header"],"limit":2}},
+ {"name":"07-a11y-all","tool":"ads_get_a11y_guidelines","args":{}},
+ {"name":"08-lint-rules-all","tool":"ads_get_lint_rules","args":{}}
+]
