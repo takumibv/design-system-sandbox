@@ -73,6 +73,7 @@
 
 - 人の識別色（`fixtures.ts` の color）は **accent** トークン（`color.background.accent.<色>.subtler` と `color.text.accent.<色>`）。accent は「意味を持たない色」なので識別に使う [MCP:13 color roles「意味がある色に accent を使わない」の裏返し]。
 - 状態の色は semantic：参加＝Lozenge `success`、不参加＝`default`、初回設定未完了＝`moved`（注意を引くが警告ではない）、予定＝`inprogress`（青＝情報）。すべて文字ラベルつきで、色だけに頼らない [MCP:Lozenge a11y]。
+  - （実装で追記）週の Lozenge は「今週」＝`success`、「来週・予定」「予定」＝`inprogress`、「CT なし」＝`default`。
 - primary ボタン（brand 色）はページに 1 つ。組み合わせ画面では「ハドルを始める」だけ。
 
 ## 6. 文言（下書き）
@@ -85,4 +86,43 @@
 
 ## 7. 実装で変えたこと・妥協点（実装後に追記）
 
-（実装後に追記する）
+### 7.1 下書きから変えたこと
+
+| 下書き | 実装 | 理由 |
+| --- | --- | --- |
+| 参加者数と「メンバーを見る」は「ページ上部の補助情報」 | 見出し「今週の CT」の直下 1 行に「2026年10月5日（月） 14:00 開始・参加者 9 人（メンバーを見る）」 | 日付・開始時刻・参加者数を 1 行にまとめ、主役カードをより上に置くため |
+| ペアの一覧にハドル導線を置くか未定 | 今週の全ペアのカードそれぞれに「#u-xxx でハドル」（default・compact）。自分のペアは主役カードの primary と重複するが、一覧の一貫性を優先 | ブリーフ「ペアごとに…ハドルを始める導線を置く」。primary は 1 つに保つため一覧側は default |
+| 自分のペアの目印 | 一覧では「あなたのペア」の文字＋`color.background.accent.blue.subtlest` の面 | accent は意味を持たない識別用（色の役割）。文字で意味を補う |
+| 参加をやめた後の主役カード | 「今週の組み合わせに入っていません」＋「自分の設定を開く」。参加しているがまだ組み直されていない人（初回設定直後）は「今週の組み合わせにはまだ入っていません」 | 計測（G5・G6）で、固定データのままでは参加をやめても相手が表示され続けることに気づいたため |
+| 初回設定の冒頭文「設定が終わると、今週の相手と予定がすぐに表示されます」 | 「次に組み合わせが組み直されたときから…表示されます」 | 実際の挙動（組み直し待ち）と食い違っていたため |
+| Select の placeholder「選んでください」 | 削除 | ADS lint `no-placeholder`。消しても英語の既定文言は出ないことを確認 |
+| ロゴは `<img>` | `@atlaskit/image` の `Image`（高さ 20px は属性で指定） | ADS lint `no-html-image` |
+| SectionMessage の見出しレベル未指定 | ページ直下は `h2`、主役カード内は `h3` | ADS lint `use-heading-level-in-section-message` |
+
+### 7.2 自前の CSS（`cssMap`／`xcss`）を書いた箇所と理由
+
+すべて `@atlaskit/css` の `cssMap` とトークンで書いた（ADS の styling 規約どおり。生の CSS ファイルやグローバルスタイルは無い）。primitives の props だけでは表せないものに限った。
+
+| 箇所 | 内容 | 理由 |
+| --- | --- | --- |
+| `App.tsx` main、`AppHeader.tsx` inner | `maxWidth: 1200px`、`marginInline: auto` | 1440px で行が長くなりすぎないよう中央にまとめる。primitives に最大幅の props は無い |
+| `AppHeader.tsx` header | 下罫線（`border.width`／`color.border`） | ヘッダーと本文の区切り。navigation-system を使えないため自作 |
+| `AppHeader.tsx` nav | 768px 未満でナビを 2 段目へ（`order`、`width`） | 390px でヘッダーを低く保ち、主役カードをファーストビューに入れる |
+| `AppHeader.tsx` userName | 480px 未満で「でログイン中」を隠す | 390px で 1 行に収める |
+| `AppHeader.tsx` logoLink、list | ロゴとアイコンの横並び、`ul` の既定の余白・黒丸を消す | primitives の `as="ul"` は既定スタイルを消さない |
+| `PersonAvatar.tsx` tone | 頭文字の背景・文字色（accent トークン）と 100% の大きさ | ADS の Avatar に頭文字の API が無い |
+| `HomePage.tsx` top、pairGrid、weekGrid | CSS Grid の列（1024px 以上で 7:5、768px 以上で 2 列） | primitives の Grid に列テンプレートの props が無い |
+| `HomePage.tsx` card、heroCard、rowDivider | 枠線・角丸（`border.width(.selected)`、`radius.large`、`color.border(.brand)`） | カードの部品が ADS に無い。主役だけ太い brand 色の枠で区別 |
+| `MembersPage.tsx` list、row、main、actions | 一覧の枠・行の罫線・名前列の伸縮・操作列の右寄せ | 表（DynamicTable）は 390px で列が収まりにくいと推測し、折り返せるリストで組んだ（自分の判断。DynamicTable では試していない） |
+| `SettingsPage.tsx` form | `maxWidth: 560px` | 入力欄が横に伸びすぎないように |
+
+メディアクエリは `media.above.*` を使いたかったが、Compiled が import した定数をキーとして解決できず、同じ値の文字列を直書きした（`harness-report.md` §2）。
+
+### 7.3 妥協点
+
+- **組み合わせの再計算をしない**：固定データのまま。参加の変更・削除の影響は「主役カード」と文言でしか示せない。
+- **React 18**：ADS 内部の依存が React 19 に未対応のため。
+- **StrictMode を外した**：開発時に、初回描画から開いている Modal と Flag が表示されなかったため（`src/main.tsx`）。
+- **英語の固定ラベルが残る**：`RequiredAsterisk` の title、フォームのエラーアイコンのラベル、Select の "open"。差し替える API が無い。
+- **社員番号**：固定データに無いため、デモでは id から `1000 + id` を作って初期値にした。
+- **ハドル・ログイン**：デモの Flag を出すだけ。ログインすると id=1（佐藤 美咲）になる。
