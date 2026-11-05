@@ -1,0 +1,45 @@
+$ npx antd usage ./src
+# 目的: 使った部品の集計（対応表の確認用）
+# 実行日時: 2026-11-05T10:25:05Z
+
+Scanned 3 files in ./src
+
+  App — 2 imports across 2 files
+  Alert — 1 imports across 1 files
+  Avatar — 1 imports across 1 files
+    Avatar.Group: 1 usages
+  Badge — 1 imports across 1 files
+  Breadcrumb — 1 imports across 1 files
+  Button — 1 imports across 1 files
+  Card — 1 imports across 1 files
+  Checkbox — 1 imports across 1 files
+  Col — 1 imports across 1 files
+  Empty — 1 imports across 1 files
+  Flex — 1 imports across 1 files
+  Form — 1 imports across 1 files
+    Form.Item: 4 usages
+  Grid — 1 imports across 1 files
+  Input — 1 imports across 1 files
+  Layout — 1 imports across 1 files
+    Layout.Header: 1 usages
+    Layout.Content: 1 usages
+    Layout.Footer: 1 usages
+  Listy — 1 imports across 1 files
+  Modal — 1 imports across 1 files
+  Result — 1 imports across 1 files
+  Row — 1 imports across 1 files
+  Select — 1 imports across 1 files
+  Spin — 1 imports across 1 files
+  Statistic — 1 imports across 1 files
+  Table — 1 imports across 1 files
+  Tag — 1 imports across 1 files
+  Tooltip — 1 imports across 1 files
+  Typography — 1 imports across 1 files
+    Typography.Link: 1 usages
+  ConfigProvider — 1 imports across 1 files
+
+Total: 27 components, 28 imports
+
+Non-component antd exports (1):
+  theme — 2 imports across 2 files
+# exit=0

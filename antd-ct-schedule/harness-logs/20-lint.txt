@@ -1,0 +1,6 @@
+$ npx antd lint ./src
+# 目的: 実装後に antd 公式 lint（非推奨 API・ベストプラクティス）を実行
+# 実行日時: 2026-11-05T10:25:04Z
+
+Scanned 3 files. No issues found.
+# exit=0

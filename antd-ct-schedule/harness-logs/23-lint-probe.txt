@@ -1,0 +1,21 @@
+$ npx antd lint harness-logs/lint-probe
+# 目的: lint の検出範囲を確かめるため、わざと違反を入れたファイルを検査
+# 実行日時: 2026-11-05T10:25:13Z
+
+Scanned 1 files. Found 6 issues:
+
+  ⚠ /home/user/design-system-sandbox/antd-ct-schedule/harness-logs/lint-probe/Bad.tsx:6 [deprecated]
+    Space `direction` is deprecated. The space direction
+  ⚠ /home/user/design-system-sandbox/antd-ct-schedule/harness-logs/lint-probe/Bad.tsx:8 [deprecated]
+    Alert `message` is deprecated. Content of Alert, please use `title` instead
+  ⚠ /home/user/design-system-sandbox/antd-ct-schedule/harness-logs/lint-probe/Bad.tsx:9 [deprecated]
+    Card `bordered` is deprecated. Toggles rendering of the border around the card, please use `variant` instead
+  ⚠ /home/user/design-system-sandbox/antd-ct-schedule/harness-logs/lint-probe/Bad.tsx:9 [deprecated]
+    Card `bodyStyle` is deprecated. Style of card body, please use `styles.body` instead
+  ⚠ /home/user/design-system-sandbox/antd-ct-schedule/harness-logs/lint-probe/Bad.tsx:10 [deprecated]
+    Modal `destroyOnClose` is deprecated. Whether to unmount child components on onClose
+  ⚠ /home/user/design-system-sandbox/antd-ct-schedule/harness-logs/lint-probe/Bad.tsx:11 [deprecated]
+    `List` is deprecated. List component has been deprecated. Will be removed in the next major version. Please use [Listy](/components/listy) instead. See [How do I migrate off List?](#faq-migrate-from-list).
+
+Summary: 6 deprecated, 0 a11y, 0 usage, 0 performance, 0 skipped
+# exit=0

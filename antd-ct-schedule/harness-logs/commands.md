@@ -103,3 +103,10 @@
 | `npx antd info Empty` | 空状態の props を確認 | [14-info-Empty.txt](14-info-Empty.txt) |
 | `npx antd info Badge` | 参加状況のステータス表示に使えるか確認 | [14-info-Badge.txt](14-info-Badge.txt) |
 | `npx antd info Tooltip` | アイコンボタンに付ける Tooltip の props | [14-info-Tooltip.txt](14-info-Tooltip.txt) |
+| `npx antd lint ./src` | 実装後に antd 公式 lint（非推奨 API・ベストプラクティス）を実行 | [20-lint.txt](20-lint.txt) |
+| `npx antd doctor` | プロジェクト単位の設定問題を診断 | [21-doctor.txt](21-doctor.txt) |
+| `npx antd usage ./src` | 使った部品の集計（対応表の確認用） | [22-usage.txt](22-usage.txt) |
+| `npx antd lint harness-logs/lint-probe` | lint の検出範囲を確かめるため、わざと違反を入れたファイルを検査 | [23-lint-probe.txt](23-lint-probe.txt) |
+| `npx antd lint --help` | lint のオプションとルール分類を確認 | [23-lint-help.txt](23-lint-help.txt) |
+| `npx design.md lint harness-logs/web-design.md` | 公式 DESIGN.md を Google の DESIGN.md 形式検査にかける | [24-designmd-lint.txt](24-designmd-lint.txt) |
+| `npx design.md lint DESIGN.md` | プロジェクト用 DESIGN.md（公式からの差分）を検査し、コントラストが AA を満たすか確認 | [25-designmd-lint-project.txt](25-designmd-lint-project.txt) |

@@ -1,0 +1,19 @@
+$ npx design.md lint DESIGN.md
+# 目的: プロジェクト用 DESIGN.md（公式からの差分）を検査し、コントラストが AA を満たすか確認
+# 実行日時: 2026-11-05T10:27:51Z
+
+{
+  "findings": [
+    {
+      "severity": "info",
+      "message": "Design system defines 11 colors, 4 typography scales, 2 rounding levels, 4 spacing tokens, 8 components.",
+      "rule": "token-summary"
+    }
+  ],
+  "summary": {
+    "errors": 0,
+    "warnings": 0,
+    "infos": 1
+  }
+}
+# exit=0

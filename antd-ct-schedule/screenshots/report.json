@@ -1,0 +1,258 @@
+[
+  {
+    "kind": "antd",
+    "file": "schedule-default",
+    "width": 1440,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "schedule-guest",
+    "width": 1440,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "schedule-rest",
+    "width": 1440,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "schedule-holiday",
+    "width": 1440,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "schedule-insufficient",
+    "width": 1440,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "schedule-loading",
+    "width": 1440,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "schedule-login-error",
+    "width": 1440,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "schedule-saved",
+    "width": 1440,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "members-default",
+    "width": 1440,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "members-empty",
+    "width": 1440,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "members-delete-confirm",
+    "width": 1440,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "members-delete-error",
+    "width": 1440,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "settings-default",
+    "width": 1440,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "settings-onboarding",
+    "width": 1440,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "settings-validation",
+    "width": 1440,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "not-found",
+    "width": 1440,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "schedule-default",
+    "width": 390,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "schedule-guest",
+    "width": 390,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "schedule-rest",
+    "width": 390,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "schedule-holiday",
+    "width": 390,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "schedule-insufficient",
+    "width": 390,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "schedule-loading",
+    "width": 390,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "schedule-login-error",
+    "width": 390,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "schedule-saved",
+    "width": 390,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "members-default",
+    "width": 390,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "members-empty",
+    "width": 390,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "members-delete-confirm",
+    "width": 390,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "members-delete-error",
+    "width": 390,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "settings-default",
+    "width": 390,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "settings-onboarding",
+    "width": 390,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "settings-validation",
+    "width": 390,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  },
+  {
+    "kind": "antd",
+    "file": "not-found",
+    "width": 390,
+    "overflow": 0,
+    "violations": [],
+    "details": []
+  }
+]
