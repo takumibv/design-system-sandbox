@@ -1,0 +1,22 @@
+init	Setup or create a project that includes Primer React
+list_components	List all of the components available from Primer React
+get_component	Retrieve official documentation and usage details for exactly one React component from the @primer/react package. Use get_component_batch for 2 to 10 components.
+get_component_batch	Retrieve official documentation and usage details for 2 to 10 React components from the @primer/react package in one call. Use get_component for exactly one component.
+get_component_examples	Get examples for how to use a component from Primer React
+get_component_usage_guidelines	Get usage information for how to use a component from Primer
+get_component_accessibility_guidelines	Retrieve accessibility guidelines and best practices for a specific component from the @primer/react package by its name. Use this tool to get official accessibility recommendations, usage tips, and requirements to ensure your UI components are inclusive and meet accessibility standards.
+list_patterns	List all of the patterns available from Primer React. Scenario patterns describe specific user tasks. Prefer a scenario pattern when one fits the task, and fall back to the more generic UI patterns otherwise.
+get_pattern	Get a specific pattern by name. Scenario patterns describe specific user tasks. Prefer a scenario pattern when one fits the task, and fall back to the more generic UI patterns otherwise.
+find_tokens	Search for specific tokens. Tip: If you only provide a 'group' and leave 'query' empty, it returns all tokens in that category. Avoid property-by-property searching. COLOR RESOLUTION: If a user asks for "pink" or "blue", do not search for the color name. Use the semantic intent: blue->accent, red->danger, green->success. Always check both "emphasis" and "muted" variants for background colors. After identifying tokens and writing CSS, you MUST validate the result using lint_css.
+get_token_group_bundle	PREFERRED FOR COMPONENTS. Fetch all tokens for complex UI (e.g., Dialogs, Cards) in one call by providing an array of groups like ['overlay', 'shadow']. Use this instead of multiple find_tokens calls to save context.
+get_design_token_specs	CRITICAL: CALL THIS FIRST. Provides the logic matrix and the list of valid group names. You cannot search accurately without this map.
+get_token_usage_patterns	Provides "Golden Example" CSS for core patterns: Button (Interactions) and Stack (Layout). Use this to understand how to apply the Logic Matrix, Motion, and Spacing scales.
+lint_css	REQUIRED FINAL STEP. Use this to validate your CSS. You cannot complete a task involving CSS without a successful run of this tool.
+get_color_usage	Get the guidelines for how to apply color to a user interface
+get_typography_usage	Get the guidelines for how to apply typography to a user interface
+list_icons	List all of the icons (octicons) available from Primer Octicons React
+get_icon	Get a specific icon (octicon) by name from Primer
+primer_coding_guidelines	Get the guidelines when writing code that uses Primer or for UI code that you are creating
+review_alt_text	Evaluates image alt text against accessibility best practices and context relevance.
+listPrompts: MCP error -32601: Method not found
+listResources: MCP error -32601: Method not found

@@ -1,0 +1,144 @@
+<!-- tool: init / args: {} / at: 2026-11-05T10:53:38.919Z / isError: false -->
+
+The getting started documentation for Primer React is included below. It's important that the project:
+
+- Is using a tool like Vite, Next.js, etc that supports TypeScript and React. If the project does not have support for that, generate an appropriate project scaffold
+- Installs the latest version of `@primer/react` from `npm`
+- Correctly adds the `ThemeProvider` and `BaseStyles` components to the root of the application
+- Includes an import to a theme from `@primer/primitives`
+- If the project wants to use icons, also install the `@primer/octicons-react` from `npm`
+- Add appropriate agent instructions (like for copilot) to the project to prefer using components, tokens, icons, and more from Primer packages
+
+---
+
+1.  [Product UI](/product/)
+2.  [Getting started](/product/getting-started/)
+3.  [React](/product/getting-started/react/)
+
+React
+=====
+
+Get started using Primer React components in your React application.
+
+[Getting started](#getting-started)
+-----------------------------------
+
+1.  Install `@primer/react` and its peer dependencies:
+    
+        npm install @primer/react @primer/primitives react react-dom
+    
+2.  Wrap the root of your application with `ThemeProvider` and `BaseStyles` and import styles from the `@primer/primitives` package:
+    
+        // Import each of the themes you would like to use, by default we are including
+        // the light theme below
+        import '@primer/primitives/dist/css/functional/themes/light.css'
+        import {BaseStyles, ThemeProvider} from '@primer/react'
+        
+        function RootLayout() {
+          return (
+            <ThemeProvider>
+              <BaseStyles>
+                <App />
+              </BaseStyles>
+            </ThemeProvider>
+          )
+        }
+    
+3.  Import components from `@primer/react` and use them in your application:
+    
+        import {Button} from '@primer/react'
+        
+        function MyComponent() {
+          return <Button>Click me</Button>
+        }
+    
+
+Make sure the bundler you're using is aware of how to import CSS files from JavaScript. If you're using Next.js, Vite, or another tool this is likely already handled for you.
+
+### [Complete styling setup](#complete-styling-setup)
+
+The setup above provides the core Primer React components and theme system. For a **complete Primer design system experience** that matches GitHub.com styling, you may need additional CSS imports:
+
+#### [Base styles](#base-styles)
+
+If you need base HTML element styling (such as link colors that match GitHub.com), import the complete Primer CSS:
+
+    import '@primer/css/dist/primer.css'
+
+#### [Markdown content](#markdown-content)
+
+If you're rendering markdown content, wrap it in a container with the `markdown-body` class to apply GitHub-style markdown formatting:
+
+    <div className="markdown-body">
+      <h2>Your markdown content</h2>
+      <p>This will be styled like GitHub markdown</p>
+    </div>
+
+The minimal setup (steps 1-3) is sufficient for using Primer React components. The additional imports above are only needed if you want base HTML elements to match GitHub.com styling or need markdown formatting.
+
+### [Dotcom Codespaces (staff-only)](#dotcom-codespaces-staff-only)
+
+Are you a GitHub employee (Hubber) looking to make a change to primer/react or another Primer library? Take a look at our documentation for the [`primerize` tool](https://github.com/github/primer-engineering/blob/main/how-we-work/developing-in-dotcom-codespaces.md) (GitHub staff only), which can help get you started in a dotcom codespace.
+
+### [Polyfills & Browser Support](#polyfills--browser-support)
+
+Primer React supports the current versions of [Chrome](https://www.google.com/chrome/), [Firefox](http://www.mozilla.org/firefox/), [Safari](http://www.apple.com/safari/), and [Microsoft Edge](https://www.microsoft.com/en-us/windows/microsoft-edge), as well as the [Firefox Extended Support Release](https://www.mozilla.org/en-US/firefox/organizations/). This is consistent with [GitHub's Browser Support](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/supported-browsers).
+
+Primer React does not transform code to support older ECMAScript versions (eg. ES5), and uses ECMAScript features like `Object.assign` and syntax features like native classes and Object destructuring and spreading.
+
+Any environment that uses Primer React should have all the necessary polyfills installed to comply with the latest code standards, as Primer React does not ship with them. Additionally, as Primer React does not transform code to support older versions, it may be necessary for projects to transform the code if support for older browsers (such as Edge 18) is needed.
+
+### [Peer dependencies](#peer-dependencies)
+
+Primer React ships with a few libraries labeled as peer dependencies. These libraries are commonly already installed in host projects and installing multiple versions can introduce errors.
+
+Primer React requires the following peer dependencies:
+
+*   `@primer/primitives` at version 9.0.0 or higher
+*   `react` at versions 17.x or higher
+*   `react-dom` at versions 17.x or higher
+
+[BaseStyles](#basestyles)
+-------------------------
+
+In order to set baseline color, font-family, and line-heights across your project, you will need to establish base Primer styles for your app by wrapping all of your Primer components in `<BaseStyles>` at the root of your app:
+
+    import {BaseStyles, Heading, Stack} from '@primer/react'
+    
+    export default () => (
+      <BaseStyles>
+        <Stack>
+          <Heading as="h2">Hello, world!</Heading>
+          <p>This will get Primer text styles.</p>
+        </Stack>
+      </BaseStyles>
+    )
+
+This will apply the same `color`, `font-family`, and `line-height` styles to the `<body>` as [Primer React's base styles](https://github.com/primer/react/blob/fe58f6742e6007900f2924b936e4db27212231da/packages/react/src/BaseStyles.module.css).
+
+[TypeScript](#typescript)
+-------------------------
+
+Primer React includes TypeScript support and ships with its own typings. You will still need to install type definitions for peer dependencies if you import them in your own application code.
+
+Once installed, you can import components and their prop type interfaces from the `@primer/react` package:
+
+    import {Button, ButtonProps} from '@primer/react'
+
+[Silencing warnings](#silencing-warnings)
+-----------------------------------------
+
+Like React, Primer React emits warnings to the JavaScript console under certain conditions, eg. when using deprecated components or props. Similar to React, you can silence these warnings by setting the `NODE_ENV` environment variable to `production` during bundling.
+
+[Testing](#testing)
+-------------------
+
+Testing your application with Primer React is no different than testing your application with any other React library. Depending on your test environment and the testing libraries you use, you may need polyfills. For example, `jest` runs via Node runtime and uses [JSDOM](https://github.com/jsdom/jsdom) as a DOM implementation, meaning you will need to mock some browser APIs. We have [helpers](https://github.com/primer/react/blob/main/src/utils/test-helpers.tsx) that can be used to mock some of these APIs. You can import the helpers in your test setup file like so:
+
+    import '@primer/react/dist/utils/test-helpers'
+
+[More information](#more-information)
+-------------------------------------
+
+See the [primer/react repository](https://github.com/primer/react/tree/main/docs/content) for more information about how to use and contribute to Primer React. For component-specific documentation, check out the React section in the component's docs (example: [ActionList](/product/components/action-list/)).
+

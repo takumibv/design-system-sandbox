@@ -1,0 +1,354 @@
+{
+  "tools": [
+    {
+      "name": "init",
+      "description": "Setup or create a project that includes Primer React",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "list_components",
+      "description": "List all of the components available from Primer React",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "get_component",
+      "description": "Retrieve official documentation and usage details for exactly one React component from the @primer/react package. Use get_component_batch for 2 to 10 components.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the component to retrieve"
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "$schema": "https://json-schema.org/draft/2020-12/schema"
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "get_component_batch",
+      "description": "Retrieve official documentation and usage details for 2 to 10 React components from the @primer/react package in one call. Use get_component for exactly one component.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "names": {
+            "minItems": 2,
+            "maxItems": 10,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Component names to retrieve (e.g. [\"ActionMenu\", \"Button\", \"Pagination\"])"
+          }
+        },
+        "required": [
+          "names"
+        ],
+        "$schema": "https://json-schema.org/draft/2020-12/schema"
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "get_component_examples",
+      "description": "Get examples for how to use a component from Primer React",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the component to retrieve"
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "$schema": "https://json-schema.org/draft/2020-12/schema"
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "get_component_usage_guidelines",
+      "description": "Get usage information for how to use a component from Primer",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the component to retrieve"
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "$schema": "https://json-schema.org/draft/2020-12/schema"
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "get_component_accessibility_guidelines",
+      "description": "Retrieve accessibility guidelines and best practices for a specific component from the @primer/react package by its name. Use this tool to get official accessibility recommendations, usage tips, and requirements to ensure your UI components are inclusive and meet accessibility standards.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the component to retrieve"
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "$schema": "https://json-schema.org/draft/2020-12/schema"
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "list_patterns",
+      "description": "List all of the patterns available from Primer React. Scenario patterns describe specific user tasks. Prefer a scenario pattern when one fits the task, and fall back to the more generic UI patterns otherwise.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "get_pattern",
+      "description": "Get a specific pattern by name. Scenario patterns describe specific user tasks. Prefer a scenario pattern when one fits the task, and fall back to the more generic UI patterns otherwise.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the pattern to retrieve"
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "$schema": "https://json-schema.org/draft/2020-12/schema"
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "find_tokens",
+      "description": "Search for specific tokens. Tip: If you only provide a 'group' and leave 'query' empty, it returns all tokens in that category. Avoid property-by-property searching. COLOR RESOLUTION: If a user asks for \"pink\" or \"blue\", do not search for the color name. Use the semantic intent: blue->accent, red->danger, green->success. Always check both \"emphasis\" and \"muted\" variants for background colors. After identifying tokens and writing CSS, you MUST validate the result using lint_css.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "default": "",
+            "description": "Search keywords (e.g., \"danger border\", \"success background\")",
+            "type": "string"
+          },
+          "group": {
+            "description": "Filter by group (e.g., \"fgColor\", \"border\")",
+            "type": "string"
+          },
+          "limit": {
+            "default": 15,
+            "description": "Maximum results to return to stay within context limits",
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 100
+          }
+        },
+        "$schema": "https://json-schema.org/draft/2020-12/schema"
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "get_token_group_bundle",
+      "description": "PREFERRED FOR COMPONENTS. Fetch all tokens for complex UI (e.g., Dialogs, Cards) in one call by providing an array of groups like ['overlay', 'shadow']. Use this instead of multiple find_tokens calls to save context.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "groups": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Array of group names (e.g., [\"overlay\", \"shadow\", \"focus\"])"
+          }
+        },
+        "required": [
+          "groups"
+        ],
+        "$schema": "https://json-schema.org/draft/2020-12/schema"
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "get_design_token_specs",
+      "description": "CRITICAL: CALL THIS FIRST. Provides the logic matrix and the list of valid group names. You cannot search accurately without this map.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "get_token_usage_patterns",
+      "description": "Provides \"Golden Example\" CSS for core patterns: Button (Interactions) and Stack (Layout). Use this to understand how to apply the Logic Matrix, Motion, and Spacing scales.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "lint_css",
+      "description": "REQUIRED FINAL STEP. Use this to validate your CSS. You cannot complete a task involving CSS without a successful run of this tool.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "css": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "css"
+        ],
+        "$schema": "https://json-schema.org/draft/2020-12/schema"
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "get_color_usage",
+      "description": "Get the guidelines for how to apply color to a user interface",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "get_typography_usage",
+      "description": "Get the guidelines for how to apply typography to a user interface",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "list_icons",
+      "description": "List all of the icons (octicons) available from Primer Octicons React",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "get_icon",
+      "description": "Get a specific icon (octicon) by name from Primer",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the icon to retrieve"
+          },
+          "size": {
+            "default": "16",
+            "description": "The size of the icon to retrieve, e.g. \"16\"",
+            "type": "string"
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "$schema": "https://json-schema.org/draft/2020-12/schema"
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "primer_coding_guidelines",
+      "description": "Get the guidelines when writing code that uses Primer or for UI code that you are creating",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "review_alt_text",
+      "description": "Evaluates image alt text against accessibility best practices and context relevance.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "surroundingText": {
+            "type": "string",
+            "description": "Text surrounding the image, relevant to the image."
+          },
+          "alt": {
+            "type": "string",
+            "description": "The alt text of the image being evaluated"
+          },
+          "image": {
+            "type": "string",
+            "description": "The image URL or file path being evaluated"
+          }
+        },
+        "required": [
+          "surroundingText",
+          "alt",
+          "image"
+        ],
+        "$schema": "https://json-schema.org/draft/2020-12/schema"
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    }
+  ]
+}
