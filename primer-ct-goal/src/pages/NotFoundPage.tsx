@@ -15,7 +15,7 @@ export function NotFoundPage() {
           </Heading>
           <Blankslate border>
             <Blankslate.Visual>
-              <AlertIcon size="medium" className={styles.mutedIcon} />
+              <AlertIcon size="medium" className={styles.MutedIcon} />
             </Blankslate.Visual>
             <Blankslate.Heading as="h2">このアドレスのページはありません</Blankslate.Heading>
             <Blankslate.Description>

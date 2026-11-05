@@ -33,7 +33,6 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
     const d = buildDataset(scenario.data, scenario.unsetChannel)
     setMembers(d.members)
     setWeeks(d.weeks)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dataKey])
 
   const start = scenario.today ? Math.max(0, weeks.findIndex((w) => w.iso === scenario.today)) : 0

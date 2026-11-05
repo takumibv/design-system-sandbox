@@ -48,7 +48,7 @@ export function SchedulePage() {
           </Heading>
           <Blankslate border>
             <Blankslate.Visual>
-              <AlertIcon size="medium" className={styles.mutedIcon} />
+              <AlertIcon size="medium" className={styles.MutedIcon} />
             </Blankslate.Visual>
             <Blankslate.Heading as="h2">組み合わせを読み込めませんでした</Blankslate.Heading>
             <Blankslate.Description>
@@ -78,10 +78,10 @@ export function SchedulePage() {
               組み合わせ
             </Heading>
             <Stack direction="horizontal" gap="normal" wrap="wrap" align="center">
-              <Text size="small" className={styles.meta}>
+              <Text size="small" className={styles.Meta}>
                 <ClockIcon size={16} /> CT は毎週月曜 {CT_START} から
               </Text>
-              <Text size="small" className={styles.meta}>
+              <Text size="small" className={styles.Meta}>
                 <PeopleIcon size={16} /> 参加者 {activeCount} 人・
                 <Link href={href('/members')} onClick={link('/members')} inline>
                   メンバーを見る
@@ -125,7 +125,7 @@ function ThisWeekCard({ week, nextCtWeek, me, members }: { week: Week; nextCtWee
   const channel = pair ? huddleChannel(members, pair) : undefined
 
   const nextLine = nextCtWeek ? (
-    <Text as="p" className={styles.para}>
+    <Text as="p" className={styles.Para}>
       次の CT は {nextCtWeek.label} {CT_START} から。{myStatusText(nextCtWeek, members, me)}
       {pairOf(nextCtWeek, me.id) ? ' と話す予定です。' : 'の予定です。'}
     </Text>
@@ -136,7 +136,7 @@ function ThisWeekCard({ week, nextCtWeek, me, members }: { week: Week; nextCtWee
     body = (
       <>
         <CardTitle>今週は CT がありません</CardTitle>
-        <Text as="p" className={styles.para}>
+        <Text as="p" className={styles.Para}>
           {week.label}は{week.holiday}のため、CT はお休みです。組み合わせは次の週へ繰り越されます。
         </Text>
         {nextLine}
@@ -146,24 +146,24 @@ function ThisWeekCard({ week, nextCtWeek, me, members }: { week: Week; nextCtWee
     body = (
       <>
         <CardTitle>今週の組み合わせはありません</CardTitle>
-        <Text as="p" className={styles.para}>参加者が 2 人未満のため、組み合わせを作れませんでした。くわしくは下の「今週の組み合わせ」を見てください。</Text>
+        <Text as="p" className={styles.Para}>参加者が 2 人未満のため、組み合わせを作れませんでした。くわしくは下の「今週の組み合わせ」を見てください。</Text>
       </>
     )
   } else if (!me.active) {
     body = (
       <>
         <CardTitle>あなたは今 CT に参加していません</CardTitle>
-        <Text as="p" className={styles.para}>参加すると、今週以降の組み合わせに入ります。参加するかどうかは「自分の設定」で変えられます。</Text>
+        <Text as="p" className={styles.Para}>参加すると、今週以降の組み合わせに入ります。参加するかどうかは「自分の設定」で変えられます。</Text>
       </>
     )
   } else if (week.rest === me.id) {
     body = (
       <>
         <Stack direction="horizontal" align="center" gap="condensed">
-          <MoonIcon size={24} className={styles.mutedIcon} />
+          <MoonIcon size={24} className={styles.MutedIcon} />
           <CardTitle>今週のあなたはお休みです</CardTitle>
         </Stack>
-        <Text as="p" className={styles.para}>参加者が奇数のため、毎週 1 人がお休みになります。お休みの人は週ごとに入れ替わります。</Text>
+        <Text as="p" className={styles.Para}>参加者が奇数のため、毎週 1 人がお休みになります。お休みの人は週ごとに入れ替わります。</Text>
         {nextLine}
       </>
     )
@@ -174,7 +174,7 @@ function ThisWeekCard({ week, nextCtWeek, me, members }: { week: Week; nextCtWee
         <Stack direction={{ narrow: 'vertical', regular: 'horizontal' }} align={{ narrow: 'start', regular: 'center' }} justify="space-between" gap="normal">
           <Stack direction="horizontal" align="center" gap="normal" wrap="nowrap">
             <PersonAvatar member={partner} size={48} />
-            <span className={styles.heroName}>{partner.name} さん</span>
+            <span className={styles.HeroName}>{partner.name} さん</span>
           </Stack>
           {channel ? (
             <Button
@@ -189,7 +189,7 @@ function ThisWeekCard({ week, nextCtWeek, me, members }: { week: Week; nextCtWee
           ) : null}
         </Stack>
         {channel ? (
-          <Text size="small" className={styles.muted}>
+          <Text size="small" className={styles.Muted}>
             #{channel}（{partner.channel === channel ? `${partner.name} さん` : 'あなた'}の uチャンネル）で始めます。相手も同じチャンネルに来ます。
           </Text>
         ) : (
@@ -238,7 +238,7 @@ function WeekSection({ week, members, me }: { week: Week; members: Member[]; me?
           <Heading as="h2" id="week-pairs-heading" variant="small">
             今週の組み合わせ
           </Heading>
-          <Text size="small" className={styles.muted}>
+          <Text size="small" className={styles.Muted}>
             {week.longLabel}
           </Text>
         </Stack>
@@ -259,14 +259,14 @@ function WeekSection({ week, members, me }: { week: Week; members: Member[]; me?
             </Blankslate.PrimaryAction>
           </Blankslate>
         ) : (
-          <ul className={styles.pairList}>
+          <ul className={styles.PairList}>
             {week.pairs.map((pair) => (
               <PairRow key={pair.join('-')} pair={pair} members={members} me={me} />
             ))}
             {week.rest ? (
-              <li className={styles.pairRow}>
+              <li className={styles.PairRow}>
                 <Stack direction="horizontal" align="center" gap="condensed" wrap="wrap">
-                  <Text size="small" className={styles.muted}>
+                  <Text size="small" className={styles.Muted}>
                     お休み
                   </Text>
                   <Person member={findMember(members, week.rest)!} isMe={week.rest === me?.id} />
@@ -286,12 +286,12 @@ function PairRow({ pair, members, me }: { pair: [number, number]; members: Membe
   const channel = huddleChannel(members, pair)
   const mine = me ? pair.includes(me.id) : false
   return (
-    <li className={mine ? `${styles.pairRow} ${styles.mine}` : styles.pairRow}>
+    <li className={mine ? `${styles.PairRow} ${styles.Mine}` : styles.PairRow}>
       <Stack gap="condensed">
         <Stack direction="horizontal" align="center" justify="space-between" gap="condensed" wrap="wrap">
           <Stack direction="horizontal" align="center" gap="condensed" wrap="wrap">
             <Person member={a} isMe={a.id === me?.id} />
-            <Text size="small" className={styles.muted}>
+            <Text size="small" className={styles.Muted}>
               と
             </Text>
             <Person member={b} isMe={b.id === me?.id} />
@@ -306,7 +306,7 @@ function PairRow({ pair, members, me }: { pair: [number, number]; members: Membe
               ハドル
             </Button>
           ) : (
-            <Text size="small" className={styles.muted}>
+            <Text size="small" className={styles.Muted}>
               uチャンネル未設定のためハドル不可
             </Text>
           )}
@@ -336,7 +336,7 @@ function UpcomingWeeks({ weeks, members, me }: { weeks: Week[]; members: Member[
         <Heading as="h2" id="upcoming-heading" variant="small">
           これからの予定
         </Heading>
-        <Text size="small" className={styles.muted}>
+        <Text size="small" className={styles.Muted}>
           <SyncIcon size={16} /> 参加者が増減すると組み直されるため、来週以降は予定です。
         </Text>
         {me && me.active ? (
@@ -346,16 +346,16 @@ function UpcomingWeeks({ weeks, members, me }: { weeks: Week[]; members: Member[
         ) : null}
       </Stack>
       {noPairsAtAll ? (
-        <Text size="small" className={styles.muted}>
+        <Text size="small" className={styles.Muted}>
           参加者が 2 人以上になると、ここに予定が表示されます。
         </Text>
       ) : (
-        <ol className={styles.weekList}>
+        <ol className={styles.WeekList}>
           {weeks.map((week, i) => (
-            <li key={week.iso} className={styles.weekItem}>
+            <li key={week.iso} className={styles.WeekItem}>
               <Stack gap="condensed">
                 <Stack direction="horizontal" align="center" gap="condensed" wrap="wrap">
-                  <Heading as="h3" variant="small" className={styles.weekTitle}>
+                  <Heading as="h3" variant="small" className={styles.WeekTitle}>
                     {week.label}
                   </Heading>
                   <Label variant="secondary">{i === 0 ? '来週・予定' : '予定'}</Label>
@@ -372,7 +372,7 @@ function UpcomingWeeks({ weeks, members, me }: { weeks: Week[]; members: Member[
                         あなた：{myStatusText(week, members, me)}
                       </Text>
                     ) : null}
-                    <ul className={styles.compactPairs}>
+                    <ul className={styles.CompactPairs}>
                       {week.pairs
                         .filter((p) => !me || !p.includes(me.id))
                         .map((p) => (
@@ -384,7 +384,7 @@ function UpcomingWeeks({ weeks, members, me }: { weeks: Week[]; members: Member[
                         ))}
                       {week.rest && week.rest !== me?.id ? (
                         <li>
-                          <Text size="small" className={styles.muted}>
+                          <Text size="small" className={styles.Muted}>
                             お休み：{findMember(members, week.rest)?.name}
                           </Text>
                         </li>

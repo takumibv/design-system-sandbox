@@ -127,7 +127,7 @@ export function SettingsPage({ onboarding }: { onboarding: boolean }) {
                 variant="critical"
                 title={`${errorKeys.length} つの項目を確認してください`}
                 description={
-                  <ul className={listStyles.compactPairs}>
+                  <ul className={listStyles.CompactPairs}>
                     {errorKeys.map((k) => (
                       <li key={k}>
                         <Link href={`#field-${k}`} inline>
@@ -232,7 +232,7 @@ export function SettingsPage({ onboarding }: { onboarding: boolean }) {
                 {result === 'saved' ? <InlineMessage variant="success">保存しました</InlineMessage> : null}
               </Stack>
               {result === 'saved' && !isIncomplete(me) ? (
-                <Text size="small" className={listStyles.muted}>
+                <Text size="small" className={listStyles.Muted}>
                   {me.active ? '今週以降の組み合わせに入っています。' : '今は組み合わせに入っていません。'}
                 </Text>
               ) : null}

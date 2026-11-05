@@ -1,0 +1,19 @@
+
+src/App.module.css
+  22:1  ×  Expected ".main p" to have no more than 0 type selectors  selector-max-type
+
+src/components/PersonAvatar.module.css
+  11:15  ×  Please use a Primer box-shadow variable instead of '0 0 0 var(--borderWidth-thin) var(--avatar-borderColor)'. Consult the primer docs for a suitable replacement. https://primer.style/foundations/primitives/color#shadow or https://primer.style/foundations/primitives/size#border-size  primer/box-shadow
+  13:16  ×  Please use a Primer typography variable instead of '1'. Consult the primer docs for a suitable replacement. https://primer.style/foundations/primitives/typography                                                                                                                          primer/typography
+  36:3   ×  --display-blue-bgColor-muted is in alpha and should be used with caution with approval from the Primer team                                                                                                                                                                                 primer/no-display-colors
+  37:3   ×  --display-blue-fgColor is in alpha and should be used with caution with approval from the Primer team                                                                                                                                                                                       primer/no-display-colors
+  41:3   ×  --display-green-bgColor-muted is in alpha and should be used with caution with approval from the Primer team                                                                                                                                                                                primer/no-display-colors
+  42:3   ×  --display-green-fgColor is in alpha and should be used with caution with approval from the Primer team                                                                                                                                                                                      primer/no-display-colors
+  46:3   ×  --display-purple-bgColor-muted is in alpha and should be used with caution with approval from the Primer team                                                                                                                                                                               primer/no-display-colors
+  47:3   ×  --display-purple-fgColor is in alpha and should be used with caution with approval from the Primer team                                                                                                                                                                                     primer/no-display-colors
+  51:3   ×  --display-orange-bgColor-muted is in alpha and should be used with caution with approval from the Primer team                                                                                                                                                                               primer/no-display-colors
+  52:3   ×  --display-orange-fgColor is in alpha and should be used with caution with approval from the Primer team                                                                                                                                                                                     primer/no-display-colors
+
+× 11 problems (11 errors, 0 warnings)
+  2 errors potentially fixable with the "--fix" option.
+

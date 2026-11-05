@@ -27,9 +27,9 @@ export function LoadingSchedule() {
             </Stack>
           </div>
           <div aria-hidden="true">
-            <ul className={styles.pairList}>
+            <ul className={styles.PairList}>
               {[0, 1, 2, 3].map((i) => (
-                <li key={i} className={styles.pairRow}>
+                <li key={i} className={styles.PairRow}>
                   <SkeletonText maxWidth="20em" />
                 </li>
               ))}

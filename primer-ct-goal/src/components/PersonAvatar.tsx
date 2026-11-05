@@ -4,12 +4,12 @@ import styles from './PersonAvatar.module.css'
 
 type Size = 20 | 32 | 48
 
-const sizeClass: Record<Size, string> = { 20: styles.size20, 32: styles.size32, 48: styles.size48 }
+const sizeClass: Record<Size, string> = { 20: styles.Size20, 32: styles.Size32, 48: styles.Size48 }
 const colorClass: Record<string, string> = {
-  blue: styles.blue,
-  green: styles.green,
-  purple: styles.purple,
-  orange: styles.orange,
+  blue: styles.Blue,
+  green: styles.Green,
+  purple: styles.Purple,
+  orange: styles.Orange,
 }
 
 /**
@@ -19,7 +19,7 @@ const colorClass: Record<string, string> = {
 export function PersonAvatar({ member, size = 20 }: { member: Member; size?: Size }) {
   if (member.image) return <Avatar src={member.image} size={size} alt="" />
   return (
-    <span aria-hidden="true" className={`${styles.initial} ${sizeClass[size]} ${colorClass[member.color] ?? styles.blue}`}>
+    <span aria-hidden="true" className={`${styles.Initial} ${sizeClass[size]} ${colorClass[member.color] ?? styles.Blue}`}>
       {member.name.slice(0, 1)}
     </span>
   )

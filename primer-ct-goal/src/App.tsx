@@ -14,7 +14,7 @@ function PageNotices() {
   const [dismissed, setDismissed] = useState(false)
   if (scenario.loginFailed) {
     return (
-      <div className={styles.notices}>
+      <div className={styles.Notices}>
       <Banner
         variant="critical"
         title="Slack でログインできませんでした"
@@ -26,7 +26,7 @@ function PageNotices() {
   }
   if (scenario.result === 'onboarded' && !dismissed) {
     return (
-      <div className={styles.notices}>
+      <div className={styles.Notices}>
       <Banner
         variant="success"
         title="設定が終わりました"
@@ -53,9 +53,9 @@ export default function App() {
   else page = <NotFoundPage />
 
   return (
-    <div className={styles.app}>
+    <div className={styles.App}>
       <AppHeader />
-      <main className={styles.main}>
+      <main className={styles.Main}>
         <PageNotices />
         {page}
       </main>

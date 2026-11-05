@@ -42,7 +42,7 @@ export function MembersPage() {
             ) : (
               <Blankslate border>
                 <Blankslate.Visual>
-                  <AlertIcon size="medium" className={listStyles.mutedIcon} />
+                  <AlertIcon size="medium" className={listStyles.MutedIcon} />
                 </Blankslate.Visual>
                 <Blankslate.Heading as="h2">メンバーを読み込めませんでした</Blankslate.Heading>
                 <Blankslate.Description>少し待ってから、もう一度読み込んでください。</Blankslate.Description>
@@ -88,7 +88,7 @@ export function MembersPage() {
         <Stack gap="normal">
           <Stack gap="condensed">
             {pageTitle}
-            <Text as="p" className={listStyles.muted}>
+            <Text as="p" className={listStyles.Muted}>
               Slack でログインしたことのある人を、社員番号順に並べています。組み合わせに入るのは「参加」の人だけです。
             </Text>
           </Stack>
@@ -134,32 +134,32 @@ export function MembersPage() {
                     初回設定が未完了 <strong>{incomplete.length}</strong> 人
                   </Text>
                 ) : null}
-                <Text className={listStyles.muted}>全 {members.length} 人</Text>
+                <Text className={listStyles.Muted}>全 {members.length} 人</Text>
               </Stack>
 
-              <ul className={listStyles.pairList} aria-label="メンバー一覧（社員番号順）">
+              <ul className={listStyles.PairList} aria-label="メンバー一覧（社員番号順）">
                 {[...members]
                   .sort((a, b) => a.id - b.id)
                   .map((m) => {
                     const mine = m.id === me?.id
                     return (
-                      <li key={m.id} className={mine ? `${listStyles.pairRow} ${listStyles.mine}` : listStyles.pairRow}>
-                        <div className={styles.row}>
+                      <li key={m.id} className={listStyles.PairRow}>
+                        <div className={styles.Row}>
                           <PersonAvatar member={m} size={32} />
-                          <Stack gap="none" className={styles.who}>
+                          <Stack gap="none" className={styles.Who}>
                             <Stack direction="horizontal" align="center" gap="condensed" wrap="wrap">
                               <Text weight="semibold">{m.name}</Text>
                               {mine ? <Label variant="accent">あなた</Label> : null}
                             </Stack>
-                            <Text size="small" className={listStyles.muted}>
+                            <Text size="small" className={listStyles.Muted}>
                               社員番号 {m.incomplete ? '未設定' : m.id}・{m.channel ? `#${m.channel}` : 'uチャンネル未設定'}
                             </Text>
                           </Stack>
-                          <Stack direction="horizontal" align="center" gap="condensed" wrap="wrap" className={styles.status}>
+                          <Stack direction="horizontal" align="center" gap="condensed" wrap="wrap" className={styles.Status}>
                             {m.active ? <Label variant="success">参加</Label> : <Label variant="secondary">不参加</Label>}
                             {isIncomplete(m) ? <Label variant="attention">初回設定が未完了</Label> : null}
                           </Stack>
-                          <div className={styles.actions}>
+                          <div className={styles.Actions}>
                             {mine ? (
                               <Button as="a" href={href('/settings')} onClick={link('/settings')} size="small">
                                 設定を変える
@@ -208,7 +208,7 @@ export function MembersPage() {
                 {target.name} さんをメンバーから削除します。この操作は取り消せません。
                 {target.active ? '参加者が 1 人減るため、今週以降の全員の組み合わせが組み直されます。' : ''}
               </Text>
-              <Text as="p" size="small" className={listStyles.muted}>
+              <Text as="p" size="small" className={listStyles.Muted}>
                 本人が再び Slack でログインすると、初回設定からやり直しになります。
               </Text>
             </Stack>

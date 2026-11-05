@@ -14,18 +14,18 @@ export function AppHeader() {
 
   return (
     <>
-      <header className={styles.header}>
+      <header className={styles.Header}>
         <Stack direction="horizontal" align="center" justify="space-between" gap="condensed" wrap="nowrap">
           <Stack direction="horizontal" align="center" gap="condensed" wrap="nowrap">
             <a
-              className={styles.logoLink}
+              className={styles.LogoLink}
               href="https://www.gaji.jp/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img className={styles.logo} src="/gaji-labo-logo.svg" alt="Gaji-Labo（新しいタブで開く）" />
+              <img className={styles.Logo} src="/gaji-labo-logo.svg" alt="Gaji-Labo のサイト（新しいタブで開く）" />
             </a>
-            <Link href={href('/')} onClick={link('/')} className={styles.appName} muted>
+            <Link href={href('/')} onClick={link('/')} className={styles.AppName} muted>
               CTスケジュール
             </Link>
           </Stack>
@@ -36,7 +36,7 @@ export function AppHeader() {
                 leadingVisual={() => <PersonAvatar member={me} size={20} />}
               >
                 <VisuallyHidden>ログイン中：</VisuallyHidden>
-                <span className={styles.userName}>{me.name}</span>
+                <span className={styles.UserName}>{me.name}</span>
               </ActionMenu.Button>
               <ActionMenu.Overlay align="end">
                 <ActionList>
