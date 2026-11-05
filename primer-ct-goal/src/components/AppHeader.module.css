@@ -1,0 +1,39 @@
+/*
+ * サイト全体のヘッダー。Primer React の Header は GitHub.com のダークなグローバルヘッダー向けで、
+ * 外部サービス（Gaji-Labo）のロゴと明るい面を置く用途に合わないため、PageLayout の外に最小限の枠だけ自作した。
+ * 並べ方は Stack に任せ、ここでは面の色・区切り線・余白・ロゴの高さだけを持つ。
+ */
+.header {
+  background-color: var(--bgColor-default);
+  padding-block: var(--stack-padding-condensed);
+  padding-inline: var(--stack-padding-normal);
+}
+
+.logoLink {
+  display: inline-flex;
+  border-radius: var(--borderRadius-small);
+}
+
+.logoLink:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--outline-focus-offset);
+}
+
+.logo {
+  display: block;
+  height: var(--base-size-20);
+  width: auto;
+}
+
+.appName {
+  font: var(--text-title-shorthand-small);
+  color: var(--fgColor-default);
+  white-space: nowrap;
+}
+
+.userName {
+  max-width: 10em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

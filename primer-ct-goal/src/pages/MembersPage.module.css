@@ -1,0 +1,37 @@
+/*
+ * メンバー 1 行の並び。Stack だけでは「狭い幅で状態ラベルを名前の下へ回す」2 次元の並びが作れないため grid を使う。
+ * 値はすべて primitives のトークン。
+ */
+.row {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  grid-template-areas: 'avatar who status actions';
+  align-items: center;
+  gap: var(--stack-gap-condensed);
+}
+
+.row > :first-child {
+  grid-area: avatar;
+}
+
+.who {
+  grid-area: who;
+  min-width: 0;
+}
+
+.status {
+  grid-area: status;
+}
+
+.actions {
+  grid-area: actions;
+}
+
+@media (max-width: 543.98px) {
+  .row {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+      'avatar who actions'
+      '. status status';
+  }
+}
