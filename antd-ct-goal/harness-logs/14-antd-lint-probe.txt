@@ -1,0 +1,24 @@
+Scanned 1 files. Found 10 issues:
+
+  ⚠ /tmp/claude-0/-home-user-design-system-sandbox/dc54f0f5-bfc5-5b96-81b8-0196d9a78735/scratchpad/lintprobe/Bad.tsx:3 [deprecated]
+    Space `direction` is deprecated. The space direction
+  ⚠ /tmp/claude-0/-home-user-design-system-sandbox/dc54f0f5-bfc5-5b96-81b8-0196d9a78735/scratchpad/lintprobe/Bad.tsx:4 [deprecated]
+    Alert `message` is deprecated. Content of Alert, please use `title` instead
+  ⚠ /tmp/claude-0/-home-user-design-system-sandbox/dc54f0f5-bfc5-5b96-81b8-0196d9a78735/scratchpad/lintprobe/Bad.tsx:5 [deprecated]
+    `List` is deprecated. List component has been deprecated. Will be removed in the next major version. Please use [Listy](/components/listy) instead. See [How do I migrate off List?](#faq-migrate-from-list).
+  ⚠ /tmp/claude-0/-home-user-design-system-sandbox/dc54f0f5-bfc5-5b96-81b8-0196d9a78735/scratchpad/lintprobe/Bad.tsx:5 [deprecated]
+    `List` is deprecated. List component has been deprecated. Will be removed in the next major version. Please use [Listy](/components/listy) instead. See [How do I migrate off List?](#faq-migrate-from-list).
+  ⚠ /tmp/claude-0/-home-user-design-system-sandbox/dc54f0f5-bfc5-5b96-81b8-0196d9a78735/scratchpad/lintprobe/Bad.tsx:7 [deprecated]
+    Modal `destroyOnClose` is deprecated. Whether to unmount child components on onClose
+  ⚠ /tmp/claude-0/-home-user-design-system-sandbox/dc54f0f5-bfc5-5b96-81b8-0196d9a78735/scratchpad/lintprobe/Bad.tsx:8 [deprecated]
+    Tag `bordered` is deprecated. Whether has border style, please use `variant="filled"` instead
+  ⚠ /tmp/claude-0/-home-user-design-system-sandbox/dc54f0f5-bfc5-5b96-81b8-0196d9a78735/scratchpad/lintprobe/Bad.tsx:9 [deprecated]
+    Card `bordered` is deprecated. Toggles rendering of the border around the card, please use `variant` instead
+  ⚠ /tmp/claude-0/-home-user-design-system-sandbox/dc54f0f5-bfc5-5b96-81b8-0196d9a78735/scratchpad/lintprobe/Bad.tsx:9 [deprecated]
+    Card `bodyStyle` is deprecated. Style of card body, please use `styles.body` instead
+  ⚠ /tmp/claude-0/-home-user-design-system-sandbox/dc54f0f5-bfc5-5b96-81b8-0196d9a78735/scratchpad/lintprobe/Bad.tsx:12 [a11y]
+    Image component is missing `alt` prop for accessibility
+  ⚠ /tmp/claude-0/-home-user-design-system-sandbox/dc54f0f5-bfc5-5b96-81b8-0196d9a78735/scratchpad/lintprobe/Bad.tsx:13 [usage]
+    Static antd feedback API `message.success` cannot consume ConfigProvider context. Use App.useApp() instead.
+
+Summary: 8 deprecated, 1 a11y, 1 usage, 0 performance, 0 skipped

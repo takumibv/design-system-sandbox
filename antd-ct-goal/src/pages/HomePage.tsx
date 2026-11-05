@@ -76,6 +76,20 @@ const HeroCard = () => {
     );
   }
 
+  if (!user.active) {
+    return (
+      <Card title="今週のあなたの相手">
+        <Alert
+          type="info"
+          showIcon
+          title="CT に参加していないため、今週の相手はいません"
+          description="休職や繁忙期が終わったら、「自分の設定」で「参加する」に戻すと、次の組み合わせから入ります。"
+          action={<Button onClick={() => navigate(routes.settings)}>参加状況を変える</Button>}
+        />
+      </Card>
+    );
+  }
+
   if (week.holiday) {
     const next = nextMeeting(weeks, user.id, 1);
     const partner = findMember(members, next?.partnerId);
@@ -101,6 +115,19 @@ const HeroCard = () => {
 
   const { partnerId, resting } = partnerOf(week, user.id);
   const partner = findMember(members, partnerId);
+
+  if (!resting && !partner && week.pairs.length > 0) {
+    return (
+      <Card title="今週のあなたの相手" extra={<Text type="secondary">{when}</Text>}>
+        <Alert
+          type="info"
+          showIcon
+          title="まだ今週の組み合わせに入っていません"
+          description="参加する人が増えたため、今週以降の組み合わせが組み直しになります。組み直しが終わると、ここに相手が表示されます。"
+        />
+      </Card>
+    );
+  }
 
   if (resting || !partner) {
     const next = nextMeeting(weeks, user.id, 1);

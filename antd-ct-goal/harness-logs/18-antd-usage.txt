@@ -1,0 +1,39 @@
+Scanned 13 files in ./src
+
+  Button — 6 imports across 6 files
+  Typography — 6 imports across 6 files
+    Typography.Text: 3 usages
+    Typography.Title: 1 usages
+  Flex — 5 imports across 5 files
+  Card — 5 imports across 5 files
+  App — 4 imports across 4 files
+  Result — 3 imports across 3 files
+  Alert — 3 imports across 3 files
+  Layout — 2 imports across 2 files
+    Layout.Content: 1 usages
+    Layout.Header: 1 usages
+  Grid — 2 imports across 2 files
+  Col — 2 imports across 2 files
+  Empty — 2 imports across 2 files
+  Row — 2 imports across 2 files
+  Tag — 2 imports across 2 files
+  ConfigProvider — 1 imports across 1 files
+  Dropdown — 1 imports across 1 files
+  Menu — 1 imports across 1 files
+  Avatar — 1 imports across 1 files
+  Collapse — 1 imports across 1 files
+  Skeleton — 1 imports across 1 files
+  Listy — 1 imports across 1 files
+  Modal — 1 imports across 1 files
+  Statistic — 1 imports across 1 files
+  Form — 1 imports across 1 files
+    Form.Item: 5 usages
+  Input — 1 imports across 1 files
+  Radio — 1 imports across 1 files
+    Radio.Group: 1 usages
+  Select — 1 imports across 1 files
+
+Total: 26 components, 57 imports
+
+Non-component antd exports (1):
+  theme — 3 imports across 3 files

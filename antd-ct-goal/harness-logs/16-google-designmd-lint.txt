@@ -1,0 +1,128 @@
+{
+  "findings": [
+    {
+      "severity": "warning",
+      "path": "components.button-primary",
+      "message": "textColor (#ffffff) on backgroundColor (#1677ff) has contrast ratio 4.10:1, below WCAG AA minimum of 4.5:1.",
+      "rule": "contrast-ratio"
+    },
+    {
+      "severity": "warning",
+      "path": "components.menu-item-selected",
+      "message": "textColor (#1677ff) on backgroundColor (#e6f4ff) has contrast ratio 3.66:1, below WCAG AA minimum of 4.5:1.",
+      "rule": "contrast-ratio"
+    },
+    {
+      "severity": "warning",
+      "path": "colors.success",
+      "message": "'success' is defined but never referenced by any component.",
+      "rule": "orphaned-tokens"
+    },
+    {
+      "severity": "warning",
+      "path": "colors.warning",
+      "message": "'warning' is defined but never referenced by any component.",
+      "rule": "orphaned-tokens"
+    },
+    {
+      "severity": "warning",
+      "path": "colors.info",
+      "message": "'info' is defined but never referenced by any component.",
+      "rule": "orphaned-tokens"
+    },
+    {
+      "severity": "warning",
+      "path": "colors.blue",
+      "message": "'blue' is defined but never referenced by any component.",
+      "rule": "orphaned-tokens"
+    },
+    {
+      "severity": "warning",
+      "path": "colors.purple",
+      "message": "'purple' is defined but never referenced by any component.",
+      "rule": "orphaned-tokens"
+    },
+    {
+      "severity": "warning",
+      "path": "colors.cyan",
+      "message": "'cyan' is defined but never referenced by any component.",
+      "rule": "orphaned-tokens"
+    },
+    {
+      "severity": "warning",
+      "path": "colors.green",
+      "message": "'green' is defined but never referenced by any component.",
+      "rule": "orphaned-tokens"
+    },
+    {
+      "severity": "warning",
+      "path": "colors.magenta",
+      "message": "'magenta' is defined but never referenced by any component.",
+      "rule": "orphaned-tokens"
+    },
+    {
+      "severity": "warning",
+      "path": "colors.red",
+      "message": "'red' is defined but never referenced by any component.",
+      "rule": "orphaned-tokens"
+    },
+    {
+      "severity": "warning",
+      "path": "colors.orange",
+      "message": "'orange' is defined but never referenced by any component.",
+      "rule": "orphaned-tokens"
+    },
+    {
+      "severity": "warning",
+      "path": "colors.yellow",
+      "message": "'yellow' is defined but never referenced by any component.",
+      "rule": "orphaned-tokens"
+    },
+    {
+      "severity": "warning",
+      "path": "colors.volcano",
+      "message": "'volcano' is defined but never referenced by any component.",
+      "rule": "orphaned-tokens"
+    },
+    {
+      "severity": "warning",
+      "path": "colors.geekblue",
+      "message": "'geekblue' is defined but never referenced by any component.",
+      "rule": "orphaned-tokens"
+    },
+    {
+      "severity": "warning",
+      "path": "colors.gold",
+      "message": "'gold' is defined but never referenced by any component.",
+      "rule": "orphaned-tokens"
+    },
+    {
+      "severity": "warning",
+      "path": "colors.lime",
+      "message": "'lime' is defined but never referenced by any component.",
+      "rule": "orphaned-tokens"
+    },
+    {
+      "severity": "warning",
+      "path": "colors.surface-layout",
+      "message": "'surface-layout' is defined but never referenced by any component.",
+      "rule": "orphaned-tokens"
+    },
+    {
+      "severity": "warning",
+      "path": "colors.on-surface-disabled",
+      "message": "'on-surface-disabled' is defined but never referenced by any component.",
+      "rule": "orphaned-tokens"
+    },
+    {
+      "severity": "info",
+      "message": "Design system defines 26 colors, 10 typography scales, 7 rounding levels, 7 spacing tokens, 22 components.",
+      "rule": "token-summary"
+    }
+  ],
+  "summary": {
+    "errors": 0,
+    "warnings": 19,
+    "infos": 1
+  }
+}
