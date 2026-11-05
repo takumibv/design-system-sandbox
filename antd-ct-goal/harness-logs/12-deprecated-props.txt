@@ -1,0 +1,80 @@
+## Alert
+  afterClose→Called when close animation is finished, please use `closabl
+  message→Content of Alert, please use `title` instead
+  onClose→Callback when Alert is closed, please use `closable.onClose`
+  closeText→Close text to show, please use `closable.closeIcon` instead
+  Alert.ErrorBoundary.message
+## Tag
+  bordered→Whether has border style, please use `variant="filled"` inst
+## Space
+  direction→The space direction
+  split→Set split, please use `separator` instead
+  Space.Compact.direction
+## Flex
+  
+## Card
+  bordered→Toggles rendering of the border around the card, please use 
+  bodyStyle→Style of card body, please use `styles.body` instead
+  headStyle→Style of card head, please use `styles.header` instead
+## Modal
+  destroyOnClose→Whether to unmount child components on onClose
+  focusTriggerAfterClose→Whether need to focus trigger element after dialog is closed
+  maskClosable→Whether to close the modal dialog when the mask (area outsid
+  Modal.method().autoFocusButton
+  Modal.method().maskClosable
+## Result
+  
+## Empty
+  imageStyle→The style of image, please use `styles.image` instead
+## Collapse
+  destroyInactivePanel→Destroy Inactive Panel
+  expandIconPosition→Set expand icon position, Please use `expandIconPlacement` i
+## Dropdown
+  destroyPopupOnHide→Whether destroy dropdown when hidden, use `destroyOnHidden` 
+  dropdownRender→Customize dropdown content, use `popupRender` instead
+  overlayClassName→The class name of the dropdown root element, please use `cla
+  overlayStyle→The style of the dropdown root element, please use `styles.r
+## Menu
+  
+## Layout
+  
+## Form
+  
+## Select
+  autoClearSearchValue→Whether the current search will be cleared on selecting an i
+  bordered→Whether has border style, please use `variant` instead
+  dropdownClassName→The className of dropdown menu, please use `classNames.popup
+  dropdownMatchSelectWidth→Determine whether the popup menu and the select input are th
+  popupClassName→The className of dropdown menu, use `classNames.popup.root` 
+  dropdownRender→Customize dropdown content, use `popupRender` instead
+  dropdownStyle→The style of dropdown menu, use `styles.popup.root` instead
+  filterOption→If true, filter options by input, if function, filter option
+  filterSort→Sort function for search options sorting, see [Array.sort](h
+  optionFilterProp→Deprecated, see `showSearch.optionFilterProp`
+  searchValue→The current input "search" text
+  showArrow→Whether to show the arrow icon, please use `suffix={null}` i
+  suffixIcon→The custom suffix icon. Please use `suffix` instead
+  onDropdownVisibleChange→Called when dropdown open, use `onOpenChange` instead
+  onSearch→Callback function that is fired when input changed
+## Radio
+  
+## Skeleton
+  
+## Typography
+  
+## Avatar
+  Avatar.Group.maxCount
+  Avatar.Group.maxPopoverPlacement
+  Avatar.Group.maxPopoverTrigger
+  Avatar.Group.maxStyle
+## Button
+  iconPosition→Set the icon position of button, please use `iconPlacement` 
+## App
+  
+## Statistic
+  valueStyle→Set value section style, please use `styles.content` instead
+## Divider
+  orientationMargin→The margin-left/right between the title and its closest bord
+  type→The direction type of divider
+## Badge
+  
