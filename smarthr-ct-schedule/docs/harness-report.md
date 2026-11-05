@@ -286,7 +286,7 @@ ADS 版の評価（[ai-design-intent-mechanisms.md](../../ads-ct-schedule/docs/a
 | AI が読める形で配っているか | ◎ llms.txt 8 種、ホスト型 MCP、CLI | ○ スキル（Claude Code／Cursor／Codex 用プラグイン）のみ。llms.txt・MCP なし |
 | 社外で使えるか | △ スキルは社内限定（npm 404） | ◎ スキルを公開している |
 | 今回の作業で意図が届いたか | △ CLI の `component` は指針を出さなかった。判断は主に事前知識 | ◎ 30 件中 21 件の判断がスキル由来 |
-| 機械で強制しているか | ◎ ESLint 117 ルール＋型でトークン以外を拒否 | ○ ESLint 64 ルール（公式設定 eslint-config-smarthr で 45 が有効、16 が off）＋ textlint。トークンは Tailwind のプリセットで限定するが、任意値（`shr-basis-[20rem]` など）は書ける |
+| 機械で強制しているか | ◎ ESLint 117 ルール＋型でトークン以外を拒否 | ○ ESLint 64 ルール（公式設定 eslint-config-smarthr で 45 が有効、16 が off）＋ textlint。トークンは Tailwind のプリセットで限定するが、任意値（`shr-basis-[20rem]` など。今回 5 か所）は書ける |
 | 型での強制 | ◎ xcss がトークン以外を型エラーにする | △ Tailwind のクラス名は文字列なので型では守れない |
 | 日本語 | × | ◎ ライティング規則と表記辞書 |
 | 古くならない工夫 | 「CLI は MCP の薄い層、正は 1 つ」 | 「ガイドは直接編集せず入力ソースから再生成」「パターンはサイト記事へのリンク」 |
