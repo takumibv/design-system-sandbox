@@ -6,7 +6,7 @@
 - 目標の自己評価：[docs/goal-evaluation.md](docs/goal-evaluation.md)
 - **ハーネス調査（この調査の主目的）**：[docs/harness-report.md](docs/harness-report.md)
 - 状態の一覧：[states.json](states.json)（S01〜S18）
-- スクリーンショット：[screenshots/](screenshots/)（S01〜S18 × 1440px／390px、`report.json` に axe とはみ出しの結果）
+- スクリーンショット：[screenshots/](screenshots/)（S01〜S18 × 1440px／390px、`report.json` に axe とはみ出しの結果。`extra-G5-uncheck-*.png` は G5 の証拠として追加撮影）
 - ハーネスの呼び出しログ：[harness-logs/](harness-logs/)
 
 ## 結論の要約

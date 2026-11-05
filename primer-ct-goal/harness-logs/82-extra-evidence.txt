@@ -1,0 +1,4 @@
+G5-uncheck 1440 "保存すると、今週以降の全員の組み合わせが組み直されます（参加者 9 人 → 8 人）。" axe 0
+G3-upcoming 1440 {"upcomingTop":120,"nextWeekBottom":487,"page":912}
+G5-uncheck 390 "保存すると、今週以降の全員の組み合わせが組み直されます（参加者 9 人 → 8 人）。" axe 0
+G3-upcoming 390 {"upcomingTop":859.5,"nextWeekBottom":1226.5,"page":1644}
