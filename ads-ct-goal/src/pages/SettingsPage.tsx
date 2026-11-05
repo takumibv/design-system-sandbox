@@ -71,7 +71,7 @@ export function SettingsPage({ me, firstTime, channels, employeeNo, preset, onSa
 								</Heading>
 								{firstTime ? (
 									<Text as="p">
-										CT の組み合わせに入るために、社員番号と uチャンネルを設定してください。設定が終わると、今週の相手と予定がすぐに表示されます。
+										CT の組み合わせに入るために、社員番号と uチャンネルを設定してください。設定が終わると組み合わせの対象になり、次に組み合わせが組み直されたときから、あなたの相手と予定がトップに表示されます。
 									</Text>
 								) : (
 									<Text as="p">変えられるのは自分の設定だけです。</Text>

@@ -79,8 +79,8 @@
     },
     "G6": {
       "submitButton": {
-        "top": 566,
-        "bottom": 598
+        "top": 586,
+        "bottom": 618
       },
       "scrollToSubmit": 0,
       "inputs": 3,
@@ -169,8 +169,8 @@
     },
     "G6": {
       "submitButton": {
-        "top": 682,
-        "bottom": 714
+        "top": 702,
+        "bottom": 734
       },
       "scrollToSubmit": 0,
       "inputs": 3,
