@@ -1,0 +1,2 @@
+/* 自前の CSS は書かない。Tailwind のユーティリティ（smarthr-ui プリセットのトークン）を生成するだけ。 */
+@tailwind utilities;

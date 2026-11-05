@@ -1,0 +1,43 @@
+{
+  "name": "smarthr-ct-schedule",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "CTスケジュールUIを SmartHR Design System (smarthr-ui) で再現する検証",
+  "scripts": {
+    "dev": "vite --port 6011",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port 6011",
+    "screenshots": "NODE_PATH=$(npm root -g) node scripts/screenshots.mjs && python3 scripts/compare.py",
+    "lint:smarthr": "eslint src",
+    "lint:text": "node scripts/extract-ui-text.mjs && textlint --config .textlintrc.json harness-logs/ui-text.md",
+    "harness:install": "sh scripts/install-harness.sh"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-intl": "^10.2.2",
+    "smarthr-ui": "^102.1.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^4.7.0",
+    "autoprefixer": "^10.6.2",
+    "eslint": "^9.39.5",
+    "eslint-config-smarthr": "^14.14.0",
+    "eslint-plugin-smarthr": "^6.29.0",
+    "postcss": "^8.5.32",
+    "tailwindcss": "^3.4.19",
+    "textlint": "^15.8.0",
+    "textlint-rule-preset-smarthr": "^1.38.3",
+    "textlint-rule-prh": "^6.1.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.72.1",
+    "vite": "^6.4.5"
+  }
+}
