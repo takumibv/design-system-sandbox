@@ -271,7 +271,7 @@ export function CTApp({
 			<Cluster align="center" justify={prominent ? "center" : undefined}>
 				<Button
 					variant={prominent ? "primary" : "secondary"}
-					size={prominent ? "M" : "S"}
+					size={prominent || mobile ? "M" : "S"}
 					wide={prominent && mobile}
 					suffix={<OpenInNewTabIcon />}
 					onClick={() =>
