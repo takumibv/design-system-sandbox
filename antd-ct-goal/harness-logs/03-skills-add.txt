@@ -1,0 +1,2 @@
+$ npx skills add ant-design/ant-design-cli --yes
+→ 実行拒否（Claude Code の auto mode 分類器が「外部コードの実行」として拒否）。代替として node_modules/@ant-design/cli/skills/antd/SKILL.md を .claude/skills/antd/SKILL.md に複製した。

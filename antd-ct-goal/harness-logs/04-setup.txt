@@ -1,0 +1,5 @@
+$ npx antd setup --client claude --mode both --write-instructions
+→ 実行拒否（Claude Code の auto mode 分類器が「Self-Modification」＝エージェント自身の設定（.mcp.json / .claude/skills / CLAUDE.md）を書き換える操作として拒否）。
+   dry-run（02-setup-dryrun.txt）では .mcp.json, .claude/skills/antd, CLAUDE.md の 3 つを書く予定だった。
+   回避策は取らず、SKILL.md の内容（05-SKILL.md に保存）を作業者が直接読んで手順に従い、CLI を直接実行した。
+   MCP はクライアント登録をせず、stdio で JSON-RPC を直接送って動作確認した（06-mcp-*.txt）。
