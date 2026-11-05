@@ -129,6 +129,7 @@ npx design.md lint DESIGN.md   # このアプリの DESIGN.md の検査
 APP_URL=http://localhost:5173 NODE_PATH=$(npm root -g) node scripts/capture.mjs states.json   # 撮影・axe・横はみ出し
 NODE_PATH=$(npm root -g) node scripts/measure-g1g2.mjs   # G1・G2 の計測
 NODE_PATH=$(npm root -g) node scripts/smoke.mjs          # 操作の通り道の確認
+NODE_PATH=$(npm root -g) node scripts/capture-extra.mjs  # G5 の警告の撮影（状態一覧に無い証拠）
 NODE_PATH=$(npm root -g) node scripts/axe-detail.mjs "/?state=S01" 390   # 違反の詳細
 ```
 
