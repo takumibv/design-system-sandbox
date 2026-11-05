@@ -1,0 +1,181 @@
+$ npx antd info Message --detail --format json
+# 目的: Message の非推奨 props を --detail で確認
+# 実行日時: 2026-11-05T10:13:37Z
+
+{
+  "name": "Message",
+  "nameZh": "全局提示",
+  "description": "Display global messages as feedback in response to user operations.",
+  "whenToUse": "- To provide feedback such as success, warning, error etc.\n- A message is displayed at top and center and will be dismissed automatically, as a non-interrupting light-weighted prompt.",
+  "props": [
+    {
+      "name": "content",
+      "type": "ReactNode | config",
+      "default": "-",
+      "description": "The content of the message",
+      "descriptionZh": "提示内容"
+    },
+    {
+      "name": "duration",
+      "type": "number",
+      "default": "3",
+      "description": "Time(seconds) before auto-dismiss, don't dismiss if set to 0",
+      "descriptionZh": "自动关闭的延时，单位秒。设为 0 时不自动关闭"
+    },
+    {
+      "name": "onClose",
+      "type": "function",
+      "default": "-",
+      "description": "Specify a function that will be called when the message is closed",
+      "descriptionZh": "关闭时触发的回调函数"
+    },
+    {
+      "name": "className",
+      "type": "string",
+      "default": "-",
+      "description": "Customized CSS class",
+      "descriptionZh": "自定义 CSS class"
+    },
+    {
+      "name": "classNames",
+      "type": "Record<[SemanticDOM](#semantic-dom), string> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), string>",
+      "default": "-",
+      "description": "Customize class for each semantic structure inside the component. Supports object or function.",
+      "since": "6.0.0",
+      "descriptionZh": "用于自定义组件内部各语义化结构的 class，支持对象或函数"
+    },
+    {
+      "name": "icon",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "Customized Icon",
+      "descriptionZh": "自定义图标"
+    },
+    {
+      "name": "pauseOnHover",
+      "type": "boolean",
+      "default": "true",
+      "description": "keep the timer running or not on hover",
+      "descriptionZh": "悬停时是否暂停计时器"
+    },
+    {
+      "name": "key",
+      "type": "string | number",
+      "default": "-",
+      "description": "The unique identifier of the Message",
+      "descriptionZh": "当前提示的唯一标志"
+    },
+    {
+      "name": "style",
+      "type": "[CSSProperties](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/e434515761b36830c3e58a970abf5186f005adac/types/react/index.d.ts#L794)",
+      "default": "-",
+      "description": "Customized inline style",
+      "descriptionZh": "自定义内联样式"
+    },
+    {
+      "name": "styles",
+      "type": "Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>",
+      "default": "-",
+      "description": "Customize inline style for each semantic structure inside the component. Supports object or function.",
+      "since": "6.0.0",
+      "descriptionZh": "用于自定义组件内部各语义化结构的行内 style，支持对象或函数"
+    },
+    {
+      "name": "onClick",
+      "type": "function",
+      "default": "-",
+      "description": "Specify a function that will be called when the message is clicked",
+      "descriptionZh": "点击 message 时触发的回调函数"
+    }
+  ],
+  "subComponentProps": {
+    "Message.Global static methods": [
+      {
+        "name": "duration",
+        "type": "number",
+        "default": "3",
+        "description": "Time before auto-dismiss, in seconds",
+        "descriptionZh": ""
+      },
+      {
+        "name": "getContainer",
+        "type": "() => HTMLElement",
+        "default": "() => document.body",
+        "description": "Return the mount node for Message, but still display at fullScreen",
+        "descriptionZh": ""
+      },
+      {
+        "name": "maxCount",
+        "type": "number",
+        "default": "-",
+        "description": "Max message show, drop oldest if exceed limit",
+        "descriptionZh": ""
+      },
+      {
+        "name": "prefixCls",
+        "type": "string",
+        "default": "`ant-message`",
+        "description": "The prefix className of message node",
+        "since": "4.5.0",
+        "descriptionZh": ""
+      },
+      {
+        "name": "rtl",
+        "type": "boolean",
+        "default": "false",
+        "description": "Whether to enable RTL mode",
+        "descriptionZh": ""
+      },
+      {
+        "name": "stack",
+        "type": "boolean | `{ threshold: number }`",
+        "default": "false",
+        "description": "Messages will be stacked when amount is over threshold. Only the latest message is shown in the collapsed stack",
+        "since": "6.4.0",
+        "descriptionZh": ""
+      },
+      {
+        "name": "top",
+        "type": "string | number",
+        "default": "8",
+        "description": "Distance from top",
+        "descriptionZh": ""
+      }
+    ]
+  },
+  "commonProps": [
+    {
+      "name": "className",
+      "type": "string",
+      "default": "-",
+      "description": "Additional CSS class",
+      "descriptionZh": "额外的 CSS 类名"
+    },
+    {
+      "name": "style",
+      "type": "CSSProperties",
+      "default": "-",
+      "description": "Additional style",
+      "descriptionZh": "额外的样式"
+    },
+    {
+      "name": "rootClassName",
+      "type": "string",
+      "default": "-",
+      "description": "ClassName on the root element",
+      "descriptionZh": "根元素的类名"
+    }
+  ],
+  "htmlElement": "div",
+  "faq": [
+    {
+      "question": "Why I can not access context, redux, ConfigProvider `locale/prefixCls/theme` in message?",
+      "answer": "antd will dynamic create React instance by `ReactDOM.render` when call message methods. Whose context is different with origin code located context.\n\nWhen you need context info (like ConfigProvider context), you can use `message.useMessage` to get `api` instance and `contextHolder` node. And put it in your children:\n\n```tsx\nconst [api, contextHolder] = message.useMessage();\n\nreturn (\n  <Context1.Provider value=\"Ant\">\n    {/* contextHolder is inside Context1 which means api will get value of Context1 */}\n    {contextHolder}\n    <Context2.Provider value=\"Design\">\n      {/* contextHolder is outside Context2 which means api will **not** get value of Context2 */}\n    </Context2.Provider>\n  </Context1.Provider>\n);\n```\n\n**Note:** You must insert `contextHolder` into your children with hooks. You can use origin method if you do not need context connection.\n\n> [App Package Component](/components/app) can be used to simplify the problem of `useMessage` and other methods that need to manually implant contextHolder."
+    },
+    {
+      "question": "How to set static methods prefixCls ？",
+      "answer": "You can config with [`ConfigProvider.config`](/components/config-provider#config)"
+    }
+  ]
+}
+# exit=0

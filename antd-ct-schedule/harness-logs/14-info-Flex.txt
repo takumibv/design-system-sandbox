@@ -1,0 +1,27 @@
+$ npx antd info Flex
+# 目的: Flex の props と既定値を確認（記憶に頼らない）
+# 実行日時: 2026-11-05T10:13:16Z
+
+Flex (弹性布局) — A flex layout container for alignment.
+
+Property     Type                                                                                 Default       Since          
+-----------  -----------------------------------------------------------------------------------  ------------  ---------------
+vertical     boolean                                                                              false         5.10.0         
+wrap         [flex-wrap](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap) | boolean    nowrap        boolean: 5.17.0
+justify      [justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)  normal        -              
+align        [align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)          normal        -              
+flex         [flex](https://developer.mozilla.org/en-US/docs/Web/CSS/flex)                        normal        -              
+gap          `small` | `medium` | `large` | string | number                                       -             -              
+component    React.ComponentType                                                                  `div`         -              
+orientation  `horizontal` | `vertical`                                                            `horizontal`  -              
+
+Common Props (inherited by all components, not listed individually)
+
+Property       Type           Default
+-------------  -------------  -------
+className      string         -      
+style          CSSProperties  -      
+rootClassName  string         -      
+
+Extends <div> — supports native HTML div attributes.
+# exit=0

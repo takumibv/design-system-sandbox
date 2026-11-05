@@ -1,0 +1,202 @@
+$ npx antd info Button --detail --format json
+# 目的: Button の非推奨 props を --detail で確認
+# 実行日時: 2026-11-05T10:13:32Z
+
+{
+  "name": "Button",
+  "nameZh": "按钮",
+  "description": "To trigger an operation.",
+  "whenToUse": "A button means an operation (or a series of operations). Clicking a button will trigger its corresponding business logic.\n\nIn Ant Design we provide 5 types of button.\n\n- 🔵 Primary button: used for the main action, there can be at most one primary button in a section.\n- ⚪️ Default button: used for a series of actions without priority.\n- 😶 Dashed button: commonly used for adding more actions.\n- 🔤 Text button: used for the most secondary action.\n- 🔗 Link button: used for external links.\n\nAnd 4 other properties additionally.\n\n- 🔴 `danger`: used for actions of risk, like deletion or authorization.\n- 👻 `ghost`: used in situations with complex background, home pages usually.\n- 🚫 `disabled`: used when actions are not available.\n- 🔃 `loading`: adds a loading spinner in button, avoids multiple submits too.",
+  "props": [
+    {
+      "name": "autoInsertSpace",
+      "type": "boolean",
+      "default": "`true`",
+      "description": "We add a space between two Chinese characters by default, which removed by setting `autoInsertSpace` to `false`.",
+      "since": "5.17.0",
+      "descriptionZh": "我们默认提供两个汉字之间的空格，可以设置 `autoInsertSpace` 为 `false` 关闭"
+    },
+    {
+      "name": "block",
+      "type": "boolean",
+      "default": "false",
+      "description": "Option to fit button width to its parent width",
+      "descriptionZh": "将按钮宽度调整为其父宽度的选项"
+    },
+    {
+      "name": "classNames",
+      "type": "Record<[SemanticDOM](#semantic-dom), string> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), string>",
+      "default": "-",
+      "description": "Customize class for each semantic structure inside the component. Supports object or function.",
+      "since": "6.0.0",
+      "descriptionZh": "用于自定义组件内部各语义化结构的 class，支持对象或函数"
+    },
+    {
+      "name": "color",
+      "type": "`default` | `primary` | `danger` | [PresetColors](#presetcolors)",
+      "default": "`primary` when `variant=\"solid\"`",
+      "description": "Set button color",
+      "since": "`default`, `primary` and `danger`: 5.21.0, `PresetColors`: 5.23.0, `solid` default color: 6.4.0",
+      "descriptionZh": "设置按钮的颜色"
+    },
+    {
+      "name": "danger",
+      "type": "boolean",
+      "default": "false",
+      "description": "Syntactic sugar. Set the danger status of button. will follow `color` if provided",
+      "descriptionZh": "语法糖，设置危险按钮。当设置 `color` 时会以后者为准"
+    },
+    {
+      "name": "disabled",
+      "type": "boolean",
+      "default": "false",
+      "description": "Disabled state of button",
+      "descriptionZh": "设置按钮失效状态"
+    },
+    {
+      "name": "ghost",
+      "type": "boolean",
+      "default": "false",
+      "description": "Make background transparent and invert text and border colors",
+      "descriptionZh": "幽灵属性，使按钮背景透明"
+    },
+    {
+      "name": "href",
+      "type": "string",
+      "default": "-",
+      "description": "Redirect url of link button",
+      "descriptionZh": "点击跳转的地址，指定此属性 button 的行为和 a 链接一致"
+    },
+    {
+      "name": "htmlType",
+      "type": "`submit` | `reset` | `button`",
+      "default": "`button`",
+      "description": "Set the original html `type` of `button`, see: [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#type)",
+      "descriptionZh": "设置 `button` 原生的 `type` 值，可选值请参考 [HTML 标准](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/button#type)"
+    },
+    {
+      "name": "icon",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "Set the icon component of button",
+      "descriptionZh": "设置按钮的图标组件"
+    },
+    {
+      "name": "iconPlacement",
+      "type": "`start` | `end`",
+      "default": "`start`",
+      "description": "Set the icon position of button",
+      "descriptionZh": "设置按钮图标组件的位置"
+    },
+    {
+      "name": "iconPosition",
+      "type": "`start` | `end`",
+      "default": "`start`",
+      "description": "Set the icon position of button, please use `iconPlacement` instead",
+      "since": "5.17.0",
+      "deprecated": true,
+      "descriptionZh": "设置按钮图标组件的位置,请使用 `iconPlacement` 替换"
+    },
+    {
+      "name": "loading",
+      "type": "boolean | { delay: number, icon: ReactNode }",
+      "default": "false",
+      "description": "Set the loading status of button",
+      "since": "icon: 5.23.0",
+      "descriptionZh": "设置按钮载入状态"
+    },
+    {
+      "name": "loadingIcon",
+      "type": "ReactNode",
+      "default": "`<LoadingOutlined />`",
+      "description": "(Only supports global configuration) Set the loading icon of button",
+      "descriptionZh": "（仅支持全局配置）设置按钮的加载图标"
+    },
+    {
+      "name": "onClick",
+      "type": "(event: React.MouseEvent<HTMLElement, MouseEvent>) => void",
+      "default": "-",
+      "description": "Set the handler to handle `click` event",
+      "descriptionZh": "点击按钮时的回调"
+    },
+    {
+      "name": "shape",
+      "type": "`default` | `circle` | `round`",
+      "default": "`default`",
+      "description": "Can be used to set button shape",
+      "descriptionZh": "设置按钮形状"
+    },
+    {
+      "name": "size",
+      "type": "`large` | `medium` | `small`",
+      "default": "`medium`",
+      "description": "Set the size of button",
+      "descriptionZh": "设置按钮大小"
+    },
+    {
+      "name": "styles",
+      "type": "Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>",
+      "default": "-",
+      "description": "Customize inline style for each semantic structure inside the component. Supports object or function.",
+      "since": "6.0.0",
+      "descriptionZh": "用于自定义组件内部各语义化结构的行内 style，支持对象或函数"
+    },
+    {
+      "name": "target",
+      "type": "string",
+      "default": "-",
+      "description": "Same as target attribute of a, works when href is specified",
+      "descriptionZh": "相当于 a 链接的 target 属性，href 存在时生效"
+    },
+    {
+      "name": "type",
+      "type": "`primary` | `dashed` | `link` | `text` | `default`",
+      "default": "`default`",
+      "description": "Syntactic sugar. Set button type. Will follow `variant` & `color` if provided",
+      "descriptionZh": "语法糖，设置按钮类型。当设置 `variant` 与 `color` 时以后者为准"
+    },
+    {
+      "name": "variant",
+      "type": "`outlined` | `dashed` | `solid` | `filled` | `text` | `link`",
+      "default": "-",
+      "description": "Set button variant",
+      "since": "5.21.0",
+      "descriptionZh": "设置按钮的变体"
+    }
+  ],
+  "commonProps": [
+    {
+      "name": "className",
+      "type": "string",
+      "default": "-",
+      "description": "Additional CSS class",
+      "descriptionZh": "额外的 CSS 类名"
+    },
+    {
+      "name": "style",
+      "type": "CSSProperties",
+      "default": "-",
+      "description": "Additional style",
+      "descriptionZh": "额外的样式"
+    },
+    {
+      "name": "rootClassName",
+      "type": "string",
+      "default": "-",
+      "description": "ClassName on the root element",
+      "descriptionZh": "根元素的类名"
+    }
+  ],
+  "htmlElement": "button",
+  "faq": [
+    {
+      "question": "How to choose type and color & variant?",
+      "answer": "Type is essentially syntactic sugar for colors and variants. It internally provides a set of mapping relationships between colors and variants for the type. If both exist at the same time, the colors and variants will be used first.\n\n```jsx\n<Button type=\"primary\">click</Button>\n```\n\nEquivalent\n\n```jsx\n<Button color=\"primary\" variant=\"solid\">\n  click\n</Button>\n```"
+    },
+    {
+      "question": "How to close the click wave effect?",
+      "answer": "If you don't need this feature, you can set `disabled` of `wave` in [ConfigProvider](/components/config-provider#api) as `true`.\n\n```jsx\n<ConfigProvider wave={{ disabled: true }}>\n  <Button>click</Button>\n</ConfigProvider>\n```"
+    }
+  ]
+}
+# exit=0

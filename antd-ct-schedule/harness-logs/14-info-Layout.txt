@@ -1,0 +1,39 @@
+$ npx antd info Layout
+# 目的: Layout の props と既定値を確認（記憶に頼らない）
+# 実行日時: 2026-11-05T10:13:17Z
+
+Layout (布局) — Handling the overall layout of a page.
+
+Property  Type     Default  Since
+--------  -------  -------  -----
+hasSider  boolean  -        -    
+
+Layout.Sider
+
+Property               Type                                                                                                                           Default  Since      
+---------------------  -----------------------------------------------------------------------------------------------------------------------------  -------  -----------
+breakpoint             `xs` | `sm` | `md` | `lg` | `xl` | `xxl` | `xxxl`                                                                              -        xxxl: 6.3.0
+classNames             Record<[SemanticDOM](#semantic-dom), string> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), string>                -        -          
+collapsed              boolean                                                                                                                        -        -          
+collapsedWidth         number                                                                                                                         80       -          
+collapsible            boolean                                                                                                                        false    -          
+defaultCollapsed       boolean                                                                                                                        false    -          
+reverseArrow           boolean                                                                                                                        false    -          
+styles                 Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>  -        -          
+theme                  `light` | `dark`                                                                                                               `dark`   -          
+trigger                ReactNode                                                                                                                      -        -          
+width                  number | string                                                                                                                200      -          
+zeroWidthTriggerStyle  object                                                                                                                         -        -          
+onBreakpoint           (broken) => {}                                                                                                                 -        -          
+onCollapse             (collapsed, type) => {}                                                                                                        -        -          
+
+Common Props (inherited by all components, not listed individually)
+
+Property       Type           Default
+-------------  -------------  -------
+className      string         -      
+style          CSSProperties  -      
+rootClassName  string         -      
+
+Extends <div> — supports native HTML div attributes.
+# exit=0

@@ -1,0 +1,138 @@
+$ npx antd info Typography
+# 目的: Typography の props と既定値を確認（記憶に頼らない）
+# 実行日時: 2026-11-05T10:13:16Z
+
+Typography (排版) — Basic text writing, including headings, body text, lists, and more.
+
+Property  Type  Default  Since
+--------  ----  -------  -----
+
+Typography.Text
+
+Property    Type                                                                                                                           Default  Since         
+----------  -----------------------------------------------------------------------------------------------------------------------------  -------  --------------
+actions     [actions](#actions)                                                                                                            -        6.4.0         
+classNames  Record<[SemanticDOM](#semantic-dom), string> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), string>                -        6.4.0         
+code        boolean                                                                                                                        false    -             
+copyable    boolean | [copyable](#copyable)                                                                                                false    -             
+delete      boolean                                                                                                                        false    -             
+disabled    boolean                                                                                                                        false    -             
+editable    boolean | [editable](#editable)                                                                                                false    -             
+ellipsis    boolean | [Omit<ellipsis, 'expandable' | 'rows' | 'onExpand'>](#ellipsis)                                                      false    -             
+italic      boolean                                                                                                                        false    4.16.0        
+keyboard    boolean                                                                                                                        false    4.3.0         
+mark        boolean                                                                                                                        false    -             
+shimmer     boolean | [shimmer](#shimmer)                                                                                                  false    6.7.0         
+strong      boolean                                                                                                                        false    -             
+styles      Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>  -        6.4.0         
+type        `secondary` | `success` | `warning` | `danger`                                                                                 -        success: 4.6.0
+underline   boolean                                                                                                                        false    -             
+onClick     (event) => void                                                                                                                -        -             
+
+Typography.Title
+
+Property    Type                                                                                                                           Default  Since         
+----------  -----------------------------------------------------------------------------------------------------------------------------  -------  --------------
+actions     [actions](#actions)                                                                                                            -        6.4.0         
+classNames  Record<[SemanticDOM](#semantic-dom), string> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), string>                -        6.4.0         
+code        boolean                                                                                                                        false    -             
+copyable    boolean | [copyable](#copyable)                                                                                                false    -             
+delete      boolean                                                                                                                        false    -             
+disabled    boolean                                                                                                                        false    -             
+editable    boolean | [editable](#editable)                                                                                                false    -             
+ellipsis    boolean | [ellipsis](#ellipsis)                                                                                                false    -             
+italic      boolean                                                                                                                        false    4.16.0        
+level       number: 1, 2, 3, 4, 5                                                                                                          1        5: 4.6.0      
+mark        boolean                                                                                                                        false    -             
+shimmer     boolean | [shimmer](#shimmer)                                                                                                  false    6.7.0         
+styles      Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>  -        6.4.0         
+type        `secondary` | `success` | `warning` | `danger`                                                                                 -        success: 4.6.0
+underline   boolean                                                                                                                        false    -             
+onClick     (event) => void                                                                                                                -        -             
+
+Typography.Paragraph
+
+Property    Type                                                                                                                           Default  Since         
+----------  -----------------------------------------------------------------------------------------------------------------------------  -------  --------------
+actions     [actions](#actions)                                                                                                            -        6.4.0         
+classNames  Record<[SemanticDOM](#semantic-dom), string> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), string>                -        6.4.0         
+code        boolean                                                                                                                        false    -             
+copyable    boolean | [copyable](#copyable)                                                                                                false    -             
+delete      boolean                                                                                                                        false    -             
+disabled    boolean                                                                                                                        false    -             
+editable    boolean | [editable](#editable)                                                                                                false    -             
+ellipsis    boolean | [ellipsis](#ellipsis)                                                                                                false    -             
+italic      boolean                                                                                                                        false    4.16.0        
+mark        boolean                                                                                                                        false    -             
+shimmer     boolean | [shimmer](#shimmer)                                                                                                  false    6.7.0         
+strong      boolean                                                                                                                        false    -             
+styles      Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>  -        6.4.0         
+type        `secondary` | `success` | `warning` | `danger`                                                                                 -        success: 4.6.0
+underline   boolean                                                                                                                        false    -             
+onClick     (event) => void                                                                                                                -        -             
+
+Typography.actions
+
+Property   Type             Default  Since
+---------  ---------------  -------  -----
+placement  `start` | `end`  `end`    6.4.0
+
+Typography.copyable
+
+Property  Type                        Default             Since 
+--------  --------------------------  ------------------  ------
+format    'text/plain' | 'text/html'  -                   4.21.0
+icon      [ReactNode, ReactNode]      -                   4.6.0 
+tabIndex  number                      0                   5.17.0
+text      string                      -                   -     
+tooltips  [ReactNode, ReactNode]      [`Copy`, `Copied`]  4.4.0 
+onCopy    function                    -                   -     
+
+Typography.editable
+
+Property     Type                                            Default              Since 
+-----------  ----------------------------------------------  -------------------  ------
+autoSize     boolean | { minRows: number, maxRows: number }  -                    4.4.0 
+editing      boolean                                         false                -     
+enterIcon    ReactNode                                       `<EnterOutlined />`  4.17.0
+icon         ReactNode                                       <EditOutlined />     4.6.0 
+maxLength    number                                          -                    4.4.0 
+tabIndex     number                                          0                    5.17.0
+text         string                                          -                    4.24.0
+tooltip      ReactNode                                       `Edit`               4.6.0 
+triggerType  Array<`icon`|`text`>                            [`icon`]             -     
+onCancel     function                                        -                    -     
+onChange     function(value: string)                         -                    -     
+onEnd        function                                        -                    4.14.0
+onStart      function                                        -                    -     
+
+Typography.ellipsis
+
+Property         Type                                                  Default              Since                
+---------------  ----------------------------------------------------  -------------------  ---------------------
+defaultExpanded  boolean                                               -                    5.16.0               
+expandable       boolean | 'collapsible'                               -                    `collapsible`: 5.16.0
+expanded         boolean                                               -                    5.16.0               
+rows             number                                                -                    -                    
+suffix           string                                                -                    -                    
+symbol           ReactNode | ((expanded: boolean) => ReactNode)        `Expand` `Collapse`  -                    
+tooltip          ReactNode | [TooltipProps](/components/tooltip/#api)  -                    4.11.0               
+onEllipsis       function(ellipsis)                                    -                    4.2.0                
+onExpand         function(event, { expanded: boolean })                -                    `info`: 5.16.0       
+
+Typography.shimmer
+
+Property  Type                                             Default  Since
+--------  -----------------------------------------------  -------  -----
+duration  number | [motionTime: number, waitTime: number]  1        6.7.0
+
+Common Props (inherited by all components, not listed individually)
+
+Property       Type           Default
+-------------  -------------  -------
+className      string         -      
+style          CSSProperties  -      
+rootClassName  string         -      
+
+Extends <span> — supports native HTML span attributes.
+# exit=0

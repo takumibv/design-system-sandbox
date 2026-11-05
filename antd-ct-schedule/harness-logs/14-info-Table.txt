@@ -1,0 +1,169 @@
+$ npx antd info Table
+# 目的: Table の props と既定値を確認（記憶に頼らない）
+# 実行日時: 2026-11-05T10:13:14Z
+
+Table (表格) — A table displays rows of data.
+
+Property           Type                                                                                                                                  Default                                                                                                                                      Since                      
+-----------------  ------------------------------------------------------------------------------------------------------------------------------------  -------------------------------------------------------------------------------------------------------------------------------------------  ---------------------------
+bordered           boolean                                                                                                                               false                                                                                                                                        -                          
+classNames         Record<[SemanticDOM](#semantic-dom), string> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), string>                       -                                                                                                                                            -                          
+column             Partial<[ColumnType](#column)>                                                                                                        -                                                                                                                                            6.4.0                      
+columns            [ColumnsType](#column)[]                                                                                                              -                                                                                                                                            -                          
+components         [TableComponents](https://github.com/react-component/table/blob/7977f2b45a501728dddf0853466c1a013a7190dc/src/interface.ts#L180-L196)  -                                                                                                                                            `ExpandIcon`: 6.7.0        
+dataSource         object[]                                                                                                                              -                                                                                                                                            -                          
+expandable         [expandable](#expandable)                                                                                                             -                                                                                                                                            -                          
+footer             function(currentPageData)                                                                                                             -                                                                                                                                            -                          
+getPopupContainer  (triggerNode) => HTMLElement                                                                                                          () => TableHtmlElement                                                                                                                       -                          
+loading            boolean | [Spin Props](/components/spin/#api)                                                                                         false                                                                                                                                        -                          
+locale             object                                                                                                                                [Default Value](https://github.com/ant-design/ant-design/blob/6dae4a7e18ad1ba193aedd5ab6867e1d823e2aa4/components/locale/en_US.tsx#L19-L37)  -                          
+pagination         object | `false`                                                                                                                      -                                                                                                                                            -                          
+rowClassName       function(record, index): string                                                                                                       -                                                                                                                                            -                          
+rowKey             string | function(record): string                                                                                                     `key`                                                                                                                                        -                          
+rowSelection       object                                                                                                                                -                                                                                                                                            -                          
+rowHoverable       boolean                                                                                                                               true                                                                                                                                         5.16.0                     
+scroll             object                                                                                                                                -                                                                                                                                            -                          
+showHeader         boolean                                                                                                                               true                                                                                                                                         -                          
+showSorterTooltip  boolean | [Tooltip props](/components/tooltip/#api) & `{target?: 'full-header' | 'sorter-icon' }`                                     { target: 'full-header' }                                                                                                                    5.16.0                     
+size               `large` | `medium` | `small`                                                                                                          `large`                                                                                                                                      -                          
+sortDirections     Array                                                                                                                                 [`ascend`, `descend`]                                                                                                                        -                          
+sticky             boolean | `{offsetHeader?: number, offsetScroll?: number, getContainer?: () => HTMLElement}`                                          -                                                                                                                                            4.6.0 (getContainer: 4.7.0)
+styles             Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>         -                                                                                                                                            -                          
+summary            (currentData) => ReactNode                                                                                                            -                                                                                                                                            -                          
+tableLayout        - | `auto` | `fixed`                                                                                                                  -<hr />`fixed` when header/columns are fixed, or using `column.ellipsis`                                                                     -                          
+title              function(currentPageData)                                                                                                             -                                                                                                                                            -                          
+virtual            boolean                                                                                                                               -                                                                                                                                            5.9.0                      
+onChange           function(pagination, filters, sorter, extra: { currentDataSource: [], action: `paginate` | `sort` | `filter` })                       -                                                                                                                                            -                          
+onHeaderRow        function(columns, index)                                                                                                              -                                                                                                                                            -                          
+onRow              function(record, index)                                                                                                               -                                                                                                                                            -                          
+onScroll           function(event)                                                                                                                       -                                                                                                                                            5.16.0                     
+nativeElement      HTMLDivElement                                                                                                                        -                                                                                                                                            5.11.0                     
+scrollTo           (config: { index?: number, key?: React.Key, top?: number, offset?: number, align?: 'start' | 'center' | 'end' | 'nearest' }) => void  -                                                                                                                                            5.11.0                     
+
+Table.Column
+
+Property                           Type                                                                                                                                                                                Default                    Since                         
+---------------------------------  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  -------------------------  ------------------------------
+align                              `left` | `right` | `center`                                                                                                                                                         `left`                     -                             
+className                          string                                                                                                                                                                              -                          -                             
+colSpan                            number                                                                                                                                                                              -                          -                             
+dataIndex                          string | string[]                                                                                                                                                                   -                          -                             
+defaultFilteredValue               string[]                                                                                                                                                                            -                          -                             
+filterResetToDefaultFilteredValue  boolean                                                                                                                                                                             false                      -                             
+defaultSortOrder                   `ascend` | `descend`                                                                                                                                                                -                          -                             
+ellipsis                           boolean | {showTitle?: boolean }                                                                                                                                                    false                      showTitle: 4.3.0              
+filterDropdown                     ReactNode | (props: [FilterDropdownProps](https://github.com/ant-design/ant-design/blob/ecc54dda839619e921c0ace530408871f0281c2a/components/table/interface.tsx#L79)) => ReactNode  -                          -                             
+filtered                           boolean                                                                                                                                                                             false                      -                             
+filteredValue                      string[]                                                                                                                                                                            -                          -                             
+filterIcon                         ReactNode | (filtered: boolean) => ReactNode                                                                                                                                        -                          -                             
+filterOnClose                      boolean                                                                                                                                                                             true                       5.15.0                        
+filterMultiple                     boolean                                                                                                                                                                             true                       -                             
+filterMode                         'menu' | 'tree'                                                                                                                                                                     'menu'                     4.17.0                        
+filterSearch                       boolean | function(input, record):boolean                                                                                                                                           false                      boolean:4.17.0 function:4.19.0
+filters                            object[]                                                                                                                                                                            -                          -                             
+filterDropdownProps                [DropdownProps](/components/dropdown#api)                                                                                                                                           -                          5.22.0                        
+fixed                              boolean | string                                                                                                                                                                    false                      -                             
+key                                string                                                                                                                                                                              -                          -                             
+render                             (value: V, record: T, index: number): ReactNode                                                                                                                                     -                          -                             
+responsive                         [Breakpoint](https://github.com/ant-design/ant-design/blob/015109b42b85c63146371b4e32b883cf97b088e8/components/_util/responsiveObserve.ts#L1)[]                                     -                          4.2.0                         
+rowScope                           `row` | `rowgroup`                                                                                                                                                                  -                          5.1.0                         
+shouldCellUpdate                   (record, prevRecord) => boolean                                                                                                                                                     -                          4.3.0                         
+showSorterTooltip                  boolean | [Tooltip props](/components/tooltip/) & `{target?: 'full-header' | 'sorter-icon' }`                                                                                       { target: 'full-header' }  5.16.0                        
+sortDirections                     Array                                                                                                                                                                               [`ascend`, `descend`]      -                             
+sorter                             function | boolean | { compare: function, multiple: number }                                                                                                                        -                          -                             
+sortOrder                          `ascend` | `descend` | null                                                                                                                                                         -                          -                             
+sortIcon                           (props: { sortOrder }) => ReactNode                                                                                                                                                 -                          5.6.0                         
+title                              ReactNode | ({ sortColumns, filters }) => ReactNode                                                                                                                                 -                          -                             
+width                              string | number                                                                                                                                                                     -                          -                             
+minWidth                           number                                                                                                                                                                              -                          5.21.0                        
+hidden                             boolean                                                                                                                                                                             false                      5.13.0                        
+onCell                             function(record, rowIndex)                                                                                                                                                          -                          -                             
+onFilter                           function(value, record) => boolean                                                                                                                                                  -                          -                             
+onHeaderCell                       function(column)                                                                                                                                                                    -                          -                             
+
+Table.ColumnGroup
+
+Property  Type       Default  Since
+--------  ---------  -------  -----
+title     ReactNode  -        -    
+
+Table.pagination
+
+Property   Type   Default          Since
+---------  -----  ---------------  -----
+placement  Array  [`bottomEnd`]    -    
+position   Array  [`bottomRight`]  -    
+
+Table.expandable
+
+Property                Type                                                  Default   Since                  
+----------------------  ----------------------------------------------------  --------  -----------------------
+childrenColumnName      string                                                children  -                      
+columnTitle             ReactNode | ({ expandIcon }) => ReactNode             -         4.23.0, function: 6.7.0
+columnWidth             string | number                                       -         -                      
+defaultExpandAllRows    boolean                                               false     -                      
+defaultExpandedRowKeys  string[]                                              -         -                      
+expandedRowClassName    string | (record, index, indent) => string            -         string: 5.22.0         
+expandedRowKeys         string[]                                              -         -                      
+expandedRowRender       function(record, index, indent, expanded): ReactNode  -         -                      
+expandIcon              function(props): ReactNode                            -         -                      
+expandRowByClick        boolean                                               false     -                      
+fixed                   boolean | string                                      false     4.16.0                 
+forceRender             boolean                                               false     6.6.0                  
+indentSize              number                                                15        -                      
+rowExpandable           (record) => boolean                                   -         -                      
+showExpandAll           boolean                                               false     6.7.0                  
+showExpandColumn        boolean                                               true      4.18.0                 
+onExpand                function(expanded, record)                            -         -                      
+onExpandAll             (expanded: boolean) => void                           -         6.7.0                  
+onExpandedRowsChange    function(expandedRows)                                -         -                      
+expandedRowOffset       number                                                -         5.26.0                 
+
+Table.rowSelection
+
+Property                 Type                                                                            Default     Since              
+-----------------------  ------------------------------------------------------------------------------  ----------  -------------------
+align                    `left` | `right` | `center`                                                     `left`      5.25.0             
+checkStrictly            boolean                                                                         true        4.4.0              
+columnTitle              ReactNode | (originalNode: ReactNode) => ReactNode                              -           -                  
+columnWidth              string | number                                                                 `32px`      -                  
+fixed                    boolean                                                                         -           -                  
+getCheckboxProps         function(record)                                                                -           -                  
+getTitleCheckboxProps    function()                                                                      -           -                  
+hideSelectAll            boolean                                                                         false       4.3.0              
+preserveSelectedRowKeys  boolean                                                                         -           4.4.0              
+renderCell               (checked: boolean, record: T, index: number, originNode: ReactNode): ReactNode  -           4.1.0              
+selectedRowKeys          string[] | number[]                                                             []          -                  
+defaultSelectedRowKeys   string[] | number[]                                                             []          -                  
+selections               object[] | boolean                                                              -           -                  
+type                     `checkbox` | `radio`                                                            `checkbox`  -                  
+onCell                   function(record, rowIndex)                                                      -           5.5.0              
+onChange                 function(selectedRowKeys, selectedRows, info: { type })                         -           `info.type`: 4.21.0
+onSelect                 function(record, selected, selectedRows, nativeEvent)                           -           -                  
+
+Table.scroll
+
+Property                  Type                    Default  Since
+------------------------  ----------------------  -------  -----
+scrollToFirstRowOnChange  boolean                 -        -    
+x                         string | number | true  -        -    
+y                         string | number         -        -    
+
+Table.selection
+
+Property  Type                         Default  Since
+--------  ---------------------------  -------  -----
+key       string                       -        -    
+text      ReactNode                    -        -    
+onSelect  function(changeableRowKeys)  -        -    
+
+Common Props (inherited by all components, not listed individually)
+
+Property       Type           Default
+-------------  -------------  -------
+className      string         -      
+style          CSSProperties  -      
+rootClassName  string         -      
+
+Extends <div> — supports native HTML div attributes.
+# exit=0

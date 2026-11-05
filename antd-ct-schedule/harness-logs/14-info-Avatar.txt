@@ -1,0 +1,41 @@
+$ npx antd info Avatar
+# 目的: Avatar の props と既定値を確認（記憶に頼らない）
+# 実行日時: 2026-11-05T10:13:11Z
+
+Avatar (头像) — Used to represent users or things, supporting the display of images, icons, or characters.
+
+Property     Type                                                                    Default   Since           
+-----------  ----------------------------------------------------------------------  --------  ----------------
+alt          string                                                                  -         -               
+gap          number                                                                  4         4.3.0           
+icon         ReactNode                                                               -         -               
+shape        `circle` | `square`                                                     `circle`  -               
+size         number | `large` | `medium` | `small` | { xs: number, sm: number, ...}  `medium`  4.7.0           
+src          string | ReactNode                                                      -         ReactNode: 4.8.0
+srcSet       string                                                                  -         -               
+draggable    boolean | `'true'` | `'false'`                                          true      -               
+crossOrigin  `'anonymous'` | `'use-credentials'` | `''`                              -         4.17.0          
+onError      () => boolean                                                           -         -               
+
+Avatar.Group
+
+Property             Type                                                                    Default   Since 
+-------------------  ----------------------------------------------------------------------  --------  ------
+max                  `{ count?: number; style?: CSSProperties; popover?: PopoverProps }`     -         5.18.0
+maxCount             number                                                                  -         -     
+maxPopoverPlacement  `top` | `bottom`                                                        `top`     -     
+maxPopoverTrigger    `hover` | `focus` | `click`                                             `hover`   -     
+maxStyle             CSSProperties                                                           -         -     
+size                 number | `large` | `medium` | `small` | { xs: number, sm: number, ...}  `medium`  4.8.0 
+shape                `circle` | `square`                                                     `circle`  5.8.0 
+
+Common Props (inherited by all components, not listed individually)
+
+Property       Type           Default
+-------------  -------------  -------
+className      string         -      
+style          CSSProperties  -      
+rootClassName  string         -      
+
+Extends <span> — supports native HTML span attributes.
+# exit=0

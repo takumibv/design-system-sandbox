@@ -1,0 +1,344 @@
+$ npx antd info Notification --detail --format json
+# 目的: Notification の非推奨 props を --detail で確認
+# 実行日時: 2026-11-05T10:13:37Z
+
+{
+  "name": "Notification",
+  "nameZh": "通知提醒框",
+  "description": "Prompt notification message globally.",
+  "whenToUse": "To display a notification message at any of the four corners of the viewport. Typically it can be used in the following cases:\n\n- A notification with complex content.\n- A notification providing a feedback based on the user interaction. Or it may show some details about upcoming steps the user may have to follow.\n- A notification that is pushed by the application.",
+  "props": [
+    {
+      "name": "actions",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "Customized button group",
+      "since": "5.24.0",
+      "descriptionZh": "自定义按钮组"
+    },
+    {
+      "name": "btn",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "Customized close button group, please use `actions` instead",
+      "deprecated": true,
+      "descriptionZh": "自定义按钮组，请使用 `actions` 替换"
+    },
+    {
+      "name": "className",
+      "type": "string",
+      "default": "-",
+      "description": "Customized CSS class",
+      "descriptionZh": "自定义 CSS class"
+    },
+    {
+      "name": "classNames",
+      "type": "Record<[SemanticDOM](#semantic-dom), string> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), string>",
+      "default": "-",
+      "description": "Customize class for each semantic structure inside the component. Supports object or function.",
+      "descriptionZh": "用于自定义组件内部各语义化结构的 class，支持对象或函数"
+    },
+    {
+      "name": "closable",
+      "type": "boolean | [ClosableType](#closabletype)",
+      "default": "true",
+      "description": "Whether to show the close button",
+      "descriptionZh": "是否显示右上角的关闭按钮"
+    },
+    {
+      "name": "closeIcon",
+      "type": "ReactNode",
+      "default": "true",
+      "description": "Custom close icon",
+      "since": "5.7.0: close button will be hidden when setting to null or false",
+      "descriptionZh": "自定义关闭图标"
+    },
+    {
+      "name": "description",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "The content of notification box (required)",
+      "descriptionZh": "通知提醒内容，必选"
+    },
+    {
+      "name": "duration",
+      "type": "number | false",
+      "default": "4.5",
+      "description": "Time in seconds before Notification is closed. When set to `0` or `false`, it will never be closed automatically",
+      "descriptionZh": "默认 4.5 秒后自动关闭，配置为 `0 | false` 则不会自动关闭"
+    },
+    {
+      "name": "showProgress",
+      "type": "boolean",
+      "default": "-",
+      "description": "Show progress bar for auto-closing notification",
+      "since": "5.18.0",
+      "descriptionZh": "显示自动关闭通知框的进度条"
+    },
+    {
+      "name": "pauseOnHover",
+      "type": "boolean",
+      "default": "true",
+      "description": "keep the timer running or not on hover",
+      "since": "5.18.0",
+      "descriptionZh": "悬停时是否暂停计时器"
+    },
+    {
+      "name": "icon",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "Customized icon",
+      "descriptionZh": "自定义图标"
+    },
+    {
+      "name": "key",
+      "type": "string",
+      "default": "-",
+      "description": "The unique identifier of the Notification",
+      "descriptionZh": "当前通知唯一标志"
+    },
+    {
+      "name": "title",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "The title of notification box",
+      "since": "6.0.0",
+      "descriptionZh": "通知提醒标题"
+    },
+    {
+      "name": "message",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "The title of notification box (deprecated), please use `title` instead",
+      "deprecated": true,
+      "descriptionZh": "通知提醒标题，请使用 `title` 替换"
+    },
+    {
+      "name": "placement",
+      "type": "string",
+      "default": "`topRight`",
+      "description": "Position of Notification, can be one of `top` | `topLeft` | `topRight` | `bottom` | `bottomLeft` | `bottomRight`",
+      "descriptionZh": "弹出位置，可选 `top` | `topLeft` | `topRight` | `bottom` | `bottomLeft` | `bottomRight`"
+    },
+    {
+      "name": "role",
+      "type": "`alert | status`",
+      "default": "`alert`",
+      "description": "The semantics of notification content recognized by screen readers. The default value is `alert`. When set as the default value, the screen reader will promptly interrupt any ongoing content reading and prioritize the notification content for immediate attention.",
+      "since": "5.6.0",
+      "descriptionZh": "供屏幕阅读器识别的通知内容语义，默认为 `alert`。此情况下屏幕阅读器会立即打断当前正在阅读的其他内容，转而阅读通知内容"
+    },
+    {
+      "name": "style",
+      "type": "[CSSProperties](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/e434515761b36830c3e58a970abf5186f005adac/types/react/index.d.ts#L794)",
+      "default": "-",
+      "description": "Customized inline style",
+      "descriptionZh": "自定义内联样式"
+    },
+    {
+      "name": "styles",
+      "type": "Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>",
+      "default": "-",
+      "description": "Customize inline style for each semantic structure inside the component. Supports object or function.",
+      "descriptionZh": "用于自定义组件内部各语义化结构的行内 style，支持对象或函数"
+    },
+    {
+      "name": "onClick",
+      "type": "function",
+      "default": "-",
+      "description": "Specify a function that will be called when the notification is clicked",
+      "descriptionZh": "点击通知时触发的回调函数"
+    },
+    {
+      "name": "onClose",
+      "type": "function",
+      "default": "-",
+      "description": "Trigger when notification closed",
+      "descriptionZh": "当通知关闭时触发"
+    },
+    {
+      "name": "props",
+      "type": "Object",
+      "default": "-",
+      "description": "An object that can contain `data-*`, `aria-*`, or `role` props, to be put on the notification `div`. This currently only allows `data-testid` instead of `data-*` in TypeScript. See https://github.com/microsoft/TypeScript/issues/28960.",
+      "descriptionZh": "透传至通知 `div` 上的 props 对象，支持传入 `data-*` `aria-*` 或 `role` 作为对象的属性。需要注意的是，虽然在 TypeScript 类型中声明的类型支持传入 `data-*` 作为对象的属性，但目前只允许传入 `data-testid` 作为对象的属性。 详见 https://github.com/microsoft/TypeScript/issues/28960"
+    },
+    {
+      "name": "bottom",
+      "type": "number",
+      "default": "24",
+      "description": "Distance from the bottom of the viewport, when `placement` is `bottom` `bottomRight` or `bottomLeft` (unit: pixels)",
+      "descriptionZh": "消息从底部弹出时，距离底部的位置，单位像素"
+    },
+    {
+      "name": "getContainer",
+      "type": "() => HTMLNode",
+      "default": "() => document.body",
+      "description": "Return the mount node for Notification",
+      "descriptionZh": "配置渲染节点的输出位置"
+    },
+    {
+      "name": "rtl",
+      "type": "boolean",
+      "default": "false",
+      "description": "Whether to enable RTL mode",
+      "descriptionZh": "是否开启 RTL 模式"
+    },
+    {
+      "name": "stack",
+      "type": "boolean | `{ threshold: number }`",
+      "default": "`{ threshold: 3 }`",
+      "description": "Notifications will be stacked when amount is over threshold",
+      "since": "5.10.0",
+      "descriptionZh": "堆叠模式，超过阈值时会将所有消息收起"
+    },
+    {
+      "name": "top",
+      "type": "number",
+      "default": "24",
+      "description": "Distance from the top of the viewport, when `placement` is `top` `topRight` or `topLeft` (unit: pixels)",
+      "descriptionZh": "消息从顶部弹出时，距离顶部的位置，单位像素"
+    },
+    {
+      "name": "maxCount",
+      "type": "number",
+      "default": "-",
+      "description": "Max Notification show, drop oldest if exceed limit",
+      "since": "4.17.0",
+      "descriptionZh": "最大显示数，超过限制时，最早的消息会被自动关闭"
+    }
+  ],
+  "subComponentProps": {
+    "Notification.ClosableType": [
+      {
+        "name": "closeIcon",
+        "type": "ReactNode",
+        "default": "undefined",
+        "description": "Custom close icon",
+        "descriptionZh": "自定义关闭图标"
+      },
+      {
+        "name": "onClose",
+        "type": "Function",
+        "default": "-",
+        "description": "Trigger when notification close",
+        "descriptionZh": "当通知关闭时触发"
+      }
+    ],
+    "Notification.Global configuration": [
+      {
+        "name": "bottom",
+        "type": "number",
+        "default": "24",
+        "description": "Distance from the bottom of the viewport, when `placement` is `bottom` `bottomRight` or `bottomLeft` (unit: pixels)",
+        "descriptionZh": ""
+      },
+      {
+        "name": "closeIcon",
+        "type": "ReactNode",
+        "default": "true",
+        "description": "Custom close icon",
+        "since": "5.7.0: close button will be hidden when setting to null or false",
+        "descriptionZh": ""
+      },
+      {
+        "name": "duration",
+        "type": "number",
+        "default": "4.5",
+        "description": "Time in seconds before Notification is closed. When set to 0 or null, it will never be closed automatically",
+        "descriptionZh": ""
+      },
+      {
+        "name": "getContainer",
+        "type": "() => HTMLNode",
+        "default": "() => document.body",
+        "description": "Return the mount node for Notification, but still display at fullScreen",
+        "descriptionZh": ""
+      },
+      {
+        "name": "placement",
+        "type": "string",
+        "default": "`topRight`",
+        "description": "Position of Notification, can be one of `top` `topLeft` `topRight` `bottom` `bottomLeft` `bottomRight`",
+        "descriptionZh": ""
+      },
+      {
+        "name": "showProgress",
+        "type": "boolean",
+        "default": "-",
+        "description": "Show progress bar for auto-closing notification",
+        "since": "5.18.0",
+        "descriptionZh": ""
+      },
+      {
+        "name": "pauseOnHover",
+        "type": "boolean",
+        "default": "true",
+        "description": "keep the timer running or not on hover",
+        "since": "5.18.0",
+        "descriptionZh": ""
+      },
+      {
+        "name": "rtl",
+        "type": "boolean",
+        "default": "false",
+        "description": "Whether to enable RTL mode",
+        "descriptionZh": ""
+      },
+      {
+        "name": "top",
+        "type": "number",
+        "default": "24",
+        "description": "Distance from the top of the viewport, when `placement` is `top` `topRight` or `topLeft` (unit: pixels)",
+        "descriptionZh": ""
+      },
+      {
+        "name": "maxCount",
+        "type": "number",
+        "default": "-",
+        "description": "Max Notification show, drop oldest if exceed limit",
+        "since": "4.17.0",
+        "descriptionZh": ""
+      }
+    ]
+  },
+  "commonProps": [
+    {
+      "name": "className",
+      "type": "string",
+      "default": "-",
+      "description": "Additional CSS class",
+      "descriptionZh": "额外的 CSS 类名"
+    },
+    {
+      "name": "style",
+      "type": "CSSProperties",
+      "default": "-",
+      "description": "Additional style",
+      "descriptionZh": "额外的样式"
+    },
+    {
+      "name": "rootClassName",
+      "type": "string",
+      "default": "-",
+      "description": "ClassName on the root element",
+      "descriptionZh": "根元素的类名"
+    }
+  ],
+  "htmlElement": "div",
+  "faq": [
+    {
+      "question": "Why I can not access context, redux, ConfigProvider `locale/prefixCls/theme` in notification?",
+      "answer": "When you call notification methods, antd dynamically creates a React instance using `ReactDOM.render`, which runs in a different execution context than your original code.\n\nWhen you need context info (like ConfigProvider context), you can use `notification.useNotification` to get `api` instance and `contextHolder` node. And put it in your children:\n\n```tsx\nconst [api, contextHolder] = notification.useNotification();\n\nreturn (\n  <Context1.Provider value=\"Ant\">\n    {/* contextHolder is inside Context1 which means api will get value of Context1 */}\n    {contextHolder}\n    <Context2.Provider value=\"Design\">\n      {/* contextHolder is outside Context2 which means api will **not** get value of Context2 */}\n    </Context2.Provider>\n  </Context1.Provider>\n);\n```\n\n**Note:** You must insert `contextHolder` into your children with hooks. You can use origin method if you do not need context connection.\n\n> [App wrapper component](/components/app) can be used to simplify the problem of `useNotification` and other methods that need to manually implant contextHolder."
+    },
+    {
+      "question": "How to set static methods prefixCls ？",
+      "answer": "You can config with [`ConfigProvider.config`](/components/config-provider#config)"
+    },
+    {
+      "question": "Why doesn't `style={{ width: 'max-content' }}` work on Notification?",
+      "answer": "Notification uses a fixed-width layout so the stacked card style can stay consistent. Because of this, intrinsic widths such as `max-content`, `min-content`, and `fit-content(...)` are not supported on the outer notification node.\n\nIf you need to customize the notification width, use the component token `width`:\n\n```tsx\n<ConfigProvider\n  theme={{\n    components: {\n      Notification: {\n        width: 480,\n      },\n    },\n  }}\n>\n  <App />\n</ConfigProvider>\n```\n\nIf you only need the content to size itself, render your own ReactNode in `title` or `description`, and apply `max-content` to the inner node instead of the notification root."
+    }
+  ]
+}
+# exit=0

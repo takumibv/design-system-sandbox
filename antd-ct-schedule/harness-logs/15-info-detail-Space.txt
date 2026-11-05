@@ -1,0 +1,168 @@
+$ npx antd info Space --detail --format json
+# 目的: Space の非推奨 props を --detail で確認
+# 実行日時: 2026-11-05T10:13:33Z
+
+{
+  "name": "Space",
+  "nameZh": "间距",
+  "description": "Set components spacing.",
+  "whenToUse": "- Avoid components clinging together and set a unified space.\n- Use Space.Compact when child form components are compactly connected and the border is collapsed (After version `antd@4.24.0` Supported).\n\n### Difference with Flex component\n\n- Space is used to set the spacing between inline elements. It will add a wrapper element for each child element for inline alignment. Suitable for equidistant arrangement of multiple child elements in rows and columns.\n- Flex is used to set the layout of block-level elements. It does not add a wrapper element. Suitable for layout of child elements in vertical or horizontal direction, and provides more flexibility and control.",
+  "props": [
+    {
+      "name": "align",
+      "type": "`start` | `end` | `center` | `baseline` | `stretch`",
+      "default": "-",
+      "description": "Align items",
+      "since": "4.2.0 | `stretch`: 6.6.0",
+      "descriptionZh": "对齐方式"
+    },
+    {
+      "name": "classNames",
+      "type": "Record<[SemanticDOM](#semantic-dom), string> | (info: { props: SpaceProps })=> Record<[SemanticDOM](#semantic-dom), string>",
+      "default": "-",
+      "description": "Customize class for each semantic structure inside the component. Supports object or function.",
+      "descriptionZh": "用于自定义组件内部各语义化结构的 class，支持对象或函数"
+    },
+    {
+      "name": "direction",
+      "type": "`vertical` | `horizontal`",
+      "default": "`horizontal`",
+      "description": "The space direction",
+      "since": "4.1.0",
+      "deprecated": true,
+      "descriptionZh": "间距方向"
+    },
+    {
+      "name": "orientation",
+      "type": "`vertical` | `horizontal`",
+      "default": "`horizontal`",
+      "description": "The space direction",
+      "descriptionZh": "间距方向"
+    },
+    {
+      "name": "size",
+      "type": "[Size](#size) | [Size[]](#size)",
+      "default": "`small`",
+      "description": "The space size",
+      "since": "4.1.0 | Array: 4.9.0",
+      "descriptionZh": "间距大小"
+    },
+    {
+      "name": "split",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "Set split, please use `separator` instead",
+      "since": "4.7.0",
+      "deprecated": true,
+      "descriptionZh": "设置分隔符, 请使用 `separator` 替换"
+    },
+    {
+      "name": "separator",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "Set separator",
+      "descriptionZh": "设置分隔符"
+    },
+    {
+      "name": "styles",
+      "type": "Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props: SpaceProps })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>",
+      "default": "-",
+      "description": "Customize inline style for each semantic structure inside the component. Supports object or function.",
+      "descriptionZh": "用于自定义组件内部各语义化结构的行内 style，支持对象或函数"
+    },
+    {
+      "name": "vertical",
+      "type": "boolean",
+      "default": "false",
+      "description": "Orientation, Simultaneously configure with `orientation` and prioritize `orientation`",
+      "descriptionZh": "是否垂直，和 `orientation` 同时配置以 `orientation` 优先"
+    },
+    {
+      "name": "wrap",
+      "type": "boolean",
+      "default": "false",
+      "description": "Auto wrap line, when `horizontal` effective",
+      "since": "4.9.0",
+      "descriptionZh": "是否自动换行，仅在 `horizontal` 时有效"
+    }
+  ],
+  "subComponentProps": {
+    "Space.Compact": [
+      {
+        "name": "block",
+        "type": "boolean",
+        "default": "false",
+        "description": "Option to fit width to its parent\\'s width",
+        "since": "4.24.0",
+        "descriptionZh": "将宽度调整为父元素宽度的选项"
+      },
+      {
+        "name": "direction",
+        "type": "`vertical` | `horizontal`",
+        "default": "`horizontal`",
+        "description": "Set direction of layout",
+        "since": "4.24.0",
+        "deprecated": true,
+        "descriptionZh": "指定排列方向"
+      },
+      {
+        "name": "orientation",
+        "type": "`vertical` | `horizontal`",
+        "default": "`horizontal`",
+        "description": "Set direction of layout",
+        "descriptionZh": "指定排列方向"
+      },
+      {
+        "name": "vertical",
+        "type": "boolean",
+        "default": "false",
+        "description": "Orientation, Simultaneously configure with `orientation` and prioritize `orientation`",
+        "descriptionZh": "是否垂直，和 `orientation` 同时配置以 `orientation` 优先"
+      },
+      {
+        "name": "size",
+        "type": "`large` | `medium` | `small`",
+        "default": "`medium`",
+        "description": "Set child component size",
+        "since": "4.24.0",
+        "descriptionZh": "子组件大小"
+      }
+    ],
+    "Space.Addon": [
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "default": "-",
+        "description": "Custom content",
+        "since": "5.29.0",
+        "descriptionZh": "自定义内容"
+      }
+    ]
+  },
+  "commonProps": [
+    {
+      "name": "className",
+      "type": "string",
+      "default": "-",
+      "description": "Additional CSS class",
+      "descriptionZh": "额外的 CSS 类名"
+    },
+    {
+      "name": "style",
+      "type": "CSSProperties",
+      "default": "-",
+      "description": "Additional style",
+      "descriptionZh": "额外的样式"
+    },
+    {
+      "name": "rootClassName",
+      "type": "string",
+      "default": "-",
+      "description": "ClassName on the root element",
+      "descriptionZh": "根元素的类名"
+    }
+  ],
+  "htmlElement": "div",
+  "faq": []
+}
+# exit=0

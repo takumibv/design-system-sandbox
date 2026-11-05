@@ -1,0 +1,19 @@
+$ npx antd setup --help
+# 目的: スキル・MCP の導入方法を確認
+# 実行日時: 2026-11-05T10:10:58Z
+
+Usage: antd setup [options]
+
+Set up Ant Design MCP/Skill for AI agents or GitHub Actions
+
+Options:
+  --client <client>     Agent client: claude, cursor, vscode, codex, or
+                        github-actions
+  --mode <mode>         Setup mode: mcp, skill, both, or ci
+  --project <dir>       Project directory to write config into (default:
+                        "/home/user/design-system-sandbox/antd-ct-schedule")
+  --dry-run             Preview the config without writing files
+  --check               Check whether the agent is already configured
+  --write-instructions  Write agent instructions for using the antd MCP server
+  -h, --help            display help for command
+# exit=0

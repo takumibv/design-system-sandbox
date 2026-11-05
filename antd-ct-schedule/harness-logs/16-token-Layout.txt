@@ -1,0 +1,25 @@
+$ npx antd token Layout
+# 目的: Layout.Header の既定色と高さを確認
+# 実行日時: 2026-11-05T10:14:38Z
+
+Layout Component Tokens:
+
+Token              Type                                  Default
+-----------------  ------------------------------------  -------
+bodyBg             string                                -      
+footerBg           string                                -      
+footerPadding      Padding<string | number> | undefined  -      
+headerBg           string                                -      
+headerColor        string                                -      
+headerHeight       string | number                       -      
+headerPadding      Padding<string | number> | undefined  -      
+lightSiderBg       string                                -      
+lightTriggerBg     string                                -      
+lightTriggerColor  string                                -      
+siderBg            string                                -      
+triggerBg          string                                -      
+triggerColor       string                                -      
+triggerHeight      string | number                       -      
+zeroTriggerHeight  number                                -      
+zeroTriggerWidth   number                                -      
+# exit=0

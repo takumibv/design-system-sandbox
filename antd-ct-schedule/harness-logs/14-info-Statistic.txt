@@ -1,0 +1,35 @@
+$ npx antd info Statistic
+# 目的: Statistic の props と既定値を確認（記憶に頼らない）
+# 実行日時: 2026-11-05T10:13:17Z
+
+Statistic (统计数值) — Display statistic number.
+
+Property          Type                                                                                                                            Default     Since
+----------------  ------------------------------------------------------------------------------------------------------------------------------  ----------  -----
+classNames        Record<[SemanticDOM](#semantic-dom), string> | (info: { props }) => Record<[SemanticDOM](#semantic-dom), string>                -           -    
+decimalSeparator  string                                                                                                                          `.`         -    
+formatter         (value) => ReactNode                                                                                                            -           -    
+groupSeparator    string                                                                                                                          `,`         -    
+loading           boolean                                                                                                                         false       4.8.0
+precision         number                                                                                                                          -           -    
+prefix            ReactNode                                                                                                                       -           -    
+styles            Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props }) => Record<[SemanticDOM](#semantic-dom), CSSProperties>  -           -    
+suffix            ReactNode                                                                                                                       -           -    
+title             ReactNode                                                                                                                       -           -    
+value             string | number                                                                                                                 -           -    
+valueStyle        CSSProperties                                                                                                                   -           -    
+format            string                                                                                                                          `HH:mm:ss`  -    
+onFinish          () => void                                                                                                                      -           -    
+onChange          (value: number) => void                                                                                                         -           -    
+type              `countdown` | `countup`                                                                                                         -           -    
+
+Common Props (inherited by all components, not listed individually)
+
+Property       Type           Default
+-------------  -------------  -------
+className      string         -      
+style          CSSProperties  -      
+rootClassName  string         -      
+
+Extends <div> — supports native HTML div attributes.
+# exit=0

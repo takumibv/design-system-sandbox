@@ -1,0 +1,152 @@
+$ npx antd info Statistic --detail --format json
+# 目的: Statistic の非推奨 props を --detail で確認
+# 実行日時: 2026-11-05T10:13:34Z
+
+{
+  "name": "Statistic",
+  "nameZh": "统计数值",
+  "description": "Display statistic number.",
+  "whenToUse": "- When want to highlight some data.\n- When want to display statistic data with description.",
+  "props": [
+    {
+      "name": "classNames",
+      "type": "Record<[SemanticDOM](#semantic-dom), string> | (info: { props }) => Record<[SemanticDOM](#semantic-dom), string>",
+      "default": "-",
+      "description": "Customize class for each semantic structure inside the Statistic component. Supports object or function.",
+      "descriptionZh": "用于自定义 Statistic 组件内部各语义化结构的 class，支持对象或函数"
+    },
+    {
+      "name": "decimalSeparator",
+      "type": "string",
+      "default": "`.`",
+      "description": "The decimal separator",
+      "descriptionZh": "设置小数点"
+    },
+    {
+      "name": "formatter",
+      "type": "(value) => ReactNode",
+      "default": "-",
+      "description": "Customize value display logic",
+      "descriptionZh": "自定义数值展示"
+    },
+    {
+      "name": "groupSeparator",
+      "type": "string",
+      "default": "`,`",
+      "description": "Group separator",
+      "descriptionZh": "设置千分位标识符"
+    },
+    {
+      "name": "loading",
+      "type": "boolean",
+      "default": "false",
+      "description": "Loading status of Statistic",
+      "since": "4.8.0",
+      "descriptionZh": "数值是否加载中"
+    },
+    {
+      "name": "precision",
+      "type": "number",
+      "default": "-",
+      "description": "The precision of input value",
+      "descriptionZh": "数值精度"
+    },
+    {
+      "name": "prefix",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "The prefix node of value",
+      "descriptionZh": "设置数值的前缀"
+    },
+    {
+      "name": "styles",
+      "type": "Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props }) => Record<[SemanticDOM](#semantic-dom), CSSProperties>",
+      "default": "-",
+      "description": "Customize inline style for each semantic structure inside the Statistic component. Supports object or function.",
+      "descriptionZh": "用于自定义 Statistic 组件内部各语义化结构的行内 style，支持对象或函数"
+    },
+    {
+      "name": "suffix",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "The suffix node of value",
+      "descriptionZh": "设置数值的后缀"
+    },
+    {
+      "name": "title",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "Display title",
+      "descriptionZh": "数值的标题"
+    },
+    {
+      "name": "value",
+      "type": "string | number",
+      "default": "-",
+      "description": "Display value",
+      "descriptionZh": "数值内容"
+    },
+    {
+      "name": "valueStyle",
+      "type": "CSSProperties",
+      "default": "-",
+      "description": "Set value section style, please use `styles.content` instead",
+      "deprecated": true,
+      "descriptionZh": "设置数值区域的样式，请使用 `styles.content` 替代"
+    },
+    {
+      "name": "format",
+      "type": "string",
+      "default": "`HH:mm:ss`",
+      "description": "Format as [dayjs](https://day.js.org/)",
+      "descriptionZh": "格式化倒计时展示，参考 [dayjs](https://day.js.org/)"
+    },
+    {
+      "name": "onFinish",
+      "type": "() => void",
+      "default": "-",
+      "description": "Trigger when time's up",
+      "descriptionZh": "倒计时完成时触发"
+    },
+    {
+      "name": "onChange",
+      "type": "(value: number) => void",
+      "default": "-",
+      "description": "Trigger when time's changing",
+      "descriptionZh": "倒计时时间变化时触发"
+    },
+    {
+      "name": "type",
+      "type": "`countdown` | `countup`",
+      "default": "-",
+      "description": "Timer direction, count down or count up",
+      "descriptionZh": "计时类型，倒计时或者正计时"
+    }
+  ],
+  "commonProps": [
+    {
+      "name": "className",
+      "type": "string",
+      "default": "-",
+      "description": "Additional CSS class",
+      "descriptionZh": "额外的 CSS 类名"
+    },
+    {
+      "name": "style",
+      "type": "CSSProperties",
+      "default": "-",
+      "description": "Additional style",
+      "descriptionZh": "额外的样式"
+    },
+    {
+      "name": "rootClassName",
+      "type": "string",
+      "default": "-",
+      "description": "ClassName on the root element",
+      "descriptionZh": "根元素的类名"
+    }
+  ],
+  "htmlElement": "div",
+  "faq": []
+}
+# exit=0

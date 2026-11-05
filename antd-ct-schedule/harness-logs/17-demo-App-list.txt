@@ -1,0 +1,11 @@
+$ npx antd demo App
+# 目的: App（message をフックで使う）のデモ一覧
+# 実行日時: 2026-11-05T10:14:39Z
+
+App Demos:
+
+  basic — Basic
+    Get instance for `message`, `notification`, `modal`.
+  config — Hooks config
+    Config for `message`, `notification`.
+# exit=0

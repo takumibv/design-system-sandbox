@@ -1,0 +1,46 @@
+$ npx antd info Grid
+# 目的: Grid の props と既定値を確認（記憶に頼らない）
+# 実行日時: 2026-11-05T10:13:19Z
+
+Grid (栅格) — 24 Grids System.
+
+Property  Type  Default  Since
+--------  ----  -------  -----
+
+Grid.Row
+
+Property  Type                                                                                                                                                                                                                             Default  Since         
+--------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  -------  --------------
+align     `top` | `middle` | `bottom` | `stretch` | `{[key in 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl']: 'top' | 'middle' | 'bottom' | 'stretch'}`                                                                                `top`    object: 4.24.0
+gutter    number | string | object | array                                                                                                                                                                                                 0        string: 5.28.0
+justify   `start` | `end` | `center` | `space-around` | `space-between` | `space-evenly` | `{[key in 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl']: 'start' | 'end' | 'center' | 'space-around' | 'space-between' | 'space-evenly'}`  `start`  object: 4.24.0
+wrap      boolean                                                                                                                                                                                                                          true     4.8.0         
+
+Grid.Col
+
+Property  Type             Default  Since
+--------  ---------------  -------  -----
+flex      string | number  -        -    
+offset    number           0        -    
+order     number           0        -    
+pull      number           0        -    
+push      number           0        -    
+span      number           -        -    
+xs        number | object  -        -    
+sm        number | object  -        -    
+md        number | object  -        -    
+lg        number | object  -        -    
+xl        number | object  -        -    
+xxl       number | object  -        -    
+xxxl      number | object  -        6.3.0
+
+Common Props (inherited by all components, not listed individually)
+
+Property       Type           Default
+-------------  -------------  -------
+className      string         -      
+style          CSSProperties  -      
+rootClassName  string         -      
+
+Extends <div> — supports native HTML div attributes.
+# exit=0

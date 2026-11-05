@@ -1,0 +1,8 @@
+$ npx antd setup --client claude --mode both --dry-run --write-instructions
+# 目的: setup が AI 向け指示文に何を書くか確認
+# 実行日時: 2026-11-05T10:11:43Z
+
+Would write: /home/user/design-system-sandbox/antd-ct-schedule/.mcp.json
+Would write: /home/user/design-system-sandbox/antd-ct-schedule/.claude/skills/antd
+Would write: /home/user/design-system-sandbox/antd-ct-schedule/CLAUDE.md
+# exit=0

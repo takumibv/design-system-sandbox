@@ -1,0 +1,244 @@
+$ npx antd info Alert --detail --format json
+# 目的: Alert の非推奨 props を --detail で確認
+# 実行日時: 2026-11-05T10:13:31Z
+
+{
+  "name": "Alert",
+  "nameZh": "警告提示",
+  "description": "Display warning messages that require attention.",
+  "whenToUse": "- When you need to show alert messages to users.\n- When you need a persistent static container which is closable by user actions.",
+  "props": [
+    {
+      "name": "action",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "The action of Alert",
+      "descriptionZh": "自定义操作项"
+    },
+    {
+      "name": "afterClose",
+      "type": "() => void",
+      "default": "-",
+      "description": "Called when close animation is finished, please use `closable.afterClose` instead",
+      "deprecated": true,
+      "descriptionZh": "关闭动画结束后触发的回调函数，请使用 `closable.afterClose` 替换"
+    },
+    {
+      "name": "banner",
+      "type": "boolean",
+      "default": "false",
+      "description": "Whether to show as banner",
+      "descriptionZh": "是否用作顶部公告"
+    },
+    {
+      "name": "variant",
+      "type": "`outlined` | `filled`",
+      "default": "`outlined`",
+      "description": "Variant of Alert style",
+      "since": "6.4.0",
+      "descriptionZh": "警告提示样式变体"
+    },
+    {
+      "name": "classNames",
+      "type": "Record<[SemanticDOM](#semantic-dom), string> | (info: { props }) => Record<[SemanticDOM](#semantic-dom), string>",
+      "default": "-",
+      "description": "Customize class for each semantic structure inside the component. Supports object or function",
+      "descriptionZh": "自定义组件内部各语义化结构的类名。支持对象或函数"
+    },
+    {
+      "name": "closable",
+      "type": "boolean | [ClosableType](#closabletype) & React.AriaAttributes",
+      "default": "`false`",
+      "description": "The config of closable",
+      "descriptionZh": "可关闭配置"
+    },
+    {
+      "name": "closeIcon",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "(Only supports global configuration) Custom close icon",
+      "since": "×",
+      "descriptionZh": "（仅支持全局配置）自定义关闭图标"
+    },
+    {
+      "name": "description",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "Additional content of Alert",
+      "descriptionZh": "警告提示的辅助性文字介绍"
+    },
+    {
+      "name": "errorIcon",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "(Only supports global configuration) Custom error icon in Alert icon",
+      "since": "×",
+      "descriptionZh": "（仅支持全局配置）自定义错误图标"
+    },
+    {
+      "name": "icon",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "Custom icon, effective when `showIcon` is true",
+      "descriptionZh": "自定义图标，`showIcon` 为 true 时有效"
+    },
+    {
+      "name": "infoIcon",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "(Only supports global configuration) Custom info icon in Alert icon",
+      "since": "×",
+      "descriptionZh": "（仅支持全局配置）自定义信息图标"
+    },
+    {
+      "name": "message",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "Content of Alert, please use `title` instead",
+      "deprecated": true,
+      "descriptionZh": "警告提示内容，请使用 `title` 替换"
+    },
+    {
+      "name": "onClose",
+      "type": "(e: MouseEvent) => void",
+      "default": "-",
+      "description": "Callback when Alert is closed, please use `closable.onClose` instead",
+      "deprecated": true,
+      "descriptionZh": "关闭时触发的回调函数，请使用 `closable.onClose` 替换"
+    },
+    {
+      "name": "closeText",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "Close text to show, please use `closable.closeIcon` instead",
+      "deprecated": true,
+      "descriptionZh": "自定义关闭文案，请使用 `closable.closeIcon` 替代"
+    },
+    {
+      "name": "showIcon",
+      "type": "boolean",
+      "default": "false, in `banner` mode default is true",
+      "description": "Whether to show icon",
+      "descriptionZh": "是否显示辅助图标"
+    },
+    {
+      "name": "styles",
+      "type": "Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props }) => Record<[SemanticDOM](#semantic-dom), CSSProperties>",
+      "default": "-",
+      "description": "Customize inline style for each semantic structure inside the component. Supports object or function",
+      "descriptionZh": "自定义组件内部各语义化结构的内联样式。支持对象或函数"
+    },
+    {
+      "name": "successIcon",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "(Only supports global configuration) Custom success icon in Alert icon",
+      "since": "×",
+      "descriptionZh": "（仅支持全局配置）自定义成功图标"
+    },
+    {
+      "name": "title",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "Content of Alert",
+      "descriptionZh": "警告提示内容"
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "default": "`info`, in `banner` mode default is `warning`",
+      "description": "Type of Alert styles, options: `success`, `info`, `warning`, `error`",
+      "descriptionZh": "指定警告提示的样式，有四种选择 `success`、`info`、`warning`、`error`"
+    },
+    {
+      "name": "warningIcon",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "(Only supports global configuration) Custom warning icon in Alert icon",
+      "since": "×",
+      "descriptionZh": "（仅支持全局配置）自定义警告图标"
+    }
+  ],
+  "subComponentProps": {
+    "Alert.ClosableType": [
+      {
+        "name": "afterClose",
+        "type": "function",
+        "default": "-",
+        "description": "Called when close animation is finished",
+        "descriptionZh": "关闭动画结束后触发的回调函数"
+      },
+      {
+        "name": "closeIcon",
+        "type": "ReactNode",
+        "default": "-",
+        "description": "Custom close icon",
+        "descriptionZh": "自定义关闭图标"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": "false",
+        "description": "Whether the close button is disabled",
+        "descriptionZh": "是否禁用关闭按钮"
+      },
+      {
+        "name": "onClose",
+        "type": "(e: MouseEvent) => void",
+        "default": "-",
+        "description": "Callback when Alert is closed",
+        "descriptionZh": "关闭时触发的回调函数"
+      }
+    ],
+    "Alert.ErrorBoundary": [
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "default": "{{ error stack }}",
+        "description": "Custom error description to show",
+        "descriptionZh": "自定义错误内容，如果未指定会展示报错堆栈"
+      },
+      {
+        "name": "message",
+        "type": "ReactNode",
+        "default": "{{ error }}",
+        "description": "Custom error message to show, please use `title` instead",
+        "deprecated": true,
+        "descriptionZh": "自定义错误标题，如果未指定会展示原生报错信息，请使用 `title` 替换"
+      },
+      {
+        "name": "title",
+        "type": "ReactNode",
+        "default": "{{ error }}",
+        "description": "Custom error title to show",
+        "descriptionZh": "自定义错误标题，如果未指定会展示原生报错信息"
+      }
+    ]
+  },
+  "commonProps": [
+    {
+      "name": "className",
+      "type": "string",
+      "default": "-",
+      "description": "Additional CSS class",
+      "descriptionZh": "额外的 CSS 类名"
+    },
+    {
+      "name": "style",
+      "type": "CSSProperties",
+      "default": "-",
+      "description": "Additional style",
+      "descriptionZh": "额外的样式"
+    },
+    {
+      "name": "rootClassName",
+      "type": "string",
+      "default": "-",
+      "description": "ClassName on the root element",
+      "descriptionZh": "根元素的类名"
+    }
+  ],
+  "htmlElement": "div",
+  "faq": []
+}
+# exit=0

@@ -1,0 +1,216 @@
+$ npx antd info Card --detail --format json
+# 目的: Card の非推奨 props を --detail で確認
+# 実行日時: 2026-11-05T10:13:31Z
+
+{
+  "name": "Card",
+  "nameZh": "卡片",
+  "description": "A container for displaying information.",
+  "whenToUse": "A card can be used to display content related to a single subject. The content can consist of multiple elements of varying types and sizes.",
+  "props": [
+    {
+      "name": "actions",
+      "type": "Array<ReactNode>",
+      "default": "-",
+      "description": "The action list, shows at the bottom of the Card",
+      "descriptionZh": "卡片操作组，位置在卡片底部"
+    },
+    {
+      "name": "activeTabKey",
+      "type": "string",
+      "default": "-",
+      "description": "Current TabPane's key",
+      "descriptionZh": "当前激活页签的 key"
+    },
+    {
+      "name": "bordered",
+      "type": "boolean",
+      "default": "true",
+      "description": "Toggles rendering of the border around the card, please use `variant` instead",
+      "deprecated": true,
+      "descriptionZh": "是否有边框, 请使用 `variant` 替换"
+    },
+    {
+      "name": "bodyStyle",
+      "type": "CSSProperties",
+      "default": "-",
+      "description": "Style of card body, please use `styles.body` instead",
+      "deprecated": true,
+      "descriptionZh": "卡片内容区域样式，请使用 `styles.body` 替代"
+    },
+    {
+      "name": "variant",
+      "type": "`outlined` | `borderless`",
+      "default": "`outlined`",
+      "description": "Variants of Card",
+      "since": "5.24.0",
+      "descriptionZh": "形态变体"
+    },
+    {
+      "name": "classNames",
+      "type": "Record<[SemanticDOM](#semantic-dom), string> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), string>",
+      "default": "-",
+      "description": "Customize class for each semantic structure inside the component. Supports object or function.",
+      "descriptionZh": "用于自定义组件内部各语义化结构的 class，支持对象或函数"
+    },
+    {
+      "name": "cover",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "Card cover",
+      "descriptionZh": "卡片封面"
+    },
+    {
+      "name": "defaultActiveTabKey",
+      "type": "string",
+      "default": "`The key of first tab`",
+      "description": "Initial active TabPane's key, if `activeTabKey` is not set",
+      "descriptionZh": "初始化选中页签的 key，如果没有设置 activeTabKey"
+    },
+    {
+      "name": "extra",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "Content to render in the top-right corner of the card",
+      "descriptionZh": "卡片右上角的操作区域"
+    },
+    {
+      "name": "hoverable",
+      "type": "boolean",
+      "default": "false",
+      "description": "Lift up when hovering card",
+      "descriptionZh": "鼠标移过时可浮起"
+    },
+    {
+      "name": "headStyle",
+      "type": "CSSProperties",
+      "default": "-",
+      "description": "Style of card head, please use `styles.header` instead",
+      "deprecated": true,
+      "descriptionZh": "卡片头部样式，请使用 `styles.header` 替代"
+    },
+    {
+      "name": "loading",
+      "type": "boolean",
+      "default": "false",
+      "description": "Shows a loading indicator while the contents of the card are being fetched",
+      "descriptionZh": "当卡片内容还在加载中时，可以用 loading 展示一个占位"
+    },
+    {
+      "name": "size",
+      "type": "`medium` | `small`",
+      "default": "`medium`",
+      "description": "Size of card",
+      "descriptionZh": "card 的尺寸"
+    },
+    {
+      "name": "tabBarExtraContent",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "Extra content in tab bar",
+      "descriptionZh": "tab bar 上额外的元素"
+    },
+    {
+      "name": "tabList",
+      "type": "[TabItemType](/components/tabs#tabitemtype)[]",
+      "default": "-",
+      "description": "List of TabPane's head",
+      "descriptionZh": "页签标题列表"
+    },
+    {
+      "name": "tabProps",
+      "type": "-",
+      "default": "-",
+      "description": "[Tabs](/components/tabs/#tabs)",
+      "descriptionZh": "[Tabs](/components/tabs#tabs)"
+    },
+    {
+      "name": "title",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "Card title",
+      "descriptionZh": "卡片标题"
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "default": "-",
+      "description": "Card style type, can be set to `inner` or not set",
+      "descriptionZh": "卡片类型，可设置为 `inner` 或 不设置"
+    },
+    {
+      "name": "styles",
+      "type": "Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>",
+      "default": "-",
+      "description": "Customize inline style for each semantic structure inside the component. Supports object or function.",
+      "descriptionZh": "用于自定义组件内部各语义化结构的行内 style，支持对象或函数"
+    },
+    {
+      "name": "onTabChange",
+      "type": "(key) => void",
+      "default": "-",
+      "description": "Callback when tab is switched",
+      "descriptionZh": "页签切换的回调"
+    }
+  ],
+  "subComponentProps": {
+    "Card.Grid": [
+      {
+        "name": "hoverable",
+        "type": "boolean",
+        "default": "true",
+        "description": "Lift up when hovering card grid",
+        "descriptionZh": "鼠标移过时可浮起"
+      }
+    ],
+    "Card.Meta": [
+      {
+        "name": "avatar",
+        "type": "ReactNode",
+        "default": "-",
+        "description": "Avatar or icon",
+        "descriptionZh": "头像/图标"
+      },
+      {
+        "name": "description",
+        "type": "ReactNode",
+        "default": "-",
+        "description": "Description content",
+        "descriptionZh": "描述内容"
+      },
+      {
+        "name": "title",
+        "type": "ReactNode",
+        "default": "-",
+        "description": "Title content",
+        "descriptionZh": "标题内容"
+      }
+    ]
+  },
+  "commonProps": [
+    {
+      "name": "className",
+      "type": "string",
+      "default": "-",
+      "description": "Additional CSS class",
+      "descriptionZh": "额外的 CSS 类名"
+    },
+    {
+      "name": "style",
+      "type": "CSSProperties",
+      "default": "-",
+      "description": "Additional style",
+      "descriptionZh": "额外的样式"
+    },
+    {
+      "name": "rootClassName",
+      "type": "string",
+      "default": "-",
+      "description": "ClassName on the root element",
+      "descriptionZh": "根元素的类名"
+    }
+  ],
+  "htmlElement": "div",
+  "faq": []
+}
+# exit=0

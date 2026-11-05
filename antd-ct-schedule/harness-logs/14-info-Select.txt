@@ -1,0 +1,126 @@
+$ npx antd info Select
+# 目的: Select の props と既定値を確認（記憶に頼らない）
+# 実行日時: 2026-11-05T10:13:15Z
+
+Select (选择器) — A dropdown menu for displaying choices.
+
+Property                  Type                                                                                                                           Default                                                                      Since                               
+------------------------  -----------------------------------------------------------------------------------------------------------------------------  ---------------------------------------------------------------------------  ------------------------------------
+allowClear                boolean | [AllowClearConfig](#allowclearconfig)                                                                                false                                                                        -                                   
+autoClearSearchValue      boolean                                                                                                                        true                                                                         -                                   
+autoComplete              string                                                                                                                         `new-password`                                                               -                                   
+bordered                  boolean                                                                                                                        true                                                                         -                                   
+classNames                Record<[SemanticDOM](#semantic-dom), string> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), string>                -                                                                            -                                   
+defaultActiveFirstOption  boolean                                                                                                                        true                                                                         -                                   
+defaultOpen               boolean                                                                                                                        -                                                                            -                                   
+defaultValue              string | string[] | <br />number | number[] | <br />LabeledValue | LabeledValue[]                                              -                                                                            -                                   
+disabled                  boolean                                                                                                                        false                                                                        -                                   
+dropdownClassName         string                                                                                                                         -                                                                            -                                   
+dropdownMatchSelectWidth  boolean | number                                                                                                               true                                                                         -                                   
+popupClassName            string                                                                                                                         -                                                                            4.23.0                              
+popupMatchSelectWidth     boolean | number                                                                                                               true                                                                         5.5.0                               
+dropdownRender            (originNode: ReactElement) => ReactNode                                                                                        -                                                                            -                                   
+popupRender               (originNode: ReactElement) => ReactNode                                                                                        -                                                                            5.25.0                              
+dropdownStyle             CSSProperties                                                                                                                  -                                                                            -                                   
+fieldNames                object                                                                                                                         { label: `label`, value: `value`, options: `options`, groupLabel: `label` }  4.17.0 (`groupLabel` added in 5.6.0)
+filterOption              boolean | function(inputValue, option)                                                                                         true                                                                         -                                   
+filterSort                (optionA: Option, optionB: Option, info: { searchValue: string }) => number                                                    -                                                                            `searchValue`: 5.19.0               
+getPopupContainer         function(triggerNode)                                                                                                          () => document.body                                                          -                                   
+labelInValue              boolean                                                                                                                        false                                                                        -                                   
+listHeight                number                                                                                                                         256                                                                          -                                   
+loading                   boolean                                                                                                                        false                                                                        -                                   
+loadingIcon               ReactNode                                                                                                                      `<LoadingOutlined spin />`                                                   6.4.0                               
+maxCount                  number                                                                                                                         -                                                                            5.13.0                              
+maxTagCount               number | `responsive`                                                                                                          -                                                                            responsive: 4.10                    
+maxTagPlaceholder         ReactNode | function(omittedValues)                                                                                            -                                                                            -                                   
+maxTagTextLength          number                                                                                                                         -                                                                            -                                   
+menuItemSelectedIcon      ReactNode                                                                                                                      `<CheckOutlined />`                                                          -                                   
+mode                      `multiple` | `tags`                                                                                                            -                                                                            -                                   
+notFoundContent           ReactNode                                                                                                                      `No data`                                                                    -                                   
+open                      boolean                                                                                                                        -                                                                            -                                   
+optionFilterProp                                                                                                                                         -                                                                            -                                   
+optionLabelProp           string                                                                                                                         `children`                                                                   -                                   
+options                   { label, value }[]                                                                                                             -                                                                            -                                   
+optionRender              (option: FlattenOptionData<BaseOptionType> , info: { index: number }) => React.ReactNode                                       -                                                                            5.11.0                              
+placeholder               ReactNode                                                                                                                      -                                                                            -                                   
+placement                 `bottomLeft` `bottomRight` `topLeft` `topRight`                                                                                bottomLeft                                                                   -                                   
+prefix                    ReactNode                                                                                                                      -                                                                            5.22.0                              
+removeIcon                ReactNode                                                                                                                      `<CloseOutlined />`                                                          -                                   
+searchValue               string                                                                                                                         -                                                                            -                                   
+showArrow                 boolean                                                                                                                        true                                                                         -                                   
+showSearch                boolean | [Object](#showsearch)                                                                                                single: false, multiple: true                                                Object: 6.0.0                       
+size                      `large` | `medium` | `small`                                                                                                   `medium`                                                                     -                                   
+status                    'error' | 'warning'                                                                                                            -                                                                            4.19.0                              
+styles                    Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>  -                                                                            -                                   
+suffix                    ReactNode | (props) => ReactNode                                                                                               `<DownOutlined />`                                                           6.7.0                               
+suffixIcon                ReactNode                                                                                                                      `<DownOutlined />`                                                           -                                   
+tagRender                 (props) => ReactNode                                                                                                           -                                                                            -                                   
+labelRender               (props: LabelInValueType) => ReactNode                                                                                         -                                                                            5.15.0                              
+tokenSeparators           string[] | ((input: string) => string[])                                                                                       -                                                                            function: 6.5.0                     
+value                     string | string[] | <br />number | number[] | <br />LabeledValue | LabeledValue[]                                              -                                                                            -                                   
+variant                   `outlined` | `borderless` | `filled` | `underlined`                                                                            `outlined`                                                                   5.13.0 | `underlined`: 5.24.0       
+virtual                   boolean                                                                                                                        true                                                                         4.1.0                               
+onActive                  function(value: string | number | LabeledValue)                                                                                -                                                                            -                                   
+onBlur                    function                                                                                                                       -                                                                            -                                   
+onChange                  function(value, option:Option | Array<Option>)                                                                                 -                                                                            -                                   
+onClear                   function                                                                                                                       -                                                                            4.6.0                               
+onDeselect                function(value: string | number | LabeledValue)                                                                                -                                                                            -                                   
+onDropdownVisibleChange   (open: boolean) => void                                                                                                        -                                                                            -                                   
+onOpenChange              (open: boolean) => void                                                                                                        -                                                                            -                                   
+onFocus                   (event: FocusEvent) => void                                                                                                    -                                                                            -                                   
+onInputKeyDown            (event: KeyboardEvent) => void                                                                                                 -                                                                            -                                   
+onPopupScroll             (event: UIEvent) => void                                                                                                       -                                                                            -                                   
+onSearch                  function(value: string)                                                                                                        -                                                                            -                                   
+onSelect                  function(value: string | number | LabeledValue, option: Option)                                                                -                                                                            -                                   
+blur()                                                                                                                                                   -                                                                            -                                   
+focus()                                                                                                                                                  -                                                                            -                                   
+
+Select.AllowClearConfig
+
+Property   Type       Default                Since
+---------  ---------  ---------------------  -----
+clearIcon  ReactNode  -                      -    
+disabled   boolean    false                  6.7.0
+label      string     Component locale text  6.6.0
+tabIndex   number     0                      6.7.0
+
+Select.showSearch
+
+Property              Type                                                                         Default               Since                
+--------------------  ---------------------------------------------------------------------------  --------------------  ---------------------
+autoClearSearchValue  boolean                                                                      true                  -                    
+filterOption          boolean | function(inputValue, option)                                       true                  -                    
+filterSort            (optionA: Option, optionB: Option, info: { searchValue: string }) => number  -                     `searchValue`: 5.19.0
+optionFilterProp      string | string[]                                                            `value`               `string[]`: 6.1.0    
+searchValue           string                                                                       -                     -                    
+onSearch              function(value: string)                                                      -                     -                    
+searchIcon            ReactNode                                                                    `<SearchOutlined />`  6.4.0                
+
+Select.Option props
+
+Property   Type             Default  Since
+---------  ---------------  -------  -----
+className  string           -        -    
+disabled   boolean          false    -    
+title      string           -        -    
+value      string | number  -        -    
+
+Select.OptGroup props
+
+Property   Type             Default  Since
+---------  ---------------  -------  -----
+key        string           -        -    
+label      React.ReactNode  -        -    
+className  string           -        -    
+title      string           -        -    
+
+Common Props (inherited by all components, not listed individually)
+
+Property       Type           Default
+-------------  -------------  -------
+className      string         -      
+style          CSSProperties  -      
+rootClassName  string         -      
+
+Extends <div> — supports native HTML div attributes.
+# exit=0

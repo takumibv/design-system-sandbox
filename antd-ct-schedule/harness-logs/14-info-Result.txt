@@ -1,0 +1,26 @@
+$ npx antd info Result
+# 目的: Result の props と既定値を確認（記憶に頼らない）
+# 実行日時: 2026-11-05T10:13:12Z
+
+Result (结果) — Used to feedback the processing results of a series of operations.
+
+Property    Type                                                                                                                            Default  Since
+----------  ------------------------------------------------------------------------------------------------------------------------------  -------  -----
+classNames  Record<[SemanticDOM](#semantic-dom), string> | (info: { props }) => Record<[SemanticDOM](#semantic-dom), string>                -        6.0.0
+extra       ReactNode                                                                                                                       -        -    
+icon        ReactNode                                                                                                                       -        -    
+status      `success` | `error` | `info` | `warning` | `404` | `403` | `500`                                                                `info`   -    
+styles      Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props }) => Record<[SemanticDOM](#semantic-dom), CSSProperties>  -        6.0.0
+subTitle    ReactNode                                                                                                                       -        -    
+title       ReactNode                                                                                                                       -        -    
+
+Common Props (inherited by all components, not listed individually)
+
+Property       Type           Default
+-------------  -------------  -------
+className      string         -      
+style          CSSProperties  -      
+rootClassName  string         -      
+
+Extends <div> — supports native HTML div attributes.
+# exit=0

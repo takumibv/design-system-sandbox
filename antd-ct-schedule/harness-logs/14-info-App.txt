@@ -1,0 +1,22 @@
+$ npx antd info App
+# 目的: App の props と既定値を確認（記憶に頼らない）
+# 実行日時: 2026-11-05T10:13:18Z
+
+App (包裹组件) — Application wrapper for some global usages.
+
+Property      Type                                                                Default  Since 
+------------  ------------------------------------------------------------------  -------  ------
+component     ComponentType | false                                               div      5.11.0
+message       [MessageConfig](/components/message/#messageconfig)                 -        5.3.0 
+notification  [NotificationConfig](/components/notification/#notificationconfig)  -        5.3.0 
+
+Common Props (inherited by all components, not listed individually)
+
+Property       Type           Default
+-------------  -------------  -------
+className      string         -      
+style          CSSProperties  -      
+rootClassName  string         -      
+
+Extends <div> — supports native HTML div attributes.
+# exit=0

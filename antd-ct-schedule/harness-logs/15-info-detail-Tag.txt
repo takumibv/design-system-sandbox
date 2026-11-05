@@ -1,0 +1,214 @@
+$ npx antd info Tag --detail --format json
+# 目的: Tag の非推奨 props を --detail で確認
+# 実行日時: 2026-11-05T10:13:32Z
+
+{
+  "name": "Tag",
+  "nameZh": "标签",
+  "description": "Used for marking and categorization.",
+  "whenToUse": "- It can be used to tag by dimension or property.\n\n- When categorizing.",
+  "props": [
+    {
+      "name": "classNames",
+      "type": "Record<[SemanticDOM](#semantic-dom), string> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), string>",
+      "default": "-",
+      "description": "Customize class for each semantic structure inside the component. Supports object or function.",
+      "descriptionZh": "用于自定义组件内部各语义化结构的 class，支持对象或函数"
+    },
+    {
+      "name": "closable",
+      "type": "boolean | ({ closeIcon?: ReactNode } & React.AriaAttributes)",
+      "default": "false",
+      "description": "Whether to show the close button. An object can configure the close icon and `aria-*` attributes",
+      "descriptionZh": "是否显示关闭按钮，也可通过对象配置关闭图标和 `aria-*` 属性"
+    },
+    {
+      "name": "closeIcon",
+      "type": "ReactNode",
+      "default": "false",
+      "description": "Custom close icon, as a shorthand for `closable`. When `closable` is not set, `true` shows the default close button, while `null` or `false` hides it (supported since 5.7.0)",
+      "since": "4.4.0",
+      "descriptionZh": "自定义关闭图标，是 `closable` 的简便配置方式。未设置 `closable` 时，设置为 `true` 显示默认关闭按钮，设置为 `null` 或 `false` 隐藏关闭按钮（5.7.0 起支持）"
+    },
+    {
+      "name": "color",
+      "type": "string",
+      "default": "`default` when `variant=\"solid\"`",
+      "description": "Color of the Tag",
+      "since": "`solid` default color: 6.4.0",
+      "descriptionZh": "标签色"
+    },
+    {
+      "name": "disabled",
+      "type": "boolean",
+      "default": "false",
+      "description": "Whether the tag is disabled",
+      "since": "6.0.0",
+      "descriptionZh": "是否禁用标签"
+    },
+    {
+      "name": "href",
+      "type": "string",
+      "default": "-",
+      "description": "The address to jump when clicking, when this property is specified, the `tag` component will be rendered as an `<a>` tag",
+      "since": "6.0.0",
+      "descriptionZh": "点击跳转的地址，指定此属性`tag`组件会渲染成 `<a>` 标签"
+    },
+    {
+      "name": "icon",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "Set the icon of tag",
+      "descriptionZh": "设置图标"
+    },
+    {
+      "name": "onClose",
+      "type": "(e: React.MouseEvent<HTMLElement, MouseEvent>) => void",
+      "default": "-",
+      "description": "Callback executed when tag is closed (can be prevented by `e.preventDefault()`)",
+      "descriptionZh": "关闭时的回调（可通过 `e.preventDefault()` 来阻止默认行为）"
+    },
+    {
+      "name": "styles",
+      "type": "Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>",
+      "default": "-",
+      "description": "Customize inline style for each semantic structure inside the component. Supports object or function.",
+      "descriptionZh": "用于自定义组件内部各语义化结构的行内 style，支持对象或函数"
+    },
+    {
+      "name": "target",
+      "type": "string",
+      "default": "-",
+      "description": "Same as target attribute of a, works when href is specified",
+      "since": "6.0.0",
+      "descriptionZh": "相当于 a 标签的 target 属性，href 存在时生效"
+    },
+    {
+      "name": "variant",
+      "type": "`'filled' | 'solid' | 'outlined'`",
+      "default": "`'filled'`",
+      "description": "Variant of the tag",
+      "since": "6.0.0",
+      "descriptionZh": "标签变体"
+    },
+    {
+      "name": "bordered",
+      "type": "boolean",
+      "default": "true",
+      "description": "Whether has border style, please use `variant=\"filled\"` instead",
+      "deprecated": true,
+      "descriptionZh": "是否带边框，请使用 `variant=\"filled\"` 替代"
+    }
+  ],
+  "subComponentProps": {
+    "Tag.CheckableTag": [
+      {
+        "name": "checked",
+        "type": "boolean",
+        "default": "false",
+        "description": "Checked status of Tag",
+        "descriptionZh": "设置标签的选中状态"
+      },
+      {
+        "name": "icon",
+        "type": "ReactNode",
+        "default": "-",
+        "description": "Set the icon of tag",
+        "since": "5.27.0",
+        "descriptionZh": "设置图标"
+      },
+      {
+        "name": "onChange",
+        "type": "(checked) => void",
+        "default": "-",
+        "description": "Callback executed when Tag is checked/unchecked",
+        "descriptionZh": "点击标签时触发的回调"
+      }
+    ],
+    "Tag.CheckableTagGroup": [
+      {
+        "name": "classNames",
+        "type": "Record<[SemanticDOM](#semantic-group), string> | (info: { props }) => Record<[SemanticDOM](#semantic-group), string>",
+        "default": "-",
+        "description": "Customize class for each semantic structure inside the component. Supports object or function.",
+        "descriptionZh": "用于自定义组件内部各语义化结构的 class，支持对象或函数"
+      },
+      {
+        "name": "defaultValue",
+        "type": "`string | number | Array<string | number> | null`",
+        "default": "-",
+        "description": "Initial value",
+        "descriptionZh": "初始选中值"
+      },
+      {
+        "name": "disabled",
+        "type": "`boolean`",
+        "default": "-",
+        "description": "Disable check/uncheck",
+        "descriptionZh": "禁用选中"
+      },
+      {
+        "name": "multiple",
+        "type": "`boolean`",
+        "default": "-",
+        "description": "Multiple select mode",
+        "descriptionZh": "多选模式"
+      },
+      {
+        "name": "options",
+        "type": "`Array<{ className?: string; label: ReactNode; style?: CSSProperties; value: string | number } | string | number>`",
+        "default": "-",
+        "description": "Option list. Object options support per-item `className` and `style`.",
+        "since": "`className` and `style`: 6.4.0",
+        "descriptionZh": "选项列表。对象类型的选项支持为每一项单独设置 `className` 和 `style`"
+      },
+      {
+        "name": "styles",
+        "type": "Record<[SemanticDOM](#semantic-group), CSSProperties> | (info: { props }) => Record<[SemanticDOM](#semantic-group), CSSProperties>",
+        "default": "-",
+        "description": "Customize inline style for each semantic structure inside the component. Supports object or function.",
+        "descriptionZh": "用于自定义组件内部各语义化结构的行内 style，支持对象或函数"
+      },
+      {
+        "name": "value",
+        "type": "`string | number | Array<string | number> | null`",
+        "default": "-",
+        "description": "Value of checked tag(s)",
+        "descriptionZh": "选中值"
+      },
+      {
+        "name": "onChange",
+        "type": "`(value: string | number | Array<string | number> | null) => void`",
+        "default": "-",
+        "description": "Callback when Tag is checked/unchecked",
+        "descriptionZh": "点击标签时触发的回调"
+      }
+    ]
+  },
+  "commonProps": [
+    {
+      "name": "className",
+      "type": "string",
+      "default": "-",
+      "description": "Additional CSS class",
+      "descriptionZh": "额外的 CSS 类名"
+    },
+    {
+      "name": "style",
+      "type": "CSSProperties",
+      "default": "-",
+      "description": "Additional style",
+      "descriptionZh": "额外的样式"
+    },
+    {
+      "name": "rootClassName",
+      "type": "string",
+      "default": "-",
+      "description": "ClassName on the root element",
+      "descriptionZh": "根元素的类名"
+    }
+  ],
+  "htmlElement": "span",
+  "faq": []
+}
+# exit=0

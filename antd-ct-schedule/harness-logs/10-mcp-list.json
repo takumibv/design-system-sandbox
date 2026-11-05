@@ -1,0 +1,226 @@
+[
+  {
+    "method": "initialize",
+    "result": {
+      "protocolVersion": "2025-06-18",
+      "capabilities": {
+        "tools": {},
+        "prompts": {}
+      },
+      "serverInfo": {
+        "name": "antd",
+        "version": "6.7.0"
+      }
+    }
+  },
+  {
+    "method": "tools/list",
+    "params": {},
+    "result": {
+      "tools": [
+        {
+          "name": "antd_list",
+          "description": "List all available antd components with names, categories, and descriptions.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "annotations": {
+            "title": "List Components",
+            "readOnlyHint": true,
+            "destructiveHint": false,
+            "idempotentHint": true,
+            "openWorldHint": false
+          }
+        },
+        {
+          "name": "antd_info",
+          "description": "Get component API information including props, types, and default values.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "component": {
+                "type": "string",
+                "description": "Component name (e.g. Button, Table)"
+              },
+              "detail": {
+                "type": "boolean",
+                "description": "Include full detail (whenToUse, faq)"
+              }
+            },
+            "required": [
+              "component"
+            ]
+          },
+          "annotations": {
+            "title": "Get Component Info",
+            "readOnlyHint": true,
+            "destructiveHint": false,
+            "idempotentHint": true,
+            "openWorldHint": false
+          }
+        },
+        {
+          "name": "antd_doc",
+          "description": "Get the full markdown documentation for a component.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "component": {
+                "type": "string",
+                "description": "Component name (e.g. Button, Table)"
+              }
+            },
+            "required": [
+              "component"
+            ]
+          },
+          "annotations": {
+            "title": "Get Component Doc",
+            "readOnlyHint": true,
+            "destructiveHint": false,
+            "idempotentHint": true,
+            "openWorldHint": false
+          }
+        },
+        {
+          "name": "antd_demo",
+          "description": "Get demo source code for a component. Without a name, lists all demos; with a name, returns specific demo code.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "component": {
+                "type": "string",
+                "description": "Component name (e.g. Button, Table)"
+              },
+              "name": {
+                "type": "string",
+                "description": "Demo name to get specific demo code"
+              }
+            },
+            "required": [
+              "component"
+            ]
+          },
+          "annotations": {
+            "title": "Get Component Demo",
+            "readOnlyHint": true,
+            "destructiveHint": false,
+            "idempotentHint": true,
+            "openWorldHint": false
+          }
+        },
+        {
+          "name": "antd_token",
+          "description": "Query design tokens. Without a component, returns global tokens; with a component, returns component-level tokens.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "component": {
+                "type": "string",
+                "description": "Component name for component-level tokens"
+              }
+            },
+            "required": []
+          },
+          "annotations": {
+            "title": "Query Design Tokens",
+            "readOnlyHint": true,
+            "destructiveHint": false,
+            "idempotentHint": true,
+            "openWorldHint": false
+          }
+        },
+        {
+          "name": "antd_design_md",
+          "description": "Get the antd design-language document (design.md) for the target major version: YAML front-matter with the full color, typography, radius, spacing, and component token values for the default light theme, plus prose on the design principles. Use to understand antd's overall design language or to feed AI design tools (Figma Make, Stitch, etc.). A design.md is currently published only for antd v6.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          },
+          "annotations": {
+            "title": "Get Design Language",
+            "readOnlyHint": true,
+            "destructiveHint": false,
+            "idempotentHint": true,
+            "openWorldHint": false
+          }
+        },
+        {
+          "name": "antd_semantic",
+          "description": "Query the semantic customization structure (classNames/styles) of a component.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "component": {
+                "type": "string",
+                "description": "Component name (e.g. Button, Table)"
+              }
+            },
+            "required": [
+              "component"
+            ]
+          },
+          "annotations": {
+            "title": "Query Semantic Structure",
+            "readOnlyHint": true,
+            "destructiveHint": false,
+            "idempotentHint": true,
+            "openWorldHint": false
+          }
+        },
+        {
+          "name": "antd_changelog",
+          "description": "Query changelog entries or diff API between two versions. Provide v1+v2 for diff mode, or version for changelog query mode.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "version": {
+                "type": "string",
+                "description": "Version or range filter for changelog query (e.g. 5.20.0 or 5.18.0..5.20.0)"
+              },
+              "v1": {
+                "type": "string",
+                "description": "Start version for API diff (e.g. 5.18.0)"
+              },
+              "v2": {
+                "type": "string",
+                "description": "End version for API diff (e.g. 5.20.0)"
+              },
+              "component": {
+                "type": "string",
+                "description": "Filter diff to a specific component"
+              }
+            },
+            "required": []
+          },
+          "annotations": {
+            "title": "Query Changelog",
+            "readOnlyHint": true,
+            "destructiveHint": false,
+            "idempotentHint": true,
+            "openWorldHint": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "method": "prompts/list",
+    "params": {},
+    "result": {
+      "prompts": [
+        {
+          "name": "antd-expert",
+          "description": "General Ant Design expert assistant prompt"
+        },
+        {
+          "name": "antd-page-generator",
+          "description": "Ant Design page generation assistant prompt"
+        }
+      ]
+    }
+  }
+]

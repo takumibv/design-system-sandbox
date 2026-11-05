@@ -1,0 +1,93 @@
+$ npx antd demo Table
+# 目的: Table のデモ一覧（レスポンシブ列の例を探す）
+# 実行日時: 2026-11-05T10:14:39Z
+
+Table Demos:
+
+  ajax — Ajax
+    This example shows how to fetch and present data from a remote server, and how to implement filtering and sorting in server side by sending related parameters to server.
+  auto-height — Auto height
+    Wrap Table to make it always fill the container height automatically.
+  basic — Basic Usage
+    Simple table with actions.
+  bordered — border, title and footer
+    Add border, title and footer for table.
+  colspan-rowspan — colSpan and rowSpan
+    Table column title supports `colSpan` that set in `column`.
+  column-defaults — Shared column props
+    Use `column` to set shared column props on the table and override them per column when needed.
+  custom-empty — Custom empty
+    Custom empty status.
+  custom-filter-panel — Customized filter panel
+    Implement a customized column search example via `filterDropdown`.
+  drag-column-sorting — Drag Column sorting
+    By using `components`, we can integrate table with [dnd-kit](https://github.com/clauderic/dnd-kit) to implement column drag sorting function.
+  drag-sorting-handler — Drag sorting with handler
+    Alternatively you can implement drag sorting with handler using [dnd-kit](https://github.com/clauderic/dnd-kit).
+  drag-sorting — Drag sorting
+    By using `components`, we can integrate table with [dnd-kit](https://github.com/clauderic/dnd-kit) to implement drag sorting function.
+  dynamic-settings — Dynamic Settings
+    Select different settings to see the result.
+  edit-cell — Editable Cells
+    Table with editable cells. When work with `shouldCellUpdate`, please take care of [closure](https://github.com/ant-design/ant-design/issues/29243).
+  edit-row — Editable Rows
+    Table with editable rows.
+  ellipsis-custom-tooltip — ellipsis column custom tooltip
+    Ellipsis cell content via setting `column.ellipsis.showTitle`, use `Tooltip` instead of the html title attribute.
+  ellipsis — ellipsis column
+    Ellipsis cell content via setting `column.ellipsis`.
+  expand-all — Expand all rows
+    With `expandedRowRender`, set `showExpandAll` to display an expand-all control in the expand column header. The control only affects expandable rows on the current page.
+  expand — Expandable Row
+    When there's too much information to show and the table can't display all at once.
+  filter-in-tree — Filter in Tree
+    You can use `filterMode` to change default filter interface, options: `menu`(default) and `tree`.
+  filter-search — Filter search
+    `filterSearch` is used to enable search of filter items, and you can set a custom filter method through `filterSearch:(input, record) => boolean`.
+  fixed-columns-header — Fixed Columns and Header
+    A Solution for displaying large amounts of data with long columns.
+  fixed-columns — Fixed Columns
+    To fix some columns and scroll inside other columns, and you must set `scroll.x` meanwhile.
+  fixed-gapped-columns — Stack Fixed Columns
+    Fixed column only when scroll some distance, and scroll to stack other columns. Recommend use with `bordered`.
+  fixed-header — Fixed Header
+    Display large amounts of data in scrollable view.
+  grouping-columns — Grouping table head
+    Group table head with `columns[n].children`.
+  head — Filter and sorter
+    Use `filters` to generate filter menu in columns, `onFilter` to determine filtered result, and `filterMultiple` to indicate whether it's multiple or single selection, `filterOnClose` to specify whether to trigger filter when the filter menu closes.
+  hidden-columns — Hidden Columns
+    Hide columns with `hidden`.
+  jsx — JSX style API
+    Using JSX style API (introduced in 2.5.0)
+  multiple-sorter — Multiple sorter
+    `column.sorter` support `multiple` to config the priority of sort columns. Though `sorter.compare` to customize compare function. You can also leave it empty to use the interactive only.
+  nested-table — Nested tables
+    Showing more detailed info of every row.
+  order-column — Order Specific Column
+    You can control the order of the expand and select columns by using `Table.EXPAND_COLUMN` and `Table.SELECTION_COLUMN`.
+  pagination — Pagination Settings
+    Table pagination settings.
+  reset-filter — Reset filters and sorters
+    Control filters and sorters by `filteredValue` and `sortOrder`.
+  responsive — Responsive
+    Responsive columns.
+  row-selection-and-operation — Selection and operation
+    To perform operations and clear selections after selecting some rows, use `rowSelection.selectedRowKeys` to control selected rows.
+  row-selection-custom — Custom selection
+    Use `rowSelection.selections` custom selections, default no select dropdown, show default selections via setting to `true`.
+  row-selection — selection
+    Rows can be selectable by making first column as a selectable column. You can use `rowSelection.type` to set selection type. Default is `checkbox`.
+  size — size
+    There are two compacted table sizes: `medium` and `small`. The `small` size is used in Modals only.
+  sticky — Fixed header and scroll bar with the page
+    For long table，need to scroll to view the header and scroll bar，then you can now set the fixed header and scroll bar to follow the page.
+  style-class — Custom semantic dom styling
+    You can customize the [semantic dom](#semantic-dom) style of Table by passing objects/functions through `classNames` and `styles`.
+  summary — Summary
+    Set summary content by `summary` prop. Sync column fixed status with `Table.Summary.Cell`. You can fixed it by set `Table.Summary` `fixed` prop(since `4.16.0`).
+  tree-data — Tree data
+    Display tree structure data in Table when there is field key `children` in dataSource, try to customize `childrenColumnName` property to avoid tree table structure.
+  virtual-list — Virtual list
+    Set `virtual` to enable virtual scroll, and `scroll.x` and `scroll.y` must be set at the same time with `number` type.
+# exit=0

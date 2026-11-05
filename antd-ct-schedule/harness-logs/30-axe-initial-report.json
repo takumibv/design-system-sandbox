@@ -1,0 +1,706 @@
+[
+  {
+    "kind": "antd",
+    "file": "schedule-default",
+    "width": 1440,
+    "overflow": 0,
+    "violations": [
+      "color-contrast(26)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          ".ant-flex-align-end > .ant-flex-align-stretch.ant-flex-vertical.ant-flex-gap-small > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-end > .ant-flex-gap-small.ant-flex-align-center.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-tag-processing ::   Element has insufficient color contrast of 3.66 (foreground color: #1677ff, background color: #e6f4ff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-vertical.ant-flex-gap-small.ant-flex-align-center:nth-child(1) > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-vertical.ant-flex-gap-small.ant-flex-align-center:nth-child(3) > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "schedule-guest",
+    "width": 1440,
+    "overflow": 0,
+    "violations": [
+      "color-contrast(22)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          ".ant-flex-align-end > .ant-flex-align-stretch.ant-flex-vertical.ant-flex-gap-small > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-end > .ant-flex-gap-small.ant-flex-align-center.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-tag-processing ::   Element has insufficient color contrast of 3.66 (foreground color: #1677ff, background color: #e6f4ff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-baseline > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "div[data-key=\"item:1\"] > .ant-flex-justify-space-between.ant-flex-gap-middle.ant-flex-wrap-wrap > .ant-flex-wrap-wrap.ant-flex-gap-small.ant-flex-align-center > .ant-flex-gap-small.ant-flex-align-center.ant-flex:nth-child(1) > .ant-flex-align-stretch.ant-flex-vertical.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "schedule-rest",
+    "width": 1440,
+    "overflow": 0,
+    "violations": [
+      "color-contrast(23)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          ".ant-flex-align-end > .ant-flex-align-stretch.ant-flex-vertical.ant-flex-gap-small > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-end > .ant-flex-gap-small.ant-flex-align-center.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-tag-processing ::   Element has insufficient color contrast of 3.66 (foreground color: #1677ff, background color: #e6f4ff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-baseline > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "div[data-key=\"item:1\"] > .ant-flex-justify-space-between.ant-flex-gap-middle.ant-flex-wrap-wrap > .ant-flex-wrap-wrap.ant-flex-gap-small.ant-flex-align-center > .ant-flex-gap-small.ant-flex-align-center.ant-flex:nth-child(1) > .ant-flex-align-stretch.ant-flex-vertical.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "schedule-holiday",
+    "width": 1440,
+    "overflow": 0,
+    "violations": [
+      "color-contrast(13)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          ".ant-flex-align-end > .ant-flex-gap-small.ant-flex-align-stretch.ant-flex-vertical > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-end > .ant-flex-gap-small.ant-flex-align-center.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "section[aria-labelledby=\"week-title\"] > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-gap-small.ant-flex-align-center.ant-flex-vertical > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-tag-warning ::   Element has insufficient color contrast of 1.82 (foreground color: #faad14, background color: #fffbe6, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "schedule-insufficient",
+    "width": 1440,
+    "overflow": 0,
+    "violations": [
+      "color-contrast(13)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          ".ant-flex-align-end > .ant-flex-gap-small.ant-flex-align-stretch.ant-flex-vertical > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-end > .ant-flex-gap-small.ant-flex-align-center.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-tag-processing ::   Element has insufficient color contrast of 3.66 (foreground color: #1677ff, background color: #e6f4ff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-gap-small.ant-flex-align-center.ant-flex-vertical > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-tag-warning ::   Element has insufficient color contrast of 1.82 (foreground color: #faad14, background color: #fffbe6, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "schedule-loading",
+    "width": 1440,
+    "overflow": 0,
+    "violations": [
+      "color-contrast(5)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          ".ant-flex-align-stretch.ant-flex-gap-small.ant-flex-vertical > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-gap-small.ant-flex-align-center.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "div[role=\"status\"] > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "footer > .ant-flex-wrap-wrap.ant-flex-justify-space-between.ant-flex-gap-middle > .ant-flex-align-stretch.ant-flex-vertical.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-wrap-wrap.ant-flex-justify-space-between.ant-flex-gap-middle > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "schedule-login-error",
+    "width": 1440,
+    "overflow": 0,
+    "violations": [
+      "color-contrast(22)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          ".ant-flex-align-end > .ant-flex-align-stretch.ant-flex-vertical.ant-flex-gap-small > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-end > .ant-flex-gap-small.ant-flex-align-center.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-tag-processing ::   Element has insufficient color contrast of 3.66 (foreground color: #1677ff, background color: #e6f4ff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-baseline > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "div[data-key=\"item:1\"] > .ant-flex-justify-space-between.ant-flex-gap-middle.ant-flex-wrap-wrap > .ant-flex-wrap-wrap.ant-flex-gap-small.ant-flex-align-center > .ant-flex-gap-small.ant-flex-align-center.ant-flex:nth-child(1) > .ant-flex-align-stretch.ant-flex-vertical.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "schedule-saved",
+    "width": 1440,
+    "overflow": 0,
+    "violations": [
+      "color-contrast(26)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          ".ant-flex-align-end > .ant-flex-align-stretch.ant-flex-vertical.ant-flex-gap-small > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-end > .ant-flex-gap-small.ant-flex-align-center.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-tag-processing ::   Element has insufficient color contrast of 3.66 (foreground color: #1677ff, background color: #e6f4ff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-vertical.ant-flex-gap-small.ant-flex-align-center:nth-child(1) > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-vertical.ant-flex-gap-small.ant-flex-align-center:nth-child(3) > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "members-default",
+    "width": 1440,
+    "overflow": 0,
+    "violations": [
+      "color-contrast(32)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          "a[href=\"#\"] ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-stretch.ant-flex-vertical.ant-flex-gap-small > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-col-xs-12.ant-col-md-6.ant-col:nth-child(1) > .ant-card.ant-card-bordered > .ant-card-body > .ant-statistic > .ant-statistic-header > .ant-statistic-title ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-col-xs-12.ant-col-md-6.ant-col:nth-child(2) > .ant-card.ant-card-bordered > .ant-card-body > .ant-statistic > .ant-statistic-header > .ant-statistic-title ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-col-xs-24 > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "members-empty",
+    "width": 1440,
+    "overflow": 0,
+    "violations": [
+      "color-contrast(8)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          "a[href=\"#\"] ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-gap-small.ant-flex-align-stretch.ant-flex-vertical > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-col-xs-12.ant-col-md-6.ant-col:nth-child(1) > .ant-card.ant-card-bordered > .ant-card-body > .ant-statistic > .ant-statistic-header > .ant-statistic-title ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-col-xs-12.ant-col-md-6.ant-col:nth-child(2) > .ant-card.ant-card-bordered > .ant-card-body > .ant-statistic > .ant-statistic-header > .ant-statistic-title ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-col-xs-24 > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "members-delete-confirm",
+    "width": 1440,
+    "overflow": 8,
+    "violations": [
+      "color-contrast(33)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          "a[href=\"#\"] ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-stretch.ant-flex-vertical.ant-flex-gap-small > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-col-xs-12.ant-col-md-6.ant-col:nth-child(1) > .ant-card.ant-card-bordered > .ant-card-body > .ant-statistic > .ant-statistic-header > .ant-statistic-title ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-col-xs-12.ant-col-md-6.ant-col:nth-child(2) > .ant-card.ant-card-bordered > .ant-card-body > .ant-statistic > .ant-statistic-header > .ant-statistic-title ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-col-xs-24 > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "members-delete-error",
+    "width": 1440,
+    "overflow": 8,
+    "violations": [
+      "color-contrast(33)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          "a[href=\"#\"] ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-stretch.ant-flex-vertical.ant-flex-gap-small > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-col-xs-12.ant-col-md-6.ant-col:nth-child(1) > .ant-card.ant-card-bordered > .ant-card-body > .ant-statistic > .ant-statistic-header > .ant-statistic-title ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-col-xs-12.ant-col-md-6.ant-col:nth-child(2) > .ant-card.ant-card-bordered > .ant-card-body > .ant-statistic > .ant-statistic-header > .ant-statistic-title ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-col-xs-24 > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "settings-default",
+    "width": 1440,
+    "overflow": 0,
+    "violations": [
+      "color-contrast(10)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          "a[href=\"#\"] ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-end > .ant-flex-gap-small.ant-flex-align-stretch.ant-flex-vertical > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-gap-large.ant-flex-align-stretch.ant-flex-vertical > .ant-flex-gap-middle.ant-flex-align-center.ant-flex > .ant-flex-align-stretch.ant-flex-vertical.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "#name_extra ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "#employee_extra ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "settings-onboarding",
+    "width": 1440,
+    "overflow": 0,
+    "violations": [
+      "color-contrast(10)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          "a[href=\"#\"] ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-end > .ant-flex-gap-small.ant-flex-align-stretch.ant-flex-vertical > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-gap-large.ant-flex-align-stretch.ant-flex-vertical > .ant-flex-gap-middle.ant-flex-align-center.ant-flex > .ant-flex-align-stretch.ant-flex-vertical.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "#name_extra ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "#employee_extra ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "settings-validation",
+    "width": 1440,
+    "overflow": 0,
+    "violations": [
+      "color-contrast(12)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          "a[href=\"#\"] ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-end > .ant-flex-gap-small.ant-flex-align-stretch.ant-flex-vertical > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-gap-large.ant-flex-align-stretch.ant-flex-vertical > .ant-flex-gap-middle.ant-flex-align-center.ant-flex > .ant-flex-align-stretch.ant-flex-vertical.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "#name_extra ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "#employee_help > .ant-form-item-explain-error ::   Element has insufficient color contrast of 3.26 (foreground color: #ff4d4f, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "not-found",
+    "width": 1440,
+    "overflow": 0,
+    "violations": [
+      "color-contrast(5)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          "a[href=\"#\"] ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-gap-small.ant-flex-align-stretch.ant-flex-vertical > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-result-subtitle ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-wrap-wrap.ant-flex-gap-middle.ant-flex-align-center > .ant-flex-align-stretch.ant-flex-vertical.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-wrap-wrap.ant-flex-gap-middle.ant-flex-align-center > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "schedule-default",
+    "width": 390,
+    "overflow": 45,
+    "violations": [
+      "color-contrast(26)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          ".ant-flex-align-end > .ant-flex-align-stretch.ant-flex-vertical.ant-flex-gap-small > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-end > .ant-flex-gap-small.ant-flex-align-center.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-tag-processing ::   Element has insufficient color contrast of 3.66 (foreground color: #1677ff, background color: #e6f4ff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-vertical.ant-flex-gap-small.ant-flex-align-center:nth-child(1) > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-vertical.ant-flex-gap-small.ant-flex-align-center:nth-child(3) > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "schedule-guest",
+    "width": 390,
+    "overflow": 0,
+    "violations": [
+      "color-contrast(22)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          ".ant-flex-align-end > .ant-flex-align-stretch.ant-flex-vertical.ant-flex-gap-small > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-end > .ant-flex-gap-small.ant-flex-align-center.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-tag-processing ::   Element has insufficient color contrast of 3.66 (foreground color: #1677ff, background color: #e6f4ff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-baseline > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "div[data-key=\"item:1\"] > .ant-flex-justify-space-between.ant-flex-gap-middle.ant-flex-wrap-wrap > .ant-flex-wrap-wrap.ant-flex-gap-small.ant-flex-align-center > .ant-flex-gap-small.ant-flex-align-center.ant-flex:nth-child(1) > .ant-flex-align-stretch.ant-flex-vertical.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "schedule-rest",
+    "width": 390,
+    "overflow": 31,
+    "violations": [
+      "color-contrast(23)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          ".ant-flex-align-end > .ant-flex-align-stretch.ant-flex-vertical.ant-flex-gap-small > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-end > .ant-flex-gap-small.ant-flex-align-center.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-tag-processing ::   Element has insufficient color contrast of 3.66 (foreground color: #1677ff, background color: #e6f4ff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-baseline > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "div[data-key=\"item:1\"] > .ant-flex-justify-space-between.ant-flex-gap-middle.ant-flex-wrap-wrap > .ant-flex-wrap-wrap.ant-flex-gap-small.ant-flex-align-center > .ant-flex-gap-small.ant-flex-align-center.ant-flex:nth-child(1) > .ant-flex-align-stretch.ant-flex-vertical.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "schedule-holiday",
+    "width": 390,
+    "overflow": 45,
+    "violations": [
+      "color-contrast(13)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          ".ant-flex-align-end > .ant-flex-gap-small.ant-flex-align-stretch.ant-flex-vertical > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-end > .ant-flex-gap-small.ant-flex-align-center.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "section[aria-labelledby=\"week-title\"] > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-gap-small.ant-flex-align-center.ant-flex-vertical > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-tag-warning ::   Element has insufficient color contrast of 1.82 (foreground color: #faad14, background color: #fffbe6, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "schedule-insufficient",
+    "width": 390,
+    "overflow": 45,
+    "violations": [
+      "color-contrast(13)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          ".ant-flex-align-end > .ant-flex-gap-small.ant-flex-align-stretch.ant-flex-vertical > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-end > .ant-flex-gap-small.ant-flex-align-center.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-tag-processing ::   Element has insufficient color contrast of 3.66 (foreground color: #1677ff, background color: #e6f4ff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-gap-small.ant-flex-align-center.ant-flex-vertical > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-tag-warning ::   Element has insufficient color contrast of 1.82 (foreground color: #faad14, background color: #fffbe6, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "schedule-loading",
+    "width": 390,
+    "overflow": 45,
+    "violations": [
+      "color-contrast(5)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          ".ant-flex-align-stretch.ant-flex-gap-small.ant-flex-vertical > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-gap-small.ant-flex-align-center.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "div[role=\"status\"] > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "footer > .ant-flex-wrap-wrap.ant-flex-justify-space-between.ant-flex-gap-middle > .ant-flex-align-stretch.ant-flex-vertical.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-wrap-wrap.ant-flex-justify-space-between.ant-flex-gap-middle > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "schedule-login-error",
+    "width": 390,
+    "overflow": 0,
+    "violations": [
+      "color-contrast(22)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          ".ant-flex-align-end > .ant-flex-align-stretch.ant-flex-vertical.ant-flex-gap-small > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-end > .ant-flex-gap-small.ant-flex-align-center.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-tag-processing ::   Element has insufficient color contrast of 3.66 (foreground color: #1677ff, background color: #e6f4ff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-baseline > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "div[data-key=\"item:1\"] > .ant-flex-justify-space-between.ant-flex-gap-middle.ant-flex-wrap-wrap > .ant-flex-wrap-wrap.ant-flex-gap-small.ant-flex-align-center > .ant-flex-gap-small.ant-flex-align-center.ant-flex:nth-child(1) > .ant-flex-align-stretch.ant-flex-vertical.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "schedule-saved",
+    "width": 390,
+    "overflow": 45,
+    "violations": [
+      "color-contrast(26)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          ".ant-flex-align-end > .ant-flex-align-stretch.ant-flex-vertical.ant-flex-gap-small > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-end > .ant-flex-gap-small.ant-flex-align-center.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-tag-processing ::   Element has insufficient color contrast of 3.66 (foreground color: #1677ff, background color: #e6f4ff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-vertical.ant-flex-gap-small.ant-flex-align-center:nth-child(1) > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-vertical.ant-flex-gap-small.ant-flex-align-center:nth-child(3) > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "members-default",
+    "width": 390,
+    "overflow": 45,
+    "violations": [
+      "color-contrast(31)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          "a[href=\"#\"] ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-stretch.ant-flex-vertical.ant-flex-gap-small > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-col-xs-12.ant-col-md-6.ant-col:nth-child(1) > .ant-card.ant-card-bordered > .ant-card-body > .ant-statistic > .ant-statistic-header > .ant-statistic-title ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-col-xs-12.ant-col-md-6.ant-col:nth-child(2) > .ant-card.ant-card-bordered > .ant-card-body > .ant-statistic > .ant-statistic-header > .ant-statistic-title ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-col-xs-24 > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "members-empty",
+    "width": 390,
+    "overflow": 0,
+    "violations": [
+      "color-contrast(8)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          "a[href=\"#\"] ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-gap-small.ant-flex-align-stretch.ant-flex-vertical > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-col-xs-12.ant-col-md-6.ant-col:nth-child(1) > .ant-card.ant-card-bordered > .ant-card-body > .ant-statistic > .ant-statistic-header > .ant-statistic-title ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-col-xs-12.ant-col-md-6.ant-col:nth-child(2) > .ant-card.ant-card-bordered > .ant-card-body > .ant-statistic > .ant-statistic-header > .ant-statistic-title ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-col-xs-24 > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "members-delete-confirm",
+    "width": 390,
+    "overflow": 45,
+    "violations": [
+      "color-contrast(32)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          "a[href=\"#\"] ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-stretch.ant-flex-vertical.ant-flex-gap-small > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-col-xs-12.ant-col-md-6.ant-col:nth-child(1) > .ant-card.ant-card-bordered > .ant-card-body > .ant-statistic > .ant-statistic-header > .ant-statistic-title ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-col-xs-12.ant-col-md-6.ant-col:nth-child(2) > .ant-card.ant-card-bordered > .ant-card-body > .ant-statistic > .ant-statistic-header > .ant-statistic-title ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-col-xs-24 > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "members-delete-error",
+    "width": 390,
+    "overflow": 45,
+    "violations": [
+      "color-contrast(32)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          "a[href=\"#\"] ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-stretch.ant-flex-vertical.ant-flex-gap-small > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-col-xs-12.ant-col-md-6.ant-col:nth-child(1) > .ant-card.ant-card-bordered > .ant-card-body > .ant-statistic > .ant-statistic-header > .ant-statistic-title ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-col-xs-12.ant-col-md-6.ant-col:nth-child(2) > .ant-card.ant-card-bordered > .ant-card-body > .ant-statistic > .ant-statistic-header > .ant-statistic-title ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-col-xs-24 > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "settings-default",
+    "width": 390,
+    "overflow": 45,
+    "violations": [
+      "color-contrast(10)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          "a[href=\"#\"] ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-end > .ant-flex-gap-small.ant-flex-align-stretch.ant-flex-vertical > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-gap-large.ant-flex-align-stretch.ant-flex-vertical > .ant-flex-gap-middle.ant-flex-align-center.ant-flex > .ant-flex-align-stretch.ant-flex-vertical.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "#name_extra ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "#employee_extra ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "settings-onboarding",
+    "width": 390,
+    "overflow": 45,
+    "violations": [
+      "color-contrast(10)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          "a[href=\"#\"] ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-end > .ant-flex-gap-small.ant-flex-align-stretch.ant-flex-vertical > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-gap-large.ant-flex-align-stretch.ant-flex-vertical > .ant-flex-gap-middle.ant-flex-align-center.ant-flex > .ant-flex-align-stretch.ant-flex-vertical.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "#name_extra ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "#employee_extra ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "settings-validation",
+    "width": 390,
+    "overflow": 45,
+    "violations": [
+      "color-contrast(12)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          "a[href=\"#\"] ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-align-end > .ant-flex-gap-small.ant-flex-align-stretch.ant-flex-vertical > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-gap-large.ant-flex-align-stretch.ant-flex-vertical > .ant-flex-gap-middle.ant-flex-align-center.ant-flex > .ant-flex-align-stretch.ant-flex-vertical.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "#name_extra ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          "#employee_help > .ant-form-item-explain-error ::   Element has insufficient color contrast of 3.26 (foreground color: #ff4d4f, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "antd",
+    "file": "not-found",
+    "width": 390,
+    "overflow": 45,
+    "violations": [
+      "color-contrast(5)"
+    ],
+    "details": [
+      {
+        "id": "color-contrast",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "targets": [
+          "a[href=\"#\"] ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-gap-small.ant-flex-align-stretch.ant-flex-vertical > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-result-subtitle ::   Element has insufficient color contrast of 3.36 (foreground color: #8c8c8c, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-wrap-wrap.ant-flex-gap-middle.ant-flex-align-center > .ant-flex-align-stretch.ant-flex-vertical.ant-flex > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+          ".ant-flex-wrap-wrap.ant-flex-gap-middle.ant-flex-align-center > .ant-typography-secondary.ant-typography ::   Element has insufficient color contrast of 3.29 (foreground color: #878787, background color: #f5f5f5, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        ]
+      }
+    ]
+  }
+]

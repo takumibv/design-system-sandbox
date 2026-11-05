@@ -1,0 +1,24 @@
+$ npx antd info Empty
+# 目的: 空状態の props を確認
+# 実行日時: 2026-11-05T10:15:14Z
+
+Empty (空状态) — Empty state placeholder.
+
+Property     Type                                                                                                                           Default                          Since
+-----------  -----------------------------------------------------------------------------------------------------------------------------  -------------------------------  -----
+classNames   Record<[SemanticDOM](#semantic-dom), string> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), string>                -                                -    
+description  ReactNode                                                                                                                      -                                -    
+image        ReactNode                                                                                                                      `Empty.PRESENTED_IMAGE_DEFAULT`  -    
+imageStyle   CSSProperties                                                                                                                  -                                -    
+styles       Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>  -                                -    
+
+Common Props (inherited by all components, not listed individually)
+
+Property       Type           Default
+-------------  -------------  -------
+className      string         -      
+style          CSSProperties  -      
+rootClassName  string         -      
+
+Extends <div> — supports native HTML div attributes.
+# exit=0

@@ -1,0 +1,918 @@
+$ npx antd info Form --detail --format json
+# 目的: Form の非推奨 props を --detail で確認
+# 実行日時: 2026-11-05T10:13:36Z
+
+{
+  "name": "Form",
+  "nameZh": "表单",
+  "description": "High-performance form component with data domain management. Includes data entry, validation, and corresponding styles.",
+  "whenToUse": "",
+  "props": [
+    {
+      "name": "classNames",
+      "type": "Record<[SemanticDOM](#semantic-dom), string> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), string>",
+      "default": "-",
+      "description": "Customize class for each semantic structure inside the component. Supports object or function.",
+      "descriptionZh": "用于自定义组件内部各语义化结构的 class，支持对象或函数"
+    },
+    {
+      "name": "colon",
+      "type": "boolean",
+      "default": "true",
+      "description": "Configure the default value of `colon` for Form.Item. Indicates whether the colon after the label is displayed (only effective when prop layout is horizontal)",
+      "descriptionZh": "配置 Form.Item 的 `colon` 的默认值。表示是否显示 label 后面的冒号 (只有在属性 layout 为 horizontal 时有效)"
+    },
+    {
+      "name": "disabled",
+      "type": "boolean",
+      "default": "false",
+      "description": "Set form component disable, only available for antd components",
+      "since": "4.21.0",
+      "descriptionZh": "设置表单组件禁用，仅对 antd 组件有效"
+    },
+    {
+      "name": "component",
+      "type": "ComponentType | false",
+      "default": "form",
+      "description": "Set the Form rendering element. Do not create a DOM node for `false`",
+      "descriptionZh": "设置 Form 渲染元素，为 `false` 则不创建 DOM 节点"
+    },
+    {
+      "name": "fields",
+      "type": "[FieldData](#fielddata)[]",
+      "default": "-",
+      "description": "Control of form fields through state management (such as redux). Not recommended for non-strong demand. View [example](#form-demo-global-state)",
+      "descriptionZh": "通过状态管理（如 redux）控制表单字段，如非强需求不推荐使用。查看[示例](#form-demo-global-state)"
+    },
+    {
+      "name": "form",
+      "type": "[FormInstance](#forminstance)",
+      "default": "-",
+      "description": "Form control instance created by `Form.useForm()`. Automatically created when not provided",
+      "descriptionZh": "经 `Form.useForm()` 创建的 form 控制实例，不提供时会自动创建"
+    },
+    {
+      "name": "feedbackIcons",
+      "type": "[FeedbackIcons](#feedbackicons)",
+      "default": "-",
+      "description": "Can be passed custom icons while `Form.Item` element has `hasFeedback`",
+      "since": "5.9.0",
+      "descriptionZh": "当 `Form.Item` 有 `hasFeedback` 属性时可以自定义图标"
+    },
+    {
+      "name": "initialValues",
+      "type": "object",
+      "default": "-",
+      "description": "Set value by Form initialization or reset",
+      "descriptionZh": "表单默认值，只有初始化以及重置时生效"
+    },
+    {
+      "name": "labelAlign",
+      "type": "`start` | `end`",
+      "default": "`end`",
+      "description": "Label text alignment",
+      "since": "6.7.0: `left` → `start`, `right` → `end`",
+      "descriptionZh": "标签文本对齐方式"
+    },
+    {
+      "name": "labelWrap",
+      "type": "boolean",
+      "default": "false",
+      "description": "whether label can be wrap",
+      "since": "4.18.0",
+      "descriptionZh": "label 标签的文本换行方式"
+    },
+    {
+      "name": "labelCol",
+      "type": "[object](/components/grid/#col)",
+      "default": "-",
+      "description": "Label layout, like `<Col>` component. Set `span` `offset` value like `{span: 3, offset: 12}` or `sm: {span: 3, offset: 12}`",
+      "descriptionZh": "label 标签布局，同 `<Col>` 组件，设置 `span` `offset` 值，如 `{span: 3, offset: 12}` 或 `sm: {span: 3, offset: 12}`"
+    },
+    {
+      "name": "layout",
+      "type": "`horizontal` | `vertical` | `inline`",
+      "default": "`horizontal`",
+      "description": "Form layout. By default, `horizontal` stacks labels above controls when the viewport width is `575px` or less. Use the `xs` settings in `labelCol` and `wrapperCol` to customize column widths on narrow screens",
+      "descriptionZh": "表单布局。`horizontal` 布局默认在视口宽度不超过 `575px` 时将标签和控件上下排列，可通过 `labelCol` 和 `wrapperCol` 的 `xs` 配置自定义窄屏下的列宽"
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "default": "-",
+      "description": "Form name. Will be the prefix of Field `id`",
+      "descriptionZh": "表单名称，会作为表单字段 `id` 前缀使用"
+    },
+    {
+      "name": "preserve",
+      "type": "boolean",
+      "default": "true",
+      "description": "Keep field value even when field removed. You can get the preserve field value by `getFieldsValue(true)`",
+      "since": "4.4.0",
+      "descriptionZh": "当字段被删除时保留字段值。你可以通过 `getFieldsValue(true)` 来获取保留字段值"
+    },
+    {
+      "name": "requiredMark",
+      "type": "boolean | `optional` | ((label: ReactNode, info: { required: boolean }) => ReactNode)",
+      "default": "true",
+      "description": "Required mark style. Can use required mark or optional mark. You can not config to single Form.Item since this is a Form level config",
+      "since": "`renderProps`: 5.9.0",
+      "descriptionZh": "必选样式，可以切换为必选或者可选展示样式。此为 Form 配置，Form.Item 无法单独配置"
+    },
+    {
+      "name": "scrollToFirstError",
+      "type": "boolean | [Options](https://github.com/stipsan/scroll-into-view-if-needed/tree/ece40bd9143f48caf4b99503425ecb16b0ad8249#options) | { focus: boolean }",
+      "default": "false",
+      "description": "Auto scroll to first failed field when submit",
+      "since": "focus: 5.24.0",
+      "descriptionZh": "提交失败自动滚动到第一个错误字段"
+    },
+    {
+      "name": "size",
+      "type": "`small` | `medium` | `large`",
+      "default": "-",
+      "description": "Set field component size (antd components only)",
+      "descriptionZh": "设置字段组件的尺寸（仅限 antd 组件）"
+    },
+    {
+      "name": "styles",
+      "type": "Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>",
+      "default": "-",
+      "description": "Customize inline style for each semantic structure inside the component. Supports object or function.",
+      "descriptionZh": "用于自定义组件内部各语义化结构的行内 style，支持对象或函数"
+    },
+    {
+      "name": "tooltip",
+      "type": "[TooltipProps](/components/tooltip#api) & { icon?: ReactNode }",
+      "default": "-",
+      "description": "Config tooltip props",
+      "since": "6.3.0",
+      "descriptionZh": "配置提示属性"
+    },
+    {
+      "name": "validateMessages",
+      "type": "[ValidateMessages](https://github.com/ant-design/ant-design/blob/6234509d18bac1ac60fbb3f92a5b2c6a6361295a/components/locale/en_US.ts#L88-L134)",
+      "default": "-",
+      "description": "Validation prompt template, description [see below](#validatemessages)",
+      "descriptionZh": "验证提示模板，说明[见下](#validatemessages)"
+    },
+    {
+      "name": "validateTrigger",
+      "type": "string | string[]",
+      "default": "`onChange`",
+      "description": "Config field validate trigger",
+      "since": "4.3.0",
+      "descriptionZh": "统一设置字段触发验证的时机"
+    },
+    {
+      "name": "variant",
+      "type": "`outlined` | `borderless` | `filled` | `underlined`",
+      "default": "`outlined`",
+      "description": "Variant of components inside form",
+      "since": "5.13.0 | `underlined`: 5.24.0",
+      "descriptionZh": "表单内控件变体"
+    },
+    {
+      "name": "wrapperCol",
+      "type": "[object](/components/grid/#col)",
+      "default": "-",
+      "description": "The layout for input controls, same as `labelCol`",
+      "descriptionZh": "需要为输入控件设置布局样式时，使用该属性，用法同 labelCol"
+    },
+    {
+      "name": "onFieldsChange",
+      "type": "function(changedFields, allFields)",
+      "default": "-",
+      "description": "Trigger when field updated",
+      "descriptionZh": "字段更新时触发回调事件"
+    },
+    {
+      "name": "onFinish",
+      "type": "function(values)",
+      "default": "-",
+      "description": "Trigger after submitting the form and verifying data successfully",
+      "descriptionZh": "提交表单且数据验证成功后回调事件"
+    },
+    {
+      "name": "onFinishFailed",
+      "type": "function({ values, errorFields, outOfDate })",
+      "default": "-",
+      "description": "Trigger after submitting the form and verifying data failed",
+      "descriptionZh": "提交表单且数据验证失败后回调事件"
+    },
+    {
+      "name": "onValuesChange",
+      "type": "function(changedValues, allValues)",
+      "default": "-",
+      "description": "Trigger when value updated",
+      "descriptionZh": "字段值更新时触发回调事件"
+    },
+    {
+      "name": "clearOnDestroy",
+      "type": "boolean",
+      "default": "false",
+      "description": "Clear form values when the form is unmounted",
+      "since": "5.18.0",
+      "descriptionZh": "当表单被卸载时清空表单值"
+    }
+  ],
+  "subComponentProps": {
+    "Form.Item": [
+      {
+        "name": "colon",
+        "type": "boolean",
+        "default": "true",
+        "description": "Used with `label`, whether to display `:` after label text.",
+        "descriptionZh": "配合 `label` 属性使用，表示是否显示 `label` 后面的冒号"
+      },
+      {
+        "name": "dependencies",
+        "type": "[NamePath](#namepath)[]",
+        "default": "-",
+        "description": "Set the dependency field. See [below](#dependencies)",
+        "descriptionZh": "设置依赖字段，说明[见下](#dependencies)"
+      },
+      {
+        "name": "extra",
+        "type": "ReactNode",
+        "default": "-",
+        "description": "The extra prompt message. It is similar to help. Usage example: to display error message and prompt message at the same time",
+        "descriptionZh": "额外的提示信息，和 `help` 类似，当需要错误信息和提示文案同时出现时，可以使用这个。"
+      },
+      {
+        "name": "getValueFromEvent",
+        "type": "(..args: any[]) => any",
+        "default": "-",
+        "description": "Specify how to get value from event or other onChange arguments",
+        "descriptionZh": "设置如何将 event 的值转换成字段值"
+      },
+      {
+        "name": "getValueProps",
+        "type": "(value: any) => Record<string, any>",
+        "default": "-",
+        "description": "Additional props with sub component (It's not recommended to generate dynamic function prop by `getValueProps`. Please pass it to child component directly)",
+        "since": "4.2.0",
+        "descriptionZh": "为子元素添加额外的属性 (不建议通过 `getValueProps` 生成动态函数 prop，请直接将其传递给子组件)"
+      },
+      {
+        "name": "hasFeedback",
+        "type": "boolean | { icons: [FeedbackIcons](#feedbackicons) }",
+        "default": "false",
+        "description": "Used with `validateStatus`, this option specifies the validation status icon. Recommended to be used only with `Input`. Also, It can get feedback icons via icons prop.",
+        "since": "icons: 5.9.0",
+        "descriptionZh": "配合 `validateStatus` 属性使用，展示校验状态图标，建议只配合 Input 组件使用 此外，它还可以通过 Icons 属性获取反馈图标。"
+      },
+      {
+        "name": "help",
+        "type": "ReactNode",
+        "default": "-",
+        "description": "The prompt message. If not provided, the prompt message will be generated by the validation rule.",
+        "descriptionZh": "提示信息，如不设置，则会根据校验规则自动生成"
+      },
+      {
+        "name": "hidden",
+        "type": "boolean",
+        "default": "false",
+        "description": "Whether to hide Form.Item (still collect and validate value)",
+        "since": "4.4.0",
+        "descriptionZh": "是否隐藏字段（依然会收集和校验字段）"
+      },
+      {
+        "name": "htmlFor",
+        "type": "string",
+        "default": "-",
+        "description": "Set sub label `htmlFor`",
+        "descriptionZh": "设置子元素 label `htmlFor` 属性"
+      },
+      {
+        "name": "initialValue",
+        "type": "string",
+        "default": "-",
+        "description": "Config sub default value. Form `initialValues` get higher priority when conflict",
+        "since": "4.2.0",
+        "descriptionZh": "设置子元素默认值，如果与 Form 的 `initialValues` 冲突则以 Form 为准"
+      },
+      {
+        "name": "label",
+        "type": "ReactNode",
+        "default": "-",
+        "description": "Label text. When there is no need for a label but it needs to be aligned with a colon, it can be set to null",
+        "since": "null: 5.22.0",
+        "descriptionZh": "`label` 标签的文本，当不需要 label 又需要与冒号对齐，可以设为 null"
+      },
+      {
+        "name": "labelAlign",
+        "type": "`start` | `end`",
+        "default": "`end`",
+        "description": "Label text alignment",
+        "since": "6.7.0: `left` → `start`, `right` → `end`",
+        "descriptionZh": "标签文本对齐方式"
+      },
+      {
+        "name": "labelCol",
+        "type": "[object](/components/grid/#col)",
+        "default": "-",
+        "description": "The layout of label. You can set `span` `offset` to something like `{span: 3, offset: 12}` or `sm: {span: 3, offset: 12}` same as with `<Col>`. You can set `labelCol` on Form which will not affect nest Item. If both exists, use Item first",
+        "descriptionZh": "`label` 标签布局，同 `<Col>` 组件，设置 `span` `offset` 值，如 `{span: 3, offset: 12}` 或 `sm: {span: 3, offset: 12}`。你可以通过 Form 的 `labelCol` 进行统一设置，不会作用于嵌套 Item。当和 Form 同时设置时，以 Item 为准"
+      },
+      {
+        "name": "messageVariables",
+        "type": "Record<string, string>",
+        "default": "-",
+        "description": "The default validate field info, description [see below](#messagevariables)",
+        "since": "4.7.0",
+        "descriptionZh": "默认验证字段的信息，查看[详情](#messagevariables)"
+      },
+      {
+        "name": "name",
+        "type": "[NamePath](#namepath)",
+        "default": "-",
+        "description": "Field name, support array",
+        "descriptionZh": "字段名，支持数组"
+      },
+      {
+        "name": "normalize",
+        "type": "(value, prevValue, prevValues) => any",
+        "default": "-",
+        "description": "Normalize value from component value before passing to Form instance. Do not support async",
+        "descriptionZh": "组件获取值后进行转换，再放入 Form 中。不支持异步"
+      },
+      {
+        "name": "noStyle",
+        "type": "boolean",
+        "default": "false",
+        "description": "No style for `true`, used as a pure field control. Will inherit parent Form.Item `validateStatus` if self `validateStatus` not configured, unless the field has its own errors or warnings or is validating",
+        "descriptionZh": "为 `true` 时不带样式，作为纯字段控件使用。当自身没有 `validateStatus` 而父元素存在有 `validateStatus` 的 Form.Item 会继承父元素的 `validateStatus`，但自身的错误、警告和校验中状态优先"
+      },
+      {
+        "name": "preserve",
+        "type": "boolean",
+        "default": "true",
+        "description": "Keep field value even when field removed",
+        "since": "4.4.0",
+        "descriptionZh": "当字段被删除时保留字段值"
+      },
+      {
+        "name": "required",
+        "type": "boolean",
+        "default": "-",
+        "description": "Display required style. When not set, it will be generated by the validation rule. Set it to `false` to disable the style.",
+        "descriptionZh": "必填样式设置。如不设置，则会根据校验规则自动生成。设置为 `false` 可禁用该样式"
+      },
+      {
+        "name": "rules",
+        "type": "[Rule](#rule)[]",
+        "default": "-",
+        "description": "Rules for field validation. Click [here](#form-demo-basic) to see an example",
+        "descriptionZh": "校验规则，设置字段的校验逻辑。点击[此处](#form-demo-basic)查看示例"
+      },
+      {
+        "name": "shouldUpdate",
+        "type": "boolean | (prevValue, curValue) => boolean",
+        "default": "false",
+        "description": "Custom field update logic. See [below](#shouldupdate)",
+        "descriptionZh": "自定义字段更新逻辑，说明[见下](#shouldupdate)"
+      },
+      {
+        "name": "tooltip",
+        "type": "ReactNode | ([TooltipProps](/components/tooltip#api) & { icon?: ReactNode })",
+        "default": "-",
+        "description": "Config tooltip content",
+        "since": "4.7.0",
+        "descriptionZh": "配置提示信息"
+      },
+      {
+        "name": "trigger",
+        "type": "string",
+        "default": "`onChange`",
+        "description": "When to collect the value of children node. Click [here](#form-demo-customized-form-controls) to see an example",
+        "descriptionZh": "设置收集字段值变更的时机。点击[此处](#form-demo-customized-form-controls)查看示例"
+      },
+      {
+        "name": "validateDebounce",
+        "type": "number",
+        "default": "-",
+        "description": "Delay milliseconds to start validation",
+        "since": "5.9.0",
+        "descriptionZh": "设置防抖，延迟毫秒数后进行校验"
+      },
+      {
+        "name": "validateFirst",
+        "type": "boolean | `parallel`",
+        "default": "false",
+        "description": "Whether stop validate on first rule of error for this field. Will parallel validate when `parallel` configured",
+        "since": "`parallel`: 4.5.0",
+        "descriptionZh": "当某一规则校验不通过时，是否停止剩下的规则的校验。设置 `parallel` 时会并行校验"
+      },
+      {
+        "name": "validateStatus",
+        "type": "string",
+        "default": "-",
+        "description": "The validation status. If not provided, it will be generated by validation rule. options: `success` `warning` `error` `validating`",
+        "descriptionZh": "校验状态，如不设置，则会根据校验规则自动生成，可选：'success' 'warning' 'error' 'validating'"
+      },
+      {
+        "name": "validateTrigger",
+        "type": "string | string[]",
+        "default": "`onChange`",
+        "description": "When to validate the value of children node",
+        "descriptionZh": "设置字段校验的时机"
+      },
+      {
+        "name": "valuePropName",
+        "type": "string",
+        "default": "`value`",
+        "description": "Props of children node, for example, the prop of Switch or Checkbox is `checked`. This prop is an encapsulation of `getValueProps`, which will be invalid after customizing `getValueProps`",
+        "descriptionZh": "子节点的值的属性。注意：Switch、Checkbox 的 valuePropName 应该是 `checked`，否则无法获取这个两个组件的值。该属性为 `getValueProps` 的封装，自定义 `getValueProps` 后会失效"
+      },
+      {
+        "name": "wrapperCol",
+        "type": "[object](/components/grid/#col)",
+        "default": "-",
+        "description": "The layout for input controls, same as `labelCol`. You can set `wrapperCol` on Form which will not affect nest Item. If both exists, use Item first",
+        "descriptionZh": "需要为输入控件设置布局样式时，使用该属性，用法同 `labelCol`。你可以通过 Form 的 `wrapperCol` 进行统一设置，不会作用于嵌套 Item。当和 Form 同时设置时，以 Item 为准"
+      },
+      {
+        "name": "layout",
+        "type": "`horizontal` | `vertical`",
+        "default": "-",
+        "description": "Form item layout",
+        "since": "5.18.0",
+        "descriptionZh": "表单项布局"
+      }
+    ],
+    "Form.List": [
+      {
+        "name": "children",
+        "type": "(fields: Field[], operation: { add, remove, move }, meta: { errors }) => React.ReactNode",
+        "default": "-",
+        "description": "Render function",
+        "descriptionZh": "渲染函数"
+      },
+      {
+        "name": "initialValue",
+        "type": "any[]",
+        "default": "-",
+        "description": "Config sub default value. Form `initialValues` get higher priority when conflict",
+        "since": "4.9.0",
+        "descriptionZh": "设置子元素默认值，如果与 Form 的 `initialValues` 冲突则以 Form 为准"
+      },
+      {
+        "name": "name",
+        "type": "[NamePath](#namepath)",
+        "default": "-",
+        "description": "Field name, support array. List is also a field, so it will return all the values by `getFieldsValue`. You can change this logic by [config](#getfieldsvalue)",
+        "descriptionZh": "字段名，支持数组。List 本身也是字段，因而 `getFieldsValue()` 默认会返回 List 下所有值，你可以通过[参数](#getfieldsvalue)改变这一行为"
+      },
+      {
+        "name": "rules",
+        "type": "{ validator, message }[]",
+        "default": "-",
+        "description": "Validate rules, only support customize validator. Should work with [ErrorList](#formerrorlist)",
+        "since": "4.7.0",
+        "descriptionZh": "校验规则，仅支持自定义规则。需要配合 [ErrorList](#formerrorlist) 一同使用。"
+      }
+    ],
+    "Form.operation": [
+      {
+        "name": "add",
+        "type": "(defaultValue?: any, insertIndex?: number) => void",
+        "default": "insertIndex",
+        "description": "add form item",
+        "since": "4.6.0",
+        "descriptionZh": "新增表单项"
+      },
+      {
+        "name": "move",
+        "type": "(from: number, to: number) => void",
+        "default": "-",
+        "description": "move form item",
+        "descriptionZh": "移动表单项"
+      },
+      {
+        "name": "remove",
+        "type": "(index: number | number[]) => void",
+        "default": "number[]",
+        "description": "remove form item",
+        "since": "4.5.0",
+        "descriptionZh": "删除表单项"
+      }
+    ],
+    "Form.ErrorList": [
+      {
+        "name": "errors",
+        "type": "ReactNode[]",
+        "default": "-",
+        "description": "Error list",
+        "descriptionZh": "错误列表"
+      }
+    ],
+    "Form.Provider": [
+      {
+        "name": "onFormChange",
+        "type": "function(formName: string, info: { changedFields, forms })",
+        "default": "-",
+        "description": "Triggered when a sub form field updates",
+        "descriptionZh": "子表单字段更新时触发"
+      },
+      {
+        "name": "onFormFinish",
+        "type": "function(formName: string, info: { values, forms })",
+        "default": "-",
+        "description": "Triggered when a sub form submits",
+        "descriptionZh": "子表单提交时触发"
+      }
+    ],
+    "Form.FormInstance": [
+      {
+        "name": "getFieldError",
+        "type": "(name: [NamePath](#namepath)) => string[]",
+        "default": "-",
+        "description": "Get the error messages by the field name",
+        "descriptionZh": "获取对应字段名的错误信息"
+      },
+      {
+        "name": "getFieldInstance",
+        "type": "(name: [NamePath](#namepath)) => any",
+        "default": "-",
+        "description": "Get field instance",
+        "since": "4.4.0",
+        "descriptionZh": "获取对应字段实例"
+      },
+      {
+        "name": "getFieldsError",
+        "type": "(nameList?: [NamePath](#namepath)[]) => FieldError[]",
+        "default": "-",
+        "description": "Get the error messages by the fields name. Return as an array",
+        "descriptionZh": "获取一组字段名对应的错误信息，返回为数组形式"
+      },
+      {
+        "name": "getFieldsValue",
+        "type": "[GetFieldsValue](#getfieldsvalue)",
+        "default": "-",
+        "description": "Get values by a set of field names. Return according to the corresponding structure. Default return mounted field value, but you can use `getFieldsValue(true)` to get all values",
+        "descriptionZh": "获取一组字段名对应的值，会按照对应结构返回。默认返回现存字段值，当调用 `getFieldsValue(true)` 时返回所有值"
+      },
+      {
+        "name": "getFieldValue",
+        "type": "(name: [NamePath](#namepath)) => any",
+        "default": "-",
+        "description": "Get the value by the field name",
+        "descriptionZh": "获取对应字段名的值"
+      },
+      {
+        "name": "isFieldsTouched",
+        "type": "(nameList?: [NamePath](#namepath)[], allTouched?: boolean) => boolean",
+        "default": "-",
+        "description": "Check if fields have been operated. Check if all fields is touched when `allTouched` is `true`",
+        "descriptionZh": "检查一组字段是否被用户操作过，`allTouched` 为 `true` 时检查是否所有字段都被操作过"
+      },
+      {
+        "name": "isFieldTouched",
+        "type": "(name: [NamePath](#namepath)) => boolean",
+        "default": "-",
+        "description": "Check if a field has been operated",
+        "descriptionZh": "检查对应字段是否被用户操作过"
+      },
+      {
+        "name": "isFieldValidating",
+        "type": "(name: [NamePath](#namepath)) => boolean",
+        "default": "-",
+        "description": "Check field if is in validating",
+        "descriptionZh": "检查对应字段是否正在校验"
+      },
+      {
+        "name": "resetFields",
+        "type": "(fields?: [NamePath](#namepath)[]) => void",
+        "default": "-",
+        "description": "Reset fields to `initialValues`",
+        "descriptionZh": "重置一组字段到 `initialValues`"
+      },
+      {
+        "name": "scrollToField",
+        "type": "(name: [NamePath](#namepath), options: [ScrollOptions](https://github.com/stipsan/scroll-into-view-if-needed/tree/ece40bd9143f48caf4b99503425ecb16b0ad8249#options) | { focus: boolean }) => void",
+        "default": "-",
+        "description": "Scroll to field position",
+        "since": "focus: 5.24.0",
+        "descriptionZh": "滚动到对应字段位置"
+      },
+      {
+        "name": "setFields",
+        "type": "(fields: [FieldData](#fielddata)[]) => void",
+        "default": "-",
+        "description": "Set fields status",
+        "descriptionZh": "设置一组字段状态"
+      },
+      {
+        "name": "setFieldValue",
+        "type": "(name: [NamePath](#namepath), value: any) => void",
+        "default": "-",
+        "description": "Set fields value(Will directly pass to form store and **reset validation message**. If you do not want to modify passed object, please clone first)",
+        "since": "4.22.0",
+        "descriptionZh": "设置表单的值（该值将直接传入 form store 中并且**重置错误信息**。如果你不希望传入对象被修改，请克隆后传入）"
+      },
+      {
+        "name": "setFieldsValue",
+        "type": "(values) => void",
+        "default": "-",
+        "description": "Set fields value(Will directly pass to form store and **reset validation message**. If you do not want to modify passed object, please clone first). Use `setFieldValue` instead if you want to only config single value in Form.List",
+        "descriptionZh": "设置表单的值（该值将直接传入 form store 中并且**重置错误信息**。如果你不希望传入对象被修改，请克隆后传入）。如果你只想修改 Form.List 中单项值，请通过 `setFieldValue` 进行指定"
+      },
+      {
+        "name": "submit",
+        "type": "() => void",
+        "default": "-",
+        "description": "Submit the form. It's the same as clicking the `submit` button",
+        "descriptionZh": "提交表单，与点击 `submit` 按钮效果相同"
+      },
+      {
+        "name": "validateFields",
+        "type": "(nameList?: [NamePath](#namepath)[], config?: [ValidateConfig](#validatefields)) => Promise",
+        "default": "-",
+        "description": "Validate fields. Use `recursive` to validate all the field in the path",
+        "descriptionZh": "触发表单验证，设置 `recursive` 时会递归校验所有包含的路径"
+      }
+    ],
+    "Form.FieldData": [
+      {
+        "name": "errors",
+        "type": "string[]",
+        "default": "-",
+        "description": "Error messages",
+        "descriptionZh": "错误信息"
+      },
+      {
+        "name": "warnings",
+        "type": "string[]",
+        "default": "-",
+        "description": "Warning messages",
+        "descriptionZh": "警告信息"
+      },
+      {
+        "name": "name",
+        "type": "[NamePath](#namepath)[]",
+        "default": "-",
+        "description": "Field name path",
+        "descriptionZh": "字段名称"
+      },
+      {
+        "name": "touched",
+        "type": "boolean",
+        "default": "-",
+        "description": "Whether is operated",
+        "descriptionZh": "是否被用户操作过"
+      },
+      {
+        "name": "validating",
+        "type": "boolean",
+        "default": "-",
+        "description": "Whether is in validating",
+        "descriptionZh": "是否正在校验"
+      },
+      {
+        "name": "value",
+        "type": "any",
+        "default": "-",
+        "description": "Field value",
+        "descriptionZh": "字段对应值"
+      }
+    ],
+    "Form.Rule": [
+      {
+        "name": "defaultField",
+        "type": "[rule](#rule)",
+        "default": "-",
+        "description": "Validate rule for all array elements, valid when `type` is `array`",
+        "descriptionZh": "仅在 `type` 为 `array` 类型时有效，用于指定数组元素的校验规则"
+      },
+      {
+        "name": "enum",
+        "type": "any[]",
+        "default": "-",
+        "description": "Match enum value. You need to set `type` to `enum` to enable this",
+        "descriptionZh": "是否匹配枚举中的值（需要将 `type` 设置为 `enum`）"
+      },
+      {
+        "name": "fields",
+        "type": "Record<string, [rule](#rule)>",
+        "default": "-",
+        "description": "Validate rule for child elements, valid when `type` is `array` or `object`",
+        "descriptionZh": "仅在 `type` 为 `array` 或 `object` 类型时有效，用于指定子元素的校验规则"
+      },
+      {
+        "name": "len",
+        "type": "number",
+        "default": "-",
+        "description": "Length of string, number, array",
+        "descriptionZh": "string 类型时为字符串长度；number 类型时为确定数字； array 类型时为数组长度"
+      },
+      {
+        "name": "max",
+        "type": "number",
+        "default": "-",
+        "description": "`type` required: max length of `string`, `number`, `array`",
+        "descriptionZh": "必须设置 `type`：string 类型为字符串最大长度；number 类型时为最大值；array 类型时为数组最大长度"
+      },
+      {
+        "name": "message",
+        "type": "string | ReactElement",
+        "default": "-",
+        "description": "Error message. Will auto generate by [template](#validatemessages) if not provided",
+        "descriptionZh": "错误信息，不设置时会通过[模板](#validatemessages)自动生成"
+      },
+      {
+        "name": "min",
+        "type": "number",
+        "default": "-",
+        "description": "`type` required: min length of `string`, `number`, `array`",
+        "descriptionZh": "必须设置 `type`：string 类型为字符串最小长度；number 类型时为最小值；array 类型时为数组最小长度"
+      },
+      {
+        "name": "pattern",
+        "type": "RegExp",
+        "default": "-",
+        "description": "Regex pattern",
+        "descriptionZh": "正则表达式匹配"
+      },
+      {
+        "name": "required",
+        "type": "boolean",
+        "default": "-",
+        "description": "Required field",
+        "descriptionZh": "是否为必选字段"
+      },
+      {
+        "name": "transform",
+        "type": "(value) => any",
+        "default": "-",
+        "description": "Transform value to the rule before validation",
+        "descriptionZh": "将字段值转换成目标值后进行校验"
+      },
+      {
+        "name": "type",
+        "type": "string",
+        "default": "-",
+        "description": "Normally `string` |`number` |`boolean` |`url` | `email` | `tel`. More type to ref [here](https://github.com/react-component/async-validator#type)",
+        "descriptionZh": "类型，常见有 `string` | `number` | `boolean` | `url` | `email` | `tel`。更多请参考[此处](https://github.com/react-component/async-validator#type)"
+      },
+      {
+        "name": "validateTrigger",
+        "type": "string | string[]",
+        "default": "-",
+        "description": "Set validate trigger event. Must be the sub set of `validateTrigger` in Form.Item",
+        "descriptionZh": "设置触发验证时机，必须是 Form.Item 的 `validateTrigger` 的子集"
+      },
+      {
+        "name": "validator",
+        "type": "([rule](#rule), value) => Promise",
+        "default": "-",
+        "description": "Customize validation rule. Accept Promise as return. See [example](#form-demo-register)",
+        "descriptionZh": "自定义校验，接收 Promise 作为返回值。[示例](#form-demo-register)参考"
+      },
+      {
+        "name": "warningOnly",
+        "type": "boolean",
+        "default": "-",
+        "description": "Warning only. Not block form submit",
+        "since": "4.17.0",
+        "descriptionZh": "仅警告，不阻塞表单提交"
+      },
+      {
+        "name": "whitespace",
+        "type": "boolean",
+        "default": "-",
+        "description": "Failed if only has whitespace, only work with `type: 'string'` rule",
+        "descriptionZh": "如果字段仅包含空格则校验不通过，只在 `type: 'string'` 时生效"
+      }
+    ],
+    "Form.WatchOptions": [
+      {
+        "name": "form",
+        "type": "FormInstance",
+        "default": "Current form in context",
+        "description": "Form instance",
+        "since": "5.4.0",
+        "descriptionZh": "指定 Form 实例"
+      },
+      {
+        "name": "preserve",
+        "type": "boolean",
+        "default": "false",
+        "description": "Whether to watch the field which has no matched `Form.Item`",
+        "since": "5.4.0",
+        "descriptionZh": "是否监视没有对应的 `Form.Item` 的字段"
+      }
+    ]
+  },
+  "commonProps": [
+    {
+      "name": "className",
+      "type": "string",
+      "default": "-",
+      "description": "Additional CSS class",
+      "descriptionZh": "额外的 CSS 类名"
+    },
+    {
+      "name": "style",
+      "type": "CSSProperties",
+      "default": "-",
+      "description": "Additional style",
+      "descriptionZh": "额外的样式"
+    },
+    {
+      "name": "rootClassName",
+      "type": "string",
+      "default": "-",
+      "description": "ClassName on the root element",
+      "descriptionZh": "根元素的类名"
+    }
+  ],
+  "htmlElement": "div",
+  "faq": [
+    {
+      "question": "Why can't Segmented be disabled by Form `disabled`?",
+      "answer": "Segmented is designed as a data display component, not a form control component. Although it can be used as a form control similar to Radio, it was not designed for this purpose. Therefore, its behavior is more similar to the Tabs component and will not be disabled by Form's `disabled` prop. For related discussions, see [#54749](https://github.com/ant-design/ant-design/pull/54749#issuecomment-3797737096)."
+    },
+    {
+      "question": "Why can't Switch, Checkbox bind data?",
+      "answer": "Form.Item default bind value to `value` prop, but Switch or Checkbox value prop is `checked`. You can use `valuePropName` to change bind value prop.\n\n```tsx | pure\n<Form.Item name=\"fieldA\" valuePropName=\"checked\">\n  <Switch />\n</Form.Item>\n```"
+    },
+    {
+      "question": "How does `name` fill value when it's an array?",
+      "answer": "`name` will fill value by array order. When there exists number in it and no related field in form store, it will auto convert field to array. If you want to keep it as object, use string like: `['1', 'name']`."
+    },
+    {
+      "question": "Why is there a form warning when used in Modal?",
+      "answer": "> Warning: Instance created by `useForm` is not connect to any Form element. Forget to pass `form` prop?\n\nBefore Modal opens, children elements do not exist in the view. You can set `forceRender` on Modal to pre-render its children. Click [here](https://codesandbox.io/s/antd-reproduction-template-ibu5c) to view an example."
+    },
+    {
+      "question": "Why is component `defaultValue` not working when inside Form.Item?",
+      "answer": "Components inside Form.Item with name property will turn into controlled mode, which makes `defaultValue` not work anymore. Please try `initialValues` of Form to set default value."
+    },
+    {
+      "question": "Why can not call `ref` of Form at first time?",
+      "answer": "`ref` only receives the mounted instance. please ref React official doc: <https://react.dev/learn/manipulating-the-dom-with-refs#when-react-attaches-the-refs>"
+    },
+    {
+      "question": "Why will `resetFields` re-mount component?",
+      "answer": "`resetFields` will re-mount component under Field to clean up customize component side effects (like async data, cached state, etc.). It's by design."
+    },
+    {
+      "question": "Difference between Form initialValues and Item initialValue?",
+      "answer": "In most case, we always recommend to use Form `initialValues`. Use Item `initialValue` only with dynamic field usage. Priority follows the rules:\n\n1. Form `initialValues` is the first priority\n2. Field `initialValue` is secondary \\*. Does not work when multiple Item with same `name` setting the `initialValue`"
+    },
+    {
+      "question": "Why can't `getFieldsValue` get value at first render?",
+      "answer": "`getFieldsValue` returns collected field data by default, but the Form.Item node is not ready at the first render. You can get all field data by `getFieldsValue(true)`."
+    },
+    {
+      "question": "Why do some components not respond to `setFieldsValue` with `undefined`?",
+      "answer": "`value` change from certain one to `undefined` in React means from controlled mode to uncontrolled mode. Thus it will not change display value but modified FormStore in fact. You can HOC to handle this:\n\n```jsx\nconst MyInput = ({\n  // Force use controlled mode\n  value = '',\n  ...rest\n}) => <input value={value} {...rest} />;\n\n<Form.Item name=\"my\">\n  <MyInput />\n</Form.Item>;\n```"
+    },
+    {
+      "question": "Why does `onFieldsChange` trigger three times on change when field sets `rules`?",
+      "answer": "Validating is also part of the value updating. It passes through the following steps:\n\n1. Trigger value change\n2. Rule validating\n3. Rule validated\n\nIn each `onFieldsChange`, you will get `false` > `true` > `false` with `isFieldValidating`."
+    },
+    {
+      "question": "Why doesn't Form.List support `label` and need ErrorList to show errors?",
+      "answer": "Form.List use renderProps which mean internal structure is flexible. Thus `label` and `error` can not have best place. If you want to use antd `label`, you can wrap with Form.Item instead."
+    },
+    {
+      "question": "Why can't Form.Item `dependencies` work on Form.List field?",
+      "answer": "Your name path should also contain Form.List `name`:\n\n```tsx\n<Form.List name=\"users\">\n  {(fields) =>\n    fields.map((field) => (\n      <React.Fragment key={field.key}>\n        <Form.Item name={[field.name, 'name']} {...someRest1} />\n        <Form.Item name={[field.name, 'age']} {...someRest1} />\n      </React.Fragment>\n    ))\n  }\n</Form.List>\n```\n\ndependencies should be `['users', 0, 'name']`"
+    },
+    {
+      "question": "Why doesn't `normalize` support async?",
+      "answer": "React cannot get correct interaction of controlled components with async value updates. When a user triggers `onChange`, the component will not respond since the `value` update is async. If you want to trigger value updates asynchronously, you should use a custom component to handle the value state internally and pass synchronous value control to the Form instead."
+    },
+    {
+      "question": "`scrollToFirstError` and `scrollToField` not working?",
+      "answer": "1. use custom form control\n\nSee similar issues: [#28370](https://github.com/ant-design/ant-design/issues/28370) [#27994](https://github.com/ant-design/ant-design/issues/27994)\n\nStarting from version `5.17.0`, the sliding operation will prioritize using the ref element forwarded by the form control elements. Therefore, when considering custom components to support verification scrolling, please consider forwarding it to the form control elements first.\n\n`scrollToFirstError` and `scrollToField` depend on the `id` attribute passed to form controls. Make sure that it hasn't been ignored in your custom form control. Check [codesandbox](https://codesandbox.io/s/antd-reproduction-template-forked-25nul?file=/index.js) for a solution.\n\n2. multiple forms on same page\n\nIf there are multiple forms on the page, and there are duplicate same `name` form item, the form scroll probably may find the form item with the same name in another form. You need to set a different `name` for the `Form` component to distinguish it."
+    },
+    {
+      "question": "Continue, why not use `ref` to bind element?",
+      "answer": "Form can not get real DOM node when customize component not support `ref`. It will get warning in React Strict Mode if wrap with Class Component and call `findDOMNode`. So we use `id` to locate element."
+    },
+    {
+      "question": "`setFieldsValue` do not trigger `onFieldsChange` or `onValuesChange`?",
+      "answer": "It's by design. Only user interaction can trigger the change event. This design aims to avoid calling `setFieldsValue` in change events, which may cause infinite loops."
+    },
+    {
+      "question": "Why can't `dependencies` respond to `setFieldsValue` updates?",
+      "answer": "`dependencies` is mainly used for validation linkage between fields. When an upstream field is updated by user interaction, the dependent field will be updated and validated again. If you need to render additional content or switch field options based on values updated by `setFieldsValue`, use `shouldUpdate` or `useWatch` instead."
+    },
+    {
+      "question": "Why Form.Item not update value when children is nest?",
+      "answer": "Form.Item will inject `value` and `onChange` to children when render. Once your field component is wrapped, props will not pass to the correct node. Follow code will not work as expect:\n\n```jsx\n<Form.Item name=\"input\">\n  <div>\n    <h3>I am a wrapped Input</h3>\n    <Input />\n  </div>\n</Form.Item>\n```\n\nYou can use HOC to solve this problem, don't forget passing props to form control component:\n\n```jsx\nconst MyInput = (props) => (\n  <div>\n    <h3>I am a wrapped Input</h3>\n    <Input {...props} />\n  </div>\n);\n\n<Form.Item name=\"input\">\n  <MyInput />\n</Form.Item>;\n```"
+    },
+    {
+      "question": "Why does clicking the label in the form change the component state?",
+      "answer": "> Related issue: [#47031](https://github.com/ant-design/ant-design/issues/47031), [#43175](https://github.com/ant-design/ant-design/issues/43175), [#52152](https://github.com/ant-design/ant-design/issues/52152)\n\nForm label use [HTML label](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label) elements to wrap form controls, which focuses the corresponding control when clicked. This is the native behavior of label elements, designed to improve accessibility and user experience. This standard interaction pattern makes it easier for users to interact with form controls. If you need to disable this behavior, you can use `htmlFor={null}`, though it's generally not recommended.\n\n```diff\n- <Form.Item name=\"switch\" label=\"Switch\">\n+ <Form.Item name=\"switch\" label=\"Switch\" htmlFor={null}>\n    <Switch />\n  </Form.Item>\n```"
+    },
+    {
+      "question": "Is there more reference documentation?",
+      "answer": "- You can read [《antd v4 Form Best Practices》](https://zhuanlan.zhihu.com/p/375753910) for some usage tips and suggestions (Chinese).\n- Want to use before and after in DatePicker and Switch? You can refer to [《How to elegantly add before and after to Form.Item children》](https://zhuanlan.zhihu.com/p/422752055) (Chinese).\n- Elegant Form + Modal combination solution [《How to elegantly use Form + Modal》](https://zhuanlan.zhihu.com/p/388222294) (Chinese)."
+    }
+  ]
+}
+# exit=0

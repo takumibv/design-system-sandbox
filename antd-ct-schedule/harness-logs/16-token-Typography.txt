@@ -1,0 +1,11 @@
+$ npx antd token Typography
+# 目的: 見出しサイズのトークンを確認
+# 実行日時: 2026-11-05T10:14:38Z
+
+Typography Component Tokens:
+
+Token              Type             Default
+-----------------  ---------------  -------
+titleMarginBottom  string | number  -      
+titleMarginTop     string | number  -      
+# exit=0

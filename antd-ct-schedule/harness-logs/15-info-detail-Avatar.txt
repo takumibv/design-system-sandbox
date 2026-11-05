@@ -1,0 +1,172 @@
+$ npx antd info Avatar --detail --format json
+# 目的: Avatar の非推奨 props を --detail で確認
+# 実行日時: 2026-11-05T10:13:33Z
+
+{
+  "name": "Avatar",
+  "nameZh": "头像",
+  "description": "Used to represent users or things, supporting the display of images, icons, or characters.",
+  "whenToUse": "",
+  "props": [
+    {
+      "name": "alt",
+      "type": "string",
+      "default": "-",
+      "description": "This attribute defines the alternative text describing the image",
+      "descriptionZh": "图像无法显示时的替代文本"
+    },
+    {
+      "name": "gap",
+      "type": "number",
+      "default": "4",
+      "description": "Letter type unit distance between left and right sides",
+      "since": "4.3.0",
+      "descriptionZh": "字符类型距离左右两侧边界单位像素"
+    },
+    {
+      "name": "icon",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "Custom icon type for an icon avatar",
+      "descriptionZh": "设置头像的自定义图标"
+    },
+    {
+      "name": "shape",
+      "type": "`circle` | `square`",
+      "default": "`circle`",
+      "description": "The shape of avatar",
+      "descriptionZh": "指定头像的形状"
+    },
+    {
+      "name": "size",
+      "type": "number | `large` | `medium` | `small` | { xs: number, sm: number, ...}",
+      "default": "`medium`",
+      "description": "The size of the avatar",
+      "since": "4.7.0",
+      "descriptionZh": "设置头像的大小"
+    },
+    {
+      "name": "src",
+      "type": "string | ReactNode",
+      "default": "-",
+      "description": "The address of the image for an image avatar or image element",
+      "since": "ReactNode: 4.8.0",
+      "descriptionZh": "图片类头像的资源地址或者图片元素"
+    },
+    {
+      "name": "srcSet",
+      "type": "string",
+      "default": "-",
+      "description": "A list of sources to use for different screen resolutions",
+      "descriptionZh": "设置图片类头像响应式资源地址"
+    },
+    {
+      "name": "draggable",
+      "type": "boolean | `'true'` | `'false'`",
+      "default": "true",
+      "description": "Whether the picture is allowed to be dragged",
+      "descriptionZh": "图片是否允许拖动"
+    },
+    {
+      "name": "crossOrigin",
+      "type": "`'anonymous'` | `'use-credentials'` | `''`",
+      "default": "-",
+      "description": "CORS settings attributes",
+      "since": "4.17.0",
+      "descriptionZh": "CORS 属性设置"
+    },
+    {
+      "name": "onError",
+      "type": "() => boolean",
+      "default": "-",
+      "description": "Handler when img load error, return false to prevent default fallback behavior",
+      "descriptionZh": "图片加载失败的事件，返回 false 会关闭组件默认的 fallback 行为"
+    }
+  ],
+  "subComponentProps": {
+    "Avatar.Group": [
+      {
+        "name": "max",
+        "type": "`{ count?: number; style?: CSSProperties; popover?: PopoverProps }`",
+        "default": "-",
+        "description": "Set maximum display related configurations",
+        "since": "5.18.0",
+        "descriptionZh": "设置最多显示相关配置"
+      },
+      {
+        "name": "maxCount",
+        "type": "number",
+        "default": "-",
+        "description": "Deprecated, please use `max={{ count: number }}`",
+        "deprecated": true,
+        "descriptionZh": "已废弃，请使用 `max={{ count: number }}`"
+      },
+      {
+        "name": "maxPopoverPlacement",
+        "type": "`top` | `bottom`",
+        "default": "`top`",
+        "description": "Deprecated, please use `max={{ popover: PopoverProps }}`",
+        "deprecated": true,
+        "descriptionZh": "已废弃，请使用 `max={{ popover: PopoverProps }}`"
+      },
+      {
+        "name": "maxPopoverTrigger",
+        "type": "`hover` | `focus` | `click`",
+        "default": "`hover`",
+        "description": "Deprecated, please use `max={{ popover: PopoverProps }}`",
+        "deprecated": true,
+        "descriptionZh": "已废弃，请使用 `max={{ popover: PopoverProps }}`"
+      },
+      {
+        "name": "maxStyle",
+        "type": "CSSProperties",
+        "default": "-",
+        "description": "Deprecated, please use `max={{ style: CSSProperties }}`",
+        "deprecated": true,
+        "descriptionZh": "已废弃，请使用 `max={{ style: CSSProperties }}`"
+      },
+      {
+        "name": "size",
+        "type": "number | `large` | `medium` | `small` | { xs: number, sm: number, ...}",
+        "default": "`medium`",
+        "description": "The size of the avatar",
+        "since": "4.8.0",
+        "descriptionZh": "设置头像的大小"
+      },
+      {
+        "name": "shape",
+        "type": "`circle` | `square`",
+        "default": "`circle`",
+        "description": "The shape of the avatar",
+        "since": "5.8.0",
+        "descriptionZh": "设置头像的形状"
+      }
+    ]
+  },
+  "commonProps": [
+    {
+      "name": "className",
+      "type": "string",
+      "default": "-",
+      "description": "Additional CSS class",
+      "descriptionZh": "额外的 CSS 类名"
+    },
+    {
+      "name": "style",
+      "type": "CSSProperties",
+      "default": "-",
+      "description": "Additional style",
+      "descriptionZh": "额外的样式"
+    },
+    {
+      "name": "rootClassName",
+      "type": "string",
+      "default": "-",
+      "description": "ClassName on the root element",
+      "descriptionZh": "根元素的类名"
+    }
+  ],
+  "htmlElement": "span",
+  "faq": []
+}
+# exit=0

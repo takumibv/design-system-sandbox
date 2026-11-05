@@ -1,0 +1,33 @@
+{
+  "name": "antd-ct-schedule",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "CTスケジュールUIを Ant Design で再現し、Ant Design の AI 向けハーネスを検証する",
+  "scripts": {
+    "dev": "vite --port 6011",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port 6011",
+    "screenshots": "NODE_PATH=$(npm root -g) node scripts/screenshots.mjs && python3 scripts/compare.py",
+    "lint:antd": "antd lint ./src"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^6.3.4",
+    "@fontsource/noto-sans-jp": "^5.3.1",
+    "antd": "^6.7.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@ant-design/cli": "^6.7.0",
+    "@axe-core/playwright": "^4.14.0",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^4.7.0",
+    "typescript": "^5.9.3",
+    "vite": "^6.4.5"
+  }
+}

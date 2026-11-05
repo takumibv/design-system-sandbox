@@ -1,0 +1,48 @@
+$ npx antd info Listy
+# 目的: Listy の props と既定値を確認（記憶に頼らない）
+# 実行日時: 2026-11-05T10:13:17Z
+
+Listy (虚拟列表) — A high-performance list that supports grouping and can virtualize long data sets.
+
+Property      Type                                         Default  Since
+------------  -------------------------------------------  -------  -----
+classNames    `{ root?, item?, groupHeader? }`             -        6.6.0
+group         `Group<T, K>`                                -        6.6.0
+height        number                                       -        6.6.0
+itemRender    `(item: T, index: number) => ReactNode`      -        6.6.0
+items         `T[]`                                        `[]`     6.6.0
+rowHoverable  boolean                                      true     6.7.0
+rowKey        `keyof T | (item: T, index: number) => Key`  -        6.6.0
+scrollWidth   number                                       -        6.7.0
+sticky        boolean                                      false    6.6.0
+styles        `{ root?, item?, groupHeader? }`             -        6.6.0
+virtual       boolean                                      false    6.6.0
+onScroll      `React.UIEventHandler<HTMLElement>`          -        6.6.0
+
+Listy.Group
+
+Property  Type                                      Default  Since
+--------  ----------------------------------------  -------  -----
+key       `(item: T) => K`                          -        -    
+title     `(groupKey: K, items: T[]) => ReactNode`  -        -    
+
+Listy.Ref
+
+Property                         Type                                      Default  Since
+-------------------------------  ----------------------------------------  -------  -----
+scrollTo                         `(config?: ListyScrollToConfig) => void`  -        -    
+number                                                                     -        -    
+`{ top?, left? }`                                                          -        -    
+`{ key, align?, offset? }`                                                 -        -    
+`{ groupKey, align?, offset? }`                                            -        -    
+
+Common Props (inherited by all components, not listed individually)
+
+Property       Type           Default
+-------------  -------------  -------
+className      string         -      
+style          CSSProperties  -      
+rootClassName  string         -      
+
+Extends <div> — supports native HTML div attributes.
+# exit=0

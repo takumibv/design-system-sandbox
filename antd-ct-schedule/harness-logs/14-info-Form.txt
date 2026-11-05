@@ -1,0 +1,170 @@
+$ npx antd info Form
+# 目的: Form の props と既定値を確認（記憶に頼らない）
+# 実行日時: 2026-11-05T10:13:15Z
+
+Form (表单) — High-performance form component with data domain management. Includes data entry, validation, and corresponding styles.
+
+Property            Type                                                                                                                                                   Default       Since                                   
+------------------  -----------------------------------------------------------------------------------------------------------------------------------------------------  ------------  ----------------------------------------
+classNames          Record<[SemanticDOM](#semantic-dom), string> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), string>                                        -             -                                       
+colon               boolean                                                                                                                                                true          -                                       
+disabled            boolean                                                                                                                                                false         4.21.0                                  
+component           ComponentType | false                                                                                                                                  form          -                                       
+fields              [FieldData](#fielddata)[]                                                                                                                              -             -                                       
+form                [FormInstance](#forminstance)                                                                                                                          -             -                                       
+feedbackIcons       [FeedbackIcons](#feedbackicons)                                                                                                                        -             5.9.0                                   
+initialValues       object                                                                                                                                                 -             -                                       
+labelAlign          `start` | `end`                                                                                                                                        `end`         6.7.0: `left` → `start`, `right` → `end`
+labelWrap           boolean                                                                                                                                                false         4.18.0                                  
+labelCol            [object](/components/grid/#col)                                                                                                                        -             -                                       
+layout              `horizontal` | `vertical` | `inline`                                                                                                                   `horizontal`  -                                       
+name                string                                                                                                                                                 -             -                                       
+preserve            boolean                                                                                                                                                true          4.4.0                                   
+requiredMark        boolean | `optional` | ((label: ReactNode, info: { required: boolean }) => ReactNode)                                                                  true          `renderProps`: 5.9.0                    
+scrollToFirstError  boolean | [Options](https://github.com/stipsan/scroll-into-view-if-needed/tree/ece40bd9143f48caf4b99503425ecb16b0ad8249#options) | { focus: boolean }  false         focus: 5.24.0                           
+size                `small` | `medium` | `large`                                                                                                                           -             -                                       
+styles              Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>                          -             -                                       
+tooltip             [TooltipProps](/components/tooltip#api) & { icon?: ReactNode }                                                                                         -             6.3.0                                   
+validateMessages    [ValidateMessages](https://github.com/ant-design/ant-design/blob/6234509d18bac1ac60fbb3f92a5b2c6a6361295a/components/locale/en_US.ts#L88-L134)         -             -                                       
+validateTrigger     string | string[]                                                                                                                                      `onChange`    4.3.0                                   
+variant             `outlined` | `borderless` | `filled` | `underlined`                                                                                                    `outlined`    5.13.0 | `underlined`: 5.24.0           
+wrapperCol          [object](/components/grid/#col)                                                                                                                        -             -                                       
+onFieldsChange      function(changedFields, allFields)                                                                                                                     -             -                                       
+onFinish            function(values)                                                                                                                                       -             -                                       
+onFinishFailed      function({ values, errorFields, outOfDate })                                                                                                           -             -                                       
+onValuesChange      function(changedValues, allValues)                                                                                                                     -             -                                       
+clearOnDestroy      boolean                                                                                                                                                false         5.18.0                                  
+
+Form.Item
+
+Property           Type                                                                          Default     Since                                   
+-----------------  ----------------------------------------------------------------------------  ----------  ----------------------------------------
+colon              boolean                                                                       true        -                                       
+dependencies       [NamePath](#namepath)[]                                                       -           -                                       
+extra              ReactNode                                                                     -           -                                       
+getValueFromEvent  (..args: any[]) => any                                                        -           -                                       
+getValueProps      (value: any) => Record<string, any>                                           -           4.2.0                                   
+hasFeedback        boolean | { icons: [FeedbackIcons](#feedbackicons) }                          false       icons: 5.9.0                            
+help               ReactNode                                                                     -           -                                       
+hidden             boolean                                                                       false       4.4.0                                   
+htmlFor            string                                                                        -           -                                       
+initialValue       string                                                                        -           4.2.0                                   
+label              ReactNode                                                                     -           null: 5.22.0                            
+labelAlign         `start` | `end`                                                               `end`       6.7.0: `left` → `start`, `right` → `end`
+labelCol           [object](/components/grid/#col)                                               -           -                                       
+messageVariables   Record<string, string>                                                        -           4.7.0                                   
+name               [NamePath](#namepath)                                                         -           -                                       
+normalize          (value, prevValue, prevValues) => any                                         -           -                                       
+noStyle            boolean                                                                       false       -                                       
+preserve           boolean                                                                       true        4.4.0                                   
+required           boolean                                                                       -           -                                       
+rules              [Rule](#rule)[]                                                               -           -                                       
+shouldUpdate       boolean | (prevValue, curValue) => boolean                                    false       -                                       
+tooltip            ReactNode | ([TooltipProps](/components/tooltip#api) & { icon?: ReactNode })  -           4.7.0                                   
+trigger            string                                                                        `onChange`  -                                       
+validateDebounce   number                                                                        -           5.9.0                                   
+validateFirst      boolean | `parallel`                                                          false       `parallel`: 4.5.0                       
+validateStatus     string                                                                        -           -                                       
+validateTrigger    string | string[]                                                             `onChange`  -                                       
+valuePropName      string                                                                        `value`     -                                       
+wrapperCol         [object](/components/grid/#col)                                               -           -                                       
+layout             `horizontal` | `vertical`                                                     -           5.18.0                                  
+
+Form.List
+
+Property      Type                                                                                      Default  Since
+------------  ----------------------------------------------------------------------------------------  -------  -----
+children      (fields: Field[], operation: { add, remove, move }, meta: { errors }) => React.ReactNode  -        -    
+initialValue  any[]                                                                                     -        4.9.0
+name          [NamePath](#namepath)                                                                     -        -    
+rules         { validator, message }[]                                                                  -        4.7.0
+
+Form.operation
+
+Property  Type                                                Default      Since
+--------  --------------------------------------------------  -----------  -----
+add       (defaultValue?: any, insertIndex?: number) => void  insertIndex  4.6.0
+move      (from: number, to: number) => void                  -            -    
+remove    (index: number | number[]) => void                  number[]     4.5.0
+
+Form.ErrorList
+
+Property  Type         Default  Since
+--------  -----------  -------  -----
+errors    ReactNode[]  -        -    
+
+Form.Provider
+
+Property      Type                                                        Default  Since
+------------  ----------------------------------------------------------  -------  -----
+onFormChange  function(formName: string, info: { changedFields, forms })  -        -    
+onFormFinish  function(formName: string, info: { values, forms })         -        -    
+
+Form.FormInstance
+
+Property           Type                                                                                                                                                                                               Default  Since        
+-----------------  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  -------  -------------
+getFieldError      (name: [NamePath](#namepath)) => string[]                                                                                                                                                          -        -            
+getFieldInstance   (name: [NamePath](#namepath)) => any                                                                                                                                                               -        4.4.0        
+getFieldsError     (nameList?: [NamePath](#namepath)[]) => FieldError[]                                                                                                                                               -        -            
+getFieldsValue     [GetFieldsValue](#getfieldsvalue)                                                                                                                                                                  -        -            
+getFieldValue      (name: [NamePath](#namepath)) => any                                                                                                                                                               -        -            
+isFieldsTouched    (nameList?: [NamePath](#namepath)[], allTouched?: boolean) => boolean                                                                                                                              -        -            
+isFieldTouched     (name: [NamePath](#namepath)) => boolean                                                                                                                                                           -        -            
+isFieldValidating  (name: [NamePath](#namepath)) => boolean                                                                                                                                                           -        -            
+resetFields        (fields?: [NamePath](#namepath)[]) => void                                                                                                                                                         -        -            
+scrollToField      (name: [NamePath](#namepath), options: [ScrollOptions](https://github.com/stipsan/scroll-into-view-if-needed/tree/ece40bd9143f48caf4b99503425ecb16b0ad8249#options) | { focus: boolean }) => void  -        focus: 5.24.0
+setFields          (fields: [FieldData](#fielddata)[]) => void                                                                                                                                                        -        -            
+setFieldValue      (name: [NamePath](#namepath), value: any) => void                                                                                                                                                  -        4.22.0       
+setFieldsValue     (values) => void                                                                                                                                                                                   -        -            
+submit             () => void                                                                                                                                                                                         -        -            
+validateFields     (nameList?: [NamePath](#namepath)[], config?: [ValidateConfig](#validatefields)) => Promise                                                                                                        -        -            
+
+Form.FieldData
+
+Property    Type                     Default  Since
+----------  -----------------------  -------  -----
+errors      string[]                 -        -    
+warnings    string[]                 -        -    
+name        [NamePath](#namepath)[]  -        -    
+touched     boolean                  -        -    
+validating  boolean                  -        -    
+value       any                      -        -    
+
+Form.Rule
+
+Property         Type                               Default  Since 
+---------------  ---------------------------------  -------  ------
+defaultField     [rule](#rule)                      -        -     
+enum             any[]                              -        -     
+fields           Record<string, [rule](#rule)>      -        -     
+len              number                             -        -     
+max              number                             -        -     
+message          string | ReactElement              -        -     
+min              number                             -        -     
+pattern          RegExp                             -        -     
+required         boolean                            -        -     
+transform        (value) => any                     -        -     
+type             string                             -        -     
+validateTrigger  string | string[]                  -        -     
+validator        ([rule](#rule), value) => Promise  -        -     
+warningOnly      boolean                            -        4.17.0
+whitespace       boolean                            -        -     
+
+Form.WatchOptions
+
+Property  Type          Default                  Since
+--------  ------------  -----------------------  -----
+form      FormInstance  Current form in context  5.4.0
+preserve  boolean       false                    5.4.0
+
+Common Props (inherited by all components, not listed individually)
+
+Property       Type           Default
+-------------  -------------  -------
+className      string         -      
+style          CSSProperties  -      
+rootClassName  string         -      
+
+Extends <div> — supports native HTML div attributes.
+# exit=0

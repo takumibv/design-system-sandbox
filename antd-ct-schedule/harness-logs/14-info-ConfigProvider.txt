@@ -1,0 +1,42 @@
+$ npx antd info ConfigProvider
+# 目的: ConfigProvider の props と既定値を確認（記憶に頼らない）
+# 実行日時: 2026-11-05T10:13:18Z
+
+ConfigProvider (全局化配置) — Provide a uniform configuration support for components.
+
+Property                  Type                                                                                                                                                                     Default              Since 
+------------------------  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------  -------------------  ------
+componentDisabled         boolean                                                                                                                                                                  -                    4.21.0
+componentSize             `small` | `medium` | `large`                                                                                                                                             -                    -     
+csp                       { nonce: string }                                                                                                                                                        -                    -     
+direction                 `ltr` | `rtl`                                                                                                                                                            `ltr`                -     
+getPopupContainer         `(trigger?: HTMLElement) => HTMLElement | ShadowRoot`                                                                                                                    () => document.body  -     
+getTargetContainer        `() => HTMLElement | Window | ShadowRoot`                                                                                                                                () => window         4.2.0 
+iconPrefixCls             string                                                                                                                                                                   `anticon`            4.11.0
+locale                    object                                                                                                                                                                   -                    -     
+popupMatchSelectWidth     boolean | number                                                                                                                                                         -                    5.5.0 
+popupOverflow             'viewport' | 'scroll' <InlinePopover previewURL="https://user-images.githubusercontent.com/5378891/230344474-5b9f7e09-0a5d-49e8-bae8-7d2abed6c837.png"></InlinePopover>  'viewport'           5.5.0 
+prefixCls                 string                                                                                                                                                                   `ant`                -     
+renderEmpty               function(componentName: string): ReactNode                                                                                                                               -                    -     
+theme                     [Theme](/docs/react/customize-theme#theme)                                                                                                                               -                    5.0.0 
+variant                   `outlined` | `filled` | `borderless`                                                                                                                                     -                    5.19.0
+virtual                   boolean                                                                                                                                                                  -                    4.3.0 
+warning                   { strict: boolean }                                                                                                                                                      -                    5.10.0
+autoInsertSpaceInButton   boolean                                                                                                                                                                  -                    -     
+dropdownMatchSelectWidth  boolean                                                                                                                                                                  -                    -     
+
+ConfigProvider.useConfig()
+
+Property           Type                          Default  Since
+-----------------  ----------------------------  -------  -----
+componentDisabled  boolean                       -        5.3.0
+componentSize      `small` | `medium` | `large`  -        5.3.0
+
+ConfigProvider.WaveConfig
+
+Property     Type                                                                Default  Since
+-----------  ------------------------------------------------------------------  -------  -----
+disabled     boolean                                                             false    -    
+showEffect   (node: HTMLElement, info: { className, token, component }) => void  -        -    
+triggerType  `click` | `pointerdown` | `pointerup` | `mousedown` | `mouseup`     `click`  6.4.0
+# exit=0

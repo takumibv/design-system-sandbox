@@ -1,0 +1,721 @@
+$ npx antd info Select --detail --format json
+# 目的: Select の非推奨 props を --detail で確認
+# 実行日時: 2026-11-05T10:13:36Z
+
+{
+  "name": "Select",
+  "nameZh": "选择器",
+  "description": "A dropdown menu for displaying choices.",
+  "whenToUse": "- A dropdown menu for displaying choices - an elegant alternative to the native `<select>` element.\n- Utilizing [Radio](/components/radio/) is recommended when there are fewer total options (less than 5).\n- You probably need [AutoComplete](/components/auto-complete/) if you're looking for an input box that can be typed or selected.",
+  "props": [
+    {
+      "name": "allowClear",
+      "type": "boolean | [AllowClearConfig](#allowclearconfig)",
+      "default": "false",
+      "description": "Whether to show a clear button",
+      "descriptionZh": "是否显示清除按钮"
+    },
+    {
+      "name": "autoClearSearchValue",
+      "type": "boolean",
+      "default": "true",
+      "description": "Whether the current search will be cleared on selecting an item. Only applies when `mode` is set to `multiple` or `tags`",
+      "deprecated": true,
+      "descriptionZh": "是否在选中项后清空搜索框，只在 `mode` 为 `multiple` 或 `tags` 时有效"
+    },
+    {
+      "name": "autoComplete",
+      "type": "string",
+      "default": "`new-password`",
+      "description": "The HTML `autocomplete` attribute of the input",
+      "descriptionZh": "输入框的 HTML `autocomplete` 属性"
+    },
+    {
+      "name": "bordered",
+      "type": "boolean",
+      "default": "true",
+      "description": "Whether has border style, please use `variant` instead",
+      "deprecated": true,
+      "descriptionZh": "是否带边框，请使用 `variant` 替代"
+    },
+    {
+      "name": "classNames",
+      "type": "Record<[SemanticDOM](#semantic-dom), string> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), string>",
+      "default": "-",
+      "description": "Customize class for each semantic structure inside the Select component. Supports object or function.",
+      "descriptionZh": "用于自定义 Select 组件内部各语义化结构的 class，支持对象或函数"
+    },
+    {
+      "name": "defaultActiveFirstOption",
+      "type": "boolean",
+      "default": "true",
+      "description": "Whether active first option by default",
+      "descriptionZh": "是否默认高亮第一个选项"
+    },
+    {
+      "name": "defaultOpen",
+      "type": "boolean",
+      "default": "-",
+      "description": "Initial open state of dropdown",
+      "descriptionZh": "是否默认展开下拉菜单"
+    },
+    {
+      "name": "defaultValue",
+      "type": "string | string[] | <br />number | number[] | <br />LabeledValue | LabeledValue[]",
+      "default": "-",
+      "description": "Initial selected option",
+      "descriptionZh": "指定默认选中的条目"
+    },
+    {
+      "name": "disabled",
+      "type": "boolean",
+      "default": "false",
+      "description": "Whether disabled select",
+      "descriptionZh": "是否禁用"
+    },
+    {
+      "name": "dropdownClassName",
+      "type": "string",
+      "default": "-",
+      "description": "The className of dropdown menu, please use `classNames.popup.root` instead",
+      "deprecated": true,
+      "descriptionZh": "下拉菜单的 className 属性，请使用 `classNames.popup.root` 替代"
+    },
+    {
+      "name": "dropdownMatchSelectWidth",
+      "type": "boolean | number",
+      "default": "true",
+      "description": "Determine whether the popup menu and the select input are the same width, please use `popupMatchSelectWidth` instead",
+      "deprecated": true,
+      "descriptionZh": "下拉菜单和选择器是否同宽，请使用 `popupMatchSelectWidth` 替代"
+    },
+    {
+      "name": "popupClassName",
+      "type": "string",
+      "default": "-",
+      "description": "The className of dropdown menu, use `classNames.popup.root` instead",
+      "since": "4.23.0",
+      "deprecated": true,
+      "descriptionZh": "下拉菜单的 className 属性，使用 `classNames.popup.root` 替换"
+    },
+    {
+      "name": "popupMatchSelectWidth",
+      "type": "boolean | number",
+      "default": "true",
+      "description": "Determine whether the popup menu and the select input are the same width. Default set `min-width` same as input. Will ignore when value less than select width. `false` will disable virtual scroll",
+      "since": "5.5.0",
+      "descriptionZh": "下拉菜单和选择器同宽。默认将设置 `min-width`，当值小于选择框宽度时会被忽略。false 时会关闭虚拟滚动"
+    },
+    {
+      "name": "dropdownRender",
+      "type": "(originNode: ReactElement) => ReactNode",
+      "default": "-",
+      "description": "Customize dropdown content, use `popupRender` instead",
+      "deprecated": true,
+      "descriptionZh": "自定义下拉框内容，使用 `popupRender` 替换"
+    },
+    {
+      "name": "popupRender",
+      "type": "(originNode: ReactElement) => ReactNode",
+      "default": "-",
+      "description": "Customize dropdown content",
+      "since": "5.25.0",
+      "descriptionZh": "自定义下拉框内容"
+    },
+    {
+      "name": "dropdownStyle",
+      "type": "CSSProperties",
+      "default": "-",
+      "description": "The style of dropdown menu, use `styles.popup.root` instead",
+      "deprecated": true,
+      "descriptionZh": "下拉菜单的 style 属性，使用 `styles.popup.root` 替换"
+    },
+    {
+      "name": "fieldNames",
+      "type": "object",
+      "default": "{ label: `label`, value: `value`, options: `options`, groupLabel: `label` }",
+      "description": "Customize node label, value, options，groupLabel field name",
+      "since": "4.17.0 (`groupLabel` added in 5.6.0)",
+      "descriptionZh": "自定义节点 label、value、options、groupLabel 的字段"
+    },
+    {
+      "name": "filterOption",
+      "type": "boolean | function(inputValue, option)",
+      "default": "true",
+      "description": "If true, filter options by input, if function, filter options against it. The function will receive two arguments, `inputValue` and `option`, if the function returns `true`, the option will be included in the filtered set; Otherwise, it will be excluded",
+      "deprecated": true,
+      "descriptionZh": "是否根据输入项进行筛选。当其为一个函数时，会接收 `inputValue` `option` 两个参数，当 `option` 符合筛选条件时，应返回 true，反之则返回 false。[示例](#select-demo-search)"
+    },
+    {
+      "name": "filterSort",
+      "type": "(optionA: Option, optionB: Option, info: { searchValue: string }) => number",
+      "default": "-",
+      "description": "Sort function for search options sorting, see [Array.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)'s compareFunction",
+      "since": "`searchValue`: 5.19.0",
+      "deprecated": true,
+      "descriptionZh": "搜索时对筛选结果项的排序函数, 类似[Array.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)里的 compareFunction"
+    },
+    {
+      "name": "getPopupContainer",
+      "type": "function(triggerNode)",
+      "default": "() => document.body",
+      "description": "Parent Node which the selector should be rendered to. Default to `body`. When position issues happen, try to modify it into scrollable content and position it relative. [Example](https://codesandbox.io/s/4j168r7jw0)",
+      "descriptionZh": "菜单渲染父节点。默认渲染到 body 上，如果你遇到菜单滚动定位问题，试试修改为滚动的区域，并相对其定位。[示例](https://codesandbox.io/s/4j168r7jw0)"
+    },
+    {
+      "name": "labelInValue",
+      "type": "boolean",
+      "default": "false",
+      "description": "Whether to embed label in value, turn the format of value from `string` to { value: string, label: ReactNode }",
+      "descriptionZh": "是否把每个选项的 label 包装到 value 中，会把 Select 的 value 类型从 `string` 变为 { value: string, label: ReactNode } 的格式"
+    },
+    {
+      "name": "listHeight",
+      "type": "number",
+      "default": "256",
+      "description": "Config popup height",
+      "descriptionZh": "设置弹窗滚动高度"
+    },
+    {
+      "name": "loading",
+      "type": "boolean",
+      "default": "false",
+      "description": "Indicate loading state",
+      "descriptionZh": "加载中状态"
+    },
+    {
+      "name": "loadingIcon",
+      "type": "ReactNode",
+      "default": "`<LoadingOutlined spin />`",
+      "description": "Customize the loading icon",
+      "since": "6.4.0",
+      "descriptionZh": "自定义的加载图标"
+    },
+    {
+      "name": "maxCount",
+      "type": "number",
+      "default": "-",
+      "description": "The max number of items can be selected, only applies when `mode` is `multiple` or `tags`",
+      "since": "5.13.0",
+      "descriptionZh": "指定可选中的最多 items 数量，仅在 `mode` 为 `multiple` 或 `tags` 时生效"
+    },
+    {
+      "name": "maxTagCount",
+      "type": "number | `responsive`",
+      "default": "-",
+      "description": "Max tag count to show. `responsive` will cost render performance",
+      "since": "responsive: 4.10",
+      "descriptionZh": "最多显示多少个 tag，响应式模式会对性能产生损耗"
+    },
+    {
+      "name": "maxTagPlaceholder",
+      "type": "ReactNode | function(omittedValues)",
+      "default": "-",
+      "description": "Placeholder for not showing tags",
+      "descriptionZh": "隐藏 tag 时显示的内容"
+    },
+    {
+      "name": "maxTagTextLength",
+      "type": "number",
+      "default": "-",
+      "description": "Max tag text length to show",
+      "descriptionZh": "最大显示的 tag 文本长度"
+    },
+    {
+      "name": "menuItemSelectedIcon",
+      "type": "ReactNode",
+      "default": "`<CheckOutlined />`",
+      "description": "The custom menuItemSelected icon with multiple options",
+      "descriptionZh": "自定义多选时当前选中的条目图标"
+    },
+    {
+      "name": "mode",
+      "type": "`multiple` | `tags`",
+      "default": "-",
+      "description": "Set mode of Select",
+      "descriptionZh": "设置 Select 的模式为多选或标签"
+    },
+    {
+      "name": "notFoundContent",
+      "type": "ReactNode",
+      "default": "`No data`",
+      "description": "Specify content to show when no result matches",
+      "descriptionZh": "当下拉列表为空时显示的内容"
+    },
+    {
+      "name": "open",
+      "type": "boolean",
+      "default": "-",
+      "description": "Controlled open state of dropdown",
+      "descriptionZh": "是否展开下拉菜单"
+    },
+    {
+      "name": "optionFilterProp",
+      "type": "",
+      "default": "-",
+      "description": "Deprecated, see `showSearch.optionFilterProp`",
+      "deprecated": true,
+      "descriptionZh": "已废弃，见 `showSearch.optionFilterProp`"
+    },
+    {
+      "name": "optionLabelProp",
+      "type": "string",
+      "default": "`children`",
+      "description": "Which prop value of option will render as content of select. [Example](https://codesandbox.io/s/antd-reproduction-template-tk678)",
+      "descriptionZh": "回填到选择框的 Option 的属性值，默认是 Option 的子元素。比如在子元素需要高亮效果时，此值可以设为 `value`。[示例](https://codesandbox.io/s/antd-reproduction-template-tk678)"
+    },
+    {
+      "name": "options",
+      "type": "{ label, value }[]",
+      "default": "-",
+      "description": "Select options. Will get better perf than jsx definition",
+      "descriptionZh": "数据化配置选项内容，相比 jsx 定义会获得更好的渲染性能"
+    },
+    {
+      "name": "optionRender",
+      "type": "(option: FlattenOptionData<BaseOptionType> , info: { index: number }) => React.ReactNode",
+      "default": "-",
+      "description": "Customize the rendering dropdown options",
+      "since": "5.11.0",
+      "descriptionZh": "自定义渲染下拉选项"
+    },
+    {
+      "name": "placeholder",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "Placeholder of select",
+      "descriptionZh": "选择框默认文本"
+    },
+    {
+      "name": "placement",
+      "type": "`bottomLeft` `bottomRight` `topLeft` `topRight`",
+      "default": "bottomLeft",
+      "description": "The position where the selection box pops up",
+      "descriptionZh": "选择框弹出的位置"
+    },
+    {
+      "name": "prefix",
+      "type": "ReactNode",
+      "default": "-",
+      "description": "The custom prefix",
+      "since": "5.22.0",
+      "descriptionZh": "自定义前缀"
+    },
+    {
+      "name": "removeIcon",
+      "type": "ReactNode",
+      "default": "`<CloseOutlined />`",
+      "description": "The custom remove icon",
+      "descriptionZh": "自定义的多选框清除图标"
+    },
+    {
+      "name": "searchValue",
+      "type": "string",
+      "default": "-",
+      "description": "The current input \"search\" text",
+      "deprecated": true,
+      "descriptionZh": "控制搜索文本"
+    },
+    {
+      "name": "showArrow",
+      "type": "boolean",
+      "default": "true",
+      "description": "Whether to show the arrow icon, please use `suffix={null}` instead",
+      "deprecated": true,
+      "descriptionZh": "是否显示箭头图标，请使用 `suffix={null}` 替代"
+    },
+    {
+      "name": "showSearch",
+      "type": "boolean | [Object](#showsearch)",
+      "default": "single: false, multiple: true",
+      "description": "Whether select is searchable",
+      "since": "Object: 6.0.0",
+      "descriptionZh": "配置是否可搜索"
+    },
+    {
+      "name": "size",
+      "type": "`large` | `medium` | `small`",
+      "default": "`medium`",
+      "description": "Size of Select input",
+      "descriptionZh": "选择框大小"
+    },
+    {
+      "name": "status",
+      "type": "'error' | 'warning'",
+      "default": "-",
+      "description": "Set validation status",
+      "since": "4.19.0",
+      "descriptionZh": "设置校验状态"
+    },
+    {
+      "name": "styles",
+      "type": "Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>",
+      "default": "-",
+      "description": "Customize inline style for each semantic structure inside the Select component. Supports object or function.",
+      "descriptionZh": "用于自定义 Select 组件内部各语义化结构的行内 style，支持对象或函数"
+    },
+    {
+      "name": "suffix",
+      "type": "ReactNode | (props) => ReactNode",
+      "default": "`<DownOutlined />`",
+      "description": "The custom suffix. Custom suffixes will not respond to clicks to open, because the replaced suffix may be designed for other interactions. You can use `pointer-events: none` style to bypass",
+      "since": "6.7.0",
+      "descriptionZh": "自定义的选择框后缀。以防止后缀被用于其他交互，替换的后缀默认不会响应展开、收缩事件，可以通过添加 `pointer-events: none` 样式透传。"
+    },
+    {
+      "name": "suffixIcon",
+      "type": "ReactNode",
+      "default": "`<DownOutlined />`",
+      "description": "The custom suffix icon. Please use `suffix` instead",
+      "deprecated": true,
+      "descriptionZh": "自定义的选择框后缀图标，请使用 `suffix` 替代"
+    },
+    {
+      "name": "tagRender",
+      "type": "(props) => ReactNode",
+      "default": "-",
+      "description": "Customize tag render, only applies when `mode` is set to `multiple` or `tags`",
+      "descriptionZh": "自定义 tag 内容 render，仅在 `mode` 为 `multiple` 或 `tags` 时生效"
+    },
+    {
+      "name": "labelRender",
+      "type": "(props: LabelInValueType) => ReactNode",
+      "default": "-",
+      "description": "Customize selected label render (LabelInValueType definition see [LabelInValueType](https://github.com/react-component/select/blob/b39c28aa2a94e7754ebc570f200ab5fd33bd31e7/src/Select.tsx#L70))",
+      "since": "5.15.0",
+      "descriptionZh": "自定义当前选中的 label 内容 render （LabelInValueType的定义见 [LabelInValueType](https://github.com/react-component/select/blob/b39c28aa2a94e7754ebc570f200ab5fd33bd31e7/src/Select.tsx#L70)）"
+    },
+    {
+      "name": "tokenSeparators",
+      "type": "string[] | ((input: string) => string[])",
+      "default": "-",
+      "description": "Separator used to tokenize, only applies when `mode=\"tags\"` or `mode=\"multiple\"`",
+      "since": "function: 6.5.0",
+      "descriptionZh": "自动分词的分隔符或自定义分词函数，仅在 `mode=\"tags\"` 或 `mode=\"multiple\"` 时生效"
+    },
+    {
+      "name": "value",
+      "type": "string | string[] | <br />number | number[] | <br />LabeledValue | LabeledValue[]",
+      "default": "-",
+      "description": "Current selected option (considered as a immutable array)",
+      "descriptionZh": "指定当前选中的条目，多选时为一个数组。（value 数组引用未变化时，Select 不会更新）"
+    },
+    {
+      "name": "variant",
+      "type": "`outlined` | `borderless` | `filled` | `underlined`",
+      "default": "`outlined`",
+      "description": "Variants of selector",
+      "since": "5.13.0 | `underlined`: 5.24.0",
+      "descriptionZh": "形态变体"
+    },
+    {
+      "name": "virtual",
+      "type": "boolean",
+      "default": "true",
+      "description": "Disable virtual scroll when set to false",
+      "since": "4.1.0",
+      "descriptionZh": "设置 false 时关闭虚拟滚动"
+    },
+    {
+      "name": "onActive",
+      "type": "function(value: string | number | LabeledValue)",
+      "default": "-",
+      "description": "Called when keyboard or mouse interaction occurs",
+      "descriptionZh": "键盘和鼠标交互时触发"
+    },
+    {
+      "name": "onBlur",
+      "type": "function",
+      "default": "-",
+      "description": "Called when blur",
+      "descriptionZh": "失去焦点时回调"
+    },
+    {
+      "name": "onChange",
+      "type": "function(value, option:Option | Array<Option>)",
+      "default": "-",
+      "description": "Called when select an option or input value change",
+      "descriptionZh": "选中 option，或 input 的 value 变化时，调用此函数"
+    },
+    {
+      "name": "onClear",
+      "type": "function",
+      "default": "-",
+      "description": "Called when clear",
+      "since": "4.6.0",
+      "descriptionZh": "清除内容时回调"
+    },
+    {
+      "name": "onDeselect",
+      "type": "function(value: string | number | LabeledValue)",
+      "default": "-",
+      "description": "Called when an option is deselected, param is the selected option's value. Only called for `multiple` or `tags`, effective in multiple or tags mode only",
+      "descriptionZh": "取消选中时调用，参数为选中项的 value (或 key) 值，仅在 `multiple` 或 `tags` 模式下生效"
+    },
+    {
+      "name": "onDropdownVisibleChange",
+      "type": "(open: boolean) => void",
+      "default": "-",
+      "description": "Called when dropdown open, use `onOpenChange` instead",
+      "deprecated": true,
+      "descriptionZh": "展开下拉菜单的回调，使用 `onOpenChange` 替换"
+    },
+    {
+      "name": "onOpenChange",
+      "type": "(open: boolean) => void",
+      "default": "-",
+      "description": "Called when dropdown open",
+      "descriptionZh": "展开下拉菜单的回调"
+    },
+    {
+      "name": "onFocus",
+      "type": "(event: FocusEvent) => void",
+      "default": "-",
+      "description": "Called when focus",
+      "descriptionZh": "获得焦点时回调"
+    },
+    {
+      "name": "onInputKeyDown",
+      "type": "(event: KeyboardEvent) => void",
+      "default": "-",
+      "description": "Called when key pressed",
+      "descriptionZh": "按键按下时回调"
+    },
+    {
+      "name": "onPopupScroll",
+      "type": "(event: UIEvent) => void",
+      "default": "-",
+      "description": "Called when dropdown scrolls",
+      "descriptionZh": "下拉列表滚动时的回调"
+    },
+    {
+      "name": "onSearch",
+      "type": "function(value: string)",
+      "default": "-",
+      "description": "Callback function that is fired when input changed",
+      "deprecated": true,
+      "descriptionZh": "文本框值变化时回调"
+    },
+    {
+      "name": "onSelect",
+      "type": "function(value: string | number | LabeledValue, option: Option)",
+      "default": "-",
+      "description": "Called when an option is selected, the params are option's value (or key) and option instance",
+      "descriptionZh": "被选中时调用，参数为选中项的 value (或 key) 值"
+    },
+    {
+      "name": "blur()",
+      "type": "",
+      "default": "-",
+      "description": "Remove focus",
+      "descriptionZh": "取消焦点"
+    },
+    {
+      "name": "focus()",
+      "type": "",
+      "default": "-",
+      "description": "Get focus",
+      "descriptionZh": "获取焦点"
+    }
+  ],
+  "subComponentProps": {
+    "Select.AllowClearConfig": [
+      {
+        "name": "clearIcon",
+        "type": "ReactNode",
+        "default": "-",
+        "description": "Custom clear icon",
+        "descriptionZh": "自定义清除图标"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": "false",
+        "description": "When `true`, equivalent to `allowClear={false}`",
+        "since": "6.7.0",
+        "descriptionZh": "`true` 时等同于 `allowClear={false}`"
+      },
+      {
+        "name": "label",
+        "type": "string",
+        "default": "Component locale text",
+        "description": "Accessible name of the clear button",
+        "since": "6.6.0",
+        "descriptionZh": "清除按钮的无障碍名称"
+      },
+      {
+        "name": "tabIndex",
+        "type": "number",
+        "default": "0",
+        "description": "Tab order of the clear button. `-1` excludes it from Tab navigation",
+        "since": "6.7.0",
+        "descriptionZh": "清除按钮的 Tab 键顺序。`-1` 表示不参与 Tab 键导航"
+      }
+    ],
+    "Select.showSearch": [
+      {
+        "name": "autoClearSearchValue",
+        "type": "boolean",
+        "default": "true",
+        "description": "Whether the current search will be cleared on selecting an item. Only applies when `mode` is set to `multiple` or `tags`",
+        "descriptionZh": "是否在选中项后清空搜索框，只在 `mode` 为 `multiple` 或 `tags` 时有效"
+      },
+      {
+        "name": "filterOption",
+        "type": "boolean | function(inputValue, option)",
+        "default": "true",
+        "description": "If true, filter options by input, if function, filter options against it. The function will receive two arguments, `inputValue` and `option`, if the function returns `true`, the option will be included in the filtered set; Otherwise, it will be excluded",
+        "descriptionZh": "是否根据输入项进行筛选。当其为一个函数时，会接收 `inputValue` `option` 两个参数，当 `option` 符合筛选条件时，应返回 true，反之则返回 false。[示例](#select-demo-search)"
+      },
+      {
+        "name": "filterSort",
+        "type": "(optionA: Option, optionB: Option, info: { searchValue: string }) => number",
+        "default": "-",
+        "description": "Sort function for search options sorting, see [Array.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)'s compareFunction",
+        "since": "`searchValue`: 5.19.0",
+        "descriptionZh": "搜索时对筛选结果项的排序函数, 类似[Array.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)里的 compareFunction"
+      },
+      {
+        "name": "optionFilterProp",
+        "type": "string | string[]",
+        "default": "`value`",
+        "description": "Which prop value of option will be used for filter if filterOption is true. <br/> If `options` is set, it should be set to `label`. <br/> When a string[] is provided, multiple fields are searched using OR matching.",
+        "since": "`string[]`: 6.1.0",
+        "descriptionZh": "搜索时过滤对应的 `option` 属性，如设置为 `children` 表示对内嵌内容进行搜索。<br/> 若通过 `options` 属性配置选项内容，建议设置 `optionFilterProp=\"label\"` 来对内容进行搜索。<br/> 当传入 `string[]` 时多个字段进行 OR 匹配搜索"
+      },
+      {
+        "name": "searchValue",
+        "type": "string",
+        "default": "-",
+        "description": "The current input \"search\" text",
+        "descriptionZh": "控制搜索文本"
+      },
+      {
+        "name": "onSearch",
+        "type": "function(value: string)",
+        "default": "-",
+        "description": "Callback function that is fired when input changed",
+        "descriptionZh": "文本框值变化时回调"
+      },
+      {
+        "name": "searchIcon",
+        "type": "ReactNode",
+        "default": "`<SearchOutlined />`",
+        "description": "Customize the search icon",
+        "since": "6.4.0",
+        "descriptionZh": "自定义的搜索图标"
+      }
+    ],
+    "Select.Option props": [
+      {
+        "name": "className",
+        "type": "string",
+        "default": "-",
+        "description": "The additional class to option",
+        "descriptionZh": "Option 器类名"
+      },
+      {
+        "name": "disabled",
+        "type": "boolean",
+        "default": "false",
+        "description": "Disable this option",
+        "descriptionZh": "是否禁用"
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "default": "-",
+        "description": "`title` attribute of Select Option",
+        "descriptionZh": "选项上的原生 title 提示"
+      },
+      {
+        "name": "value",
+        "type": "string | number",
+        "default": "-",
+        "description": "Default to filter with this property",
+        "descriptionZh": "默认根据此属性值进行筛选"
+      }
+    ],
+    "Select.OptGroup props": [
+      {
+        "name": "key",
+        "type": "string",
+        "default": "-",
+        "description": "Group key",
+        "descriptionZh": "Key"
+      },
+      {
+        "name": "label",
+        "type": "React.ReactNode",
+        "default": "-",
+        "description": "Group label",
+        "descriptionZh": "组名"
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "default": "-",
+        "description": "The additional class to option",
+        "descriptionZh": "Option 器类名"
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "default": "-",
+        "description": "`title` attribute of Select Option",
+        "descriptionZh": "选项上的原生 title 提示"
+      }
+    ]
+  },
+  "commonProps": [
+    {
+      "name": "className",
+      "type": "string",
+      "default": "-",
+      "description": "Additional CSS class",
+      "descriptionZh": "额外的 CSS 类名"
+    },
+    {
+      "name": "style",
+      "type": "CSSProperties",
+      "default": "-",
+      "description": "Additional style",
+      "descriptionZh": "额外的样式"
+    },
+    {
+      "name": "rootClassName",
+      "type": "string",
+      "default": "-",
+      "description": "ClassName on the root element",
+      "descriptionZh": "根元素的类名"
+    }
+  ],
+  "htmlElement": "div",
+  "faq": [
+    {
+      "question": "Why sometimes search will show 2 same option when in `tags` mode?",
+      "answer": "It's caused by option with different `label` and `value`. You can use `optionFilterProp=\"label\"` to change filter logic instead."
+    },
+    {
+      "question": "When I click elements in popupRender, the select dropdown will not be closed?",
+      "answer": "You can control it by `open` prop: [codesandbox](https://codesandbox.io/s/ji-ben-shi-yong-antd-4-21-7-forked-gnp4cy?file=/demo.js)."
+    },
+    {
+      "question": "I don't want dropdown close when click inside `popupRender`?",
+      "answer": "Select will close when it lose focus. You can prevent event to handle this:\n\n```tsx\n<Select\n  popupRender={() => (\n    <div\n      onMouseDown={(e) => {\n        e.preventDefault();\n        e.stopPropagation();\n      }}\n    >\n      Some Content\n    </div>\n  )}\n/>\n```"
+    },
+    {
+      "question": "Why sometimes customize Option cause scroll break?",
+      "answer": "Virtual scroll internal set item height as `24px`. You need to adjust `listItemHeight` when your option height is less and `listHeight` config list container height:\n\n```tsx\n<Select listItemHeight={10} listHeight={250} />\n```\n\nNote: `listItemHeight` and `listHeight` are internal props. Please only modify when necessary."
+    },
+    {
+      "question": "Why a11y test report missing `aria-` props?",
+      "answer": "Select only create a11y auxiliary node when operating on. Please open Select and retry. For `aria-label` & `aria-labelledby` miss warning, please add related prop to Select with your own requirement.\n\nDefault virtual scrolling will create a mock element to simulate an accessible binding. If a screen reader needs to fully access the entire list, you can set `virtual={false}` to disable virtual scrolling and the accessibility option will be bound to the actual element."
+    },
+    {
+      "question": "Why does clicking close on a custom `tagRender` tag open the dropdown?",
+      "answer": "If you don't want a drop-down menu to appear automatically after clicking on an element (such as a close icon), you can prevent the `MouseDown` event from propagating on it.\n\n```tsx\n<Select\n  tagRender={(props) => {\n    const { closable, label, onClose } = props;\n    return (\n      <span className=\"border\">\n        {label}\n        {closable ? (\n          <span\n            onMouseDown={(e) => e.stopPropagation()}\n            onClick={onClose}\n            className=\"cursor-pointer\"\n          >\n            ❎\n          </span>\n        ) : null}\n      </span>\n    );\n  }}\n/>\n```"
+    }
+  ]
+}
+# exit=0

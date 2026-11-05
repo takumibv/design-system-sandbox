@@ -1,0 +1,96 @@
+$ npx antd info Flex --detail --format json
+# 目的: Flex の非推奨 props を --detail で確認
+# 実行日時: 2026-11-05T10:13:35Z
+
+{
+  "name": "Flex",
+  "nameZh": "弹性布局",
+  "description": "A flex layout container for alignment.",
+  "whenToUse": "- Good for setting spacing between elements.\n- Suitable for setting various horizontal and vertical alignments.\n\n### Difference with Space component\n\n- Space is used to set the spacing between inline elements. It will add a wrapper element for each child element for inline alignment. Suitable for equidistant arrangement of multiple child elements in rows and columns.\n- Flex is used to set the layout of block-level elements. It does not add a wrapper element. Suitable for layout of child elements in vertical or horizontal direction, and provides more flexibility and control.",
+  "props": [
+    {
+      "name": "vertical",
+      "type": "boolean",
+      "default": "false",
+      "description": "Is direction of the flex vertical, use `flex-direction: column`",
+      "since": "5.10.0",
+      "descriptionZh": "flex 主轴的方向是否垂直，使用 `flex-direction: column`"
+    },
+    {
+      "name": "wrap",
+      "type": "[flex-wrap](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap) | boolean",
+      "default": "nowrap",
+      "description": "Set whether the element is displayed in a single line or in multiple lines",
+      "since": "boolean: 5.17.0",
+      "descriptionZh": "设置元素单行显示还是多行显示"
+    },
+    {
+      "name": "justify",
+      "type": "[justify-content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)",
+      "default": "normal",
+      "description": "Sets the alignment of elements in the direction of the main axis",
+      "descriptionZh": "设置元素在主轴方向上的对齐方式"
+    },
+    {
+      "name": "align",
+      "type": "[align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)",
+      "default": "normal",
+      "description": "Sets the alignment of elements in the direction of the cross axis",
+      "descriptionZh": "设置元素在交叉轴方向上的对齐方式"
+    },
+    {
+      "name": "flex",
+      "type": "[flex](https://developer.mozilla.org/en-US/docs/Web/CSS/flex)",
+      "default": "normal",
+      "description": "flex CSS shorthand properties",
+      "descriptionZh": "flex CSS 简写属性"
+    },
+    {
+      "name": "gap",
+      "type": "`small` | `medium` | `large` | string | number",
+      "default": "-",
+      "description": "Sets the gap between grids",
+      "descriptionZh": "设置网格之间的间隙"
+    },
+    {
+      "name": "component",
+      "type": "React.ComponentType",
+      "default": "`div`",
+      "description": "custom element type",
+      "descriptionZh": "自定义元素类型"
+    },
+    {
+      "name": "orientation",
+      "type": "`horizontal` | `vertical`",
+      "default": "`horizontal`",
+      "description": "direction of the flex",
+      "descriptionZh": "主轴的方向类型"
+    }
+  ],
+  "commonProps": [
+    {
+      "name": "className",
+      "type": "string",
+      "default": "-",
+      "description": "Additional CSS class",
+      "descriptionZh": "额外的 CSS 类名"
+    },
+    {
+      "name": "style",
+      "type": "CSSProperties",
+      "default": "-",
+      "description": "Additional style",
+      "descriptionZh": "额外的样式"
+    },
+    {
+      "name": "rootClassName",
+      "type": "string",
+      "default": "-",
+      "description": "ClassName on the root element",
+      "descriptionZh": "根元素的类名"
+    }
+  ],
+  "htmlElement": "div",
+  "faq": []
+}
+# exit=0

@@ -1,0 +1,43 @@
+$ npx antd info Checkbox
+# 目的: Checkbox の props と既定値を確認（記憶に頼らない）
+# 実行日時: 2026-11-05T10:13:16Z
+
+Checkbox (多选框) — Collect user's choices.
+
+Property        Type                                                                                                                           Default  Since 
+--------------  -----------------------------------------------------------------------------------------------------------------------------  -------  ------
+checked         boolean                                                                                                                        false    -     
+classNames      Record<[SemanticDOM](#semantic-dom), string> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), string>                -        -     
+defaultChecked  boolean                                                                                                                        false    -     
+disabled        boolean                                                                                                                        false    -     
+indeterminate   boolean                                                                                                                        false    -     
+onChange        (e: CheckboxChangeEvent) => void                                                                                               -        -     
+onBlur          function()                                                                                                                     -        -     
+onFocus         function()                                                                                                                     -        -     
+styles          Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>  -        -     
+defaultValue    (string | number)[]                                                                                                            []       -     
+name            string                                                                                                                         -        -     
+options         string[] | number[] | Option[]                                                                                                 []       -     
+value           (string | number | boolean)[]                                                                                                  []       -     
+title           `string`                                                                                                                       -        -     
+className       `string`                                                                                                                       -        5.25.0
+style           `React.CSSProperties`                                                                                                          -        -     
+
+Checkbox.Methods
+
+Property       Type  Default  Since 
+-------------  ----  -------  ------
+blur()               -        -     
+focus()              -        -     
+nativeElement        -        5.17.3
+
+Common Props (inherited by all components, not listed individually)
+
+Property       Type           Default
+-------------  -------------  -------
+className      string         -      
+style          CSSProperties  -      
+rootClassName  string         -      
+
+Extends <input> — supports native HTML input attributes.
+# exit=0

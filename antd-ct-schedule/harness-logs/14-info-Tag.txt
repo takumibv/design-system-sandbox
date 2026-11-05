@@ -1,0 +1,52 @@
+$ npx antd info Tag
+# 目的: Tag の props と既定値を確認（記憶に頼らない）
+# 実行日時: 2026-11-05T10:13:12Z
+
+Tag (标签) — Used for marking and categorization.
+
+Property    Type                                                                                                                           Default                           Since                       
+----------  -----------------------------------------------------------------------------------------------------------------------------  --------------------------------  ----------------------------
+classNames  Record<[SemanticDOM](#semantic-dom), string> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), string>                -                                 -                           
+closable    boolean | ({ closeIcon?: ReactNode } & React.AriaAttributes)                                                                   false                             -                           
+closeIcon   ReactNode                                                                                                                      false                             4.4.0                       
+color       string                                                                                                                         `default` when `variant="solid"`  `solid` default color: 6.4.0
+disabled    boolean                                                                                                                        false                             6.0.0                       
+href        string                                                                                                                         -                                 6.0.0                       
+icon        ReactNode                                                                                                                      -                                 -                           
+onClose     (e: React.MouseEvent<HTMLElement, MouseEvent>) => void                                                                         -                                 -                           
+styles      Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>  -                                 -                           
+target      string                                                                                                                         -                                 6.0.0                       
+variant     `'filled' | 'solid' | 'outlined'`                                                                                              `'filled'`                        6.0.0                       
+bordered    boolean                                                                                                                        true                              -                           
+
+Tag.CheckableTag
+
+Property  Type               Default  Since 
+--------  -----------------  -------  ------
+checked   boolean            false    -     
+icon      ReactNode          -        5.27.0
+onChange  (checked) => void  -        -     
+
+Tag.CheckableTagGroup
+
+Property      Type                                                                                                                                Default  Since                         
+------------  ----------------------------------------------------------------------------------------------------------------------------------  -------  ------------------------------
+classNames    Record<[SemanticDOM](#semantic-group), string> | (info: { props }) => Record<[SemanticDOM](#semantic-group), string>                -        -                             
+defaultValue  `string | number | Array<string | number> | null`                                                                                   -        -                             
+disabled      `boolean`                                                                                                                           -        -                             
+multiple      `boolean`                                                                                                                           -        -                             
+options       `Array<{ className?: string; label: ReactNode; style?: CSSProperties; value: string | number } | string | number>`                  -        `className` and `style`: 6.4.0
+styles        Record<[SemanticDOM](#semantic-group), CSSProperties> | (info: { props }) => Record<[SemanticDOM](#semantic-group), CSSProperties>  -        -                             
+value         `string | number | Array<string | number> | null`                                                                                   -        -                             
+onChange      `(value: string | number | Array<string | number> | null) => void`                                                                  -        -                             
+
+Common Props (inherited by all components, not listed individually)
+
+Property       Type           Default
+-------------  -------------  -------
+className      string         -      
+style          CSSProperties  -      
+rootClassName  string         -      
+
+Extends <span> — supports native HTML span attributes.
+# exit=0

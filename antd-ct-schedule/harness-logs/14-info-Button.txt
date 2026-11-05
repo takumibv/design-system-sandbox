@@ -1,0 +1,40 @@
+$ npx antd info Button
+# 目的: Button の props と既定値を確認（記憶に頼らない）
+# 実行日時: 2026-11-05T10:13:11Z
+
+Button (按钮) — To trigger an operation.
+
+Property         Type                                                                                                                           Default                           Since                                                                                          
+---------------  -----------------------------------------------------------------------------------------------------------------------------  --------------------------------  -----------------------------------------------------------------------------------------------
+autoInsertSpace  boolean                                                                                                                        `true`                            5.17.0                                                                                         
+block            boolean                                                                                                                        false                             -                                                                                              
+classNames       Record<[SemanticDOM](#semantic-dom), string> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), string>                -                                 6.0.0                                                                                          
+color            `default` | `primary` | `danger` | [PresetColors](#presetcolors)                                                               `primary` when `variant="solid"`  `default`, `primary` and `danger`: 5.21.0, `PresetColors`: 5.23.0, `solid` default color: 6.4.0
+danger           boolean                                                                                                                        false                             -                                                                                              
+disabled         boolean                                                                                                                        false                             -                                                                                              
+ghost            boolean                                                                                                                        false                             -                                                                                              
+href             string                                                                                                                         -                                 -                                                                                              
+htmlType         `submit` | `reset` | `button`                                                                                                  `button`                          -                                                                                              
+icon             ReactNode                                                                                                                      -                                 -                                                                                              
+iconPlacement    `start` | `end`                                                                                                                `start`                           -                                                                                              
+iconPosition     `start` | `end`                                                                                                                `start`                           5.17.0                                                                                         
+loading          boolean | { delay: number, icon: ReactNode }                                                                                   false                             icon: 5.23.0                                                                                   
+loadingIcon      ReactNode                                                                                                                      `<LoadingOutlined />`             -                                                                                              
+onClick          (event: React.MouseEvent<HTMLElement, MouseEvent>) => void                                                                     -                                 -                                                                                              
+shape            `default` | `circle` | `round`                                                                                                 `default`                         -                                                                                              
+size             `large` | `medium` | `small`                                                                                                   `medium`                          -                                                                                              
+styles           Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>  -                                 6.0.0                                                                                          
+target           string                                                                                                                         -                                 -                                                                                              
+type             `primary` | `dashed` | `link` | `text` | `default`                                                                             `default`                         -                                                                                              
+variant          `outlined` | `dashed` | `solid` | `filled` | `text` | `link`                                                                   -                                 5.21.0                                                                                         
+
+Common Props (inherited by all components, not listed individually)
+
+Property       Type           Default
+-------------  -------------  -------
+className      string         -      
+style          CSSProperties  -      
+rootClassName  string         -      
+
+Extends <button> — supports native HTML button attributes.
+# exit=0

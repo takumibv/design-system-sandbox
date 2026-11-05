@@ -1,0 +1,30 @@
+$ npx antd info Spin
+# 目的: 読み込み中表示の props を確認
+# 実行日時: 2026-11-05T10:15:14Z
+
+Spin (加载中) — Used for the loading status of a page or a block.
+
+Property          Type                                                                                                                            Default   Since 
+----------------  ------------------------------------------------------------------------------------------------------------------------------  --------  ------
+classNames        Record<[SemanticDOM](#semantic-dom), string> | (info: { props }) => Record<[SemanticDOM](#semantic-dom), string>                -         -     
+delay             number (milliseconds)                                                                                                           -         -     
+description       ReactNode                                                                                                                       -         6.3.0 
+fullscreen        boolean                                                                                                                         false     5.11.0
+indicator         ReactNode                                                                                                                       -         -     
+percent           number | 'auto'                                                                                                                 -         5.18.0
+size              string                                                                                                                          `medium`  -     
+spinning          boolean                                                                                                                         true      -     
+styles            Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props }) => Record<[SemanticDOM](#semantic-dom), CSSProperties>  -         -     
+tip               ReactNode                                                                                                                       -         -     
+wrapperClassName  string                                                                                                                          -         -     
+
+Common Props (inherited by all components, not listed individually)
+
+Property       Type           Default
+-------------  -------------  -------
+className      string         -      
+style          CSSProperties  -      
+rootClassName  string         -      
+
+Extends <div> — supports native HTML div attributes.
+# exit=0

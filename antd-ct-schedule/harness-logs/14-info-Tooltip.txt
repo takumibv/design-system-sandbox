@@ -1,0 +1,41 @@
+$ npx antd info Tooltip
+# 目的: アイコンボタンに付ける Tooltip の props
+# 実行日時: 2026-11-05T10:15:15Z
+
+Tooltip (文字提示) — Simple text popup box.
+
+Property              Type                                                                                                                            Default              Since 
+--------------------  ------------------------------------------------------------------------------------------------------------------------------  -------------------  ------
+title                 ReactNode | () => ReactNode                                                                                                     -                    -     
+color                 string                                                                                                                          -                    5.27.0
+classNames            Record<[SemanticDOM](#semantic-dom), string> | (info: { props }) => Record<[SemanticDOM](#semantic-dom), string>                -                    5.23.0
+styles                Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props }) => Record<[SemanticDOM](#semantic-dom), CSSProperties>  -                    5.23.0
+align                 object                                                                                                                          -                    -     
+arrow                 boolean | { pointAtCenter: boolean }                                                                                            true                 5.2.0 
+autoAdjustOverflow    boolean                                                                                                                         true                 -     
+defaultOpen           boolean                                                                                                                         false                4.23.0
+destroyTooltipOnHide  boolean                                                                                                                         false                -     
+destroyOnHidden       boolean                                                                                                                         false                5.25.0
+fresh                 boolean                                                                                                                         false                5.10.0
+getPopupContainer     (triggerNode: HTMLElement) => HTMLElement                                                                                       () => document.body  -     
+mouseEnterDelay       number                                                                                                                          0.1                  -     
+mouseLeaveDelay       number                                                                                                                          0.1                  -     
+overlayClassName      string                                                                                                                          -                    -     
+overlayStyle          React.CSSProperties                                                                                                             -                    -     
+overlayInnerStyle     React.CSSProperties                                                                                                             -                    -     
+placement             string                                                                                                                          `top`                -     
+trigger               `hover` | `focus` | `click` | `contextMenu` | Array<string>                                                                     `hover`              -     
+open                  boolean                                                                                                                         false                4.23.0
+zIndex                number                                                                                                                          -                    -     
+onOpenChange          (open: boolean) => void                                                                                                         -                    4.23.0
+
+Common Props (inherited by all components, not listed individually)
+
+Property       Type           Default
+-------------  -------------  -------
+className      string         -      
+style          CSSProperties  -      
+rootClassName  string         -      
+
+Extends <div> — supports native HTML div attributes.
+# exit=0

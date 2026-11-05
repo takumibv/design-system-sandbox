@@ -1,0 +1,53 @@
+$ npx antd info Card
+# 目的: Card の props と既定値を確認（記憶に頼らない）
+# 実行日時: 2026-11-05T10:13:11Z
+
+Card (卡片) — A container for displaying information.
+
+Property             Type                                                                                                                           Default                 Since 
+-------------------  -----------------------------------------------------------------------------------------------------------------------------  ----------------------  ------
+actions              Array<ReactNode>                                                                                                               -                       -     
+activeTabKey         string                                                                                                                         -                       -     
+bordered             boolean                                                                                                                        true                    -     
+bodyStyle            CSSProperties                                                                                                                  -                       -     
+variant              `outlined` | `borderless`                                                                                                      `outlined`              5.24.0
+classNames           Record<[SemanticDOM](#semantic-dom), string> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), string>                -                       -     
+cover                ReactNode                                                                                                                      -                       -     
+defaultActiveTabKey  string                                                                                                                         `The key of first tab`  -     
+extra                ReactNode                                                                                                                      -                       -     
+hoverable            boolean                                                                                                                        false                   -     
+headStyle            CSSProperties                                                                                                                  -                       -     
+loading              boolean                                                                                                                        false                   -     
+size                 `medium` | `small`                                                                                                             `medium`                -     
+tabBarExtraContent   ReactNode                                                                                                                      -                       -     
+tabList              [TabItemType](/components/tabs#tabitemtype)[]                                                                                  -                       -     
+tabProps             -                                                                                                                              -                       -     
+title                ReactNode                                                                                                                      -                       -     
+type                 string                                                                                                                         -                       -     
+styles               Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>  -                       -     
+onTabChange          (key) => void                                                                                                                  -                       -     
+
+Card.Grid
+
+Property   Type     Default  Since
+---------  -------  -------  -----
+hoverable  boolean  true     -    
+
+Card.Meta
+
+Property     Type       Default  Since
+-----------  ---------  -------  -----
+avatar       ReactNode  -        -    
+description  ReactNode  -        -    
+title        ReactNode  -        -    
+
+Common Props (inherited by all components, not listed individually)
+
+Property       Type           Default
+-------------  -------------  -------
+className      string         -      
+style          CSSProperties  -      
+rootClassName  string         -      
+
+Extends <div> — supports native HTML div attributes.
+# exit=0

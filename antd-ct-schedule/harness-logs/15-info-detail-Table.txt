@@ -1,0 +1,931 @@
+$ npx antd info Table --detail --format json
+# 目的: Table の非推奨 props を --detail で確認
+# 実行日時: 2026-11-05T10:13:35Z
+
+{
+  "name": "Table",
+  "nameZh": "表格",
+  "description": "A table displays rows of data.",
+  "whenToUse": "- To display a collection of structured data.\n- To sort, search, paginate, filter data.",
+  "props": [
+    {
+      "name": "bordered",
+      "type": "boolean",
+      "default": "false",
+      "description": "Whether to show all table borders",
+      "descriptionZh": "是否展示外边框和列边框"
+    },
+    {
+      "name": "classNames",
+      "type": "Record<[SemanticDOM](#semantic-dom), string> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), string>",
+      "default": "-",
+      "description": "Customize class for each semantic structure inside the component. Supports object or function.",
+      "descriptionZh": "用于自定义组件内部各语义化结构的 class，支持对象或函数"
+    },
+    {
+      "name": "column",
+      "type": "Partial<[ColumnType](#column)>",
+      "default": "-",
+      "description": "Shared props applied to columns when the same property is not defined on the column itself",
+      "since": "6.4.0",
+      "descriptionZh": "统一列配置，仅在单列未声明同名属性时生效"
+    },
+    {
+      "name": "columns",
+      "type": "[ColumnsType](#column)[]",
+      "default": "-",
+      "description": "Columns of table",
+      "descriptionZh": "表格列的配置描述，具体项见下表"
+    },
+    {
+      "name": "components",
+      "type": "[TableComponents](https://github.com/react-component/table/blob/7977f2b45a501728dddf0853466c1a013a7190dc/src/interface.ts#L180-L196)",
+      "default": "-",
+      "description": "Override default table elements, including row and expand-all icons through `ExpandIcon`",
+      "since": "`ExpandIcon`: 6.7.0",
+      "descriptionZh": "覆盖默认的 table 元素，包括通过 `ExpandIcon` 自定义行展开和全部展开图标"
+    },
+    {
+      "name": "dataSource",
+      "type": "object[]",
+      "default": "-",
+      "description": "Data record array to be displayed",
+      "descriptionZh": "数据数组"
+    },
+    {
+      "name": "expandable",
+      "type": "[expandable](#expandable)",
+      "default": "-",
+      "description": "Config expandable content",
+      "descriptionZh": "配置展开属性"
+    },
+    {
+      "name": "footer",
+      "type": "function(currentPageData)",
+      "default": "-",
+      "description": "Table footer renderer",
+      "descriptionZh": "表格尾部"
+    },
+    {
+      "name": "getPopupContainer",
+      "type": "(triggerNode) => HTMLElement",
+      "default": "() => TableHtmlElement",
+      "description": "The render container of dropdowns in table",
+      "descriptionZh": "设置表格内各类浮层的渲染节点，如筛选菜单"
+    },
+    {
+      "name": "loading",
+      "type": "boolean | [Spin Props](/components/spin/#api)",
+      "default": "false",
+      "description": "Loading status of table",
+      "descriptionZh": "页面是否加载中"
+    },
+    {
+      "name": "locale",
+      "type": "object",
+      "default": "[Default Value](https://github.com/ant-design/ant-design/blob/6dae4a7e18ad1ba193aedd5ab6867e1d823e2aa4/components/locale/en_US.tsx#L19-L37)",
+      "description": "The i18n text including filter, sort, empty text, etc",
+      "descriptionZh": "默认文案设置，目前包括排序、过滤、空数据文案"
+    },
+    {
+      "name": "pagination",
+      "type": "object | `false`",
+      "default": "-",
+      "description": "Config of pagination. You can ref table pagination [config](#pagination) or full [`pagination`](/components/pagination/) document, hide it by setting it to `false`",
+      "descriptionZh": "分页器，参考[配置项](#pagination)或 [pagination](/components/pagination) 文档，设为 false 时不展示和进行分页"
+    },
+    {
+      "name": "rowClassName",
+      "type": "function(record, index): string",
+      "default": "-",
+      "description": "Row's className",
+      "descriptionZh": "表格行的类名"
+    },
+    {
+      "name": "rowKey",
+      "type": "string | function(record): string",
+      "default": "`key`",
+      "description": "Row's unique key, could be a string or function that returns a string",
+      "descriptionZh": "表格行 key 的取值，可以是字符串或一个函数"
+    },
+    {
+      "name": "rowSelection",
+      "type": "object",
+      "default": "-",
+      "description": "Row selection [config](#rowselection)",
+      "descriptionZh": "表格行是否可选择，[配置项](#rowselection)"
+    },
+    {
+      "name": "rowHoverable",
+      "type": "boolean",
+      "default": "true",
+      "description": "Row hover",
+      "since": "5.16.0",
+      "descriptionZh": "表格行是否开启 hover 交互"
+    },
+    {
+      "name": "scroll",
+      "type": "object",
+      "default": "-",
+      "description": "Whether the table can be scrollable, [config](#scroll)",
+      "descriptionZh": "表格是否可滚动，也可以指定滚动区域的宽、高，[配置项](#scroll)"
+    },
+    {
+      "name": "showHeader",
+      "type": "boolean",
+      "default": "true",
+      "description": "Whether to show table header",
+      "descriptionZh": "是否显示表头"
+    },
+    {
+      "name": "showSorterTooltip",
+      "type": "boolean | [Tooltip props](/components/tooltip/#api) & `{target?: 'full-header' | 'sorter-icon' }`",
+      "default": "{ target: 'full-header' }",
+      "description": "The header show next sorter direction tooltip. It will be set as the property of Tooltip if its type is object",
+      "since": "5.16.0",
+      "descriptionZh": "表头是否显示下一次排序的 tooltip 提示。当参数类型为对象时，将被设置为 Tooltip 的属性"
+    },
+    {
+      "name": "size",
+      "type": "`large` | `medium` | `small`",
+      "default": "`large`",
+      "description": "Size of table",
+      "descriptionZh": "表格大小"
+    },
+    {
+      "name": "sortDirections",
+      "type": "Array",
+      "default": "[`ascend`, `descend`]",
+      "description": "Supported sort way, could be `ascend`, `descend`",
+      "descriptionZh": "支持的排序方式，取值为 `ascend` `descend`"
+    },
+    {
+      "name": "sticky",
+      "type": "boolean | `{offsetHeader?: number, offsetScroll?: number, getContainer?: () => HTMLElement}`",
+      "default": "-",
+      "description": "Set sticky header and scroll bar",
+      "since": "4.6.0 (getContainer: 4.7.0)",
+      "descriptionZh": "设置粘性头部和滚动条"
+    },
+    {
+      "name": "styles",
+      "type": "Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>",
+      "default": "-",
+      "description": "Customize inline style for each semantic structure inside the component. Supports object or function.",
+      "descriptionZh": "用于自定义组件内部各语义化结构的行内 style，支持对象或函数"
+    },
+    {
+      "name": "summary",
+      "type": "(currentData) => ReactNode",
+      "default": "-",
+      "description": "Summary content",
+      "descriptionZh": "总结栏"
+    },
+    {
+      "name": "tableLayout",
+      "type": "- | `auto` | `fixed`",
+      "default": "-<hr />`fixed` when header/columns are fixed, or using `column.ellipsis`",
+      "description": "The [table-layout](https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout) attribute of table element",
+      "descriptionZh": "表格元素的 [table-layout](https://developer.mozilla.org/zh-CN/docs/Web/CSS/table-layout) 属性，设为 `fixed` 表示内容不会影响列的布局"
+    },
+    {
+      "name": "title",
+      "type": "function(currentPageData)",
+      "default": "-",
+      "description": "Table title renderer",
+      "descriptionZh": "表格标题"
+    },
+    {
+      "name": "virtual",
+      "type": "boolean",
+      "default": "-",
+      "description": "Support virtual list",
+      "since": "5.9.0",
+      "descriptionZh": "支持虚拟列表"
+    },
+    {
+      "name": "onChange",
+      "type": "function(pagination, filters, sorter, extra: { currentDataSource: [], action: `paginate` | `sort` | `filter` })",
+      "default": "-",
+      "description": "Callback executed when pagination, filters or sorter is changed",
+      "descriptionZh": "分页、排序、筛选变化时触发"
+    },
+    {
+      "name": "onHeaderRow",
+      "type": "function(columns, index)",
+      "default": "-",
+      "description": "Set props on per header row",
+      "descriptionZh": "设置头部行属性"
+    },
+    {
+      "name": "onRow",
+      "type": "function(record, index)",
+      "default": "-",
+      "description": "Set props on per row",
+      "descriptionZh": "设置行属性"
+    },
+    {
+      "name": "onScroll",
+      "type": "function(event)",
+      "default": "-",
+      "description": "Triggered when the table body is scrolled. Note that only vertical scrolling will trigger the event when `virtual`",
+      "since": "5.16.0",
+      "descriptionZh": "表单内容滚动时触发（虚拟滚动下只有垂直滚动会触发事件）"
+    },
+    {
+      "name": "nativeElement",
+      "type": "HTMLDivElement",
+      "default": "-",
+      "description": "The wrap element",
+      "since": "5.11.0",
+      "descriptionZh": "最外层 div 元素"
+    },
+    {
+      "name": "scrollTo",
+      "type": "(config: { index?: number, key?: React.Key, top?: number, offset?: number, align?: 'start' | 'center' | 'end' | 'nearest' }) => void",
+      "default": "-",
+      "description": "Trigger to scroll to target position. `key` match with record `rowKey`. When `offset` is specified, the table will scroll to align the target row to the top with the given offset and not working with `top`. Optional `align` param to control alignment: `start` align to top, `center` align to center, `end` align to bottom, `nearest` smart align (default). `center` align is not supported in virtual scrolling mode",
+      "since": "5.11.0",
+      "descriptionZh": "滚动到目标位置（设置 `key` 时为 Record 对应的 `rowKey`）。当指定 `offset` 时，表格会滚动至目标行顶部对齐并应用指定的偏移量。`offset` 对 `top` 无效。可选 `align` 参数控制对齐方式：`start` 顶部对齐、`center` 中间对齐、`end` 底部对齐、`nearest` 智能对齐（默认）。虚拟滚动模式下不支持 `center` 对齐"
+    }
+  ],
+  "subComponentProps": {
+    "Table.Column": [
+      {
+        "name": "align",
+        "type": "`left` | `right` | `center`",
+        "default": "`left`",
+        "description": "The specify which way that column is aligned",
+        "descriptionZh": "设置列的对齐方式"
+      },
+      {
+        "name": "className",
+        "type": "string",
+        "default": "-",
+        "description": "The className of this column",
+        "descriptionZh": "列样式类名"
+      },
+      {
+        "name": "colSpan",
+        "type": "number",
+        "default": "-",
+        "description": "Span of this column's title",
+        "descriptionZh": "表头列合并，设置为 0 时，不渲染"
+      },
+      {
+        "name": "dataIndex",
+        "type": "string | string[]",
+        "default": "-",
+        "description": "Display field of the data record, support nest path by string array",
+        "descriptionZh": "列数据在数据项中对应的路径，支持通过数组查询嵌套路径"
+      },
+      {
+        "name": "defaultFilteredValue",
+        "type": "string[]",
+        "default": "-",
+        "description": "Default filtered values",
+        "descriptionZh": "默认筛选值"
+      },
+      {
+        "name": "filterResetToDefaultFilteredValue",
+        "type": "boolean",
+        "default": "false",
+        "description": "click the reset button, whether to restore the default filter",
+        "descriptionZh": "点击重置按钮的时候，是否恢复默认筛选值"
+      },
+      {
+        "name": "defaultSortOrder",
+        "type": "`ascend` | `descend`",
+        "default": "-",
+        "description": "Default order of sorted values",
+        "descriptionZh": "默认排序顺序"
+      },
+      {
+        "name": "ellipsis",
+        "type": "boolean | {showTitle?: boolean }",
+        "default": "false",
+        "description": "The ellipsis cell content, not working with sorter and filters for now.<br />tableLayout would be `fixed` when `ellipsis` is `true` or `{ showTitle?: boolean }`",
+        "since": "showTitle: 4.3.0",
+        "descriptionZh": "超过宽度将自动省略，暂不支持和排序筛选一起使用。<br />设置为 `true` 或 `{ showTitle?: boolean }` 时，表格布局将变成 `tableLayout=\"fixed\"`。"
+      },
+      {
+        "name": "filterDropdown",
+        "type": "ReactNode | (props: [FilterDropdownProps](https://github.com/ant-design/ant-design/blob/ecc54dda839619e921c0ace530408871f0281c2a/components/table/interface.tsx#L79)) => ReactNode",
+        "default": "-",
+        "description": "Customized filter overlay",
+        "descriptionZh": "可以自定义筛选菜单，此函数只负责渲染图层，需要自行编写各种交互"
+      },
+      {
+        "name": "filtered",
+        "type": "boolean",
+        "default": "false",
+        "description": "Whether the `dataSource` is filtered",
+        "descriptionZh": "标识数据是否经过过滤，筛选图标会高亮"
+      },
+      {
+        "name": "filteredValue",
+        "type": "string[]",
+        "default": "-",
+        "description": "Controlled filtered value, filter icon will highlight",
+        "descriptionZh": "筛选的受控属性，外界可用此控制列的筛选状态，值为已筛选的 value 数组"
+      },
+      {
+        "name": "filterIcon",
+        "type": "ReactNode | (filtered: boolean) => ReactNode",
+        "default": "-",
+        "description": "Customized filter icon",
+        "descriptionZh": "自定义 filter 图标。"
+      },
+      {
+        "name": "filterOnClose",
+        "type": "boolean",
+        "default": "true",
+        "description": "Whether to trigger filter when the filter menu closes",
+        "since": "5.15.0",
+        "descriptionZh": "是否在筛选菜单关闭时触发筛选"
+      },
+      {
+        "name": "filterMultiple",
+        "type": "boolean",
+        "default": "true",
+        "description": "Whether multiple filters can be selected",
+        "descriptionZh": "是否多选"
+      },
+      {
+        "name": "filterMode",
+        "type": "'menu' | 'tree'",
+        "default": "'menu'",
+        "description": "To specify the filter interface",
+        "since": "4.17.0",
+        "descriptionZh": "指定筛选菜单的用户界面"
+      },
+      {
+        "name": "filterSearch",
+        "type": "boolean | function(input, record):boolean",
+        "default": "false",
+        "description": "Whether to be searchable for filter menu",
+        "since": "boolean:4.17.0 function:4.19.0",
+        "descriptionZh": "筛选菜单项是否可搜索"
+      },
+      {
+        "name": "filters",
+        "type": "object[]",
+        "default": "-",
+        "description": "Filter menu config",
+        "descriptionZh": "表头的筛选菜单项"
+      },
+      {
+        "name": "filterDropdownProps",
+        "type": "[DropdownProps](/components/dropdown#api)",
+        "default": "-",
+        "description": "Customized dropdown props, `filterDropdownOpen` and `onFilterDropdownOpenChange` were available before `<5.22.0`",
+        "since": "5.22.0",
+        "descriptionZh": "自定义下拉属性，在 `<5.22.0` 之前可用 `filterDropdownOpen` 和 `onFilterDropdownOpenChange`"
+      },
+      {
+        "name": "fixed",
+        "type": "boolean | string",
+        "default": "false",
+        "description": "(IE not support) Set column to be fixed: `true`(same as `'start'`) `'start'` `'end'`",
+        "descriptionZh": "（IE 下无效）列是否固定，可选 `true` (等效于 `'start'`) `'start'` `'end'`"
+      },
+      {
+        "name": "key",
+        "type": "string",
+        "default": "-",
+        "description": "Unique key of this column, you can ignore this prop if you've set a unique `dataIndex`",
+        "descriptionZh": "React 需要的 key，如果已经设置了唯一的 `dataIndex`，可以忽略这个属性"
+      },
+      {
+        "name": "render",
+        "type": "(value: V, record: T, index: number): ReactNode",
+        "default": "-",
+        "description": "Renderer of the table cell. `value` is the value of current cell; `record` is the value object of current row; `index` is the row number. The return value should be a ReactNode",
+        "descriptionZh": "生成复杂数据的渲染函数，参数分别为当前单元格的值，当前行数据，行索引"
+      },
+      {
+        "name": "responsive",
+        "type": "[Breakpoint](https://github.com/ant-design/ant-design/blob/015109b42b85c63146371b4e32b883cf97b088e8/components/_util/responsiveObserve.ts#L1)[]",
+        "default": "-",
+        "description": "The list of breakpoints at which to display this column. Always visible if not set",
+        "since": "4.2.0",
+        "descriptionZh": "响应式 breakpoint 配置列表。未设置则始终可见。"
+      },
+      {
+        "name": "rowScope",
+        "type": "`row` | `rowgroup`",
+        "default": "-",
+        "description": "Set scope attribute for all cells in this column",
+        "since": "5.1.0",
+        "descriptionZh": "设置列范围"
+      },
+      {
+        "name": "shouldCellUpdate",
+        "type": "(record, prevRecord) => boolean",
+        "default": "-",
+        "description": "Control cell render logic",
+        "since": "4.3.0",
+        "descriptionZh": "自定义单元格渲染时机"
+      },
+      {
+        "name": "showSorterTooltip",
+        "type": "boolean | [Tooltip props](/components/tooltip/) & `{target?: 'full-header' | 'sorter-icon' }`",
+        "default": "{ target: 'full-header' }",
+        "description": "If header show next sorter direction tooltip, override `showSorterTooltip` in table",
+        "since": "5.16.0",
+        "descriptionZh": "表头显示下一次排序的 tooltip 提示, 覆盖 table 中 `showSorterTooltip`"
+      },
+      {
+        "name": "sortDirections",
+        "type": "Array",
+        "default": "[`ascend`, `descend`]",
+        "description": "Supported sort way, override `sortDirections` in `Table`, could be `ascend`, `descend`",
+        "descriptionZh": "支持的排序方式，覆盖 `Table` 中 `sortDirections`， 取值为 `ascend` `descend`"
+      },
+      {
+        "name": "sorter",
+        "type": "function | boolean | { compare: function, multiple: number }",
+        "default": "-",
+        "description": "Sort function for local sort, see [Array.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)'s compareFunction. If it is server-side sorting, set to `true`, but if you want to support multi-column sorting, you can set it to `{ multiple: number }`",
+        "descriptionZh": "排序函数，本地排序使用一个函数(参考 [Array.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) 的 compareFunction)。需要服务端排序可设为 `true`（单列排序） 或 `{ multiple: number }`（多列排序）"
+      },
+      {
+        "name": "sortOrder",
+        "type": "`ascend` | `descend` | null",
+        "default": "-",
+        "description": "Order of sorted values: `ascend` `descend` `null`",
+        "descriptionZh": "排序的受控属性，外界可用此控制列的排序，可设置为 `ascend` `descend` `null`"
+      },
+      {
+        "name": "sortIcon",
+        "type": "(props: { sortOrder }) => ReactNode",
+        "default": "-",
+        "description": "Customized sort icon",
+        "since": "5.6.0",
+        "descriptionZh": "自定义 sort 图标"
+      },
+      {
+        "name": "title",
+        "type": "ReactNode | ({ sortColumns, filters }) => ReactNode",
+        "default": "-",
+        "description": "Title of this column",
+        "descriptionZh": "列头显示文字（函数用法 `3.10.0` 后支持）"
+      },
+      {
+        "name": "width",
+        "type": "string | number",
+        "default": "-",
+        "description": "Width of this column ([width not working?](https://github.com/ant-design/ant-design/issues/13825#issuecomment-449889241))",
+        "descriptionZh": "列宽度（[指定了也不生效？](https://github.com/ant-design/ant-design/issues/13825#issuecomment-449889241)）"
+      },
+      {
+        "name": "minWidth",
+        "type": "number",
+        "default": "-",
+        "description": "Min width of this column, only works when `tableLayout=\"auto\"`",
+        "since": "5.21.0",
+        "descriptionZh": "最小列宽度，只在 `tableLayout=\"auto\"` 时有效"
+      },
+      {
+        "name": "hidden",
+        "type": "boolean",
+        "default": "false",
+        "description": "Hidden this column",
+        "since": "5.13.0",
+        "descriptionZh": "隐藏列"
+      },
+      {
+        "name": "onCell",
+        "type": "function(record, rowIndex)",
+        "default": "-",
+        "description": "Set props on per cell",
+        "descriptionZh": "设置单元格属性"
+      },
+      {
+        "name": "onFilter",
+        "type": "function(value, record) => boolean",
+        "default": "-",
+        "description": "Function that determines if the row is displayed when filtered",
+        "descriptionZh": "本地模式下，确定筛选的运行函数"
+      },
+      {
+        "name": "onHeaderCell",
+        "type": "function(column)",
+        "default": "-",
+        "description": "Set props on per header cell",
+        "descriptionZh": "设置头部单元格属性"
+      }
+    ],
+    "Table.ColumnGroup": [
+      {
+        "name": "title",
+        "type": "ReactNode",
+        "default": "-",
+        "description": "Title of the column group",
+        "descriptionZh": "列头显示文字"
+      }
+    ],
+    "Table.pagination": [
+      {
+        "name": "placement",
+        "type": "Array",
+        "default": "[`bottomEnd`]",
+        "description": "Specify the placement of `Pagination`, could be`topStart` | `topCenter` | `topEnd` |`bottomStart` | `bottomCenter` | `bottomEnd` | `none`",
+        "descriptionZh": "指定分页显示的位置， 取值为`topStart` | `topCenter` | `topEnd` |`bottomStart` | `bottomCenter` | `bottomEnd`| `none`"
+      },
+      {
+        "name": "position",
+        "type": "Array",
+        "default": "[`bottomRight`]",
+        "description": "Specify the position of `Pagination`, could be`topLeft` | `topCenter` | `topRight` |`bottomLeft` | `bottomCenter` | `bottomRight` | `none`, please use `placement` instead",
+        "deprecated": true,
+        "descriptionZh": "指定分页显示的位置， 取值为`topLeft` | `topCenter` | `topRight` |`bottomLeft` | `bottomCenter` | `bottomRight` | `none`，请使用 `placement` 替换"
+      }
+    ],
+    "Table.expandable": [
+      {
+        "name": "childrenColumnName",
+        "type": "string",
+        "default": "children",
+        "description": "The column contains children to display",
+        "descriptionZh": "指定树形结构的列名"
+      },
+      {
+        "name": "columnTitle",
+        "type": "ReactNode | ({ expandIcon }) => ReactNode",
+        "default": "-",
+        "description": "Set the title of the expand column",
+        "since": "4.23.0, function: 6.7.0",
+        "descriptionZh": "自定义展开列表头"
+      },
+      {
+        "name": "columnWidth",
+        "type": "string | number",
+        "default": "-",
+        "description": "Set the width of the expand column",
+        "descriptionZh": "自定义展开列宽度"
+      },
+      {
+        "name": "defaultExpandAllRows",
+        "type": "boolean",
+        "default": "false",
+        "description": "Expand all rows initially",
+        "descriptionZh": "初始时，是否展开所有行"
+      },
+      {
+        "name": "defaultExpandedRowKeys",
+        "type": "string[]",
+        "default": "-",
+        "description": "Initial expanded row keys",
+        "descriptionZh": "默认展开的行"
+      },
+      {
+        "name": "expandedRowClassName",
+        "type": "string | (record, index, indent) => string",
+        "default": "-",
+        "description": "Expanded row's className",
+        "since": "string: 5.22.0",
+        "descriptionZh": "展开行的 className"
+      },
+      {
+        "name": "expandedRowKeys",
+        "type": "string[]",
+        "default": "-",
+        "description": "Current expanded row keys",
+        "descriptionZh": "展开的行，控制属性"
+      },
+      {
+        "name": "expandedRowRender",
+        "type": "function(record, index, indent, expanded): ReactNode",
+        "default": "-",
+        "description": "Expanded container render for each row",
+        "descriptionZh": "额外的展开行"
+      },
+      {
+        "name": "expandIcon",
+        "type": "function(props): ReactNode",
+        "default": "-",
+        "description": "Deprecated. Use `components.ExpandIcon` instead. This remains a row-only fallback",
+        "deprecated": true,
+        "descriptionZh": "已废弃，请使用 `components.ExpandIcon`。此配置仅作为行展开图标的后备方案保留"
+      },
+      {
+        "name": "expandRowByClick",
+        "type": "boolean",
+        "default": "false",
+        "description": "Whether to expand row by clicking anywhere in the whole row",
+        "descriptionZh": "通过点击行来展开子行"
+      },
+      {
+        "name": "fixed",
+        "type": "boolean | string",
+        "default": "false",
+        "description": "Whether the expansion icon is fixed. Optional true `left` `right`",
+        "since": "4.16.0",
+        "descriptionZh": "控制展开图标是否固定，可选 `true` `'left'` `'right'`"
+      },
+      {
+        "name": "forceRender",
+        "type": "boolean",
+        "default": "false",
+        "description": "Force render expanded row content before expansion. In virtual mode, only rows currently mounted by the virtual list are force-rendered; off-screen rows may still be unmounted",
+        "since": "6.6.0",
+        "descriptionZh": "在展开前强制渲染展开行内容。虚拟模式下，仅强制渲染虚拟列表当前挂载的行；屏幕外的行仍可能被卸载"
+      },
+      {
+        "name": "indentSize",
+        "type": "number",
+        "default": "15",
+        "description": "Indent size in pixels of tree data",
+        "descriptionZh": "展示树形数据时，每层缩进的宽度，以 px 为单位"
+      },
+      {
+        "name": "rowExpandable",
+        "type": "(record) => boolean",
+        "default": "-",
+        "description": "Enable row can be expandable",
+        "descriptionZh": "设置是否允许行展开（`dataSource` 若存在 `children` 字段将不生效）"
+      },
+      {
+        "name": "showExpandAll",
+        "type": "boolean",
+        "default": "false",
+        "description": "Show an expand-all control for expandable rows on the current page. Only available with `expandedRowRender`",
+        "since": "6.7.0",
+        "descriptionZh": "是否显示当前页可展开行的全部展开控件，仅在使用 `expandedRowRender` 时可用"
+      },
+      {
+        "name": "showExpandColumn",
+        "type": "boolean",
+        "default": "true",
+        "description": "Show expand column",
+        "since": "4.18.0",
+        "descriptionZh": "是否显示展开图标列"
+      },
+      {
+        "name": "onExpand",
+        "type": "function(expanded, record)",
+        "default": "-",
+        "description": "Callback executed when the row expand icon is clicked",
+        "descriptionZh": "点击展开图标时触发"
+      },
+      {
+        "name": "onExpandAll",
+        "type": "(expanded: boolean) => void",
+        "default": "-",
+        "description": "Callback executed when the expand-all icon is clicked",
+        "since": "6.7.0",
+        "descriptionZh": "点击全部展开图标时触发"
+      },
+      {
+        "name": "onExpandedRowsChange",
+        "type": "function(expandedRows)",
+        "default": "-",
+        "description": "Callback executed when the expanded rows change",
+        "descriptionZh": "展开的行变化时触发"
+      },
+      {
+        "name": "expandedRowOffset",
+        "type": "number",
+        "default": "-",
+        "description": "Deprecated: Expand the number of offset columns of the row. After setting, it will force the columns in front of it to be fixed columns. Please use'Table. EXPAND_COLUMN 'instead and control the position through column order",
+        "since": "5.26.0",
+        "deprecated": true,
+        "descriptionZh": "废弃：展开行的偏移列数，设置后会强制将其前面的列设为固定列。请改用 `Table.EXPAND_COLUMN` 并通过列顺序控制位置"
+      }
+    ],
+    "Table.rowSelection": [
+      {
+        "name": "align",
+        "type": "`left` | `right` | `center`",
+        "default": "`left`",
+        "description": "Set the alignment of selection column",
+        "since": "5.25.0",
+        "descriptionZh": "设置选择列的对齐方式"
+      },
+      {
+        "name": "checkStrictly",
+        "type": "boolean",
+        "default": "true",
+        "description": "Check table row precisely; parent row and children rows are not associated",
+        "since": "4.4.0",
+        "descriptionZh": "checkable 状态下节点选择完全受控（父子数据选中状态不再关联）"
+      },
+      {
+        "name": "columnTitle",
+        "type": "ReactNode | (originalNode: ReactNode) => ReactNode",
+        "default": "-",
+        "description": "Set the title of the selection column",
+        "descriptionZh": "自定义列表选择框标题"
+      },
+      {
+        "name": "columnWidth",
+        "type": "string | number",
+        "default": "`32px`",
+        "description": "Set the width of the selection column",
+        "descriptionZh": "自定义列表选择框宽度"
+      },
+      {
+        "name": "fixed",
+        "type": "boolean",
+        "default": "-",
+        "description": "Fixed selection column on the left",
+        "descriptionZh": "把选择框列固定在左边"
+      },
+      {
+        "name": "getCheckboxProps",
+        "type": "function(record)",
+        "default": "-",
+        "description": "Get Checkbox or Radio props",
+        "descriptionZh": "选择框的默认属性配置"
+      },
+      {
+        "name": "getTitleCheckboxProps",
+        "type": "function()",
+        "default": "-",
+        "description": "Get title Checkbox props",
+        "descriptionZh": "标题选择框的默认属性配置"
+      },
+      {
+        "name": "hideSelectAll",
+        "type": "boolean",
+        "default": "false",
+        "description": "Hide the selectAll checkbox and custom selection",
+        "since": "4.3.0",
+        "descriptionZh": "隐藏全选勾选框与自定义选择项"
+      },
+      {
+        "name": "preserveSelectedRowKeys",
+        "type": "boolean",
+        "default": "-",
+        "description": "Keep selection `key` even when it removed from `dataSource`",
+        "since": "4.4.0",
+        "descriptionZh": "当数据被删除时仍然保留选项的 `key`"
+      },
+      {
+        "name": "renderCell",
+        "type": "(checked: boolean, record: T, index: number, originNode: ReactNode): ReactNode",
+        "default": "-",
+        "description": "Renderer of the table cell. Same as `render` in column",
+        "since": "4.1.0",
+        "descriptionZh": "渲染勾选框，用法与 Column 的 `render` 相同"
+      },
+      {
+        "name": "selectedRowKeys",
+        "type": "string[] | number[]",
+        "default": "[]",
+        "description": "Controlled selected row keys",
+        "descriptionZh": "指定选中项的 key 数组，需要和 onChange 进行配合"
+      },
+      {
+        "name": "defaultSelectedRowKeys",
+        "type": "string[] | number[]",
+        "default": "[]",
+        "description": "Default selected row keys",
+        "descriptionZh": "默认选中项的 key 数组"
+      },
+      {
+        "name": "selections",
+        "type": "object[] | boolean",
+        "default": "-",
+        "description": "Custom selection [config](#selection), only displays default selections when set to `true`",
+        "descriptionZh": "自定义选择项 [配置项](#selection), 设为 `true` 时使用默认选择项"
+      },
+      {
+        "name": "type",
+        "type": "`checkbox` | `radio`",
+        "default": "`checkbox`",
+        "description": "`checkbox` or `radio`",
+        "descriptionZh": "多选/单选"
+      },
+      {
+        "name": "onCell",
+        "type": "function(record, rowIndex)",
+        "default": "-",
+        "description": "Set props on per cell. Same as `onCell` in column",
+        "since": "5.5.0",
+        "descriptionZh": "设置单元格属性，用法与 Column 的 `onCell` 相同"
+      },
+      {
+        "name": "onChange",
+        "type": "function(selectedRowKeys, selectedRows, info: { type })",
+        "default": "-",
+        "description": "Callback executed when selected rows change",
+        "since": "`info.type`: 4.21.0",
+        "descriptionZh": "选中项发生变化时的回调"
+      },
+      {
+        "name": "onSelect",
+        "type": "function(record, selected, selectedRows, nativeEvent)",
+        "default": "-",
+        "description": "Callback executed when select/deselect one row",
+        "descriptionZh": "用户手动选择/取消选择某行的回调"
+      }
+    ],
+    "Table.scroll": [
+      {
+        "name": "scrollToFirstRowOnChange",
+        "type": "boolean",
+        "default": "-",
+        "description": "Whether to scroll to the top of the table when paging, sorting, filtering changes",
+        "descriptionZh": "当分页、排序、筛选变化后是否滚动到表格顶部"
+      },
+      {
+        "name": "x",
+        "type": "string | number | true",
+        "default": "-",
+        "description": "Set horizontal scrolling, can also be used to specify the width of the scroll area, could be number, percent value, true and ['max-content'](https://developer.mozilla.org/en-US/docs/Web/CSS/width#max-content)",
+        "descriptionZh": "设置横向滚动，也可用于指定滚动区域的宽，可以设置为像素值，百分比，`true` 和 ['max-content'](https://developer.mozilla.org/zh-CN/docs/Web/CSS/width#max-content)"
+      },
+      {
+        "name": "y",
+        "type": "string | number",
+        "default": "-",
+        "description": "Set vertical scrolling, can also be used to specify the height of the scroll area, could be string or number",
+        "descriptionZh": "设置纵向滚动，也可用于指定滚动区域的高，可以设置为像素值"
+      }
+    ],
+    "Table.selection": [
+      {
+        "name": "key",
+        "type": "string",
+        "default": "-",
+        "description": "Unique key of this selection",
+        "descriptionZh": "React 需要的 key，建议设置"
+      },
+      {
+        "name": "text",
+        "type": "ReactNode",
+        "default": "-",
+        "description": "Display text of this selection",
+        "descriptionZh": "选择项显示的文字"
+      },
+      {
+        "name": "onSelect",
+        "type": "function(changeableRowKeys)",
+        "default": "-",
+        "description": "Callback executed when this selection is clicked",
+        "descriptionZh": "选择项点击回调"
+      }
+    ]
+  },
+  "commonProps": [
+    {
+      "name": "className",
+      "type": "string",
+      "default": "-",
+      "description": "Additional CSS class",
+      "descriptionZh": "额外的 CSS 类名"
+    },
+    {
+      "name": "style",
+      "type": "CSSProperties",
+      "default": "-",
+      "description": "Additional style",
+      "descriptionZh": "额外的样式"
+    },
+    {
+      "name": "rootClassName",
+      "type": "string",
+      "default": "-",
+      "description": "ClassName on the root element",
+      "descriptionZh": "根元素的类名"
+    }
+  ],
+  "htmlElement": "div",
+  "faq": [
+    {
+      "question": "How to hide pagination when single page or no data?",
+      "answer": "You can set `hideOnSinglePage` with `pagination` prop."
+    },
+    {
+      "question": "Table will return to first page when filter data.",
+      "answer": "Table total page count usually reduce after filter data, we by default return to first page in case of current page is out of filtered results.\n\nYou may need to keep current page after filtering when fetch data from remote service, please check [this demo](https://codesandbox.io/s/yuanchengjiazaishuju-ant-design-demo-7y2uf) as workaround.\n\nAlso you can use the action from extra param to determine when return to first page."
+    },
+    {
+      "question": "Why Table pagination show size changer?",
+      "answer": "In order to improve user experience, Pagination show size changer by default when `total > 50` since `4.1.0`. You can set `showSizeChanger=false` to disable this feature."
+    },
+    {
+      "question": "Why Table fully render when state change?",
+      "answer": "Table can not tell what state used in `columns.render`, so it always need fully render to avoid sync issue. You can use `column.shouldCellUpdate` to control render."
+    },
+    {
+      "question": "How should I troubleshoot Table performance issues?",
+      "answer": "React DevTools may add extra overhead when profiling complex tables, especially with many rows or cells. If you notice obvious lag, please try disabling React DevTools or testing in a clean browser environment first. If the performance issue can still be reproduced in a normal runtime, feel free to provide a minimal reproduction so we can continue to investigate."
+    },
+    {
+      "question": "How to handle fixed column display over the mask layout?",
+      "answer": "Fixed column use `z-index` to make it over other columns. You will find sometimes fixed columns also over your mask layout. You can set `z-index` on your mask layout to resolve."
+    },
+    {
+      "question": "How to custom render Table Checkbox（For example, adding Tooltip）?",
+      "answer": "Since `4.1.0`, You can use [`rowSelection.renderCell`](https://ant.design/components/table/#rowselection) to custom render Table Checkbox. If you want to add Tooltip, please refer to this [demo](https://codesandbox.io/s/table-row-tooltip-v79j2v)."
+    },
+    {
+      "question": "Why does components.body.wrapper or components.body.row report an error when virtual is enabled?",
+      "answer": "Because virtual table needs to get its ref to do some calculations, so you need to use `React.forwardRef` wrapper and pass the ref to the dom. Like this:\n\n```tsx\nconst EditableRow = React.forwardRef<HTMLTableRowElement, EditableRowProps>(\n  ({ index, ...props }, ref) => {\n    const [form] = Form.useForm();\n    return (\n      <Form form={form} component={false}>\n        <EditableContext.Provider value={form}>\n          <tr {...props} ref={ref} />\n        </EditableContext.Provider>\n      </Form>\n    );\n  },\n);\n```\n\nFor scenarios with fixed row heights and vertical scrolling, you can use the following method:\n\n```tsx\n<Table\n  //@ts-ignore // This property is not exported, but it can be passed through to the internal virtual scrolling\n  listItemHeight={36} // This helps virtual scrolling calculate the height correctly, with each row fixed at 36px\n/>\n```"
+    }
+  ]
+}
+# exit=0

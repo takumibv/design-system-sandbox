@@ -1,0 +1,31 @@
+$ npx antd info Divider
+# 目的: Divider の props と既定値を確認（記憶に頼らない）
+# 実行日時: 2026-11-05T10:13:19Z
+
+Divider (分割线) — A divider line separates different content.
+
+Property           Type                                                                                                                           Default       Since 
+-----------------  -----------------------------------------------------------------------------------------------------------------------------  ------------  ------
+children           ReactNode                                                                                                                      -             -     
+classNames         Record<[SemanticDOM](#semantic-dom), string> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), string>                -             -     
+dashed             boolean                                                                                                                        false         -     
+orientation        `horizontal` | `vertical`                                                                                                      `horizontal`  -     
+orientationMargin  string | number                                                                                                                -             -     
+plain              boolean                                                                                                                        false         4.2.0 
+styles             Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>  -             -     
+size               `small` | `medium` | `large`                                                                                                   -             5.25.0
+titlePlacement     `start` | `end` | `center`                                                                                                     `center`      -     
+type               `horizontal` | `vertical`                                                                                                      `horizontal`  -     
+variant            `dashed` | `dotted` | `solid`                                                                                                  solid         5.20.0
+vertical           boolean                                                                                                                        false         -     
+
+Common Props (inherited by all components, not listed individually)
+
+Property       Type           Default
+-------------  -------------  -------
+className      string         -      
+style          CSSProperties  -      
+rootClassName  string         -      
+
+Extends <div> — supports native HTML div attributes.
+# exit=0

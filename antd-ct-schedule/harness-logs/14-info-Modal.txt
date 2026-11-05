@@ -1,0 +1,94 @@
+$ npx antd info Modal
+# 目的: Modal の props と既定値を確認（記憶に頼らない）
+# 実行日時: 2026-11-05T10:13:14Z
+
+Modal (对话框) — Display a modal dialog box, providing a title, content area, and action buttons.
+
+Property                Type                                                                                                                           Default                  Since                
+----------------------  -----------------------------------------------------------------------------------------------------------------------------  -----------------------  ---------------------
+afterClose              function                                                                                                                       -                        -                    
+cancelButtonProps       [ButtonProps](/components/button/#api)                                                                                         -                        -                    
+cancelText              ReactNode                                                                                                                      `Cancel`                 -                    
+centered                boolean                                                                                                                        false                    -                    
+classNames              Record<[SemanticDOM](#semantic-dom), string> | (info: { props }) => Record<[SemanticDOM](#semantic-dom), string>               -                        -                    
+closable                boolean | [ClosableType](#closabletype)                                                                                        true                     -                    
+closeIcon               ReactNode                                                                                                                      <CloseOutlined />        -                    
+confirmLoading          boolean                                                                                                                        false                    -                    
+destroyOnClose          boolean                                                                                                                        false                    -                    
+destroyOnHidden         boolean                                                                                                                        false                    5.25.0               
+focusTriggerAfterClose  boolean                                                                                                                        true                     4.9.0                
+footer                  ReactNode | (originNode: ReactNode, extra: { OkBtn: React.FC, CancelBtn: React.FC }) => ReactNode                              (OK and Cancel buttons)  renderFunction: 5.9.0
+forceRender             boolean                                                                                                                        false                    -                    
+focusable               `{ trap?: boolean, focusTriggerAfterClose?: boolean }`                                                                         -                        6.2.0                
+getContainer            HTMLElement | () => HTMLElement | Selectors | false                                                                            document.body            -                    
+keyboard                boolean                                                                                                                        true                     -                    
+mask                    boolean | `{enabled?: boolean, blur?: boolean, closable?: boolean}`                                                            true                     mask.closable: 6.3.0 
+maskClosable            boolean                                                                                                                        true                     -                    
+modalRender             (node: ReactNode) => ReactNode                                                                                                 -                        4.7.0                
+okButtonProps           [ButtonProps](/components/button/#api)                                                                                         -                        -                    
+okText                  ReactNode                                                                                                                      `OK`                     -                    
+okType                  string                                                                                                                         `primary`                -                    
+style                   CSSProperties                                                                                                                  -                        -                    
+styles                  Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>  -                        -                    
+loading                 boolean                                                                                                                        -                        5.18.0               
+scrollLock              boolean                                                                                                                        true                     6.5.0                
+title                   ReactNode                                                                                                                      -                        -                    
+open                    boolean                                                                                                                        false                    -                    
+width                   string | number | [Breakpoint](/components/grid#col)                                                                           520                      Breakpoint: 5.23.0   
+wrapClassName           string                                                                                                                         -                        -                    
+zIndex                  number                                                                                                                         1000                     -                    
+onCancel                function(e)                                                                                                                    -                        -                    
+onOk                    function(e)                                                                                                                    -                        -                    
+afterOpenChange         (open: boolean) => void                                                                                                        -                        5.4.0                
+
+Modal.method()
+
+Property                   Type                                                                                               Default                      Since                
+-------------------------  -------------------------------------------------------------------------------------------------  ---------------------------  ---------------------
+afterClose                 function                                                                                           -                            4.9.0                
+autoFocusButton            null | `ok` | `cancel`                                                                             `ok`                         -                    
+cancelButtonProps          [ButtonProps](/components/button/#api)                                                             -                            -                    
+cancelText                 string                                                                                             `Cancel`                     -                    
+centered                   boolean                                                                                            false                        -                    
+className                  string                                                                                             -                            -                    
+closable                   boolean | [ClosableType](#closabletype)                                                            false                        -                    
+closeIcon                  ReactNode                                                                                          undefined                    4.9.0                
+content                    ReactNode                                                                                          -                            -                    
+focusable.autoFocusButton  null | `ok` | `cancel`                                                                             `ok`                         6.2.0                
+footer                     ReactNode | (originNode: ReactNode, extra: { OkBtn: React.FC, CancelBtn: React.FC }) => ReactNode  -                            renderFunction: 5.9.0
+getContainer               HTMLElement | () => HTMLElement | Selectors | false                                                document.body                -                    
+icon                       ReactNode                                                                                          <ExclamationCircleFilled />  -                    
+keyboard                   boolean                                                                                            true                         -                    
+mask                       boolean | `{enabled?: boolean, blur?: boolean, closable?: boolean}`                                true                         -                    
+maskClosable               boolean                                                                                            false                        -                    
+scrollLock                 boolean                                                                                            true                         6.5.0                
+okButtonProps              [ButtonProps](/components/button/#api)                                                             -                            -                    
+okText                     string                                                                                             `OK`                         -                    
+okType                     string                                                                                             `primary`                    -                    
+style                      CSSProperties                                                                                      -                            -                    
+title                      ReactNode                                                                                          -                            -                    
+width                      string | number                                                                                    416                          -                    
+wrapClassName              string                                                                                             -                            4.18.0               
+zIndex                     number                                                                                             1000                         -                    
+onCancel                   function(close)                                                                                    -                            -                    
+onOk                       function(close)                                                                                    -                            -                    
+
+Modal.ClosableType
+
+Property    Type       Default    Since
+----------  ---------  ---------  -----
+afterClose  function   -          -    
+closeIcon   ReactNode  undefined  -    
+disabled    boolean    false      -    
+onClose     Function   undefined  -    
+
+Common Props (inherited by all components, not listed individually)
+
+Property       Type           Default
+-------------  -------------  -------
+className      string         -      
+style          CSSProperties  -      
+rootClassName  string         -      
+
+Extends <div> — supports native HTML div attributes.
+# exit=0

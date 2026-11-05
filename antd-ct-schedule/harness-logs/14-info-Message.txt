@@ -1,0 +1,42 @@
+$ npx antd info Message
+# 目的: Message の props と既定値を確認（記憶に頼らない）
+# 実行日時: 2026-11-05T10:13:20Z
+
+Message (全局提示) — Display global messages as feedback in response to user operations.
+
+Property      Type                                                                                                                                           Default  Since
+------------  ---------------------------------------------------------------------------------------------------------------------------------------------  -------  -----
+content       ReactNode | config                                                                                                                             -        -    
+duration      number                                                                                                                                         3        -    
+onClose       function                                                                                                                                       -        -    
+className     string                                                                                                                                         -        -    
+classNames    Record<[SemanticDOM](#semantic-dom), string> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), string>                                -        6.0.0
+icon          ReactNode                                                                                                                                      -        -    
+pauseOnHover  boolean                                                                                                                                        true     -    
+key           string | number                                                                                                                                -        -    
+style         [CSSProperties](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/e434515761b36830c3e58a970abf5186f005adac/types/react/index.d.ts#L794)  -        -    
+styles        Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>                  -        6.0.0
+onClick       function                                                                                                                                       -        -    
+
+Message.Global static methods
+
+Property      Type                               Default              Since
+------------  ---------------------------------  -------------------  -----
+duration      number                             3                    -    
+getContainer  () => HTMLElement                  () => document.body  -    
+maxCount      number                             -                    -    
+prefixCls     string                             `ant-message`        4.5.0
+rtl           boolean                            false                -    
+stack         boolean | `{ threshold: number }`  false                6.4.0
+top           string | number                    8                    -    
+
+Common Props (inherited by all components, not listed individually)
+
+Property       Type           Default
+-------------  -------------  -------
+className      string         -      
+style          CSSProperties  -      
+rootClassName  string         -      
+
+Extends <div> — supports native HTML div attributes.
+# exit=0

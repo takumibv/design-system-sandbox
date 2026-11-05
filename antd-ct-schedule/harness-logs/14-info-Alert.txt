@@ -1,0 +1,56 @@
+$ npx antd info Alert
+# 目的: Alert の props と既定値を確認（記憶に頼らない）
+# 実行日時: 2026-11-05T10:13:12Z
+
+Alert (警告提示) — Display warning messages that require attention.
+
+Property     Type                                                                                                                            Default                                        Since
+-----------  ------------------------------------------------------------------------------------------------------------------------------  ---------------------------------------------  -----
+action       ReactNode                                                                                                                       -                                              -    
+afterClose   () => void                                                                                                                      -                                              -    
+banner       boolean                                                                                                                         false                                          -    
+variant      `outlined` | `filled`                                                                                                           `outlined`                                     6.4.0
+classNames   Record<[SemanticDOM](#semantic-dom), string> | (info: { props }) => Record<[SemanticDOM](#semantic-dom), string>                -                                              -    
+closable     boolean | [ClosableType](#closabletype) & React.AriaAttributes                                                                  `false`                                        -    
+closeIcon    ReactNode                                                                                                                       -                                              ×    
+description  ReactNode                                                                                                                       -                                              -    
+errorIcon    ReactNode                                                                                                                       -                                              ×    
+icon         ReactNode                                                                                                                       -                                              -    
+infoIcon     ReactNode                                                                                                                       -                                              ×    
+message      ReactNode                                                                                                                       -                                              -    
+onClose      (e: MouseEvent) => void                                                                                                         -                                              -    
+closeText    ReactNode                                                                                                                       -                                              -    
+showIcon     boolean                                                                                                                         false, in `banner` mode default is true        -    
+styles       Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props }) => Record<[SemanticDOM](#semantic-dom), CSSProperties>  -                                              -    
+successIcon  ReactNode                                                                                                                       -                                              ×    
+title        ReactNode                                                                                                                       -                                              -    
+type         string                                                                                                                          `info`, in `banner` mode default is `warning`  -    
+warningIcon  ReactNode                                                                                                                       -                                              ×    
+
+Alert.ClosableType
+
+Property    Type                     Default  Since
+----------  -----------------------  -------  -----
+afterClose  function                 -        -    
+closeIcon   ReactNode                -        -    
+disabled    boolean                  false    -    
+onClose     (e: MouseEvent) => void  -        -    
+
+Alert.ErrorBoundary
+
+Property     Type       Default            Since
+-----------  ---------  -----------------  -----
+description  ReactNode  {{ error stack }}  -    
+message      ReactNode  {{ error }}        -    
+title        ReactNode  {{ error }}        -    
+
+Common Props (inherited by all components, not listed individually)
+
+Property       Type           Default
+-------------  -------------  -------
+className      string         -      
+style          CSSProperties  -      
+rootClassName  string         -      
+
+Extends <div> — supports native HTML div attributes.
+# exit=0

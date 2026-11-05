@@ -1,0 +1,45 @@
+$ npx antd info Breadcrumb
+# 目的: Breadcrumb の props と既定値を確認（記憶に頼らない）
+# 実行日時: 2026-11-05T10:13:13Z
+
+Breadcrumb (面包屑) — Display the current location within a hierarchy. And allow going back to states higher up in the hierarchy.
+
+Property      Type                                                                                                                           Default             Since
+------------  -----------------------------------------------------------------------------------------------------------------------------  ------------------  -----
+classNames    Record<[SemanticDOM](#semantic-dom), string> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), string>                -                   6.0.0
+dropdownIcon  ReactNode                                                                                                                      `<DownOutlined />`  6.2.0
+items         [ItemType[]](#itemtype)                                                                                                        -                   5.3.0
+itemRender    (route, params, routes, paths) => ReactNode                                                                                    -                   -    
+params        object                                                                                                                         -                   -    
+separator     ReactNode                                                                                                                      `/`                 -    
+styles        Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>  -                   6.0.0
+
+Breadcrumb.RouteItemType
+
+Property       Type                                Default  Since 
+-------------  ----------------------------------  -------  ------
+className      string                              -        -     
+dropdownProps  [Dropdown](/components/dropdown)    -        -     
+href           string                              -        -     
+path           string                              -        -     
+menu           [MenuProps](/components/menu/#api)  -        4.24.0
+onClick        (e:MouseEvent) => void              -        -     
+title          ReactNode                           -        5.3.0 
+
+Breadcrumb.SeparatorType
+
+Property   Type         Default  Since
+---------  -----------  -------  -----
+type       `separator`  -        5.3.0
+separator  ReactNode    `/`      5.3.0
+
+Common Props (inherited by all components, not listed individually)
+
+Property       Type           Default
+-------------  -------------  -------
+className      string         -      
+style          CSSProperties  -      
+rootClassName  string         -      
+
+Extends <div> — supports native HTML div attributes.
+# exit=0

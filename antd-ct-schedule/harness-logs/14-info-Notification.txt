@@ -1,0 +1,68 @@
+$ npx antd info Notification
+# 目的: Notification の props と既定値を確認（記憶に頼らない）
+# 実行日時: 2026-11-05T10:13:20Z
+
+Notification (通知提醒框) — Prompt notification message globally.
+
+Property      Type                                                                                                                                           Default              Since                                                           
+------------  ---------------------------------------------------------------------------------------------------------------------------------------------  -------------------  ----------------------------------------------------------------
+actions       ReactNode                                                                                                                                      -                    5.24.0                                                          
+btn           ReactNode                                                                                                                                      -                    -                                                               
+className     string                                                                                                                                         -                    -                                                               
+classNames    Record<[SemanticDOM](#semantic-dom), string> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), string>                                -                    -                                                               
+closable      boolean | [ClosableType](#closabletype)                                                                                                        true                 -                                                               
+closeIcon     ReactNode                                                                                                                                      true                 5.7.0: close button will be hidden when setting to null or false
+description   ReactNode                                                                                                                                      -                    -                                                               
+duration      number | false                                                                                                                                 4.5                  -                                                               
+showProgress  boolean                                                                                                                                        -                    5.18.0                                                          
+pauseOnHover  boolean                                                                                                                                        true                 5.18.0                                                          
+icon          ReactNode                                                                                                                                      -                    -                                                               
+key           string                                                                                                                                         -                    -                                                               
+title         ReactNode                                                                                                                                      -                    6.0.0                                                           
+message       ReactNode                                                                                                                                      -                    -                                                               
+placement     string                                                                                                                                         `topRight`           -                                                               
+role          `alert | status`                                                                                                                               `alert`              5.6.0                                                           
+style         [CSSProperties](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/e434515761b36830c3e58a970abf5186f005adac/types/react/index.d.ts#L794)  -                    -                                                               
+styles        Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>                  -                    -                                                               
+onClick       function                                                                                                                                       -                    -                                                               
+onClose       function                                                                                                                                       -                    -                                                               
+props         Object                                                                                                                                         -                    -                                                               
+bottom        number                                                                                                                                         24                   -                                                               
+getContainer  () => HTMLNode                                                                                                                                 () => document.body  -                                                               
+rtl           boolean                                                                                                                                        false                -                                                               
+stack         boolean | `{ threshold: number }`                                                                                                              `{ threshold: 3 }`   5.10.0                                                          
+top           number                                                                                                                                         24                   -                                                               
+maxCount      number                                                                                                                                         -                    4.17.0                                                          
+
+Notification.ClosableType
+
+Property   Type       Default    Since
+---------  ---------  ---------  -----
+closeIcon  ReactNode  undefined  -    
+onClose    Function   -          -    
+
+Notification.Global configuration
+
+Property      Type            Default              Since                                                           
+------------  --------------  -------------------  ----------------------------------------------------------------
+bottom        number          24                   -                                                               
+closeIcon     ReactNode       true                 5.7.0: close button will be hidden when setting to null or false
+duration      number          4.5                  -                                                               
+getContainer  () => HTMLNode  () => document.body  -                                                               
+placement     string          `topRight`           -                                                               
+showProgress  boolean         -                    5.18.0                                                          
+pauseOnHover  boolean         true                 5.18.0                                                          
+rtl           boolean         false                -                                                               
+top           number          24                   -                                                               
+maxCount      number          -                    4.17.0                                                          
+
+Common Props (inherited by all components, not listed individually)
+
+Property       Type           Default
+-------------  -------------  -------
+className      string         -      
+style          CSSProperties  -      
+rootClassName  string         -      
+
+Extends <div> — supports native HTML div attributes.
+# exit=0

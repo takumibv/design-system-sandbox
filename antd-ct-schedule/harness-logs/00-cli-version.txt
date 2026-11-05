@@ -1,0 +1,6 @@
+$ npx antd --version
+# 目的: CLI の版を確認
+# 実行日時: 2026-11-05T10:10:52Z
+
+error: option '--version <version>' argument missing
+# exit=1
