@@ -6,8 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "oxlint",
-    "preview": "vite preview"
+    "lint": "eslint src",
+    "preview": "vite preview",
+    "lint:css": "stylelint \"src/**/*.css\"",
+    "capture": "NODE_PATH=$(npm root -g):$PWD/node_modules node harness/capture.mjs states.json",
+    "mcp": "node harness/mcp-call.mjs"
   },
   "dependencies": {
     "@primer/octicons-react": "^19.42.0",
