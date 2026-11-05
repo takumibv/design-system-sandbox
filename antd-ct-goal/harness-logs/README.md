@@ -15,4 +15,14 @@
 | spec/*.md | `curl https://ant.design/docs/spec/<name>.md` | 設計仕様 29 本 |
 | 10-when-to-use.md | `npx antd info <C> --detail --format json` の whenToUse | 部品 42 種の「いつ使うか」 |
 | 11-antd-list.txt | `npx antd list` | 部品一覧（List 非推奨 → Listy を確認） |
-| 12-*.txt 以降 | 実装中の info/demo/lint | 実装時の参照と検査 |
+| 12-info-components.jsonl / 12-deprecated-props.txt | `npx antd info <C> --detail --format json`（23 部品） | 書く前に props と非推奨 props を確認（SKILL.md の手順） |
+| 13-antd-lint.txt / .json | `npx antd lint ./src` | 実装の検査（0 件） |
+| 14-antd-lint-probe.txt | 誤りを仕込んだ例に `npx antd lint` | lint が何を検出し、何を検出しないかの確認 |
+| 15-google-designmd-view.txt | `npm view @google/design.md` | 検査ツールの確認 |
+| 16-google-designmd-lint.txt | `npx design.md lint`（antd 公式 DESIGN.md） | 公式 DESIGN.md の検査（エラー 0・警告 19） |
+| 17-google-designmd-lint-project.txt | `npx design.md lint DESIGN.md`（このアプリ） | 上書き後の token の検査（エラー 0・警告 15、対比の警告 0） |
+| 18-antd-usage.txt | `npx antd usage ./src` | 使っている部品の集計 |
+| 19-antd-doctor.txt | `npx antd doctor` | 環境の診断（14 項目合格） |
+| spec/react-*.md | getting-started / compatible-style / use-with-vite | reset.css の扱いを調べるため |
+
+実装中には、ほかに `npx antd demo Listy`、`npx antd demo Listy rich`、`npx antd token Layout --format json` を実行した（出力は保存していないが、要点は docs/harness-report.md に記載）。

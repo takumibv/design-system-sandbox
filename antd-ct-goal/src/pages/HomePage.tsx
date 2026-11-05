@@ -352,7 +352,7 @@ const UpcomingCard = () => {
   return (
     <Card title="これからの予定">
       <Flex vertical gap="middle">
-        {user && !isIncomplete(user) && (
+        {user && !isIncomplete(user) && user.active && weeks.some((week) => week.pairs.length > 0) && (
           <Text>
             <CoffeeOutlined aria-hidden /> 次のお休み：
             {nextRest ? (
