@@ -9,7 +9,7 @@ export const GajiLaboLogo = ({ tone = 'white' }: { tone?: 'white' | 'black' }) =
     data-tone={tone}
     role="img"
     aria-label="Gaji-Labo（新しいタブで開きます）"
-    // eslint-disable-next-line react/no-danger -- 固定のロゴ SVG（brief/gaji-labo-logo.svg）を埋め込むため
+     
     dangerouslySetInnerHTML={{ __html: logoSvg.replace(/<metadata>[\s\S]*?<\/metadata>/, '') }}
   />
 )

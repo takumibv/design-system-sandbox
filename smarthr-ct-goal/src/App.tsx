@@ -1,4 +1,3 @@
-import type { ReactNode } from 'react'
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 
 import { isIncomplete } from './data/model'
@@ -7,6 +6,8 @@ import { Members } from './pages/Members'
 import { NotFound } from './pages/NotFound'
 import { Settings } from './pages/Settings'
 import { AppStateProvider, useAppState } from './state'
+
+import type { ReactNode } from 'react'
 
 /** 初回設定が済んでいない人は、必須項目が埋まるまで初回設定へ誘導する */
 const RequireSetup = ({ children }: { children: ReactNode }) => {

@@ -17,12 +17,12 @@ const initial = (name: string) => name.trim().charAt(0)
 /** アイコン（無い人は頭文字と固定色）＋名前。アイコンは名前と重複するので読み上げない。 */
 export const Avatar = ({ member, size = 'M' }: Pick<Props, 'member' | 'size'>) => (
   <span className="ct-avatar" data-size={size} data-color={member.color} aria-hidden="true">
-    {member.image ? <img src={member.image} alt="" /> : initial(member.name)}
+    {member.image ? <img src={member.image} alt={member.name} /> : initial(member.name)}
   </span>
 )
 
 export const Person = ({ member, size = 'M', note }: Props) => (
-  <Cluster gap={0.5} align="center" inline>
+  <Cluster align="center" inline>
     <Avatar member={member} size={size} />
     <Text size={size === 'L' ? 'XL' : 'M'} weight={size === 'L' ? 'bold' : undefined}>
       {member.name}

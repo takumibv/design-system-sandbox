@@ -1,0 +1,199 @@
+
+/home/user/design-system-sandbox/smarthr-ct-goal/src/components/GajiLaboLogo.tsx
+  11:5  warning  spanのaria-label属性に文字列リテラル "Gaji-Labo（新しいタブで開きます）" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text  smarthr/require-i18n-text
+
+/home/user/design-system-sandbox/smarthr-ct-goal/src/components/Layout.tsx
+  57:92  warning  子要素に文字列リテラル "自分の設定を変更" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text     smarthr/require-i18n-text
+  60:74  warning  子要素に文字列リテラル "ログアウト" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text        smarthr/require-i18n-text
+  65:78  warning  子要素に文字列リテラル "Slack でログイン" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text  smarthr/require-i18n-text
+  72:78  warning  子要素に文字列リテラル "組み合わせ" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text        smarthr/require-i18n-text
+  75:92  warning  子要素に文字列リテラル "メンバー" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text         smarthr/require-i18n-text
+  79:96  warning  子要素に文字列リテラル "自分の設定" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text        smarthr/require-i18n-text
+  93:82  warning  子要素に文字列リテラル "もう一度ログインする" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text   smarthr/require-i18n-text
+
+/home/user/design-system-sandbox/smarthr-ct-goal/src/pages/Home.tsx
+   53:80   warning  Buttonのaria-label属性に文字列リテラルが指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                       smarthr/require-i18n-text
+   53:119  warning  子要素に文字列リテラル "ハドルを始める" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                            smarthr/require-i18n-text
+   56:40   warning  子要素に文字列リテラル "場所：#" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                               smarthr/require-i18n-text
+   60:40   warning  子要素に文字列リテラル "デモのため Slack には接続しません。本番では #" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                        smarthr/require-i18n-text
+   61:47   warning  子要素に文字列リテラル "でハドルが始まります。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                        smarthr/require-i18n-text
+   98:18   warning  子要素に文字列リテラル "今週のあなたの相手" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                          smarthr/require-i18n-text
+  103:55   warning  子要素に文字列リテラル "から" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                                 smarthr/require-i18n-text
+  112:45   warning  子要素に文字列リテラル "さんの uチャンネルが未設定のため、ここからはハドルを始められません。Slack
+                      で直接連絡してください。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text        smarthr/require-i18n-text
+  120:49   warning  子要素に文字列リテラル "今週、あなたはお休みです" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                       smarthr/require-i18n-text
+  123:22   warning  子要素に文字列リテラル "参加者が奇数のため、毎週 1 人がお休みになります。お休みの人は週ごとに入れ替わります。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                       smarthr/require-i18n-text
+  127:47   warning  子要素に文字列リテラル "今週は" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                                smarthr/require-i18n-text
+  128:37   warning  子要素に文字列リテラル "のため CT はありません" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                      smarthr/require-i18n-text
+  133:49   warning  子要素に文字列リテラル "あなたは今、CT に参加していません" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                 smarthr/require-i18n-text
+  136:22   warning  子要素に文字列リテラル "参加すると、次の組み合わせから入ります。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                               smarthr/require-i18n-text
+  137:74   warning  子要素に文字列リテラル "自分の設定で参加する" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                         smarthr/require-i18n-text
+  143:49   warning  子要素に文字列リテラル "今週の組み合わせはありません" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                     smarthr/require-i18n-text
+  146:22   warning  子要素に文字列リテラル "参加者が 2 人未満のため、組み合わせを作れません。2 人以上が参加すると作られます。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                        smarthr/require-i18n-text
+  153:46   warning  子要素に文字列リテラル "あなたの今後の予定" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                          smarthr/require-i18n-text
+  158:55   warning  DefinitionListItemのterm属性に文字列リテラルが指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                 smarthr/require-i18n-text
+  167:57   warning  子要素に文字列リテラル "先の週は予定です。参加者が増減すると組み直されます。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                         smarthr/require-i18n-text
+  186:12   warning  子要素に文字列リテラル "Slack でログインすると、今週のあなたの相手がこの画面の一番上に表示され、そのままハドルを始められます。参加状況などの自分の設定も変えられます。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text         smarthr/require-i18n-text
+  190:87   warning  子要素に文字列リテラル "Slack でログイン" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                        smarthr/require-i18n-text
+  216:40   warning  子要素に文字列リテラル "CT なし" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                              smarthr/require-i18n-text
+  216:90   warning  子要素に文字列リテラル "予定" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                                 smarthr/require-i18n-text
+  220:27   warning  子要素に文字列リテラル "のため、この週の CT はありません。組み合わせは作らず、翌週に繰り越します。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                            smarthr/require-i18n-text
+  225:18   warning  子要素に文字列リテラル "組み合わせはありません。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                       smarthr/require-i18n-text
+  226:55   warning  子要素に文字列リテラル "参加者が 2 人未満のためです。2 人以上が参加すると組み合わせが作られます。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                            smarthr/require-i18n-text
+  229:47   warning  子要素に文字列リテラル "参加状況をメンバー画面で確認する" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                   smarthr/require-i18n-text
+  245:49   warning  子要素に文字列リテラル "と" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                                  smarthr/require-i18n-text
+  252:60   warning  子要素に文字列リテラル "uチャンネル未設定のためハドル不可" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                  smarthr/require-i18n-text
+  263:37   warning  子要素に文字列リテラル "お休み" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                                smarthr/require-i18n-text
+  268:55   warning  子要素に文字列リテラル "この週の組み合わせは予定です。参加者が増減すると組み直されます。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                   smarthr/require-i18n-text
+  295:20   warning  子要素に文字列リテラル "週ごとの組み合わせ" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                          smarthr/require-i18n-text
+  297:19   warning  子要素に文字列リテラル "参加者" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                                smarthr/require-i18n-text
+  297:36   warning  子要素に文字列リテラル "人" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                                  smarthr/require-i18n-text
+  298:45   warning  子要素に文字列リテラル "メンバーを見る" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                            smarthr/require-i18n-text
+  319:30   warning  divのaria-label属性に文字列リテラルが指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                          smarthr/require-i18n-text
+  330:13   warning  Layoutのtitle属性に文字列リテラル "組み合わせ" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                   smarthr/require-i18n-text
+  334:26   warning  子要素に文字列リテラル "CT の組み合わせ" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                          smarthr/require-i18n-text
+  335:16   warning  子要素に文字列リテラル "毎週月曜" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                               smarthr/require-i18n-text
+  336:32   warning  子要素に文字列リテラル "から、2 人 1 組で話します（CT＝コミュニケーションタイム）。組み合わせは毎週月曜 11:00 に Slack
+              にも投稿されます。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text  smarthr/require-i18n-text
+  351:87   warning  子要素に文字列リテラル "再読み込み" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                              smarthr/require-i18n-text
+  355:14   warning  子要素に文字列リテラル "組み合わせを読み込めませんでした。通信状況を確認して、再読み込みしてください。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                            smarthr/require-i18n-text
+
+/home/user/design-system-sandbox/smarthr-ct-goal/src/pages/Members.tsx
+   39:43   warning  子要素に文字列リテラル "初回設定が未完了" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                              smarthr/require-i18n-text
+   46:31   warning  Buttonのaria-label属性に文字列リテラルが指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                          smarthr/require-i18n-text
+   47:23   warning  FaTrashCanIconのalt属性に文字列リテラルが指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                         smarthr/require-i18n-text
+   50:68   warning  Buttonのaria-label属性に文字列リテラルが指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                          smarthr/require-i18n-text
+   50:103  warning  子要素に文字列リテラル "削除" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                    smarthr/require-i18n-text
+   62:15   warning  子要素に文字列リテラル "社員番号" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                  smarthr/require-i18n-text
+   63:15   warning  子要素に文字列リテラル "名前" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                    smarthr/require-i18n-text
+   64:15   warning  子要素に文字列リテラル "参加状況" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                  smarthr/require-i18n-text
+   65:15   warning  子要素に文字列リテラル "uチャンネル" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                smarthr/require-i18n-text
+   66:22   warning  子要素に文字列リテラル "操作" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                    smarthr/require-i18n-text
+   91:54   warning  子要素に文字列リテラル "設定を変更" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                 smarthr/require-i18n-text
+  121:68   warning  子要素に文字列リテラル "社員番号：" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                 smarthr/require-i18n-text
+  129:52   warning  子要素に文字列リテラル "設定を変更" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                 smarthr/require-i18n-text
+  147:12   warning  子要素に文字列リテラル "表示するデータはありません。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                        smarthr/require-i18n-text
+  148:49   warning  子要素に文字列リテラル "メンバーは Slack でログインすると追加されます。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                           smarthr/require-i18n-text
+  152:78   warning  子要素に文字列リテラル "Slack でログイン" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                           smarthr/require-i18n-text
+  189:13   warning  Layoutのtitle属性に文字列リテラル "メンバー" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                       smarthr/require-i18n-text
+  193:26   warning  子要素に文字列リテラル "メンバー" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                  smarthr/require-i18n-text
+  194:16   warning  子要素に文字列リテラル "一度でもログインしたことのある人を、社員番号順に表示しています。「参加」の人だけが組み合わせに入ります。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text  smarthr/require-i18n-text
+  201:26   warning  子要素に文字列リテラル "参加状況" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                  smarthr/require-i18n-text
+  202:23   warning  子要素に文字列リテラル "参加" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                    smarthr/require-i18n-text
+  203:35   warning  子要素に文字列リテラル "人・不参加" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                 smarthr/require-i18n-text
+  203:57   warning  子要素に文字列リテラル "人（全" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                   smarthr/require-i18n-text
+  203:78   warning  子要素に文字列リテラル "人）" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                    smarthr/require-i18n-text
+  214:57   warning  子要素に文字列リテラル "ログインすると、退職した人などをメンバーから削除できます。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                         smarthr/require-i18n-text
+  251:30   warning  子要素に文字列リテラル "（社員番号" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                 smarthr/require-i18n-text
+  255:51   warning  子要素に文字列リテラル "このメンバーは CT に参加中です。削除すると、今週以降の全員の組み合わせが組み直されます。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text        smarthr/require-i18n-text
+
+/home/user/design-system-sandbox/smarthr-ct-goal/src/pages/NotFound.tsx
+  16:7   warning  ErrorScreenのtitle属性に文字列リテラル "お探しのページは見つかりませんでした" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text    smarthr/require-i18n-text
+  20:12  warning  子要素に文字列リテラル "URL が間違っているか、ページが移動または削除された可能性があります。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text  smarthr/require-i18n-text
+  21:12  warning  子要素に文字列リテラル "組み合わせの画面から目的のページを開き直してください。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text           smarthr/require-i18n-text
+
+/home/user/design-system-sandbox/smarthr-ct-goal/src/pages/Settings.tsx
+  178:112  warning  子要素に文字列リテラル "参加する" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                               smarthr/require-i18n-text
+  181:113  warning  子要素に文字列リテラル "参加しない" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                              smarthr/require-i18n-text
+  196:82   warning  子要素に文字列リテラル "保存" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                 smarthr/require-i18n-text
+  204:48   warning  子要素に文字列リテラル "組み合わせを見る" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                           smarthr/require-i18n-text
+  208:66   warning  子要素に文字列リテラル "保存できませんでした。通信状況を確認して、もう一度「保存」を押してください。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text             smarthr/require-i18n-text
+  213:66   warning  子要素に文字列リテラル "入力内容に不足や誤りがあります。赤く表示された項目を直してから、もう一度「保存」を押してください。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text  smarthr/require-i18n-text
+
+/home/user/design-system-sandbox/smarthr-ct-goal/src/pages/SignInRequired.tsx
+   7:11  warning  Layoutのtitle属性に文字列リテラル "自分の設定" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                             smarthr/require-i18n-text
+  10:22  warning  子要素に文字列リテラル "自分の設定" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                        smarthr/require-i18n-text
+  11:12  warning  子要素に文字列リテラル "自分の設定を変えるには、画面右上の「Slack でログイン」からログインしてください。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text  smarthr/require-i18n-text
+
+✖ 90 problems (0 errors, 90 warnings)
+

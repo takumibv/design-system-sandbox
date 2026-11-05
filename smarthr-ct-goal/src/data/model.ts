@@ -1,5 +1,5 @@
 // 固定データ（brief/fixtures.ts の写し）と、状態 S01〜S18 を URL から再現するための土台。
-import { members as fixtureMembers, weeks as fixtureWeeks, type Member } from './fixtures'
+import { type Member, members as fixtureMembers, weeks as fixtureWeeks } from './fixtures'
 
 export type { Member }
 

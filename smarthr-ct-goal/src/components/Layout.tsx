@@ -1,13 +1,13 @@
-import { useEffect, type ReactNode } from 'react'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { type ReactNode, useEffect } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
 import {
   AppNavi,
   AppNaviCustomTag,
   Button,
   Cluster,
+  FaGearIcon,
   FaRightFromBracketIcon,
   FaRightToBracketIcon,
-  FaGearIcon,
   Header,
   HeaderDropdownMenuButton,
   NotificationBar,
@@ -19,12 +19,7 @@ import { useAppState } from '../state'
 
 import { GajiLaboLogo } from './GajiLaboLogo'
 import { Avatar } from './Person'
-
-/** AppNaviCustomTag に渡す react-router の Link（?state= を引き継ぐ） */
-const NaviLink = ({ to, ...rest }: { to: string; children?: ReactNode }) => {
-  const { search } = useLocation()
-  return <Link to={`${to}${search}`} {...rest} />
-}
+import { NaviLink } from './RouterTextLink'
 
 const LOGO_LINK_SELECTOR = '.smarthr-ui-Header-logoLink'
 
@@ -53,9 +48,10 @@ export const Layout = ({ title, children }: { title: string; children: ReactNode
         {me ? (
           <HeaderDropdownMenuButton
             trigger={
-              <Cluster inline gap={0.5} align="center" as="span">
+              <Cluster inline align="center" as="span">
                 <Avatar member={me} />
-                <Text color="TEXT_WHITE">{me.name}</Text>
+                {/* Header 背景（BRAND #00c4cc）上の白文字は 2.14:1 で AA 未達のため、TEXT_BLACK を指定する（トリガーの既定は白） */}
+                <Text color="TEXT_BLACK">{me.name}</Text>
               </Cluster>
             }
           >
@@ -74,14 +70,14 @@ export const Layout = ({ title, children }: { title: string; children: ReactNode
       </Header>
       {/* モバイルではラベルを省き、3 つのナビゲーションを横幅に収める */}
       <AppNavi label={mobile ? undefined : 'CTスケジュール'}>
-        <AppNaviCustomTag tag={NaviLink} to="/" current={pathname === '/'}>
+        <AppNaviCustomTag tag={NaviLink} href="/" current={pathname === '/'}>
           組み合わせ
         </AppNaviCustomTag>
-        <AppNaviCustomTag tag={NaviLink} to="/members" current={pathname === '/members'}>
+        <AppNaviCustomTag tag={NaviLink} href="/members" current={pathname === '/members'}>
           メンバー
         </AppNaviCustomTag>
         {me && (
-          <AppNaviCustomTag tag={NaviLink} to="/settings" current={pathname === '/settings'}>
+          <AppNaviCustomTag tag={NaviLink} href="/settings" current={pathname === '/settings'}>
             自分の設定
           </AppNaviCustomTag>
         )}

@@ -1,5 +1,4 @@
-import { useState, type FormEvent, type InvalidEvent } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { type FormEvent, type InvalidEvent, useState } from 'react'
 import {
   Button,
   Cluster,
@@ -14,13 +13,15 @@ import {
   Select,
   Stack,
   Text,
-  TextLink,
   WarningIcon,
 } from 'smarthr-ui'
 
 import { Layout } from '../components/Layout'
+import { RouterTextLink } from '../components/RouterTextLink'
 import { channelOptions, empCode, isIncomplete } from '../data/model'
 import { useAppState } from '../state'
+
+import { SignInRequired } from './SignInRequired'
 
 type Field = 'name' | 'code' | 'channel'
 type Errors = Partial<Record<Field, string>>
@@ -40,7 +41,6 @@ const messageFor = (field: Field, el: HTMLInputElement | HTMLSelectElement) => {
 
 export const Settings = () => {
   const { me, saveMe, initialSettingsResult } = useAppState()
-  const { search } = useLocation()
   const firstTime = me ? isIncomplete(me) : false
   // 初回設定かどうかは画面を開いた時点で決める（保存しても見出しが変わらないように）
   const [isSetup] = useState(firstTime)
@@ -64,18 +64,7 @@ export const Settings = () => {
   const [activeChangedOnSave, setActiveChangedOnSave] = useState(false)
   const [processing, setProcessing] = useState(false)
 
-  if (!me) {
-    return (
-      <Layout title="自分の設定">
-        <Container size="NARROW">
-          <Stack gap={1.5}>
-            <PageHeading>自分の設定</PageHeading>
-            <Text as="p">自分の設定を変えるには、Slack でログインしてください。</Text>
-          </Stack>
-        </Container>
-      </Layout>
-    )
-  }
+  if (!me) return <SignInRequired />
 
   const title = isSetup ? '初回設定' : '自分の設定'
 
@@ -116,11 +105,11 @@ export const Settings = () => {
         <Stack gap={1.5}>
           <Stack gap={0.5}>
             <PageHeading>{title}</PageHeading>
-            <Text as="p">
+            <p>
               {isSetup
                 ? 'はじめに、CT の組み合わせに使う情報を設定してください。3 つの項目を入力して保存すると、組み合わせに入ります。'
                 : 'CT の組み合わせに使う、あなたの情報です。変えられるのは自分の設定だけです。'}
-            </Text>
+            </p>
           </Stack>
           <Panel padding={1.5}>
             <form onSubmit={onSubmit}>
@@ -184,7 +173,7 @@ export const Settings = () => {
                   legend="CT への参加"
                   helpMessage="休職や繁忙期で抜けるときは「参加しない」にしてください。変えると、今週以降の全員の組み合わせが組み直されます。"
                 >
-                  <Stack gap={1}>
+                  <Stack>
                     <Cluster gap={1.5}>
                       <RadioButton name="active" value="yes" checked={active} onChange={() => setActive(true)}>
                         参加する
@@ -203,19 +192,20 @@ export const Settings = () => {
                   </Stack>
                 </Fieldset>
                 <Stack gap={0.5}>
-                  <Cluster>
+                  <div>
                     <Button type="submit" variant="primary" loading={processing}>
                       保存
                     </Button>
-                  </Cluster>
+                  </div>
                   {result === 'success' && (
-                    <ResponseMessage status="success" role="status">
-                      {isSetup ? '設定が完了しました。' : '保存しました。'}
-                      {activeChangedOnSave && '今週以降の組み合わせを組み直しました。'}
-                      <TextLink elementAs={Link} to={`/${search}`}>
-                        組み合わせを見る
-                      </TextLink>
-                    </ResponseMessage>
+                    <>
+                      <ResponseMessage status="success" role="status">
+                        {isSetup ? '設定が完了しました。' : '保存しました。'}
+                        {activeChangedOnSave && '今週以降の組み合わせを組み直しました。'}
+                      </ResponseMessage>
+                      {/* ResponseMessage（LiveRegion）の中にリンクを置くと aria-hidden の複製にフォーカス可能要素が入るため外に出す */}
+                      <RouterTextLink href="/">組み合わせを見る</RouterTextLink>
+                    </>
                   )}
                   {result === 'error' && (
                     <ResponseMessage status="error" role="alert">

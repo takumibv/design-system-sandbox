@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { ErrorScreen, Stack, Text } from 'smarthr-ui'
+import { ErrorScreen, Stack } from 'smarthr-ui'
 
 import { GajiLaboLogo } from '../components/GajiLaboLogo'
 
@@ -17,8 +17,8 @@ export const NotFound = () => {
       links={[{ label: '組み合わせに戻る', url: '/' }]}
     >
       <Stack gap={0.5} align="center">
-        <Text as="p">URL が間違っているか、ページが移動または削除された可能性があります。</Text>
-        <Text as="p">組み合わせの画面から目的のページを開き直してください。</Text>
+        <p>URL が間違っているか、ページが移動または削除された可能性があります。</p>
+        <p>組み合わせの画面から目的のページを開き直してください。</p>
       </Stack>
     </ErrorScreen>
   )
