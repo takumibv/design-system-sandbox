@@ -1,0 +1,18 @@
+
+/home/user/design-system-sandbox/ads-ct-goal/src/App.tsx
+   85:4  warning  Set SectionMessage.headingLevel to the semantic heading level matching its place in the page outline, for example headingLevel={2} below the page heading; do not choose the level for visual size  @atlaskit/design-system/use-heading-level-in-section-message
+  156:7  warning  Set SectionMessage.headingLevel to the semantic heading level matching its place in the page outline, for example headingLevel={2} below the page heading; do not choose the level for visual size  @atlaskit/design-system/use-heading-level-in-section-message
+
+/home/user/design-system-sandbox/ads-ct-goal/src/components/AppHeader.tsx
+  46:8  warning  Replace <img> with Image from @atlaskit/image/image. Preserve its source, dimensions and meaningful alt text; retain alt="" when the image is decorative  @atlaskit/design-system/no-html-image
+
+/home/user/design-system-sandbox/ads-ct-goal/src/pages/HomePage.tsx
+  136:6  warning  Set SectionMessage.headingLevel to the semantic heading level matching its place in the page outline, for example headingLevel={2} below the page heading; do not choose the level for visual size  @atlaskit/design-system/use-heading-level-in-section-message
+
+/home/user/design-system-sandbox/ads-ct-goal/src/pages/SettingsPage.tsx
+   87:9   warning  Set SectionMessage.headingLevel to the semantic heading level matching its place in the page outline, for example headingLevel={2} below the page heading; do not choose the level for visual size                                      @atlaskit/design-system/use-heading-level-in-section-message
+  136:11  warning  Remove placeholder from this input and render its instructions in HelperMessage from @atlaskit/form within the same Field. Keep the supplied fieldProps spread on the input so its aria-describedby references the generated helper id  @atlaskit/design-system/no-placeholder
+  164:10  warning  Set SectionMessage.headingLevel to the semantic heading level matching its place in the page outline, for example headingLevel={2} below the page heading; do not choose the level for visual size                                      @atlaskit/design-system/use-heading-level-in-section-message
+
+✖ 7 problems (0 errors, 7 warnings)
+

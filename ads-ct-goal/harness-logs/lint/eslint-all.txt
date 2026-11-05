@@ -1,0 +1,12 @@
+
+/home/user/design-system-sandbox/ads-ct-goal/src/pages/HomePage.tsx
+  255:31  warning  Replace Lozenge appearance="default" with appearance="neutral"; apply the autofix         @atlaskit/design-system/lozenge-badge-tag-labelling-system-migration
+  257:18  warning  Replace Lozenge appearance="inprogress" with appearance="information"; apply the autofix  @atlaskit/design-system/lozenge-badge-tag-labelling-system-migration
+
+/home/user/design-system-sandbox/ads-ct-goal/src/pages/MembersPage.tsx
+  93:76  warning  Replace Lozenge appearance="default" with appearance="neutral"; apply the autofix  @atlaskit/design-system/lozenge-badge-tag-labelling-system-migration
+  94:43  warning  Replace Lozenge appearance="moved" with appearance="warning"; apply the autofix    @atlaskit/design-system/lozenge-badge-tag-labelling-system-migration
+
+✖ 4 problems (0 errors, 4 warnings)
+  0 errors and 4 warnings potentially fixable with the `--fix` option.
+

@@ -21,6 +21,7 @@
     "@atlaskit/form": "^18.3.1",
     "@atlaskit/heading": "^8.0.0",
     "@atlaskit/icon": "^38.0.2",
+    "@atlaskit/image": "^5.2.4",
     "@atlaskit/link": "^5.1.7",
     "@atlaskit/lozenge": "^17.0.6",
     "@atlaskit/modal-dialog": "^17.2.1",
@@ -37,6 +38,8 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@atlaskit/eslint-plugin-design-system": "^16.16.0",
+    "@atlaskit/eslint-plugin-ui-styling-standard": "^3.0.4",
     "@axe-core/playwright": "^4.14.0",
     "@babel/core": "^7.29.13",
     "@compiled/babel-plugin": "^2.0.0",
@@ -45,8 +48,10 @@
     "@types/react": "^18.3.31",
     "@types/react-dom": "^18.3.7",
     "@vitejs/plugin-react": "^6.1.2",
+    "eslint": "^9.39.5",
     "oxlint": "^1.90.0",
     "typescript": "~5.9.3",
+    "typescript-eslint": "^8.72.1",
     "vite": "^8.3.6"
   }
 }

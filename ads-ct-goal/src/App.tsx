@@ -82,7 +82,7 @@ export function App() {
 		);
 	} else if (state.load === "error") {
 		content = (
-			<SectionMessage
+			<SectionMessage headingLevel="h2"
 				appearance="error"
 				icon={ErrorIconJa}
 				title="組み合わせを読み込めませんでした"
@@ -153,7 +153,7 @@ export function App() {
 			<Box as="main" xcss={styles.main} paddingInline="space.200" paddingBlockStart="space.300" paddingBlockEnd="space.800">
 				<Stack space="space.300">
 					{state.loginFailed && (
-						<SectionMessage
+						<SectionMessage headingLevel="h2"
 							appearance="error"
 				icon={ErrorIconJa}
 							title="Slack でログインできませんでした"

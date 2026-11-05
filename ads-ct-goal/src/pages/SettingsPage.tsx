@@ -84,7 +84,7 @@ export function SettingsPage({ me, firstTime, channels, employeeNo, preset, onSa
 
 						{saveFailed && (
 							<Box paddingBlockStart="space.200">
-								<SectionMessage
+								<SectionMessage headingLevel="h2"
 									appearance="error"
 				icon={ErrorIconJa}
 									title="設定を保存できませんでした"
@@ -133,7 +133,7 @@ export function SettingsPage({ me, firstTime, channels, employeeNo, preset, onSa
 							>
 								{({ fieldProps: { id, ...rest }, error }) => (
 									<>
-										<Select<Option> inputId={id} {...rest} options={options} placeholder="選んでください" isClearable={false} />
+										<Select<Option> inputId={id} {...rest} options={options} isClearable={false} />
 										<MessageWrapper>
 											{error ? <ErrorMessage>{error}</ErrorMessage> : <HelperMessage>ハドルを始める場所に使う、あなたの個人用チャンネル（u- で始まる）です。</HelperMessage>}
 										</MessageWrapper>
@@ -161,7 +161,7 @@ export function SettingsPage({ me, firstTime, channels, employeeNo, preset, onSa
 
 							{changedParticipation && (
 								<Box paddingBlockStart="space.200">
-									<SectionMessage appearance="warning" icon={WarningIconJa} title="保存すると組み合わせが組み直されます">
+									<SectionMessage headingLevel="h2" appearance="warning" icon={WarningIconJa} title="保存すると組み合わせが組み直されます">
 										<Text as="p">
 											{active
 												? "参加に戻ると、今週以降の組み合わせにあなたが入り、ほかのメンバーの相手も変わります。"

@@ -1,10 +1,7 @@
-/**
- * @jsxRuntime classic
- * @jsx jsx
- */
 import Button from "@atlaskit/button/default/button";
 import LinkButton from "@atlaskit/button/link";
-import { cssMap, jsx } from "@atlaskit/css";
+import { cssMap } from "@atlaskit/css";
+import Image from "@atlaskit/image/image";
 import LinkExternalIcon from "@atlaskit/icon/core/link-external";
 import LogInIcon from "@atlaskit/icon/core/log-in";
 import { Anchor, Box, Inline, Text } from "@atlaskit/primitives/compiled";
@@ -21,7 +18,6 @@ const styles = cssMap({
 		borderBlockEndColor: token("color.border"),
 	},
 	inner: { maxWidth: "1200px", marginInline: "auto" },
-	logo: { display: "block", height: "20px", width: "auto" },
 	logoLink: { display: "inline-flex", alignItems: "center", gap: token("space.050"), color: token("color.text.subtle") },
 	// 390px 幅ではナビを 2 段目に回す（ヘッダーの高さを抑えて G1 のカードをファーストビューに入れるため）
 	nav: { order: 3, width: "100%", "@media (min-width: 48rem)": { order: 0, width: "auto" } },
@@ -43,7 +39,7 @@ export function AppHeader({ route, me, onLogin, onLogout }: { route: Route; me: 
 					<Inline space="space.150" alignBlock="center">
 						{/* ロゴは別タブで開く。ADS: 新しいウィンドウで開くリンクは事前に知らせる（Link）→ LinkExternalIcon（"Reserved for links that open up a new tab"） */}
 						<Anchor href="https://www.gaji.jp/" target="_blank" newWindowLabel="（新しいタブで開きます）" xcss={styles.logoLink}>
-							<img src={logoUrl} alt="Gaji-Labo" css={styles.logo} />
+							<Image src={logoUrl} alt="Gaji-Labo" height={20} />
 							<LinkExternalIcon label="" size="small" color={token("color.icon.subtle")} />
 						</Anchor>
 						<Text as="span" weight="bold" size="large">

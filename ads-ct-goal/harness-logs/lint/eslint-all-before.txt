@@ -1,0 +1,29 @@
+
+/home/user/design-system-sandbox/ads-ct-goal/src/App.tsx
+   85:4  warning  Set SectionMessage.headingLevel to the semantic heading level matching its place in the page outline, for example headingLevel={2} below the page heading; do not choose the level for visual size  @atlaskit/design-system/use-heading-level-in-section-message
+  156:7  warning  Set SectionMessage.headingLevel to the semantic heading level matching its place in the page outline, for example headingLevel={2} below the page heading; do not choose the level for visual size  @atlaskit/design-system/use-heading-level-in-section-message
+
+/home/user/design-system-sandbox/ads-ct-goal/src/components/AppHeader.tsx
+  46:8  warning  Replace <img> with Image from @atlaskit/image/image. Preserve its source, dimensions and meaningful alt text; retain alt="" when the image is decorative  @atlaskit/design-system/no-html-image
+
+/home/user/design-system-sandbox/ads-ct-goal/src/components/messageIcons.tsx
+  8:50  error  The default value of the `color` prop is about to change. To assist in the migration, the color prop must be set on new icons from `@atlaskit/icon/(core|utility)`  @atlaskit/design-system/ensure-icon-color
+  9:52  error  The default value of the `color` prop is about to change. To assist in the migration, the color prop must be set on new icons from `@atlaskit/icon/(core|utility)`  @atlaskit/design-system/ensure-icon-color
+
+/home/user/design-system-sandbox/ads-ct-goal/src/pages/HomePage.tsx
+  136:6   warning  Set SectionMessage.headingLevel to the semantic heading level matching its place in the page outline, for example headingLevel={2} below the page heading; do not choose the level for visual size  @atlaskit/design-system/use-heading-level-in-section-message
+  255:31  warning  Replace Lozenge appearance="default" with appearance="neutral"; apply the autofix                                                                                                                   @atlaskit/design-system/lozenge-badge-tag-labelling-system-migration
+  257:18  warning  Replace Lozenge appearance="inprogress" with appearance="information"; apply the autofix                                                                                                            @atlaskit/design-system/lozenge-badge-tag-labelling-system-migration
+
+/home/user/design-system-sandbox/ads-ct-goal/src/pages/MembersPage.tsx
+  93:76  warning  Replace Lozenge appearance="default" with appearance="neutral"; apply the autofix  @atlaskit/design-system/lozenge-badge-tag-labelling-system-migration
+  94:43  warning  Replace Lozenge appearance="moved" with appearance="warning"; apply the autofix    @atlaskit/design-system/lozenge-badge-tag-labelling-system-migration
+
+/home/user/design-system-sandbox/ads-ct-goal/src/pages/SettingsPage.tsx
+   87:9   warning  Set SectionMessage.headingLevel to the semantic heading level matching its place in the page outline, for example headingLevel={2} below the page heading; do not choose the level for visual size                                      @atlaskit/design-system/use-heading-level-in-section-message
+  136:11  warning  Remove placeholder from this input and render its instructions in HelperMessage from @atlaskit/form within the same Field. Keep the supplied fieldProps spread on the input so its aria-describedby references the generated helper id  @atlaskit/design-system/no-placeholder
+  164:10  warning  Set SectionMessage.headingLevel to the semantic heading level matching its place in the page outline, for example headingLevel={2} below the page heading; do not choose the level for visual size                                      @atlaskit/design-system/use-heading-level-in-section-message
+
+✖ 13 problems (2 errors, 11 warnings)
+  0 errors and 4 warnings potentially fixable with the `--fix` option.
+

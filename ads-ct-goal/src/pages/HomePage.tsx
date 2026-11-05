@@ -133,7 +133,7 @@ function MyThisWeek({ week, weeks, index, members, me, onHuddle }: { week: Week;
 						</Text>
 					</Stack>
 				) : (
-					<SectionMessage appearance="warning" icon={WarningIconJa} title="ハドルを始められません">
+					<SectionMessage headingLevel="h3" appearance="warning" icon={WarningIconJa} title="ハドルを始められません">
 						<Text as="p">
 							{mine.missingChannelOf?.id === me.id ? "あなた" : `${mine.missingChannelOf?.name}さん`}の uチャンネルが未設定のため、ここからハドルを始められません。Slack で{mine.partner.name}さんに直接連絡してください。
 						</Text>
