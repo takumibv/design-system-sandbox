@@ -1,0 +1,226 @@
+[
+  {
+    "kind": "smarthr",
+    "file": "schedule-default",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "schedule-guest",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "schedule-rest",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "schedule-holiday",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "schedule-insufficient",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "schedule-loading",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "schedule-login-error",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "schedule-saved",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "members-default",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "members-empty",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "members-delete-confirm",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "members-delete-error",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "settings-default",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "settings-onboarding",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "settings-validation",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "not-found",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "schedule-default",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "schedule-guest",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "schedule-rest",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "schedule-holiday",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "schedule-insufficient",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "schedule-loading",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "schedule-login-error",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "schedule-saved",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "members-default",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "members-empty",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "members-delete-confirm",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "members-delete-error",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "settings-default",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "settings-onboarding",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "settings-validation",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "kind": "smarthr",
+    "file": "not-found",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  }
+]
