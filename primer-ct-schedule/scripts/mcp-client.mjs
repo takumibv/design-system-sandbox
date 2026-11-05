@@ -17,9 +17,10 @@ mkdirSync(LOG_DIR, { recursive: true });
 
 const transport = new StdioClientTransport({
 	command: "npx",
-	args: ["--no-install", "@primer/mcp"],
+	args: ["--no-install", "--prefix", process.cwd(), "@primer/mcp"],
 	env: { ...process.env, NODE_USE_ENV_PROXY: "1" },
 	stderr: "pipe",
+	cwd: process.env.MCP_CWD ?? process.cwd(),
 });
 const client = new Client({ name: "ct-schedule-harness-probe", version: "0.1.0" });
 await client.connect(transport);

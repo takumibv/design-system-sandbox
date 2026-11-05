@@ -1,0 +1,256 @@
+/*
+ * Primer の部品とトークンで表せないレイアウトだけをここに書く。
+ * - 値はすべて @primer/primitives のトークン（get_design_token_specs「raw 値を使わない」）
+ * - 書いたら @primer/mcp の lint_css と stylelint（@primer/stylelint-config）で検査する
+ * 何をなぜ自前で書いたかは docs/design-decisions.md「自前で書いた CSS」を参照
+ */
+
+/* ページ全体と、ヘッダー／フッターの内側の幅（PageLayout xlarge と同じ幅・余白に揃える） */
+.Shell {
+  min-height: 100vh;
+  background-color: var(--bgColor-default);
+}
+
+.Inner {
+  max-width: calc(var(--breakpoint-xlarge) + var(--base-size-16) * 2);
+  padding-inline: var(--base-size-16);
+  margin-inline: auto;
+}
+
+@media (min-width: 63.25rem) {
+  .Inner {
+    max-width: calc(var(--breakpoint-xlarge) + var(--base-size-24) * 2);
+    padding-inline: var(--base-size-24);
+  }
+}
+
+/* 段落の余白は Stack の gap で管理する（BaseStyles は p の margin をリセットしない） */
+.Paragraph {
+  margin: 0;
+}
+
+.Main {
+  padding-block: var(--stack-padding-spacious);
+}
+
+.Main:focus {
+  outline: none;
+}
+
+/* スキップリンク：フォーカス時だけ表示する。Primer に単体の部品がない */
+.SkipLink {
+  position: absolute;
+  top: var(--base-size-8);
+  left: var(--base-size-8);
+  z-index: var(--zIndex-skipLink);
+  padding: var(--stack-padding-condensed);
+  font: var(--text-body-shorthand-medium);
+  color: var(--fgColor-accent);
+  background-color: var(--bgColor-default);
+  border-radius: var(--borderRadius-medium);
+  box-shadow: var(--shadow-floating-small);
+  transform: translateY(-200%);
+}
+
+.SkipLink:focus-visible {
+  transform: none;
+  outline: var(--focus-outline);
+  outline-offset: var(--outline-focus-offset);
+}
+
+/* ブランドバー（Header 部品）とサービスバー。Header の背景を全幅に敷き、中身だけ本文の幅に揃える */
+.BrandBar {
+  background-color: var(--header-bgColor);
+}
+
+.Header {
+  padding-inline: 0;
+}
+
+.NoMargin {
+  margin-inline-end: 0;
+}
+
+.Logo {
+  display: block;
+  height: var(--base-size-24);
+}
+
+.ServiceBar {
+  padding-block: var(--stack-padding-normal);
+  border-block-end: var(--borderWidth-thin) solid var(--borderColor-default);
+}
+
+.ServiceName {
+  display: inline-flex;
+  gap: var(--stack-gap-condensed);
+  align-items: center;
+  font: var(--text-title-shorthand-small);
+  color: var(--fgColor-default);
+}
+
+.UserLink {
+  display: inline-flex;
+  gap: var(--stack-gap-condensed);
+  align-items: center;
+}
+
+.Footer {
+  padding-block: var(--stack-padding-spacious);
+  margin-block-start: var(--base-size-48);
+  border-block-start: var(--borderWidth-thin) solid var(--borderColor-default);
+}
+
+/* 文字色の補助（Text に色の prop がないため） */
+.Muted {
+  color: var(--fgColor-muted);
+}
+
+.Subtle {
+  color: var(--fgColor-muted);
+}
+
+.AccentText {
+  color: var(--fgColor-accent);
+}
+
+.MinW0 {
+  min-width: 0;
+}
+
+/* 大きな数字（人数）。title 系の shorthand を使う */
+.BigNumber {
+  font: var(--text-title-shorthand-large);
+}
+
+/* 枠付きの面（カード） */
+.Box {
+  overflow: hidden;
+  border: var(--borderWidth-thin) solid var(--borderColor-default);
+  border-radius: var(--borderRadius-medium);
+}
+
+/* 主役「今週のあなたのCT」：accent の muted 面＋上の太線（原本の濃い青の上ボーダーを再現） */
+.Featured {
+  padding: var(--stack-padding-spacious);
+  background-color: var(--bgColor-accent-muted);
+  border: var(--borderWidth-thin) solid var(--borderColor-accent-muted);
+  border-block-start: var(--borderWidth-thicker) solid var(--borderColor-accent-emphasis);
+  border-radius: var(--borderRadius-medium);
+}
+
+/* 未ログイン時の案内（Banner は 1 ページ 1 つまでのため面で表す） */
+.Prompt {
+  padding: var(--stack-padding-spacious);
+  background-color: var(--bgColor-accent-muted);
+  border-inline-start: var(--borderWidth-thicker) solid var(--borderColor-accent-emphasis);
+  border-radius: var(--borderRadius-medium);
+}
+
+/* みんなの組み合わせ */
+.PairList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-block-start: var(--borderWidth-thin) solid var(--borderColor-default);
+}
+
+.PairRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--stack-gap-normal);
+  align-items: center;
+  padding: var(--stack-padding-normal);
+  border-block-end: var(--borderWidth-thin) solid var(--borderColor-default);
+}
+
+.PairRow[data-mine] {
+  background-color: var(--bgColor-accent-muted);
+  border-inline-start: var(--borderWidth-thicker) solid var(--borderColor-accent-emphasis);
+}
+
+.PairMembers {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: var(--stack-gap-condensed);
+  align-items: center;
+}
+
+@media (min-width: 48rem) {
+  .PairRow {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+}
+
+.RestRow {
+  padding: var(--stack-padding-normal);
+  background-color: var(--bgColor-muted);
+  border-radius: var(--borderRadius-medium);
+}
+
+/* メンバー一覧の人数まとめ */
+.Summary {
+  padding: var(--stack-padding-spacious);
+  background-color: var(--bgColor-accent-muted);
+  border-block-start: var(--borderWidth-thicker) solid var(--borderColor-accent-emphasis);
+}
+
+/* メンバー表：狭い画面では表の最小幅を保ち、ScrollableRegion で横スクロールさせる */
+.TableMinWidth {
+  min-width: var(--breakpoint-small);
+}
+
+/* 自分の設定：Slack アカウント欄 */
+.Account {
+  padding: var(--stack-padding-normal);
+  background-color: var(--bgColor-muted);
+  border-radius: var(--borderRadius-medium);
+}
+
+/* イニシャルのアバター（Avatar は画像専用のため自作）。色は Logic Matrix の muted 背景＋同じ役割の前景 */
+.Avatar {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: var(--base-size-40);
+  height: var(--base-size-40);
+  font: var(--text-body-shorthand-large);
+  color: var(--fgColor-accent);
+  background-color: var(--bgColor-accent-muted);
+  border-radius: var(--borderRadius-full);
+  border: var(--borderWidth-thick) solid var(--borderColor-default);
+}
+
+.Avatar[data-size="small"] {
+  width: var(--base-size-24);
+  height: var(--base-size-24);
+  font: var(--text-caption-shorthand);
+}
+
+.Avatar[data-size="large"] {
+  width: var(--base-size-48);
+  height: var(--base-size-48);
+  font: var(--text-title-shorthand-small);
+}
+
+.Avatar[data-size="xlarge"] {
+  width: var(--base-size-80);
+  height: var(--base-size-80);
+  font: var(--text-title-shorthand-large);
+}
+
+.Avatar[data-color="green"] {
+  color: var(--fgColor-success);
+  background-color: var(--bgColor-success-muted);
+}
+
+.Avatar[data-color="purple"] {
+  color: var(--fgColor-done);
+  background-color: var(--bgColor-done-muted);
+}
+
+.Avatar[data-color="orange"] {
+  color: var(--fgColor-severe);
+  background-color: var(--bgColor-severe-muted);
+}

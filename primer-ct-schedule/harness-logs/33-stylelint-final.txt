@@ -1,0 +1,6 @@
+
+src/CTApp.module.css
+  45:16  ‼  Unexpected custom property "--zIndex-skipLink" inside declaration "z-index".  csstools/value-no-unknown-custom-properties
+
+‼ 1 problem (0 errors, 1 warning)
+

@@ -1,0 +1,13 @@
+
+src/CTApp.module.css
+   28:1   ×  Expected ".shell p" to have no more than 0 type selectors                                                                                                                                                                                                                                                   selector-max-type
+   45:16  ‼  Unexpected custom property "--zIndex-skipLink" inside declaration "z-index".                                                                                                                                                                                                                                csstools/value-no-unknown-custom-properties
+   63:61  ×  Please use a primer size variable instead of '--breakpoint-xlarge'. Consult the primer docs for a suitable replacement. https://primer.style/foundations/primitives/size                                                                                                                                    primer/spacing
+  171:15  ×  Please use a Primer box-shadow variable instead of 'inset var(--borderWidth-thicker) 0 0 var(--borderColor-accent-emphasis)'. Consult the primer docs for a suitable replacement. https://primer.style/foundations/primitives/color#shadow or https://primer.style/foundations/primitives/size#border-size  primer/box-shadow
+  201:1   ×  Expected ".tableScroll > table" to have no more than 0 type selectors                                                                                                                                                                                                                                       selector-max-type
+  205:1   ×  Expected ".tableScroll th" to have no more than 0 type selectors                                                                                                                                                                                                                                            selector-max-type
+  228:15  ×  Please use a Primer box-shadow variable instead of '0 0 0 var(--borderWidth-thick) var(--bgColor-default)'. Consult the primer docs for a suitable replacement. https://primer.style/foundations/primitives/color#shadow or https://primer.style/foundations/primitives/size#border-size                    primer/box-shadow
+
+× 7 problems (6 errors, 1 warning)
+  3 errors potentially fixable with the "--fix" option.
+

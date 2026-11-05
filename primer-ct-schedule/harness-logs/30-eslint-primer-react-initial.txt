@@ -1,0 +1,63 @@
+
+/home/user/design-system-sandbox/primer-ct-schedule/src/CTApp.tsx
+   102:22  warning  Class names should be PascalCase in both CSS and JS, saw: avatar       primer-react/enforce-css-module-identifier-casing
+   117:22  warning  Class names should be PascalCase in both CSS and JS, saw: minW0        primer-react/enforce-css-module-identifier-casing
+   120:40  warning  Class names should be PascalCase in both CSS and JS, saw: minW0        primer-react/enforce-css-module-identifier-casing
+   131:42  warning  Class names should be PascalCase in both CSS and JS, saw: muted        primer-react/enforce-css-module-identifier-casing
+   148:26  warning  Class names should be PascalCase in both CSS and JS, saw: box          primer-react/enforce-css-module-identifier-casing
+   156:29  warning  Class names should be PascalCase in both CSS and JS, saw: muted        primer-react/enforce-css-module-identifier-casing
+   288:28  warning  Class names should be PascalCase in both CSS and JS, saw: subtle       primer-react/enforce-css-module-identifier-casing
+   372:32  warning  Class names should be PascalCase in both CSS and JS, saw: featured     primer-react/enforce-css-module-identifier-casing
+   384:27  warning  Class names should be PascalCase in both CSS and JS, saw: accentText   primer-react/enforce-css-module-identifier-casing
+   388:45  warning  Class names should be PascalCase in both CSS and JS, saw: muted        primer-react/enforce-css-module-identifier-casing
+   397:33  warning  Class names should be PascalCase in both CSS and JS, saw: muted        primer-react/enforce-css-module-identifier-casing
+   416:49  warning  Class names should be PascalCase in both CSS and JS, saw: muted        primer-react/enforce-css-module-identifier-casing
+   422:30  warning  Class names should be PascalCase in both CSS and JS, saw: accentText   primer-react/enforce-css-module-identifier-casing
+   429:49  warning  Class names should be PascalCase in both CSS and JS, saw: muted        primer-react/enforce-css-module-identifier-casing
+   436:48  warning  Class names should be PascalCase in both CSS and JS, saw: muted        primer-react/enforce-css-module-identifier-casing
+   452:32  warning  Class names should be PascalCase in both CSS and JS, saw: prompt       primer-react/enforce-css-module-identifier-casing
+   524:44  warning  Class names should be PascalCase in both CSS and JS, saw: muted        primer-react/enforce-css-module-identifier-casing
+   543:45  warning  Class names should be PascalCase in both CSS and JS, saw: muted        primer-react/enforce-css-module-identifier-casing
+   547:29  warning  Class names should be PascalCase in both CSS and JS, saw: pairList     primer-react/enforce-css-module-identifier-casing
+   563:29  warning  Class names should be PascalCase in both CSS and JS, saw: pairRow      primer-react/enforce-css-module-identifier-casing
+   566:34  warning  Class names should be PascalCase in both CSS and JS, saw: pairMembers  primer-react/enforce-css-module-identifier-casing
+   571:36  warning  Class names should be PascalCase in both CSS and JS, saw: subtle       primer-react/enforce-css-module-identifier-casing
+   586:30  warning  Class names should be PascalCase in both CSS and JS, saw: restRow      primer-react/enforce-css-module-identifier-casing
+   601:46  warning  Class names should be PascalCase in both CSS and JS, saw: muted        primer-react/enforce-css-module-identifier-casing
+   616:29  warning  Class names should be PascalCase in both CSS and JS, saw: box          primer-react/enforce-css-module-identifier-casing
+   649:31  warning  Class names should be PascalCase in both CSS and JS, saw: box          primer-react/enforce-css-module-identifier-casing
+   658:31  warning  Class names should be PascalCase in both CSS and JS, saw: bigNumber    primer-react/enforce-css-module-identifier-casing
+   661:43  warning  Class names should be PascalCase in both CSS and JS, saw: muted        primer-react/enforce-css-module-identifier-casing
+   685:50  warning  Class names should be PascalCase in both CSS and JS, saw: muted        primer-react/enforce-css-module-identifier-casing
+   707:27  warning  Class names should be PascalCase in both CSS and JS, saw: summary      primer-react/enforce-css-module-identifier-casing
+   715:45  warning  Class names should be PascalCase in both CSS and JS, saw: muted        primer-react/enforce-css-module-identifier-casing
+   718:32  warning  Class names should be PascalCase in both CSS and JS, saw: bigNumber    primer-react/enforce-css-module-identifier-casing
+   724:45  warning  Class names should be PascalCase in both CSS and JS, saw: muted        primer-react/enforce-css-module-identifier-casing
+   727:32  warning  Class names should be PascalCase in both CSS and JS, saw: bigNumber    primer-react/enforce-css-module-identifier-casing
+   733:43  warning  Class names should be PascalCase in both CSS and JS, saw: muted        primer-react/enforce-css-module-identifier-casing
+   771:66  warning  Class names should be PascalCase in both CSS and JS, saw: muted        primer-react/enforce-css-module-identifier-casing
+   778:25  warning  Class names should be PascalCase in both CSS and JS, saw: tableScroll  primer-react/enforce-css-module-identifier-casing
+   791:36  warning  Class names should be PascalCase in both CSS and JS, saw: muted        primer-react/enforce-css-module-identifier-casing
+   860:51  warning  Class names should be PascalCase in both CSS and JS, saw: muted        primer-react/enforce-css-module-identifier-casing
+   907:28  warning  Class names should be PascalCase in both CSS and JS, saw: account      primer-react/enforce-css-module-identifier-casing
+   911:45  warning  Class names should be PascalCase in both CSS and JS, saw: muted        primer-react/enforce-css-module-identifier-casing
+  1046:48  warning  Class names should be PascalCase in both CSS and JS, saw: muted        primer-react/enforce-css-module-identifier-casing
+  1080:26  warning  Class names should be PascalCase in both CSS and JS, saw: shell        primer-react/enforce-css-module-identifier-casing
+  1081:38  warning  Class names should be PascalCase in both CSS and JS, saw: skipLink     primer-react/enforce-css-module-identifier-casing
+  1086:31  warning  Class names should be PascalCase in both CSS and JS, saw: brandBar     primer-react/enforce-css-module-identifier-casing
+  1096:27  warning  Class names should be PascalCase in both CSS and JS, saw: logo         primer-react/enforce-css-module-identifier-casing
+  1100:37  warning  Class names should be PascalCase in both CSS and JS, saw: noMargin     primer-react/enforce-css-module-identifier-casing
+  1104:28  warning  Class names should be PascalCase in both CSS and JS, saw: serviceBar   primer-react/enforce-css-module-identifier-casing
+  1105:29  warning  Class names should be PascalCase in both CSS and JS, saw: inner        primer-react/enforce-css-module-identifier-casing
+  1115:27  warning  Class names should be PascalCase in both CSS and JS, saw: serviceName  primer-react/enforce-css-module-identifier-casing
+  1129:29  warning  Class names should be PascalCase in both CSS and JS, saw: userLink     primer-react/enforce-css-module-identifier-casing
+  1165:66  warning  Class names should be PascalCase in both CSS and JS, saw: main         primer-react/enforce-css-module-identifier-casing
+  1199:34  warning  Class names should be PascalCase in both CSS and JS, saw: muted        primer-react/enforce-css-module-identifier-casing
+  1204:35  warning  Class names should be PascalCase in both CSS and JS, saw: muted        primer-react/enforce-css-module-identifier-casing
+  1253:30  warning  Class names should be PascalCase in both CSS and JS, saw: footer       primer-react/enforce-css-module-identifier-casing
+  1254:28  warning  Class names should be PascalCase in both CSS and JS, saw: inner        primer-react/enforce-css-module-identifier-casing
+  1269:45  warning  Class names should be PascalCase in both CSS and JS, saw: muted        primer-react/enforce-css-module-identifier-casing
+  1273:44  warning  Class names should be PascalCase in both CSS and JS, saw: muted        primer-react/enforce-css-module-identifier-casing
+
+✖ 58 problems (0 errors, 58 warnings)
+
