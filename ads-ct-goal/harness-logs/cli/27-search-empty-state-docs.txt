@@ -1,0 +1,8 @@
+$ npx ads-cli search empty state error message --type docs
+Results (1):
+
+Empty state error message
+   ADS  ·  docs
+   An empty state message appears after someone has completed a task or workflow,…
+   → npx @atlaskit/ads-cli docs empty state error message
+# exit=0

@@ -1,0 +1,408 @@
+$ npx ads-cli docs layout
+## Overview
+
+Grid is a system for arranging content consistently within the main content area of an Atlassian
+app.
+
+In Figma, grids are set up using
+[Figma layout guides](https://help.figma.com/hc/en-us/articles/360040450513-Create-layout-guides).
+The code equivalent is built using a combination of [primitives](/components/primitives/overview)
+such as box, stack, and inline.
+
+For everything outside of the main content area, including navigation and panel, see the
+[layout component](/components/navigation-system/layout).
+
+<img
+	src={layoutAnatomy}
+	srcDark={layoutAnatomyDark}
+	alt="Layout component anatomy showing the top nav, side nav, main, and panel. Grid sits within main."
+/>
+
+## Grid basics
+
+The Figma grid component has three basic elements:
+
+- **Columns** divide the main content area into 12 equal parts for horizontal structure.
+- **Gutters** are the gaps between columns, providing consistent separation between content.
+- **Margins** are the empty space between the outer columns and the edge of the main content area.
+  They give content clear space.
+
+<img
+	src={gridAnatomy}
+	srcDark={gridAnatomyDark}
+	alt="Figma grid component anatomy showing columns, gutters, and margins."
+/>
+
+Aligning content to the columns supports a variety of layouts in the main content area. For example,
+content can span 12, 6, or 4 columns.
+
+<img
+	src={columnSpan}
+	srcDark={columnSpanDark}
+	alt="Diagram showing content arrangement spanning 12, 6, or 4 grid columns."
+/>
+
+Content can also sit centered within the grid. For example, a centered block can span 8, 10, or 12
+columns.
+
+<img
+	src={columnOffset}
+	srcDark={columnOffsetDark}
+	alt="Diagram showing content arrangement center-aligned on the grid and spanning 8, 10, or 12 grid columns."
+/>
+
+<DoDontGrid>
+	<DoDont
+		type="do"
+		image={{
+			url: gridBasicsDo,
+			urlDarkMode: gridBasicsDoDark,
+			alt: 'Example of content aligning to the grid columns.',
+		}}
+	>
+		Align content within the app's main content area across any number of columns required.
+	</DoDont>
+	<DoDont
+		type="dont"
+		image={{
+			url: gridBasicsDont,
+			urlDarkMode: gridBasicsDontDark,
+			alt: 'Example of content overflowing into grid gutters and margins, breaking visual alignment.',
+		}}
+	>
+		Don't allow content to overflow into gutters or margins. This breaks visual alignment and makes
+		layouts unpredictable.
+	</DoDont>
+</DoDontGrid>
+
+## How to choose what to align to the grid
+
+Within the main content area, align content containers to the grid columns. Examples include cards,
+images, text blocks, tables, and forms.
+
+Small elements, like buttons and icons, do not need to align to this grid. Use
+[space tokens](/foundations/spacing#space-tokens) to manage the space between and within them
+instead.
+
+<img
+	src={spacingTokens}
+	srcDark={spacingTokensDark}
+	alt="Example showing cards aligned to grid columns. The horizontally placed input field and buttons, as well as the content within the card, do not align to the grid columns and are instead managed with space tokens."
+/>
+
+The same applies within content containers. Only top-level containers need to align to the grid. Use
+space tokens for the elements inside them, such as cards and table columns.
+
+<img
+	src={contentContainers}
+	srcDark={contentContainersDark}
+	alt="Example showing kanban columns aligned to the grid, but the cards within them using space tokens."
+/>
+
+Overlays like modals, tooltips, and dropdown menus also sit outside the grid, as they float above
+the page content.
+
+<DoDontGrid>
+	<DoDont
+		type="do"
+		image={{
+			url: alignContentDo,
+			urlDarkMode: alignContentDoDark,
+			alt: 'Example of content containers aligning to the grid columns.',
+		}}
+	>
+		Align content containers to our grid columns, such as cards, images, text blocks, tables, and
+		forms.
+	</DoDont>
+	<DoDont
+		type="dont"
+		image={{
+			url: alignContentDont,
+			urlDarkMode: alignContentDontDark,
+			alt: 'Example of buttons and icons incorrectly aligned to the grid columns instead of using space tokens.',
+		}}
+	>
+		Don't align small elements, such as buttons or icons, to the grid. Instead, use space tokens to
+		manage their spacing.
+	</DoDont>
+</DoDontGrid>
+
+## Nested grids
+
+Space tokens are recommended for aligning content within containers, but you can also apply an
+internal grid.
+
+While the underlying concepts are the same for columns, gutters, and margins, our grid component in
+Figma is only intended for the main content area. When setting up a grid inside a container, use our
+[space tokens](/foundations/spacing#space-tokens).
+
+[Create your own Figma layout guides](https://help.figma.com/hc/en-us/articles/360040450513-Create-layout-guides).
+
+<img
+	src={nestedGrid}
+	srcDark={nestedGridDark}
+	alt="Example showing a card sitting on the main grid. The card has its own nested grid."
+/>
+
+## Grid breakpoints
+
+Breakpoints are based on the viewport width, not the width of the main content area. Showing or
+hiding the side navigation or a panel does not change which breakpoint the grid uses.
+
+These are our default values for the grid in the main content area. Check your app or local system
+for the specific grid values in use, as they may differ.
+
+<BreakpointsTable />
+
+At each breakpoint, the gutter width, margin width, and number of columns adjust within the main
+content area. Breakpoints also affect layout areas like navigation and panels. For details see the
+[layout component](/components/navigation-system/layout).
+
+Design for at least two device sizes from the table above, and preferably more. Always include
+mobile (`xxs`).
+
+<img
+	src={gridBreakpoints}
+	srcDark={gridBreakpointsDark}
+	alt="Example showing how the grid changes across three breakpoint ranges: m – xl, xs – s, and xxs."
+/>
+
+## Grid types
+
+There are two types of grid:
+
+- **Fixed grids** have a maximum width and sit centered in the main content area. This default
+  option comes in two sizes: fixed-wide and fixed-narrow.
+- **Fluid grids** fill the available space in the main content area. Use fluid grids when content
+  expands horizontally and has no natural maximum width. Use sparingly, because at very large
+  viewports, text lines can become too long and visual relationships between elements may break
+  down.
+
+When the main content area is smaller than the maximum width, such as at smaller breakpoints, fixed
+grids behave the same as fluid grids.
+
+<img
+	src={gridTypes}
+	srcDark={gridTypesDark}
+	alt="Side-by-side comparison of fixed and fluid grids on desktop and mobile viewports."
+/>
+
+### Fixed grids
+
+There are two fixed grid options:
+
+- **Fixed-wide** has a maximum width of 1296px (including margins). Use this as the default for most
+  experiences.
+- **Fixed-narrow** has a maximum width of 864px (including margins). Use this for long-form content
+  such as blogs and articles, to limit line length and increase readability. Some internal elements,
+  such as headers, may break out of the grid to span across the page.
+
+<img
+	src={fixedGridTypes}
+	srcDark={fixedGridTypesDark}
+	alt="Side-by-side comparison of fixed-wide and fixed-narrow grids."
+/>
+
+### Choosing between fixed and fluid grids
+
+| Grid type            | Maximum width (margins included) | Use when                                                    | Examples                                |
+| -------------------- | -------------------------------- | ----------------------------------------------------------- | --------------------------------------- |
+| Fixed-wide (default) | 1296px                           | Content benefits from structure but doesn't need full width | Dashboards, directories, search results |
+| Fixed-narrow         | 864px                            | Long-form reading is the primary activity                   | Blogs, articles, documentation          |
+| Fluid                | No maximum                       | Content expands horizontally with no natural maximum width  | Kanban boards, whiteboards              |
+
+<DoDontGrid>
+	<DoDont
+		type="do"
+		image={{
+			url: fixedWideDo,
+			urlDarkMode: fixedWideDoDark,
+			alt: 'Example using a fixed-wide grid for a table directory.',
+		}}
+	>
+		Use fixed-wide grids for structured content, such as dashboards, search results, and
+		directories.
+	</DoDont>
+	<DoDont
+		type="dont"
+		image={{
+			url: fixedWideDont,
+			urlDarkMode: fixedWideDontDark,
+			alt: 'Example using a fixed-wide grid for long-form content.',
+		}}
+	>
+		Don't use fixed-wide grids for long-form content like blogs and articles. Long line lengths
+		impair readability.
+	</DoDont>
+	<DoDont
+		type="do"
+		image={{
+			url: fixedNarrowDo,
+			urlDarkMode: fixedNarrowDoDark,
+			alt: 'Example using a fixed-narrow grid for long-form content.',
+		}}
+	>
+		Use fixed-narrow grids for long-form content, such as blogs and articles.
+	</DoDont>
+	<DoDont
+		type="dont"
+		image={{
+			url: fixedNarrowDont,
+			urlDarkMode: fixedNarrowDontDark,
+			alt: 'Example using a fixed-narrow grid for a kanban board.',
+		}}
+	>
+		Don't use fixed-narrow grids for content that needs more horizontal space. Use fixed-wide or
+		fluid instead.
+	</DoDont>
+	<DoDont
+		type="do"
+		image={{
+			url: fluidDo,
+			urlDarkMode: fluidDoDark,
+			alt: 'Example using a fluid grid for a kanban board.',
+		}}
+	>
+		Use fluid grids for content that expands horizontally, such as kanban boards and whiteboards.
+	</DoDont>
+	<DoDont
+		type="dont"
+		image={{
+			url: fluidDont,
+			urlDarkMode: fluidDontDark,
+			alt: 'Example using a fluid grid for a table directory.',
+		}}
+	>
+		Don't use fluid grids for structured content with a natural width, such as dashboards or
+		directories. Elements lose their visual relationship at large viewports.
+	</DoDont>
+</DoDontGrid>
+
+## Applying grid
+
+The default grid is already built into the Figma layout component.
+
+1. Select your grid type from the component properties panel.
+2. Choose your breakpoint from the responsive menu in the appearance panel.
+
+<img
+	src={applyingGrid}
+	srcDark={applyingGridDark}
+	alt="Screenshot of the Figma layout component with the properties panel showing grid type and responsive selectors."
+/>
+
+You can also use this grid outside of the layout component. Select it from the assets panel in the
+ADS Foundations library, or
+[create your own](https://help.figma.com/hc/en-us/articles/360040450513-Create-layout-guides) using
+your app's values.
+
+**Tip:** Use **Shift + G** (Mac) or **Control + G** (Windows) to show or hide the grid in Figma.
+
+<DoDontGrid>
+	<DoDont
+		type="do"
+		image={{
+			url: gridSpanDo,
+			urlDarkMode: gridSpanDoDark,
+			alt: 'Example of the grid spanning the main content area only.',
+		}}
+	>
+		Span only the main content area. Exclude the side nav and panel.
+	</DoDont>
+	<DoDont
+		type="dont"
+		image={{
+			url: gridSpanDont,
+			urlDarkMode: gridSpanDontDark,
+			alt: 'Example of the grid spanning the side nav and main area.',
+		}}
+	>
+		Don't span the grid across navigation or panel areas.
+	</DoDont>
+	<DoDont
+		type="do"
+		image={{
+			url: breakpointSettingDo,
+			urlDarkMode: breakpointSettingDoDark,
+			alt: 'Screenshot of the Figma responsive setting in the appearance panel.',
+		}}
+	>
+		Change the breakpoint from the responsive setting in the appearance panel.
+	</DoDont>
+	<DoDont
+		type="dont"
+		image={{
+			url: breakpointSettingDont,
+			urlDarkMode: breakpointSettingDontDark,
+			alt: 'Example of manually resizing the grid component.',
+		}}
+	>
+		Don't change the breakpoint by resizing the grid or layout component. The linked grid styles
+		will map incorrectly.
+	</DoDont>
+	<DoDont
+		type="do"
+		image={{
+			url: breakpointViewportDo,
+			urlDarkMode: breakpointViewportDoDark,
+			alt: 'Breakpoint set to the full viewport width.',
+		}}
+	>
+		Set the grid breakpoint to the full viewport width.
+	</DoDont>
+	<DoDont
+		type="dont"
+		image={{
+			url: breakpointViewportDont,
+			urlDarkMode: breakpointViewportDontDark,
+			alt: 'Breakpoint set to the content area width only.',
+		}}
+	>
+		Don't set the breakpoint based on the main content area width. Breakpoints are based on the full
+		viewport width.
+	</DoDont>
+</DoDontGrid>
+
+## Grid and auto layout
+
+Grid is a layout guide and a visual reference for aligning content to columns. To build layouts in
+Figma that adjust as the breakpoint changes, use auto layout to position content along the grid
+columns.
+
+<DoDontGrid>
+	<DoDont
+		type="do"
+		image={{
+			url: autoLayoutDo,
+			urlDarkMode: autoLayoutDoDark,
+			alt: 'Screenshot of Figma auto layout settings.',
+		}}
+	>
+		Use auto layout to build responsive layouts that align to the grid.
+	</DoDont>
+	<DoDont
+		type="dont"
+		image={{
+			url: autoLayoutDont,
+			urlDarkMode: autoLayoutDontDark,
+			alt: 'Example of manually positioning content in Figma.',
+		}}
+	>
+		Don't use absolute positioning or drag-to-place content without auto layout. Manual placement
+		doesn't adapt to changing breakpoints and breaks responsive layouts.
+	</DoDont>
+</DoDontGrid>
+
+## Related
+
+- [Layout](/components/navigation-system/layout) is the component that defines the outer structure
+  of an app, including navigation, panels, and the main content area.
+- [Primitives](/components/primitives/overview) are the box, stack, and inline primitives used to
+  build equivalent layouts in code.
+- [Spacing](/foundations/spacing) uses space tokens to ensure consistent alignment and separation
+  between elements.
+- [ADS Figma libraries](/get-started/design/figma-libraries/atlassians) contain the pre-built grid
+  with default Atlassian breakpoint values.
+- [Auto layout in Figma](https://help.figma.com/hc/en-us/articles/360040451373-Guide-to-auto-layout)
+  is Figma's guide to building responsive layouts that align to grid columns.
+# exit=0
