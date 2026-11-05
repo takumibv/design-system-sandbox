@@ -140,6 +140,8 @@ export const findMember = (members: Member[], id: number) => members.find((m) =>
  */
 export const myWeek = (week: Week, members: Member[], userId: number): MyWeek => {
 	if (week.holiday) return { kind: "holiday", name: week.holiday };
+	// 参加していない人は組み合わせに入らない（デモでは固定データを組み直さないため、ここで除外する）
+	if (!findMember(members, userId)?.active) return { kind: "none" };
 	if (week.rest === userId) return { kind: "rest" };
 	const pair = week.pairs.find(([a, b]) => a === userId || b === userId);
 	if (!pair) return { kind: "none" };

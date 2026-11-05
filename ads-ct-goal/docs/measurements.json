@@ -1,0 +1,182 @@
+[
+  {
+    "width": 1440,
+    "S01": {
+      "partnerName": {
+        "top": 249,
+        "bottom": 281
+      },
+      "huddleButton": {
+        "top": 343,
+        "bottom": 375
+      },
+      "scrollToPartner": 0,
+      "scrollToHuddle": 0,
+      "pageHeight": 1422,
+      "tabsToHuddle": 7,
+      "clicksToStartHuddle": 1,
+      "huddleFeedbackShown": true
+    },
+    "G3": {
+      "upcomingHeading": {
+        "top": 190,
+        "bottom": 210
+      },
+      "lastUpcomingRow": {
+        "top": 401,
+        "bottom": 421
+      },
+      "scrollToSeeAllUpcoming": 0
+    },
+    "S02": {
+      "loginButton": {
+        "top": 278,
+        "bottom": 310
+      },
+      "scrollToLogin": 0,
+      "afterLoginPartnerVisible": true,
+      "afterLoginHuddle": {
+        "top": 343,
+        "bottom": 375
+      },
+      "clicksToHuddleFromLoggedOut": 2
+    },
+    "S03": {
+      "restHeading": {
+        "top": 227,
+        "bottom": 255
+      },
+      "nextCtText": true
+    },
+    "S09": {
+      "warningHeading": {
+        "top": 359,
+        "bottom": 379
+      },
+      "scrollToWarning": 0
+    },
+    "G4": {
+      "deleteButton": {
+        "top": 776,
+        "bottom": 808
+      },
+      "scrollToDelete": 0,
+      "dialogTitle": "加藤 大輔さんを削除しますか？",
+      "clicks": 3,
+      "successFlag": true
+    },
+    "G5": {
+      "warningShownBeforeSave": true,
+      "saveButton": {
+        "top": 662,
+        "bottom": 694
+      },
+      "scrollToSave": 0,
+      "clicks": 3,
+      "backOnHome": true,
+      "successFlag": true,
+      "heroAfterLeaving": true
+    },
+    "G6": {
+      "submitButton": {
+        "top": 566,
+        "bottom": 598
+      },
+      "scrollToSubmit": 0,
+      "inputs": 3,
+      "backOnHome": true,
+      "successFlag": true,
+      "heroHeading": true
+    }
+  },
+  {
+    "width": 390,
+    "S01": {
+      "partnerName": {
+        "top": 333,
+        "bottom": 365
+      },
+      "huddleButton": {
+        "top": 427,
+        "bottom": 459
+      },
+      "scrollToPartner": 0,
+      "scrollToHuddle": 0,
+      "pageHeight": 2818,
+      "tabsToHuddle": 7,
+      "clicksToStartHuddle": 1,
+      "huddleFeedbackShown": true
+    },
+    "G3": {
+      "upcomingHeading": {
+        "top": 566,
+        "bottom": 586
+      },
+      "lastUpcomingRow": {
+        "top": 809,
+        "bottom": 829
+      },
+      "scrollToSeeAllUpcoming": 0
+    },
+    "S02": {
+      "loginButton": {
+        "top": 378,
+        "bottom": 410
+      },
+      "scrollToLogin": 0,
+      "afterLoginPartnerVisible": true,
+      "afterLoginHuddle": {
+        "top": 427,
+        "bottom": 459
+      },
+      "clicksToHuddleFromLoggedOut": 2
+    },
+    "S03": {
+      "restHeading": {
+        "top": 283,
+        "bottom": 311
+      },
+      "nextCtText": true
+    },
+    "S09": {
+      "warningHeading": {
+        "top": 443,
+        "bottom": 463
+      },
+      "scrollToWarning": 0
+    },
+    "G4": {
+      "deleteButton": {
+        "top": 1283,
+        "bottom": 1315
+      },
+      "scrollToDelete": 415,
+      "dialogTitle": "加藤 大輔さんを削除しますか？",
+      "clicks": 3,
+      "successFlag": true
+    },
+    "G5": {
+      "warningShownBeforeSave": true,
+      "saveButton": {
+        "top": 798,
+        "bottom": 830
+      },
+      "scrollToSave": 0,
+      "clicks": 3,
+      "backOnHome": true,
+      "successFlag": true,
+      "heroAfterLeaving": true
+    },
+    "G6": {
+      "submitButton": {
+        "top": 682,
+        "bottom": 714
+      },
+      "scrollToSubmit": 0,
+      "inputs": 3,
+      "backOnHome": true,
+      "successFlag": true,
+      "heroHeading": true
+    }
+  }
+]

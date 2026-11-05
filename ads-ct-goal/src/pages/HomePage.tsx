@@ -161,13 +161,23 @@ function MyThisWeek({ week, weeks, index, members, me, onHuddle }: { week: Week;
 				</Text>
 			</Stack>
 		);
+	} else if (me.active) {
+		// 参加しているが、今週の組み合わせが作られた後に参加した場合（初回設定の直後など）
+		body = (
+			<Stack space="space.100">
+				<Heading size="large" as="h3">
+					今週の組み合わせにはまだ入っていません
+				</Heading>
+				<Text as="p">参加の設定は保存されています。組み合わせが組み直されると、ここにあなたの相手が表示されます。</Text>
+			</Stack>
+		);
 	} else {
 		body = (
 			<Stack space="space.150">
 				<Heading size="large" as="h3">
 					今週の組み合わせに入っていません
 				</Heading>
-				<Text as="p">CT に参加する設定にすると、組み合わせに入ります。</Text>
+				<Text as="p">CT に参加しない設定になっています。参加する設定にすると、組み合わせに入ります。</Text>
 				<Box>
 					<LinkButton {...linkTo("settings")}>自分の設定を開く</LinkButton>
 				</Box>
