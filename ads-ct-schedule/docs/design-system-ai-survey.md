@@ -6,8 +6,9 @@
 
 ## 結論
 
-- **意図まで届けられている代表例は SmartHR（日本）、Primer（GitHub）、Serendie（三菱電機）、Carbon（IBM）。** どれも「部品の API」だけでなく「いつ使う／使わない」「書き方」を AI が引ける形にしています。
+- **意図まで届けられている代表例は SmartHR（日本）、Ant Design（Ant Group）、Primer（GitHub）、Serendie（三菱電機）、Carbon（IBM）。** どれも「部品の API」だけでなく「いつ使う／使わない」「書き方」を AI が引ける形にしています。
 - 中でも **SmartHR は日本語の UI 規約を AI 向けにした最良の例**です。部品ごとに `[must]` `[should]` `[avoid]` 付きのチェックリストとライティングのルールがあり、lint ルールから Do/Don't を自動生成しています。
+- **Ant Design は公式の DESIGN.md を公開しています。** 設計原則、値の理由、Do's and Don'ts を 1 ファイルにまとめた、意図の書き方の見本です。
 - 共通する成功パターンは次の 4 つです。
   1. 意図を**部品ごとの構造化された文書**にする
   2. **lint のルールから**ガイドを自動生成し、文書が古くならないようにする
@@ -27,6 +28,7 @@
 | **Primer**（GitHub） | ◎ `@primer/mcp`（20 ツール） | — | なし | ◎ 用途・アクセシビリティの指針、色とタイポの使い方、パターンを専用ツールで返す | ◎ `lint_css`、`review_alt_text` |
 | **Serendie**（三菱電機） | ◎ リモート MCP | ○ `serendie-overview` | ◎ llms.txt と llms-full.txt | ○ llms.txt の説明文に使い分けを書く。ガイドラインを MCP で取得 | ○ Figma プラグインでトークン違反を検査 |
 | **Carbon**（IBM） | ◎ ホスト型（IBMid 必須） | ◎ `carbon-builder`（参照文書 13 本） | — | ○ ドキュメント検索＋スキルのガードレール・よくある失敗集 | ◎ `code_audit`（トークン・用途・a11y・レイアウトを監査） |
+| **Ant Design**（Ant Group） | ◎ CLI に同梱（8 ツール＋プロンプト 2 つ） | ○ CLI の使い方スキル、AI 部品（Ant Design X）用スキル | ◎ llms.txt、llms-full（英・中）、llms-semantic | ◎ **公式の DESIGN.md**（4 つの設計原則、色の理由、部品ごとの使い方、Do's and Don'ts）、部品文書の「When To Use」 | ○ `antd lint`（非推奨 API とベストプラクティス） |
 | **PatternFly**（Red Hat） | ○ 2 ツール | — | — | ○ ガイドライン検索と部品の全文書（props の JSON スキーマ付き） | — |
 | ADS（参考） | ◎ | △ 社内のみ | ◎ 8 種 | ◎ 部品ごとの usage/content/a11y | ◎ ESLint 117 ルール |
 | DADS（参考） | なし | 開発者向けのみ | なし | Web サイトの文章のみ | 汎用 lint のみ |
@@ -99,6 +101,39 @@ ADS の CLI では props と実例しか出ませんでした。Primer は「用
 - **スキル `carbon-builder`**（Apache-2.0）：参照文書 13 本を持ちます。実装のガードレール、よくある失敗、アクセシビリティ規則（WCAG 2.2 AA）、グリッド、結果の検証、エラーからの回復などです。
 - **プロンプトの見本集**：「Mandatory: Use the carbon-builder skill and Carbon MCP」で始まり、「存在しない部品や props を受け入れない」「先に質問させる」と指示する例を公式に載せています。
 
+### Ant Design（Ant Group）── 公式の DESIGN.md と、オフラインの CLI／MCP
+
+- **DESIGN.md**（[ant.design/design.md](https://ant.design/design.md)、約 21KB）：Google の DESIGN.md 形式（alpha）で、大手デザインシステムの公式版を確認できたのは今回これだけです。意図の書き方の見本として最も参考になります。
+  - 先頭の YAML：色、文字、角丸、余白、部品（`button-primary` とその hover／active など）のトークン。
+  - **Overview**：4 つの設計原則（Natural／Certain／Meaningful／Growing）を「判断に迷ったときの基準」として書いている。
+  - **Colors**：値の理由まで書いている。
+    - 「`#1677FF` を選んだのは、青が信頼と集中を感じさせ、濃紺ほど堅すぎず、彩度の高いシアンほど軽くないから」
+    - 「プリセット色はタグ・チャート・分類表示専用で、主要な UI には使わない」
+    - 「`primary` は各画面で最も重要な 1 つの操作に限る」
+    - 標準の配色の一部が WCAG AA を満たさないことも正直に注記している。
+  - **Components**：部品ごとに 1 行で役割を書いている。
+    - 「Primary ボタンは画面で唯一の支配的な操作。1 つの判断に 2 つ並べない」
+    - 「Tag を重要な状態の表示に使わない。Alert か Badge を使う」
+    - 「Table は縞模様にしない。利用者が密なデータを読めると信頼している」
+  - **Do's and Don'ts**：
+    - 「`#FFFFFF` を直書きしない。値ではなく役割が大事」
+    - 「1 回限りのアクセント色を作らない。必要に見えるならレイアウトを見直すべき」
+    - 「マジックナンバーを使わない。スケールに必要な段がないならデザインを見直す」
+  - **Customization**：テーマの変え方。
+- **部品文書**：各部品の Markdown に「When To Use」の節がある。例：Button「Primary は主要な操作に使い、1 セクションに最大 1 つ」「Dashed は操作を追加するとき」「danger は削除や権限付与など危険な操作に」。
+- **llms.txt 群**：
+  - `llms.txt`：全文書と部品文書への索引。設計仕様（buttons、colors、copywriting、data-entry など）も含む。
+  - `llms-full.txt`：英語版 約 2.1MB。中国語版もある。
+  - `llms-semantic.md`：75 部品の内部構造と `classNames` の当て先。スタイルを上書きするとき、正しい場所を AI に教える。
+- **公式 CLI [`@ant-design/cli`](https://github.com/ant-design/ant-design-cli)**（v6.7.0、MIT）：ADS の CLI と発想が近いが、データを全部同梱していて**完全にオフライン**で動く。
+  - v3〜v6 のマイナーごとのスナップショット 55 以上を持ち、「`antd@5.3.0` の API」まで正確に引ける。
+  - 主なコマンド：`info`（props）、`demo`、`token`、`design.md`、`semantic`、`changelog`（版の間の API 差分）、`lint`（非推奨 API とベストプラクティス）、`migrate`（移行ガイド。AI 向けの移行プロンプトも出力）。
+  - `antd mcp` を実行すると MCP サーバーになる。ツールは 8 つ（`antd_list`／`antd_info`／`antd_doc`／`antd_demo`／`antd_token`／`antd_design_md`／`antd_semantic`／`antd_changelog`）、プロンプトは 2 つ（`antd-expert`、`antd-page-generator`）。
+  - `antd setup --client claude` で、MCP の設定と AGENTS.md への案内をまとめて入れる。
+- **スキル**：
+  - CLI のスキル（`npx skills add ant-design/ant-design-cli`）は「antd のコードを書く前に必ず API を調べる。記憶に頼らない」と指示し、`info → demo → 実装` の手順と `design.md` の読み込みを場面ごとに書いている。
+  - AI チャット UI 用の [Ant Design X](https://x.ant.design/) には、部品ごとのスキル（`x-components`、`x-chat-provider` など）を入れる `@ant-design/x-skill` もある。
+
 ### PatternFly（Red Hat）
 
 - MCP のツールは 2 つです。ガイドラインの検索（`searchPatternFlyDocs`）と、部品の全文書の取得（`usePatternFlyDocs`、props の JSON スキーマ付き）。
@@ -110,7 +145,7 @@ ADS の CLI では props と実例しか出ませんでした。Primer は「用
 
 | 道具 | 意図をどう載せるか |
 | --- | --- |
-| **[DESIGN.md](https://github.com/google-labs-code/design.md)**（Google、2026-04 公開、alpha） | 先頭の YAML にトークン（色・文字・角丸・余白・部品）、本文に「なぜその値か」を書く 1 ファイル形式。章立ては Overview → Colors → … → Do's and Don'ts。`npx @google/design.md lint` で参照切れやコントラスト不足（WCAG AA）を検査し、`diff` で変更による劣化を検出する |
+| **[DESIGN.md](https://github.com/google-labs-code/design.md)**（Google、2026-04 公開、alpha） | 先頭の YAML にトークン（色・文字・角丸・余白・部品）、本文に「なぜその値か」を書く 1 ファイル形式。章立ては Overview → Colors → … → Do's and Don'ts。`npx @google/design.md lint` で参照切れやコントラスト不足（WCAG AA）を検査し、`diff` で変更による劣化を検出する。**実例は Ant Design の [design.md](https://ant.design/design.md)** |
 | **[Storybook MCP](https://storybook.js.org/docs/ai/mcp)**（10.x、preview） | 部品の props・ストーリー・文書を AI に渡す。公式の推奨は「ストーリーや JSDoc に**なぜ使うか**を書く」（例：「主ボタンは 1 ビューに 1 つまで」「遷移なら Link を使う」）。アンチパターンは `tags: ['!manifest']` で AI から隠す。`test-run` で a11y も検査できる |
 | **v0 Design Systems 2.0**（2026-06） | 自社のデザインシステムを登録すると、v0 用のスキルとして保存される。「確認できない部品・props・トークンは使わない」という方針をとる |
 | **Meta Astryx**（2026-06 OSS） | 意図を「届ける」より「測る」側。同じ依頼を Astryx、shadcn/ui、素の HTML で生成して採点する。会話が長くなるとデザインシステムから外れていくか（劣化モード）も検査する |
@@ -157,7 +192,7 @@ ADS の CLI では props と実例しか出ませんでした。Primer は「用
    - DADS サイトの「使い方」（例：ボタンの重要度、配置）を部品ごとに `[must]` `[should]` `[avoid]` のチェックリストにまとめ、`.agents/skills/dads-component-guidelines/` に置く。
    - 冒頭に「事前知識で答えず、必ず該当ファイルを読む」と書く。
 2. **選定表を 1 枚作る。** 「選択肢なら Select、操作なら Dropdown」のように、DADS の部品の使い分けを一覧にする。
-3. **トークンの使い道を書く。** DADS のトークンには説明がないので、DESIGN.md 形式（YAML のトークン＋本文の理由）で、このプロダクトの色・文字・余白の意図を書く。lint でコントラストも検査できる。
+3. **トークンの使い道を DESIGN.md に書く。** DADS のトークンには説明がないので、DESIGN.md 形式（YAML のトークン＋本文の理由）で、このプロダクトの色・文字・余白の意図を書く。**Ant Design の design.md の章立て（原則 → 色の理由 → 部品ごとの 1 行 → Do's and Don'ts）がそのまま型として使える。** lint でコントラストも検査できる。
 4. **検査を足す。** 「Tailwind の標準色を使わない」「主ボタンは 1 画面 1 つ」を lint や Playwright の検査にする。原本の `ui-review-harness.md` の「次に追加する候補 3」の具体化にあたる。
 5. **AGENTS.md で起動条件を明記する。** 「UI を作るときは上のスキルと `docs/design-decisions.md` を必ず読む」と書く（SUPER STUDIO の教訓）。
 
@@ -169,6 +204,7 @@ ADS の CLI では props と実例しか出ませんでした。Primer は「用
 - Serendie：[Serendie MCP](https://serendie.design/en/ai/mcp-server/)、[Agent Skills](https://serendie.design/en/ai/agent-skills)、[Figma プラグイン](https://serendie.design/en/ai/serendie-ui-plugin)、[llms.txt](https://serendie.design/llms.txt)
 - Carbon：[Overview](https://carbondesignsystem.com/developing/carbon-mcp/overview/)、[Setup](https://carbondesignsystem.com/developing/carbon-mcp/onboarding-and-setup/)、[Prompts](https://carbondesignsystem.com/developing/carbon-mcp/prompts/)
 - PatternFly：[PatternFly MCP](https://www.patternfly.org/ai/patternfly-mcp)
+- Ant Design：[DESIGN.md](https://ant.design/design.md)、[llms.txt](https://ant.design/llms.txt)、[ant-design/ant-design-cli](https://github.com/ant-design/ant-design-cli)、[Button 文書](https://ant.design/components/button.md)
 - Shopify：[Use Polaris with the Shopify dev MCP server](https://shopify.dev/docs/api/app-ui/using-mcp)
 - DESIGN.md：[Google ブログ](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-design-md/)、[google-labs-code/design.md](https://github.com/google-labs-code/design.md)
 - Storybook：[Storybook MCP](https://storybook.js.org/docs/ai/mcp)、[AI best practices](https://storybook.js.org/docs/ai/best-practices)
