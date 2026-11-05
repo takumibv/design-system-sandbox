@@ -59,7 +59,6 @@ export type AppState = {
 	flags: AppFlag[];
 	/** 削除確認中のメンバー id */
 	confirmDeleteId: number | null;
-	openDeleteOnMount?: number;
 	/** 設定画面の初期表示（S16・S17 の再現用） */
 	settingsPreset: "none" | "submitted-empty" | "save-failed";
 };
@@ -110,8 +109,7 @@ export const stateFromPreset = (preset: string | null): AppState => {
 		case "S12":
 			return { ...s, userId: null, members: [], weeks: s.weeks.map((w) => ({ ...w, pairs: [], rest: undefined })) };
 		case "S13":
-			// Modal は初回描画時に開いた状態だと表示されない（ModalTransition の仕様と推測）ため、マウント後に開く
-			return { ...s, openDeleteOnMount: 10 };
+			return { ...s, confirmDeleteId: 10 };
 		case "S14":
 			return { ...s, flags: [newFlag("delete-failed", "加藤 大輔")] };
 		case "S15":

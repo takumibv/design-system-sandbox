@@ -39,11 +39,6 @@ export function App() {
 	}, [effectiveRoute, needsSetup, route]);
 
 	const update = (f: (s: AppState) => AppState) => setState(f);
-	useEffect(() => {
-		const id = state.openDeleteOnMount;
-		if (id) window.setTimeout(() => setState((s) => ({ ...s, openDeleteOnMount: undefined, confirmDeleteId: id })), 100);
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
 	const pushFlag = (flag: AppFlag) => update((s) => ({ ...s, flags: [flag, ...s.flags] }));
 	const dismissFlag = (id: number | string) => update((s) => ({ ...s, flags: s.flags.filter((f) => f.id !== id) }));
 
