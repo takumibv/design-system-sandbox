@@ -1,0 +1,34 @@
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.40 kB │ gzip:   0.29 kB
+dist/assets/index-wFYK6umV.css  128.95 kB │ gzip:  19.09 kB
+dist/assets/index-Dilw8z4y.js   611.52 kB │ gzip: 182.34 kB
+
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 884ms
+smarthr-ct-goal@0.0.0 /home/user/design-system-sandbox/smarthr-ct-goal
++-- @axe-core/playwright@4.14.0
++-- @types/node@24.19.2
++-- @types/react-dom@19.3.0
++-- @types/react@19.3.0
++-- @vitejs/plugin-react@6.2.1
++-- eslint-config-smarthr@14.14.0
++-- eslint-plugin-smarthr@6.29.0
++-- eslint@9.39.5
++-- react-dom@19.3.1
++-- react-intl@10.2.2
++-- react-router-dom@7.18.5
++-- react@19.3.1
++-- smarthr-ui@102.1.0
++-- textlint-filter-rule-comments@1.3.0
++-- textlint-rule-preset-smarthr@1.38.3
++-- textlint-rule-prh@6.1.1
++-- textlint@15.8.0
++-- typescript-eslint@8.72.1
++-- typescript@5.9.3
+`-- vite@8.3.6
+

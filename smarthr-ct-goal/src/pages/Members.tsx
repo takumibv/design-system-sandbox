@@ -86,7 +86,7 @@ const MemberTable = ({ members, onDelete }: { members: Member[]; onDelete: (m: M
               </Td>
               <Td>{m.channel ? `#${m.channel}` : ''}</Td>
               {me && (
-                <Td contentWidth="1px">
+                <Td>
                   {me.id === m.id ? (
                     <RouterTextLink href="/settings">設定を変更</RouterTextLink>
                   ) : (
@@ -102,7 +102,7 @@ const MemberTable = ({ members, onDelete }: { members: Member[]; onDelete: (m: M
   )
 }
 
-/** モバイル：コレクション（リスト）。詳細ビューを持たないので、操作はアイコンボタン 1 つ [H:smarthr-list] */
+/** モバイル：コレクション（リスト）。詳細ビューを持たないので、操作はアイコンボタン1つ [H:smarthr-list] */
 const MemberList = ({ members, onDelete }: { members: Member[]; onDelete: (m: Member) => void }) => {
   const { me } = useAppState()
   return (
@@ -146,11 +146,11 @@ const EmptyMessage = () => {
       <Stack align="center">
         <p>表示するデータはありません。</p>
         <Text as="p" size="S" color="TEXT_GREY">
-          メンバーは Slack でログインすると追加されます。
+          メンバーはSlackでログインすると追加されます。
         </Text>
         {!me && (
           <Button size="S" prefix={<FaRightToBracketIcon />} onClick={login}>
-            Slack でログイン
+            Slackでログイン
           </Button>
         )}
       </Stack>
@@ -200,7 +200,7 @@ export const Members = () => {
               <Cluster justify="space-between" align="center" gap={1}>
                 <Heading>参加状況</Heading>
                 <span>
-                  参加 {activeCount} 人・不参加 {inactiveCount} 人（全 {members.length} 人）
+                  参加{activeCount}人・不参加{inactiveCount}人（全{members.length}人）
                 </span>
               </Cluster>
               {mobile ? (
@@ -248,12 +248,12 @@ export const Members = () => {
             <p>{'以下のメンバーを削除しますか？\u3000この操作は元に戻せません。'}</p>
             <DefinitionList>
               <DefinitionListItem term={{ text: '削除するメンバー', styleType: 'blockTitle' }}>
-                {target.name}（社員番号 {empCode(target)}）
+                {target.name}（社員番号：{empCode(target)}）
               </DefinitionListItem>
             </DefinitionList>
             {target.active && (
               <Text as="p" icon={<WarningIcon />}>
-                このメンバーは CT に参加中です。削除すると、今週以降の全員の組み合わせが組み直されます。
+                このメンバーはCTに参加中です。削除すると、今週以降の全員の組み合わせが組み直されます。
               </Text>
             )}
           </Stack>

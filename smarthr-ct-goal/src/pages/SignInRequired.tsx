@@ -8,7 +8,7 @@ export const SignInRequired = () => (
     <Container size="NARROW">
       <Stack gap={1.5}>
         <PageHeading>自分の設定</PageHeading>
-        <p>自分の設定を変えるには、画面右上の「Slack でログイン」からログインしてください。</p>
+        <p>自分の設定を変えるには、画面右上の「Slackでログイン」からログインしてください。</p>
       </Stack>
     </Container>
   </Layout>

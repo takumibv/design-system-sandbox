@@ -1,0 +1,71 @@
+
+/home/user/design-system-sandbox/smarthr-ct-goal/textlint/ui-text.md
+    3:22  ✓ error  かっこの外側、内側ともにスペースを入れません。              smarthr/ja-no-space-around-parentheses
+   11:6   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+   23:6   ✓ error  かっこの外側、内側ともにスペースを入れません。              smarthr/ja-no-space-around-parentheses
+   25:6   ✓ error  かっこの外側、内側ともにスペースを入れません。              smarthr/ja-no-space-around-parentheses
+   33:6   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+   33:12  ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+   41:4   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+   41:41  ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+   45:13  ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+   45:15  ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+   49:4   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+   49:7   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+   51:9   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+   59:5   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+   59:7   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+   59:28  ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+   63:6   ✓ error  かっこの外側、内側ともにスペースを入れません。              smarthr/ja-no-space-around-parentheses
+   67:3   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+   67:10  ✓ error  かっこの外側、内側ともにスペースを入れません。              smarthr/ja-no-space-around-parentheses
+   75:6   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+   77:6   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+   85:3   ✓ error  原則として、全角文字どうしの間にスペースを入れません。      smarthr/ja-no-space-between-full-width
+   87:3   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+   91:9   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+   91:12  ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+   95:5   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+   95:7   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+   95:18  ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+  121:3   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+  125:5   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+  125:7   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+  125:9   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+  125:44  ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+  125:50  ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+  125:52  ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+  125:58  ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+  169:6   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+  169:12  ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+  171:6   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+  187:3   error    Cannot find a pairing character for （.
+                    
+You should close this sentence with ）.
+This pair of marks is called 丸括弧（）                     smarthr/@textlint-rule/no-unmatched-pair
+  189:3   ✓ error  かっこの外側、内側ともにスペースを入れません。              smarthr/ja-no-space-around-parentheses
+  205:2   error    Cannot find a pairing character for （.
+                    
+You should close this sentence with ）.
+This pair of marks is called 丸括弧（）                     smarthr/@textlint-rule/no-unmatched-pair
+  207:8   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+  207:11  ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+  215:4   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+  231:8   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+  231:31  ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+  233:3   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+  237:22  ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+  237:28  ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+  247:18  ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+  247:24  ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+  251:3   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+  281:24  ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+  283:6   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+  285:6   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+  285:12  ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+  285:26  ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+  285:32  ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。  smarthr/ja-space-between-half-and-full-width
+
+✖ 59 problems (59 errors, 0 warnings, 0 infos)
+✓ 57 fixable problems.
+Try to run: $ textlint --fix [file]

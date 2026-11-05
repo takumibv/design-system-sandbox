@@ -4,7 +4,7 @@ import { ErrorScreen, Stack } from 'smarthr-ui'
 import { GajiLaboLogo } from '../components/GajiLaboLogo'
 
 /**
- * 存在しないページ。NotFoundErrorScreen はロゴが SmartHR 固定のため、logo を渡せる ErrorScreen で組み立てる。
+ * 存在しないページ。NotFoundErrorScreenはロゴがSmartHR固定のため、logoを渡せるErrorScreenで組み立てる。
  */
 export const NotFound = () => {
   useEffect(() => {
@@ -17,7 +17,7 @@ export const NotFound = () => {
       links={[{ label: '組み合わせに戻る', url: '/' }]}
     >
       <Stack gap={0.5} align="center">
-        <p>URL が間違っているか、ページが移動または削除された可能性があります。</p>
+        <p>URLが間違っているか、ページが移動または削除された可能性があります。</p>
         <p>組み合わせの画面から目的のページを開き直してください。</p>
       </Stack>
     </ErrorScreen>

@@ -35,7 +35,7 @@ export const Layout = ({ title, children }: { title: string; children: ReactNode
   }, [title])
 
   useEffect(() => {
-    // Header のロゴリンクは target を指定できないため、別タブで開くよう属性を補う（妥協点として記録）。
+    // Headerのロゴリンクはtargetを指定できないため、別タブで開くよう属性を補う（妥協点として記録）。
     document.querySelectorAll<HTMLAnchorElement>(LOGO_LINK_SELECTOR).forEach((a) => {
       a.target = '_blank'
       a.rel = 'noopener noreferrer'
@@ -50,7 +50,7 @@ export const Layout = ({ title, children }: { title: string; children: ReactNode
             trigger={
               <Cluster inline align="center" as="span">
                 <Avatar member={me} />
-                {/* Header 背景（BRAND #00c4cc）上の白文字は 2.14:1 で AA 未達のため、TEXT_BLACK を指定する（トリガーの既定は白） */}
+                {/* Header背景（BRAND #00c4cc）上の白文字は2.14:1でAA未達のため、TEXT_BLACKを指定する（トリガーの既定は白） */}
                 <Text color="TEXT_BLACK">{me.name}</Text>
               </Cluster>
             }
@@ -64,11 +64,11 @@ export const Layout = ({ title, children }: { title: string; children: ReactNode
           </HeaderDropdownMenuButton>
         ) : (
           <Button size="S" prefix={<FaRightToBracketIcon />} onClick={login}>
-            Slack でログイン
+            Slackでログイン
           </Button>
         )}
       </Header>
-      {/* モバイルではラベルを省き、3 つのナビゲーションを横幅に収める */}
+      {/* モバイルではラベルを省き、3つのナビゲーションを横幅に収める */}
       <AppNavi label={mobile ? undefined : 'CTスケジュール'}>
         <AppNaviCustomTag tag={NaviLink} href="/" current={pathname === '/'}>
           組み合わせ

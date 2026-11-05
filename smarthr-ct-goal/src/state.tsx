@@ -26,7 +26,7 @@ export const AppStateProvider = ({ scenarioId, children }: { scenarioId: string 
     scenario.loginError
       ? {
           type: 'error',
-          text: 'Slack でのログインに失敗しました。通信状況を確認して、もう一度ログインしてください。',
+          text: 'Slackでのログインに失敗しました。通信状況を確認して、もう一度ログインしてください。',
           action: 'retryLogin',
         }
       : null,
@@ -38,10 +38,10 @@ export const AppStateProvider = ({ scenarioId, children }: { scenarioId: string 
   )
 
   const login = useCallback(() => {
-    // デモ：実際の Slack 認証は行わず、通知だけを出す。
+    // デモ：実際のSlack認証は行わず、通知だけを出す。
     setNotice({
       type: 'info',
-      text: 'デモのため Slack には接続しません。本番では Slack のログイン画面に移動します。',
+      text: 'デモのためSlackには接続しません。本番ではSlackのログイン画面に移動します。',
     })
   }, [])
 

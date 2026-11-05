@@ -1,0 +1,9 @@
+logo target: _blank
+huddle msg: true
+redirected to /settings
+errors: true true
+pattern error: true
+setup done: true
+impact note: true
+saved+reshuffle: true
+deleted notice: true rows: 10

@@ -11,7 +11,7 @@ type Props = {
   note?: string
 }
 
-/** 頭文字。姓の 1 文字目を使う。 */
+/** 頭文字。姓の1文字目を使う。 */
 const initial = (name: string) => name.trim().charAt(0)
 
 /** アイコン（無い人は頭文字と固定色）＋名前。アイコンは名前と重複するので読み上げない。 */

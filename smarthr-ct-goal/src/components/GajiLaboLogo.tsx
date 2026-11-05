@@ -2,7 +2,7 @@ import logoSvg from '../assets/gaji-labo-logo.svg?raw'
 
 import './logo.css'
 
-/** Gaji-Labo のロゴ（currentColor で塗られる SVG）。Header の上では白で表示する。 */
+/** Gaji-Laboのロゴ（currentColorで塗られるSVG）。Headerの上では白で表示する。 */
 export const GajiLaboLogo = ({ tone = 'white' }: { tone?: 'white' | 'black' }) => (
   <span
     className="ct-logo"

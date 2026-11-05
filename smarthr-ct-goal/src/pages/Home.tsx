@@ -58,7 +58,7 @@ const HuddleButton = ({
       </Text>
       {started && (
         <ResponseMessage role="status">
-          デモのため Slack には接続しません。本番では #{channel} でハドルが始まります。
+          デモのためSlackには接続しません。本番では#{channel}でハドルが始まります。
         </ResponseMessage>
       )}
     </Stack>
@@ -84,7 +84,7 @@ const myWeek = (week: Week, me: Member, find: (id: number) => Member | undefined
   return { kind: 'none' }
 }
 
-/** 主役：今週のあなたの相手とハドル開始 [H:visual-guidance 上部に重要な情報][H:Button Primary は 1 つ] */
+/** 主役：今週のあなたの相手とハドル開始 [H:visual-guidance上部に重要な情報][H:Button Primaryは1つ] */
 const MyThisWeek = () => {
   const { me, weeks, members } = useAppState()
   if (!me) return null
@@ -100,7 +100,7 @@ const MyThisWeek = () => {
           <Stack gap={1.5}>
             <Stack>
               <Text size="S" color="TEXT_GREY">
-                {fullDateLabel(thisWeek)} {START_TIME} から
+                {fullDateLabel(thisWeek)}{START_TIME}から
               </Text>
               {current.kind === 'pair' && (
                 <>
@@ -109,8 +109,7 @@ const MyThisWeek = () => {
                     <HuddleButton channel={current.channel} variant="primary" partnerLabel={current.partner.name} />
                   ) : (
                     <Text as="p" icon={<WarningIcon />}>
-                      {current.partner.name}さんの uチャンネルが未設定のため、ここからはハドルを始められません。Slack
-                      で直接連絡してください。
+                      {current.partner.name}さんのuチャンネルが未設定のため、ここからはハドルを始められません。Slackで直接連絡してください。
                     </Text>
                   )}
                 </>
@@ -120,18 +119,18 @@ const MyThisWeek = () => {
                   <Text size="XL" weight="bold">
                     今週、あなたはお休みです
                   </Text>
-                  <p>参加者が奇数のため、毎週 1 人がお休みになります。お休みの人は週ごとに入れ替わります。</p>
+                  <p>参加者が奇数のため、毎週1人がお休みになります。お休みの人は週ごとに入れ替わります。</p>
                 </Stack>
               )}
               {current.kind === 'holiday' && (
                 <Text size="XL" weight="bold">
-                  今週は {current.name} のため CT はありません
+                  今週は{current.name}のためCTはありません
                 </Text>
               )}
               {current.kind === 'inactive' && (
                 <Stack gap={0.5}>
                   <Text size="XL" weight="bold">
-                    あなたは今、CT に参加していません
+                    あなたは今、CTに参加していません
                   </Text>
                   <p>
                     参加すると、次の組み合わせから入ります。<RouterTextLink href="/settings">自分の設定で参加する</RouterTextLink>
@@ -143,7 +142,7 @@ const MyThisWeek = () => {
                   <Text size="XL" weight="bold">
                     今週の組み合わせはありません
                   </Text>
-                  <p>参加者が 2 人未満のため、組み合わせを作れません。2 人以上が参加すると作られます。</p>
+                  <p>参加者が2人未満のため、組み合わせを作れません。2人以上が参加すると作られます。</p>
                 </Stack>
               )}
             </Stack>
@@ -158,7 +157,7 @@ const MyThisWeek = () => {
                       <DefinitionListItem key={w.key} term={`${w.short}（月）`} maxColumns={4}>
                         {v.kind === 'pair' && <Person member={v.partner} />}
                         {v.kind === 'rest' && 'お休み'}
-                        {v.kind === 'holiday' && `CT なし（${v.name}）`}
+                        {v.kind === 'holiday' && `CTなし（${v.name}）`}
                         {v.kind === 'none' && '組み合わせなし'}
                       </DefinitionListItem>
                     )
@@ -184,11 +183,11 @@ const LoginGuide = () => {
     <InformationPanel heading="ログインすると、あなたの相手がすぐにわかります">
       <Stack>
         <p>
-          Slack でログインすると、今週のあなたの相手がこの画面の一番上に表示され、そのままハドルを始められます。参加状況などの自分の設定も変えられます。
+          Slackでログインすると、今週のあなたの相手がこの画面の一番上に表示され、そのままハドルを始められます。参加状況などの自分の設定も変えられます。
         </p>
         <div>
           <Button variant="primary" prefix={<FaRightToBracketIcon />} onClick={login}>
-            Slack でログイン
+            Slackでログイン
           </Button>
         </div>
       </Stack>
@@ -198,7 +197,7 @@ const LoginGuide = () => {
 
 const tabLabel = (w: Week, i: number) => (i === 0 ? '今週' : i === 1 ? '来週' : w.short)
 
-/** 1 週分の組み合わせ */
+/** 1週分の組み合わせ */
 const WeekPanel = ({ week, isThisWeek }: { week: Week; isThisWeek: boolean }) => {
   const { me, members } = useAppState()
   const find = (id: number) => members.find((m) => m.id === id)
@@ -211,20 +210,20 @@ const WeekPanel = ({ week, isThisWeek }: { week: Week; isThisWeek: boolean }) =>
       <Stack gap={1.5}>
         <Cluster align="center">
           <Heading type="blockTitle">
-            {fullDateLabel(week)} {week.holiday ? '' : `${START_TIME} から`}
+            {fullDateLabel(week)}{week.holiday ? '' : `${START_TIME}から`}
           </Heading>
-          {week.holiday ? <StatusLabel>CT なし</StatusLabel> : !isThisWeek && <StatusLabel>予定</StatusLabel>}
+          {week.holiday ? <StatusLabel>CTなし</StatusLabel> : !isThisWeek && <StatusLabel>予定</StatusLabel>}
         </Cluster>
         {week.holiday ? (
           <p>
-            {week.holiday}のため、この週の CT はありません。組み合わせは作らず、翌週に繰り越します。
+            {week.holiday}のため、この週のCTはありません。組み合わせは作らず、翌週に繰り越します。
           </p>
         ) : week.pairs.length === 0 ? (
           <Center padding={1.5}>
             <Stack gap={0.5} align="center">
               <p>組み合わせはありません。</p>
               <Text as="p" size="S" color="TEXT_GREY">
-                参加者が 2 人未満のためです。2 人以上が参加すると組み合わせが作られます。
+                参加者が2人未満のためです。2人以上が参加すると組み合わせが作られます。
               </Text>
               <RouterTextLink href="/members">参加状況をメンバー画面で確認する</RouterTextLink>
             </Stack>
@@ -277,7 +276,7 @@ const WeekPanel = ({ week, isThisWeek }: { week: Week; isThisWeek: boolean }) =>
   )
 }
 
-/** 週ごとの組み合わせ。TabBar でセクションの内容を切り替える [H:visual-grouping][H:page-layout 長いページを避ける] */
+/** 週ごとの組み合わせ。TabBarでセクションの内容を切り替える [H:visual-grouping][H:page-layout長いページを避ける] */
 const WeeksSection = () => {
   const { weeks, members } = useAppState()
   const [params, setParams] = useSearchParams()
@@ -294,7 +293,7 @@ const WeeksSection = () => {
         <Cluster justify="space-between" align="center" gap={1}>
           <Heading>週ごとの組み合わせ</Heading>
           <Cluster align="center" gap={1}>
-            <span>参加者 {activeCount} 人</span>
+            <span>参加者{activeCount}人</span>
             <RouterTextLink href="/members">メンバーを見る</RouterTextLink>
           </Cluster>
         </Cluster>
@@ -331,10 +330,9 @@ export const Home = () => {
       <Container>
         <Stack gap={2}>
           <Stack gap={0.5}>
-            <PageHeading>CT の組み合わせ</PageHeading>
+            <PageHeading>CTの組み合わせ</PageHeading>
             <p>
-              毎週月曜 {START_TIME} から、2 人 1 組で話します（CT＝コミュニケーションタイム）。組み合わせは毎週月曜 11:00 に Slack
-              にも投稿されます。
+              毎週月曜{START_TIME}から、2人1組で話します（CT＝コミュニケーションタイム）。組み合わせは毎週月曜11:00にSlackにも投稿されます。
             </p>
           </Stack>
           {load === 'loading' && (

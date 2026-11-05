@@ -68,7 +68,7 @@ export const Settings = () => {
 
   const title = isSetup ? '初回設定' : '自分の設定'
 
-  /** [H:FormControl] required を付け、onInvalid で標準ツールチップを抑えて errorMessages で表示する */
+  /** [H:FormControl] requiredを付け、onInvalidで標準ツールチップを抑えてerrorMessagesで表示する */
   const handleInvalid = (field: Field) => (e: InvalidEvent<HTMLInputElement | HTMLSelectElement>) => {
     e.preventDefault()
     const message = messageFor(field, e.currentTarget)
@@ -107,8 +107,8 @@ export const Settings = () => {
             <PageHeading>{title}</PageHeading>
             <p>
               {isSetup
-                ? 'はじめに、CT の組み合わせに使う情報を設定してください。3 つの項目を入力して保存すると、組み合わせに入ります。'
-                : 'CT の組み合わせに使う、あなたの情報です。変えられるのは自分の設定だけです。'}
+                ? 'はじめに、CTの組み合わせに使う情報を設定してください。3つの項目を入力して保存すると、組み合わせに入ります。'
+                : 'CTの組み合わせに使う、あなたの情報です。変えられるのは自分の設定だけです。'}
             </p>
           </Stack>
           <Panel padding={1.5}>
@@ -116,7 +116,7 @@ export const Settings = () => {
               <Stack gap={1.5}>
                 <FormControl
                   label="名前"
-                  helpMessage="組み合わせやメンバーに表示されます。最初は Slack の表示名が入っています。"
+                  helpMessage="組み合わせやメンバーに表示されます。最初はSlackの表示名が入っています。"
                   errorMessages={errors.name}
                 >
                   <Input
@@ -152,7 +152,7 @@ export const Settings = () => {
                 </FormControl>
                 <FormControl
                   label="uチャンネル"
-                  helpMessage="相手とのハドルに使う、あなた個人の Slack チャンネルです（u- で始まるもの）。"
+                  helpMessage="相手とのハドルに使う、あなた個人のSlackチャンネルです（u-で始まるもの）。"
                   errorMessages={errors.channel}
                 >
                   <Select
@@ -170,7 +170,7 @@ export const Settings = () => {
                   />
                 </FormControl>
                 <Fieldset
-                  legend="CT への参加"
+                  legend="CTへの参加"
                   helpMessage="休職や繁忙期で抜けるときは「参加しない」にしてください。変えると、今週以降の全員の組み合わせが組み直されます。"
                 >
                   <Stack>
@@ -191,7 +191,7 @@ export const Settings = () => {
                     )}
                   </Stack>
                 </Fieldset>
-                <Stack gap={0.5}>
+                <Stack gap={0.5} align="flex-start">
                   <div>
                     <Button type="submit" variant="primary" loading={processing}>
                       保存
@@ -203,7 +203,7 @@ export const Settings = () => {
                         {isSetup ? '設定が完了しました。' : '保存しました。'}
                         {activeChangedOnSave && '今週以降の組み合わせを組み直しました。'}
                       </ResponseMessage>
-                      {/* ResponseMessage（LiveRegion）の中にリンクを置くと aria-hidden の複製にフォーカス可能要素が入るため外に出す */}
+                      {/* ResponseMessage（LiveRegion）の中にリンクを置くとaria-hiddenの複製にフォーカス可能要素が入るため外に出す */}
                       <RouterTextLink href="/">組み合わせを見る</RouterTextLink>
                     </>
                   )}
