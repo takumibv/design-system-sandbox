@@ -1,0 +1,15 @@
+87	W smarthr/require-i18n-text
+5	W smarthr/best-practice-for-rest-parameters
+3	W smarthr/autofixer-smarthr-ui-migration
+2	W smarthr/best-practice-for-unnesessary-early-return
+1	E @typescript-eslint/no-shadow
+CTApp.tsx 1 smarthr/autofixer-smarthr-ui-migration オプションで from と to を指定してください。例: { "from": "90", "to": "91" }
+CTApp.tsx 853 smarthr/best-practice-for-unnesessary-early-return 後続の処理の逆の条件の早期returnのため修正してください。
+CTApp.tsx 1213 smarthr/best-practice-for-unnesessary-early-return 後続の処理の逆の条件の早期returnのため修正してください。
+fixtures.ts 1 smarthr/autofixer-smarthr-ui-migration オプションで from と to を指定してください。例: { "from": "90", "to": "91" }
+fixtures.ts 112 smarthr/best-practice-for-rest-parameters 残余引数以外に /(^r|R)est$/ とマッチする名称を利用しないでください
+fixtures.ts 119 smarthr/best-practice-for-rest-parameters 残余引数以外に /(^r|R)est$/ とマッチする名称を利用しないでください
+fixtures.ts 132 smarthr/best-practice-for-rest-parameters 残余引数以外に /(^r|R)est$/ とマッチする名称を利用しないでください
+fixtures.ts 144 smarthr/best-practice-for-rest-parameters 残余引数以外に /(^r|R)est$/ とマッチする名称を利用しないでください
+fixtures.ts 156 smarthr/best-practice-for-rest-parameters 残余引数以外に /(^r|R)est$/ とマッチする名称を利用しないでください
+main.tsx 1 smarthr/autofixer-smarthr-ui-migration オプションで from と to を指定してください。例: { "from": "90", "to": "91" }

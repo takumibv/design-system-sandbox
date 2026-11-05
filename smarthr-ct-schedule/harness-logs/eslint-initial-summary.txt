@@ -1,0 +1,10 @@
+87	W smarthr/require-i18n-text
+20	E smarthr/best-practice-for-default-props
+15	E smarthr/best-practice-for-text-component
+4	E smarthr/a11y-heading-in-sectioning-content
+2	E import/order
+2	E smarthr/a11y-scroller-has-tabindex
+1	E smarthr/best-practice-for-reduce-redundant-calls
+1	E smarthr/a11y-anchor-has-href-attribute
+1	W smarthr/best-practice-for-object-props
+1	E @typescript-eslint/no-shadow

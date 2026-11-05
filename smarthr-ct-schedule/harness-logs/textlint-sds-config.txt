@@ -1,0 +1,12 @@
+
+/home/user/design-system-sandbox/smarthr-ct-schedule/harness-logs/ui-text.md
+   5:5   ✓ error  原則として、全角文字どうしの間にスペースを入れません。                                                  smarthr/ja-no-space-between-full-width
+   6:5   ✓ error  原則として、全角文字どうしの間にスペースを入れません。                                                  smarthr/ja-no-space-between-full-width
+  22:5   ✓ error  ひとり => 1人
+数字は半角の算用数字で表記する https://smarthr.design/products/contents/idiomatic-usage/usage/          smarthr/prh-rules
+  52:10  ✓ error  初めて => はじめて
+平仮名にしたほうが読みやすい漢字は平仮名にする https://smarthr.design/products/contents/writing-style/  smarthr/prh-rules
+
+✖ 4 problems (4 errors, 0 warnings, 0 infos)
+✓ 4 fixable problems.
+Try to run: $ textlint --fix [file]

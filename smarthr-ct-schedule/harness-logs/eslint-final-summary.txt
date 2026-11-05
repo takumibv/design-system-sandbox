@@ -1,0 +1,2 @@
+87	W smarthr/require-i18n-text
+1	E @typescript-eslint/no-shadow

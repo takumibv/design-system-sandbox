@@ -53,6 +53,7 @@ import {
 	WarningIcon,
 	useEnvironment,
 } from "smarthr-ui";
+
 import { type Member, members, person, weeks } from "./fixtures";
 
 export type Screen =
@@ -115,10 +116,10 @@ function Avatar({
 }
 
 // スキップリンク。smarthr-ui に該当部品がないため、Tailwind の sr-only で作る。
-function SkipLink() {
+function SkipLink({ href }: { href: string }) {
 	return (
 		<a
-			href="#main"
+			href={href}
 			className="shr-sr-only focus:shr-not-sr-only focus:shr-absolute focus:shr-left-0.5 focus:shr-top-0.5 focus:shr-z-overlap focus:shr-bg-white focus:shr-p-0.5 focus:shr-shadow-layer-3"
 		>
 			本文へ移動
@@ -128,10 +129,10 @@ function SkipLink() {
 
 function Person({ member, self = false }: { member: Member; self?: boolean }) {
 	return (
-		<Cluster gap={0.5} align="center" className="shr-min-w-0 shr-flex-nowrap">
+		<Cluster align="center" className="shr-min-w-0 shr-flex-nowrap">
 			<Avatar member={member} />
 			<Stack gap={0.25} className="shr-min-w-0">
-				<Cluster gap={0.5} align="center">
+				<Cluster align="center">
 					<Text weight="bold">{member.name}</Text>
 					{self && (
 						<Chip color="blue" size="S">
@@ -182,7 +183,7 @@ export function CTApp({
 	const notifyAt = (key: string, text: string) => setInlineNotice({ key, text });
 	const InlineNotice = ({ at }: { at: string }) =>
 		inlineNotice?.key === at ? (
-			<ResponseMessage status="info" role="status">
+			<ResponseMessage role="status">
 				{inlineNotice.text}
 			</ResponseMessage>
 		) : null;
@@ -267,7 +268,7 @@ export function CTApp({
 		!target.channel ? (
 			<Text color="TEXT_GREY">uチャンネル未設定</Text>
 		) : (
-			<Cluster gap={0.5} align="center">
+			<Cluster align="center" justify={prominent ? "center" : undefined}>
 				<Button
 					variant={prominent ? "primary" : "secondary"}
 					size={prominent ? "M" : "S"}
@@ -313,23 +314,26 @@ export function CTApp({
 		if (week.holiday)
 			return (
 				<Panel padding={1.5}>
-					<Stack align="center" gap={1}>
+<Section>
+					<Stack align="center">
 						<Heading type="blockTitle">今週のCTはお休みです</Heading>
-						<Text as="p">
+						<p>
 							{`${week.holiday}のため、CTはありません。組み合わせは次の開催週へ繰り越します。`}
-						</Text>
+						</p>
 						<Button onClick={() => updateWeek(2)}>次の開催週を見る</Button>
 					</Stack>
-				</Panel>
+				</Section>
+</Panel>
 			);
 		if (activeCount < 2)
 			return (
 				<Panel padding={1.5}>
-					<Stack align="center" gap={1}>
+<Section>
+					<Stack align="center">
 						<Heading type="blockTitle">もうひとりの参加を待っています</Heading>
-						<Text as="p">
+						<p>
 							CTには2人以上の参加者が必要です。Slack でログインし、自分の設定から参加できます。
-						</Text>
+						</p>
 						{loggedIn ? (
 							// 画面遷移なので Button ではなく AnchorButton（Button チェックリスト）
 							<AnchorButton
@@ -356,14 +360,15 @@ export function CTApp({
 							</Cluster>
 						)}
 					</Stack>
-				</Panel>
+				</Section>
+</Panel>
 			);
 		if (loggedIn && savedProfile.participating)
 			return (
 				<Section>
 					<Panel padding={1.5}>
 						<Stack gap={1.5}>
-							<Cluster align="center" gap={0.5}>
+							<Cluster align="center">
 								<Heading type="blockTitle">
 									{weekIndex === 0 ? "今週" : "この週"}のあなたのCT
 								</Heading>
@@ -376,9 +381,9 @@ export function CTApp({
 									<Text as="p" size="XL" weight="bold">
 										今週は、ひと休み。
 									</Text>
-									<Text as="p">
+									<p>
 										参加者が奇数のため、今週はお休みです。お休みのメンバーは週ごとに入れ替わります。
-									</Text>
+									</p>
 								</Stack>
 							) : (
 								partner && (
@@ -422,10 +427,10 @@ export function CTApp({
 		if (!loggedIn)
 			return (
 				<InformationPanel heading="あなたの今週の相手を、すぐに。">
-					<Stack gap={1} align="flex-start">
-						<Text as="p">
+					<Stack align="flex-start">
+						<p>
 							Slack でログインすると、自分のペアの確認や参加の切り替えができます。
-						</Text>
+						</p>
 						<Cluster align="center">
 							<Button
 								onClick={() =>
@@ -464,15 +469,15 @@ export function CTApp({
 		<Sidebar right gap={2} contentsMinWidth="60%">
 			<Stack gap={2}>
 				<Section>
-					<Stack gap={1}>
+					<Stack>
 						<Cluster justify="space-between" align="center" gap={1}>
-							<Cluster align="center" gap={0.5}>
+							<Cluster align="center">
 								<StatusLabel type={weekIndex === 0 ? "blue" : "grey"} bold>
 									{week.label}
 								</StatusLabel>
 								<Heading size="XL">{`${week.date}（月）`}</Heading>
 							</Cluster>
-							<Cluster gap={0.5}>
+							<Cluster>
 								<Button
 									size={mobile ? "M" : "S"}
 									disabled={weekIndex === 0}
@@ -517,7 +522,7 @@ export function CTApp({
 
 				{hasPairs && (
 					<Section>
-						<Stack gap={1}>
+						<Stack>
 							<Cluster justify="space-between" align="baseline">
 								<Heading>みんなの組み合わせ</Heading>
 								<Text color="TEXT_GREY">{`${week.pairs.length}組・お休み1人`}</Text>
@@ -562,7 +567,7 @@ export function CTApp({
 									})}
 								</ul>
 								<Cluster align="center" gap={1} className="shr-px-1.5 shr-py-1">
-									<StatusLabel type="grey">今週のお休み</StatusLabel>
+									<StatusLabel>今週のお休み</StatusLabel>
 									<Person
 										member={person(week.rest)}
 										self={loggedIn && week.rest === currentId}
@@ -575,7 +580,7 @@ export function CTApp({
 				)}
 
 				<Section>
-					<Stack gap={1}>
+					<Stack>
 						<Heading>この先のCT</Heading>
 						<Panel>
 							<ul className="shr-m-0 shr-list-none shr-p-0">
@@ -612,7 +617,7 @@ export function CTApp({
 			<Stack gap={1.5} className="shr-basis-[20rem]">
 				<Aside>
 					<Panel padding={1.5}>
-						<Stack gap={1} align="flex-start">
+						<Stack align="flex-start">
 							<Heading type="blockTitle" icon={<FaUsersIcon />}>
 								CTに参加する人
 							</Heading>
@@ -620,7 +625,7 @@ export function CTApp({
 								<Text size="XXL" weight="bold">
 									{String(activeCount)}
 								</Text>
-								<Text>人</Text>
+								人
 							</Cluster>
 							<Text as="p" color="TEXT_GREY">
 								参加者が奇数の週は、ひとりずつ順番にお休みします。
@@ -638,12 +643,12 @@ export function CTApp({
 					</Panel>
 				</Aside>
 				<Aside>
-					<Stack gap={1} align="flex-start">
+					<Stack align="flex-start">
 						<Heading type="blockTitle">CTの過ごし方</Heading>
-						<Text as="p">仕事の話も、週末の話も。まずは「こんにちは」から。</Text>
-						<Text as="p">
+						<p>仕事の話も、週末の話も。まずは「こんにちは」から。</p>
+						<p>
 							時間になったら、相手の uチャンネルでハドルを始めましょう。
-						</Text>
+						</p>
 						<Text as="p" size="S" color="TEXT_GREY">
 							毎週月曜 11:00 に Slack でも今週の組み合わせをお知らせします。
 						</Text>
@@ -739,17 +744,18 @@ export function CTApp({
 				</Center>
 			</Cluster>
 			<Section>
-				<Stack gap={1}>
+				<Stack>
 					<Cluster justify="space-between" align="baseline">
 						<Heading>{`すべてのメンバー ${visibleMembers.length}人`}</Heading>
 						{visibleMembers.length > 0 && <Text color="TEXT_GREY">社員番号順</Text>}
 					</Cluster>
+					<Panel>
 					{visibleMembers.length === 0 ? (
 						// よくあるテーブルの「初期表示」パターン：Panel 内にメッセージとボタンを中央に置く
-						<Panel>
+							<Section>
 							<Stack align="center" className="shr-px-4 shr-py-4">
 								<Heading type="blockTitle">まだメンバーがいません</Heading>
-								<Text as="p">Slack で初めてログインすると、メンバーに登録されます。</Text>
+								<p>Slack で初めてログインすると、メンバーに登録されます。</p>
 								<Cluster align="center" justify="center">
 									<Button
 										size="S"
@@ -762,10 +768,9 @@ export function CTApp({
 									<InlineNotice at="empty-login" />
 								</Cluster>
 							</Stack>
-						</Panel>
+						</Section>
 					) : mobile ? (
 						// モバイルでは「よくあるテーブル」ではなく「よくあるリスト」を使う（smarthr-table パターン）
-						<Panel>
 							<ul className="shr-m-0 shr-list-none shr-p-0">
 								{visibleMembers.map((member) => (
 									<li
@@ -787,9 +792,7 @@ export function CTApp({
 									</li>
 								))}
 							</ul>
-						</Panel>
 					) : (
-						<Panel>
 							<Table>
 								<thead>
 									<tr>
@@ -812,8 +815,8 @@ export function CTApp({
 									))}
 								</tbody>
 							</Table>
-						</Panel>
 					)}
+					</Panel>
 					{visibleMembers.length > 0 && !loggedIn && (
 						<Text as="p" size="S" color="TEXT_GREY">
 							メンバーの削除や自分の設定変更には、Slack ログインが必要です。
@@ -828,6 +831,11 @@ export function CTApp({
 	const channelOptions = members
 		.filter((m) => m.channel)
 		.map((m) => ({ label: `# ${m.channel}`, value: m.channel as string }));
+	// 送信時のエラーは最初のエラー項目へフォーカスを移す（InformationPanel は tabIndex を持てないため）
+	const focusFirstError = () =>
+		requestAnimationFrame(() =>
+			document.querySelector<HTMLElement>('form [aria-invalid="true"]')?.focus(),
+		);
 	const nameError = invalid && !name.trim();
 	const employeeError = invalid && !/^\d+$/.test(employee);
 	const channelError = invalid && !channel;
@@ -839,9 +847,7 @@ export function CTApp({
 					event.preventDefault();
 					if (!name.trim() || !channel || !/^\d+$/.test(employee)) {
 						setInvalid(true);
-						requestAnimationFrame(() =>
-							document.getElementById("form-errors")?.focus(),
-						);
+						focusFirstError();
 						return;
 					}
 					if (state === "saveError") return;
@@ -856,13 +862,14 @@ export function CTApp({
 			>
 				<Stack gap={1.5}>
 					{invalid && (
-						<div id="form-errors" tabIndex={-1}>
-							<InformationPanel type="error" heading="入力内容を確認してください">
-								<Text as="p">
+						<InformationPanel
+							type="error"
+							heading="入力内容を確認してください"
+						>
+								<p>
 									名前・社員番号・uチャンネルは必須です。社員番号は半角数字で入力してください。
-								</Text>
+								</p>
 							</InformationPanel>
-						</div>
 					)}
 					<Panel padding={1.5}>
 						<Stack gap={1.5}>
@@ -872,12 +879,12 @@ export function CTApp({
 									<Text size="S" color="TEXT_GREY">
 										Slack アカウント
 									</Text>
-									<Text>{person(1).name}</Text>
+									<span>{person(1).name}</span>
 								</Stack>
 							</Cluster>
 							<FormControl
 								label="名前"
-								statusLabels={<RequiredLabel />}
+								statusLabels={[<RequiredLabel key="required" />]}
 								helpMessage="組み合わせ表とメンバー一覧に表示されます。"
 								errorMessages={nameError ? "名前を入力してください。" : undefined}
 							>
@@ -892,7 +899,7 @@ export function CTApp({
 							</FormControl>
 							<FormControl
 								label="社員番号"
-								statusLabels={<RequiredLabel />}
+								statusLabels={[<RequiredLabel key="required" />]}
 								helpMessage="組み合わせを決める並び順に使います。"
 								errorMessages={
 									employeeError ? "社員番号を半角数字で入力してください。" : undefined
@@ -910,7 +917,7 @@ export function CTApp({
 							</FormControl>
 							<FormControl
 								label="uチャンネル"
-								statusLabels={<RequiredLabel />}
+								statusLabels={[<RequiredLabel key="required" />]}
 								helpMessage="相手がハドルを始める、あなたの個人用チャンネルです。"
 								errorMessages={
 									channelError ? "uチャンネルを選択してください。" : undefined
@@ -961,17 +968,17 @@ export function CTApp({
 				<Aside>
 					<Stack gap={0.5}>
 						<Heading type="blockTitle">あなたらしい名前で。</Heading>
-						<Text as="p">
+						<p>
 							Slack のプロフィールから取り込んだ名前を、CTで使う表示名に変更できます。
-						</Text>
+						</p>
 					</Stack>
 				</Aside>
 				<Aside>
 					<Stack gap={0.5}>
 						<Heading type="blockTitle">参加はいつでも変更できます</Heading>
-						<Text as="p">
+						<p>
 							忙しい時期は、無理せずお休みを。再開するときも、この画面から変更できます。
-						</Text>
+						</p>
 					</Stack>
 				</Aside>
 				<Text as="p" size="S" color="TEXT_GREY">
@@ -983,11 +990,11 @@ export function CTApp({
 
 	const notFoundView = (
 		<Panel padding={1.5}>
-			<Stack align="center" gap={1}>
+			<Stack align="center">
 				<Text as="p" size="XXL" weight="bold">
 					404
 				</Text>
-				<Text as="p">お探しのページは見つかりませんでした。</Text>
+				<p>お探しのページは見つかりませんでした。</p>
 				<AnchorButton
 					variant="primary"
 					href="#schedule"
@@ -1027,7 +1034,7 @@ export function CTApp({
 
 	return (
 		<div className="shr-flex shr-min-h-screen shr-flex-col shr-bg-background">
-			<SkipLink />
+			<SkipLink href="#main" />
 			<Header
 				logo={
 					<img
@@ -1113,10 +1120,12 @@ export function CTApp({
 				</NotificationBar>
 			)}
 
+			{/* 画面切り替え後にフォーカスを本文へ戻すため tabIndex=-1 が必要（SPA のフォーカス管理）。原本・ADS 版と同じ */}
+			{/* eslint-disable-next-line smarthr/a11y-scroller-has-tabindex */}
 			<main id="main" ref={mainRef} tabIndex={-1} className="shr-flex-1">
 				<Container>
 					<Stack gap={1.5}>
-						<Stack gap={1}>
+						<Stack>
 							{screen !== "schedule" && (
 								<UpwardLink
 									href="#schedule"
@@ -1148,12 +1157,14 @@ export function CTApp({
 							</Center>
 						) : state === "error" ? (
 							<Panel padding={1.5}>
-								<Stack align="center" gap={1}>
+<Section>
+								<Stack align="center">
 									<Heading>データを読み込めませんでした</Heading>
-									<Text as="p">通信状況を確認して、もう一度お試しください。</Text>
+									<p>通信状況を確認して、もう一度お試しください。</p>
 									<Button onClick={() => setState("ready")}>再読み込み</Button>
 								</Stack>
-							</Panel>
+							</Section>
+</Panel>
 						) : (
 							<>
 								{screen === "schedule" && schedule}
@@ -1189,7 +1200,7 @@ export function CTApp({
 				size="S"
 				heading={`${dialog?.name ?? ""}さんを削除しますか？`}
 				actionButton={{ text: "削除する", theme: "danger" }}
-				closeButton={{ text: "キャンセル" }}
+				closeButton="キャンセル"
 				responseStatus={
 					state === "deleteError"
 						? {
@@ -1207,9 +1218,9 @@ export function CTApp({
 				onClickClose={() => setDialog(null)}
 				onPressEscape={() => setDialog(null)}
 			>
-				<Text as="p">
+				<p>
 					メンバー一覧と今後の組み合わせから外れます。全員の組み合わせが変わる場合があります。この操作は取り消せません。
-				</Text>
+				</p>
 			</ControlledActionDialog>
 		</div>
 	);
