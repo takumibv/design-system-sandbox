@@ -22,6 +22,7 @@
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
     "eslint": "^9.39.5",
+    "eslint-config-smarthr": "^14.14.0",
     "eslint-plugin-smarthr": "^6.29.0",
     "typescript": "~5.9",
     "typescript-eslint": "^8.72.1",

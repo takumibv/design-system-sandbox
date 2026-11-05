@@ -1,0 +1,5 @@
+/* 自前 CSS（理由：Gaji-Labo のロゴは smarthr-ui の部品ではなく、SVG の大きさと色を決める手段が無いため） */
+.ct-logo { display: inline-flex; padding: 0.75rem; }
+.ct-logo svg { block-size: 1.25rem; inline-size: auto; }
+.ct-logo[data-tone='white'] { color: #fff; }
+.ct-logo[data-tone='black'] { color: #23221e; }
