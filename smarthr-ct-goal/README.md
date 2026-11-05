@@ -9,6 +9,8 @@ SmartHR Design System の AI エージェント向けハーネス（公式プラ
 - ハーネスの実行ログ：[harness-logs/](harness-logs/)
 - 状態一覧：[states.json](states.json)、スクリーンショット：[screenshots/](screenshots/)
 
+公平な比較のため、元の DADS 版（takumibv/digital-go-design-system）と、このリポジトリの他のブランチ（既存の再現版や、並行して作られている他のデザインシステムの `claude/*-ct-goal`）は参照していない。入力は `brief/`（`claude/ct-schedule-brief`）と SmartHR Design System の公式ハーネス・公式ドキュメントだけ。
+
 ## 結論の要約
 
 - ハーネスの実体は公式プラグインのスキル 2 つ（`component-guidelines`／`design-pattern-guidelines`）と lint（`eslint-plugin-smarthr`＋`eslint-config-smarthr`、`textlint-rule-preset-smarthr`）。MCP・llms.txt・DESIGN.md は無かった。
