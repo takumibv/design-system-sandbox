@@ -1,9 +1,9 @@
 // ADS MCP を @modelcontextprotocol/sdk の Client で呼び、結果を harness-logs/mcp/ に保存する小さなスクリプト。
-// まずホスト版（HTTP）に接続し、失敗したらローカルの stdio 版（node_modules/.bin/ads-mcp）に切り替える。
+// まずホスト版（HTTP）に接続し、失敗したらローカルの stdio 版（tools/node_modules/.bin/ads-mcp）に切り替える。
 // 使い方:
-//   node harness-logs/mcp-client.mjs list                         … ツール一覧を保存
-//   node harness-logs/mcp-client.mjs call <保存名> <tool> '<json>' … 1 回呼んで保存
-//   node harness-logs/mcp-client.mjs batch <plan.json>             … [{name, tool, args}] をまとめて呼ぶ
+//   node tools/mcp-client.mjs list                         … ツール一覧を保存
+//   node tools/mcp-client.mjs call <保存名> <tool> '<json>' … 1 回呼んで保存
+//   node tools/mcp-client.mjs batch <plan.json>             … [{name, tool, args}] をまとめて呼ぶ
 //   環境変数 ADS_MCP=local でローカル版を強制
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -13,7 +13,7 @@ import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/
 import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js";
 
 const here = dirname(fileURLToPath(import.meta.url));
-const outDir = join(here, "mcp");
+const outDir = join(here, "..", "harness-logs", "mcp");
 mkdirSync(outDir, { recursive: true });
 const REMOTE = "https://mcp.atlassian.com/v1/ads/public/mcp";
 
@@ -28,8 +28,8 @@ async function connect() {
 		}
 	}
 	const client = new Client({ name: "ct-schedule-harness-probe", version: "0.0.1" });
-	await client.connect(new StdioClientTransport({ command: join(here, "..", "node_modules", ".bin", "ads-mcp"), args: [], stderr: "ignore" }));
-	return { client, transport: "local stdio node_modules/.bin/ads-mcp" };
+	await client.connect(new StdioClientTransport({ command: join(here, "node_modules", ".bin", "ads-mcp"), args: [], stderr: "ignore" }));
+	return { client, transport: "local stdio tools/node_modules/.bin/ads-mcp" };
 }
 
 const save = (name, transport, request, result) => {

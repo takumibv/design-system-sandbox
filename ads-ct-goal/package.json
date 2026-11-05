@@ -33,18 +33,17 @@
     "@atlaskit/tokens": "^20.9.0",
     "@atlaskit/tooltip": "^24.4.3",
     "@atlaskit/visually-hidden": "^4.4.0",
-    "react": "^19.3.1",
-    "react-dom": "^19.3.1"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@atlaskit/ads-cli": "^0.11.1",
+    "@axe-core/playwright": "^4.14.0",
     "@babel/core": "^7.29.13",
     "@compiled/babel-plugin": "^2.0.0",
-    "@modelcontextprotocol/sdk": "^1.32.2",
     "@rolldown/plugin-babel": "^0.3.0",
     "@types/node": "^24.19.2",
-    "@types/react": "^19.3.0",
-    "@types/react-dom": "^19.3.0",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
     "@vitejs/plugin-react": "^6.1.2",
     "oxlint": "^1.90.0",
     "typescript": "~5.9.3",
