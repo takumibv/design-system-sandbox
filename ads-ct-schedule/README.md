@@ -8,6 +8,7 @@
 - デザイン判断の言語化：[docs/design-decisions.md](docs/design-decisions.md)
 - AI にデザイン意図を届ける仕組みの比較（ADS／DADS）：[docs/ai-design-intent-mechanisms.md](docs/ai-design-intent-mechanisms.md)
 - 他のデザインシステムの AI 対応調査：[docs/design-system-ai-survey.md](docs/design-system-ai-survey.md)
+- 要件だけから設計させた 4 つのハーネス比較：[docs/harness-comparison.md](docs/harness-comparison.md)
 - 原本の props、状態、固定データ（[`src/fixtures.ts`](src/fixtures.ts)）はそのまま使いました。見た目だけを ADS に置き換えています。
 
 ## 結論（要約）
