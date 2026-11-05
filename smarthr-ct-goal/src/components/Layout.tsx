@@ -43,7 +43,7 @@ export const Layout = ({ title, children }: { title: string; children: ReactNode
   })
 
   return (
-    <div className="shr-min-h-screen shr-bg-background">
+    <div className="shr-bg-background">
       <Header logo={<GajiLaboLogo />} logoHref="https://www.gaji.jp/">
         {me ? (
           <HeaderDropdownMenuButton
