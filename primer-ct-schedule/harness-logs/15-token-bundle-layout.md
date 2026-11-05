@@ -1,0 +1,391 @@
+# get_token_group_bundle
+
+- args: `{"groups":["stack","borderColor","bgColor","borderRadius","text"]}`
+- isError: false
+- ms: 8
+- chars: 13682
+
+---
+
+Found 115 token(s) across 5 group(s):
+
+## Background Color
+
+- `bgColor-accent-emphasis` → `#0969da`
+  - **U**: (none)
+  - **R**: (none)
+- `bgColor-accent-muted` → `#ddf4ff`
+  - **U**: (none)
+  - **R**: (none)
+- `bgColor-attention-emphasis` → `#9a6700`
+  - **U**: (none)
+  - **R**: (none)
+- `bgColor-attention-muted` → `#fff8c5`
+  - **U**: (none)
+  - **R**: (none)
+- `bgColor-closed-emphasis` → `#cf222e`
+  - **U**: (none)
+  - **R**: (none)
+- `bgColor-closed-muted` → `#ffebe9`
+  - **U**: (none)
+  - **R**: (none)
+- `bgColor-danger-emphasis` → `#cf222e`
+  - **U**: (none)
+  - **R**: (none)
+- `bgColor-danger-muted` → `#ffebe9`
+  - **U**: (none)
+  - **R**: (none)
+- `bgColor-done-emphasis` → `#8250df`
+  - **U**: (none)
+  - **R**: (none)
+- `bgColor-done-muted` → `#fbefff`
+  - **U**: (none)
+  - **R**: (none)
+- `bgColor-neutral-emphasis` → `#59636e`
+  - **U**: (none)
+  - **R**: (none)
+- `bgColor-neutral-muted` → `#818b981f`
+  - **U**: (none)
+  - **R**: (none)
+- `bgColor-open-emphasis` → `#1f883d`
+  - **U**: (none)
+  - **R**: (none)
+- `bgColor-open-muted` → `#dafbe1`
+  - **U**: (none)
+  - **R**: (none)
+- `bgColor-severe-emphasis` → `#bc4c00`
+  - **U**: (none)
+  - **R**: (none)
+- `bgColor-severe-muted` → `#fff1e5`
+  - **U**: (none)
+  - **R**: (none)
+- `bgColor-sponsors-emphasis` → `#bf3989`
+  - **U**: (none)
+  - **R**: (none)
+- `bgColor-sponsors-muted` → `#ffeff7`
+  - **U**: (none)
+  - **R**: (none)
+- `bgColor-success-emphasis` → `#1f883d`
+  - **U**: (none)
+  - **R**: (none)
+- `bgColor-success-muted` → `#dafbe1`
+  - **U**: (none)
+  - **R**: (none)
+- `bgColor-upsell-emphasis` → `#8250df`
+  - **U**: (none)
+  - **R**: (none)
+- `bgColor-upsell-muted` → `#fbefff`
+  - **U**: (none)
+  - **R**: (none)
+
+---
+
+## Background Colors
+
+- `bgColor-black` → `#1f2328`
+  - **U**: Pure black background
+  - **R**: Avoid using raw black. Use semantic alternatives: bg.emphasis for dark backgrounds, bg.inverse for inverted contexts. Raw black/white ignore theme preferences and accessibility settings.
+- `bgColor-default` → `#ffffff`
+  - **U**: card-background, main-content, page-background
+  - **R**: Use as the primary background for pages and content areas. Do NOT use for emphasis or highlighting.
+- `bgColor-disabled` → `#eff2f5`
+  - **U**: disabled-button, disabled-input, inactive-element
+  - **R**: MUST use for disabled state backgrounds. Pair -> fg.disabled for text. Do NOT use for active elements.
+- `bgColor-draft-emphasis` → `#59636e`
+  - **U**: draft-badge, draft-label, wip-indicator
+  - **R**: Use for prominent draft state indicators. Pair -> fg.onEmphasis for text.
+- `bgColor-draft-muted` → `#818b981f`
+  - **U**: draft-issue, draft-pr, work-in-progress
+  - **R**: Use for draft/WIP status indicators. Conveys incomplete or pending state.
+- `bgColor-emphasis` → `#25292e`
+  - **U**: badge-background, high-contrast-element, tooltip
+  - **R**: Use for elements needing strong visual emphasis. Pair -> fg.onEmphasis for text. Do NOT use for large areas.
+- `bgColor-inset` → `#f6f8fa`
+  - **U**: recessed-area, sunken-panel, well
+  - **R**: Use for visually recessed areas. Creates depth hierarchy. Suitable for input fields and wells.
+- `bgColor-inverse` → `#25292e`
+  - **U**: inverse-theme-element, overlay-content
+  - **R**: Use when you need opposite theme background. Pair -> fg.onInverse for text.
+- `bgColor-muted` → `#f6f8fa`
+  - **U**: code-block-background, secondary-content, table-header
+  - **R**: Use for secondary content areas or to create visual grouping. Do NOT use for primary page backgrounds.
+- `bgColor-transparent` → `#ffffff00`
+  - **U**: ghost-button, icon-button, overlay-trigger
+  - **R**: Use for ghost/icon buttons or when element should blend with parent. Ensure sufficient contrast for interactive states.
+- `bgColor-white` → `#ffffff`
+  - **U**: Pure white background
+  - **R**: Avoid using raw white. Use semantic alternatives: bg.default for standard backgrounds, bg.inset for recessed areas, or bg.inverse for inverted contexts. Raw black/white ignore theme preferences and accessibility settings.
+
+---
+
+## Border Color
+
+- `borderColor-accent-emphasis` → `#0969da`
+  - **U**: (none)
+  - **R**: (none)
+- `borderColor-accent-muted` → `#54aeff66`
+  - **U**: (none)
+  - **R**: (none)
+- `borderColor-attention-emphasis` → `#9a6700`
+  - **U**: (none)
+  - **R**: (none)
+- `borderColor-attention-muted` → `#d4a72c66`
+  - **U**: (none)
+  - **R**: (none)
+- `borderColor-closed-emphasis` → `#cf222e`
+  - **U**: (none)
+  - **R**: (none)
+- `borderColor-closed-muted` → `#ff818266`
+  - **U**: (none)
+  - **R**: (none)
+- `borderColor-danger-emphasis` → `#cf222e`
+  - **U**: (none)
+  - **R**: (none)
+- `borderColor-danger-muted` → `#ff818266`
+  - **U**: (none)
+  - **R**: (none)
+- `borderColor-done-emphasis` → `#8250df`
+  - **U**: (none)
+  - **R**: (none)
+- `borderColor-done-muted` → `#c297ff66`
+  - **U**: (none)
+  - **R**: (none)
+- `borderColor-neutral-emphasis` → `#59636e`
+  - **U**: (none)
+  - **R**: (none)
+- `borderColor-neutral-muted` → `#d1d9e0b3`
+  - **U**: (none)
+  - **R**: (none)
+- `borderColor-open-emphasis` → `#1a7f37`
+  - **U**: (none)
+  - **R**: (none)
+- `borderColor-open-muted` → `#4ac26b66`
+  - **U**: (none)
+  - **R**: (none)
+- `borderColor-severe-emphasis` → `#bc4c00`
+  - **U**: (none)
+  - **R**: (none)
+- `borderColor-severe-muted` → `#fb8f4466`
+  - **U**: (none)
+  - **R**: (none)
+- `borderColor-sponsors-emphasis` → `#bf3989`
+  - **U**: (none)
+  - **R**: (none)
+- `borderColor-sponsors-muted` → `#ff80c866`
+  - **U**: (none)
+  - **R**: (none)
+- `borderColor-success-emphasis` → `#1a7f37`
+  - **U**: (none)
+  - **R**: (none)
+- `borderColor-success-muted` → `#4ac26b66`
+  - **U**: (none)
+  - **R**: (none)
+- `borderColor-upsell-emphasis` → `#8250df`
+  - **U**: (none)
+  - **R**: (none)
+- `borderColor-upsell-muted` → `#c297ff66`
+  - **U**: (none)
+  - **R**: (none)
+
+---
+
+## Border Colors
+
+- `borderColor-default` → `#d1d9e0`
+  - **U**: card-border, default-border, input-border
+  - **R**: RECOMMENDED default for all borders. Use for cards, inputs, and dividers.
+- `borderColor-disabled` → `#818b981a`
+  - **U**: disabled-border, inactive-border, unavailable
+  - **R**: MUST use for disabled state borders. Pair -> bg.disabled. Do NOT use for active elements.
+- `borderColor-draft-emphasis` → `#59636e`
+  - **U**: draft-emphasis, draft-status
+  - **R**: Use for emphasized draft state borders. Pair -> bg.draft.emphasis.
+- `borderColor-draft-muted` → `#d1d9e0b3`
+  - **U**: draft-issue, draft-muted, draft-pr
+  - **R**: Use for draft/WIP status borders. Conveys incomplete or pending state.
+- `borderColor-emphasis` → `#818b98`
+  - **U**: emphasis-border, selected-border, strong-border
+  - **R**: Use for borders needing more visual weight. Darker than border.default.
+- `borderColor-muted` → `#d1d9e0b3`
+  - **U**: light-divider, secondary-border, subtle-border
+  - **R**: Use for subtle borders and separators. Less prominent than border.default.
+- `borderColor-translucent` → `#1f232826`
+  - **U**: overlay-border, translucent-border
+  - **R**: Use for semi-transparent borders on overlays. Works well with translucent backgrounds.
+- `borderColor-transparent` → `#ffffff00`
+  - **U**: border-color, border-styling
+  - **R**: These are COLOR-ONLY tokens (resolve to a hex value like #cf222e). Use for the CSS `border-color` property. Do NOT use for the CSS `border` shorthand — use border.* tokens instead.
+
+---
+
+## Stack
+
+- `stack-gap-condensed` → `0.5rem`
+  - **U**: (none)
+  - **R**: (none)
+- `stack-gap-normal` → `1rem`
+  - **U**: (none)
+  - **R**: (none)
+- `stack-gap-spacious` → `1.5rem`
+  - **U**: (none)
+  - **R**: (none)
+- `stack-padding-condensed` → `0.5rem`
+  - **U**: (none)
+  - **R**: (none)
+- `stack-padding-normal` → `1rem`
+  - **U**: (none)
+  - **R**: (none)
+- `stack-padding-spacious` → `1.5rem`
+  - **U**: (none)
+  - **R**: (none)
+
+---
+
+## Border Radius
+
+- `borderRadius-default` → `0.375rem`
+  - **U**: (none)
+  - **R**: (none)
+- `borderRadius-full` → `624.9375rem`
+  - **U**: avatar, circular-button, pill-badge
+  - **R**: Use for avatars and pill-shaped elements. Do NOT use for rectangular containers.
+- `borderRadius-large` → `0.75rem`
+  - **U**: card, dialog, modal
+  - **R**: Recommended for dialogs and modals.
+- `borderRadius-medium` → `0.375rem`
+  - **U**: button, input, textarea
+  - **R**: Default choice for most components. Use for inputs, cards, and general containers.
+- `borderRadius-small` → `0.1875rem`
+  - **U**: badge, label, tag
+  - **R**: Use for small UI elements under 16px height. Do NOT use for buttons or cards.
+
+---
+
+## Text
+
+- `text-body-lineHeight-large` → `1.5`
+  - **U**: (none)
+  - **R**: (none)
+- `text-body-lineHeight-medium` → `1.5`
+  - **U**: (none)
+  - **R**: (none)
+- `text-body-lineHeight-small` → `1.625`
+  - **U**: (none)
+  - **R**: (none)
+- `text-body-shorthand-large` → `400 1rem/1.5 'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'`
+  - **U**: (none)
+  - **R**: (none)
+- `text-body-shorthand-medium` → `400 0.875rem/1.5 'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'`
+  - **U**: (none)
+  - **R**: (none)
+- `text-body-shorthand-small` → `400 0.75rem/1.625 'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'`
+  - **U**: (none)
+  - **R**: (none)
+- `text-body-size-large` → `1rem`
+  - **U**: (none)
+  - **R**: (none)
+- `text-body-size-medium` → `0.875rem`
+  - **U**: (none)
+  - **R**: (none)
+- `text-body-size-small` → `0.75rem`
+  - **U**: (none)
+  - **R**: (none)
+- `text-body-weight` → `400`
+  - **U**: (none)
+  - **R**: (none)
+- `text-caption-lineHeight` → `1.25`
+  - **U**: (none)
+  - **R**: (none)
+- `text-caption-shorthand` → `400 0.75rem/1.25 'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'`
+  - **U**: (none)
+  - **R**: (none)
+- `text-caption-size` → `0.75rem`
+  - **U**: (none)
+  - **R**: (none)
+- `text-caption-weight` → `400`
+  - **U**: (none)
+  - **R**: (none)
+- `text-codeBlock-lineHeight` → `1.5`
+  - **U**: (none)
+  - **R**: (none)
+- `text-codeBlock-shorthand` → `400 0.8125rem/1.5 ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace`
+  - **U**: (none)
+  - **R**: (none)
+- `text-codeBlock-size` → `0.8125rem`
+  - **U**: (none)
+  - **R**: (none)
+- `text-codeBlock-weight` → `400`
+  - **U**: (none)
+  - **R**: (none)
+- `text-codeInline-shorthand` → `400 0.9285em ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace`
+  - **U**: (none)
+  - **R**: (none)
+- `text-codeInline-size` → `0.9285em`
+  - **U**: (none)
+  - **R**: (none)
+- `text-codeInline-weight` → `400`
+  - **U**: (none)
+  - **R**: (none)
+- `text-display-lineHeight` → `1.375`
+  - **U**: (none)
+  - **R**: (none)
+- `text-display-shorthand` → `500 2.5rem/1.375 'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'`
+  - **U**: (none)
+  - **R**: (none)
+- `text-display-size` → `2.5rem`
+  - **U**: (none)
+  - **R**: (none)
+- `text-display-weight` → `500`
+  - **U**: (none)
+  - **R**: (none)
+- `text-subtitle-lineHeight` → `1.625`
+  - **U**: (none)
+  - **R**: (none)
+- `text-subtitle-shorthand` → `400 1.25rem/1.625 'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'`
+  - **U**: (none)
+  - **R**: (none)
+- `text-subtitle-size` → `1.25rem`
+  - **U**: (none)
+  - **R**: (none)
+- `text-subtitle-weight` → `400`
+  - **U**: (none)
+  - **R**: (none)
+- `text-title-lineHeight-large` → `1.5`
+  - **U**: (none)
+  - **R**: (none)
+- `text-title-lineHeight-medium` → `1.625`
+  - **U**: (none)
+  - **R**: (none)
+- `text-title-lineHeight-small` → `1.5`
+  - **U**: (none)
+  - **R**: (none)
+- `text-title-shorthand-large` → `600 2rem/1.5 'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'`
+  - **U**: (none)
+  - **R**: (none)
+- `text-title-shorthand-medium` → `600 1.25rem/1.625 'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'`
+  - **U**: (none)
+  - **R**: (none)
+- `text-title-shorthand-small` → `600 1rem/1.5 'Mona Sans VF', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Backtick Fix', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'`
+  - **U**: (none)
+  - **R**: (none)
+- `text-title-size-large` → `2rem`
+  - **U**: (none)
+  - **R**: (none)
+- `text-title-size-medium` → `1.25rem`
+  - **U**: (none)
+  - **R**: (none)
+- `text-title-size-small` → `1rem`
+  - **U**: (none)
+  - **R**: (none)
+- `text-title-weight-large` → `600`
+  - **U**: (none)
+  - **R**: (none)
+- `text-title-weight-medium` → `600`
+  - **U**: (none)
+  - **R**: (none)
+- `text-title-weight-small` → `600`
+  - **U**: (none)
+  - **R**: (none)
+
+### ⚠️ Usage Guidance:
+- STRICT: The following typography groups do NOT support size suffixes (-small, -medium, -large): `caption`, `display`, `codeBlock`, and `codeInline`. STRICT: Use shorthand tokens where possible. If splitting, you MUST fetch line-height tokens (e.g., --text-body-lineHeight-small) instead of using raw numbers.

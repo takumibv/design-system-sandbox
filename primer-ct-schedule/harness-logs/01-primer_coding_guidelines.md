@@ -1,0 +1,31 @@
+# primer_coding_guidelines
+
+- args: `{}`
+- isError: false
+- ms: 14
+- chars: 1401
+
+---
+
+When writing code that uses Primer, follow these guidelines:
+
+## Design Tokens
+
+- Prefer design tokens over hard-coded values. For example, use `var(--fgColor-default)` instead of `#24292f`. Use the `find_tokens` tool to search for a design token by keyword or group. Use `get_design_token_specs` to browse available token groups, and `get_token_group_bundle` to retrieve all tokens within a specific group.
+- Prefer recommending design tokens in the same group for related CSS properties. For example, when styling background and border color, use tokens from the same group/category
+
+## Authoring & Using Components
+
+- Prefer re-using a component from Primer when possible over writing a new component.
+- Prefer using existing props for a component for styling instead of adding styling to a component
+- Prefer using icons from Primer instead of creating new icons. Use the `list_icons` tool to find the icon you need.
+- Follow patterns from Primer when creating new components. Use the `list_patterns` tool to find the pattern you need, if one exists
+- When using a component from Primer, make sure to follow the component's usage and accessibility guidelines
+
+## Coding guidelines
+
+The following list of coding guidelines must be followed:
+
+- Do not use the sx prop for styling components. Instead, use CSS Modules.
+- Do not use the Box component for styling components. Instead, use CSS Modules.
+

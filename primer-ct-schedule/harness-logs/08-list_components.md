@@ -1,0 +1,93 @@
+# list_components
+
+- args: `{}`
+- isError: false
+- ms: 3
+- chars: 1231
+
+---
+
+The following components are available in the @primer/react in TypeScript projects:
+
+- ActionBar
+- ActionList
+- ActionMenu
+- AnchoredOverlay
+- Autocomplete
+- Avatar
+- AvatarStack
+- Banner
+- Blankslate
+- BranchName
+- Breadcrumbs
+- Button
+- IconButton
+- ButtonGroup
+- Card
+- Checkbox
+- CheckboxGroup
+- CircleBadge
+- ConfirmationDialog
+- CounterLabel
+- DataTable
+- Details
+- Dialog
+- FeatureFlags
+- Flash
+- FormControl
+- Header
+- Heading
+- Hidden
+- InlineMessage
+- KeybindingHint
+- Label
+- LabelGroup
+- Link
+- NavList
+- Octicon
+- Overlay
+- PageHeader
+- PageLayout
+- Pagehead
+- Pagination
+- Popover
+- Portal
+- ProgressBar
+- Radio
+- RadioGroup
+- RelativeTime
+- SegmentedControl
+- Select
+- SelectPanel
+- SkeletonBox
+- SkeletonAvatar
+- SkeletonText
+- Spinner
+- SplitPageLayout
+- Stack
+- StateLabel
+- SubNav
+- TabNav
+- Text
+- TextInput
+- TextInputWithTokens
+- Textarea
+- Timeline
+- ToggleSwitch
+- Token
+- Tooltip
+- Tooltip
+- TopicTag
+- TreeView
+- Truncate
+- UnderlineNav
+- AriaAlert
+- AriaStatus
+- Dialog
+- FilteredSearch
+- UnderlineNav
+- IssueLabel
+- SelectPanel
+- UnderlinePanels
+
+Use `get_component` for exactly one component and `get_component_batch` for 2 to 10 components. You can use these components from the @primer/react package.

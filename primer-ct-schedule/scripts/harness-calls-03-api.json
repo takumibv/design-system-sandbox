@@ -1,0 +1,17 @@
+[
+ {"tool":"get_component_batch","args":{"names":["Avatar","Checkbox","FormControl","Spinner","Stack","Text","Heading","PageLayout","Label","StateLabel"]},"log":"13-get_component_batch-1"},
+ {"tool":"get_component_batch","args":{"names":["Button","IconButton","Banner","ConfirmationDialog","Dialog","Breadcrumbs","TextInput","Select","DataTable","Blankslate"]},"log":"13-get_component_batch-2"},
+ {"tool":"get_component_batch","args":{"names":["PageHeader","ActionList","Link","Token","InlineMessage","Header","CounterLabel","Octicon","Flash","Card"]},"log":"13-get_component_batch-3"},
+ {"tool":"get_component_examples","args":{"name":"PageLayout"},"log":"14-examples-PageLayout"},
+ {"tool":"get_component_examples","args":{"name":"DataTable"},"log":"14-examples-DataTable"},
+ {"tool":"get_component_examples","args":{"name":"ConfirmationDialog"},"log":"14-examples-ConfirmationDialog"},
+ {"tool":"get_component_examples","args":{"name":"Avatar"},"log":"14-examples-Avatar"},
+ {"tool":"get_token_group_bundle","args":{"groups":["stack","borderColor","bgColor","borderRadius","text"]},"log":"15-token-bundle-layout"},
+ {"tool":"find_tokens","args":{"query":"accent background","group":"bgColor"},"log":"15-find_tokens-accent-bg"},
+ {"tool":"find_tokens","args":{"query":"selected"},"log":"15-find_tokens-selected"},
+ {"tool":"find_tokens","args":{"query":"breakpoint"},"log":"15-find_tokens-breakpoint"},
+ {"tool":"find_tokens","args":{"query":"skip link z-index"},"log":"15-find_tokens-zindex"},
+ {"tool":"list_icons","log":"16-list_icons"},
+ {"tool":"get_icon","args":{"name":"comment-discussion"},"log":"16-icon-comment-discussion"},
+ {"tool":"get_icon","args":{"name":"link-external"},"log":"16-icon-link-external"}
+]

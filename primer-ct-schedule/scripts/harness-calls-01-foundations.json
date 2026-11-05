@@ -1,0 +1,10 @@
+[
+  {"tool": "primer_coding_guidelines", "log": "01-primer_coding_guidelines"},
+  {"tool": "init", "log": "02-init"},
+  {"tool": "get_design_token_specs", "log": "03-get_design_token_specs"},
+  {"tool": "get_token_usage_patterns", "log": "04-get_token_usage_patterns"},
+  {"tool": "get_color_usage", "log": "05-get_color_usage"},
+  {"tool": "get_typography_usage", "log": "06-get_typography_usage"},
+  {"tool": "list_patterns", "log": "07-list_patterns"},
+  {"tool": "list_components", "log": "08-list_components"}
+]

@@ -1,0 +1,35 @@
+# list_patterns
+
+- args: `{}`
+- isError: false
+- ms: 27
+- chars: 519
+
+---
+
+The following patterns are available from `@primer/react` for use in TypeScript projects. Scenario patterns describe specific user tasks. Prefer a scenario pattern when one fits the task, and fall back to the UI patterns otherwise.
+
+## Scenario patterns
+
+- Copy
+- Create
+- Customize
+- Delegate
+- Delete
+- Edit
+- Filter
+- Search
+- View
+
+## UI patterns
+
+- Data Visualization
+- Degraded Experiences
+- Empty States
+- Feature Onboarding
+- Forms
+- Loading
+- Navigation
+- Notification message
+- Progressive disclosure
+- Saving

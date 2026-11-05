@@ -1,0 +1,42 @@
+{
+  "name": "primer-ct-schedule",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "CTスケジュールUIを Primer（GitHub）で再現し、@primer/mcp ハーネスを検証する",
+  "scripts": {
+    "dev": "vite --port 6011",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port 6011",
+    "harness": "node scripts/mcp-client.mjs",
+    "screenshots": "NODE_PATH=$(npm root -g) node scripts/screenshots.mjs && python3 scripts/compare.py",
+    "lint:primer": "eslint src",
+    "lint:css": "stylelint \"src/**/*.css\" --allow-empty-input"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@primer/octicons-react": "^19.42.0",
+    "@primer/primitives": "^11.10.0",
+    "@primer/react": "^38.44.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-is": "^18.3.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@primer/mcp": "^1.1.2",
+    "@primer/stylelint-config": "^13.6.0",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^4.7.0",
+    "eslint": "^9.39.5",
+    "eslint-plugin-primer-react": "^9.4.0",
+    "stylelint": "^16.26.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.72.1",
+    "vite": "^6.4.5"
+  }
+}
