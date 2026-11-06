@@ -1,0 +1,76 @@
+
+/home/user/design-system-sandbox/primer-ct-goal/src/App.tsx
+  17:30  error  Class names should be PascalCase in both CSS and JS, saw: notices  primer-react/enforce-css-module-identifier-casing
+  29:30  error  Class names should be PascalCase in both CSS and JS, saw: notices  primer-react/enforce-css-module-identifier-casing
+  56:28  error  Class names should be PascalCase in both CSS and JS, saw: app      primer-react/enforce-css-module-identifier-casing
+  58:31  error  Class names should be PascalCase in both CSS and JS, saw: main     primer-react/enforce-css-module-identifier-casing
+
+/home/user/design-system-sandbox/primer-ct-goal/src/components/AppHeader.tsx
+  17:33  error  Class names should be PascalCase in both CSS and JS, saw: header    primer-react/enforce-css-module-identifier-casing
+  21:33  error  Class names should be PascalCase in both CSS and JS, saw: logoLink  primer-react/enforce-css-module-identifier-casing
+  26:38  error  Class names should be PascalCase in both CSS and JS, saw: logo      primer-react/enforce-css-module-identifier-casing
+  28:74  error  Class names should be PascalCase in both CSS and JS, saw: appName   primer-react/enforce-css-module-identifier-casing
+  39:41  error  Class names should be PascalCase in both CSS and JS, saw: userName  primer-react/enforce-css-module-identifier-casing
+
+/home/user/design-system-sandbox/primer-ct-goal/src/components/LoadingSchedule.tsx
+  30:35  error  Class names should be PascalCase in both CSS and JS, saw: pairList  primer-react/enforce-css-module-identifier-casing
+  32:47  error  Class names should be PascalCase in both CSS and JS, saw: pairRow   primer-react/enforce-css-module-identifier-casing
+
+/home/user/design-system-sandbox/primer-ct-goal/src/components/PersonAvatar.tsx
+  22:51   error  Class names should be PascalCase in both CSS and JS, saw: initial  primer-react/enforce-css-module-identifier-casing
+  22:116  error  Class names should be PascalCase in both CSS and JS, saw: blue     primer-react/enforce-css-module-identifier-casing
+
+/home/user/design-system-sandbox/primer-ct-goal/src/pages/MembersPage.tsx
+   45:66   error  Class names should be PascalCase in both CSS and JS, saw: mutedIcon  primer-react/enforce-css-module-identifier-casing
+   91:48   error  Class names should be PascalCase in both CSS and JS, saw: muted      primer-react/enforce-css-module-identifier-casing
+  137:45   error  Class names should be PascalCase in both CSS and JS, saw: muted      primer-react/enforce-css-module-identifier-casing
+  140:41   error  Class names should be PascalCase in both CSS and JS, saw: pairList   primer-react/enforce-css-module-identifier-casing
+  146:60   error  Class names should be PascalCase in both CSS and JS, saw: pairRow    primer-react/enforce-css-module-identifier-casing
+  147:48   error  Class names should be PascalCase in both CSS and JS, saw: row        primer-react/enforce-css-module-identifier-casing
+  149:63   error  Class names should be PascalCase in both CSS and JS, saw: who        primer-react/enforce-css-module-identifier-casing
+  154:70   error  Class names should be PascalCase in both CSS and JS, saw: muted      primer-react/enforce-css-module-identifier-casing
+  158:118  error  Class names should be PascalCase in both CSS and JS, saw: status     primer-react/enforce-css-module-identifier-casing
+  162:50   error  Class names should be PascalCase in both CSS and JS, saw: actions    primer-react/enforce-css-module-identifier-casing
+  211:63   error  Class names should be PascalCase in both CSS and JS, saw: muted      primer-react/enforce-css-module-identifier-casing
+
+/home/user/design-system-sandbox/primer-ct-goal/src/pages/NotFoundPage.tsx
+  18:58  error  Class names should be PascalCase in both CSS and JS, saw: mutedIcon  primer-react/enforce-css-module-identifier-casing
+
+/home/user/design-system-sandbox/primer-ct-goal/src/pages/SchedulePage.tsx
+   51:58  error  Class names should be PascalCase in both CSS and JS, saw: mutedIcon     primer-react/enforce-css-module-identifier-casing
+   81:52  error  Class names should be PascalCase in both CSS and JS, saw: meta          primer-react/enforce-css-module-identifier-casing
+   84:52  error  Class names should be PascalCase in both CSS and JS, saw: meta          primer-react/enforce-css-module-identifier-casing
+  128:36  error  Class names should be PascalCase in both CSS and JS, saw: para          primer-react/enforce-css-module-identifier-casing
+  139:40  error  Class names should be PascalCase in both CSS and JS, saw: para          primer-react/enforce-css-module-identifier-casing
+  149:40  error  Class names should be PascalCase in both CSS and JS, saw: para          primer-react/enforce-css-module-identifier-casing
+  156:40  error  Class names should be PascalCase in both CSS and JS, saw: para          primer-react/enforce-css-module-identifier-casing
+  163:49  error  Class names should be PascalCase in both CSS and JS, saw: mutedIcon     primer-react/enforce-css-module-identifier-casing
+  166:40  error  Class names should be PascalCase in both CSS and JS, saw: para          primer-react/enforce-css-module-identifier-casing
+  177:37  error  Class names should be PascalCase in both CSS and JS, saw: heroName      primer-react/enforce-css-module-identifier-casing
+  192:48  error  Class names should be PascalCase in both CSS and JS, saw: muted         primer-react/enforce-css-module-identifier-casing
+  241:48  error  Class names should be PascalCase in both CSS and JS, saw: muted         primer-react/enforce-css-module-identifier-casing
+  262:33  error  Class names should be PascalCase in both CSS and JS, saw: pairList      primer-react/enforce-css-module-identifier-casing
+  267:37  error  Class names should be PascalCase in both CSS and JS, saw: pairRow       primer-react/enforce-css-module-identifier-casing
+  269:56  error  Class names should be PascalCase in both CSS and JS, saw: muted         primer-react/enforce-css-module-identifier-casing
+  289:37  error  Class names should be PascalCase in both CSS and JS, saw: pairRow       primer-react/enforce-css-module-identifier-casing
+  289:55  error  Class names should be PascalCase in both CSS and JS, saw: mine          primer-react/enforce-css-module-identifier-casing
+  289:71  error  Class names should be PascalCase in both CSS and JS, saw: pairRow       primer-react/enforce-css-module-identifier-casing
+  294:50  error  Class names should be PascalCase in both CSS and JS, saw: muted         primer-react/enforce-css-module-identifier-casing
+  309:50  error  Class names should be PascalCase in both CSS and JS, saw: muted         primer-react/enforce-css-module-identifier-casing
+  339:46  error  Class names should be PascalCase in both CSS and JS, saw: muted         primer-react/enforce-css-module-identifier-casing
+  349:46  error  Class names should be PascalCase in both CSS and JS, saw: muted         primer-react/enforce-css-module-identifier-casing
+  353:31  error  Class names should be PascalCase in both CSS and JS, saw: weekList      primer-react/enforce-css-module-identifier-casing
+  355:50  error  Class names should be PascalCase in both CSS and JS, saw: weekItem      primer-react/enforce-css-module-identifier-casing
+  358:70  error  Class names should be PascalCase in both CSS and JS, saw: weekTitle     primer-react/enforce-css-module-identifier-casing
+  375:43  error  Class names should be PascalCase in both CSS and JS, saw: compactPairs  primer-react/enforce-css-module-identifier-casing
+  387:64  error  Class names should be PascalCase in both CSS and JS, saw: muted         primer-react/enforce-css-module-identifier-casing
+
+/home/user/design-system-sandbox/primer-ct-goal/src/pages/SettingsPage.tsx
+  130:45  error  Class names should be PascalCase in both CSS and JS, saw: compactPairs  primer-react/enforce-css-module-identifier-casing
+  235:58  error  Class names should be PascalCase in both CSS and JS, saw: muted         primer-react/enforce-css-module-identifier-casing
+
+/home/user/design-system-sandbox/primer-ct-goal/src/state.tsx
+  36:5  error  Definition for rule 'react-hooks/exhaustive-deps' was not found  react-hooks/exhaustive-deps
+
+✖ 55 problems (55 errors, 0 warnings)
+

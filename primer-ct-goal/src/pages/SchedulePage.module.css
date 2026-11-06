@@ -1,0 +1,70 @@
+/*
+ * 組み合わせ画面の自前 CSS。Primer に「人の一覧（行の区切り線つきリスト）」に当たる表示専用の部品がないため
+ * （ActionList は操作の一覧、DataTable は 390px で横に溢れる）、ul/li に区切り線と余白だけを当てる。
+ * 値はすべて primitives のトークン。
+ */
+.Meta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--base-size-4);
+  color: var(--fgColor-muted);
+}
+
+.Muted {
+  color: var(--fgColor-muted);
+}
+
+.MutedIcon {
+  color: var(--fgColor-muted);
+  vertical-align: text-bottom;
+}
+
+.HeroName {
+  font: var(--text-title-shorthand-large);
+  color: var(--fgColor-default);
+}
+
+.PairList,
+.WeekList,
+.CompactPairs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.PairList {
+  border: var(--borderWidth-thin) solid var(--borderColor-default);
+  border-radius: var(--borderRadius-medium);
+}
+
+.PairRow {
+  padding: var(--stack-padding-condensed) var(--stack-padding-normal);
+}
+
+.PairRow + .PairRow {
+  border-top: var(--borderWidth-thin) solid var(--borderColor-muted);
+}
+
+/* 自分のペア：色だけに頼らず、行内の Label「あなた」と太字でも示す。面は accent の muted */
+.Mine {
+  background-color: var(--bgColor-accent-muted);
+}
+
+.WeekItem + .WeekItem {
+  margin-top: var(--stack-gap-normal);
+  padding-top: var(--stack-gap-normal);
+  border-top: var(--borderWidth-thin) solid var(--borderColor-muted);
+}
+
+.WeekTitle {
+  margin: 0;
+}
+
+.CompactPairs {
+  display: grid;
+  gap: var(--base-size-4);
+}
+
+.Para {
+  margin: 0;
+}
