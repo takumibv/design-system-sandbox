@@ -1,0 +1,20 @@
+[
+  { "id": "S01", "path": "/", "note": "今週・ログイン中（id=1）" },
+  { "id": "S02", "path": "/?state=guest", "note": "未ログイン" },
+  { "id": "S03", "path": "/?as=9", "note": "自分（id=9）が今週お休み" },
+  { "id": "S04", "path": "/?week=2026-10-12", "note": "祝日の週（10月12日 スポーツの日）へスクロールして表示" },
+  { "id": "S05", "path": "/?state=few", "note": "参加者が 2 人未満（id=1 以外を不参加にする）" },
+  { "id": "S06", "path": "/?state=loading", "note": "読み込み中" },
+  { "id": "S07", "path": "/?state=load-error", "note": "読み込み失敗（もう一度読み込む）" },
+  { "id": "S08", "path": "/?state=login-error", "note": "Slack ログイン失敗（もう一度ログイン）" },
+  { "id": "S09", "path": "/?state=no-channel", "note": "今週の相手（id=2）の uチャンネルが未設定" },
+  { "id": "S10", "path": "/settings?state=saved", "note": "設定の保存に成功した直後" },
+  { "id": "S11", "path": "/members", "note": "メンバーの一覧（ログイン中）" },
+  { "id": "S12", "path": "/members?state=empty", "note": "メンバーが 0 人（未ログイン）" },
+  { "id": "S13", "path": "/members?state=confirm-delete", "note": "メンバー削除の確認中（id=10 加藤 大輔）" },
+  { "id": "S14", "path": "/members?state=delete-error", "note": "メンバー削除に失敗" },
+  { "id": "S15", "path": "/setup?as=11", "note": "初回設定（id=11 吉田 真央、未入力）" },
+  { "id": "S16", "path": "/setup?as=11&state=invalid", "note": "初回設定で必須項目が未入力のまま送信した" },
+  { "id": "S17", "path": "/settings?state=save-error", "note": "設定の保存に失敗" },
+  { "id": "S18", "path": "/no-such-page", "note": "存在しないページ" }
+]
