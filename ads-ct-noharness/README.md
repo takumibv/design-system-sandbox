@@ -47,7 +47,7 @@
 ## 依存とサイズ
 
 - React 18.3 / Vite 6 / TypeScript 5.9（事後計測の lint のため 7.0 から変更）
-- `@atlaskit/*` の直接依存 18 パッケージ（`package.json`）。`node_modules` 全体で約 225MB（`@atlaskit` 配下 50 以上）。
+- `@atlaskit/*` の実行時の直接依存 19 パッケージ（`package.json` の dependencies）。`node_modules` 全体で約 225MB（事後計測の lint を入れる前の値。`@atlaskit` 配下は推移的依存を含め 53）。
 - 本番ビルド：アプリ本体の JS 974kB（gzip 280kB）、テーマ切り替え用に分割された JS を含む合計 1.3MB、CSS 108kB。
 
 ## 動かし方
