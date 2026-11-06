@@ -1,0 +1,149 @@
+# UI 文言
+
+- 組み合わせ <!-- App.tsx:40 -->
+- メンバー <!-- App.tsx:41 -->
+- 自分の設定 <!-- App.tsx:42 -->
+- 初回設定 <!-- App.tsx:43 -->
+- ページが見つかりません <!-- App.tsx:44 -->
+- ○ | CTスケジュール <!-- App.tsx:84 -->
+- （デモ）Slack アカウントでログインしました。 <!-- App.tsx:101 -->
+- ログアウトしました。 <!-- App.tsx:106 -->
+- Gaji-Labo（新しいタブで開きます） <!-- App.tsx:130 -->
+- でログイン中 <!-- App.tsx:141 -->
+- 自分の設定 <!-- App.tsx:148 -->
+- ログアウト <!-- App.tsx:149 -->
+- Slack でログイン <!-- App.tsx:153 -->
+- CTスケジュール <!-- App.tsx:158 -->
+- 組み合わせ <!-- App.tsx:160 -->
+- メンバー <!-- App.tsx:163 -->
+- 自分の設定 <!-- App.tsx:167 -->
+- 初回設定へ進む <!-- App.tsx:180 -->
+- 初回設定が済んでいません。社員番号と uチャンネルを設定すると組み合わせに入れます。 <!-- App.tsx:184 -->
+- Slack でのログインに失敗しました。時間をおいて、もう一度ログインしてください。 <!-- App.tsx:213 -->
+- もう一度ログイン <!-- App.tsx:216 -->
+- 設定を保存しました。 <!-- App.tsx:221 -->
+- 設定を保存できませんでした。通信状態を確かめて、もう一度「保存」を押してください。入力した内容は残っています。 <!-- App.tsx:225 -->
+- さん <!-- Person.tsx:58 -->
+- あなた <!-- Person.tsx:60 -->
+- 削除できませんでした。通信状態を確かめて、もう一度「削除」を押してください。 <!-- MembersPage.tsx:35 -->
+- 自分の設定を変える <!-- MembersPage.tsx:52 -->
+- 削除 <!-- MembersPage.tsx:56 -->
+- さん） <!-- MembersPage.tsx:56 -->
+- ○さんをメンバーから削除しました。今週以降の組み合わせは組み直されます。 <!-- MembersPage.tsx:67 -->
+- メンバー <!-- MembersPage.tsx:74 -->
+- ログインしたことのある全員です。社員番号順に並んでいます。組み合わせに入るのは「参加」の人だけです。 <!-- MembersPage.tsx:76 -->
+- 参加 <!-- MembersPage.tsx:83 -->
+- 人 <!-- MembersPage.tsx:83 -->
+- 不参加 <!-- MembersPage.tsx:86 -->
+- 人 <!-- MembersPage.tsx:86 -->
+- まだメンバーがいません <!-- MembersPage.tsx:95 -->
+- Slack アカウントでログインした人が、ここにメンバーとして追加されます。 <!-- MembersPage.tsx:98 -->
+- Slack でログイン <!-- MembersPage.tsx:102 -->
+- 社員番号 <!-- MembersPage.tsx:117 -->
+- 未設定 <!-- MembersPage.tsx:117 -->
+- ・uチャンネル <!-- MembersPage.tsx:117 -->
+- 未設定 <!-- MembersPage.tsx:117 -->
+- 社員番号 <!-- MembersPage.tsx:129 -->
+- メンバー <!-- MembersPage.tsx:130 -->
+- uチャンネル <!-- MembersPage.tsx:131 -->
+- 参加 <!-- MembersPage.tsx:132 -->
+- 操作 <!-- MembersPage.tsx:133 -->
+- ○さんを削除しますか？ <!-- MembersPage.tsx:158 -->
+- 削除 <!-- MembersPage.tsx:159 -->
+- キャンセル <!-- MembersPage.tsx:160 -->
+- さんをメンバーから削除します。この操作は取り消せません。 <!-- MembersPage.tsx:167 -->
+- 参加中の人を削除すると、今週以降の全員の組み合わせが組み直されます。 <!-- MembersPage.tsx:171 -->
+- この人は今は不参加なので、組み合わせは変わりません。 <!-- MembersPage.tsx:172 -->
+- もう一度ログインすると、新しいメンバーとして追加されます。 <!-- MembersPage.tsx:173 -->
+- 参加 <!-- MembersPage.tsx:184 -->
+- 不参加 <!-- MembersPage.tsx:184 -->
+- 初回設定が未完了 <!-- MembersPage.tsx:185 -->
+- ページが見つかりません <!-- NotFoundPage.tsx:7 -->
+- お探しのページは、削除されたか URL が間違っている可能性があります。 <!-- NotFoundPage.tsx:8 -->
+- 組み合わせへ戻る <!-- NotFoundPage.tsx:10 -->
+- （デモ）Slack の #○ でハドルを始めます。 <!-- SchedulePage.tsx:39 -->
+- 組み合わせ <!-- SchedulePage.tsx:49 -->
+- 組み合わせを読み込んでいます… <!-- SchedulePage.tsx:52 -->
+- 組み合わせ <!-- SchedulePage.tsx:62 -->
+- 組み合わせを読み込めませんでした <!-- SchedulePage.tsx:63 -->
+- 通信が不安定か、サーバーで問題が起きている可能性があります。もう一度読み込んでください。 <!-- SchedulePage.tsx:65 -->
+- 再読み込み <!-- SchedulePage.tsx:69 -->
+- 組み合わせ <!-- SchedulePage.tsx:84 -->
+- CT は毎週月曜 14:00 から <!-- SchedulePage.tsx:87 -->
+- 参加者 <!-- SchedulePage.tsx:89 -->
+- 人 <!-- SchedulePage.tsx:89 -->
+- メンバーを見る <!-- SchedulePage.tsx:97 -->
+- 今週のペア一覧 <!-- SchedulePage.tsx:106 -->
+- これからの予定 <!-- SchedulePage.tsx:113 -->
+- 来週以降の組み合わせは <!-- SchedulePage.tsx:115 -->
+- 予定 <!-- SchedulePage.tsx:115 -->
+- です。参加者が増えたり減ったりすると、その週以降の組み合わせは組み直されます。 <!-- SchedulePage.tsx:116 -->
+- あなたの次のお休み： <!-- SchedulePage.tsx:120 -->
+- 表示中の期間にはありません <!-- SchedulePage.tsx:121 -->
+- CT なし <!-- SchedulePage.tsx:134 -->
+- 予定 <!-- SchedulePage.tsx:136 -->
+- ○のため CT はありません <!-- SchedulePage.tsx:140 -->
+- 組み合わせなし <!-- SchedulePage.tsx:142 -->
+- あなたの相手：○さん <!-- SchedulePage.tsx:145 -->
+- あなたはお休み <!-- SchedulePage.tsx:147 -->
+- あなたは組み合わせに入っていません <!-- SchedulePage.tsx:148 -->
+- ○ ペア <!-- SchedulePage.tsx:149 -->
+- 今週 <!-- SchedulePage.tsx:184 -->
+- ログインすると、あなたの今週の相手がすぐにわかります <!-- SchedulePage.tsx:193 -->
+- Slack アカウントでログインすると、この画面のいちばん上に今週の相手が表示され、そのままハドルを始められます。参加をやめる・戻るなどの自分の設定も変えられます。 <!-- SchedulePage.tsx:195 -->
+- Slack でログイン <!-- SchedulePage.tsx:199 -->
+- 今週は <!-- SchedulePage.tsx:212 -->
+- のため CT はありません <!-- SchedulePage.tsx:212 -->
+- 今週の組み合わせはありません <!-- SchedulePage.tsx:220 -->
+- 参加している人が 2 人未満のため、組み合わせを作れませんでした。参加者が 2 人以上になると、その週から組み合わせが作られます。 <!-- SchedulePage.tsx:223 -->
+- メンバーの参加状況を見る <!-- SchedulePage.tsx:232 -->
+- 今週、あなたはお休みです <!-- SchedulePage.tsx:250 -->
+- 今週、あなたは組み合わせに入っていません <!-- SchedulePage.tsx:250 -->
+- 参加者が奇数のため、今週は 1 人がお休みです。お休みの人は週ごとに入れ替わります。 <!-- SchedulePage.tsx:254 -->
+- 参加をやめているか、初回設定が済んでいないためです。参加は自分の設定で変えられます。 <!-- SchedulePage.tsx:255 -->
+- 次回 <!-- SchedulePage.tsx:260 -->
+- の相手（予定）： <!-- SchedulePage.tsx:260 -->
+- 今週のあなたの相手 <!-- SchedulePage.tsx:280 -->
+- ハドルを始める <!-- SchedulePage.tsx:286 -->
+- で始まります <!-- SchedulePage.tsx:289 -->
+- この画面からはハドルを始められません <!-- SchedulePage.tsx:295 -->
+- ○さん <!-- SchedulePage.tsx:297 -->
+- の uチャンネルが未設定です。Slack のダイレクトメッセージなどで直接声をかけてください。 <!-- SchedulePage.tsx:297 -->
+- のため、この週は CT がありません。組み合わせは翌週へ繰り越します。 <!-- SchedulePage.tsx:321 -->
+- 参加している人が 2 人未満のため、組み合わせはありません。 <!-- SchedulePage.tsx:324 -->
+- ハドル（# <!-- SchedulePage.tsx:343 -->
+- uチャンネル未設定のためハドル不可 <!-- SchedulePage.tsx:347 -->
+- お休み <!-- SchedulePage.tsx:357 -->
+- 名前を入力してください。 <!-- SettingsPage.tsx:28 -->
+- 社員番号を入力してください。 <!-- SettingsPage.tsx:29 -->
+- 社員番号は半角数字で入力してください。 <!-- SettingsPage.tsx:30 -->
+- uチャンネルを選んでください。 <!-- SettingsPage.tsx:31 -->
+- 自分の設定 <!-- SettingsPage.tsx:54 -->
+- ログインすると自分の設定を変えられます <!-- SettingsPage.tsx:55 -->
+- 名前、社員番号、uチャンネル、CT に参加するかどうかを設定できます。変えられるのは自分の設定だけです。 <!-- SettingsPage.tsx:57 -->
+- Slack でログイン <!-- SettingsPage.tsx:59 -->
+- 初回設定が終わりました。来週の組み合わせから入ります。 <!-- SettingsPage.tsx:89 -->
+- 設定を保存しました。 <!-- SettingsPage.tsx:91 -->
+- 初回設定 <!-- SettingsPage.tsx:102 -->
+- 自分の設定 <!-- SettingsPage.tsx:102 -->
+- はじめに、組み合わせに必要な 3 つの項目を設定してください。あとから「自分の設定」でいつでも変えられます。 <!-- SettingsPage.tsx:105 -->
+- ここで変えられるのは自分の設定だけです。 <!-- SettingsPage.tsx:106 -->
+- 入力内容を確かめてください（○ 件） <!-- SettingsPage.tsx:112 -->
+- 名前 <!-- SettingsPage.tsx:128 -->
+- 組み合わせやメンバー一覧に表示される名前です。Slack の表示名が入っています。 <!-- SettingsPage.tsx:130 -->
+- 社員番号 <!-- SettingsPage.tsx:137 -->
+- 組み合わせの並び順に使います。半角数字で入力してください。 <!-- SettingsPage.tsx:139 -->
+- 例：1012 <!-- SettingsPage.tsx:140 -->
+- uチャンネル <!-- SettingsPage.tsx:154 -->
+- ペアの相手があなたとハドルを始める、個人用の Slack チャンネルです（u- で始まるもの）。既にあるチャンネルから選んでください。 <!-- SettingsPage.tsx:156 -->
+- 選んでください <!-- SettingsPage.tsx:162 -->
+- CT への参加 <!-- SettingsPage.tsx:171 -->
+- 参加をやめる・戻ると、その週以降の全員の組み合わせが組み直されます。休職や繁忙期で抜けるときに変えてください。 <!-- SettingsPage.tsx:172 -->
+- CT に参加する <!-- SettingsPage.tsx:176 -->
+- 保存すると、全員の組み合わせが変わります <!-- SettingsPage.tsx:179 -->
+- 参加者が ○ 人から ○ 人になり、今週以降の組み合わせが組み直されます。あなたは次の組み合わせから入ります。 <!-- SettingsPage.tsx:182 -->
+- 参加者が ○ 人から ○ 人になり、今週以降の組み合わせが組み直されます。あなたは組み合わせから外れ、相手だった人には新しい相手が割り当てられます。 <!-- SettingsPage.tsx:183 -->
+- 設定して始める <!-- SettingsPage.tsx:192 -->
+- 保存 <!-- SettingsPage.tsx:192 -->
+- 保存せずに組み合わせへ戻る <!-- SettingsPage.tsx:202 -->
+- ○（月） <!-- scenario.ts:104 -->
