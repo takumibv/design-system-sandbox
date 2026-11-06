@@ -1,0 +1,20 @@
+{
+  "name": "primer-ct-noharness-post-hoc-lint",
+  "private": true,
+  "type": "module",
+  "description": "事後計測専用。アプリ本体の依存とは分ける（typescript-eslint が TypeScript 7 に未対応のため、ここだけ TypeScript 5 を使う）",
+  "scripts": {
+    "eslint": "cd .. && lint/node_modules/.bin/eslint --config lint/eslint.config.mjs \"src/**/*.{ts,tsx}\"",
+    "stylelint": "cd .. && lint/node_modules/.bin/stylelint --config lint/stylelint.config.mjs \"src/**/*.css\""
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.7",
+    "@primer/primitives": "^11.10.0",
+    "@primer/stylelint-config": "^13.6.0",
+    "eslint": "^9.39.5",
+    "eslint-plugin-primer-react": "^9.4.0",
+    "stylelint": "^16.26.1",
+    "typescript": "5.9",
+    "typescript-eslint": "^8.72.1"
+  }
+}

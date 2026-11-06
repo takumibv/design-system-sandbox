@@ -1,0 +1,15 @@
+
+/home/user/design-system-sandbox/primer-ct-noharness/src/components/Layout.tsx
+  128:33  warning  The `icon` prop on `UnderlineNav.Item` is deprecated. Use `leadingVisual` instead  primer-react/no-deprecated-props
+  133:6   warning  The `icon` prop on `UnderlineNav.Item` is deprecated. Use `leadingVisual` instead  primer-react/no-deprecated-props
+  143:7   warning  The `icon` prop on `UnderlineNav.Item` is deprecated. Use `leadingVisual` instead  primer-react/no-deprecated-props
+
+/home/user/design-system-sandbox/primer-ct-noharness/src/pages/MembersPage.tsx
+   2:84  error  useResponsiveValue is not allowed. Use alternative responsive patterns instead  primer-react/no-use-responsive-value
+  35:3   error  Definition for rule 'react-hooks/exhaustive-deps' was not found                 react-hooks/exhaustive-deps
+
+/home/user/design-system-sandbox/primer-ct-noharness/src/pages/SettingsPage.tsx
+  103:3  error  Definition for rule 'react-hooks/exhaustive-deps' was not found  react-hooks/exhaustive-deps
+
+✖ 6 problems (3 errors, 3 warnings)
+

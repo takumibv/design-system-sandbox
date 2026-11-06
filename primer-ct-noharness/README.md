@@ -10,7 +10,7 @@
 - **axe（WCAG 2.1 AA）違反 0・横はみ出し 0**（18 状態 × 2 幅）。ただし 390px のメンバー表の見切れなど、検査では見つからず撮影を目で見て直した問題が 6 件あった。
 - **判断の根拠**（30 項目の主な根拠）：ブリーフ 14、自分の判断 5、Primer の事前知識 5、型定義 3、一般知識 3、検査 0。Primer の事前知識に頼った判断は、ほぼすべて確信度「中」で出典を確かめられていない。型定義のコメントが実質のガイドラインとして効いたのは 2 か所（`ConfirmationDialog` の初期フォーカス、`Spinner` の `srText`）。
 - **自前の CSS は 5 つ**（頭文字アバター、ロゴの高さ、一覧の点の除去、ペアの行と自分の強調、補足の文字色）。値はすべて primitives のトークン。
-- **事後計測の lint**（実装確定後に導入、コードは直さない）の結果は `docs/post-hoc-lint.md`。
+- **事後計測の lint**（実装確定後に導入、コードは直さない）：23 件、うち Primer 固有 14 件。display 色が alpha 扱い（8）、`UnderlineNav.Item` の `icon` 非推奨（3）、`useResponsiveValue` 禁止（1）、box-shadow・line-height のトークン（各 1）。非推奨の 2 種類は `.d.ts` に `@deprecated` と書かれていたのに見落としたもの。詳細は `docs/post-hoc-lint.md`。
 
 ## 画面構成
 
@@ -89,7 +89,7 @@ NODE_PATH=$(npm root -g) node scripts/measure-g1g2.mjs   # screenshots/g1g2-meas
 - `docs/design-decisions.md`：設計判断（画面構成前の下書き＋実装後の追記、自前の CSS の理由）
 - `docs/goal-evaluation.md`：目標 G1〜G7 の自己評価と計測
 - `docs/decision-checklist.md`：判断チェックリスト D01〜D30
-- `docs/post-hoc-lint.md`：事後計測（Primer 公式 lint）の結果
+- `docs/post-hoc-lint.md`：事後計測（Primer 公式 lint）の結果。lint の道具はアプリ本体と分けて `lint/` に置いた（typescript-eslint が TypeScript 7 に未対応のため）
 - `screenshots/`：18 状態 × 1440px／390px、`report.json`（axe・横はみ出し）、`g1g2-measure.json`
 
 ## 固定データについて
