@@ -63,3 +63,31 @@
 
 - 色：アバターの色は `fixtures.ts` の blue/green/purple/orange だが、テーマに汎用の紫・緑・橙が無い。`CHART_COLORS` の濃い色から白文字のコントラストを満たす 4 色を当てる予定（自前のスタイル指定になる）。
 - 自分の強調：主役の枠とは別に、全ペア一覧の中で自分のペアに「あなた」ラベル（`StatusLabel` blue）を付ける。
+
+---
+
+## 実装後の追記（下書きから変わった点・決めた点）
+
+| 項目 | 下書き | 実装 | 理由 |
+| --- | --- | --- | --- |
+| 削除ダイアログの初期フォーカス | キャンセルに置く | `ControlledActionDialog` の既定のまま（ダイアログ先頭のダミー要素 `smarthr-ui-Dialog-dummyFocus`。Playwright で確認） | `firstFocusTarget` は ref を要るが、キャンセルボタンは部品の内部にあり ref を渡せない。既定でも削除ボタンにはフォーカスが乗らない（Enter 一発で削除されない）ので、目的は満たすと判断 |
+| メンバー一覧の 390px | `Table`（`reel` で横スクロール） | 390px（`useEnvironment().mobile`）では `Base` を縦に並べたリストに切り替え | 撮影で、表が名前を 1 文字ずつ折り返し、「参加」「操作」列が画面外に出たため |
+| ナビの 390px | `AppNavi` | `Scroller` で横スクロール可能にし、mobile ではラベル「CTスケジュール」とアイコンを外す | 横はみ出し検査で 182px はみ出した |
+| ロゴのリンク | `Header` の `logo` に `<a target="_blank">` を渡す | `logo` に `<img>`、`logoHref` に URL、`target="_blank"` は DOM に後付け | `Header` が `logo` を自前の `<a>` で包むため入れ子の `<a>` になった（React の警告）。`Header` に target を渡す口が無い |
+| お休みの週の主役 | 「今週はお休みです」と次の相手 | 同じ。次回（祝日を飛ばした最初の CT）の相手を「（予定）」つきで出す | G1 の「誰と話すか」に答えるため |
+| 404 | `ErrorScreen` 系 | ヘッダー・ナビを残したまま `Base` に見出し・説明・「組み合わせへ戻る」 | `NotFoundErrorScreen` は `homeUrl` しか取らず、文言と戻り先の文言を自分で決められないため（型定義からの推測。実際の見た目は試していない） |
+| 一覧のマークアップ | `ul`/`li` | `role="list"`/`role="listitem"` の `div` | smarthr-ui の CSS は `ul` の黒丸・余白をリセットしないため（撮影で黒丸が出た）。CSS を書かずに意味を保つため |
+| 参加の影響 | 値を変えたら warning | 初回設定では出さない | 初回は「参加する」が初期値で、変えたことにならないため |
+
+## 自前のスタイル（CSS）を書いた箇所と理由
+
+| 箇所 | 内容 | 理由 |
+| --- | --- | --- |
+| `src/Person.tsx` の `Avatar` | 丸・背景色・白文字の頭文字（インラインスタイル） | smarthr-ui にアバター部品が無い。背景色は fixtures の color を smarthr-ui の `CHART_COLORS` の濃い色に対応させた（blue→#1b4b90、green→#2d6c4b、purple→#1b2d5d、orange→#995700）。テーマに紫が無いので purple は濃紺で代用。どれも白文字とのコントラスト 4.5:1 以上で、axe でも違反なし |
+| `src/main.tsx` | `body` の `margin: 0` と背景色（`theme.color.BACKGROUND`） | smarthr-ui の CSS は body を扱わず、ブラウザ既定の 8px の余白でヘッダーの帯が端まで届かなかった。背景を BACKGROUND にしたのは、白い `Base` を地の上に載せる SmartHR の画面の慣習（事前知識（DS）、確信度 中） |
+| `<img width height>` | ロゴの大きさを HTML 属性で指定 | CSS ではないが記録 |
+
+## 型定義・README について気づいたこと
+
+- 同梱 README の使用例（`IntlProvider` と `ThemeProvider` だけ）のままでは、`AppNavi` などが「useEnvironment は EnvironmentProvider の内側で使用してください」で落ちた。`EnvironmentProvider` を足して解決。
+- `Select` の `options` は型の上では `children` を受け付けるが、`children` に渡すと選択肢の文字が空になった。`label` で表示された。
