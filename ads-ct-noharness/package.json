@@ -33,13 +33,16 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@atlaskit/eslint-plugin-design-system": "^16.16.0",
     "@axe-core/playwright": "^4.14.0",
     "@types/node": "^24.19.2",
     "@types/react": "^18.3.31",
     "@types/react-dom": "^18.3.7",
     "@vitejs/plugin-react": "^4.7.0",
+    "eslint": "^9.39.5",
     "oxlint": "^1.90.0",
-    "typescript": "~7.0.2",
+    "typescript": "~5.9",
+    "typescript-eslint": "^8.72.1",
     "vite": "^6.4.5"
   }
 }
