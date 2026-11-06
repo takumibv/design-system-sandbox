@@ -1,0 +1,4 @@
+$ npx antd setup --client claude --mode both --dry-run
+Would write: /home/user/design-system-sandbox/antd-ct-goal/.mcp.json
+Would write: /home/user/design-system-sandbox/antd-ct-goal/.claude/skills/antd
+Would write: /home/user/design-system-sandbox/antd-ct-goal/CLAUDE.md

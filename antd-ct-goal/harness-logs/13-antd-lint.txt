@@ -1,0 +1,2 @@
+Scanned 13 files. No issues found.
+exit=0

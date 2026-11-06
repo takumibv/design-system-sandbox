@@ -1,0 +1,24 @@
+[
+  {
+    "width": 1440,
+    "partnerNameBottom": 277,
+    "huddleButtonBottom": 363,
+    "viewportHeight": 900,
+    "loggedInClicksToHuddle": 1,
+    "loginButtonBottom": 48,
+    "huddleButtonBottomAfterLogin": 363,
+    "loggedOutClicksToHuddle": 2,
+    "scrollYAtEnd": 0
+  },
+  {
+    "width": 390,
+    "partnerNameBottom": 298,
+    "huddleButtonBottom": 398,
+    "viewportHeight": 900,
+    "loggedInClicksToHuddle": 1,
+    "loginButtonBottom": 417,
+    "huddleButtonBottomAfterLogin": 398,
+    "loggedOutClicksToHuddle": 2,
+    "scrollYAtEnd": 0
+  }
+]

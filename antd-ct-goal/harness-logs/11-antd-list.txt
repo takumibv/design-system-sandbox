@@ -1,0 +1,74 @@
+Component       Name (zh)   Description                                                                                                              Since
+--------------  ----------  -----------------------------------------------------------------------------------------------------------------------  -----
+Affix           固钉        Stick an element to the viewport.                                                                                             
+Alert           警告提示    Display warning messages that require attention.                                                                              
+Anchor          锚点        Hyperlinks to scroll on one page.                                                                                             
+App             包裹组件    Application wrapper for some global usages.                                                                                   
+AutoComplete    自动完成    Autocomplete function of input field.                                                                                         
+Avatar          头像        Used to represent users or things, supporting the display of images, icons, or characters.                                    
+Badge           徽标数      Small numerical value or status descriptor for UI elements.                                                                   
+BorderBeam      边框流光    Decorative component that renders a moving beam along a container border.                                                     
+Breadcrumb      面包屑      Display the current location within a hierarchy. And allow going back to states higher up in the hierarchy.                   
+Button          按钮        To trigger an operation.                                                                                                      
+Calendar        日历        A container that displays data in calendar form.                                                                              
+Card            卡片        A container for displaying information.                                                                                       
+Carousel        走马灯      A set of carousel areas.                                                                                                      
+Cascader        级联选择    Cascade selection box.                                                                                                        
+Checkbox        多选框      Collect user's choices.                                                                                                       
+Collapse        折叠面板    A content area which can be collapsed and expanded.                                                                           
+ColorPicker     颜色选择器  Used for color selection.                                                                                                     
+ConfigProvider  全局化配置  Provide a uniform configuration support for components.                                                                       
+DatePicker      日期选择框  To select or input a date.                                                                                                    
+Descriptions    描述列表    Display multiple read-only fields in a group.                                                                                 
+Divider         分割线      A divider line separates different content.                                                                                   
+Drawer          抽屉        A panel that slides out from the edge of the screen.                                                                          
+Dropdown        下拉菜单    A dropdown list.                                                                                                              
+Empty           空状态      Empty state placeholder.                                                                                                      
+Flex            弹性布局    A flex layout container for alignment.                                                                                        
+FloatButton     悬浮按钮    A button that floats at the top of the page.                                                                                  
+Form            表单        High-performance form component with data domain management. Includes data entry, validation, and corresponding styles.       
+Grid            栅格        24 Grids System.                                                                                                              
+Icon            图标        Semantic vector graphics.                                                                                                     
+Image           图片        Preview-able image.                                                                                                           
+Input           输入框      Through mouse or keyboard input content, it is the most basic form field wrapper.                                             
+InputNumber     数字输入框  Enter a number within certain range with the mouse or keyboard.                                                               
+Layout          布局        Handling the overall layout of a page.                                                                                        
+List            列表        Basic list display, which can carry text, lists, pictures, paragraphs.                                                        
+Listy           虚拟列表    A high-performance list that supports grouping and can virtualize long data sets.                                             
+Masonry         瀑布流                                                                                                                                    
+Mentions        提及        Used to mention someone or something in an input.                                                                             
+Menu            导航菜单    A versatile menu for navigation.                                                                                              
+Message         全局提示    Display global messages as feedback in response to user operations.                                                           
+Modal           对话框      Display a modal dialog box, providing a title, content area, and action buttons.                                              
+Notification    通知提醒框  Prompt notification message globally.                                                                                         
+Pagination      分页        A long list can be divided into several pages, and only one page will be loaded at a time.                                    
+Popconfirm      气泡确认框  Pop up a bubble confirmation box for an action.                                                                               
+Popover         气泡卡片    The floating card pops up when clicking/mouse hovering over an element.                                                       
+Progress        进度条      Display the current progress of the operation.                                                                                
+QRCode          二维码      Components that can convert text into QR codes, and support custom color and logo.                                            
+Radio           单选框      Used to select a single state from multiple options.                                                                          
+Rate            评分        Used for rating operation on something.                                                                                       
+Result          结果        Used to feedback the processing results of a series of operations.                                                            
+Segmented       分段控制器  Display multiple options and allow users to select a single option.                                                           
+Select          选择器      A dropdown menu for displaying choices.                                                                                       
+Skeleton        骨架屏      Provide a placeholder while you wait for content to load, or to visualize content that doesn't exist yet.                     
+Slider          滑动输入条  A Slider component for displaying current value and intervals in range.                                                       
+Space           间距        Set components spacing.                                                                                                       
+Spin            加载中      Used for the loading status of a page or a block.                                                                             
+Splitter        分隔面板    Resizable split panel layout                                                                                                  
+Statistic       统计数值    Display statistic number.                                                                                                     
+Steps           步骤条      A navigation bar that guides users through the steps of a task.                                                               
+Switch          开关        Used to toggle between two states.                                                                                            
+Table           表格        A table displays rows of data.                                                                                                
+Tabs            标签页      Tabs make it easy to explore and switch between different views.                                                              
+Tag             标签        Used for marking and categorization.                                                                                          
+Timeline        时间轴      Vertical display timeline.                                                                                                    
+TimePicker      时间选择框  To select/input a time.                                                                                                       
+Tooltip         文字提示    Simple text popup box.                                                                                                        
+Tour            漫游式引导  A popup component for guiding users through a product.                                                                        
+Transfer        穿梭框      Double column transfer choice box.                                                                                            
+Tree            树形控件    Multiple-level structure list.                                                                                                
+TreeSelect      树选择      Tree selection control.                                                                                                       
+Typography      排版        Basic text writing, including headings, body text, lists, and more.                                                           
+Upload          上传        Used to select and upload files or drag and drop files.                                                                       
+Watermark       水印        Add specific text or patterns to the page.                                                                                    
