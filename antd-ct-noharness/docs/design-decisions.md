@@ -1,4 +1,4 @@
-# 設計判断（下書き → 実装後に追記）
+# 設計判断
 
 > この版は **Ant Design の AI 向けハーネス（@ant-design/cli、スキル、DESIGN.md、llms.txt、公式サイトの仕様・部品文書）を一切使わず** に作った対照実験版です。判断材料は `brief/`、npm で入れた `antd@6.7.0` / `@ant-design/icons@6.3.4` の型定義（`.d.ts`）と同梱 README、そして自分の事前知識だけです。
 
@@ -62,6 +62,25 @@
 - CSS ファイルは書かない。余白・並びは Flex / Space / Row・Col / Card の props で組む。
 - どうしても必要な場合のみ `style` を使い、§4 に理由を記録する。
 
-## 4. 自前のスタイルの記録（実装後に記入）
+## 4. 自前のスタイルの記録
 
-（実装後に追記）
+CSS ファイルは 1 つも書いていない（`src/` に `.css` は無い）。代わりに次のものを使った。
+
+| 何を | どこで | 理由 |
+| --- | --- | --- |
+| `antd/dist/reset.css` の読み込み | `src/main.tsx` | antd 同梱のリセット。これが無いと body の既定余白 8px のせいで、Modal を開いたとき（body に `width: calc(100% - 0px)` が付く）に 8px の横はみ出しが出た（**検査**で発見）。自前の CSS ではない |
+| テーマのトークン上書き（`colorPrimary` `colorLink` `colorError` `colorSuccess` `colorWarning` と各 Bg/Border、`colorTextDescription` `colorTextTertiary` `colorTextPlaceholder`） | `src/main.tsx` の ConfigProvider | 既定値のままでは axe（WCAG 2.1 AA）の color-contrast 違反が全 18 状態で 3〜28 件出た。主色 #1677ff は白地で 4.1:1、補足文の 0.45 黒は灰色の地で 3.3:1 など。すべてプリセットパレットの濃い段（blue-7、red-7、green-8、gold-9）か、黒の不透明度の変更で直した。濃いシード色から派生する淡い背景が暗くなりすぎたため、Bg/Border は既定パレットの淡い段を明示 |
+| Layout のコンポーネントトークン（`headerBg: #fff`、`headerPadding: 0 16px`、`footerPadding: 0`） | `src/main.tsx` | 既定の濃紺ヘッダーでは濃い色のロゴが見えない。左右余白は本文の Container と揃えるため |
+| `style={{ backgroundColor, flexShrink: 0 }}` | `src/Person.tsx`（アバター） | 人ごとの固定色はブリーフの要件で、Avatar に色の props が無い。色は `theme.useToken()` のプリセット色（blue-7 / green-8 / purple-7 / orange-8）から取り、白文字とのコントラストが 4.5:1 以上の段を選んだ |
+| `style={{ maxWidth: 1080, margin: "0 auto", padding }}` | `src/App.tsx` の Container | 1440px で行が横に伸びすぎないよう本文幅に上限を付けるため。Layout.Content にも Flex にも「最大幅」を指定する props は無い。余白の値はトークン（`paddingLG` / `padding`）を使用 |
+| `Badge.Ribbon` の `color={token.colorPrimary}` | `src/SchedulePage.tsx` | プリセット名 `blue`（#1677ff）では白文字が 4.1:1 で axe 違反になったため、上書き後の主色を渡した（props の範囲） |
+| `Typography.Link` の `underline` | `src/AppLink.tsx` | 文中のリンクが色だけで区別されていると axe の link-in-text-block 違反（390px の S02 で検出）。props の範囲 |
+
+## 5. 実装してみて変えたこと・追加で決めたこと
+
+- **「今週のペア」の自分の印**：最初は名前の横に「あなた」タグ＋ペアのカードに `Badge.Ribbon`「あなたのペア」を付けたが、1440px でリボンがタグに重なった（撮影で確認）。ペアのカードではタグをやめ、リボンと太字だけにした。お休みの人の行は「あなた」タグのまま。
+- **390px のヘッダー**：ロゴ・アプリ名・ログイン中の名前を 1 行に並べるとアプリ名が折り返したため、390px（md 未満）ではアプリ名を出さず、画面切り替え（Menu）をヘッダーの下の行に出す。ログイン中の名前は常に出す（ブリーフ「自分が誰としてログインしているか（アイコン・名前）が常にわかる」）。
+- **Menu は `disabledOverflow`**：390px で「…」に畳まれると今いる画面が見えなくなるため、畳まない（3 項目なら 390px に収まることを撮影で確認）。
+- **ハドルの導線は今週だけ**：先の週のペアにもボタンを出すと、まだ来ていない週の通話を始められるように見えるため、今週のペアにだけ置いた（ブリーフの「ペアごとに」は今週の表示に適用、と解釈）。
+- **社員番号**：fixtures に無いので、id から「1000＋id」のデモ用番号を作った（`src/data.ts` の `employeeNo`）。実データではないことをコードに明記。
+- **削除できるのは自分以外**：自分の行には「削除」の代わりに「自分の設定を変える」を出す。自分が抜けたいときは参加の設定で抜ける。
