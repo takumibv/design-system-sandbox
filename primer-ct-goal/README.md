@@ -3,6 +3,7 @@
 `brief/` のブリーフから、Primer（GitHub）を使って CTスケジュールを白紙から設計・実装し、Primer の AI 向けハーネスが設計にどこまで効くかを調べたものです。
 
 - 設計の意図：[docs/design-decisions.md](docs/design-decisions.md)（第 1 部は実装前の下書き、第 2 部は実装後のまとめ）
+- 判断チェックリスト D01〜D30（根拠の種類と時系列）：[docs/decision-checklist.md](docs/decision-checklist.md)
 - 目標の自己評価：[docs/goal-evaluation.md](docs/goal-evaluation.md)
 - **ハーネス調査（この調査の主目的）**：[docs/harness-report.md](docs/harness-report.md)
 - 状態の一覧：[states.json](states.json)（S01〜S18）
