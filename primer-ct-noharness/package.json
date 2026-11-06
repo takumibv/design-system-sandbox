@@ -1,0 +1,29 @@
+{
+  "name": "primer-ct-noharness",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --port 5173 --strictPort",
+    "capture": "NODE_PATH=$(npm root -g) node ../brief/scripts/capture.mjs states.json"
+  },
+  "dependencies": {
+    "@primer/octicons-react": "^19.42.0",
+    "@primer/primitives": "^11.10.0",
+    "@primer/react": "^38.44.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-is": "^19.3.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/react-is": "^19.3.0",
+    "@vitejs/plugin-react": "^6.2.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.6"
+  }
+}
