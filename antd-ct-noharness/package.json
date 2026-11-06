@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview --port 5173 --strictPort",
-    "capture": "NODE_PATH=$(npm root -g) node ../brief/scripts/capture.mjs states.json"
+    "capture": "NODE_PATH=$(npm root -g) node scripts/capture.mjs states.json"
   },
   "dependencies": {
     "@ant-design/icons": "^6.3.4",
