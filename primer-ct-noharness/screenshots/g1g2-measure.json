@@ -1,0 +1,74 @@
+[
+  {
+    "width": 1440,
+    "label": "ログイン済み（S01）",
+    "partnerNameBottomPx": 357,
+    "partnerVisibleWithoutScroll": true,
+    "huddleButtonBottomPx": 445,
+    "huddleVisibleWithoutScroll": true,
+    "scrollNeededPx": 0,
+    "clicksToStartHuddle": 1,
+    "tabsToHuddleButton": 7,
+    "resultNotice": "（デモ）#u-misaki でハドルを始めます"
+  },
+  {
+    "width": 1440,
+    "label": "未ログインで来た（S02）",
+    "partnerNameBottomPx": 453,
+    "partnerVisibleWithoutScroll": true,
+    "huddleButtonBottomPx": 541,
+    "huddleVisibleWithoutScroll": true,
+    "scrollNeededPx": 0,
+    "clicksToStartHuddle": 2,
+    "tabsToHuddleButton": 8,
+    "resultNotice": "（デモ）#u-misaki でハドルを始めます"
+  },
+  {
+    "width": 1440,
+    "label": "相手の uチャンネル未設定（S09）",
+    "partnerNameBottomPx": 357,
+    "partnerVisibleWithoutScroll": true,
+    "huddleButtonBottomPx": null,
+    "huddleVisibleWithoutScroll": false,
+    "scrollNeededPx": null,
+    "clicksToStartHuddle": null,
+    "tabsToHuddleButton": null,
+    "resultNotice": null
+  },
+  {
+    "width": 390,
+    "label": "ログイン済み（S01）",
+    "partnerNameBottomPx": 421,
+    "partnerVisibleWithoutScroll": true,
+    "huddleButtonBottomPx": 509,
+    "huddleVisibleWithoutScroll": true,
+    "scrollNeededPx": 0,
+    "clicksToStartHuddle": 1,
+    "tabsToHuddleButton": 7,
+    "resultNotice": "（デモ）#u-misaki でハドルを始めます"
+  },
+  {
+    "width": 390,
+    "label": "未ログインで来た（S02）",
+    "partnerNameBottomPx": 559,
+    "partnerVisibleWithoutScroll": true,
+    "huddleButtonBottomPx": 647,
+    "huddleVisibleWithoutScroll": true,
+    "scrollNeededPx": 0,
+    "clicksToStartHuddle": 2,
+    "tabsToHuddleButton": 8,
+    "resultNotice": "（デモ）#u-misaki でハドルを始めます"
+  },
+  {
+    "width": 390,
+    "label": "相手の uチャンネル未設定（S09）",
+    "partnerNameBottomPx": 421,
+    "partnerVisibleWithoutScroll": true,
+    "huddleButtonBottomPx": null,
+    "huddleVisibleWithoutScroll": false,
+    "scrollNeededPx": null,
+    "clicksToStartHuddle": null,
+    "tabsToHuddleButton": null,
+    "resultNotice": null
+  }
+]
