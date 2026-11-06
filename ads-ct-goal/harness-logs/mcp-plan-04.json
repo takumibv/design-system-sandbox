@@ -1,0 +1,164 @@
+[
+ {
+  "name": "32-localhost-a11y-S01",
+  "tool": "ads_analyze_localhost_a11y",
+  "args": {
+   "url": "http://localhost:4173/?state=S01",
+   "componentName": "S01",
+   "context": "今週・ログイン中（通常）"
+  }
+ },
+ {
+  "name": "32-localhost-a11y-S02",
+  "tool": "ads_analyze_localhost_a11y",
+  "args": {
+   "url": "http://localhost:4173/?state=S02",
+   "componentName": "S02",
+   "context": "未ログイン"
+  }
+ },
+ {
+  "name": "32-localhost-a11y-S03",
+  "tool": "ads_analyze_localhost_a11y",
+  "args": {
+   "url": "http://localhost:4173/?state=S03",
+   "componentName": "S03",
+   "context": "自分（id=9 中村 彩）が今週お休み"
+  }
+ },
+ {
+  "name": "32-localhost-a11y-S04",
+  "tool": "ads_analyze_localhost_a11y",
+  "args": {
+   "url": "http://localhost:4173/?state=S04",
+   "componentName": "S04",
+   "context": "祝日の週（今日が 2026-10-12 スポーツの日の週）"
+  }
+ },
+ {
+  "name": "32-localhost-a11y-S05",
+  "tool": "ads_analyze_localhost_a11y",
+  "args": {
+   "url": "http://localhost:4173/?state=S05",
+   "componentName": "S05",
+   "context": "参加者が 2 人未満（自分だけ参加）"
+  }
+ },
+ {
+  "name": "32-localhost-a11y-S06",
+  "tool": "ads_analyze_localhost_a11y",
+  "args": {
+   "url": "http://localhost:4173/?state=S06",
+   "componentName": "S06",
+   "context": "読み込み中"
+  }
+ },
+ {
+  "name": "32-localhost-a11y-S07",
+  "tool": "ads_analyze_localhost_a11y",
+  "args": {
+   "url": "http://localhost:4173/?state=S07",
+   "componentName": "S07",
+   "context": "読み込み失敗"
+  }
+ },
+ {
+  "name": "32-localhost-a11y-S08",
+  "tool": "ads_analyze_localhost_a11y",
+  "args": {
+   "url": "http://localhost:4173/?state=S08",
+   "componentName": "S08",
+   "context": "Slack ログインに失敗"
+  }
+ },
+ {
+  "name": "32-localhost-a11y-S09",
+  "tool": "ads_analyze_localhost_a11y",
+  "args": {
+   "url": "http://localhost:4173/?state=S09",
+   "componentName": "S09",
+   "context": "今週の相手（id=2）の uチャンネルが未設定"
+  }
+ },
+ {
+  "name": "32-localhost-a11y-S10",
+  "tool": "ads_analyze_localhost_a11y",
+  "args": {
+   "url": "http://localhost:4173/?state=S10",
+   "componentName": "S10",
+   "context": "設定の保存に成功した直後（組み合わせ画面に戻り Flag）"
+  }
+ },
+ {
+  "name": "32-localhost-a11y-S11",
+  "tool": "ads_analyze_localhost_a11y",
+  "args": {
+   "url": "http://localhost:4173/members?state=S11",
+   "componentName": "S11",
+   "context": "メンバーの一覧（ログイン中）"
+  }
+ },
+ {
+  "name": "32-localhost-a11y-S12",
+  "tool": "ads_analyze_localhost_a11y",
+  "args": {
+   "url": "http://localhost:4173/members?state=S12",
+   "componentName": "S12",
+   "context": "メンバーが 0 人（未ログイン）"
+  }
+ },
+ {
+  "name": "32-localhost-a11y-S13",
+  "tool": "ads_analyze_localhost_a11y",
+  "args": {
+   "url": "http://localhost:4173/members?state=S13",
+   "componentName": "S13",
+   "context": "メンバー削除の確認中（加藤 大輔）"
+  }
+ },
+ {
+  "name": "32-localhost-a11y-S14",
+  "tool": "ads_analyze_localhost_a11y",
+  "args": {
+   "url": "http://localhost:4173/members?state=S14",
+   "componentName": "S14",
+   "context": "メンバー削除に失敗"
+  }
+ },
+ {
+  "name": "32-localhost-a11y-S15",
+  "tool": "ads_analyze_localhost_a11y",
+  "args": {
+   "url": "http://localhost:4173/settings?state=S15",
+   "componentName": "S15",
+   "context": "初回設定（id=11 吉田 真央、未入力）"
+  }
+ },
+ {
+  "name": "32-localhost-a11y-S16",
+  "tool": "ads_analyze_localhost_a11y",
+  "args": {
+   "url": "http://localhost:4173/settings?state=S16",
+   "componentName": "S16",
+   "context": "初回設定で必須項目が未入力のまま送信"
+  }
+ },
+ {
+  "name": "32-localhost-a11y-S17",
+  "tool": "ads_analyze_localhost_a11y",
+  "args": {
+   "url": "http://localhost:4173/settings?state=S17",
+   "componentName": "S17",
+   "context": "設定の保存に失敗"
+  }
+ },
+ {
+  "name": "32-localhost-a11y-S18",
+  "tool": "ads_analyze_localhost_a11y",
+  "args": {
+   "url": "http://localhost:4173/no-such-page?state=S18",
+   "componentName": "S18",
+   "context": "存在しないページ"
+  }
+ }
+]

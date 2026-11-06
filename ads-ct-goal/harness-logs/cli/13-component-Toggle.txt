@@ -1,0 +1,47 @@
+$ npx ads-cli component Toggle
+Toggle
+@atlaskit/toggle
+
+Props (13)
+  defaultChecked  boolean | undefined
+  Sets whether the toggle is initially checked or not. After the initial interaction, whether the component is checked or not is controlled by the component.
+  descriptionId   string | undefined
+  Use this when you need to provide an extended description about how the toggle works using aria-describedby. It's important to use this prop if the meaning of the toggle with the only a label would be unclear to people who use assistive technology.
+  id              string | undefined
+  Use a pairing label with your toggle using `id` and `htmlFor` props to set the relationship. For more information see [labels on MDN web docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label).
+  isChecked       boolean | undefined
+  If defined, it takes precedence over defaultChecked, and the toggle acts as a controlled component. You can provide a onChange function to be notified of checked value changes
+  isDisabled      boolean | undefined
+  Sets if the toggle is disabled or not. This prevents any interaction. Disabled toggles will not appear in the tab order for assistive technology.
+  isLoading       boolean | undefined
+  If defined, it displays a spinner within the toggle. This prop is useful when the toggle's state is being fetched or updated asynchronously.
+  label           string | undefined
+  Text value which will be associated with toggle input using aria-labelledby attribute. Use only when you can't use a visible label for the toggle.
+  name            string | undefined
+  Descriptive name for the value property, to be submitted in a form.
+  onBlur          ((event: FocusEvent<HTMLInputElement, Element>, analyticsEvent: UIAnalyticsEvent) => void) | undefi…
+  Handler to be called when toggle is unfocused.
+  onChange        ((event: ChangeEvent<HTMLInputElement>, analyticsEvent: UIAnalyticsEvent) => void) | undefined
+  Handler to be called when native 'change' event happens internally.
+  onFocus         ((event: FocusEvent<HTMLInputElement, Element>, analyticsEvent: UIAnalyticsEvent) => void) | undefi…
+  Handler to be called when toggle is focused.
+  size            Size | undefined
+  Toggle size.
+  value           string | undefined
+  Value to be submitted in a form.
+
+Examples (1):
+
+Example 1
+  tsx                                                                                               
+  import Toggle from '@atlaskit/toggle/toggle';                                                     
+  const Examples = (): React.JSX.Element => (                                                       
+    <>                                                                                              
+      <Toggle label="Basic toggle" />                                                               
+      <Toggle label="Checked toggle" isChecked />                                                   
+    </>                                                                                             
+  );                                                                                                
+  export default Examples;                                                                          
+
+Design: https://go.atlassian.com/figma-library-ads-7947-9758
+# exit=0

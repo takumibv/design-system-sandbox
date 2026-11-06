@@ -1,0 +1,28 @@
+$ npx ads-cli component Spinner
+Spinner
+@atlaskit/spinner
+
+Props (4)
+  appearance  Appearance | undefined
+  You can use this to invert the current theme. This is useful when you are displaying a spinner on a background that is not the same background color scheme as the main content.
+  delay       number | undefined
+  Delay the intro animation of `Spinner`. This is not to be used to avoid quick flickering of `Spinner`. `Spinner` will automatically fade in and takes ~200ms to become partially visible. This prop can be helpful for **long delays** such as `500-1000ms` for when you want to not show a `Spinner` until some longer period of time has elapsed.
+  label       string | undefined
+  Describes what the spinner is doing for assistive technologies. For example, "loading", "submitting", or "processing".
+  size        Size | undefined
+  Size of the spinner. The available sizes are `xsmall`, `small`, `medium`, `large`, and `xlarge`. For most use cases, we recommend `medium`.
+
+Examples (1):
+
+Example 1
+  tsx                                                                                               
+  import Spinner from '@atlaskit/spinner/spinner';                                                  
+  const _default_1: React.JSX.Element[] = [                                                         
+    <Spinner size="small" />,                                                                       
+    <Spinner size="medium" />,                                                                      
+    <Spinner size="large" />,                                                                       
+  ];                                                                                                
+  export default _default_1;                                                                        
+
+Design: https://go.atlassian.com/figma-library-ads-8070-10241
+# exit=0

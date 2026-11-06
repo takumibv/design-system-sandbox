@@ -1,0 +1,10 @@
+{
+  "name": "ads-ct-goal-harness-tools",
+  "private": true,
+  "description": "ADS ハーネス（CLI・MCP クライアント）用。アプリ本体の依存と分けるための別パッケージ",
+  "type": "module",
+  "devDependencies": {
+    "@atlaskit/ads-cli": "^0.11.1",
+    "@modelcontextprotocol/sdk": "^1.32.2"
+  }
+}

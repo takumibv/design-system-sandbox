@@ -1,0 +1,41 @@
+$ npx ads-cli --help
+Query Atlassian Design System (ADS) structured content — components, tokens, icons, and guidelines — from the terminal.
+
+Usage
+  $ npx @atlaskit/ads-cli <command> [options]
+
+Commands
+  init                                                     Set up the ADS, UI Styling Standard, and Accessibility Foundation skills at the Git repository root and install the Atlas CLI ADS plugin.
+  search <query...> [--type component|token|icon|docs] [--limit N]
+      Fuzzy-search ADS components, tokens, icons, and docs together (or narrow results with --type). Returns up to 2 matches per term, per result type by default; override with --limit.
+  batch [--json] --command <command> [args...] [--command <command> [args...]]...
+      Run multiple ADS CLI queries in one process. Tokenized child requests are canonical; complete-request strings are also accepted.
+  component <name> | component --all                       Get details for a single ADS component, or list all with --all.
+  token <name> | token --all                               Get details for a single ADS token, or list all with --all.
+  icon <name> | icon --all                                 Get details for a single ADS icon, or list all with --all.
+  lint-rules [term...] [--limit N]                         Get ADS ESLint lint rules, optionally filtered by term.
+  docs <topic...>
+      | docs a11y [buttons|forms|images|colors|focus|keyboard|screenReaders|aria|wcag|general]
+      | docs migration <avatar-xsmall-to-xxsmall|interaction-to-entry-point|jira-spotlight|single-step|multi-step|motion>
+      Read ADS reference docs: foundations, accessibility (a11y), or migrations.
+  manifest                                                 Describe every CLI command, argument, flag, and JSON response type.
+
+Global options
+  --json          Emit a machine-readable JSON envelope on stdout.
+  --help, -h      Show help.
+  --version, -v   Show the CLI version.
+
+Examples
+  $ npx @atlaskit/ads-cli init                                                                     # set up repository-local frontend skills and the Atlas plugin
+  $ npx @atlaskit/ads-cli search contrast                                                          # unified: components, tokens, icons & docs
+  $ npx @atlaskit/ads-cli batch --command search button --type icon --command token space.200      # canonical tokenized batch form
+  $ npx @atlaskit/ads-cli batch --command "search button" --type icon --command "token space.200"  # complete-string compatibility form
+  $ npx @atlaskit/ads-cli search button --type component
+  $ npx @atlaskit/ads-cli search contrast --type docs
+  $ npx @atlaskit/ads-cli component Button                                                         # detail for one component
+  $ npx @atlaskit/ads-cli token space.100                                                          # detail for one token
+  $ npx @atlaskit/ads-cli icon --all                                                               # list every icon
+  $ npx @atlaskit/ads-cli docs spacing                                                             # foundations docs
+  $ npx @atlaskit/ads-cli docs a11y buttons                                                        # accessibility guidance
+  $ npx @atlaskit/ads-cli docs migration motion                                                    # migration guide
+  $ npx @atlaskit/ads-cli manifest --json                                                          # machine-readable CLI contract

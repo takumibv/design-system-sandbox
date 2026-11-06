@@ -1,0 +1,60 @@
+$ npx ads-cli component EmptyState
+EmptyState
+@atlaskit/empty-state
+
+Props (16)
+  buttonGroupLabel  string | undefined
+  Accessible name for the action buttons group of empty state. Can be used for internationalization. Default is "Button group".
+  description       string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | It…
+  The main block of text that holds additional supporting information.
+  header            string
+  Title that briefly describes the page to the user.
+  headingLevel      number | undefined
+  The value used to set the heading level of the header element. Must be in the range of 1 to 6. Defaults to 4.
+  headingSize       "xsmall" | "medium" | undefined
+  The keyword used to set the visual appearance of the header element. Defaults to "medium". "xsmall" can be used for empty states in smaller contexts such as popups.
+  imageHeight       number | undefined
+  Height of the image that is rendered in EmptyState component. Useful when you want image to be of exact height to stop it bouncing around when loading in. Only set `height` if you want the image to resize down on smaller devices.
+  imageUrl          string | undefined
+  The url of image that will be shown above the title, fed directly into the `src` prop of an <img> element. Note, this image will be constrained by the `maxWidth` and `maxHeight` props.
+  imageWidth        number | undefined
+  Width of the image that is rendered in EmptyState component. Useful when you want image to be of exact width to stop it bouncing around when loading in.
+  isLoading         boolean | undefined
+  Used to indicate a loading state. Will show a spinner next to the action buttons when true.
+  maxImageHeight    number | undefined
+  Maximum height (in pixels) of the image, default value is 160.
+  maxImageWidth     number | undefined
+  Maximum width (in pixels) of the image, default value is 160.
+  primaryAction     string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | It…
+  Primary action button for the page, usually it will be something like "Create" (or "Retry" for error pages).
+  renderImage       ((props: RenderImageProps) => React.ReactNode) | undefined
+  An alternative API to supply an image using a render prop. Only rendered if no `imageUrl` is supplied.
+  secondaryAction   string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | It…
+  Secondary action button for the page.
+  tertiaryAction    string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | It…
+  Button with link to some external resource like documentation or tutorial, it will be opened in a new tab.
+  width             Width | undefined
+  Controls how much horizontal space the component fills. Defaults to "wide".
+
+Examples (1):
+
+Example 1
+  tsx                                                                                               
+  import EmptyState from '@atlaskit/empty-state/empty-state';                                       
+  const Examples = (): React.JSX.Element => (                                                       
+    <>                                                                                              
+      <EmptyState header="No items" description="Add items to get started" />                       
+      <EmptyState                                                                                   
+        header="No search results"                                                                  
+        description="Try adjusting your search criteria or browse all items."                       
+      />                                                                                            
+      <EmptyState                                                                                   
+        header="Welcome to your dashboard"                                                          
+        description="Create your first project to get started with the platform."                   
+      />                                                                                            
+    </>                                                                                             
+  );                                                                                                
+  export default Examples;                                                                          
+
+Design: https://go.atlassian.com/figma-library-ads-81047-55512
+# exit=0

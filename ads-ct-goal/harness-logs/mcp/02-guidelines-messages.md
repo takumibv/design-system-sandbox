@@ -1,0 +1,642 @@
+<!-- transport: remote https://mcp.atlassian.com/v1/ads/public/mcp -->
+<!-- request: {"tool":"ads_get_guidelines","args":{"terms":["error message","success message","warning message","empty state","info message"],"limit":1}} -->
+
+An error message, different from a warning message, appears **after** someone has taken an action.
+The message draws their attention to what has happened and what the consequences are, and what
+people need to do to move forward. Optionally, they can also include why something happened and
+whether the problem will occur again.
+
+When crafting an error message, remember that most people scan text instead of reading everything.
+Make every word count and avoid irrelevant details.
+
+## Writing best practices
+
+### Title
+
+- Titles are optional depending on the component you choose.
+- Include an informative, scannable title. Try and imagine people trying to understand what’s
+  happening by reading the title on its own.
+- Avoid explaining what to do.
+- Limit titles to three to four words where possible, excluding “an”, “a”, or “the”. The character
+  count will depend on the component you choose.
+- Write in sentence case with appropriate punctuation.
+
+### Body
+
+- Include: the reason for the error and the problem, how someone should act and what happens if they
+  don’t act.
+- If you don’t know the reason for an error, don’t make one up – just say that something’s gone
+  wrong and offer a solution for what people can do.
+- Avoid repeating content from the title.
+- Keep messages to 1 to 2 sentences.
+- Avoid putting technical information in the message or having people look in another location. If
+  it can't be avoided, use a link to support content.
+
+<DoDontGrid>
+	<DoDont type="do" image={{ url: errorMessagesBodyDo, alt: '' }} />
+	<DoDont type="dont" image={{ url: errorMessagesBodyDont, alt: '' }} />
+</DoDontGrid>
+
+### Call to action (CTA)
+
+- When an error message invokes a choice, use imperative verbs such as “Save”, “Remove”, or
+  “Create”, in the CTA to describe what action people will be making instead of vague terms such as
+  “OK”.
+- An option to dismiss or cancel lets people feel reassured that they can opt out.
+- Limit your CTA to 1 or 2 words.
+
+## Voice and tone
+
+Errors are high-stakes situations. They can be frustrating at a minimum, or catastrophic at their
+worst – especially when they involve work.
+
+You want to leave people feeling supported and reassured. Convey an error message with empathy and
+tact. The correct level of urgency will let people understand how to respond. Follow some of the
+following
+[Atlassian voice and tone principles](https://atlassian.design/foundations/content/voice-tone) to
+build your message:
+
+### Inform to build trust
+
+Be open and clear about what's happening in the app. Be aware that your reader could be new or
+confused, and tone down the boldness by being more prescriptive.
+
+<DoDontGrid>
+	<DoDont type="do" image={{ url: errorMessagesTrustDo, alt: '' }} />
+	<DoDont type="dont" image={{ url: errorMessagesTrustDont, alt: '' }} />
+</DoDontGrid>
+
+Treat errors as an opportunity to educate people. Help them understand why they’re experiencing
+something and how they can avoid similar issues in the future. You may even be able to teach them
+something that can help them understand and manage the technology they use beyond our apps.
+
+### Encourage people along the path
+
+Be consistent and dependable. Avoid messaging that focuses on the problem without offering a
+solution or way forward. Focus on next steps where possible and stay away from negative words or
+phrases.
+
+<DoDontGrid>
+	<DoDont type="do" image={{ url: errorMessagesEncourageDo, alt: '' }} />
+	<DoDont type="dont" image={{ url: errorMessagesEncourageDont, alt: '' }} />
+</DoDontGrid>
+
+Use _we_ instead of _you_, as emphasizing the relationship between the person and the problem could
+make them feel like they’re being held responsible.
+
+### Satisfy by meeting expectations
+
+Provide quick and thorough answers, guidance, actions, and instructions. Give them the information
+they need then get out of their way.
+
+<DoDontGrid>
+	<DoDont type="do" image={{ url: errorMessagesExpectationsDo, alt: '' }} />
+	<DoDont type="dont" image={{ url: errorMessagesExpectationsDont, alt: '' }} />
+</DoDontGrid>
+
+Avoid using “please” and “sorry”. Saying "sorry" in error messages can make the situation worse by
+causing errors to appear more severe than they actually are. Similarly, saying "please" can
+undermine the authority and credibility of your message and lead people to think a required step is
+optional. Unless the error has severe and irreparable consequences, avoid niceties.
+
+## Patterns and UX strategies
+
+If the error has more than one potential cause or solution, try one of the following writing
+strategies.
+
+### A warning message vs. an error message
+
+An error message alerts people of a problem that has already occurred. By contrast, a warning
+message alerts people of a condition that might cause a problem in the future.
+
+Use text, design elements, and visual clues to differentiate the difference between where people are
+in their journeys.
+
+### Offer a backup solution
+
+Stick to the most likely cause or the simplest solution in the first sentence of the error message
+and offer an alternative backup solution in the second sentence in case the error keeps occurring
+(for example, contacting support). Try to reframe the error as an opportunity to inspire trust and
+confidence.
+
+<DoDontGrid>
+	<DoDont type="do" image={{ url: errorMessagesBackupDo, alt: '' }} />
+	<DoDont type="dont" image={{ url: errorMessagesBackupDont, alt: '' }} />
+</DoDontGrid>
+
+### Reveal additional information gradually
+
+For dead ends, start with something short but kind, and add context or other details only if the
+error will reoccur.
+
+## Related components
+
+Use error messages in the following components:
+
+- [Flag](https://atlassian.design/components/flag/examples)
+- [Inline message](https://atlassian.design/components/inline-message/examples)
+- [Modal dialog](https://atlassian.design/components/modal-dialog/examples)
+- [Section message](https://atlassian.design/components/section-message/)
+
+## Accessibility
+
+- Use alternative text for illustrations and symbols in your messages
+- Avoid jargon and use simple language
+- Make links as descriptive as possible
+- Make text easily scannable to highlight key information.
+
+A success message appears after someone has taken an action or completed a task. The message is an
+opportunity to confirm the action or congratulate them.
+
+When crafting a success message, remember that most people scan text instead of reading everything.
+Make every word count and avoid irrelevant details.
+
+## Writing best practices
+
+### Title
+
+- Titles are optional depending on the component you choose. Avoid using “Success!” or
+  “successfully” in a title.
+- Include an informative, scannable title. Try and imagine people trying to understand what’s
+  happening by reading the title on its own.
+- Limit titles to three to four words where possible, excluding “an”, “a”, or “the”. The character
+  count will depend on the component you choose.
+- Write in sentence case and no use of periods.
+- Avoid using exclamations! We don't want to be overly enthusiastic about everything!
+
+### Body
+
+- Include the reason for the success — confirm what action someone has taken or what task has been
+  completed. If someone has created something give them an opportunity to view it.
+- Avoid repeating content from the title.
+- Keep messages to 1 to 2 sentences. Use a few words of praise followed by one or two sentences of
+  informative insight.
+- Avoid putting technical information in the message or having people look in another location. If
+  it can't be avoided, use a link to support content.
+
+It’s important to show possibility once someone has achieved something. We want to tell people the
+result of something, for example ‘you’ve closed the ticket'; how to undo it, for example, ‘ask your
+space admin to restore the page, if needed’; and the step forward if possible, for example ‘View
+your new space or set the permissions on your new space’.
+
+### Call to action (CTA)
+
+- CTAs are often optional unless there are any follow-up options. Don’t include a CTA unnecessarily.
+- Always give people an option to dismiss the message.
+- When a success message invokes a choice, use imperative verbs such as “Save”, “Remove”, or
+  “Create”, in the CTA to describe what action people will be making instead of vague terms such as
+  “OK”.
+- Limit your CTA to 1 or 2 words.
+
+## Voice and tone
+
+Success messages should leave people feeling empowered, motivated, and satisfied with their efforts.
+
+You want to confirm the outcome and then get out of people’s way. Follow some of the following
+[Atlassian Voice and Tone principles](https://atlassian.design/foundations/content/voice-tone) to
+build your message:
+
+**Delight with unexpectedly pleasing experiences**
+
+We’re celebrating success or progress once we’ve built trust. Write to convey excitement. You are
+giving a pat on the back for a job well done.
+
+But remember not to overdo it. Timing and repetition are critical. Success messages that appear more
+frequently should be more concise and have less delight. If messages are appearing repeatedly,
+consider multiple versions if you want to add some humor. These are low commitment experiences, we
+want to give flowers not puppies.
+
+Messages that appear after a bigger, optimistic action can be more playful, for example a modal
+dialog. Remember that depending on the component you use, illustrations can also help to add a wink
+to your message.
+
+## Related components
+
+Use success messages in the following components:
+
+- [Flag](https://atlassian.design/components/flag/examples)
+- [Banner](https://atlassian.design/components/banner/examples)
+- [Inline message](https://atlassian.design/components/inline-message/examples)
+- [Modal dialog](https://atlassian.design/components/modal-dialog/examples)
+- [Section message](https://atlassian.design/components/section-message/)
+
+## Accessibility
+
+- Use alternative text for illustrations and symbols in your messages.
+- Avoid jargon and use simple language.
+- Make links as descriptive as possible.
+- Make text easily scannable to highlight key information.
+
+A warning message, different from error messages, appears **before** someone takes an action to
+indicate a significant change or potential loss of data. It draws their attention to a potential
+problem that may or may not require an action on the user’s part.
+
+When crafting warning messages, remember that most people scan text instead of reading everything.
+Make every word count and avoid irrelevant details.
+
+## Writing best practices
+
+### Titles
+
+- Titles are optional depending on the component you choose.
+- Include an informative, scannable title. People should understand what’s happening by reading the
+  title on its own.
+- Avoid explaining what to do.
+- Limit titles to three to four words where possible, excluding “an”, “a”, or “the”. The character
+  count will depend on the component you choose.
+- Write in sentence case with appropriate punctuation.
+
+<DoDontGrid>
+	<DoDont type="do" image={{ url: warningMessagesTitlesDo, alt: '' }}>
+		Your bill may increase
+	</DoDont>
+	<DoDont type="dont" image={{ url: warningMessagesTitlesDont, alt: '' }}>
+		Time to pay up!
+	</DoDont>
+</DoDontGrid>
+
+By giving people this warning before they add extra members to their team you’re giving them a
+chance to reconsider their options after having all the information. Avoid using a wink in instances
+where there could be a problem for people.
+
+### Body copy
+
+- Include: the reason for the warning and the potential problem, how someone should act, and what
+  happens if they don’t act.
+- If you don’t know the reason for a warning, don’t make one up – just say that something’s gone
+  wrong and offer a solution for what they can do.
+- Avoid repeating content from the title.
+- Keep messages to 1 to 2 sentences.
+- Avoid people having to look in another location for more information. If this can't be avoided,
+  use a link to support content.
+
+<DoDontGrid>
+	<DoDont type="do" image={{ url: warningMessagesBodyDo, alt: '' }}>
+		We’re running into some difficulties
+	</DoDont>
+	<DoDont type="dont" image={{ url: warningMessagesBodyDont, alt: '' }}>
+		You’ve lost connection
+	</DoDont>
+</DoDontGrid>
+
+Use “we’re” instead of “you’re” to avoid blaming people for issues in the app.
+
+### Call to action (CTA)
+
+- When a warning message invokes a choice, use imperative verbs such as “Save”, “Remove”, or
+  “Create”, in the CTA to describe what action people will be making instead of vague terms such as
+  “Done”.
+- An option to dismiss or cancel lets people feel reassured that they can opt-out.
+- Limit your CTA to 1 or 2 words.
+
+## Voice and tone
+
+You want to leave people feeling informed, supported and reassured. Convey the correct level of
+urgency and make sure they understand how to respond. Follow the
+[Atlassian voice and tone principles](https://atlassian.design/foundations/content/voice-tone) to
+build your message:
+
+### Inform to build trust
+
+Inform, but don't alarm. If the warning comes before an action, clearly communicate what will happen
+if the action is taken.
+
+### Encourage them along the path
+
+Give clear, concise advice on which path to take and describe and provide alternatives if possible.
+
+### Satisfy by meeting expectations
+
+Use language that sounds and feels human, is natural and accessible. Explains the situation clearly
+and without assuming they have any advanced knowledge.
+
+## Patterns and UX strategies
+
+Consider the context in which the message appears. The type of warning message required will change
+depending on the risk, consequences, and immediacy of the problem.
+
+### Raise awareness
+
+Warning messages make people aware of a condition or potential problem, even if they don't have to
+take immediate action.
+
+<DoDontGrid>
+	<DoDont type="do" image={{ url: warningMessagesAwarenessDo, alt: '' }}>
+		Payment details needed
+	</DoDont>
+	<DoDont type="dont" image={{ url: warningMessagesAwarenessDont, alt: '' }}>
+		We’re going to close your account
+	</DoDont>
+</DoDontGrid>
+
+This message describes the condition or problem, the implications and their importance, and offers a
+button to dismiss the message.
+
+### Highlight an imminent problem
+
+This is when someone needs to act immediately to prevent an issue.
+
+Here the message describes what people need to do, explains the condition and why it’s important,
+and offers a button for each of the options.
+
+It's important to give people a timeline in which to make a certain change. You don’t want to create
+panic and rush people into making changes.
+
+### Confirm a risky action
+
+This message should ask people whether they want to proceed, explain any reasons why they may not
+wish to proceed, and offer commit buttons for proceeding or canceling an action. You should also
+inform them whether any actions they take can be easily undone.
+
+<DoDontGrid>
+	<DoDont type="do" image={{ url: warningMessagesConfirmDo, alt: '' }}>
+		Confirm a risky action
+	</DoDont>
+	<DoDont type="dont" image={{ url: warningMessagesConfirmDont, alt: '' }}>
+		Risky action
+	</DoDont>
+</DoDontGrid>
+
+## Related components
+
+Use warning messages in the following components:
+
+- [Banner](https://atlassian.design/components/banner/examples)
+- [Flag](https://atlassian.design/components/flag/examples)
+- [Inline message](https://atlassian.design/components/inline-message/examples)
+- [Modal dialog](https://atlassian.design/components/modal-dialog/examples)
+- [Section message](https://atlassian.design/components/section-message/)
+
+## Accessibility
+
+- Use alternative text for illustrations and symbols in your messages
+- Avoid jargon and use simple language
+- Make links as descriptive as possible
+- Make text easily scannable to highlight key information.
+
+An empty state message appears after someone has completed a task or workflow, or has cleared all
+data associated with certain functionality. For example, clearing their inbox. These messages are a
+way to celebrate, add energy, and motivate people to get on with their next task.
+
+Empty states can appear within a particular functionality or as a full-screen message. When crafting
+an empty state message, remember that most people scan text instead of reading everything. Make
+every word count and avoid irrelevant details.
+
+## Writing best practices
+
+### Titles
+
+- Include an informative, scannable title. Try and limit the number of words as much as possible.
+- Titles are a good place to add wink if it’s appropriate.
+- Write in sentence case and don’t use punctuation unless it's a question.
+- Use the heading to describe the empty state or as an opportunity to tell people what they can do.
+
+### Body copy
+
+- Include the reason for the empty state and where they can go next. If there is nothing for them to
+  do, celebrate finishing a task.
+- Avoid repeating content from the title.
+- Keep messages one to two sentences long. Be considerate of people's time and patience. Be short,
+  to the point, and avoid using jargon.
+- Avoid having people look in another location for more information, but if it can't be avoided, use
+  a link to support content.
+
+### Call to action (CTA)
+
+- When offering an action to perform after an empty state, use imperative verbs such as “Try”,
+  “Remove”, or “Create”, in the CTA to describe what action people will be making instead of vague
+  terms such as “OK”.
+- An option to dismiss or cancel lets people feel reassured that they can opt-out.
+- Limit your CTA to one or two words.
+- Your CTA button should always complement the title of the empty state.
+- Empty states are an opportunity to encourage people to interact further with our apps. While
+  optional they’re a good way to educate people about where they can go next or motivate them to
+  explore.
+
+Be careful of how many call to action buttons are on one page. You don’t want to overwhelm people
+with too many options.
+
+## Voice and tone
+
+You want to leave people feeling motivated, supported, and delighted. Convey accurate emotions and
+make sure people know how to respond. Follow some of the following
+[Atlassian voice and tone principles](https://atlassian.design/foundations/content/voice-tone) to
+build your message:
+
+### Motivate by showing possibilities
+
+Completing a task makes people feel ambitious, inspired, curious. Provide people with the incentive
+and excitement for continued growth in our apps.
+
+Show the possibilities of what can be accomplished by presenting them with next steps, or offer
+opportunities for advanced knowledge. This is always better than leaving people at a dead end.
+
+### Delight with unexpectedly pleasing experiences
+
+We’re celebrating the success or progress of completing a task. Write to convey excitement. You are
+giving a pat on the back for a job well done.
+
+But remember not to overdo it. Timing and repetition are critical. Messages that appear more
+frequently should be more concise and less delightful, for example clearing notifications. If
+messages are appearing repeatedly, consider multiple versions. These are low commitment experiences,
+we want to give flowers not puppies.
+
+Messages that appear after a bigger, optimistic action can be more playful, for example, a modal
+dialog. Remember that depending on the component you use, illustrations can also help to add a wink
+to your message.
+
+## Patterns and UX strategies
+
+If an empty state has more than one potential cause or solution, try one of the following writing
+strategies.
+
+### An empty state vs. a blank slate message
+
+An empty state lets people know when they’ve completed or have cleared a task(s). By contrast, a
+blank slate is a type of message in which people have never come across or tried a new feature
+before. Blank slates promote and encourage people to try something new.
+
+Use text, design elements, and visual clues to differentiate where people are in their journeys.
+
+People care about how apps talk to them. YouTube, GitHub, and Slack all have a distinct voice, tone,
+and personality.
+
+Apps engage us, manage to make us feel at home, capture our attention, and earn our loyalty.
+
+Poor messaging contributes to a poor user experience, which leads to dissatisfaction. On the other
+hand, good copy reflects our apps' voice (personality) and enables us to build a better relationship
+with our audience.
+
+In short, good messaging may not be the reason people stay with our apps, but bad messaging could be
+the reason they decide to leave.
+
+## Choose a message type
+
+Use different types of messages to guide people through their tasks. Each message type has a
+consistent visual and writing style to help people know what to expect.
+
+Use these guidelines to choose and write the types of messages:
+
+- [Information message](https://atlassian.design/foundations/content/designing-messages/info-messages)
+  — provides additional information to motivate people.
+- [Error message](https://atlassian.design/foundations/content/designing-messages/error-messages) —
+  alerts people of a problem that has occurred and informs them what to do next.
+- [Success message](https://atlassian.design/foundations/content/designing-messages/success-messages)
+  — celebrates success along with the people using our apps.
+- [Warning message](https://atlassian.design/foundations/content/designing-messages/warning-messages)
+  — gives advanced notice of a potential change that may result in loss of data or an error state.
+- [Feature discovery](https://atlassian.design/foundations/content/designing-messages/feature-discovery)
+  — lets people know about a new feature.
+
+## Select the right component
+
+Use the table to identify the right component for your content.
+
+For example:
+
+- If you want to highlight a new feature to a user, consider a spotlight card, benefits modal, or
+  empty state.
+- If you want to tell someone they've accomplished a task, consider a flag.
+
+| Component                                     | Information message | Success message | Warning message | Error message | Feature discovery |
+| --------------------------------------------- | ------------------- | --------------- | --------------- | ------------- | ----------------- |
+| **Empty state**                               | Yes                 | Yes             |                 |               | Yes               |
+| **Banner**                                    | Yes                 |                 | Yes             | Yes           |                   |
+| **Flag**                                      | Yes                 | Yes             | Yes             | Yes           |                   |
+| **Section message**                           | Yes                 |                 | Yes             | Yes           |                   |
+| **Inline message**                            | Yes                 | Yes             | Yes             | Yes           |                   |
+| **Modal dialog**                              | Yes                 |                 | Yes             |               |                   |
+| **Benefits modal**                            |                     |                 |                 |               | Yes               |
+| **Onboarding (spotlight) and spotlight card** |                     |                 |                 |               | Yes               |
+
+### Empty state
+
+Use empty states to show when there is nothing to display in a view, for example, when a board has
+no tasks, someone clears their inbox, or a search returns no results.
+
+Read guidance on writing effective
+[empty state messages](https://atlassian.design/foundations/content/designing-messages/empty-state).
+
+<img
+	src={messagesEmptyState}
+	alt="Empty state encouraging an admin to add people to a Jira project space."
+/>
+
+An empty state can appear as a full-screen message or within panels, tables, and other containers.
+
+[Usage guidance for empty state component](https://atlassian.design/components/empty-state/usage).
+
+### Banner
+
+Use banners only for critical system-level messaging for example, warnings about loss of data or
+functionality.
+
+<img src={messagesBanner} alt="Banner message example with a red error message." />
+
+Banners appear at the top of the screen and shift the content below them.
+
+[Usage guidance for banner component](https://atlassian.design/components/banner/usage).
+
+### Flag
+
+Use flags for confirmations, alerts, and acknowledgments that require minimal user interaction.
+
+<img
+	src={messagesFlag}
+	alt="Example of a flag message with a green tick icon, the heading 'You are now connected', and the text describing a group the user is added to."
+/>
+
+Flags are event-driven messages that appear by overlaying content at the bottom left of the screen,
+emerging from the navigation sidebar.
+
+[Usage guidance for flag component](https://atlassian.design/components/flag/usage).
+
+### Section message
+
+Use section messages to alert the user of something that has happened in a specific section of the
+screen.
+
+<img
+	src={messagesSectionMessages}
+	alt="Example of a section message showing green tick icon, the heading Merged pull request, details of the pull request, and links to the hash and user name, and the time it happened."
+/>
+
+Section messages appear above the affected area (for example, work items in Jira).
+
+[Usage guidance for section message component](https://atlassian.design/components/section-message/usage).
+
+### Inline message
+
+Use inline messages to alert people to a required action or important information.
+
+<img
+	src={messagesInlineDialog}
+	alt="Example of a cursor on a yellow caution icon triggering an inline dialog message."
+/>
+
+Inline messages consist of an icon, message, and sometimes secondary text. People can interact with
+the icon, title, or secondary text to reveal the full inline message.
+
+[Usage guidance for inline message component](https://atlassian.design/components/inline-message/usage).
+
+### Modal dialog
+
+Use modal dialogs to present a short-term task the user needs to perform.
+
+<img
+	src={messagesModal}
+	alt="A modal that presents a task and a dropdown menu, with a clear action."
+/>
+
+Modal dialogs display content in a layer above the page.
+
+[Usage guidance for modal dialog component](https://atlassian.design/components/modal-dialog/usage).
+
+### Benefits modal
+
+Benefits modals explain the value of a significant new feature or experience change.
+
+Read guidance on writing effective
+[feature discovery messages](https://atlassian.design/foundations/content/designing-messages/feature-discovery).
+
+<img
+	src={messagesBenefitsModal}
+	alt="A modal for a Jira update that includes the key elements of a benefits modal."
+/>
+
+A benefits modal focuses a person's attention on a large or impactful update.
+
+[Usage guidance for benefits modal component](https://atlassian.design/components/onboarding/benefits-modal/usage).
+
+### Onboarding (spotlight) and spotlight card
+
+An onboarding spotlight introduces new features to users through focused messages or multi-step
+tours. A spotlight card is for onboarding messages that need a more flexible layout, or don't
+require a dialog.
+
+Read guidance on writing effective
+[feature discovery messages](https://atlassian.design/foundations/content/designing-messages/feature-discovery).
+
+<img
+	src={messagesOnboarding}
+	alt="An example of a spotlight pulse expanded into a spotlight component that encourages people to try the new feature."
+/>
+
+[Usage guidance for onboarding (spotlight) component](https://atlassian.design/components/onboarding/usage)
+and [spotlight card component](https://atlassian.design/components/onboarding/spotlight-card/usage).
+
+## Set the appearance (color and icon)
+
+Messages use colors and icons to help indicate content and urgency.
+
+Make sure you use the right
+[color role for your situation](https://atlassian.design/foundations/color#color-roles). For
+example, yellow typically implies a warning, while green can imply success.
+
+<img
+	src={colorRolesAndIcons}
+	alt="Icons showing different icons and colors we use in messages. Informative messages use a blue circle icon with an i inside, success is a green check icon, warning is a yelowish triangle icon with an exclamation mark, danger is a red diamond icon with an exclamation mark, and discovery or new is a purple circle with a question mark inside."
+/>
+
+Review [guidelines on using icons](https://atlassian.design/foundations/iconography) and
+[usage guidance for the icon component](https://atlassian.design/components/icon/usage).

@@ -1,0 +1,999 @@
+# Atlassian Design System - Content Standards
+
+## Table of Contents
+
+- [Accessibility Guidelines](#1-accessibility-guidelines)
+  - Text and Labels
+  - Navigation and Interaction
+  - Component-Specific Requirements
+  - Design Considerations
+- [Inclusive Language Standard](#2-inclusive-language-standard)
+  - Use Words That Reflect Our Diverse World
+  - Make Content Easy to Understand
+  - Describing People
+- [Style, Grammar, and Punctuation](#3-style-grammar-and-punctuation)
+  - Link Text Punctuation
+  - Abbreviations
+  - Contractions and Apostrophes
+  - Lists and Formatting
+  - Colons and Punctuation
+  - Pronouns and Voice
+  - Documentation and Headers
+  - Style Principles
+  - Numbers and Numerals
+  - Ellipsis (...)
+  - Active Voice
+  - Text Formatting
+  - Capitalization and Case
+- [Date and Time](#4-date-and-time)
+  - Date Formatting
+  - Time Formatting
+- [Voice and Tone Standard](#5-voice-and-tone-standard)
+  - Brand Personality
+  - Tone Adaptation by Context and User State
+- [Message Design](#6-message-design)
+  - Message Types
+  - Message Length Guidelines
+  - Visual Guidelines
+
+For component-specific guidelines, refer to our
+[Atlassian Design System Components LLMs file](https://atlassian.design/llms-components.txt) or
+child pages of [Atlassian Design System Components](https://atlassian.design/components)
+
+## Scope
+
+These Atlassian Design System (ADS) content standards are specifically designed for Atlassian's app
+(product) UI copy.
+
+They help:
+
+- Guide the creation of quality interfaces and applications
+- Provide consistent standards across all Atlassian apps
+- Ensure accessibility and inclusivity in all content
+
+There are other content standards that may apply to the content that Atlassian users are working on.
+If they can't find what they need here, you can direct them to
+[Content Design Standards](https://go.atlassian.com/cd-standards) (you will not have access to this
+page, only an Atlassian employee can access it).
+
+## Core Content Standards
+
+Primary source: [ADS Content Foundation](https://atlassian.design/foundations/content) and its child
+pages. Additional content guidance can be found in component usage documentation under
+[Components](https://atlassian.design/components).
+
+### 1. Accessibility Guidelines
+
+Source: [Accessibility Foundation](https://atlassian.design/foundations/accessibility)
+
+Core Principles:
+
+- Write content that is simple, concise, and inclusive of all people
+- Build consistent experiences and give people control
+- Consider accessibility from the start of design
+
+Guidelines:
+
+#### 1. Text and Labels
+
+- Ensure all interactive elements have visible and accessible labels
+- Avoid placeholder text and never use it for critical information
+- Provide clear error messages and feedback
+- Use sufficient color contrast for all text
+- Keep messages concise and scannable
+
+#### 2. Navigation and Interaction
+
+- Support keyboard navigation
+- Ensure screen reader compatibility
+- Provide multiple ways to dismiss or close elements
+- Match mobile keyboard to input type
+- Use semantic HTML elements and attributes where possible
+
+#### 3. Component-Specific Requirements
+
+- Forms: Include a legend for required fields
+- Tooltips: Make available to screen readers
+- Buttons: Never rely on color alone for state
+- Messages: Include icon labels for visual indicators
+- Modals: Ensure proper focus management
+
+#### 4. Design Considerations
+
+- Visual disabilities: Provide accurate alternative text and semantic HTML
+- Hearing disabilities: Provide non-auditory formats, like closed caption and transcripts
+- Limited mobility: Support keyboard navigation and large targets
+- Cognitive disabilities: Use clear, easy-to-navigate design and plain language
+- Multiple/compound disabilities: Consider intersectional needs
+- Inclusive language: Support localization and cultural inclusivity
+
+### 2. Inclusive Language Standard
+
+Source: [Inclusive Language Standard](https://atlassian.design/content/inclusive-writing)
+
+- Create content that is inclusive and accessible
+- Carefully consider word choice and terminology
+- Avoid potentially exclusionary language
+- Focus on respectful, welcoming communication
+
+Key Principles:
+
+#### 1. Use Words That Reflect Our Diverse World
+
+- Avoid assumptions and stereotypes
+- Write for all kinds of people
+- Consider how language helps or harms
+- Focus on respectful communication
+
+#### 2. Make Content Easy to Understand
+
+- Use plain language
+- Remove jargon, metaphors, and idioms
+- Use simple wording for faster task completion
+- Avoid context-specific terminology
+
+#### 3. Describing People
+
+- Use person-first language
+- Use specific terms for racial and ethnic groups
+- Don't modify terms artificially
+
+**Examples:**
+
+**Good:**
+
+- "Alternative text helps people who use assistive technology"
+- "Learn more about accessibility features"
+
+**Avoid:**
+
+- "Alternative text helps people with visual disabilities"
+- "Click here to learn about accessibility"
+
+### 3. Style, Grammar, and Punctuation
+
+Source: [Style, Grammar, and Punctuation Guidelines](https://atlassian.design/content/language-and-grammar)
+
+- Follow consistent writing conventions
+- Ensure content is clear and unambiguous
+- Write with localization in mind
+- Maintain consistent style and formatting across apps
+
+Style Guidelines:
+
+#### 1. Link Text Punctuation
+
+Source:
+[Style, Grammar, and Punctuation](https://atlassian.design/content/language-and-grammar)
+
+- Standalone links:
+  - Ensure they make sense when read in isolation
+  - Example: "Read more about truncation." or "View all projects."
+- Links in sentences:
+  - Include punctuation if part of a sentence
+  - If a link ends a sentence, include a period but don’t hyperlink it.
+  - Example: "Check out our [getting started guide]."
+
+#### 2. Abbreviations
+
+Source:
+[Style, Grammar, and Punctuation - Abbreviations](https://atlassian.design/content/language-and-grammar#abbreviations)
+
+- Don't use internal abbreviations in customer-facing copy
+- Don't use apostrophes for plural abbreviations
+- Don't use i.e., e.g., etc., or & (are not localization friendly)
+
+**Examples:**
+
+**Good:**
+
+- Jira Service Desk, jira.atlassian.com, developer.atlassian.com, for example
+
+**Avoid:**
+
+- JSD, JAC, DAC, CD's, 1980's, i.e., e.g.
+
+#### 3. Contractions and Apostrophes
+
+Source:
+[Style, Grammar, and Punctuation - Contractions](https://atlassian.design/content/language-and-grammar#contractions-(shortened-words))
+
+- Use contractions for a conversational, friendly tone
+- Use curly apostrophes in UI copy (press option+[ and option+shift+[ on Mac or Alt+0145, Alt+0146,
+  Alt+0147, Alt+0148 on Windows)
+
+**Examples:**
+
+**Good:**
+
+- Can't, don't, it's
+
+**Avoid:**
+
+- Cannot, can not, it is, it's (not curly)
+
+**Possessives:**
+
+- Use 's to show possession
+- Use 's in words that end in s and are singular.
+- Always use curly apostrophes
+
+**Examples:**
+
+**Good:**
+
+- A week’s time, Three weeks’ time, James’s work items
+
+**Avoid:**
+
+- A weeks time, Three weeks’ time, James’ work item
+
+#### 4. Lists and Formatting
+
+Source:
+[Style, Grammar, and Punctuation - Lists](https://atlassian.design/content/language-and-grammar#lists)
+
+**Lists and Formatting:**
+
+- Use lists to draw the reader's eye and make items easier to scan and follow
+- Keep lists concise and focused on key points
+- Maintain consistent formatting within each list
+- Use a parallel structure for list items
+- Break up long paragraphs with lists when appropriate
+
+**Bulleted Lists:**
+
+- Use for options or when order doesn't matter
+- Phrase items in parallel way
+- For fragmented sentences, use a lowercase letter for each item, don’t use a period at the end of the list, do use a lead-in sentence with a colon before the items.
+- For complete sentences, start an item with a capital letter, end it with a period, don’t use a lead in sentence with a colon.
+- Limit to 6 items or fewer
+
+**Numbered Lists:**
+
+- Use for tasks or when order matters
+- Capitalize first word in each item
+- End items with periods
+- Don't create lists for 2 or fewer steps
+
+#### 5. Colons and Punctuation
+Source:
+[Style, Grammar, and Punctuation - Colons](https://atlassian.design/content/language-and-grammar#colons)
+
+- Use colons to introduce lists or steps
+- Don't use colons at end of headings
+- Put punctuation inside quotation marks
+- Use curly quotes in UI copy (option+[ and option+shift+[ on Mac or Alt+0147 and Alt+0148 on
+  Windows)
+
+#### 6. Pronouns and Voice
+
+Source:
+[Style, Grammar, and Punctuation - Pronouns](https://atlassian.design/content/language-and-grammar#pronouns-(you,-your,-we))
+
+- Avoid pronouns whenever possible.
+- However, when advising a user or indicating that something in the UI is theirs, you can use ‘you’ or ’your’.
+
+**Examples:**
+
+**Good:**
+
+- "Get access to your work items here."
+- "Your projects"
+- "We couldn't load your page"
+
+**Avoid:**
+
+- "My projects"
+
+#### 7. Documentation and Headers
+
+Source:
+[Style, Grammar, and Punctuation - Headings](https://atlassian.design/content/language-and-grammar#headings-and-titles)
+
+- Use sentence case
+- Use action verbs in H1s in UI copy
+- Avoid gerunds in UI and documentation headings
+- Articles usage:
+  - Skip in buttons, UI headings, and labels
+  - Use in conversational sections
+  - Use in complex concept explanations
+
+**Examples:**
+
+**Good:**
+
+- "Create page"
+
+**Avoid:**
+
+- "Creating a page"
+
+#### 8. Style Principles
+
+Source:
+[Style, Grammar, and Punctuation](https://atlassian.design/content/language-and-grammar)
+
+1. Avoid common metaphors and figures of speech
+2. Use shorter words when possible
+3. Omit unnecessary words
+4. Use active voice
+5. Choose everyday words over jargon
+
+#### 9. Numbers and Numerals
+
+Source:
+[Style, Grammar, and Punctuation - Numbers](https://atlassian.design/content/language-and-grammar#numbers)
+
+Use digits rather than words in most cases
+
+**Exceptions:**
+
+- If a number starts a sentence, write it out
+- In common expressions, write out the number (e.g., "one thing after another")
+- For long-form or formal content, write out numbers one to nine
+- Write out 'zero' and 'one' if they could be confused with letters L, I, or O
+
+**Number Ranges:**
+
+- Use 'to' instead of hyphens (except if space is limited)
+- Example: "View rows 1 to 4" (not "1-4")
+
+**Numbers 'out of':**
+
+- Use 'of' rather than forward slash (/)
+- Example: "6 of 10 users" (not "6/10 users")
+- Exception: Use slash if space is limited
+
+**Numbers from 1,000:**
+
+- Use comma to show thousands
+- Examples: 4,500; 10,000; 1,250,000
+
+#### 10. Ellipsis (...)
+
+Source:
+[Style, Grammar, and Punctuation - Ellipsis](https://atlassian.design/content/language-and-grammar#ellipses-(-…-))
+
+- Use in UI elements to indicate:
+  - An action will need additional input or configuration
+  - A dialog or new window will open
+  - More content is available but truncated
+
+**Text Truncation:**
+
+- Use for truncated text that has a way to view the full content
+- Ensure the full text is available via tooltip or expansion
+- Don't use for decorative purposes
+- Don't use in error messages or system notifications
+
+**More Actions (meatballs):**
+
+- The three dot icon is called "More actions"
+- For terminology and naming conventions, refer to [go/vocab](https://go.atlassian.com/vocab)
+  (available only to Atlassian employees)
+
+**Loading States:**
+
+- Don't use ellipsis for loading states
+- Use proper loading indicators instead
+
+**Formatting:**
+
+- Use three dots (...) without spaces
+- No space between last word and ellipsis
+
+**When Not to Use:**
+
+- Simple actions that execute immediately
+- Confirmations that use a modal dialog
+- Navigation links
+- Menu items that expand/collapse
+- Loading indicators or progress states
+
+#### 11. Active Voice
+
+Source:
+[Style, Grammar, and Punctuation - Active Voice](https://atlassian.design/content/language-and-grammar#active-voice)
+
+**Use active voice primarily**
+
+**Examples:**
+
+**Good:**
+
+- "Administrators control user access"
+
+**Avoid:**
+
+- "User access is controlled by administrators"
+
+#### 12. Text Formatting
+
+Sources:
+
+- [Style, Grammar, and Punctuation - Bold](https://atlassian.design/content/language-and-grammar#bold)
+- [Style, Grammar, and Punctuation - Italics](https://atlassian.design/content/language-and-grammar#italics)
+- [Style, Grammar, and Punctuation - Monospaced Text](https://atlassian.design/content/language-and-grammar#monospaced-text)
+- [Style, Grammar, and Punctuation - UI Elements](https://atlassian.design/content/language-and-grammar#ui-elements)
+
+**Bold:**
+
+- Use to highlight key phrases and UI elements
+
+**Examples:**
+
+**Good:**
+
+- Go to **General Configuration** then **User Macros**
+
+**Avoid:**
+
+- Go to the **settings page and select Configuration**
+
+**Italics:**
+
+**Use italics for:**
+
+- Citations
+- UI elements that might change, like a field name or user input
+- Places where you would normally use bold but the UI doesn't support it
+
+**Don't use italics if the item is also a hyperlink.**
+
+**Examples:**
+
+**Good:**
+
+- According to the 2008 _IT Unplugged_ report, IT is really unplugged.
+
+**Avoid:**
+
+- To learn more, see the _2008 IT Unplugged report_ (Don't use italics for hyperlinks)
+- In your project, select _Settings_then_Request types_ (Use bold for static UI elements)
+- A JIRA workflow is the set of _statuses_ and _transitions_ that a work item goes through during
+  its lifecycle.
+
+**Monospaced Text:**
+
+**Use monospaced font for names of a file or directory.** It is mostly used in administrator and
+developer docs.
+
+**Example:** The location of the Home directory is stored in a configuration file called
+`confluence-init.properties` which is located in the `confluence/WEB-INF/classes directory` in your
+Confluence Installation directory.
+
+#### 13. Capitalization and Case
+
+Sources:
+
+- [Style, Grammar, and Punctuation - Capitalization](https://atlassian.design/content/language-and-grammar#capitalization)
+- [Style, Grammar, and Punctuation - Headings and titles](https://atlassian.design/content/language-and-grammar#headings-and-titles)
+
+- Use sentence case as the default for all UI text:
+  - Titles and headings
+  - Buttons and labels
+  - Menu items
+  - Messages and notifications
+  - Form fields and placeholders
+  - Tooltips
+  - Navigation items
+
+**Sentence Case Rules:**
+
+- Capitalize the first word
+- Capitalize proper nouns and app names
+- Keep everything else lowercase
+
+**Examples:**
+
+**Good:**
+
+- "Create new project"
+- "Export to PDF"
+- "Connect to Jira"
+- "Your recent items"
+
+**Avoid:**
+
+- "Create New Project"
+- "Connect To Jira"
+- "Your Recent Items"
+
+**Exceptions:**
+
+- Registered trademarks (follow their official capitalization)
+- Acronyms (keep all caps)
+- Code references (maintain exact case)
+- User-generated content (preserve original case)
+
+#### 14. Quotation Marks
+
+Sources:
+
+- [Style, Grammar, and Punctuation - Quotation Marks](https://atlassian.design/content/language-and-grammar#quotation-marks-(‘’-|-“”))
+
+- In UI, use single curly quotes, unless you're writing in code or there is a semantic
+reason to use straight quotes.
+- In body copy and long-form content, use double quotes for speech and direct quotes and single quotes to draw attention to a word.
+- Punctuation goes inside the quotation marks.
+
+**Creating Curly Quotation Marks:**
+
+- Mac: Use `option+[` for opening and `option+shift+[` for closing quotation marks
+- Windows: Use `Alt+0147` for opening and `Alt+0148` for closing quotation marks
+
+**Examples:**
+
+**Good:**
+
+- "We have big things planned for the coming year," said Mike and Scott.
+- They tried to avoid talking about the ‘big’ secret.
+
+**Avoid:**
+
+- Go to "Settings". (Use bold instead: Got to **Settings**)
+- The new manager said, "There is a need for better processes". (Punctuation should go inside: "There is a need for better processes.")
+
+**When NOT to Use Quotation Marks:**
+
+- For UI elements → Use **bold** instead
+- For page titles → Use **bold** instead
+- For other objects → Use **bold** instead
+
+**Related Guidelines:**
+
+- See also: Contractions and apostrophes (for curly apostrophe creation)
+
+#### 15. Dashes
+
+Source:
+[Style, Grammar, and Punctuation - Dashes](https://atlassian.design/content/language-and-grammar#dashes-(—)-and-hyphens-(-))
+
+- Use dashes in UI content sparingly. If using, use a spaced em dash.
+- In long-form content, use them sparingly to show an abrupt change in a sentence
+- If possible, rewrite the sentence or make 2 sentences to avoid a dash. Clear, concise sentences are better for readability and accessibility.
+- **Use spaces on either side of an em dash.** Use `option-shift-hyphen` to make an em dash on a Mac.
+- Don't use a dash or hyphen for ranges of numbers. Use 'to' instead.
+
+**Examples:**
+
+**Good:**
+
+- The newly released Jira 6 — our best Jira yet — will be available next week.
+- He said his friends — Mike, Charlie, and Scott — would be arriving late. They should arrive
+  anywhere from 2 to 4 p.m.
+
+**Avoid:**
+
+- The newly released Jira 6—our best Jira yet—will be available next week. (No spaces)
+- He said his friends - Mike, Charlie, and Scott - would be arriving late. They should arrive
+  anywhere from 2–4 pm. (Wrong dash type, hyphen for range)
+
+#### 16. Exclamation Marks
+
+Source:
+[Style, Grammar, and Punctuation - Exclamation Marks](https://atlassian.design/content/language-and-grammar#exclamation-marks-(!))
+
+- Avoid exclamation marks in UI copy and minimize their use in product marketing copy.
+- They can be considered for exciting or new things, but ask yourself if it’s really that exciting or if one is needed. Don’t use more than one exclamation mark per page.
+
+**Avoid for:**
+
+- Regular instructions or information
+- Error messages or warnings
+- Routine confirmations
+
+#### 17. Gender-Inclusive Language
+
+Source:
+[Style, Grammar, and Punctuation - Gender](https://atlassian.design/content/language-and-grammar#gender-(he,-she,-they))
+
+**When possible, avoid gendered pronouns.** If you can't, then _they_ or _their_ is preferable to
+_his or her_ or _he or she_.
+
+**Examples:**
+
+**Good:**
+
+- Ask your admin to add you.
+- Ask your admin if they can add you.
+- Add permissions to their account.
+
+**Avoid:**
+
+- Ask your admin if he or she can add you.
+- Add permissions to her account.
+
+#### 18. Hyphens
+
+Source:
+[Style, Grammar, and Punctuation - Hyphens](https://atlassian.design/content/language-and-grammar#dashes-(—)-and-hyphens-(-))
+
+**Use hyphens to form a single idea from multiple words.** In general, only use hyphens when they
+help to avoid confusion or ambiguity.
+
+**Compound Modifiers:** If a noun is described by 2 or more words, use a hyphen to join those words together so they act as a compound modifier or adjective. The exceptions are with the word "very" or any adverbs ending in -ly.
+
+**Prefixes:** Most prefixes don't require hyphens to be understood. Only use a hyphen if not doing
+so causes confusion or ambiguity.
+
+**Examples:**
+
+**Good:**
+
+- Fast-moving trucks, ice-cold drinks, dog-friendly hotels. The hotel is dog friendly.
+- Autocorrect, coworker, and preexisting are all fine without a hyphen.
+- Recreating in a park vs. re-creating a page. I could resign from my job one day, then re-sign my
+  contract the next.
+
+**Avoid:**
+
+- Very-interesting topics, poorly-worded sentences. (Don't hyphenate with "very" or "-ly" adverbs)
+- Nonlife-threatening (creates nonsense word "nonlife")
+
+#### 19. Oxford Comma
+
+Source:
+[Style, Grammar, and Punctuation - Commas](https://atlassian.design/content/language-and-grammar#commas-(,))
+
+**Use the Oxford or serial comma** to offset the final item in a list.
+
+**Examples:**
+
+**Good:**
+
+- We use sentence case in all titles, headings, menu items, and buttons.
+
+**Avoid:**
+
+- We use sentence case in all titles, headings, menu items and buttons.
+
+#### 20. Periods (Full Stops)
+
+Source:
+[Style, Grammar, and Punctuation - Periods](https://atlassian.design/content/language-and-grammar#periods-(.))
+
+**Use a period at the end of complete sentences,** including in the description text of apps,
+messages, and notifications. Add only one space after a period.
+
+**This includes sentences where the link is part of the sentence.** Don't hyperlink the period.
+
+**Don't use periods in:**
+
+- Headers, titles
+- Tooltips
+- Field descriptions
+- Menu names
+- Even if they are full sentences
+
+**Bulleted Lists:** Only use periods in a bulleted list if the list item is a complete sentence.
+Don't add a period at the end of a list of fragments.
+
+**Examples:**
+
+**Good:**
+
+- Atlassian's work is guided by 5 core values.
+
+**Avoid:**
+
+- Atlassian's work is guided by 5 core values (Missing period)
+
+#### 21. UI Elements
+
+Source: [Style, Grammar, and Punctuation - UI Elements](https://atlassian.design/content/language-and-grammar#ui-elements)
+
+**Guidelines for referencing UI elements in text:**
+
+- Use sentence case, even if the UI element does not
+- Use bold to emphasize the UI element in a step.
+- If the UI element has an icon, use both the name and the icon
+
+**Example:** Go to **More •••** then **Link work**.
+
+#### 22. US English
+
+Source:
+[Style, Grammar, and Punctuation - Spelling Words](https://atlassian.design/content/language-and-grammar#spelling-words)
+
+**We write with US English spelling and punctuation,** but our Australian roots are still part of
+our personality. Communications from Australians can use Australian English such as _colour_,
+_optimise, theatre_.
+
+**Examples:**
+
+- Aussie PMs writing JAC comments to customers can use Australian English
+- Developers should code in US English
+
+**Good:**
+
+- color, organization, labeled, friend
+
+**Avoid:**
+
+- colour, organisation, labelled, mate
+
+### 4. Date and Time
+
+Source: [Date and Time Guideline](https://atlassian.design/content/date-time)
+
+- Use consistent date and time formats
+- Consider international audiences
+- Be clear and unambiguous
+- Follow localization best practices
+
+#### Date Formatting:
+
+**1. Abbreviations**
+
+**Days:**
+
+- Mon, Tue, Wed, Thu, Fri, Sat, Sun
+- Don't use single letters (M, T, W)
+
+**Months:**
+
+- Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec
+- Keep "May" as is
+- Don't use single letters
+
+**2. American English Format**
+
+Long Date:
+
+- Monday, January 8, 2020
+- Use numerals for day
+- Spell out month and day
+- Use four-digit year
+- Don't use ordinals (1st, 2nd, 3rd)
+
+Medium Date:
+
+- January 8, 2020
+- Spell out month
+- Use numerals for day and year
+
+Short Date:
+
+- Jan 8, 2020
+- Use month abbreviation
+- Use numerals for day and year
+
+**3. Numerical Dates**
+
+- Avoid if possible due to regional differences
+- If necessary, use ISO 8601: YYYY-MM-DD
+- Example: 2021-05-23
+- Use hyphens to separate elements
+
+#### Time Formatting:
+
+**1. Standard Time**
+
+- Use numbers for clarity
+- Format: 3:30 p.m. (space before a.m./p.m.)
+- Omit :00 for exact hours (8 a.m., not 8:00 a.m.)
+- Use periods in a.m. and p.m.
+- For ranges in same period: 6:30-10 p.m.
+- For ranges crossing periods: 10 a.m.-2 p.m.
+
+**2. Special Times**
+
+- Use 'noon', 'midday', or 'midnight' instead of 12 a.m./p.m.
+- 24-hour format: 00:00 to 23:59
+- Use colons to separate hours:minutes:seconds
+- Example: 13:45:30
+
+**3. Relative Time**
+
+**Past:**
+
+- Just now (few seconds)
+- X minutes ago (within 59 minutes)
+- X hours ago
+- Yesterday
+- X days ago (2-7 days)
+- Date stamp (>7 days)
+
+**Future:**
+
+- Shortly (few seconds)
+- In X minutes
+- In X hours
+- Tomorrow
+- In X days
+- Date stamp (>7 days)
+
+### 5. Voice and Tone Standard
+
+Source: [Voice and Tone Standard](https://atlassian.design/content/voice-tone)
+
+Core Voice Characteristics:
+
+- Clear and direct
+- Professional yet approachable
+- Helpful and empowering
+- Consistent across communications
+- Localization-friendly
+
+#### Brand Personality:
+
+**1. Bold**
+
+- Motivate teams to do their best work
+- Offer best practices and direction
+- Give accurate information for educated decisions
+- Understand user struggles and desired outcomes
+
+**2. Optimistic**
+
+- Focus on key points that help users now
+- Build confidence in apps
+- Create seamless experiences
+- Keep teams informed of opportunities
+
+**3. Practical, with a Wink**
+
+- Be direct and concise
+- Offer help at the right moment
+- Write clear, accurate text
+- Make content universally understandable
+- Add appropriate moments of delight
+
+#### Tone Adaptation by Context and User State:
+
+**1. New Users and Learning**
+
+- When: New users, evaluators, introducing concepts
+- User State: Apprehensive, confused, learning
+- Approach:
+  - Be more prescriptive and clear
+  - Focus on building trust
+  - Explain benefits thoroughly
+  - Use supportive, encouraging language
+- Examples:
+  - "Welcome! Let's set up your workspace together."
+  - "Here's what you need to know about projects."
+
+**2. Power Users and Productivity**
+
+- When: Power users, admins, everyday tasks
+- User State: Confident, interested, focused
+- Approach:
+  - Be direct and efficient
+  - Focus on advanced capabilities
+  - Highlight shortcuts and optimizations
+  - Use technical language appropriately
+- Examples:
+  - "Configure advanced permissions in bulk."
+  - "Keyboard shortcut: ⌘ + K to search."
+
+**3. Problem Resolution**
+
+- When: Errors, warnings, troubleshooting
+- User State: Frustrated, stressed, blocked
+- Approach:
+  - Be clear and calm
+  - Focus on solutions
+  - Show empathy without being overly apologetic
+  - Maintain professionalism
+- Examples:
+  - "Your changes couldn't be saved. Try these steps to resolve it."
+  - "Warning: This action will permanently delete the item."
+
+**4. Success and Achievement**
+
+- When: Task completion, milestones, new features
+- User State: Successful, joyful, proud
+- Approach:
+  - Be celebratory but not overwhelming
+  - Acknowledge user accomplishment
+  - Keep focus on next steps
+  - Match celebration to achievement level
+- Examples:
+  - "Great work! Your project is ready to share."
+  - "You've completed all onboarding tasks."
+
+**5. Educational Content**
+
+- When: Documentation, help articles, tutorials
+- User State: Learning, exploring, problem-solving
+- Approach:
+  - Be thorough but scannable
+  - Focus on task completion
+  - Use step-by-step guidance
+  - Include examples where helpful
+- Examples:
+  - "Follow these steps to customize your dashboard."
+  - "Learn how to set up your first project."
+
+### 6. Message Design
+
+Source: [Message Design Guideline](https://atlassian.design/content/designing-messages)
+
+#### 1. Information Messages
+
+Source:
+[Writing Info Messages](https://atlassian.design/content/designing-messages/writing-an-info-message)
+
+- Provides additional information to motivate people
+- Components: Empty state, Banner, Flag, Section message, Inline message, Modal dialog, Benefits
+  modal, Onboarding spotlight
+- Use blue circle icon with 'i' inside
+- Appropriate for providing context and guidance
+
+#### 2. Success Messages
+
+Source:
+[Writing Success Messages](https://atlassian.design/content/designing-messages/writing-a-success-message)
+
+- Celebrates user accomplishments
+- Components: Empty state, Banner, Flag, Section message, Inline message, Modal dialog
+- Use green check icon
+- Confirm completion of tasks or actions
+
+#### 3. Warning Messages
+
+Source:
+[Writing Warning Messages](https://atlassian.design/content/designing-messages/writing-a-warning-message)
+
+- Alerts about potential data loss or errors
+- Components: Empty state, Banner, Flag, Section message, Inline message
+- Use yellow triangle icon with exclamation mark
+- Give advance notice of important changes
+
+#### 4. Error Messages
+
+Source:
+[Writing Error Messages](https://atlassian.design/content/designing-messages/writing-error-messages)
+
+- Alerts users of problems and provides next steps
+- Components: Flag, Inline message
+- Use red diamond icon with exclamation mark
+- Must include clear resolution steps
+
+#### 5. Empty State Messages
+
+Source: [Empty State Messages](https://atlassian.design/content/designing-messages/empty-state)
+
+- Explains why content is not present
+- Provides clear next steps or actions
+- Keep tone helpful and encouraging
+- Match tone to context:
+  - First-time view: Inspirational, motivating
+  - Task completion: Celebratory
+  - No results: Neutral with clear next steps
+
+**Examples:**
+
+- Good: "No projects yet. Create your first project to get started."
+- Avoid: "Nothing here", "No data found"
+
+#### 6. Feature Discovery
+
+Source:
+[Feature Discovery Messages](https://atlassian.design/content/designing-messages/feature-discovery)
+
+- Introduces new features or experience changes
+- Components: Onboarding spotlight, Spotlight card
+- Use purple circle icon with question mark
+- Focus on value and benefits
+
+#### Message Length Guidelines:
+
+- General messages: Maximum 5 lines
+- Onboarding spotlights: Maximum 2 lines
+- Error messages: Keep concise, focus on solution
+- Success messages: Brief confirmation
+- Warning messages: Clear but thorough explanation
+- Information messages: Concise, scannable content
+- Empty states: Clear explanation with next steps
+
+#### Visual Guidelines:
+
+- Use consistent color roles for message types
+- Include appropriate icons to indicate content and urgency
+- Maintain consistent visual hierarchy
+- Ensure adequate contrast for accessibility
+- Follow component-specific layout guidelines

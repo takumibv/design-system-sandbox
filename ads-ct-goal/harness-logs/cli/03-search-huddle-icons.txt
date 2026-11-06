@@ -1,0 +1,19 @@
+$ npx ads-cli search headphones call phone video microphone --type icon --limit 3
+Results (5):
+
+HeadphonesIcon  @atlaskit/icon/core/headphones
+   ADS  ·  icon  ·  Known uses: music, audio.
+   → npx @atlaskit/ads-cli icon HeadphonesIcon
+VideoStrikethroughIcon  @atlaskit/icon-lab/core/video-strikethrough
+   ADS  ·  icon  ·  Reserved for no video input
+   → npx @atlaskit/ads-cli icon VideoStrikethroughIcon
+EndCallIcon  @atlaskit/icon-lab/core/end-call
+   ADS  ·  icon  ·  Known uses: Hanging up voice call in CSM
+   → npx @atlaskit/ads-cli icon EndCallIcon
+PhoneIcon  @atlaskit/icon/core/phone
+   ADS  ·  icon  ·  Multi purpose - Known uses: call us, phone number input.
+   → npx @atlaskit/ads-cli icon PhoneIcon
+MicrophoneIcon  @atlaskit/icon/core/microphone
+   ADS  ·  icon  ·  Multi purpose - Known uses: record sounds in Trello.
+   → npx @atlaskit/ads-cli icon MicrophoneIcon
+# exit=0

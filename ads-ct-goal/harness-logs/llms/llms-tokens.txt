@@ -1,0 +1,377 @@
+# Atlassian Design System Tokens
+Design tokens are the single source of truth to name and store design decisions, including colors, typography, spacing, and other design primitives. Tokens come from the `@atlaskit/tokens` package, typically meaning the `token()` function call. See: https://atlassian.design/components/tokens
+
+**You must ONLY use tokens listed in this document, do not make up values.**
+
+Example:
+```tsx
+import { css } from '@atlaskit/css';
+import { token } from '@atlaskit/tokens';
+
+const styles = css({
+	backgroundColor: token('elevation.surface'),
+	color: token('color.text'),
+});
+```
+
+## Tokens list
+Please note all values below are examples and may not match the current theme applied to your user.
+
+### Colors
+
+#### Background Colors
+Background colors define the base layer of components and surfaces:
+
+| Token | Light Value | Dark Value | Usage |
+|-|-|-|-|
+| `color.background.brand.bold` | #0C66E4 | #1D7AFC | Brand elements with emphasis |
+| `color.background.brand.bold.hovered` | #0055CC | #388BFF | Hover state of brand.bold |
+| `color.background.brand.bold.pressed` | #09326C | #1D7AFC | Pressed state of brand.bold |
+| `color.background.brand.boldest` | #0C66E4 | #1D7AFC | Brand elements that need to stand out |
+| `color.background.brand.boldest.hovered` | #0055CC | #388BFF | Hover state of brand.boldest |
+| `color.background.brand.boldest.pressed` | #09326C | #1D7AFC | Pressed state of brand.boldest |
+| `color.background.brand.subtlest` | #E9F2FF | #0C66E4 | Brand elements with less emphasis |
+| `color.background.brand.subtlest.hovered` | #CCE0FF | #1D7AFC | Hover state of brand.subtlest |
+| `color.background.brand.subtlest.pressed` | #85B8FF | #1D7AFC | Pressed state of brand.subtlest |
+| `color.background.danger` | #FFEDEB | #4F1C16 | Critical information backgrounds |
+| `color.background.danger.hovered` | #FFD5D2 | #5D1F1A | Hover state of danger |
+| `color.background.danger.pressed` | #FFC2BE | #6D231B | Pressed state of danger |
+| `color.background.danger.bold` | #CA3521 | #FF9C8F | Vibrant danger backgrounds |
+| `color.background.danger.bold.hovered` | #AE2A19 | #FFB3A8 | Hover state of danger.bold |
+| `color.background.danger.bold.pressed` | #601E16 | #FF9C8F | Pressed state of danger.bold |
+| `color.background.discovery` | #F3F0FF | #2B2451 | Change/new feature backgrounds |
+| `color.background.discovery.hovered` | #DFD8FD | #352C63 | Hover state of discovery |
+| `color.background.discovery.pressed` | #C0B6F2 | #3D3274 | Pressed state of discovery |
+| `color.background.discovery.bold` | #5E4DB2 | #B8ACF6 | Vibrant discovery backgrounds |
+| `color.background.discovery.bold.hovered` | #4C3B9C | #C7BFFF | Hover state of discovery.bold |
+| `color.background.discovery.bold.pressed` | #352C63 | #B8ACF6 | Pressed state of discovery.bold |
+| `color.background.information` | #E9F2FF | #1C2B41 | Information/in-progress backgrounds |
+| `color.background.information.hovered` | #CCE0FF | #22324B | Hover state of information |
+| `color.background.information.pressed` | #85B8FF | #2B3E5C | Pressed state of information |
+| `color.background.information.bold` | #0C66E4 | #85B8FF | Vibrant information backgrounds |
+| `color.background.information.bold.hovered` | #0055CC | #99C7FF | Hover state of information.bold |
+| `color.background.information.bold.pressed` | #09326C | #85B8FF | Pressed state of information.bold |
+| `color.background.input` | #FFFFFF | #1D2125 | Form element backgrounds |
+| `color.background.input.hovered` | #F7F8F9 | #2C3338 | Hover state of input |
+| `color.background.input.pressed` | #F7F8F9 | #2C3338 | Pressed state of input |
+| `color.background.neutral` | #F7F8F9 | #2C3338 | Default neutral backgrounds |
+| `color.background.neutral.hovered` | #F1F2F4 | #38414A | Hover state of neutral |
+| `color.background.neutral.pressed` | #F1F2F4 | #38414A | Pressed state of neutral |
+| `color.background.neutral.subtle` | #FFFFFF | #1D2125 | Subtle neutral backgrounds |
+| `color.background.neutral.subtle.hovered` | #F7F8F9 | #2C3338 | Hover state of neutral.subtle |
+| `color.background.neutral.subtle.pressed` | #F7F8F9 | #2C3338 | Pressed state of neutral.subtle |
+| `color.background.neutral.bold` | #091E420F | #A1BDD914 | Vibrant neutral backgrounds |
+| `color.background.neutral.bold.hovered` | #091E4224 | #A1BDD924 | Hover state of neutral.bold |
+| `color.background.neutral.bold.pressed` | #091E4236 | #A1BDD936 | Pressed state of neutral.bold |
+| `color.background.selected` | #E9F2FF | #092957 | Selected element backgrounds |
+| `color.background.selected.hovered` | #CCE0FF | #0C3B85 | Hover state of selected |
+| `color.background.selected.pressed` | #85B8FF | #0C3B85 | Pressed state of selected |
+| `color.background.selected.bold` | #0C66E4 | #388BFF | Vibrant selected backgrounds |
+| `color.background.selected.bold.hovered` | #0055CC | #579DFF | Hover state of selected.bold |
+| `color.background.selected.bold.pressed` | #09326C | #388BFF | Pressed state of selected.bold |
+| `color.background.success` | #DFFCF0 | #164B35 | Success message backgrounds |
+| `color.background.success.hovered` | #BAF3DB | #1C5339 | Hover state of success |
+| `color.background.success.pressed` | #7EE2B8 | #216E4E | Pressed state of success |
+| `color.background.success.bold` | #1F845A | #4BCE97 | Vibrant success backgrounds |
+| `color.background.success.bold.hovered` | #216E4E | #6BE6B8 | Hover state of success.bold |
+| `color.background.success.bold.pressed` | #164B35 | #4BCE97 | Pressed state of success.bold |
+| `color.background.warning` | #FFF7D6 | #533F04 | Warning message backgrounds |
+| `color.background.warning.hovered` | #F8E6A0 | #624F0A | Hover state of warning |
+| `color.background.warning.pressed` | #F5CD47 | #7F5F01 | Pressed state of warning |
+| `color.background.warning.bold` | #B38600 | #E2B203 | Vibrant warning backgrounds |
+| `color.background.warning.bold.hovered` | #946F00 | #F5CD47 | Hover state of warning.bold |
+| `color.background.warning.bold.pressed` | #533F04 | #E2B203 | Pressed state of warning.bold |
+
+#### Text Colors
+Text colors ensure readability and hierarchy in content:
+
+| Token | Light Value | Dark Value | Usage |
+|-|-|-|-|
+| `color.text` | #172B4D | #C7D1DB | Primary text |
+| `color.text.subtle` | #44546F | #9FADBC | Secondary text |
+| `color.text.subtlest` | #626F86 | #738496 | Tertiary text |
+| `color.text.disabled` | #091E424F | #7384964F | Disabled text |
+| `color.text.inverse` | #FFFFFF | #1D2125 | Text on bold backgrounds |
+| `color.text.selected` | #0C66E4 | #85B8FF | Selected text |
+| `color.text.brand` | #0C66E4 | #85B8FF | Brand text |
+| `color.text.danger` | #CA3521 | #FF9C8F | Critical text |
+| `color.text.warning` | #B38600 | #E2B203 | Warning text |
+| `color.text.warning.inverse` | #172B4D | #C7D1DB | Warning text on bold backgrounds |
+| `color.text.success` | #1F845A | #4BCE97 | Success text |
+| `color.text.discovery` | #5E4DB2 | #B8ACF6 | Discovery text |
+| `color.text.information` | #0C66E4 | #85B8FF | Information text |
+
+#### Icon Colors
+Icon colors maintain visual consistency with text colors:
+
+| Token | Light Value | Dark Value | Usage |
+|-|-|-|-|
+| `color.icon` | #44546F | #9FADBC | Default icons |
+| `color.icon.subtle` | #626F86 | #738496 | Subtle icons |
+| `color.icon.subtlest` | #626F86 | #738496 | Most subtle icons |
+| `color.icon.inverse` | #FFFFFF | #1D2125 | Icons on bold backgrounds |
+| `color.icon.disabled` | #091E424F | #7384964F | Disabled icons |
+| `color.icon.selected` | #0C66E4 | #85B8FF | Selected icons |
+| `color.icon.brand` | #0C66E4 | #85B8FF | Brand icons |
+| `color.icon.danger` | #CA3521 | #FF9C8F | Critical icons |
+| `color.icon.warning` | #B38600 | #E2B203 | Warning icons |
+| `color.icon.warning.inverse` | #172B4D | #C7D1DB | Warning icons on bold backgrounds |
+| `color.icon.success` | #1F845A | #4BCE97 | Success icons |
+| `color.icon.discovery` | #5E4DB2 | #B8ACF6 | Discovery icons |
+| `color.icon.information` | #0C66E4 | #85B8FF | Information icons |
+
+#### Border Colors
+Border colors define component boundaries and states:
+
+| Token | Light Value | Dark Value | Usage |
+|-|-|-|-|
+| `color.border` | #091E4224 | #A1BDD914 | Default borders |
+| `color.border.bold` | #091E4240 | #A1BDD940 | Bold borders |
+| `color.border.brand` | #0C66E4 | #85B8FF | Brand borders |
+| `color.border.danger` | #CA3521 | #FF9C8F | Critical borders |
+| `color.border.disabled` | #091E420F | #A1BDD908 | Disabled borders |
+| `color.border.discovery` | #5E4DB2 | #B8ACF6 | Discovery borders |
+| `color.border.focused` | #0C66E4 | #85B8FF | Focused borders |
+| `color.border.information` | #0C66E4 | #85B8FF | Information borders |
+| `color.border.input` | #091E4224 | #A1BDD914 | Input borders |
+| `color.border.inverse` | #FFFFFF | #1D2125 | Borders on bold backgrounds |
+| `color.border.selected` | #0C66E4 | #85B8FF | Selected borders |
+| `color.border.success` | #1F845A | #4BCE97 | Success borders |
+| `color.border.warning` | #B38600 | #E2B203 | Warning borders |
+
+### Typography
+
+Please prefer using the `Text` primitive or `Heading` component directly.
+
+#### Font
+Font tokens control text appearance, size, and weight. Note: There are no font size tokens; font size can only be modified via the `font` shorthand property.
+
+```tsx
+const styles = css({
+	font: token('font.body.small'),
+});
+```
+
+| Token | Usage |
+|-|-|
+| `font.heading.xxlarge` | Brand promotions |
+| `font.heading.xlarge` | Brand promotions |
+| `font.heading.large` | Page titles |
+| `font.heading.medium` | Component headers |
+| `font.heading.small` | Small component headers |
+| `font.heading.xsmall` | Small component headers |
+| `font.heading.xxsmall` | Fine print headers |
+| `font.body.large` | Long-form text |
+| `font.body` | Default text |
+| `font.body.small` | Secondary content |
+| `font.code` | Code representation |
+
+#### Font Weights
+Font weights control text emphasis:
+
+| Token | Value | Usage |
+|-|-|-|
+| `font.weight.regular` | 400 | Default text |
+| `font.weight.medium` | 500 | Text with icons |
+| `font.weight.semibold` | 600 | Emphasized text |
+| `font.weight.bold` | 700 | Strong emphasis |
+
+#### Font Family
+Font family tokens define typefaces:
+
+| Token | Usage |
+|-|-|
+| `font.family.heading` | UI headings |
+| `font.family.body` | UI body text |
+| `font.family.code` | Code text |
+| `font.family.brand.heading` | Brand headings |
+| `font.family.brand.body` | Brand body text |
+
+### Spacing
+Spacing tokens maintain consistent spacing. Base is `space.100`
+
+| Token | Value (px) | Value (rem) | Usage |
+|-|-|-|-|
+| `space.0` | 0px | 0rem | Reset spacing |
+| `space.025` | 2px | 0.125rem | Compact UI |
+| `space.050` | 4px | 0.25rem | Compact UI |
+| `space.075` | 6px | 0.375rem | Compact UI |
+| `space.100` | 8px | 0.5rem | Compact UI |
+| `space.150` | 12px | 0.75rem | Less dense UI |
+| `space.200` | 16px | 1rem | Less dense UI |
+| `space.250` | 20px | 1.25rem | Less dense UI |
+| `space.300` | 24px | 1.5rem | Less dense UI |
+| `space.400` | 32px | 2rem | Large UI |
+| `space.500` | 40px | 2.5rem | Large UI |
+| `space.600` | 48px | 3rem | Large UI |
+| `space.800` | 64px | 4rem | Largest UI |
+| `space.1000` | 80px | 5rem | Largest UI |
+
+#### Negative Spacing
+Negative spacing tokens negate parent whitespace:
+
+| Token | Value (px) | Value (rem) | Usage |
+|-|-|-|-|
+| `space.negative.025` | -2px | -0.125rem | Small overlap |
+| `space.negative.050` | -4px | -0.25rem | Small overlap |
+| `space.negative.075` | -6px | -0.375rem | Small overlap |
+| `space.negative.100` | -8px | -0.5rem | Small overlap |
+| `space.negative.150` | -12px | -0.75rem | Large overlap |
+| `space.negative.200` | -16px | -1rem | Large overlap |
+| `space.negative.250` | -20px | -1.25rem | Large overlap |
+| `space.negative.300` | -24px | -1.5rem | Large overlap |
+| `space.negative.400` | -32px | -2rem | Largest overlap |
+
+### Border Radius
+Border radius tokens define corner curvature. Base is `radius.small`
+
+| Token | Value (px) | Value (rem) | Usage |
+|-|-|-|-|
+| `radius.xsmall` | 2px  | 0.125rem | Small containers such as badges |
+| `radius.small` | 4px | 0.25rem | Default radius, labels |
+| `radius.medium` | 6px | 0.375rem | Buttons and inputs |
+| `radius.large` | 8px | 0.5rem | Cards/small containers |
+| `radius.xlarge` | 12px | 0.75rem | Modals/large containers |
+| `radius.xxlarge` | 16px | 1rem | Largest containers (sparingly) |
+| `radius.full` | 9999px | 624.9375rem | Circular elements |
+
+### Border Width
+Border width tokens define border thickness, often used with `color.border` tokens. Base is `border.width`
+
+```tsx
+const styles = css({
+	border: `${token('border.width')} solid ${token('color.border')}`,
+});
+```
+
+| Token | Value (px) | Value (rem) | Usage |
+|-|-|-|-|
+| `border.width` | 1px | 0.0625rem | Default width |
+| `border.width.selected` | 2px | 0.125rem | Selected elements |
+| `border.width.focused` | 2px | 0.125rem | Focus states |
+
+### Elevation
+
+#### Surface Elevation
+Surface elevation tokens define background layers:
+
+| Token | Light Value | Dark Value | Usage |
+|-|-|-|-|
+| `elevation.surface` | #FFFFFF | #1D2125 | Primary background |
+| `elevation.surface.hovered` | #F7F8F9 | #2C3338 | Hover state |
+| `elevation.surface.pressed` | #F7F8F9 | #2C3338 | Pressed state |
+| `elevation.surface.overlay` | #FFFFFF | #1D2125 | Overlay elements |
+| `elevation.surface.overlay.hovered` | #F7F8F9 | #2C3338 | Overlay hover state |
+| `elevation.surface.overlay.pressed` | #F7F8F9 | #2C3338 | Overlay pressed state |
+| `elevation.surface.raised` | #FFFFFF | #1D2125 | Movable elements |
+| `elevation.surface.raised.hovered` | #F7F8F9 | #2C3338 | Raised hover state |
+| `elevation.surface.raised.pressed` | #F7F8F9 | #2C3338 | Raised pressed state |
+| `elevation.surface.sunken` | #F7F8F9 | #2C3338 | Grouped elements |
+
+#### Shadow Elevation
+Shadow elevation tokens define shadow styles:
+
+| Token | Usage |
+|-|-|
+| `elevation.shadow.overflow` | Scrolling content |
+| `elevation.shadow.overflow.perimeter` | Overflow fallback |
+| `elevation.shadow.overflow.spread` | Overflow fallback |
+| `elevation.shadow.overlay` | Overlay elements |
+| `elevation.shadow.raised` | Raised elements |
+
+### Interaction States
+Interaction states define element responses:
+
+| Token | Light Value | Dark Value | Usage |
+|-|-|-|-|
+| `color.interaction.hovered` | #091E4208 | #A1BDD908 | Hover overlay |
+| `color.interaction.pressed` | #091E4214 | #A1BDD914 | Pressed overlay |
+| `color.interaction.inverse.hovered` | #FFFFFF14 | #FFFFFF14 | Inverse hover overlay |
+| `color.interaction.inverse.pressed` | #FFFFFF29 | #FFFFFF29 | Inverse pressed overlay |
+
+### Skeleton States
+Skeleton states are for loading:
+
+| Token | Light Value | Dark Value | Usage |
+|-|-|-|-|
+| `color.skeleton` | #091E4208 | #A1BDD908 | Loading state |
+| `color.skeleton.subtle` | #091E4204 | #A1BDD904 | Loading effect |
+
+### Opacity
+Opacity tokens control transparency:
+
+| Token | Light Value | Dark Value | Usage |
+|-|-|-|-|
+| `opacity.disabled` | 0.4 | 0.4 | Disabled state |
+| `opacity.loading` | 0.4 | 0.4 | Loading state |
+
+## More Guidance
+
+### Token Pairing
+You should match foreground and background color, eg. for dark background colors, we have a `token)'color.text.inverse')` to better achieve contrast ratios.
+
+```tsx
+import { css } from '@atlaskit/css';
+import { token } from '@atlaskit/tokens';
+
+const styles = css({
+	backgroundColor: token('color.background.brand.bold'),
+	color: token('color.text.inverse'),
+});
+```
+
+### Semantic Tokens
+
+Always prefer the semantically correct token name, even if the color doesn't match exactly.
+
+### Dark Mode Support
+Never use hardcoded color values as they will break dark mode support.
+
+### Interactive States
+Always provide clear visual feedback for interactive elements:
+
+```tsx
+import { cssMap } from '@atlaskit/css';
+import { token } from '@atlaskit/tokens';
+
+const styles = cssMap({
+	button: {
+		backgroundColor: token('color.background.brand.bold'),
+		color: token('color.text.inverse'),
+		'&:hover': {
+			backgroundColor: token('color.background.brand.bold.hovered'),
+		},
+		'&:focus': {
+			outline: `2px solid ${token('color.border.focused')}`,
+			outlineOffset: '2px',
+		},
+		'&:active': {
+			backgroundColor: token('color.background.brand.bold.pressed'),
+		},
+		'&:disabled': {
+			backgroundColor: token('color.background.disabled'),
+			color: token('color.text.disabled'),
+		}
+	}
+});
+```
+
+### Focus Management
+Ensure proper focus indicators for keyboard navigation:
+
+```tsx
+import { cssMap } from '@atlaskit/css';
+import { token } from '@atlaskit/tokens';
+
+const styles = cssMap({
+	focusable: {
+		'&:focus-visible': {
+			outline: `2px solid ${token('color.border.focused')}`,
+			outlineOffset: '2px',
+		},
+		'&:focus:not(:focus-visible)': {
+			outline: 'none',
+		}
+	}
+});
+```

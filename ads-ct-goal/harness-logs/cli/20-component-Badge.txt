@@ -1,0 +1,29 @@
+$ npx ads-cli component Badge
+Badge
+@atlaskit/badge
+
+Props (3)
+  appearance  "warning" | "added" | "default" | "important" | "primary" | "primaryInverted" | "removed" | "discov…
+  Affects the visual style of the badge.
+  children    string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<React…
+  The value displayed within the badge. A `ReactNode` can be provided for custom-formatted numbers, however, badge should only be used in cases where you want to represent a number. Use a [lozenge](/packages/design-system/lozenge) for non-numeric information.
+  max         number | false | undefined
+  The maximum value to display. Defaults to `99`. If the value is 100, and max is 50, "50+" will be displayed. This value should be greater than 0. If set to `false` the original value will be displayed regardless of whether it is larger than the default maximum value.
+
+Examples (1):
+
+Example 1
+  tsx                                                                                               
+  import Badge from '@atlaskit/badge/badge';                                                        
+  const Examples = (): React.JSX.Element => (                                                       
+    <>                                                                                              
+      <Badge appearance="primary">5</Badge>                                                         
+      <Badge appearance="important" max={99}>                                                       
+        150                                                                                         
+      </Badge>                                                                                      
+    </>                                                                                             
+  );                                                                                                
+  export default Examples;                                                                          
+
+Design: https://go.atlassian.com/figma-library-ads-116989-3851
+# exit=0

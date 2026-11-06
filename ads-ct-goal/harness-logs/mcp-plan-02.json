@@ -1,0 +1,12 @@
+[
+ {"name":"11-guidelines-structure","tool":"ads_get_guidelines","args":{"terms":["navigation","top navigation","page title","landing page","dashboard","primary task","onboarding"],"limit":1}},
+ {"name":"12-guidelines-datetime","tool":"ads_get_guidelines","args":{"terms":["date and time formatting","relative time"],"limit":1}},
+ {"name":"13-guidelines-color-roles","tool":"ads_get_guidelines","args":{"terms":["color roles","accent colors","color meaning"],"limit":2}},
+ {"name":"14-atlaskit-navigation","tool":"atlaskit_search_components","args":{"terms":["navigation-system","top navigation","layout","side nav"],"limit":3}},
+ {"name":"15-a11y-forms","tool":"ads_get_a11y_guidelines","args":{"topic":"forms"}},
+ {"name":"16-a11y-focus","tool":"ads_get_a11y_guidelines","args":{"topic":"focus"}},
+ {"name":"17-a11y-screenReaders","tool":"ads_get_a11y_guidelines","args":{"topic":"screenReaders"}},
+ {"name":"18-a11y-colors","tool":"ads_get_a11y_guidelines","args":{"topic":"colors"}},
+ {"name":"19-tokens-accent","tool":"ads_search_tokens","args":{"terms":["color.background.accent.blue.subtler","color.background.accent.green.subtler","color.background.accent.purple.subtler","color.background.accent.orange.subtler","color.text.accent.blue","elevation.surface.raised","color.border"],"limit":2}},
+ {"name":"20-icons","tool":"ads_search_icons","args":{"terms":["headphones","video","calendar","people group","log out","link external","edit","delete","refresh","coffee","clock"],"limit":2}}
+]

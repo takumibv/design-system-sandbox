@@ -1,0 +1,24 @@
+<!-- transport: remote https://mcp.atlassian.com/v1/ads/public/mcp -->
+<!-- request: {"tool":"ads_analyze_a11y","args":{"code":"import Button from \"@atlaskit/button/default/button\";\nimport LinkButton from \"@atlaskit/button/link\";\nimport { cssMap } from \"@atlaskit/css\";\nimport Image from \"@atlaskit/image/image\";\nimport LinkExternalIcon from \"@atlaskit/icon/core/link-external\";\nimport LogInIcon from \"@atlaskit/icon/core/log-in\";\nimport { Anchor, Box, Inline, Text } from \"@atlaskit/primitives/compiled\";\nimport { token } from \"@atlaskit/tokens\";\nimport logoUrl from \"../../../brief/gaji-labo-logo.svg\";\nimport type { Member } from \"../model\";\nimport { linkTo, type Route } from \"../router\";\nimport { PersonAvatar } from \"./PersonAvatar\";\n\nconst styles = cssMap({\n\theader: {\n\t\tborderBlockEndWidth: token(\"border.width\"),\n\t\tborderBlockEndStyle: \"solid\",\n\t\tborderBlockEndColor: token(\"color.border\"),\n\t},\n\tinner: { maxWidth: \"1200px\", marginInline: \"auto\" },\n\tlogoLink: { display: \"inline-flex\", alignItems: \"center\", gap: token(\"space.050\"), color: token(\"color.text.subtle\") },\n\t// 390px 幅ではナビを 2 段目に回す（ヘッダーの高さを抑えて G1 のカードをファーストビューに入れるため）\n\tnav: { order: 3, width: \"100%\", \"@media (min-width: 48rem)\": { order: 0, width: \"auto\" } },\n\tlist: { listStyle: \"none\", margin: token(\"space.0\"), padding: token(\"space.0\") },\n\tuserName: { display: \"none\", \"@media (min-width: 30rem)\": { display: \"inline\" } },\n});\n\nconst NAV: { route: Exclude<Route, \"notFound\">; label: string; needsLogin?: boolean }[] = [\n\t{ route: \"home\", label: \"組み合わせ\" },\n\t{ route: \"members\", label: \"メンバー\" },\n\t{ route: \"settings\", label: \"自分の設定\", needsLogin: true },\n];\n\nexport function AppHeader({ route, me, onLogin, onLogout }: { route: Route; me: Member | undefined; onLogin: () => void; onLogout: () => void }) {\n\treturn (\n\t\t<Box as=\"header\" backgroundColor=\"elevation.surface\" xcss={styles.header}>\n\t\t\t<Box xcss={styles.inner} paddingInline=\"space.200\" paddingBlock=\"space.100\">\n\t\t\t\t<Inline space=\"space.200\" alignBlock=\"center\" spread=\"space-between\" shouldWrap rowSpace=\"space.050\">\n\t\t\t\t\t<Inline space=\"space.150\" alignBlock=\"center\">\n\t\t\t\t\t\t{/* ロゴは別タブで開く。ADS: 新しいウィンドウで開くリンクは事前に知らせる（Link）→ LinkExternalIcon（\"Reserved for links that open up a new tab\"） */}\n\t\t\t\t\t\t<Anchor href=\"https://www.gaji.jp/\" target=\"_blank\" newWindowLabel=\"（新しいタブで開きます）\" xcss={styles.logoLink}>\n\t\t\t\t\t\t\t<Image src={logoUrl} alt=\"Gaji-Labo\" height={20} />\n\t\t\t\t\t\t\t<LinkExternalIcon label=\"\" size=\"small\" color={token(\"color.icon.subtle\")} />\n\t\t\t\t\t\t</Anchor>\n\t\t\t\t\t\t<Text as=\"span\" weight=\"bold\" size=\"large\">\n\t\t\t\t\t\t\tCTスケジュール\n\t\t\t\t\t\t</Text>\n\t\t\t\t\t</Inline>\n\t\t\t\t\t<Box as=\"nav\" aria-label=\"メインメニュー\" xcss={styles.nav}>\n\t\t\t\t\t\t<Inline space=\"space.050\" as=\"ul\" xcss={styles.list}>\n\t\t\t\t\t\t\t{NAV.filter((n) => !n.needsLogin || me).map((n) => (\n\t\t\t\t\t\t\t\t<Box as=\"li\" key={n.route}>\n\t\t\t\t\t\t\t\t\t<LinkButton {...linkTo(n.route)} appearance=\"subtle\" isSelected={route === n.route} aria-current={route === n.route ? \"page\" : undefined}>\n\t\t\t\t\t\t\t\t\t\t{n.label}\n\t\t\t\t\t\t\t\t\t</LinkButton>\n\t\t\t\t\t\t\t\t</Box>\n\t\t\t\t\t\t\t))}\n\t\t\t\t\t\t</Inline>\n\t\t\t\t\t</Box>\n\t\t\t\t\t{me ? (\n\t\t\t\t\t\t<Inline space=\"space.100\" alignBlock=\"center\">\n\t\t\t\t\t\t\t<PersonAvatar member={me} size=\"small\" decorative />\n\t\t\t\t\t\t\t<Text as=\"span\">\n\t\t\t\t\t\t\t\t<span>{me.name}</span>\n\t\t\t\t\t\t\t\t<Box as=\"span\" xcss={styles.userName}>\n\t\t\t\t\t\t\t\t\t でログイン中\n\t\t\t\t\t\t\t\t</Box>\n\t\t\t\t\t\t\t</Text>\n\t\t\t\t\t\t\t<Button appearance=\"subtle\" onClick={onLogout}>\n\t\t\t\t\t\t\t\tログアウト\n\t\t\t\t\t\t\t</Button>\n\t\t\t\t\t\t</Inline>\n\t\t\t\t\t) : (\n\t\t\t\t\t\t<Button appearance=\"default\" iconBefore={LogInIcon} onClick={onLogin}>\n\t\t\t\t\t\t\tSlack でログイン\n\t\t\t\t\t\t</Button>\n\t\t\t\t\t)}\n\t\t\t\t</Inline>\n\t\t\t</Box>\n\t\t</Box>\n\t);\n}\n","componentName":"AppHeader","context":"CTスケジュール（日本語 UI）の画面"}} -->
+
+{
+  "summary": {
+    "componentName": "AppHeader",
+    "totalViolations": 0,
+    "severityBreakdown": {
+      "error": 0,
+      "warning": 0
+    },
+    "context": "CTスケジュール（日本語 UI）の画面",
+    "note": "Analysis completed using pattern matching (axe-core analysis failed)"
+  },
+  "violations": [],
+  "suggestions": [],
+  "error": "Axe-core analysis failed, used pattern-based analysis as fallback",
+  "recommendations": [
+    "Use ADS components for better accessibility out of the box",
+    "Reference https://atlassian.design/llms-a11y.txt for detailed guidelines",
+    "Test with keyboard navigation and screen readers",
+    "Use automated accessibility testing tools"
+  ]
+}
