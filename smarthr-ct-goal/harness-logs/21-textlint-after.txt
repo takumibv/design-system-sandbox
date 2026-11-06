@@ -1,0 +1,12 @@
+
+/home/user/design-system-sandbox/smarthr-ct-goal/textlint/ui-text.md
+  280:3  error  Cannot find a pairing character for （.
+                    
+You should close this sentence with ）.
+This pair of marks is called 丸括弧（）  smarthr/@textlint-rule/no-unmatched-pair
+  307:2  error  Cannot find a pairing character for （.
+                    
+You should close this sentence with ）.
+This pair of marks is called 丸括弧（）  smarthr/@textlint-rule/no-unmatched-pair
+
+✖ 2 problems (2 errors, 0 warnings, 0 infos)

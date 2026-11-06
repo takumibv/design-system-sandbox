@@ -1,0 +1,15 @@
+92	warn  smarthr/require-i18n-text
+20	error smarthr/best-practice-for-default-props
+16	error smarthr/best-practice-for-text-component
+9	error smarthr/a11y-anchor-has-href-attribute
+8	error sort-imports
+3	error smarthr/a11y-heading-in-sectioning-content
+3	error smarthr/best-practice-for-layouts
+2	error import/order
+2	error smarthr/best-practice-for-reduce-redundant-calls
+1	warn  null
+1	error smarthr/best-practice-for-spread-syntax
+1	error smarthr/a11y-image-has-alt-attribute
+1	error @typescript-eslint/no-shadow
+1	error smarthr/a11y-aria-labelledby
+1	error no-irregular-whitespace

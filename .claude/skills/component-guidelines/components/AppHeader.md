@@ -1,0 +1,45 @@
+# AppHeader
+
+画面上部に配置するSmartHR共通ヘッダーコンポーネントです。HeaderとAppNaviを結合し、各アプリケーションの表示を共通化します。
+
+## import
+
+```ts
+import { AppHeader } from 'smarthr-ui'
+```
+
+## Props
+
+> ℹ️ この Props 情報は **smarthr-ui v100.1.0** を基準に生成しています。利用中の smarthr-ui のバージョンが異なる場合、props がずれていることがあります。その場合は実際の型定義（エディタの型補完、`node_modules/smarthr-ui` の `.d.ts` / `metadata.json`）を正としてください。
+
+| Props 名 | 型 | デフォルト値 | 必須 | 説明 |
+|---|---|---|---|---|
+| enableNew | boolean | - | - | @deprecated internal-ui から利用するので使わないでください。 |
+| logo | ReactElement<any, string \| JSXElementConstructor<any>> | - | - | ロゴ |
+| logoHref | string | - | - | ロゴリンク |
+| featureName | ReactNode | - | - | 機能名（enableNew と合わせて使います） |
+| apps | { type?: string; heading: ReactNode; items: AppItem[]; }[] | - | - | 機能群（enableNew と合わせて使います） |
+| tenants | PropsWithChildren<{ id: string; name: ReactNode; }>[] | - | - | テナント一覧 |
+| currentTenantId | string | - | - | 現在のテナント ID |
+| onTenantSelect | (id: string) => void | - | - | テナントが選択された時に発火するコールバック関数 |
+| ref | Ref<HTMLElement> | - | - | - |
+| locale | LocaleProps | - | - | - |
+| appName | ReactNode | - | - | - |
+| schoolUrl | string | - | - | - |
+| helpPageUrl | string | - | - | - |
+| userInfo | UserInfoProps | - | - | - |
+| desktopAdditionalContent | ReactNode | - | - | - |
+| navigations | Navigation[] | - | - | - |
+| desktopNavigationAdditionalContent | ReactNode | - | - | - |
+| releaseNote | ReleaseNoteProps | - | - | - |
+| features | { id: string; name: string; url: string; favorite: boolean; position?: number; }[] | - | - | - |
+| fetchFeatures | () => Promise<{ id: string; name: string; url: string; favorite: boolean; position?: number; }[]> | - | - | 指定するとアプリランチャーを開いたタイミングでアプリ一覧を取得します（遅延ロード）。 指定した場合、features は無視されます。 |
+| mobileAdditionalContent | ReactNode | - | - | - |
+
+## 実装ルール
+
+AppHeader に直接関連する eslint-plugin-smarthr のルールは現時点ではありません。
+
+## 使い方チェックリスト
+
+使い方チェックリスト（Layer 3）は設定されていません。

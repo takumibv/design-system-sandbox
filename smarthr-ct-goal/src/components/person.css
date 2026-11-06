@@ -1,0 +1,24 @@
+/*
+ * 自前 CSS（理由：smarthr-ui にアバター部品が無く、fixtures.ts の color のうち purple がトークンに無いため）。
+ * 色の値は smarthr-ui の primitive（MAIN #0077c7、preset の green #0f7f85 / orange #f56121、
+ * AI グラデーションの purple #6d00cc）から借りている。文字色はコントラスト 4.5:1 以上になる組み合わせ。
+ */
+.ct-avatar {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  line-height: 1;
+  inline-size: var(--ct-avatar-size);
+  block-size: var(--ct-avatar-size);
+  font-size: calc(var(--ct-avatar-size) * 0.45);
+}
+.ct-avatar[data-size='M'] { --ct-avatar-size: 2rem; }
+.ct-avatar[data-size='L'] { --ct-avatar-size: 3rem; }
+.ct-avatar[data-color='blue'] { background-color: #0077c7; color: #fff; }
+.ct-avatar[data-color='green'] { background-color: #0f7f85; color: #fff; }
+.ct-avatar[data-color='purple'] { background-color: #6d00cc; color: #fff; }
+.ct-avatar[data-color='orange'] { background-color: #f56121; color: #23221e; }
+.ct-avatar img { inline-size: 100%; block-size: 100%; border-radius: 50%; object-fit: cover; }

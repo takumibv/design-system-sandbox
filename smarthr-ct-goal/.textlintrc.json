@@ -1,0 +1,13 @@
+{
+  "filters": {
+    "comments": true
+  },
+  "rules": {
+    "preset-smarthr": {
+      "ja-no-mixed-period": false
+    },
+    "prh": {
+      "rulePaths": ["./textlint/prh-books.yml"]
+    }
+  }
+}

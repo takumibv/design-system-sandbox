@@ -1,0 +1,1 @@
+90	warn  smarthr/require-i18n-text

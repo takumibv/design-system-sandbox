@@ -1,0 +1,74 @@
+[
+ {
+  "id": "S01",
+  "width": 1440,
+  "viewportHeight": 900,
+  "partnerBottom": 381,
+  "huddleBottom": 439,
+  "loginBottom": null,
+  "pageHeight": 1295
+ },
+ {
+  "id": "S03",
+  "width": 1440,
+  "viewportHeight": 900,
+  "partnerBottom": null,
+  "huddleBottom": null,
+  "loginBottom": null,
+  "pageHeight": 1228
+ },
+ {
+  "id": "S09",
+  "width": 1440,
+  "viewportHeight": 900,
+  "partnerBottom": 381,
+  "huddleBottom": null,
+  "loginBottom": null,
+  "pageHeight": 1210
+ },
+ {
+  "id": "S02",
+  "width": 1440,
+  "viewportHeight": 900,
+  "partnerBottom": null,
+  "huddleBottom": null,
+  "loginBottom": 46,
+  "pageHeight": 1078
+ },
+ {
+  "id": "S01",
+  "width": 390,
+  "viewportHeight": 900,
+  "partnerBottom": 445,
+  "huddleBottom": 503,
+  "loginBottom": null,
+  "pageHeight": 1891
+ },
+ {
+  "id": "S03",
+  "width": 390,
+  "viewportHeight": 900,
+  "partnerBottom": null,
+  "huddleBottom": null,
+  "loginBottom": null,
+  "pageHeight": 1832
+ },
+ {
+  "id": "S09",
+  "width": 390,
+  "viewportHeight": 900,
+  "partnerBottom": 445,
+  "huddleBottom": null,
+  "loginBottom": null,
+  "pageHeight": 1866
+ },
+ {
+  "id": "S02",
+  "width": 390,
+  "viewportHeight": 900,
+  "partnerBottom": null,
+  "huddleBottom": null,
+  "loginBottom": 46,
+  "pageHeight": 1434
+ }
+]

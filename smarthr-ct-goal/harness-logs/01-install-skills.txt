@@ -1,0 +1,173 @@
+# git clone --depth 1 https://github.com/kufu/smarthr-design-system.git
+commit ed07a7705601275f9689b66b48b16625759d8f81
+date Wed Nov 4 21:26:38 2026 +0900
+
+# plugin.json
+{
+  "name": "smarthr-design-system",
+  "version": "0.6.0",
+  "description": "SmartHR Design System の使い方ガイド。AI コーディングエージェントが正確に smarthr-ui のコンポーネントを選択し props を使い、デザインシステムのレイアウト・パターンに沿った実装をするための知識集。",
+  "author": {
+    "name": "SmartHR Design System"
+  },
+  "homepage": "https://smarthr.design/",
+  "repository": "https://github.com/kufu/smarthr-design-system",
+  "license": "MIT",
+  "keywords": ["smarthr", "smarthr-ui", "design-system", "react", "component-library", "design-patterns"]
+}
+
+# marketplace.json
+{
+  "name": "smarthr-design-system",
+  "metadata": {
+    "description": "SmartHR Design System が公開する AI コーディングエージェント向けプラグインのマーケットプレイス。"
+  },
+  "owner": {
+    "name": "SmartHR Design System",
+    "url": "https://smarthr.design/"
+  },
+  "plugins": [
+    {
+      "name": "smarthr-design-system",
+      "source": "./plugins/smarthr-design-system",
+      "description": "SmartHR Design System の使い方ガイド。AI コーディングエージェントが正確に smarthr-ui のコンポーネントを選択し props を使い、デザインシステムのレイアウト・パターンに沿った実装をするための知識集。",
+      "category": "design-system"
+    }
+  ]
+}
+
+# cp -rL plugins/smarthr-design-system/skills/* .claude/skills/
+.claude/skills/component-guidelines/SKILL.md
+.claude/skills/component-guidelines/component-selector.md
+.claude/skills/component-guidelines/components/AccordionPanel.md
+.claude/skills/component-guidelines/components/ActionDialog.md
+.claude/skills/component-guidelines/components/AppHeader.md
+.claude/skills/component-guidelines/components/AppLauncher.md
+.claude/skills/component-guidelines/components/AppNavi.md
+.claude/skills/component-guidelines/components/AuthErrorScreen.md
+.claude/skills/component-guidelines/components/Badge.md
+.claude/skills/component-guidelines/components/Base.md
+.claude/skills/component-guidelines/components/BaseColumn.md
+.claude/skills/component-guidelines/components/BottomFixedArea.md
+.claude/skills/component-guidelines/components/Browser.md
+.claude/skills/component-guidelines/components/BulkActionRow.md
+.claude/skills/component-guidelines/components/Button.md
+.claude/skills/component-guidelines/components/Calendar.md
+.claude/skills/component-guidelines/components/Center.md
+.claude/skills/component-guidelines/components/Checkbox.md
+.claude/skills/component-guidelines/components/Chip.md
+.claude/skills/component-guidelines/components/Cluster.md
+.claude/skills/component-guidelines/components/Container.md
+.claude/skills/component-guidelines/components/ControlledActionDialog.md
+.claude/skills/component-guidelines/components/ControlledFormDialog.md
+.claude/skills/component-guidelines/components/ControlledMessageDialog.md
+.claude/skills/component-guidelines/components/ControlledStepFormDialog.md
+.claude/skills/component-guidelines/components/CurrencyInput.md
+.claude/skills/component-guidelines/components/DateFormatter.md
+.claude/skills/component-guidelines/components/DatePicker.md
+.claude/skills/component-guidelines/components/DatetimeLocalPicker.md
+.claude/skills/component-guidelines/components/DefinitionList.md
+.claude/skills/component-guidelines/components/Dialog.md
+.claude/skills/component-guidelines/components/Disclosure.md
+.claude/skills/component-guidelines/components/DropZone.md
+.claude/skills/component-guidelines/components/Dropdown.md
+.claude/skills/component-guidelines/components/DropdownMenuButton.md
+.claude/skills/component-guidelines/components/EmptyTableBody.md
+.claude/skills/component-guidelines/components/ErrorScreen.md
+.claude/skills/component-guidelines/components/Fieldset.md
+.claude/skills/component-guidelines/components/FileViewer.md
+.claude/skills/component-guidelines/components/FilterDropdown.md
+.claude/skills/component-guidelines/components/FloatArea.md
+.claude/skills/component-guidelines/components/ForbiddenErrorScreen.md
+.claude/skills/component-guidelines/components/FormControl.md
+.claude/skills/component-guidelines/components/FormDialog.md
+.claude/skills/component-guidelines/components/Groupbox.md
+.claude/skills/component-guidelines/components/Header.md
+.claude/skills/component-guidelines/components/Heading.md
+.claude/skills/component-guidelines/components/HelpLink.md
+.claude/skills/component-guidelines/components/InformationPanel.md
+.claude/skills/component-guidelines/components/Input.md
+.claude/skills/component-guidelines/components/InputFile.md
+.claude/skills/component-guidelines/components/LanguageSwitcher.md
+.claude/skills/component-guidelines/components/LineClamp.md
+.claude/skills/component-guidelines/components/Loader.md
+.claude/skills/component-guidelines/components/MessageDialog.md
+.claude/skills/component-guidelines/components/ModelessDialog.md
+.claude/skills/component-guidelines/components/MonthPicker.md
+.claude/skills/component-guidelines/components/MultiCombobox.md
+.claude/skills/component-guidelines/components/NotFoundErrorScreen.md
+.claude/skills/component-guidelines/components/NotificationBar.md
+.claude/skills/component-guidelines/components/PageCounter.md
+.claude/skills/component-guidelines/components/PageHeading.md
+.claude/skills/component-guidelines/components/Pagination.md
+.claude/skills/component-guidelines/components/Panel.md
+.claude/skills/component-guidelines/components/RadioButton.md
+.claude/skills/component-guidelines/components/RadioButtonPanel.md
+.claude/skills/component-guidelines/components/Reel.md
+.claude/skills/component-guidelines/components/RemoteDialogTrigger.md
+.claude/skills/component-guidelines/components/RequiredLabel.md
+.claude/skills/component-guidelines/components/ResponseMessage.md
+.claude/skills/component-guidelines/components/Scroller.md
+.claude/skills/component-guidelines/components/SearchInput.md
+.claude/skills/component-guidelines/components/SectioningContent.md
+.claude/skills/component-guidelines/components/SegmentedControl.md
+.claude/skills/component-guidelines/components/Select.md
+.claude/skills/component-guidelines/components/SideMenu.md
+.claude/skills/component-guidelines/components/SideNav.md
+.claude/skills/component-guidelines/components/Sidebar.md
+.claude/skills/component-guidelines/components/SingleCombobox.md
+.claude/skills/component-guidelines/components/SmartHRAILogo.md
+.claude/skills/component-guidelines/components/SmartHRLogo.md
+.claude/skills/component-guidelines/components/SortDropdown.md
+.claude/skills/component-guidelines/components/SpreadsheetTable.md
+.claude/skills/component-guidelines/components/Stack.md
+.claude/skills/component-guidelines/components/StatusLabel.md
+.claude/skills/component-guidelines/components/StepFormDialog.md
+.claude/skills/component-guidelines/components/Stepper.md
+.claude/skills/component-guidelines/components/Switch.md
+.claude/skills/component-guidelines/components/TabBar.md
+.claude/skills/component-guidelines/components/Table.md
+.claude/skills/component-guidelines/components/Td.md
+.claude/skills/component-guidelines/components/TdCheckbox.md
+.claude/skills/component-guidelines/components/TdRadioButton.md
+.claude/skills/component-guidelines/components/Text.md
+.claude/skills/component-guidelines/components/TextLink.md
+.claude/skills/component-guidelines/components/Textarea.md
+.claude/skills/component-guidelines/components/Th.md
+.claude/skills/component-guidelines/components/ThCheckbox.md
+.claude/skills/component-guidelines/components/TimeFormatter.md
+.claude/skills/component-guidelines/components/TimePicker.md
+.claude/skills/component-guidelines/components/Timeline.md
+.claude/skills/component-guidelines/components/TimestampFormatter.md
+.claude/skills/component-guidelines/components/Tooltip.md
+.claude/skills/component-guidelines/components/UnauthorizedErrorScreen.md
+.claude/skills/component-guidelines/components/UnexpectedErrorScreen.md
+.claude/skills/component-guidelines/components/UpwardLink.md
+.claude/skills/component-guidelines/components/VisuallyHiddenText.md
+.claude/skills/component-guidelines/components/WarekiPicker.md
+.claude/skills/design-pattern-guidelines/SKILL.md
+.claude/skills/design-pattern-guidelines/pattern-selector.md
+.claude/skills/design-pattern-guidelines/patterns/access-control-pattern.mdx
+.claude/skills/design-pattern-guidelines/patterns/access-control-setting-pattern-core-features.mdx
+.claude/skills/design-pattern-guidelines/patterns/background-jobs-results.mdx
+.claude/skills/design-pattern-guidelines/patterns/confirmation-step.mdx
+.claude/skills/design-pattern-guidelines/patterns/default_value.mdx
+.claude/skills/design-pattern-guidelines/patterns/delete-dialog.mdx
+.claude/skills/design-pattern-guidelines/patterns/drag-and-drop.mdx
+.claude/skills/design-pattern-guidelines/patterns/empty-data.mdx
+.claude/skills/design-pattern-guidelines/patterns/feedback.mdx
+.claude/skills/design-pattern-guidelines/patterns/main-admin-core-features.mdx
+.claude/skills/design-pattern-guidelines/patterns/mobile-friendly-layout.mdx
+.claude/skills/design-pattern-guidelines/patterns/modal-ui.mdx
+.claude/skills/design-pattern-guidelines/patterns/multiple-inputs-field.mdx
+.claude/skills/design-pattern-guidelines/patterns/page-layout.mdx
+.claude/skills/design-pattern-guidelines/patterns/permissions-settings.mdx
+.claude/skills/design-pattern-guidelines/patterns/select-company-account.mdx
+.claude/skills/design-pattern-guidelines/patterns/selection-component-usage.mdx
+.claude/skills/design-pattern-guidelines/patterns/smarthr-list.mdx
+.claude/skills/design-pattern-guidelines/patterns/smarthr-table.mdx
+.claude/skills/design-pattern-guidelines/patterns/spacing-layout-pattern.mdx
+.claude/skills/design-pattern-guidelines/patterns/table-bulk-action.mdx
+.claude/skills/design-pattern-guidelines/patterns/visual-grouping.mdx
+.claude/skills/design-pattern-guidelines/patterns/visual-guidance.mdx
+.claude/skills/design-pattern-guidelines/patterns/wizard.mdx

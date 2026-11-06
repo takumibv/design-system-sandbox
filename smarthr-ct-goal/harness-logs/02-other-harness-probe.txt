@@ -1,0 +1,9 @@
+https://smarthr.design/llms.txt -> 404
+https://smarthr.design/llms-full.txt -> 404
+https://smarthr.design/DESIGN.md -> 404
+https://smarthr.design/.well-known/mcp.json -> 404
+
+# grep -ril 'mcp' plugins/ (MCP サーバの定義があるか)
+(該当なし)
+# find llms*.txt / DESIGN.md
+(該当なし)
