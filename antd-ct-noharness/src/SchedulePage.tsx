@@ -33,7 +33,7 @@ function myWeek(week: Week, meId: number, person: (id: number) => Member | undef
 function useHuddle() {
   const { message } = AntApp.useApp();
   return (channel: string, names: string) =>
-    message.info(`デモ：${names}のハドルを #${channel} で始めます（実際には Slack が開きます）`);
+    message.info(`デモ：${names}ハドルを #${channel} で始めます（実際には Slack が開きます）`);
 }
 
 export function SchedulePage() {

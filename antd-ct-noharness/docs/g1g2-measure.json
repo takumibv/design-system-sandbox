@@ -1,0 +1,68 @@
+[
+  {
+    "width": 1440,
+    "id": "S01",
+    "partner": "高橋 健太 さん",
+    "partnerBottom": 361,
+    "huddleBottom": 437,
+    "scrollNeeded": 0,
+    "clicksToHuddle": 1,
+    "scrollYAfter": 0,
+    "toast": "デモ：高橋 健太さんとのハドルを #u-misaki で始めます（実際には Slack が開きます）"
+  },
+  {
+    "width": 1440,
+    "id": "S02→ログイン",
+    "partner": "高橋 健太 さん",
+    "partnerBottom": 361,
+    "huddleBottom": 437,
+    "scrollNeeded": 0,
+    "clicksToHuddle": 2,
+    "scrollYAfter": 0,
+    "toast": "デモ：高橋 健太さんとのハドルを #u-misaki で始めます（実際には Slack が開きます）"
+  },
+  {
+    "width": 1440,
+    "id": "S09",
+    "partner": "高橋 健太 さん",
+    "partnerBottom": 361,
+    "huddleBottom": null,
+    "scrollNeeded": 0,
+    "clicksToHuddle": "導線なし（理由を表示）",
+    "scrollYAfter": 0,
+    "toast": ""
+  },
+  {
+    "width": 390,
+    "id": "S01",
+    "partner": "高橋 健太 さん",
+    "partnerBottom": 422,
+    "huddleBottom": 498,
+    "scrollNeeded": 0,
+    "clicksToHuddle": 1,
+    "scrollYAfter": 0,
+    "toast": "デモ：高橋 健太さんとのハドルを #u-misaki で始めます（実際には Slack が開きます）"
+  },
+  {
+    "width": 390,
+    "id": "S02→ログイン",
+    "partner": "高橋 健太 さん",
+    "partnerBottom": 422,
+    "huddleBottom": 498,
+    "scrollNeeded": 0,
+    "clicksToHuddle": 2,
+    "scrollYAfter": 0,
+    "toast": "デモ：高橋 健太さんとのハドルを #u-misaki で始めます（実際には Slack が開きます）"
+  },
+  {
+    "width": 390,
+    "id": "S09",
+    "partner": "高橋 健太 さん",
+    "partnerBottom": 422,
+    "huddleBottom": null,
+    "scrollNeeded": 0,
+    "clicksToHuddle": "導線なし（理由を表示）",
+    "scrollYAfter": 0,
+    "toast": ""
+  }
+]
