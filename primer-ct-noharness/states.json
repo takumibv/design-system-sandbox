@@ -1,0 +1,92 @@
+[
+  {
+    "id": "S01",
+    "path": "/?state=S01",
+    "title": "今週・ログイン中（通常）"
+  },
+  {
+    "id": "S02",
+    "path": "/?state=S02",
+    "title": "未ログイン"
+  },
+  {
+    "id": "S03",
+    "path": "/?state=S03",
+    "title": "自分（id=9）が今週お休み"
+  },
+  {
+    "id": "S04",
+    "path": "/?state=S04",
+    "title": "祝日の週を表示中（今週＝10月12日として表示）"
+  },
+  {
+    "id": "S05",
+    "path": "/?state=S05",
+    "title": "参加者が 2 人未満"
+  },
+  {
+    "id": "S06",
+    "path": "/?state=S06",
+    "title": "読み込み中"
+  },
+  {
+    "id": "S07",
+    "path": "/?state=S07",
+    "title": "読み込み失敗"
+  },
+  {
+    "id": "S08",
+    "path": "/?state=S08",
+    "title": "Slack ログインに失敗"
+  },
+  {
+    "id": "S09",
+    "path": "/?state=S09",
+    "title": "今週の相手（id=2）の uチャンネルが未設定"
+  },
+  {
+    "id": "S10",
+    "path": "/settings?state=S10",
+    "title": "設定の保存に成功した直後"
+  },
+  {
+    "id": "S11",
+    "path": "/members?state=S11",
+    "title": "メンバーの一覧（ログイン中）"
+  },
+  {
+    "id": "S12",
+    "path": "/members?state=S12",
+    "title": "メンバーが 0 人"
+  },
+  {
+    "id": "S13",
+    "path": "/members?state=S13",
+    "title": "メンバー削除の確認中（id=10）"
+  },
+  {
+    "id": "S14",
+    "path": "/members?state=S14",
+    "title": "メンバー削除に失敗（id=10）"
+  },
+  {
+    "id": "S15",
+    "path": "/setup?state=S15",
+    "title": "初回設定（未入力。id=11 としてログイン）"
+  },
+  {
+    "id": "S16",
+    "path": "/setup?state=S16",
+    "title": "初回設定で必須項目が未入力のまま送信した"
+  },
+  {
+    "id": "S17",
+    "path": "/settings?state=S17",
+    "title": "設定の保存に失敗（保存を押すと失敗する状態。撮影は押した後）"
+  },
+  {
+    "id": "S18",
+    "path": "/no-such-page",
+    "title": "存在しないページ"
+  }
+]

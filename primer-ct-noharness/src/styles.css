@@ -1,0 +1,55 @@
+/*
+ * 自前の CSS はこのファイルだけ。値はすべて @primer/primitives の CSS 変数（トークン）を使う。
+ * 書いた理由は docs/design-decisions.md「自前の CSS」に記録する。
+ */
+
+/* 1. 頭文字アバター：Primer の Avatar は src が必須で、画像がない人の代替表示を持たないため */
+.initials {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	border-radius: 50%;
+	font-weight: var(--base-text-weight-semibold);
+	line-height: 1;
+	user-select: none;
+}
+.initials[data-color="blue"] { background: var(--display-blue-bgColor-muted); color: var(--display-blue-fgColor); }
+.initials[data-color="green"] { background: var(--display-green-bgColor-muted); color: var(--display-green-fgColor); }
+.initials[data-color="purple"] { background: var(--display-purple-bgColor-muted); color: var(--display-purple-fgColor); }
+.initials[data-color="orange"] { background: var(--display-orange-bgColor-muted); color: var(--display-orange-fgColor); }
+
+/* 2. ヘッダーのロゴ画像の高さ（SVG の縦横比 734:136 を保つ） */
+.logo {
+	display: block;
+	height: var(--base-size-24);
+	width: auto;
+}
+
+/* 3. 箇条書きの点と余白を消す（ペアの一覧を ul で書くため。Primer に素の一覧部品がない） */
+.plainList {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* 4. ペアの一覧の行。区切り線と、自分のペアの強調（accent の muted 背景＋左の太線） */
+.pairRows {
+	border: var(--borderWidth-thin) solid var(--borderColor-default);
+	border-radius: var(--borderRadius-medium);
+}
+.pairRow {
+	padding: var(--base-size-12) var(--base-size-16);
+}
+.pairRow + .pairRow {
+	border-top: var(--borderWidth-thin) solid var(--borderColor-muted);
+}
+.pairRow[data-mine="true"] {
+	background: var(--bgColor-accent-muted);
+	box-shadow: inset var(--base-size-4) 0 0 var(--borderColor-accent-emphasis);
+}
+
+/* 5. 補足の文字色（Text に色の指定がないため。fgColor-muted を使う） */
+.muted {
+	color: var(--fgColor-muted);
+}
