@@ -1,0 +1,32 @@
+{
+  "name": "smarthr-blog-on",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -p . && vite build",
+    "preview": "vite preview --port 5173 --strictPort",
+    "lint": "eslint src",
+    "lint:text": "textlint \"src/**/*.tsx\" \"docs/**/*.md\" README.md",
+    "capture": "NODE_PATH=$(npm root -g) node scripts/capture.mjs states.json"
+  },
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-intl": "^10.2.2",
+    "smarthr-ui": "^102.1.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.2.1",
+    "eslint": "^9.39.5",
+    "eslint-config-smarthr": "^14.14.2",
+    "textlint": "^15.8.0",
+    "textlint-rule-preset-smarthr": "^1.38.3",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.6"
+  }
+}

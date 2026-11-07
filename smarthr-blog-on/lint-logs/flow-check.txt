@@ -1,0 +1,10 @@
+logo [ 'https://www.gaji.jp/ _blank', 'https://www.gaji.jp/ _blank' ]
+validation shown: 1
+url after add http://localhost:5173/posts/16?as=editor&result=added
+notice 2
+published notice 2 label 1
+after delete http://localhost:5173/?as=editor&result=deleted 2 still listed 0
+login http://localhost:5173/?as=member&result=login 2
+mine has new 1
+period error 1
+errors []

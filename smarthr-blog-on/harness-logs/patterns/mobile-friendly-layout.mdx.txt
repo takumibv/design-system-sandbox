@@ -1,0 +1,232 @@
+     1	---
+     2	title: 'モバイルレイアウト'
+     3	description: 'モバイル対応をする基準と、その対応方法を定義します。'
+     4	order: 5
+     5	---
+     6	import { ResponseMessage } from '@/components/ResponseMessage'
+     7	import { Groupbox } from 'smarthr-ui'
+     8	
+     9	モバイル対応をする基準と、その対応方法を定義します。
+    10	
+    11	SmartHRにおいて、従業員のモバイルからの利用は全体の7割以上を占めます。業種や業態によっても異なりますが、業務中にデスクトップを使わない利用者も多いためモバイルの考慮は必須です。
+    12	
+    13	## モバイルレイアウトの定義
+    14	
+    15	「モバイルレイアウト」とは、スマートフォンなどのモバイルでの利用を想定したUIを指します。
+    16	
+    17	[メディアクエリのセマンティックトークン](/products/design-tokens/media-query/#h2-0)のうち `SCREEN_SMALL` に一致する環境である場合、その環境はモバイルと判定しモバイルレイアウトの適用対象とします。
+    18	
+    19	### レスポンシブとアダプティブの使い分け
+    20	
+    21	本ドキュメントでは以下のように使い分けます。
+    22	
+    23	- レスポンシブ： 同じ要素・構造・データを保ちつつ、画面幅に応じてレイアウトを変えること
+    24	  - 例： 画面幅によって文章やボタンが折り返される
+    25	- アダプティブ： 画面幅や端末、利用環境に応じて、構造やデータ、見た目を変えること
+    26	  - 例： モバイルでは情報量を減らし、操作を簡略化する
+    27	- レスポンシブ/アダプティブデザイン： レスポンシブ/アダプティブに設計すること
+    28	- レスポンシブ/アダプティブレイアウト： レスポンシブ/アダプティブに設計されたUIのこと
+    29	
+    30	
+    31	## 基本的な考え方
+    32	
+    33	### 複雑な操作を避ける
+    34	
+    35	モバイルはデスクトップと比べて、移動中や空き時間のような短い時間で利用される傾向があります。デスクトップ向けに設計されたUIをレスポンシブに再レイアウトするだけでなく、情報の取捨選択や簡潔な表現の徹底が求められます。
+    36	
+    37	モバイルにおける従業員向け機能では、基本的に1画面で複数の操作をさせるべきではありません。デスクトップ向けに最適化されたUIをレスポンシブデザインで対応するには限界があるため、アダプティブに設計する必要があります。
+    38	
+    39	## 設計基準
+    40	
+    41	### 余白の取り方
+    42	モバイルでは画面の幅が小さいことから、[パディング](/products/design-patterns/spacing-layout-pattern/#h2-4)の一部を小さく設定することで、より多くのコンテンツを表示できるようにします。
+    43	[余白の取り方](/products/design-patterns/spacing-layout-pattern/)を参照してください。
+    44	
+    45	## コンポーネントごとの使い方
+    46	
+    47	コンポーネントごとの使い方は、各コンポーネントのページの「モバイル」のセクションを参照してください。
+    48	
+    49	
+    50	## 実装上の注意
+    51	
+    52	### モバイルかどうかの判定には`useEnvironment`を使う
+    53	
+    54	`useEnvironment`フックを使って`mobile`を取得し、必要に応じてコンポーネントに割り当ててください。各プロダクトでユーザーエージェントの判定を実装する必要はありません。
+    55	
+    56	<Groupbox className="shr-mt-2">
+    57	  <ResponseMessage>SmartHR UIのコンポーネントはレイアウトやスタイルが自動的に切り替わるよう順次改修予定です。</ResponseMessage>
+    58	</Groupbox>
+    59	
+    60	```tsx
+    61	import { useEnvironment } from 'smarthr-ui'
+    62	
+    63	export const YourComponent = () => {
+    64	  const { mobile } = useEnvironment()
+    65	
+    66	  return (
+    67	    <SomeComponent 
+    68	      someProp={mobile ? モバイル向けの値 : デスクトップ向けの値}
+    69	    >
+    70	      {/* コンテンツ */}
+    71	    </SomeComponent>
+    72	  )
+    73	}
+    74	```
+    75	
+    76	### モバイルからの利用を推奨しない管理者向けの画面にはNotificationBarを表示する
+    77	
+    78	モバイルからの利用を推奨しない管理者向けの画面には、デスクトップでの利用を促す[NotificationBar](/products/components/notification-bar/)を表示します。モバイルレイアウトが十分に適用されていないことで、ユーザーのページの理解や操作が妨げられる可能性があるためです。
+    79	
+    80	[NotificationBar](/products/components/notification-bar/)（`info`タイプ）で`管理者・担当者向け画面はスマートフォンで正しく表示されない場合があります。`と表示します。
+    81	
+    82	<div style="max-width: 448px">
+    83	```tsx editable background=DOT hideCode withStyled
+    84	const MobileUnsupportedPage = () => {
+    85	  const pagination = {
+    86	    currentPage: 1,
+    87	    limitValue: 25,
+    88	    totalCount: 100,
+    89	    totalPages: 4,
+    90	  }
+    91	  const sampleObjects = [...Array(3).fill(0)].map((_, i) => ({
+    92	    id: `${i}`,
+    93	    href: '#',
+    94	    empCode: `SHR${`${i}`.padStart(3, '0')}`,
+    95	    name: `須磨 英子`,
+    96	    status: 'ステータス',
+    97	  }))
+    98	
+    99	  const { totalPages, currentPage, totalCount, limitValue } = pagination
+   100	  const isInitialState = totalCount === 0
+   101	  const hasNoSearchResult = totalCount === 0
+   102	
+   103	  return (
+   104	    <EnvironmentProvider environment={{ mobile: true }}>
+   105	      <div className="shr-w-full shr-bg-background">
+   106	        <AppHeader
+   107	          appName="すごいアプリ"
+   108	          currentTenantId="tenant-1"
+   109	          features={[
+   110	            {
+   111	              favorite: false,
+   112	              id: 'feature-1',
+   113	              name: '従業員リスト',
+   114	              position: null,
+   115	              url: 'https://example.com'
+   116	            },
+   117	          ]}
+   118	          navigations={[
+   119	            {
+   120	              children: 'ホーム',
+   121	              href: 'https://example.com'
+   122	            },
+   123	          ]}
+   124	          helpPageUrl="https://example.com"
+   125	          schoolUrl="https://example.com"
+   126	          userInfo={{
+   127	            accountUrl: 'https://example.com',
+   128	            email: 'smarthr@example.com',
+   129	            empCode: '001',
+   130	            firstName: '須磨',
+   131	            lastName: '栄子'
+   132	          }}
+   133	        />
+   134	        <NotificationBar type="info" onClose={() => {}}>
+   135	          管理者・担当者向け画面はスマートフォンで正しく表示されない場合があります。
+   136	        </NotificationBar>
+   137	        <Container>
+   138	          <Stack gap={2}>
+   139	            <Stack>
+   140	              { /* プロダクトではautoPageTitleはtrueがデフォルトですが、デザインシステムでは例にもかかわらずページの見出しが変わってしまうためfalseにしています。 */ }
+   141	              <PageHeading autoPageTitle={false}>ページタイトル</PageHeading>
+   142	              <p>このページについての説明。</p>
+   143	            </Stack>
+   144	            <Section>
+   145	              <Stack>
+   146	                <Cluster align="center" justify="space-between">
+   147	                  <Heading>セクションタイトル</Heading>
+   148	                  <Button prefix={<FaCirclePlusIcon />}>オブジェクトを追加</Button>
+   149	                </Cluster>
+   150	
+   151	                <Stack gap={1.5}>
+   152	                  <Panel>
+   153	                    <Cluster justify="space-between" align="center" className="shr-p-1">
+   154	                      <form onSubmit={(e) => e.preventDefault()}>
+   155	                        <Cluster align="center" gap={1}>
+   156	                          <Cluster>
+   157	                            <SearchInput tooltipMessage="オブジェクト名で検索できます。" name="search" />
+   158	                            <Button type="submit">検索</Button>
+   159	                          </Cluster>
+   160	                          <FilterDropdown onApply={() => null}>絞り込みの中身</FilterDropdown>
+   161	                          <Button type="submit" prefix={<FaCloudArrowDownIcon />}>
+   162	                            ダウンロード
+   163	                          </Button>
+   164	                        </Cluster>
+   165	                      </form>
+   166	                      <Cluster gap={1} align="center">
+   167	                        <PageCounter start={1 + (currentPage - 1) * limitValue} end={currentPage * limitValue} total={totalCount} />
+   168	                        <Pagination current={currentPage} total={totalPages} withoutNumbers onClick={() => null} />
+   169	                      </Cluster>
+   170	                    </Cluster>
+   171	
+   172	                    <Table rounded="bottom">
+   173	                      <thead>
+   174	                        <tr>
+   175	                          <ThCheckbox name="allRowCheckbox" />
+   176	                          <Th>ステータス</Th>
+   177	                          <Th>社員番号</Th>
+   178	                          <Th>氏名</Th>
+   179	                          <Th>操作</Th>
+   180	                        </tr>
+   181	                      </thead>
+   182	                      <tbody>
+   183	                        {sampleObjects.map(({ id, status, href, empCode, name }) => {
+   184	                          const ariaLabelledBy = `name-${id}`
+   185	                          return (
+   186	                            <tr key={id}>
+   187	                              <TdCheckbox name="tableCheckbox" aria-labelledby={ariaLabelledBy} />
+   188	                              <Td contentWidth="1px">
+   189	                                <StatusLabel>{status}</StatusLabel>
+   190	                              </Td>
+   191	                              <Td>{empCode}</Td>
+   192	                              <Td id={ariaLabelledBy}><TextLink href={href}>{name}</TextLink></Td>
+   193	                              <Td contentWidth="1px">
+   194	                                <Cluster inline className="shr-min-w-max">
+   195	                                  <Button size="S" prefix={<FaPenIcon />}>
+   196	                                    操作1
+   197	                                  </Button>
+   198	                                  <Button size="S" prefix={<FaCopyIcon />}>
+   199	                                    操作2
+   200	                                  </Button>
+   201	                                  <Button size="S" prefix={<FaTrashCanIcon/>}>
+   202	                                    操作3
+   203	                                  </Button>
+   204	                                </Cluster>
+   205	                              </Td>
+   206	                            </tr>
+   207	                        )})}
+   208	                      </tbody>
+   209	                    </Table>
+   210	                  </Panel>
+   211	                  <Center>
+   212	                    <Pagination current={currentPage} total={totalPages} onClick={() => null} />
+   213	                  </Center>
+   214	                </Stack>
+   215	              </Stack>
+   216	            </Section>
+   217	          </Stack>
+   218	        </Container>
+   219	      </div>
+   220	    </EnvironmentProvider>
+   221	  )
+   222	}
+   223	
+   224	render(<MobileUnsupportedPage />)
+   225	```
+   226	</div>
+   227	
+   228	## 参考
+   229	
+   230	- [達成基準 1.4.10: リフローを理解する](https://waic.jp/translations/WCAG21/Understanding/reflow)
+   231	- [ボタン | Apple Developer Documentation](https://developer.apple.com/jp/design/human-interface-guidelines/buttons#Best-practices)
+   232	- [商品一覧ページにおけるページネーションの代替案 – U-Site](https://u-site.jp/alertbox/alternatives-pagination-listing-pages)

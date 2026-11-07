@@ -1,0 +1,227 @@
+[
+  {
+    "id": "S01-plan-member",
+    "path": "/",
+    "description": "投稿計画（一般メンバー＝ログイン中の自分 id=1。既定）"
+  },
+  {
+    "id": "S02-plan-guest",
+    "path": "/?as=guest",
+    "description": "投稿計画（未ログイン）"
+  },
+  {
+    "id": "S03-plan-editor",
+    "path": "/?as=editor",
+    "description": "投稿計画（編集担当 id=2）"
+  },
+  {
+    "id": "S04-plan-loading",
+    "path": "/?state=loading",
+    "description": "投稿計画：読み込み中"
+  },
+  {
+    "id": "S05-plan-error",
+    "path": "/?state=error",
+    "description": "投稿計画：読み込みの失敗"
+  },
+  {
+    "id": "S06-plan-empty",
+    "path": "/?state=empty",
+    "description": "投稿計画：データが無い（初期状態）"
+  },
+  {
+    "id": "S07-plan-author",
+    "path": "/?author=3",
+    "description": "投稿計画：書く人で絞り込み（田中 遥）"
+  },
+  {
+    "id": "S08-plan-noresult",
+    "path": "/?author=10",
+    "description": "投稿計画：絞り込み結果が無い（加藤 大輔）"
+  },
+  {
+    "id": "S09-plan-period",
+    "path": "/?from=2026-12-07&to=2027-02-14",
+    "description": "投稿計画：期間を変更（先の 10 週）"
+  },
+  {
+    "id": "S10-plan-add",
+    "path": "/?dialog=add",
+    "description": "投稿の追加ダイアログ"
+  },
+  {
+    "id": "S11-plan-add-guest",
+    "path": "/?as=guest&dialog=add",
+    "description": "権限の無い操作：未ログインで追加を開こうとした"
+  },
+  {
+    "id": "S12-plan-deleted",
+    "path": "/?as=editor&result=deleted",
+    "description": "削除の成功（削除後に投稿計画へ戻った）"
+  },
+  {
+    "id": "S13-plan-login",
+    "path": "/?result=login",
+    "description": "Slack ログインの通知（デモ）"
+  },
+  {
+    "id": "S20-mine-member",
+    "path": "/mine",
+    "description": "自分の担当（一般メンバー）"
+  },
+  {
+    "id": "S21-mine-guest",
+    "path": "/mine?as=guest",
+    "description": "自分の担当（未ログイン）"
+  },
+  {
+    "id": "S22-mine-editor",
+    "path": "/mine?as=editor",
+    "description": "自分の担当（編集担当）"
+  },
+  {
+    "id": "S23-mine-loading",
+    "path": "/mine?state=loading",
+    "description": "自分の担当：読み込み中"
+  },
+  {
+    "id": "S24-mine-error",
+    "path": "/mine?state=error",
+    "description": "自分の担当：読み込みの失敗"
+  },
+  {
+    "id": "S25-mine-empty",
+    "path": "/mine?state=empty",
+    "description": "自分の担当：データが無い"
+  },
+  {
+    "id": "S30-members-member",
+    "path": "/members",
+    "description": "書く人（一般メンバー）"
+  },
+  {
+    "id": "S31-members-guest",
+    "path": "/members?as=guest",
+    "description": "書く人（未ログイン）"
+  },
+  {
+    "id": "S32-members-editor",
+    "path": "/members?as=editor",
+    "description": "書く人（編集担当）"
+  },
+  {
+    "id": "S33-members-loading",
+    "path": "/members?state=loading",
+    "description": "書く人：読み込み中"
+  },
+  {
+    "id": "S34-members-error",
+    "path": "/members?state=error",
+    "description": "書く人：読み込みの失敗"
+  },
+  {
+    "id": "S35-members-empty",
+    "path": "/members?state=empty",
+    "description": "書く人：投稿が無い"
+  },
+  {
+    "id": "S40-post-own-member",
+    "path": "/posts/7",
+    "description": "投稿（自分が書く人：編集できる）"
+  },
+  {
+    "id": "S41-post-other-member",
+    "path": "/posts/6",
+    "description": "投稿（他人の投稿・遅れ：一般メンバーは編集できない）"
+  },
+  {
+    "id": "S42-post-guest",
+    "path": "/posts/6?as=guest",
+    "description": "投稿（未ログイン）"
+  },
+  {
+    "id": "S43-post-editor",
+    "path": "/posts/6?as=editor",
+    "description": "投稿（編集担当：編集・削除できる）"
+  },
+  {
+    "id": "S44-post-published",
+    "path": "/posts/2",
+    "description": "投稿（公開済み）"
+  },
+  {
+    "id": "S45-post-cancelled",
+    "path": "/posts/15?as=editor",
+    "description": "投稿（取りやめ）"
+  },
+  {
+    "id": "S46-post-loading",
+    "path": "/posts/7?state=loading",
+    "description": "投稿：読み込み中"
+  },
+  {
+    "id": "S47-post-error",
+    "path": "/posts/7?state=error",
+    "description": "投稿：読み込みの失敗"
+  },
+  {
+    "id": "S50-post-edit",
+    "path": "/posts/7?dialog=edit",
+    "description": "投稿の編集ダイアログ"
+  },
+  {
+    "id": "S51-post-edit-error",
+    "path": "/posts/7?dialog=edit&result=save-error",
+    "description": "保存の失敗（ダイアログ内）"
+  },
+  {
+    "id": "S52-post-saved",
+    "path": "/posts/7?result=saved",
+    "description": "保存の成功"
+  },
+  {
+    "id": "S53-post-publish",
+    "path": "/posts/7?dialog=publish",
+    "description": "公開済みにするダイアログ"
+  },
+  {
+    "id": "S54-post-published-ok",
+    "path": "/posts/7?result=published",
+    "description": "公開済みにした（成功）"
+  },
+  {
+    "id": "S55-post-delete",
+    "path": "/posts/6?as=editor&dialog=delete",
+    "description": "削除ダイアログ（編集担当）"
+  },
+  {
+    "id": "S56-post-delete-error",
+    "path": "/posts/6?as=editor&dialog=delete&result=delete-error",
+    "description": "削除の失敗（ダイアログ内）"
+  },
+  {
+    "id": "S57-post-forbidden",
+    "path": "/posts/6?dialog=edit",
+    "description": "権限の無い操作：他人の投稿の編集を開こうとした"
+  },
+  {
+    "id": "S58-post-delete-forbidden",
+    "path": "/posts/7?dialog=delete",
+    "description": "権限の無い操作：一般メンバーが削除を開こうとした"
+  },
+  {
+    "id": "S59-post-added",
+    "path": "/posts/7?result=added",
+    "description": "追加の成功"
+  },
+  {
+    "id": "S90-notfound",
+    "path": "/no-such-page",
+    "description": "存在しないページ"
+  },
+  {
+    "id": "S91-post-notfound",
+    "path": "/posts/999",
+    "description": "存在しない投稿"
+  }
+]
