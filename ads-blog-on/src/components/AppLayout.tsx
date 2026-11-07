@@ -28,6 +28,7 @@ const styles = cssMap({
 		paddingBlock: token("space.050"),
 		borderRadius: token("radius.small"),
 	},
+	listItem: { listStyle: "none" },
 	main: {
 		paddingInline: token("space.300"),
 		paddingBlockStart: token("space.300"),
@@ -71,7 +72,9 @@ function AccountMenu() {
 			/>
 		);
 	}
+	// TopNavEnd は role="list" なので、ADS の EndItem 以外を置くときは listitem で包む（axe aria-required-children）
 	return (
+		<Box as="li" xcss={styles.listItem}>
 		<DropdownMenu
 			shouldRenderToParent
 			placement="bottom-end"
@@ -107,6 +110,7 @@ function AccountMenu() {
 				</DropdownItem>
 			</DropdownItemGroup>
 		</DropdownMenu>
+		</Box>
 	);
 }
 
