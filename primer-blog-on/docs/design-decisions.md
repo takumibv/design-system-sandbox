@@ -62,3 +62,14 @@ StateLabel は使わない。StateLabel は「the status of an issue or pull req
 - 保存の失敗：フォームの先頭に Banner `critical`、入力は保持、フォーカスを Banner へ（`patterns/create.md:45`）。
 - 削除の失敗：ダイアログを閉じずに中に Banner `critical`（`patterns/delete.md:41`）。
 - トーストは使わない（`patterns/saving.md:242`）。
+
+## 実装中に変えたこと（実装後に追記）
+
+| 変更 | 理由 |
+| --- | --- |
+| 「要対応」は独立した節ではなく、計画の最上部の Banner（warning）1 つにまとめ、遅れと予定の無い週を中に書いた。7 日以内の件数は Banner に入れず、期間の要約文に出した | 常に出る項目を Banner に入れると警告が効かなくなるため |
+| 詳細の「編集」「状態を変更」「削除」を PageHeader.Actions から本文の先頭へ移した | 390px でタイトルが 1 行 4 文字まで押しつぶされた（撮影で発見） |
+| PageHeader.ContextArea に `hidden={false}` | 既定では狭い画面でしか出ず、広い画面で「計画に戻る」が消えていた（撮影で発見） |
+| 削除ダイアログの幅を large に | medium（320px）では本文と Banner が細長くなり読みにくかった |
+| 週の列を `Stack as="ol"` に | axe の list／listitem 違反（`<ol>` と `<li>` の間に `div`） |
+| 日付の相対表示は RelativeTime を使わず自前 | デモの「今日」が固定のため（harness-report.md §3） |
