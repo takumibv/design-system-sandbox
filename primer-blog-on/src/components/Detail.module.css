@@ -1,0 +1,35 @@
+/* 詳細の項目一覧（dl）。Primer に定義リストの部品が無いため、トークンだけで 2 列に並べる */
+.Fields {
+  margin: 0;
+  border: var(--borderWidth-thin) solid var(--borderColor-default);
+  border-radius: var(--borderRadius-medium);
+}
+
+.Field {
+  display: grid;
+  grid-template-columns: minmax(0, 10rem) minmax(0, 1fr);
+  gap: var(--base-size-16);
+  padding: var(--base-size-12) var(--base-size-16);
+  border-top: var(--borderWidth-thin) solid var(--borderColor-muted);
+}
+
+.Field:first-child {
+  border-top: 0;
+}
+
+.Term {
+  font-weight: var(--base-text-weight-semibold);
+  color: var(--fgColor-muted);
+}
+
+.Desc {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 543px) {
+  .Field {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--base-size-4);
+  }
+}

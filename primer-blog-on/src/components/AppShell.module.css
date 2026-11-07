@@ -1,0 +1,27 @@
+/* アプリ見出し：Primer に「GitHub 以外のアプリ見出し」の部品が無いため、トークンだけで最小限に組む */
+.Shell {
+  min-height: 100vh;
+  background-color: var(--bgColor-default);
+}
+
+.AppHeader {
+  padding: var(--base-size-12) var(--base-size-16);
+  background-color: var(--bgColor-default);
+  border-bottom: var(--borderWidth-thin) solid var(--borderColor-default);
+}
+
+.LogoLink {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--borderRadius-medium);
+}
+
+.Logo {
+  display: block;
+  width: auto;
+  height: var(--base-size-24);
+}
+
+.AppName {
+  margin: 0;
+}

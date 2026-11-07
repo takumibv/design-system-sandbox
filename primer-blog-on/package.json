@@ -1,0 +1,40 @@
+{
+  "name": "primer-blog-on",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint src",
+    "lint:css": "stylelint \"src/**/*.css\" --allow-empty-input",
+    "preview": "vite preview",
+    "capture": "NODE_PATH=$(npm root -g) node scripts/capture.mjs states.json"
+  },
+  "dependencies": {
+    "@primer/octicons-react": "^19.42.0",
+    "@primer/primitives": "^11.10.0",
+    "@primer/react": "^38.45.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.6"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@primer/mcp": "^1.1.2",
+    "@primer/stylelint-config": "^13.6.0",
+    "@types/node": "^22.20.5",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@types/react-is": "^19.3.0",
+    "@vitejs/plugin-react": "^6.2.1",
+    "eslint": "^9.39.5",
+    "eslint-plugin-primer-react": "^9.4.0",
+    "react-is": "^18.3.1",
+    "stylelint": "^16.26.1",
+    "typescript": "5.9",
+    "typescript-eslint": "^8.72.1",
+    "vite": "^8.3.6"
+  }
+}

@@ -1,0 +1,80 @@
+## init
+Setup or create a project that includes Primer React
+input: {}
+
+## list_components
+List all of the components available from Primer React
+input: {}
+
+## get_component
+Retrieve official documentation and usage details for exactly one React component from the @primer/react package. Use get_component_batch for 2 to 10 components.
+input: {"name":{"type":"string","description":"The name of the component to retrieve"}}
+
+## get_component_batch
+Retrieve official documentation and usage details for 2 to 10 React components from the @primer/react package in one call. Use get_component for exactly one component.
+input: {"names":{"minItems":2,"maxItems":10,"type":"array","items":{"type":"string"},"description":"Component names to retrieve (e.g. [\"ActionMenu\", \"Button\", \"Pagination\"])"}}
+
+## get_component_examples
+Get examples for how to use a component from Primer React
+input: {"name":{"type":"string","description":"The name of the component to retrieve"}}
+
+## get_component_usage_guidelines
+Get usage information for how to use a component from Primer
+input: {"name":{"type":"string","description":"The name of the component to retrieve"}}
+
+## get_component_accessibility_guidelines
+Retrieve accessibility guidelines and best practices for a specific component from the @primer/react package by its name. Use this tool to get official accessibility recommendations, usage tips, and requirements to ensure your UI components are inclusive and meet accessibility standards.
+input: {"name":{"type":"string","description":"The name of the component to retrieve"}}
+
+## list_patterns
+List all of the patterns available from Primer React. Scenario patterns describe specific user tasks. Prefer a scenario pattern when one fits the task, and fall back to the more generic UI patterns otherwise.
+input: {}
+
+## get_pattern
+Get a specific pattern by name. Scenario patterns describe specific user tasks. Prefer a scenario pattern when one fits the task, and fall back to the more generic UI patterns otherwise.
+input: {"name":{"type":"string","description":"The name of the pattern to retrieve"}}
+
+## find_tokens
+Search for specific tokens. Tip: If you only provide a 'group' and leave 'query' empty, it returns all tokens in that category. Avoid property-by-property searching. COLOR RESOLUTION: If a user asks for "pink" or "blue", do not search for the color name. Use the semantic intent: blue->accent, red->danger, green->success. Always check both "emphasis" and "muted" variants for background colors. After identifying tokens and writing CSS, you MUST validate the result using lint_css.
+input: {"query":{"default":"","description":"Search keywords (e.g., \"danger border\", \"success background\")","type":"string"},"group":{"description":"Filter by group (e.g., \"fgColor\", \"border\")","type":"string"},"limit":{"default":15,"description":"Maximum results to return to stay within context limits","type":"integer","minimum":1,"maximum":100}}
+
+## get_token_group_bundle
+PREFERRED FOR COMPONENTS. Fetch all tokens for complex UI (e.g., Dialogs, Cards) in one call by providing an array of groups like ['overlay', 'shadow']. Use this instead of multiple find_tokens calls to save context.
+input: {"groups":{"type":"array","items":{"type":"string"},"description":"Array of group names (e.g., [\"overlay\", \"shadow\", \"focus\"])"}}
+
+## get_design_token_specs
+CRITICAL: CALL THIS FIRST. Provides the logic matrix and the list of valid group names. You cannot search accurately without this map.
+input: {}
+
+## get_token_usage_patterns
+Provides "Golden Example" CSS for core patterns: Button (Interactions) and Stack (Layout). Use this to understand how to apply the Logic Matrix, Motion, and Spacing scales.
+input: {}
+
+## lint_css
+REQUIRED FINAL STEP. Use this to validate your CSS. You cannot complete a task involving CSS without a successful run of this tool.
+input: {"css":{"type":"string"}}
+
+## get_color_usage
+Get the guidelines for how to apply color to a user interface
+input: {}
+
+## get_typography_usage
+Get the guidelines for how to apply typography to a user interface
+input: {}
+
+## list_icons
+List all of the icons (octicons) available from Primer Octicons React
+input: {}
+
+## get_icon
+Get a specific icon (octicon) by name from Primer
+input: {"name":{"type":"string","description":"The name of the icon to retrieve"},"size":{"default":"16","description":"The size of the icon to retrieve, e.g. \"16\"","type":"string"}}
+
+## primer_coding_guidelines
+Get the guidelines when writing code that uses Primer or for UI code that you are creating
+input: {}
+
+## review_alt_text
+Evaluates image alt text against accessibility best practices and context relevance.
+input: {"surroundingText":{"type":"string","description":"Text surrounding the image, relevant to the image."},"alt":{"type":"string","description":"The alt text of the image being evaluated"},"image":{"type":"string","description":"The image URL or file path being evaluated"}}
+

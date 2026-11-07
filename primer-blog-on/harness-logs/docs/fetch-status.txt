@@ -1,0 +1,5 @@
+200 https://primer.style/product/getting-started/foundations/layout/
+200 https://primer.style/product/getting-started/foundations/responsive/
+200 https://primer.style/product/getting-started/foundations/content/
+200 https://primer.style/product/components/label/
+200 https://primer.style/product/components/state-label/
