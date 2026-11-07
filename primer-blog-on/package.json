@@ -24,6 +24,7 @@
     "@modelcontextprotocol/sdk": "^1.32.2",
     "@primer/mcp": "^1.1.2",
     "@primer/stylelint-config": "^13.6.0",
+    "@types/node": "^22.20.5",
     "@types/react": "^18.3.31",
     "@types/react-dom": "^18.3.7",
     "@types/react-is": "^19.3.0",

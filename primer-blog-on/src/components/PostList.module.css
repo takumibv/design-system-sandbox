@@ -1,0 +1,67 @@
+/* 投稿の行と週の区切り。Primer の ActionList は選択・操作のための部品で、
+   1 行にリンク・Label・補足を並べる読み物の一覧には合わないため、リストの線だけをトークンで引く */
+.List {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Row {
+  padding: var(--base-size-12) var(--base-size-16);
+  border-top: var(--borderWidth-thin) solid var(--borderColor-muted);
+}
+
+.Row:first-child {
+  border-top: 0;
+}
+
+.Title {
+  font-weight: var(--base-text-weight-semibold);
+}
+
+.TitleMuted {
+  font-weight: var(--base-text-weight-semibold);
+  color: var(--fgColor-muted);
+  text-decoration: line-through;
+}
+
+.Meta {
+  margin: 0;
+  color: var(--fgColor-muted);
+}
+
+.Box {
+  border: var(--borderWidth-thin) solid var(--borderColor-default);
+  border-radius: var(--borderRadius-medium);
+}
+
+.WeekHeader {
+  padding: var(--base-size-8) var(--base-size-16);
+  background-color: var(--bgColor-muted);
+  border-bottom: var(--borderWidth-thin) solid var(--borderColor-default);
+  border-top-left-radius: var(--borderRadius-medium);
+  border-top-right-radius: var(--borderRadius-medium);
+}
+
+.WeekHeaderCurrent {
+  padding: var(--base-size-8) var(--base-size-16);
+  background-color: var(--bgColor-accent-muted);
+  border-bottom: var(--borderWidth-thin) solid var(--borderColor-accent-muted);
+  border-top-left-radius: var(--borderRadius-medium);
+  border-top-right-radius: var(--borderRadius-medium);
+}
+
+.WeekTitle {
+  margin: 0;
+  font-size: var(--text-body-size-medium);
+}
+
+.EmptyWeek {
+  padding: var(--base-size-12) var(--base-size-16);
+}
+
+/* 表は 390px では収まらないため、表だけを横スクロールさせてページの横はみ出しを防ぐ */
+.TableScroll {
+  grid-column: 1 / -1;
+  max-width: 100%;
+}
