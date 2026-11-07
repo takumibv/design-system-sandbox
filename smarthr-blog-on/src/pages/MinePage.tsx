@@ -67,7 +67,7 @@ export const MinePage: FC = () => {
           // 権限による表示制御：操作に関わる UI は出さず、理由と回避方法を示す
           <Panel padding={2}>
             <Center>
-              <Button onClick={handleLogin}>Slack でログイン</Button>
+              <Button onClick={handleLogin}>Slackでログイン</Button>
             </Center>
           </Panel>
         ) : mine.length === 0 ? (

@@ -1,0 +1,108 @@
+
+/home/user/design-system-sandbox/smarthr-blog-on/docs/information-architecture.md
+    3:13    ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。                                                                                  smarthr/ja-space-between-half-and-full-width
+    3:26    error    Line 3 sentence length(139) exceeds the maximum sentence length of 120.
+Over 19 characters                                                                     smarthr/sentence-length
+    3:28    ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。                                                                                  smarthr/ja-space-between-half-and-full-width
+    3:44    ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。                                                                                  smarthr/ja-space-between-half-and-full-width
+    3:46    ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。                                                                                  smarthr/ja-space-between-half-and-full-width
+    5:7     error    文末が"。"で終わっていません。
+理由: 句点は文の境界を明確にし、読み手の理解を助けます
+修正: 適切な文末表現で文を完結させ、句点を追加してください
+例: 「〜です。」「〜ます。」「〜でした。」など                                                                                  smarthr/ja-no-mixed-period
+    9:17    ✓ error  無い => ない
+平仮名にしたほうが読みやすい漢字は平仮名にする https://smarthr.design/products/contents/writing-style/                                      smarthr/prh-rules
+   30:96    ✓ error  無い => ない
+平仮名にしたほうが読みやすい漢字は平仮名にする https://smarthr.design/products/contents/writing-style/                                      smarthr/prh-rules
+   30:114   ✓ error  無い => ない
+平仮名にしたほうが読みやすい漢字は平仮名にする https://smarthr.design/products/contents/writing-style/                                      smarthr/prh-rules
+   30:120   ✓ error  無い => ない
+平仮名にしたほうが読みやすい漢字は平仮名にする https://smarthr.design/products/contents/writing-style/                                      smarthr/prh-rules
+   34:49    ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。                                                                                  smarthr/ja-space-between-half-and-full-width
+   34:51    ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。                                                                                  smarthr/ja-space-between-half-and-full-width
+   34:56    ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。                                                                                  smarthr/ja-space-between-half-and-full-width
+   34:58    ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。                                                                                  smarthr/ja-space-between-half-and-full-width
+   34:82    ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。                                                                                  smarthr/ja-space-between-half-and-full-width
+   38:30    ✓ error  無い => ない
+平仮名にしたほうが読みやすい漢字は平仮名にする https://smarthr.design/products/contents/writing-style/                                      smarthr/prh-rules
+   39:40    ✓ error  無い => ない
+平仮名にしたほうが読みやすい漢字は平仮名にする https://smarthr.design/products/contents/writing-style/                                      smarthr/prh-rules
+   41:38    ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。                                                                                  smarthr/ja-space-between-half-and-full-width
+   41:42    ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。                                                                                  smarthr/ja-space-between-half-and-full-width
+  135:17    ✓ error  モーダルダイアログ => 画面
+アプリケーションの操作画面は「画面」で表記する https://smarthr.design/products/contents/idiomatic-usage/usage/#recuyZUYZxqRrVbeB-0          smarthr/prh-rules
+  136:16    ✓ error  モーダルダイアログ => 画面
+アプリケーションの操作画面は「画面」で表記する https://smarthr.design/products/contents/idiomatic-usage/usage/#recuyZUYZxqRrVbeB-0          smarthr/prh-rules
+  137:29    ✓ error  ダイアログ => 画面
+アプリケーションの操作画面は「画面」で表記する https://smarthr.design/products/contents/idiomatic-usage/usage/#recuyZUYZxqRrVbeB-0          smarthr/prh-rules
+  137:81    ✓ error  ダイアログ => 画面
+アプリケーションの操作画面は「画面」で表記する https://smarthr.design/products/contents/idiomatic-usage/usage/#recuyZUYZxqRrVbeB-0          smarthr/prh-rules
+  142:23    ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。                                                                                  smarthr/ja-space-between-half-and-full-width
+  142:6710  error    Line 142 sentence length(121) exceeds the maximum sentence length of 120.
+Over 1 characters                                                                   smarthr/sentence-length
+  143:3     error    Line 143 sentence length(131) exceeds the maximum sentence length of 120.
+Over 11 characters                                                                   smarthr/sentence-length
+  143:28    ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。                                                                                  smarthr/ja-space-between-half-and-full-width
+  143:151   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。                                                                                  smarthr/ja-space-between-half-and-full-width
+  143:157   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。                                                                                  smarthr/ja-space-between-half-and-full-width
+  143:241   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。                                                                                  smarthr/ja-space-between-half-and-full-width
+  143:243   ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。                                                                                  smarthr/ja-space-between-half-and-full-width
+  144:20    ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。                                                                                  smarthr/ja-space-between-half-and-full-width
+  144:23    ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。                                                                                  smarthr/ja-space-between-half-and-full-width
+  150:10    ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。                                                                                  smarthr/ja-space-between-half-and-full-width
+  156:28    ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。                                                                                  smarthr/ja-space-between-half-and-full-width
+  156:51    ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。                                                                                  smarthr/ja-space-between-half-and-full-width
+  160:130   ✓ error  ドロップダウン => ドロップダウンリスト
+「ドロップダウンリスト」と表現し、「プルダウンメニュー」などの使用は控える https://smarthr.design/products/contents/idiomatic-usage/usage/  smarthr/prh-rules
+  162:19    ✓ error  付ける => つける
+平仮名にしたほうが読みやすい漢字は平仮名にする https://smarthr.design/products/contents/writing-style/                                      smarthr/prh-rules
+  172:78    ✓ error  無い => ない
+平仮名にしたほうが読みやすい漢字は平仮名にする https://smarthr.design/products/contents/writing-style/                                      smarthr/prh-rules
+  172:124   ✓ error  無い => ない
+平仮名にしたほうが読みやすい漢字は平仮名にする https://smarthr.design/products/contents/writing-style/                                      smarthr/prh-rules
+  181:6     ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。                                                                                  smarthr/ja-space-between-half-and-full-width
+  181:9     ✓ error  原則として、全角文字と半角文字の間にスペースを入れません。                                                                                  smarthr/ja-space-between-half-and-full-width
+
+/home/user/design-system-sandbox/smarthr-blog-on/docs/design-decisions.md
+   9:238  ✓ error  無い => ない
+平仮名にしたほうが読みやすい漢字は平仮名にする https://smarthr.design/products/contents/writing-style/                              smarthr/prh-rules
+  10:68   ✓ error  無い => ない
+平仮名にしたほうが読みやすい漢字は平仮名にする https://smarthr.design/products/contents/writing-style/                              smarthr/prh-rules
+  10:235  ✓ error  分かる => わかる
+平仮名にしたほうが読みやすい漢字は平仮名にする https://smarthr.design/products/contents/writing-style/                              smarthr/prh-rules
+  12:66   ✓ error  無い => ない
+平仮名にしたほうが読みやすい漢字は平仮名にする https://smarthr.design/products/contents/writing-style/                              smarthr/prh-rules
+  12:94   ✓ error  の中で => のなかで
+平仮名にしたほうが読みやすい漢字は平仮名にする https://smarthr.design/products/contents/writing-style/                              smarthr/prh-rules
+  12:189  ✓ error  無い => ない
+平仮名にしたほうが読みやすい漢字は平仮名にする https://smarthr.design/products/contents/writing-style/                              smarthr/prh-rules
+  12:197  ✓ error  の中で => のなかで
+平仮名にしたほうが読みやすい漢字は平仮名にする https://smarthr.design/products/contents/writing-style/                              smarthr/prh-rules
+  18:94   ✓ error  ダイアログ => 画面
+アプリケーションの操作画面は「画面」で表記する https://smarthr.design/products/contents/idiomatic-usage/usage/#recuyZUYZxqRrVbeB-0  smarthr/prh-rules
+  18:124  ✓ error  ダイアログ => 画面
+アプリケーションの操作画面は「画面」で表記する https://smarthr.design/products/contents/idiomatic-usage/usage/#recuyZUYZxqRrVbeB-0  smarthr/prh-rules
+  18:380  ✓ error  ダイアログ => 画面
+アプリケーションの操作画面は「画面」で表記する https://smarthr.design/products/contents/idiomatic-usage/usage/#recuyZUYZxqRrVbeB-0  smarthr/prh-rules
+  19:28   ✓ error  モーダル => 画面
+アプリケーションの操作画面は「画面」で表記する https://smarthr.design/products/contents/idiomatic-usage/usage/#recuyZUYZxqRrVbeB-0  smarthr/prh-rules
+  22:28   ✓ error  ダイアログ => 画面
+アプリケーションの操作画面は「画面」で表記する https://smarthr.design/products/contents/idiomatic-usage/usage/#recuyZUYZxqRrVbeB-0  smarthr/prh-rules
+  23:10   ✓ error  ダイアログ => 画面
+アプリケーションの操作画面は「画面」で表記する https://smarthr.design/products/contents/idiomatic-usage/usage/#recuyZUYZxqRrVbeB-0  smarthr/prh-rules
+  24:11   ✓ error  無い => ない
+平仮名にしたほうが読みやすい漢字は平仮名にする https://smarthr.design/products/contents/writing-style/                              smarthr/prh-rules
+  25:83   ✓ error  無い => ない
+平仮名にしたほうが読みやすい漢字は平仮名にする https://smarthr.design/products/contents/writing-style/                              smarthr/prh-rules
+  25:113  ✓ error  無い => ない
+平仮名にしたほうが読みやすい漢字は平仮名にする https://smarthr.design/products/contents/writing-style/                              smarthr/prh-rules
+  26:17   ✓ error  ダイアログ => 画面
+アプリケーションの操作画面は「画面」で表記する https://smarthr.design/products/contents/idiomatic-usage/usage/#recuyZUYZxqRrVbeB-0  smarthr/prh-rules
+  26:75   ✓ error  ダイアログ => 画面
+アプリケーションの操作画面は「画面」で表記する https://smarthr.design/products/contents/idiomatic-usage/usage/#recuyZUYZxqRrVbeB-0  smarthr/prh-rules
+  26:85   ✓ error  ダイアログ => 画面
+アプリケーションの操作画面は「画面」で表記する https://smarthr.design/products/contents/idiomatic-usage/usage/#recuyZUYZxqRrVbeB-0  smarthr/prh-rules
+
+✖ 61 problems (61 errors, 0 warnings, 0 infos)
+✓ 57 fixable problems.
+Try to run: $ textlint --fix [file]

@@ -46,7 +46,7 @@ const PostActions: FC<{ post: Post }> = ({ post }) => {
       <Cluster align="center" gap={0.75}>
         <Text size="S">ログインすると、自分が書く投稿を編集できます。</Text>
         <Button size="S" onClick={handleLogin}>
-          Slack でログイン
+          Slackでログイン
         </Button>
       </Cluster>
     )
@@ -99,7 +99,7 @@ export const PostPage: FC<{ post: Post }> = ({ post }) => {
     },
     { term: '公開日', description: post.publishedDate ? formatDate(post.publishedDate, true) : '' },
     {
-      term: '記事の URL',
+      term: '記事のURL',
       description: post.url ? (
         <TextLink href={post.url} target="_blank">
           {post.url}

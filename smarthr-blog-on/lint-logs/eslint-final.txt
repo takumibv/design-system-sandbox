@@ -1,0 +1,175 @@
+
+/home/user/design-system-sandbox/smarthr-blog-on/src/components/AppLayout.tsx
+  16:25  warning  子要素に文字列リテラル "Gaji-Labo のサイト（新しいタブで開きます）" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text  smarthr/require-i18n-text
+  86:44  warning  子要素に文字列リテラル "Slack でログイン" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                 smarthr/require-i18n-text
+
+/home/user/design-system-sandbox/smarthr-blog-on/src/components/DataState.tsx
+  31:51  warning  子要素に文字列リテラル "再読み込み" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                               smarthr/require-i18n-text
+  36:15  warning  子要素に文字列リテラル "を読み込めませんでした。通信状況を確認して、再読み込みしてください。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text  smarthr/require-i18n-text
+
+/home/user/design-system-sandbox/smarthr-blog-on/src/components/PostDialogs.tsx
+  268:12  warning  子要素に文字列リテラル "「" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                               smarthr/require-i18n-text
+  268:25  warning  子要素に文字列リテラル "」を公開済みにします。公開日と記事の URL を記録してください。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text               smarthr/require-i18n-text
+  315:31  warning  DefinitionListItemのterm属性に文字列リテラル "タイトル" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                      smarthr/require-i18n-text
+  319:49  warning  子要素に文字列リテラル "書くのをやめただけの場合は、削除せずにステータスを「取りやめ」にすると、記録として残せます。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text  smarthr/require-i18n-text
+
+/home/user/design-system-sandbox/smarthr-blog-on/src/components/PostParts.tsx
+  37:46  warning  子要素に文字列リテラル "公開予定日を" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text   smarthr/require-i18n-text
+  37:61  warning  子要素に文字列リテラル "日過ぎています" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text  smarthr/require-i18n-text
+  69:30  warning  子要素に文字列リテラル "・" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text        smarthr/require-i18n-text
+
+/home/user/design-system-sandbox/smarthr-blog-on/src/pages/MembersPage.tsx
+  14:29  warning  子要素に文字列リテラル "予定なし" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                  smarthr/require-i18n-text
+  16:23  warning  子要素に文字列リテラル "本" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                     smarthr/require-i18n-text
+  25:15  warning  子要素に文字列リテラル "名前" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                    smarthr/require-i18n-text
+  26:15  warning  子要素に文字列リテラル "役割" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                    smarthr/require-i18n-text
+  27:29  warning  子要素に文字列リテラル "公開済み" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                  smarthr/require-i18n-text
+  28:29  warning  子要素に文字列リテラル "これからの予定" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                               smarthr/require-i18n-text
+  29:15  warning  子要素に文字列リテラル "最後に公開した日" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                              smarthr/require-i18n-text
+  30:15  warning  子要素に文字列リテラル "次の公開予定日" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                               smarthr/require-i18n-text
+  40:44  warning  子要素に文字列リテラル "本" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                     smarthr/require-i18n-text
+  66:62  warning  子要素に文字列リテラル "公開済み：" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                 smarthr/require-i18n-text
+  67:33  warning  子要素に文字列リテラル "本／これからの予定：" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                            smarthr/require-i18n-text
+  68:21  warning  子要素に文字列リテラル "最後に公開した日：" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                             smarthr/require-i18n-text
+  69:78  warning  子要素に文字列リテラル "／次の公開予定日：" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                             smarthr/require-i18n-text
+  88:22  warning  子要素に文字列リテラル "書く人" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                   smarthr/require-i18n-text
+  89:12  warning  子要素に文字列リテラル "メンバーごとの、公開済みの本数とこれからの予定です。これからの予定が少ない順に並べています。名前を押すと、その人の投稿計画を表示します。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text  smarthr/require-i18n-text
+  96:22  warning  子要素に文字列リテラル "メンバー" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                  smarthr/require-i18n-text
+  98:37  warning  子要素に文字列リテラル "これからの予定がない人：" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                          smarthr/require-i18n-text
+  99:89  warning  子要素に文字列リテラル "人）" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                    smarthr/require-i18n-text
+
+/home/user/design-system-sandbox/smarthr-blog-on/src/pages/MinePage.tsx
+  52:24  warning  子要素に文字列リテラル "自分の担当" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                   smarthr/require-i18n-text
+  54:71  warning  子要素に文字列リテラル "投稿を追加" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                   smarthr/require-i18n-text
+  70:45  warning  子要素に文字列リテラル "Slack でログイン" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text             smarthr/require-i18n-text
+  77:34  warning  子要素に文字列リテラル "さんが書く投稿はありません。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text          smarthr/require-i18n-text
+  78:84  warning  子要素に文字列リテラル "投稿を追加" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                   smarthr/require-i18n-text
+  86:43  warning  Groupのtitle属性に文字列リテラル "公開予定日を過ぎた投稿" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text   smarthr/require-i18n-text
+  87:20  warning  Groupのtitle属性に文字列リテラル "これから公開する投稿" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text    smarthr/require-i18n-text
+  88:20  warning  Groupのtitle属性に文字列リテラル "公開予定日が未定の投稿" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text   smarthr/require-i18n-text
+  89:20  warning  Groupのtitle属性に文字列リテラル "公開済み・取りやめの投稿" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text  smarthr/require-i18n-text
+
+/home/user/design-system-sandbox/smarthr-blog-on/src/pages/PlanPage.tsx
+   59:46   warning  子要素に文字列リテラル "表示中の期間に、予定のない週と、公開予定日を過ぎた投稿はありません。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                        smarthr/require-i18n-text
+   66:40   warning  子要素に文字列リテラル "公開予定日を過ぎても公開されていない投稿が" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                     smarthr/require-i18n-text
+   67:52   warning  子要素に文字列リテラル "件あります。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                    smarthr/require-i18n-text
+   73:55   warning  子要素に文字列リテラル "・予定日" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                      smarthr/require-i18n-text
+   73:88   warning  子要素に文字列リテラル "・" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                         smarthr/require-i18n-text
+   73:105  warning  子要素に文字列リテラル "日超過）" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                      smarthr/require-i18n-text
+   81:40   warning  子要素に文字列リテラル "投稿予定のない週が" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                 smarthr/require-i18n-text
+   82:37   warning  子要素に文字列リテラル "週あります。書く人を探して、予定を入れてください。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                 smarthr/require-i18n-text
+  110:22   warning  子要素に文字列リテラル "さんが書く投稿：" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                  smarthr/require-i18n-text
+  116:37   warning  子要素に文字列リテラル "自分の担当を見る" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                  smarthr/require-i18n-text
+  126:34   warning  子要素に文字列リテラル "今週" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                        smarthr/require-i18n-text
+  128:23   warning  子要素に文字列リテラル "本" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                         smarthr/require-i18n-text
+  136:44   warning  子要素に文字列リテラル "この週に該当する投稿はありません。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                         smarthr/require-i18n-text
+  140:45   warning  子要素に文字列リテラル "この週は投稿予定がありません。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                           smarthr/require-i18n-text
+  142:45   warning  子要素に文字列リテラル "この週は公開された投稿がありませんでした。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                     smarthr/require-i18n-text
+  210:33   warning  子要素に文字列リテラル "表示" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                        smarthr/require-i18n-text
+  214:78   warning  子要素に文字列リテラル "前の" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                        smarthr/require-i18n-text
+  215:27   warning  子要素に文字列リテラル "週" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                         smarthr/require-i18n-text
+  217:79   warning  子要素に文字列リテラル "次の" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                        smarthr/require-i18n-text
+  218:27   warning  子要素に文字列リテラル "週" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                         smarthr/require-i18n-text
+  246:63   warning  子要素に文字列リテラル "投稿を追加" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                     smarthr/require-i18n-text
+  250:38   warning  子要素に文字列リテラル "ログインすると投稿を追加できます。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                         smarthr/require-i18n-text
+  259:24   warning  子要素に文字列リテラル "投稿計画" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                      smarthr/require-i18n-text
+  260:14   warning  子要素に文字列リテラル "週ごとの投稿予定と、公開済みの投稿です。週 1 本以上の公開を目標にしています。予定のない週や、公開予定日を過ぎた投稿がないか確認してください。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text  smarthr/require-i18n-text
+  277:24   warning  子要素に文字列リテラル "週ごとの予定" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                    smarthr/require-i18n-text
+  284:24   warning  子要素に文字列リテラル "投稿はありません。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                 smarthr/require-i18n-text
+  286:90   warning  子要素に文字列リテラル "投稿を追加" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                                     smarthr/require-i18n-text
+  298:47   warning  子要素に文字列リテラル "さんが書く投稿だけを表示しています。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                        smarthr/require-i18n-text
+  305:28   warning  子要素に文字列リテラル "該当する投稿はありません。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                             smarthr/require-i18n-text
+  307:33   warning  子要素に文字列リテラル "別の条件を試してください。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                             smarthr/require-i18n-text
+  321:24   warning  子要素に文字列リテラル "公開予定日が未定の投稿" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                                               smarthr/require-i18n-text
+
+/home/user/design-system-sandbox/smarthr-blog-on/src/pages/PostPage.tsx
+   47:24  warning  子要素に文字列リテラル "ログインすると、自分が書く投稿を編集できます。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                      smarthr/require-i18n-text
+   48:48  warning  子要素に文字列リテラル "Slack でログイン" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                  smarthr/require-i18n-text
+   55:27  warning  子要素に文字列リテラル "この投稿は、書く人と編集担当だけが編集できます。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                     smarthr/require-i18n-text
+   59:59  warning  子要素に文字列リテラル "編集" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                           smarthr/require-i18n-text
+   63:72  warning  子要素に文字列リテラル "公開済みにする" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                      smarthr/require-i18n-text
+   69:70  warning  子要素に文字列リテラル "削除" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                           smarthr/require-i18n-text
+  116:72  warning  子要素に文字列リテラル "投稿計画" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                         smarthr/require-i18n-text
+  128:32  warning  子要素に文字列リテラル "この投稿は取りやめになっています。再開する場合は、編集してステータスを変えてください。" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text  smarthr/require-i18n-text
+  135:24  warning  子要素に文字列リテラル "投稿の情報" が指定されています。多言語化対応のため、翻訳関数を使用してください
+ - 詳細: https://github.com/kufu/tamatebako/tree/master/packages/eslint-plugin-smarthr/rules/require-i18n-text                                        smarthr/require-i18n-text
+
+✖ 78 problems (0 errors, 78 warnings)
+

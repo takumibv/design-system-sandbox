@@ -74,6 +74,6 @@ export const StoreProvider: FC<{ children: ReactNode }> = ({ children }) => {
 
 export const useStore = () => {
   const value = useContext(StoreContext)
-  if (!value) throw new Error('StoreProvider がありません')
+  if (!value) throw new Error('StoreProviderがありません')
   return value
 }

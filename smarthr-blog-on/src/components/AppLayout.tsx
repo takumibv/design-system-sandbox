@@ -13,7 +13,7 @@ const GajiLaboLogo: FC = () => (
   <span className="shr-flex shr-items-center shr-px-0.75 shr-py-0.5 shr-text-white">
     { }
     <span dangerouslySetInnerHTML={{ __html: logoMarkup }} className="shr-flex" />
-    <VisuallyHiddenText>Gaji-Labo のサイト（新しいタブで開きます）</VisuallyHiddenText>
+    <VisuallyHiddenText>Gaji-Laboのサイト（新しいタブで開きます）</VisuallyHiddenText>
   </span>
 )
 
@@ -40,7 +40,7 @@ const NavAnchor = forwardRef<HTMLAnchorElement, { href: string; children: ReactN
 const RESULT_MESSAGES: Record<string, { type: 'success' | 'error'; text: string }> = {
   login: {
     type: 'success',
-    text: 'Slack でログインしました。自分が書く投稿の公開予定日の前日に、Slack で通知します（デモのため送信はしません）。',
+    text: 'Slackでログインしました。自分が書く投稿の公開予定日の前日に、Slackで通知します（デモのため送信はしません）。',
   },
   added: { type: 'success', text: '投稿を追加しました。' },
   saved: { type: 'success', text: '投稿を保存しました。' },
@@ -58,11 +58,11 @@ export const AppLayout: FC<{ children: ReactNode }> = ({ children }) => {
 
   // ロゴは https://www.gaji.jp/ を別タブで開く（ブリーフ）。AppHeader のロゴリンクは target を受け取らないため、描画後に属性を足す。
   useEffect(() => {
-    const anchor = document.querySelector<HTMLAnchorElement>('.smarthr-ui-Header-logoLink')
-    if (anchor) {
+    // デスクトップ用とモバイル用で 2 つ描画されるため、すべてに付ける
+    document.querySelectorAll<HTMLAnchorElement>('.smarthr-ui-Header-logoLink').forEach((anchor) => {
       anchor.target = '_blank'
       anchor.rel = 'noopener noreferrer'
-    }
+    })
   })
 
   const navigations = useMemo(() => {
@@ -84,7 +84,7 @@ export const AppLayout: FC<{ children: ReactNode }> = ({ children }) => {
 
   const loginButton = viewer ? null : (
     <Button size="S" onClick={handleLogin}>
-      Slack でログイン
+      Slackでログイン
     </Button>
   )
 
@@ -102,9 +102,10 @@ export const AppLayout: FC<{ children: ReactNode }> = ({ children }) => {
         logoHref="https://www.gaji.jp/"
         userInfo={viewer ? { lastName, firstName } : null}
         navigations={navigations}
-        desktopAdditionalContent={loginButton}
-        mobileAdditionalContent={loginButton}
-      />
+      >
+        {/* desktopAdditionalContent はログイン中のユーザーメニューの中にしか出ないため、未ログインのボタンは children に置く */}
+        {loginButton}
+      </AppHeader>
       {message && (
         <NotificationBar
           type={message.type}

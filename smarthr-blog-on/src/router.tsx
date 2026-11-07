@@ -85,7 +85,7 @@ export const RouterProvider: FC<{ children: ReactNode }> = ({ children }) => {
 
 export const useRouter = () => {
   const value = useContext(RouterContext)
-  if (!value) throw new Error('RouterProvider がありません')
+  if (!value) throw new Error('RouterProviderがありません')
   return value
 }
 

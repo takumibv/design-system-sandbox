@@ -105,7 +105,7 @@ const MyNotice: FC<{ posts: Post[] }> = ({ posts }) => {
   const first = [...overdue, ...near][0]
   const days = daysUntil(first)
   return (
-    <Cluster align="center" gap={{ row: 0.25, column: 0.5 }}>
+    <Stack gap={0.25} align="flex-start">
       <ResponseMessage status={overdue.length > 0 ? 'warning' : 'info'}>
         {viewer.name}さんが書く投稿：
         {overdue.length > 0 ? `公開予定日を過ぎた投稿が${overdue.length}件、` : ''}
@@ -114,7 +114,7 @@ const MyNotice: FC<{ posts: Post[] }> = ({ posts }) => {
       </ResponseMessage>
       {/* ResponseMessage の中にリンクを置くと、読み上げ用の領域で aria-hidden の中にフォーカスできる要素ができる（axe aria-hidden-focus） */}
       <AppLink href={href('/mine')}>自分の担当を見る</AppLink>
-    </Cluster>
+    </Stack>
   )
 }
 
@@ -258,7 +258,7 @@ export const PlanPage: FC = () => {
         <Stack gap={0.5}>
           <PageHeading>投稿計画</PageHeading>
           <p>
-            週ごとの投稿予定と、公開済みの投稿です。週 1 本以上の公開を目標にしています。予定のない週や、公開予定日を過ぎた投稿がないか確認してください。
+            週ごとの投稿予定と、公開済みの投稿です。週1本以上の公開を目標にしています。予定のない週や、公開予定日を過ぎた投稿がないか確認してください。
           </p>
         </Stack>
         <DataState what="投稿計画">

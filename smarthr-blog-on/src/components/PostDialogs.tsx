@@ -61,10 +61,10 @@ type Errors = Partial<Record<'title' | 'authors' | 'publishedDate' | 'url', stri
 const validate = (form: FormState): Errors => {
   const errors: Errors = {}
   if (!form.title.trim()) errors.title = 'タイトルを入力してください。仮のタイトルでもかまいません。'
-  if (form.authors.length === 0) errors.authors = '書く人を 1 人以上選んでください。'
+  if (form.authors.length === 0) errors.authors = '書く人を1人以上選んでください。'
   if (form.status === 'published' && !isValidDate(form.publishedDate))
     errors.publishedDate = '公開済みにする場合は、公開日を入力してください。'
-  if (form.url && !/^https?:\/\//.test(form.url)) errors.url = '記事の URL は https:// から入力してください。'
+  if (form.url && !/^https?:\/\//.test(form.url)) errors.url = '記事のURLはhttps://から入力してください。'
   return errors
 }
 
@@ -113,6 +113,15 @@ export const PostFormDialog: FC<{ post: Post | null; isOpen: boolean; onClose: (
     [],
   )
 
+  // 必須の未入力はブラウザ標準のツールチップではなく FormControl の errorMessages で伝える（FormControl のチェックリスト）
+  const handleInvalid = useCallback(
+    (e: FormEvent<HTMLInputElement>) => {
+      e.preventDefault()
+      setErrors(validate(form))
+    },
+    [form],
+  )
+
   const handleSubmit = useCallback(
     (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault()
@@ -152,8 +161,8 @@ export const PostFormDialog: FC<{ post: Post | null; isOpen: boolean; onClose: (
       size="M"
     >
       <Stack gap={1.5}>
-        <FormControl label="タイトル" statusLabels={<RequiredLabel />} errorMessages={errors.title}>
-          <Input name="title" value={form.title} onChange={handleChangeText} required width="100%" />
+        <FormControl label="タイトル" statusLabels={[<RequiredLabel key="required" />]} errorMessages={errors.title}>
+          <Input name="title" value={form.title} onChange={handleChangeText} onInvalid={handleInvalid} required width="100%" />
         </FormControl>
         <Fieldset legend="カテゴリ">
           <Cluster gap={1.25}>
@@ -166,7 +175,7 @@ export const PostFormDialog: FC<{ post: Post | null; isOpen: boolean; onClose: (
         </Fieldset>
         <FormControl
           label="書く人"
-          statusLabels={<RequiredLabel />}
+          statusLabels={[<RequiredLabel key="required" />]}
           helpMessage="共著の場合は全員を選んでください。"
           errorMessages={errors.authors}
         >
@@ -193,10 +202,17 @@ export const PostFormDialog: FC<{ post: Post | null; isOpen: boolean; onClose: (
         </Fieldset>
         {isPublished && (
           <>
-            <FormControl label="公開日" statusLabels={<RequiredLabel />} errorMessages={errors.publishedDate}>
-              <Input type="date" name="publishedDate" value={form.publishedDate} onChange={handleChangeText} required />
+            <FormControl label="公開日" statusLabels={[<RequiredLabel key="required" />]} errorMessages={errors.publishedDate}>
+              <Input
+                type="date"
+                name="publishedDate"
+                value={form.publishedDate}
+                onChange={handleChangeText}
+                onInvalid={handleInvalid}
+                required
+              />
             </FormControl>
-            <FormControl label="記事の URL" exampleMessage="https://example.com/blog/16" errorMessages={errors.url}>
+            <FormControl label="記事のURL" exampleMessage="https://example.com/blog/16" errorMessages={errors.url}>
               <Input type="url" name="url" value={form.url} onChange={handleChangeText} width="100%" />
             </FormControl>
           </>
@@ -219,13 +235,17 @@ export const PublishDialog: FC<{ post: Post; isOpen: boolean; onClose: () => voi
 
   const handleChangeDate = useCallback((e: ChangeEvent<HTMLInputElement>) => setPublishedDate(e.currentTarget.value), [])
   const handleChangeUrl = useCallback((e: ChangeEvent<HTMLInputElement>) => setUrl(e.currentTarget.value), [])
+  const handleInvalid = useCallback((e: FormEvent<HTMLInputElement>) => {
+    e.preventDefault()
+    setErrors({ publishedDate: '公開日を入力してください。' })
+  }, [])
 
   const handleSubmit = useCallback(
     (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault()
       const nextErrors: Errors = {}
       if (!isValidDate(publishedDate)) nextErrors.publishedDate = '公開日を入力してください。'
-      if (url && !/^https?:\/\//.test(url)) nextErrors.url = '記事の URL は https:// から入力してください。'
+      if (url && !/^https?:\/\//.test(url)) nextErrors.url = '記事のURLはhttps://から入力してください。'
       setErrors(nextErrors)
       if (Object.keys(nextErrors).length > 0 || forcedFailure) return
       savePost({ ...post, status: 'published', publishedDate, url: url || undefined })
@@ -245,11 +265,18 @@ export const PublishDialog: FC<{ post: Post; isOpen: boolean; onClose: () => voi
       size="S"
     >
       <Stack gap={1.5}>
-        <p>「{post.title}」を公開済みにします。公開日と記事の URL を記録してください。</p>
-        <FormControl label="公開日" statusLabels={<RequiredLabel />} errorMessages={errors.publishedDate}>
-          <Input type="date" name="publishedDate" value={publishedDate} onChange={handleChangeDate} required />
+        <p>「{post.title}」を公開済みにします。公開日と記事のURL を記録してください。</p>
+        <FormControl label="公開日" statusLabels={[<RequiredLabel key="required" />]} errorMessages={errors.publishedDate}>
+          <Input
+            type="date"
+            name="publishedDate"
+            value={publishedDate}
+            onChange={handleChangeDate}
+            onInvalid={handleInvalid}
+            required
+          />
         </FormControl>
-        <FormControl label="記事の URL" exampleMessage="https://example.com/blog/16" errorMessages={errors.url}>
+        <FormControl label="記事のURL" exampleMessage="https://example.com/blog/16" errorMessages={errors.url}>
           <Input type="url" name="url" value={url} onChange={handleChangeUrl} width="100%" />
         </FormControl>
       </Stack>
