@@ -10,6 +10,7 @@
 - 他のデザインシステムの AI 対応調査：[docs/design-system-ai-survey.md](docs/design-system-ai-survey.md)
 - 要件だけから設計させた 4 つのハーネス比較：[docs/harness-comparison.md](docs/harness-comparison.md)
 - ハーネスあり／なしの対照実験：[docs/harness-ablation.md](docs/harness-ablation.md)
+- 情報構造を渡さないブリーフでの比較（社内ブログ投稿計画）：[docs/blog-ia-comparison.md](docs/blog-ia-comparison.md)
 - 原本の props、状態、固定データ（[`src/fixtures.ts`](src/fixtures.ts)）はそのまま使いました。見た目だけを ADS に置き換えています。
 
 ## 結論（要約）
