@@ -1,0 +1,2 @@
+Error: Component 'Col' not found
+Suggestion: Did you mean 'Collapse'?

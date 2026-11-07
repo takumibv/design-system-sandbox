@@ -1,0 +1,13 @@
+Usage: antd lint [options] [target]
+
+Check antd usage against best practices
+
+Options:
+  --only <category>      Only check specific category (deprecated, a11y, usage,
+                         performance)
+  --antd-alias <source>  Treat additional package names as aliases of antd
+                         imports (default: [])
+  --diff [base]          Only lint files changed from a git diff base (default:
+                         origin/main, fallback: HEAD)
+  --staged               Only lint staged git files
+  -h, --help             display help for command

@@ -1,0 +1,39 @@
+Timeline (时间轴) — Vertical display timeline.
+
+Property     Type                                                                                                                           Default              Since
+-----------  -----------------------------------------------------------------------------------------------------------------------------  -------------------  -----
+classNames   Record<[SemanticDOM](#semantic-dom), string> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), string>                -                    -    
+items        [Items](#items)[]                                                                                                              -                    -    
+mode         `start` | `alternate` | `end`                                                                                                  `start`              -    
+orientation  `vertical` | `horizontal`                                                                                                      `vertical`           -    
+pending      ReactNode                                                                                                                      false                -    
+pendingDot   ReactNode                                                                                                                      <LoadingOutlined />  -    
+reverse      boolean                                                                                                                        false                -    
+styles       Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>  -                    -    
+titleSpan    number | string                                                                                                                12                   -    
+variant      `filled` | `outlined`                                                                                                          `outlined`           -    
+
+Timeline.Items
+
+Property   Type             Default  Since
+---------  ---------------  -------  -----
+color      string           `blue`   -    
+content    ReactNode        -        -    
+children   ReactNode        -        -    
+dot        ReactNode        -        -    
+icon       ReactNode        -        -    
+label      ReactNode        -        -    
+loading    boolean          false    -    
+placement  `start` | `end`  -        -    
+position   `start` | `end`  -        -    
+title      ReactNode        -        -    
+
+Common Props (inherited by all components, not listed individually)
+
+Property       Type           Default
+-------------  -------------  -------
+className      string         -      
+style          CSSProperties  -      
+rootClassName  string         -      
+
+Extends <div> — supports native HTML div attributes.

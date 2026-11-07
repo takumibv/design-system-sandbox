@@ -1,0 +1,58 @@
+Drawer (抽屉) — A panel that slides out from the edge of the screen.
+
+Property             Type                                                                                                                           Default            Since                
+-------------------  -----------------------------------------------------------------------------------------------------------------------------  -----------------  ---------------------
+afterOpenChange      function(open)                                                                                                                 -                  -                    
+bodyStyle            CSSProperties                                                                                                                  -                  -                    
+className            string                                                                                                                         -                  -                    
+classNames           Record<[SemanticDOM](#semantic-dom), string> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), string>                -                  -                    
+closable             boolean | { closeIcon?: React.ReactNode; disabled?: boolean; placement?: 'start' | 'end' }                                     true               placement: 5.28.0    
+contentWrapperStyle  CSSProperties                                                                                                                  -                  -                    
+destroyOnClose       boolean                                                                                                                        false              -                    
+destroyOnHidden      boolean                                                                                                                        false              5.25.0               
+drawerStyle          CSSProperties                                                                                                                  -                  -                    
+extra                ReactNode                                                                                                                      -                  4.17.0               
+footer               ReactNode                                                                                                                      -                  -                    
+footerStyle          CSSProperties                                                                                                                  -                  -                    
+forceRender          boolean                                                                                                                        false              -                    
+focusable            `{ trap?: boolean, focusTriggerAfterClose?: boolean }`                                                                         -                  6.2.0                
+getContainer         HTMLElement | () => HTMLElement | Selectors | false                                                                            body               -                    
+headerStyle          CSSProperties                                                                                                                  -                  -                    
+height               string | number                                                                                                                378                -                    
+keyboard             boolean                                                                                                                        true               -                    
+loading              boolean                                                                                                                        false              5.17.0               
+mask                 boolean | `{ enabled?: boolean, blur?: boolean, closable?: boolean }`                                                          true               mask.closable: 6.3.0 
+maskClosable         boolean                                                                                                                        true               -                    
+maskStyle            CSSProperties                                                                                                                  -                  -                    
+maxSize              number                                                                                                                         -                  6.0.0                
+open                 boolean                                                                                                                        false              -                    
+placement            `top` | `right` | `bottom` | `left`                                                                                            `right`            -                    
+push                 boolean | { distance: string | number }                                                                                        { distance: 180 }  4.5.0+               
+resizable            boolean | [ResizableConfig](#resizableconfig)                                                                                  -                  boolean: 6.1.0       
+rootStyle            CSSProperties                                                                                                                  -                  -                    
+size                 'default' | 'large' | number | string                                                                                          'default'          4.17.0, string: 6.2.0
+style                CSSProperties                                                                                                                  -                  -                    
+styles               Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>  -                  -                    
+title                ReactNode                                                                                                                      -                  -                    
+width                string | number                                                                                                                378                -                    
+zIndex               number                                                                                                                         1000               -                    
+onClose              function(e)                                                                                                                    -                  -                    
+drawerRender         (node: ReactNode) => ReactNode                                                                                                 -                  5.18.0               
+
+Drawer.ResizableConfig
+
+Property       Type                    Default  Since
+-------------  ----------------------  -------  -----
+onResizeStart  () => void              -        6.0.0
+onResize       (size: number) => void  -        6.0.0
+onResizeEnd    () => void              -        6.0.0
+
+Common Props (inherited by all components, not listed individually)
+
+Property       Type           Default
+-------------  -------------  -------
+className      string         -      
+style          CSSProperties  -      
+rootClassName  string         -      
+
+Extends <div> — supports native HTML div attributes.

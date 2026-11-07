@@ -1,0 +1,14 @@
+Usage: antd setup [options]
+
+Set up Ant Design MCP/Skill for AI agents or GitHub Actions
+
+Options:
+  --client <client>     Agent client: claude, cursor, vscode, codex, or
+                        github-actions
+  --mode <mode>         Setup mode: mcp, skill, both, or ci
+  --project <dir>       Project directory to write config into (default:
+                        "/home/user/design-system-sandbox/antd-blog-on")
+  --dry-run             Preview the config without writing files
+  --check               Check whether the agent is already configured
+  --write-instructions  Write agent instructions for using the antd MCP server
+  -h, --help            display help for command

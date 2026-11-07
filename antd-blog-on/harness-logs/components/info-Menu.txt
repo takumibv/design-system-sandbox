@@ -1,0 +1,64 @@
+Menu (导航菜单) — A versatile menu for navigation.
+
+Property              Type                                                                                                                            Default                 Since 
+--------------------  ------------------------------------------------------------------------------------------------------------------------------  ----------------------  ------
+classNames            Record<[SemanticDOM](#semantic-dom), string> | (info: { props }) => Record<[SemanticDOM](#semantic-dom), string>                -                       -     
+defaultOpenKeys       string[]                                                                                                                        -                       -     
+defaultSelectedKeys   string[]                                                                                                                        -                       -     
+expandIcon            ReactNode | `(props: SubMenuProps & { isSubMenu: boolean }) => ReactNode`                                                       -                       4.9.0 
+forceSubMenuRender    boolean                                                                                                                         false                   -     
+inlineCollapsed       boolean                                                                                                                         -                       -     
+inlineIndent          number                                                                                                                          24                      -     
+items                 [ItemType[]](#itemtype)                                                                                                         -                       4.20.0
+mode                  `vertical` | `horizontal` | `inline`                                                                                            `vertical`              -     
+multiple              boolean                                                                                                                         false                   -     
+openKeys              string[]                                                                                                                        -                       -     
+overflowedIndicator   ReactNode                                                                                                                       `<EllipsisOutlined />`  -     
+selectable            boolean                                                                                                                         true                    -     
+selectedKeys          string[]                                                                                                                        -                       -     
+styles                Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props }) => Record<[SemanticDOM](#semantic-dom), CSSProperties>  -                       -     
+subMenuCloseDelay     number                                                                                                                          0.1                     -     
+subMenuOpenDelay      number                                                                                                                          0                       -     
+tooltip               false | TooltipProps                                                                                                            -                       6.3.0 
+theme                 `light` | `dark`                                                                                                                `light`                 -     
+triggerSubMenuAction  `hover` | `click`                                                                                                               `hover`                 -     
+onClick               function({ key, keyPath, domEvent, itemData })                                                                                  -                       -     
+onDeselect            function({ key, keyPath, selectedKeys, domEvent, itemData })                                                                    -                       -     
+onOpenChange          function(openKeys: string[])                                                                                                    -                       -     
+onSelect              function({ key, keyPath, selectedKeys, domEvent, itemData })                                                                    -                       -     
+popupRender           (node: ReactElement, props: { item: SubMenuProps; keys: string[] }) => ReactNode                                                -                       -     
+
+Menu.ItemType
+
+Property        Type                                                                              Default  Since 
+--------------  --------------------------------------------------------------------------------  -------  ------
+danger          boolean                                                                           false    -     
+disabled        boolean                                                                           false    -     
+extra           ReactNode                                                                         -        5.21.0
+icon            ReactNode                                                                         -        -     
+key             string                                                                            -        -     
+label           ReactNode                                                                         -        -     
+title           string                                                                            -        -     
+children        [ItemType[]](#itemtype)                                                           -        -     
+disabled        boolean                                                                           false    -     
+icon            ReactNode                                                                         -        -     
+key             string                                                                            -        -     
+label           ReactNode                                                                         -        -     
+popupClassName  string                                                                            -        -     
+popupOffset     [number, number]                                                                  -        -     
+theme           `light` | `dark`                                                                  -        -     
+onTitleClick    function({ key, domEvent })                                                       -        -     
+popupRender     (node: ReactElement, props: { item: SubMenuProps; keys: string[] }) => ReactNode  -        -     
+children        [MenuItemType[]](#menuitemtype)                                                   -        -     
+label           ReactNode                                                                         -        -     
+dashed          boolean                                                                           false    -     
+
+Common Props (inherited by all components, not listed individually)
+
+Property       Type           Default
+-------------  -------------  -------
+className      string         -      
+style          CSSProperties  -      
+rootClassName  string         -      
+
+Extends <div> — supports native HTML div attributes.
