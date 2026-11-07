@@ -1,0 +1,90 @@
+$ npx @atlaskit/ads-cli component DatePicker
+DatePicker
+@atlaskit/datetime-picker
+
+Props (34)
+  aria-describedby          string | undefined
+  Used to associate accessible descriptions to the date picker.
+  autoFocus                 boolean | undefined
+  Set the picker to autofocus on mount.
+  calendarLabel             string | undefined
+  The aria-label attribute associated with the calendar.
+  clearControlLabel         string | undefined
+  Set the `aria-label` for the clear button. Add the word "Clear" at the beginning of the clearControlLabel. For instance, for a field to set an appointment, use "Clear appointment date and time".
+  dateFormat                string | undefined
+  Format the date with a string that is accepted by [date-fns's format function](https://date-fns.org/v1.29.0/docs/format). When set, the default parser also uses this format (via date-fns) so displayed labels re-parse. Without `dateFormat`, parsing falls back to the locale. A custom `parseInputValue` overrides this default. Note that though we are using `date-fns` version 2, we use [the tokens from `date-fns` version 1](https://date-fns.org/v1.30.1/docs/format) under the hood.
+  defaultValue              string | undefined
+  The default for `value`.
+  disabled                  string[] | undefined
+  An array of ISO dates that should be disabled on the calendar. This does not affect what users can type into the picker.
+  disabledDateFilter        ((date: string) => boolean) | undefined
+  A filter function for disabling dates on the calendar. This does not affect what users can type into the picker. The function is called with a date string in the format `YYYY-MM-DD` and should return `true` if the date should be disabled.
+  formatDisplayLabel        ((value: string, dateFormat: string) => string) | undefined
+  A function for formatting the date displayed in the input. By default composes together [`date-fns`'s parse method](https://date-fns.org/v1.29.0/docs/parse) and [`date-fns`'s format method](https://date-fns.org/v1.29.0/docs/format) to return a correctly formatted date string. Note that this does not affect how the input is parsed. Use `dateFormat` for default parsing of the display format, or `parseInputValue` for a custom parser.
+  id                        string | undefined
+  Set the id of the field. Associates a `<label></label>` with the field.
+  inputLabel                string | undefined
+  The name of the input, used when `shouldShowCalendarButton` is true. See `shouldShowCalendarButton` description for more details.
+  inputLabelId              string | undefined
+  The ID of the label for the input, used when `shouldShowCalendarButton` is true. See `shouldShowCalendarButton` description for more details.
+  isDisabled                boolean | undefined
+  Set if the picker is disabled.
+  isInvalid                 boolean | undefined
+  Set if the picker has an invalid value.
+  isOpen                    boolean | undefined
+  Set if the picker is open.
+  isRequired                boolean | undefined
+  Set the field as required.
+  label                     string | undefined
+  Accessible name for the Date Picker Select, rendered as `aria-label`. This will override any other method of providing a label.
+  locale                    string | undefined
+  Locale used to format the date and calendar. See [DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat).
+  maxDate                   string | undefined
+  The latest enabled date. Dates after this are disabled on the calendar. This does not affect what users can type into the picker.
+  minDate                   string | undefined
+  The earliest enabled date. Dates before this are disabled on the calendar. This does not affect what users can type into the picker.
+  name                      string | undefined
+  The name of the field.
+  nextMonthLabel            string | undefined
+  The aria-label attribute associated with the next-month arrow.
+  onBlur                    FocusEventHandler<HTMLInputElement> | undefined
+  Called when the field is blurred.
+  onChange                  ((value: string) => void) | undefined
+  Called when the value changes. The only argument is an ISO time or empty string.
+  onFocus                   FocusEventHandler<HTMLInputElement> | undefined
+  Called when the field is focused.
+  openCalendarLabel         string | undefined
+  The label associated with the button to open the calendar, rendered via the `shouldShowCalendarButton` prop. If a `label` prop is provided, this calendar button label will be prefixed by the value of `label`. If no `label` prop is provided, this prefix should be manually added. For example, ```tsx <label id="label" htmlFor="datepicker">Desired Appointment Date</label> <DatePicker id="datepicker" shouldShowCalendarButton inputLabel="Desired Appointment Date" openCalendarLabel="open calendar" /> ```
+  parseInputValue           ((date: string, dateFormat: string) => Date) | undefined
+  A function for parsing input characters and transforming them into a Date object. Overrides the default parser. By default, when `dateFormat` is set the input is parsed with that format via date-fns; otherwise the date string is parsed based off the locale. Note that this does not affect how the resulting value is displayed in the input. Use the `dateFormat` or `formatDisplayLabel` prop to handle how the value is displayed.
+  placeholder               string | undefined
+  Placeholder text displayed in input.
+  previousMonthLabel        string | undefined
+  The aria-label attribute associated with the previous-month arrow.
+  selectProps               (Omit<SelectProps<OptionType, false>, "aria-describedby" | "aria-label" | "placeholder" | "inputId"…
+  shouldShowCalendarButton  boolean | undefined
+  Provides a functional calendar button that opens the calendar picker that lives on the right side of the date picker. The accessible name for this button is caculated using either the `label`, `inputLabel`, or `inputLabelId` props, along with the `openCalendarLabel` prop.
+  spacing                   Spacing | undefined
+  The spacing for the select control. Compact is `gridSize() * 4`, default is `gridSize * 5`.
+  value                     string | undefined
+  The ISO time used as the input value.
+  weekStartDay              0 | 1 | 2 | 3 | 4 | 5 | 6 | undefined
+  Start day of the week for the calendar. - `0` sunday (default value) - `1` monday - `2` tuesday - `3` wednesday - `4` thursday - `5` friday - `6` saturday
+
+Examples (1):
+
+Example 1
+  tsx                                                                                               
+  import DatePicker from '@atlaskit/datetime-picker/date-picker';                                   
+  import __noop from '@atlaskit/ds-lib/noop';                                                       
+  const Example = (): React.JSX.Element => (                                                        
+    <DatePicker                                                                                     
+      clearControlLabel="Clear select date"                                                         
+      onChange={__noop}                                                                             
+      shouldShowCalendarButton                                                                      
+      openCalendarLabel="open calendar"                                                             
+    />                                                                                              
+  );                                                                                                
+  export default Example;                                                                           
+
+Design: https://go.atlassian.com/figma-library-ads-13285-45993

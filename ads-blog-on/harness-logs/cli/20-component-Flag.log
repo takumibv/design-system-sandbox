@@ -1,0 +1,89 @@
+$ npx @atlaskit/ads-cli component Flag
+Flag
+@atlaskit/flag
+
+Props (15)
+  actions             ActionsType | undefined
+  Array of clickable actions to be shown at the bottom of the flag. For flags where appearance is 'normal', actions will be shown as links. For all other appearance values, actions will shown as buttons. If href is passed the action will be shown as a link with the passed href prop.
+  appearance          AppearanceTypes | undefined
+  Makes the flag appearance bold. Setting this to anything other than 'normal' hides the dismiss button.
+  autoDismissSeconds  number | undefined
+  Duration in seconds before flag gets auto dismissed. Default is 8 seconds. For a11y reasons 8s is also a strongly-suggested minimum. Only applies to auto-dismissable flags.
+  delayAnnouncement   number | undefined
+  Milliseconds to delay the screen reader announcement due to announcement conflict.
+  description         string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | It…
+  The secondary content shown below the flag title.
+  headingLevel        1 | 2 | 3 | 4 | 5 | 6 | undefined
+  Specifies the heading level in the document structure. If not specified, the default is `2`.
+  icon                string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | It…
+  The icon displayed in the top-left of the flag. Should be an instance of `@atlaskit/icon`. Your icon will receive the appropriate default color, which you can override by setting the `color` prop on the icon to your preferred icon color. If no icon is provided, a default icon will be used based on the appearance prop.
+  id                  string | number
+  A unique identifier used for rendering and onDismissed callbacks.
+  linkComponent       React.ComponentType<CustomThemeButtonProps> | undefined
+  A link component that is passed down to the `@atlaskit/button` used by actions, to allow custom routers to be used. See the [button with router](https://atlaskit.atlassian.com/packages/design-system/button/example/ButtonWithRouter) example of what this component should look like.
+  onBlur              ((e: React.FocusEvent<HTMLElement, Element>, analyticsEvent: UIAnalyticsEvent) => void) | undefined
+  Standard onBlur event, applied to Flag by AutoDismissFlag.
+  onDismissed         ((id: string | number, analyticsEvent: UIAnalyticsEvent) => void) | undefined
+  Handler which will be called when a Flag's dismiss button is clicked. Receives the id of the dismissed Flag as a parameter.
+  onFocus             ((e: React.FocusEvent<HTMLElement, Element>, analyticsEvent: UIAnalyticsEvent) => void) | undefined
+  Standard onFocus event, applied to Flag by AutoDismissFlag.
+  onMouseOut          React.MouseEventHandler<Element> | undefined
+  Standard onMouseOut event, applied to Flag by AutoDismissFlag.
+  onMouseOver         React.MouseEventHandler<Element> | undefined
+  Standard onMouseOver event, applied to Flag by AutoDismissFlag.
+  title               string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | It…
+  The bold text shown at the top of the flag.
+
+Examples (1):
+
+Example 1
+  tsx                                                                                               
+  import Flag from '@atlaskit/flag/flag';                                                           
+  import { FlagGroup } from '@atlaskit/flag/flag-group';                                            
+  import InfoIcon from '@atlaskit/icon/core/status-information';                                    
+  const Examples = (): React.JSX.Element => (                                                       
+    <>                                                                                              
+      <FlagGroup>                                                                                   
+        <Flag                                                                                       
+          id="flag-1"                                                                               
+          icon={<InfoIcon label="Info" />}                                                          
+          title="Success"                                                                           
+          description="Your changes have been saved successfully."                                  
+          appearance="success"                                                                      
+        />                                                                                          
+      </FlagGroup>                                                                                  
+      <FlagGroup>                                                                                   
+        <Flag                                                                                       
+          id="flag-2"                                                                               
+          icon={<InfoIcon label="Warning" />}                                                       
+          title="Warning"                                                                           
+          description="This action cannot be undone."                                               
+          appearance="warning"                                                                      
+          actions={[                                                                                
+            {                                                                                       
+              content: 'Proceed',                                                                   
+              onClick: () => console.log('Proceed clicked'),                                        
+            },                                                                                      
+          ]}                                                                                        
+        />                                                                                          
+      </FlagGroup>                                                                                  
+      <FlagGroup>                                                                                   
+        <Flag                                                                                       
+          id="flag-3"                                                                               
+          icon={<InfoIcon label="Error" />}                                                         
+          title="Error"                                                                             
+          description="Something went wrong. Please try again."                                     
+          appearance="error"                                                                        
+          actions={[                                                                                
+            {                                                                                       
+              content: 'Retry',                                                                     
+              onClick: () => console.log('Retry clicked'),                                          
+            },                                                                                      
+          ]}                                                                                        
+        />                                                                                          
+      </FlagGroup>                                                                                  
+    </>                                                                                             
+  );                                                                                                
+  export default Examples;                                                                          
+
+Design: https://go.atlassian.com/figma-library-ads-13544-55615

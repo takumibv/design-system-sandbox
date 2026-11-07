@@ -1,0 +1,2 @@
+$ npx @atlaskit/ads-cli search permission --type docs --limit 5
+Error: No results found for "permission".

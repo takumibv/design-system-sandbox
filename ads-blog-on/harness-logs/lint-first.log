@@ -1,0 +1,34 @@
+
+/home/user/design-system-sandbox/ads-blog-on/src/components/AppLayout.tsx
+   74:4  warning  The default value of `shouldRenderToParent` is `false`. Setting the `shouldRenderToParent` prop to anything other than `true` causes accessibility issues. Only set to `false` as a last resort  @atlaskit/design-system/use-should-render-to-parent
+  120:7  warning  Replace <img> with Image from @atlaskit/image/image. Preserve its source, dimensions and meaningful alt text; retain alt="" when the image is decorative                                         @atlaskit/design-system/no-html-image
+
+/home/user/design-system-sandbox/ads-blog-on/src/components/PageStates.tsx
+  53:3  warning  Set SectionMessage.headingLevel to the semantic heading level matching its place in the page outline, for example headingLevel={2} below the page heading; do not choose the level for visual size  @atlaskit/design-system/use-heading-level-in-section-message
+
+/home/user/design-system-sandbox/ads-blog-on/src/components/PeriodPicker.tsx
+  52:6  warning  Remove placeholder from this input and put its instructions in persistent helper text. Give the helper an id and include that id in the input's aria-describedby, preserving any existing described-by ids and label  @atlaskit/design-system/no-placeholder
+  68:6  warning  Remove placeholder from this input and put its instructions in persistent helper text. Give the helper an id and include that id in the input's aria-describedby, preserving any existing described-by ids and label  @atlaskit/design-system/no-placeholder
+
+/home/user/design-system-sandbox/ads-blog-on/src/components/RouterLink.tsx
+  14:4  warning  Replace <a> with Link from @atlaskit/link/link, or named Anchor from @atlaskit/primitives/compiled/anchor for a custom link. Preserve href, navigation behavior and link text  @atlaskit/design-system/no-html-anchor
+
+/home/user/design-system-sandbox/ads-blog-on/src/pages/PlanPage.tsx
+   85:5  warning  Set SectionMessage.headingLevel to the semantic heading level matching its place in the page outline, for example headingLevel={2} below the page heading; do not choose the level for visual size  @atlaskit/design-system/use-heading-level-in-section-message
+  109:5  warning  Set SectionMessage.headingLevel to the semantic heading level matching its place in the page outline, for example headingLevel={2} below the page heading; do not choose the level for visual size  @atlaskit/design-system/use-heading-level-in-section-message
+  153:5  warning  Set SectionMessage.headingLevel to the semantic heading level matching its place in the page outline, for example headingLevel={2} below the page heading; do not choose the level for visual size  @atlaskit/design-system/use-heading-level-in-section-message
+
+/home/user/design-system-sandbox/ads-blog-on/src/pages/PostFormPage.tsx
+  151:9  warning  Set SectionMessage.headingLevel to the semantic heading level matching its place in the page outline, for example headingLevel={2} below the page heading; do not choose the level for visual size                        @atlaskit/design-system/use-heading-level-in-section-message
+  192:8  warning  Remove placeholder from this input and put its instructions in persistent helper text. Give the helper an id and include that id in the input's aria-describedby, preserving any existing described-by ids and label      @atlaskit/design-system/no-placeholder
+  210:8  warning  Remove placeholder from this input and put its instructions in persistent helper text. Give the helper an id and include that id in the input's aria-describedby, preserving any existing described-by ids and label      @atlaskit/design-system/no-placeholder
+  256:8  warning  Add the React autoComplete prop to this Textfield: use "email" for type="email", "tel" for type="tel", or "url" for type="url" when that is the input's purpose. Use a more specific HTML autocomplete token when needed  @atlaskit/design-system/use-textfield-autocomplete
+
+/home/user/design-system-sandbox/ads-blog-on/src/pages/PostPage.tsx
+  142:7  warning  Add the React autoComplete prop to this Textfield: use "email" for type="email", "tel" for type="tel", or "url" for type="url" when that is the input's purpose. Use a more specific HTML autocomplete token when needed  @atlaskit/design-system/use-textfield-autocomplete
+  177:4  warning  The default value of `shouldRenderToParent` is `false`. Setting the `shouldRenderToParent` prop to anything other than `true` causes accessibility issues. Only set to `false` as a last resort                           @atlaskit/design-system/use-should-render-to-parent
+  248:7  warning  Set SectionMessage.headingLevel to the semantic heading level matching its place in the page outline, for example headingLevel={2} below the page heading; do not choose the level for visual size                        @atlaskit/design-system/use-heading-level-in-section-message
+
+✖ 16 problems (0 errors, 16 warnings)
+  0 errors and 2 warnings potentially fixable with the `--fix` option.
+

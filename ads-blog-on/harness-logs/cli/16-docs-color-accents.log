@@ -1,0 +1,160 @@
+$ npx @atlaskit/ads-cli docs color accents
+# Color
+
+Use color tokens to communicate intent, hierarchy, and interaction in Atlassian UI. Start with the
+existing ADS component treatment; use these choices when styling custom UI or reviewing a token
+choice.
+
+## Choose the token family
+
+1. Identify what the color communicates. Use a semantic role for status, validation, actions, or
+   discovery. Use an accent when the hue identifies a category and could change without changing its
+   meaning. See the Color accents guidance for hue and pairing choices.
+2. Choose the background emphasis that fits the intended hierarchy.
+3. Pair it with the text, icon, and border tokens for that role and emphasis.
+4. For interactive UI, apply the state to the element that owns the interaction. Preserve separate
+   cues for persistent selection and keyboard focus.
+
+Apply tokens with `token('color...')` from `@atlaskit/tokens`. Tokens resolve for light and dark
+themes, so use their semantic names instead of copying palette values or hardcoded colors.
+
+## Read token names
+
+Most tokens follow `color.[property].[role].[emphasis].[state]`:
+
+- **Property** describes where the color is applied: `background`, `text`, `icon`, or `border`.
+- **Role** describes its intent: `brand`, `danger`, `warning`, `success`, `information`,
+  `discovery`, `neutral`, `selected`, `focused`, `input`, or `accent.[hue]`.
+- **Emphasis** describes contrast against the default surface: `bold`, `bolder`, `boldest`,
+  `subtle`, `subtler`, or `subtlest`.
+- **State** describes an interaction state such as `hovered` or `pressed`.
+
+Accent tokens place the hue after the role, for example `color.background.accent.blue.subtlest`.
+Look up exceptions such as `color.link`, `color.blanket`, `color.skeleton`, and `color.chart.*` in
+the token catalog rather than extending the pattern.
+
+## Choose a semantic role
+
+| Role           | Choose it for                                     | Example use                         |
+| :------------- | :------------------------------------------------ | :---------------------------------- |
+| `danger`       | Destructive actions, errors, or critical failures | Error message or destructive action |
+| `warning`      | Caution, risk, or something that needs attention  | Risk notice                         |
+| `success`      | A successful, completed, or valid state           | Completion message                  |
+| `information`  | A passive informational message                   | Informational notice                |
+| `brand`        | Primary actions or product identity               | Primary action                      |
+| `discovery`    | Discovery, AI, or a new feature                   | New feature callout                 |
+| `neutral`      | Base surfaces and neutral layout                  | Page or control surface             |
+| `input`        | Form field backgrounds and boundaries             | Text field                          |
+| `selected`     | A persistent current choice                       | Selected row or option              |
+| `focused`      | Keyboard focus indicator; border only             | Focus ring                          |
+| `accent.[hue]` | Categories and labels whose hue is optional       | User-chosen tag                     |
+
+Keep fixed meaning in the semantic role. For example, an error uses `danger` and a successful state
+uses `success`; an accent red or green is for a category whose color does not carry that meaning.
+
+## Pair semantic backgrounds and foregrounds
+
+| Background                                              | Text and icon                                                 |
+| :------------------------------------------------------ | :------------------------------------------------------------ |
+| Semantic `*.bold` or `*.bolder`                         | `color.text.inverse` and `color.icon.inverse`                 |
+| `color.background.warning.bold`                         | `color.text.warning.inverse` and `color.icon.warning.inverse` |
+| Subtle, subtler, subtlest, or default semantic surfaces | Matching role text and icon, such as `color.text.danger`      |
+
+Use the warning-specific inverse pair shown above on a bold warning background. Accent foreground
+pairings are in the Color accents guidance.
+
+```tsx
+// Error banner
+backgroundColor: token('color.background.danger.bold'),
+color: token('color.text.inverse'),
+
+// Category label whose hue carries no status meaning
+backgroundColor: token('color.background.accent.red.bolder'),
+color: token('color.text.inverse'),
+```
+
+## Apply state to the interactive element
+
+### Form fields
+
+Use `color.background.input` for the field background, with `color.background.input.hovered` and
+`color.background.input.pressed` for those states. Use `color.border.input` for the field boundary.
+Start with the ADS form component’s treatment when one owns the control.
+
+### Selection and focus
+
+Use `color.background.selected`, `color.text.selected`, `color.icon.selected`, or
+`color.border.selected` for a persistent choice. Use `color.border.focused` for keyboard focus. When
+an element is both selected and focused, keep the selected treatment and add the focus indicator.
+Don’t use link, brand, or focused tokens to communicate selection. Pair selection color with another
+cue, such as a checkmark, underline, border, or shape change, so selection remains clear without
+color alone.
+
+Apply `hovered` and `pressed` variants to the currently interactive element. Keep a selected item
+recognizable during those temporary states. Icons do not have dedicated hovered or pressed color
+tokens; use a subtle neutral background such as `color.background.neutral.subtle.hovered` or
+`color.background.neutral.subtle.pressed` when the icon’s control needs a surface response.
+
+## Check the rendered result
+
+Inspect the foreground, meaningful borders, and state changes against the final visible background
+in the themes the experience supports. For translucent colors, include the underlying surface when
+checking contrast. Use `color.chart.*` for chart marks and product UI tokens for axes, labels, and
+gridlines.
+
+## Look up exact tokens
+
+Search the ADS token registry when an identifier or pairing is uncertain:
+
+```bash
+atlas ads search "danger background" --type token
+atlas ads token color.background.danger.bold --json
+```
+
+If the Atlas plugin is unavailable, use
+`npx @atlaskit/ads-cli search "danger background" --type token`.
+
+# Color accents
+
+Use accents for categories, projects, and labels when their hue can change without changing their
+meaning. Choose a semantic color role for status, alerts, validation, primary actions, and discovery
+instead; see the Color guidance.
+
+Start with the existing ADS component treatment for tags and labels. For custom UI, keep the
+background, text, and icon in the same accent hue family.
+
+**Available hues:** `blue`, `teal`, `green`, `lime`, `yellow`, `orange`, `red`, `magenta`, `purple`,
+and `gray`.
+
+Prefer another accent hue, such as orange, to yellow. Yellow accents can appear brown as their
+values adjust to meet contrast requirements.
+
+## Pair hue and emphasis
+
+| Background emphasis     | Text and icon                                 |
+| :---------------------- | :-------------------------------------------- |
+| `subtlest` or `subtler` | Matching accent `default` or `bolder`         |
+| `subtle`                | Matching accent `bolder`                      |
+| `bolder`                | `color.text.inverse` and `color.icon.inverse` |
+
+```tsx
+// A category tag: the blue hue identifies a category, not a status
+backgroundColor: token('color.background.accent.blue.subtlest'),
+color: token('color.text.accent.blue'),
+```
+
+Use `color.chart.*` for chart marks. For other pairings, check the rendered foreground and
+background: text needs 4.5:1 contrast and meaningful UI boundaries need 3:1.
+
+## Choose borders by their purpose
+
+Use `color.border.accent.[hue]` for a meaningful accent border on a non-bold accent background when
+the boundary needs to meet 3:1 contrast. Verify the rendered pair when the boundary communicates a
+control or state. The `.subtle` accent border variant is decorative; use it for visual decoration
+that does not need to identify a boundary or state, not for a required control boundary. A required
+boundary must remain distinguishable without relying on a low-contrast decorative border.
+
+## Verify themes and states
+
+Check the tag or label in its actual component, theme, and interaction states. Confirm that its hue
+still means only the category, its text remains legible, and any required boundary stays visible.

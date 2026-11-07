@@ -1,0 +1,29 @@
+$ npx @atlaskit/ads-cli component Link
+Link
+@atlaskit/link
+
+Props (5)
+  appearance      "default" | "inverse" | "subtle" | undefined
+  The appearance of the link. Defaults to `default`. A `subtle` appearance will render the link with a lighter color and no underline in resting state. Use `inverse` when rendering on bold backgrounds to ensure that the link is easily visible.
+  children        string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | It…
+  href            string | RouterLinkConfig
+  Standard links can be provided as a string, which should be mapped to the underlying router link component. Alternatively, you can provide an object for advanced link configurations by supplying the expected object type to the generic. @example ``` const MyRouterLink = forwardRef( ( { href, children, ...rest }: RouterLinkComponentProps<{ href: string; replace: boolean; }>, ref: Ref<HTMLAnchorElement>, ) => { ... ```
+  newWindowLabel  string | undefined
+  Override the default text to signify that a link opens in a new window. This is appended to the `aria-label` attribute when the `target` prop is set to `_blank`.
+  onClick         ((e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, analyticsEvent: UIAnalyticsEvent) => void) | …
+  Handler called on click. The second argument provides an Atlaskit UI analytics event that can be fired to a listening channel. See the ['analytics-next' package](https://atlaskit.atlassian.com/packages/analytics/analytics-next) documentation for more information.
+
+Examples (1):
+
+Example 1
+  tsx                                                                                               
+  import Link from '@atlaskit/link/link';                                                           
+  const _default_1: React.JSX.Element[] = [                                                         
+    <Link href="/dashboard">Go to Dashboard</Link>,                                                 
+    <Link href="https://atlassian.design" target="_blank">                                          
+      Atlassian Design System                                                                       
+    </Link>,                                                                                        
+  ];                                                                                                
+  export default _default_1;                                                                        
+
+Design: https://go.atlassian.com/figma-library-ads-71522-53725

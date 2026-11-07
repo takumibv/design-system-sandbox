@@ -1,0 +1,1886 @@
+# remote MCP call: ads_get_guidelines {"terms":["navigation","information architecture","page layout","dashboard","list view","table","calendar"],"limit":2}
+<SectionMessage title="">
+	Date and time formatting is tied to a person’s locale and account settings. Because of this, what
+	a customer sees could be different from the guidelines on this page.
+</SectionMessage>
+
+## Date and time for internationalization
+
+Each programming language has an i18n (internationalization) library that automatically localizes
+time and date strings based on a user’s locale settings/preferences. Time and date strings should
+never be localized manually by a designer, engineer, or translator.
+
+The Product Internationalization team is responsible for creating app UI content in non-English
+languages by localizing externalized code strings provided by our Product Engineers.
+
+Engineers must:
+
+- Ensure date and time references/strings are not hardcoded 
+- Reference the programming i18n library API, which will automatically format time and date strings
+  as per a customer’s detected or selected locale.
+
+## Date formats
+
+Atlassian uses US date formatting (for example: January 12, 2028).
+
+When you’re handing designs over to engineers, you need to specify which date format length is
+needed. The i18n library API will use this information to format the date accordingly. Date and time
+formats should not be hardcoded.
+
+There are 4
+[date format lengths](https://cldr.unicode.org/translation/date-time/date-time-patterns#basic-date-formats):
+full, long, medium, and short.
+
+### Full date
+
+The full date format is weekday, month, day, year.
+
+<DoDontGrid>
+	<DoDont type="do">Sunday, August 14, 2028</DoDont>
+</DoDontGrid>
+
+### Long date
+
+A long date format is month, day, year
+
+<DoDontGrid>
+	<DoDont type="do">November 8, 2008</DoDont>
+</DoDontGrid>
+
+### Medium date
+
+The medium date format is abbreviated month, day, year. Only use this format when space is limited.
+
+<DoDontGrid>
+	<DoDont type="do">Sep 26, 1952</DoDont>
+</DoDontGrid>
+
+#### Abbreviating months and days
+
+If you need to abbreviate months or days, use the first 3 letters of the month or day.
+
+| Month abbreviation | Month in full |     | Day abbreviation | Day in full |
+| ------------------ | ------------- | --- | ---------------- | ----------- |
+| Jan                | January       |     | Mon              | Monday      |
+| Feb                | February      |     | Tue              | Tuesday     |
+| Mar                | March         |     | Wed              | Wednesday   |
+| Apr                | April         |     | Thu              | Thursday    |
+| May                | May           |     | Fri              | Friday      |
+| Jun                | June          |     | Sat              | Saturday    |
+| Jul                | July          |     | Sun              | Sunday      |
+| Aug                | August        |     |                  |             |
+| Sep                | September     |     |                  |             |
+| Oct                | October       |     |                  |             |
+| Nov                | November      |     |                  |             |
+| Dec                | December      |     |                  |             |
+
+### Short date
+
+Short format dates are written in digits.
+
+In most cases, avoid short format dates as different countries use the date in a different order,
+which can cause confusion and effect readability and usability. In the US, 10-8-2026 is October 8,
+2026, but in Australia and the UK, it’s August 10, 2026.
+
+However, short format dates might be suitable for situations like data storage, sorting or
+filtering, or data export/import. If using, use the ISO 8601 international standard for numerical
+date format, which is YYYY-MM-DD.
+
+## Ordinal numbers
+
+Don’t use ordinal numbers (1st, 2nd, 3rd, and so on) in dates.
+
+## Date ranges
+
+If you have a date range, use ‘to’ and not hyphens. For example: ‘2020 to 2024’. Hyphens are read
+out by screen readers as ‘hyphen’, which can lead to confusion.
+
+An exception is financial years, which use a hyphen without spaces on either side. For example:
+FY2008-09
+
+Use ‘and’ if a range is preceded by ‘between’. For example: He was in Paris between 2025 and 2026.
+
+<DoDontGrid>
+	<DoDont type="do">2014 to 2015</DoDont>
+	<DoDont type="dont">2014-15</DoDont>
+</DoDontGrid>
+
+## Time formats
+
+Show time in digits for precision and to give a clearer expression of time.
+
+Specify to engineers which time format length is needed. The i18n library API will then format the
+time according to a customer’s account settings. Make sure time is not hardcoded.
+
+Use a colon (:) to separate the hours and minutes (though this might change depending on a user’s
+locale and account settings).
+
+Like dates, there are 4
+[time format lengths](https://cldr.unicode.org/translation/date-time/date-time-patterns#basic-time-formats):
+full, long, medium, and short.
+
+### Full time
+
+The full time format is hour, minutes, seconds, and time zone spelt out.
+
+<DoDontGrid>
+	<DoDont type="do">3:30:10 p.m. Pacific Standard Time</DoDont>
+</DoDontGrid>
+
+### Long time
+
+The long time format is hour, minutes, seconds, and the time zone initials.
+
+<DoDontGrid>
+	<DoDont type="do">11:18:30 p.m. PST</DoDont>
+</DoDontGrid>
+
+### Medium time
+
+The medium time format is hour, minutes, and seconds.
+
+<DoDontGrid>
+	<DoDont type="do">8:50:28 a.m.</DoDont>
+</DoDontGrid>
+
+### Short time
+
+The short time format is hour and minutes.
+
+<DoDontGrid>
+	<DoDont type="do">2:40 p.m.</DoDont>
+</DoDontGrid>
+
+### 24-hour time
+
+The 24-hour format is useful for more serious communications, for example in the case of outages and
+security comms. The use of the 24-hour format is mostly system-driven by the i18n library API.
+
+This format numbers hours from 00:00 hours (midnight) to 23:59 and uses 4 digits: the first 2 digits
+are the hours and the next 2 digits are the minutes. Use a colon (:) to separate the hours and
+minutes, though this might change depending on someone's account settings.
+
+## Writing time
+
+### Duration and timestamps
+
+When writing timestamps, labels on graphs, or durations, avoid using zeros before the hour. For
+example: 5:29. not 05:29. Use a colon between the hours and minutes with no spaces on either side.
+
+### Using a.m. and p.m.
+
+Format time using ‘a.m.’ and ‘p.m.’ when creating content like blogs, manuals, and instructions.
+
+- Lowercase ‘a.m.’ and ‘p.m.’
+- Use periods between the letters
+- Add a space between the time and the ‘a.m.’ or ‘p.m.’. For example: 6:30 a.m. (not 6:30a.m.)
+
+### Time range
+
+- If you have a time range that’s entirely in the morning or evening, use 'a.m.' or 'p.m.' only
+  once. For example: 6:30 to 10 p.m.
+- If the time range goes from the morning into the evening (or vice versa), use both. For example:
+  10 a.m. to 2 p.m.
+
+### Noon, midday, and midnight
+
+Where suitable, use ‘noon’, ‘midday’ or ‘midnight’ instead of ‘12 am’ or ‘12 pm’ as it makes it
+easier for people to differentiate between these times.
+
+### Avoid using ‘fortnightly ‘or ‘bi’ for months and years
+
+Avoid using ‘fortnightly’ and the prefix ‘bi’ to mean either 2 or twice, as these terms can be
+confusing.
+
+Instead of:
+
+- **Fortnightly**: write ‘every 2 weeks’
+- **Bimonthly**: write ‘twice a month’ or ‘every 2 months’
+- **Biannual**: write ‘twice a year’ or ‘every 2 years’.
+
+<DoDontGrid>
+	<DoDont type="do">Your sprint will repeat every 2 weeks.</DoDont>
+	<DoDont type="dont">Your sprint will repeat fortnightly.</DoDont>
+</DoDontGrid>
+
+## Date and time formats
+
+There are also full, long, medium, and short format lengths when combining date and time.
+
+### Full date and time
+
+<DoDontGrid>
+	<DoDont type="do">Wednesday, June 12, 2024 at 6:25:59 p.m. Eastern Standard Time</DoDont>
+</DoDontGrid>
+
+### Long date and time
+
+<DoDontGrid>
+	<DoDont type="do">April 25, 2027 at 9:05:32 p.m. PST</DoDont>
+</DoDontGrid>
+
+### Medium date and time
+
+<DoDontGrid>
+	<DoDont type="do">Sep 5, 1999, 1:25:59 a.m.</DoDont>
+</DoDontGrid>
+
+### Short date and time
+
+<DoDontGrid>
+	<DoDont type="do">2028-10-22, 6:25 p.m. </DoDont>
+</DoDontGrid>
+
+## Relative date and time
+
+In some cases, like when the exact date is less important, the easiest way to describe something
+that happened very recently is using the ‘ago’ format.
+
+For future and past events, use approximate time by rounding down to the largest or most recent date
+or time.
+
+You should always provide a way for people to see the actual timestamp, usually via a tooltip.
+
+### Past
+
+| Description                 | Display                      | Display when limited space     |
+| --------------------------- | ---------------------------- | ------------------------------ |
+| Within the last few seconds | just now                     | now                            |
+| Within the last minute      | a minute ago                 | 1 m                            |
+| Within 59 minutes           | x minutes ago                | X m                            |
+| 60 minutes ago              | 1 hour ago                   | 1 h                            |
+| x hours ago                 | x hours ago                  | X h                            |
+| 1 day ago                   | yesterday                    | 1 d                            |
+| 1 day ago (with time)       | yesterday at 5:05 pm         | n/a                            |
+| 2 days ago < 7 days         | x days ago                   | Use the truncated date (Aug 8) |
+| 7 days ago                  | 1 week ago                   | Use the truncated date (Aug 8) |
+| > 7 days ago                | Date stamp: "August 8, 2018" | Use the truncated date (Aug 8) |
+
+### Future
+
+| Description                   | Display                      | Display when limited space     |
+| ----------------------------- | ---------------------------- | ------------------------------ |
+| Within the next few seconds   | shortly                      | now                            |
+| In the next minute            | In 1 minute                  | in 1 m                         |
+| In the next 60 minutes        | In x minutes                 | in X m                         |
+| In 60 minutes                 | In 1 hour                    | in 1 hr                        |
+| In x hours                    | In x hours                   | in X hr                        |
+| In 1 day (by date, not hours) | tomorrow                     | Use the truncated date (Aug 8) |
+| In 2 to 7 days                | In x days                    |                                |
+| In 7 days                     | In 1 week                    |                                |
+| In > 7 days                   | Date stamp: "August 8, 2018" |                                |
+| > 7 days ago                  | Date stamp: "August 8, 2018" |                                |
+
+## Style and punctuation
+
+Style and punctuation for dates and time can change depending on locale and is determined by the
+i18n library API.
+
+### Capitalization
+
+- Months and days in English are proper nouns and start with a capital letter.
+- Specific days or periods in history are all proper nouns, so should be capitalized. For example:
+  New Year’s Day, Renaissance, Cold War.
+- Use capital letters for all institutional holidays, religious days, and public events. For
+  example: Ramadan, Yom Kippur, Good Friday, Martin Luther King Jr. Day.
+
+### Apostrophes
+
+- Avoid using apostrophes in UI copy and in developer and support documentation.
+- In more casual writing, you can use an apostrophe to stand in for the missing numerals in the
+  year, such as 'the '70s’.
+
+## Resources
+
+- [Int.DateTimeFormat constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#try_it) -
+  a JavaScript library that devs can use and where designers can check formatting of date and time.
+- [Date formats](https://cldr.unicode.org/translation/date-time/date-time-patterns#basic-date-formats)
+- [Time formats](https://cldr.unicode.org/translation/date-time/date-time-patterns#basic-time-formats)
+
+<SectionMessage title="Atlassian vocabulary">
+	For specific vocabulary and to view our internal word list and glossary, head to{' '}
+	<Link href="https://go.atlassian.com/vocab">go/vocab (Atlassians only)</Link>.
+</SectionMessage>
+
+## Style and formatting
+
+### Abbreviations
+
+- Use the full name of features and apps in customer-facing copy.
+- Don’t use 'e.g.', ‘i.e.’, ‘etc.’, or '&' as they're not localization friendly and can be confusing
+  for users of assistive technologies.
+
+<DoDontGrid>
+	<DoDont type="do">Ask the experts at Jira Service Desk.</DoDont>
+	<DoDont type="dont"> Ask the experts at JSD.</DoDont>
+	<DoDont type="do">Use an input component. For example, a button or a select.</DoDont>
+	<DoDont type="dont"> Use an input component, e.g. a button or a select etc.</DoDont>
+</DoDontGrid>
+
+#### Plural abbreviations
+
+Don’t use an apostrophe for plural abbreviations.
+
+<DoDontGrid>
+	<DoDont type="do">1990s, DVDs</DoDont>
+	<DoDont type="dont"> 1990’s, DVD’s</DoDont>
+</DoDontGrid>
+
+### Articles (a, an, the)
+
+Avoid articles in buttons, labels, and action-based headings in the UI.
+
+<DoDontGrid>
+	<DoDont type="do">Create password</DoDont>
+	<DoDont type="dont"> Create a password</DoDont>
+</DoDontGrid>
+
+### Bold
+
+Use bold text to draw the reader’s eye to key phrases and statements in your content, though don't
+over do it.
+
+- For in-app copy or help articles, use bold when referring to static UI elements like menu items,
+  buttons, or headings.
+- If bold is needed but the UI doesn’t support it — for example in a UI message or a flag where the
+  title is already bold — you can use [italics](#italics).
+
+<DoDontGrid>
+	<DoDont type="do">
+		Go to <b>General configuration</b> then <b>User macros</b>.
+	</DoDont>
+	<DoDont type="dont">
+		Go to the <b>settings page and select Configuration</b>.
+	</DoDont>
+</DoDontGrid>
+
+### Capitalization
+
+- Use sentence case in all titles, headings, menu items, labels, and buttons.
+- Capitalize proper nouns in headings, such as names of people, companies, or apps.
+
+<DoDontGrid>
+	<DoDont type="do">Create work item</DoDont>
+	<DoDont type="dont">Create Work Item</DoDont>
+	<DoDont type="do">Add permissions for Arni Karan</DoDont>
+	<DoDont type="dont">Add permissions for arni karan</DoDont>
+</DoDontGrid>
+
+### Contractions (shortened words)
+
+- Use contractions, where possible, as they convey a conversational, friendly tone.
+- Use curly apostrophes in UI copy
+  - On a Mac: **option** + **shift** + **]**
+  - On Windows: **Control** + **'** (or **alt** + **0146**)
+
+<DoDontGrid>
+	<DoDont type="do">We can’t load this page.</DoDont>
+	<DoDont type="dont">We cannot load this page.</DoDont>
+</DoDontGrid>
+
+### Date and time
+
+View [date and time guidelines](https://atlassian.design/foundations/content/date-time).
+
+### Gender (he, she, they)
+
+- If known, use the pronouns a customer provides. If you don’t know, avoid gendered pronouns
+  wherever possible.
+- If it’s not possible, use ’they’ or ’their’ rather than ‘his/her’ or ’he/she’.
+
+<DoDontGrid>
+	<DoDont type="do">Ask your admin to add you.</DoDont>
+	<DoDont type="dont">Ask your admin if she can add you.</DoDont>
+	<DoDont type="do">Add permissions to their account.</DoDont>
+	<DoDont type="dont">Add permissions to her account.</DoDont>
+</DoDontGrid>
+
+### Headings and titles
+
+- Use sentence case. Only capitalize the first word of a sentence, proper nouns, and trademarked
+  names (for example: apps, countries, people's names).
+- Don’t use bold or italics.
+- Don't use periods.
+- Reconsider using question marks. Preferably rephrase the heading so it’s a statement.
+- Phrase UI and documentation headings with an action verb.
+- Avoid gerunds (the ‘ing’ form of verbs) in UI copy.
+
+<DoDontGrid>
+	<DoDont type="do">Organize your to-do list with Trello</DoDont>
+	<DoDont type="dont">
+		Want to Organize <em>Your</em> To-Do List With Trello?
+	</DoDont>
+	<DoDont type="do">Add a page to your project</DoDont>
+	<DoDont type="dont">Adding a page to your project</DoDont>
+</DoDontGrid>
+
+#### Articles in headings
+
+- Articles (a, an, the) aren’t always needed in UI headings.
+- They're better suited to more conversational sections, like product marketing copy and empty
+  states, as they make these sections more approachable and improve understanding.
+
+<DoDontGrid>
+	<DoDont type="do">Create work item</DoDont>
+	<DoDont type="dont">Create a work item</DoDont>
+</DoDontGrid>
+
+### Italics
+
+In apps, use italics sparingly as it can be difficult to read. Don’t use italics in hyperlinks.
+
+Italics can be used for:
+
+- UI elements that might change, like a field name or user input.
+- For emphasis if the UI doesn’t support bold. For example, in a flag or UI message.
+
+### Lists
+
+Use lists to draw the reader’s eye and make items easier to scan and follow. Try to limit lists to 6
+items or less. If there are more items, make multiple lists.
+
+#### Bulleted list
+
+- Use to list options or when the order of the items doesn’t matter.
+- Phrase each item in a parallel way.
+- Don’t use commas or periods at the end of each item.
+
+##### Fragmented sentences
+
+If your list has fragmented sentences, use a lowercase letter for each item and don’t use a period
+at the end of the list. Use a lead-in sentence with a colon before the items.
+
+<DoDontGrid>
+	<DoDont type="do">
+		Due to security concerns, all employees are required to:
+		<ul>
+			<li>wear an identification tag</li>
+			<li>use their security pass to enter or leave an office before 7 a.m. and after 6 p.m.</li>
+			<li>alert security if a suspicious package is found</li>
+		</ul>
+	</DoDont>
+	<DoDont type="dont">
+		Due to security concerns, all employees are required to;
+		<ul>
+			<li>Wear an identification tag in the building,</li>
+			<li>
+				You must use your identification tag to enter an office before 7 a.m. and exit after 6 p.m.,
+				and
+			</li>
+			<li>If a suspicious package is found, alert security.</li>
+		</ul>
+	</DoDont>
+</DoDontGrid>
+
+##### Complete sentences
+
+For lists with complete sentences, start an item with a capital letter and end it with a period.
+Don’t use a lead-in sentence with a colon.
+
+<DoDontGrid>
+	<DoDont type="do">
+		Atlassian has updated security requirements for employees.
+		<p></p>
+		<ul>
+			<li>Always wear your identification tag when working in an office.</li>
+			<li>
+				Use your identification tag to enter an office before 7 am and when you leave after 6 pm.
+			</li>
+		</ul>
+	</DoDont>
+	<DoDont type="dont">
+		Atlassian has updated security requirements for employees:
+		<ul>
+			<li>always wear your identification tag when working in an office</li>
+			<li>
+				use your identification tag to enter an office before 7 am and when you leave after 6 pm.
+			</li>
+		</ul>
+	</DoDont>
+</DoDontGrid>
+
+#### Numbered lists
+
+Use numbered lists for tasks or lists where the order of the items matters. Capitalize the first
+word of each item and end the item with a period.
+
+<DoDontGrid>
+	<DoDont type="do">
+		To add a new user macro:
+		<ol>
+			<li>
+				Go to <b>Settings</b> then <b>General configuration</b> then <b>User macros</b>.
+			</li>
+			<li>
+				Choose <b>Create a user macro</b>.
+			</li>
+			<li>Enter the macro details.</li>
+		</ol>
+	</DoDont>
+	<DoDont type="dont">
+		To add a new user macro -
+		<ol>
+			<li>
+				go to <b>Settings</b> then <b>General configuration</b> then <b>User macros</b>
+			</li>
+			<li>
+				choose <b>Create a user macro</b>
+			</li>
+			<li>enter the macro details.</li>
+		</ol>
+	</DoDont>
+</DoDontGrid>
+
+### Monospaced text
+
+Use `monospaced font` for names of a file or directory. It’s mostly used in attributes, strings, and
+administrator and developer docs.
+
+<DoDontGrid>
+	<DoDont type="do">
+		The location of the Home directory is stored in a configuration file called
+		<code>confluence-init.properties</code>.
+	</DoDont>
+	<DoDont type="dont">
+		The location of the Home directory is stored in a configuration file called{' '}
+		<b>confluence-init.properties</b>.
+	</DoDont>
+</DoDontGrid>
+
+### Numbers
+
+Use digits rather than words in most cases.
+
+**Exceptions**:
+
+- If a number starts a sentence, write it out.
+- In common expressions, write the number out. For example: _It’s one thing after another_.
+- When writing long-form or formal content, write out numbers one to nine.
+- Write out the numbers ‘zero’ and ‘one’ if it could be confused for the letters L, I, or O.
+
+<DoDontGrid>
+	<DoDont type="do">Your password should be a minimum of 8 characters. </DoDont>
+	<DoDont type="dont">Your password should be a minimum of eight characters.</DoDont>
+	<DoDont type="do">Loom is one of the best apps for sharing information in a personal way.</DoDont>
+	<DoDont type="dont">Loom is 1 of the best apps for sharing information in a personal way.</DoDont>
+</DoDontGrid>
+
+#### Number ranges
+
+Use ’to’ and not hyphens in number ranges, except if space is limited, like in a table or mobile
+app.
+
+<DoDontGrid>
+	<DoDont type="do">View rows 1 to 4 in the table.</DoDont>
+	<DoDont type="dont">View rows 1-4 in the table.</DoDont>
+</DoDontGrid>
+
+#### Numbers 'out of'
+
+Use ‘of’ rather than a forward slash ( / ) to show a number out of another number.
+
+<DoDontGrid>
+	<DoDont type="do">Step 1 of 2</DoDont>
+	<DoDont type="dont">Step 1/2</DoDont>
+</DoDontGrid>
+
+#### Numbers from 1,000
+
+Use a comma to indicate the thousand in a number.
+
+<DoDontGrid>
+	<DoDont type="do">
+		<ul>
+			<li>4,500</li>
+			<li>10,000</li>
+			<li>1,250,000</li>
+		</ul>
+	</DoDont>
+	<DoDont type="dont">
+		<ul>
+			<li>4500</li>
+			<li>10000</li>
+			<li>1250000</li>
+		</ul>
+	</DoDont>
+</DoDontGrid>
+
+### Spelling words
+
+Use US English in UI copy and code. Check spellings in
+[Merriam-Webster online dictionary](https://www.merriam-webster.com/).
+
+<DoDontGrid>
+	<DoDont type="do">
+		<ul>
+			<li>color</li>
+			<li>organization</li>
+			<li>labeled</li>
+		</ul>
+	</DoDont>
+	<DoDont type="dont">
+		<ul>
+			<li>colour</li>
+			<li>organisation</li>
+			<li>labelled</li>
+		</ul>
+	</DoDont>
+</DoDontGrid>
+
+### Truncation
+
+Ellipses (…) are used to show that text has been cut off — or truncated — when a message doesn’t fit
+in a given space.
+
+- Avoid truncation whenever possible: shorten UI messages or wrap the text.
+- Test your designs using multiple screen widths and magnification levels to ensure it doesn’t
+  truncate.
+- If truncation can’t be avoided, for example in user-generated content or icon buttons, use a
+  [tooltip](https://atlassian.design/components/tooltip/examples) to display the full text for
+  accessibility and usability.
+- In ADS components that truncate, the ellipsis appears without any space next to the last visible
+  character (for example: Work in pro…).
+
+<DoDontGrid>
+	<DoDont type="do" image={{ url: truncationDo, alt: '' }}>
+		Shorten or wrap messages.
+	</DoDont>
+	<DoDont type="dont" image={{ url: truncationDont, alt: '' }}>
+		Don’t truncate unless it can’t be avoided.
+	</DoDont>
+</DoDontGrid>
+
+### UI elements
+
+- Use sentence case, even if the UI element doesn’t use it.
+- Use bold to emphasize the UI element in a step.
+- If the UI element has an icon, bold both the name and the icon.
+- Avoid using a > symbol where possible, as it is read out as “greater than” by assistive
+  technologies, leading to confusion. Use ‘then’ instead.
+
+<DoDontGrid>
+	<DoDont type="do">
+		Go to <b>More</b>, then <b>Link work item</b>.
+	</DoDont>
+	<DoDont type="dont">
+		Go to <b>More</b> > <b>Link Work Item</b>.
+	</DoDont>
+</DoDontGrid>
+
+## Grammar
+
+### Active voice
+
+Use active voice whenever possible as it improves readability and reflects Atlassian’s
+[voice and tone](https://atlassian.design/foundations/content/voice-tone).
+
+Active voice:
+
+- puts the emphasis on the person or thing doing an action.
+- makes content shorter, clearer, friendlier, and more conversational.
+
+<DoDontGrid>
+	<DoDont type="do">Administrators control access to Atlassian Cloud applications.</DoDont>
+	<DoDont type="dont">
+		Access to Atlassian Cloud applications is controlled by administrators.
+	</DoDont>
+</DoDontGrid>
+
+### Pronouns (you, your, we)
+
+- Minimize the use of pronouns.
+- Most of the time they can be avoided. However, when advising a user, indicating that something in
+  the UI is theirs, or in error messages, you can use ‘you’ or ’your’ or ’we’ for a friendlier tone.
+
+<DoDontGrid>
+	<DoDont type="do">Get access to your work items here.</DoDont>
+	<DoDont type="dont">Get access to the work items here.</DoDont>
+	<DoDont type="do">Your projects</DoDont>
+	<DoDont type="dont">My projects</DoDont>
+	<DoDont type="do">We couldn't load your page</DoDont>
+	<DoDont type="dont">The page couldn't be loaded </DoDont>
+</DoDontGrid>
+
+### Tense
+
+**Present tense** helps make instructions and messages in the UI clear and engaging.
+
+<DoDontGrid>
+	<DoDont type="do">We can’t load work item DSP-32113.</DoDont>
+	<DoDont type="dont">We couldn’t load work item DSP-32113.</DoDont>
+	<DoDont type="do">Validation is required.</DoDont>
+	<DoDont type="dont">Validation will be required.</DoDont>
+</DoDontGrid>
+
+**Past tense** can be used to communicate a completed action, like in error message headings and
+success flags, or where there could be confusion.
+
+<DoDontGrid>
+	<DoDont type="do">
+		<ul>
+			<li>Upload failed</li>
+			<li>File created</li>
+		</ul>
+	</DoDont>
+	<DoDont type="dont">
+		<ul>
+			<li>Upload fail</li>
+			<li>File create</li>
+		</ul>
+	</DoDont>
+</DoDontGrid>
+
+## Punctuation
+
+### Apostrophes (')
+
+- Use an apostrophe to show possession. The apostrophe is placed before the ‘s’ for singular terms
+  and after the ‘s’ for plurals.
+- If a word ends in an ‘s’ and is singular, add an ‘s after the ‘s’.
+- Use a curly apostrophe for better readability and to differentiate from code.
+  - On a Mac: **option** + **shift ** + **]**
+  - On Windows: **Control** + **'** (or **alt** + **0146**)
+
+<DoDontGrid>
+	<DoDont type="do">
+		<ul>
+			<li>A week’s time</li>
+			<li>Three weeks’ time</li>
+			<li>James’s work items</li>
+		</ul>
+	</DoDont>
+	<DoDont type="dont">
+		<ul>
+			<li>A weeks time</li>
+			<li>Three week's time</li>
+			<li>James' work items</li>
+		</ul>
+	</DoDont>
+</DoDontGrid>
+
+### Colons (:)
+
+- Use colons to introduce a bulleted list or series of steps.
+- Don’t use colons at the end of headings.
+
+<DoDontGrid>
+	<DoDont type="do">
+		A password should have:
+		<ul>
+			<li>12 characters or more </li>
+			<li>at least one symbol and one number</li>
+			<li>a mix of capital and lowercase letters</li>
+		</ul>
+	</DoDont>
+	<DoDont type="dont">
+		<p>
+			<b>Turn on two-factor authentication:</b>
+		</p>
+		<p>Keep your account safe with an extra layer of security.</p>
+	</DoDont>
+</DoDontGrid>
+
+### Commas (,)
+
+Use an Oxford (or ‘serial’) comma to offset the final item in a list.
+
+<DoDontGrid>
+	<DoDont type="do">Jira, Confluence, Loom, and Bitbucket are all Atlassian apps.</DoDont>
+	<DoDont type="dont">Jira, Confluence, Loom and Bitbucket are all Atlassian apps. </DoDont>
+</DoDontGrid>
+
+### Dashes (—) and hyphens (-)
+
+#### Dashes
+
+- Use dashes in UI content sparingly. If using, use a spaced em dash.
+- In long-form content, use them sparingly to show an abrupt change in a sentence — like this. If
+  the break happens in the middle of a sentence —  ike this — use spaced em dashes on either side of
+  the phrase.
+- If possible, rewrite the sentence or make 2 sentences to avoid a dash. Clear, concise sentences
+  are better for readability and accessibility.
+- Don't use a dash or hyphen for ranges of numbers. Use 'to' instead.
+- When adding the space, use non-breaking spaces (**option** + **shift** + **space**) to avoid the
+  dash shifting to a new line.
+- To make an em dash:
+  - On a Mac: **option** + **shift** + **hyphen**
+  - On Windows: **Control** + **Alt** + **-** (or **Alt** + **0151**)
+
+<DoDontGrid>
+	<DoDont type="do">
+		Jira Service Management belongs to Jira's family of apps. They’re all built on the same platform
+		and share the same site URL.
+	</DoDont>
+	<DoDont type="dont">
+		Jira Service Management belongs to Jira's family of apps — they’re all built on the same
+		platform and share the same site URL.
+	</DoDont>
+	<DoDont type="do">50 to 100</DoDont>
+	<DoDont type="dont">50—100</DoDont>
+</DoDontGrid>
+
+#### Hyphens
+
+- If a noun is described by 2 or more words, use a hyphen to join those words together so they act
+  as a compound adjective (or compound modifier).
+- **Exceptions**: don’t add a hyphen after the word ‘very’ or adverbs ending in -ly.
+- For specific hyphenated word guidance, check
+  [Vocabulary (Atlassians only)](https://hello.atlassian.net/wiki/spaces/AV/pages/1686830783/Atlassian+global+vocabulary+list).
+- Use a hyphen when not doing so could cause confusion or ambiguity. Consult the
+  [Merriam-Webster dictionary](https://www.merriam-webster.com/) if you’re not sure.
+
+<DoDontGrid>
+	<DoDont type="do">
+		<ul>
+			<li>system-wide update</li>
+			<li>character-counter logic</li>
+			<li>widely communicated update</li>
+			<li>very cold drink</li>
+			<li>autocorrect</li>
+			<li>coworker</li>
+			<li>preexisting</li>
+		</ul>
+	</DoDont>
+	<DoDont type="dont">
+		<ul>
+			<li>system wide update</li>
+			<li>character counter logic</li>
+			<li>widely-communicated update</li>
+			<li>very-cold drink</li>
+			<li>auto-correct</li>
+			<li>co-worker</li>
+			<li>pre-existing</li>
+		</ul>
+	</DoDont>
+	<DoDont type="do">
+		<ul>
+			<li>re-sign the document</li>
+			<li>re-create the page</li>
+		</ul>
+	</DoDont>
+	<DoDont type="dont">
+		<ul>
+			<li>resign the document</li>
+			<li>recreate the page</li>
+		</ul>
+	</DoDont>
+</DoDontGrid>
+
+### Ellipses ( … )
+
+- Don’t put spaces in between the periods in an ellipsis.
+- Use the symbol for the ellipsis rather than a string of periods:
+  - On a Mac: **Option** + **;**
+  - On Windows: **Ctrl** + **Alt** + **.** (or **Alt** + **0133**)
+
+#### Truncation
+
+Ellipses can be used to show that text has been cut off — or truncated — when a message doesn’t fit
+in a given space. View [truncation guidance](#truncation).
+
+#### Quotes
+
+- When using an ellipsis to omit part of a long quote, include spaces on either side of the ellipsis
+  ( … ).
+- For example: “From medicine and space travel to disaster response … our products help teams all
+  over the planet advance humanity through the power of software.” Atlassian: Discover our story.
+
+### Exclamation marks (!)
+
+- Avoid exclamation marks in UI copy and minimize their use in product marketing copy.
+- They can be considered for exciting or new things, but ask yourself if it’s really that exciting
+  or if one is needed. Don’t use more than one exclamation mark per page.
+
+<DoDontGrid>
+	<DoDont type="do">Project is complete.</DoDont>
+	<DoDont type="dont">Project is complete!</DoDont>
+</DoDontGrid>
+
+### Periods (.)
+
+- Use a period (full stop) at the end of complete sentences, including in helper text, messages, and
+  notifications.
+- Don’t use periods in headers, titles, tooltips, field descriptions, and menu names, even if they
+  are full sentences. While long content is discouraged, an exception is if these elements contain
+  more than 1 sentence.
+- Only use periods in a bulleted list if the item is a complete sentence. Don’t add a period at the
+  end of a list of fragments.
+- Add only one space after a period (full stop).
+
+<DoDontGrid>
+	<DoDont type="do">
+		<p>
+			<b>Accessibility principles</b>
+		</p>
+		<p>Our principles cover the main requirements to design and build accessible experiences.</p>
+	</DoDont>
+	<DoDont type="dont">
+		<p>
+			<b>Accessibility principles.</b>
+		</p>
+		<p>Our principles cover the main requirements to design and build accessible experiences.</p>
+	</DoDont>
+</DoDontGrid>
+
+If a link ends a sentence, include a period but don’t hyperlink it.
+
+<DoDontGrid>
+	<DoDont type="do">
+		Atlassian’s work is guided by{' '}
+		<a href="https://www.atlassian.com/company/values">5 core values</a>.
+	</DoDont>
+	<DoDont type="dont">
+		Atlassian’s work is guided by{' '}
+		<a href="https://www.atlassian.com/company/values">5 core values.</a>
+	</DoDont>
+</DoDontGrid>
+
+### Quotation marks (‘’ | “”)
+
+In the UI, use:
+
+- single curly quotes, unless you're writing in code or there’s a semantic reason to use straight
+  quotes.
+
+In body copy and long-form content, such as documentation and marketing, use:
+
+- double quotes (”“) for speech and direct quotes. Don’t use italics.
+- single quotes (‘’) to draw attention to a word you’re defining.
+
+<DoDontGrid>
+	<DoDont type="do">“We have big things planned for the coming year,” said Mike.</DoDont>
+	<DoDont type="dont">‘We have big things planned for the coming year,’ said Mike.</DoDont>
+	<DoDont type="do">They tried to avoid talking about the ‘big’ secret.</DoDont>
+	<DoDont type="dont">They tried to avoid talking about the “big“ secret.</DoDont>
+</DoDontGrid>
+
+#### Emphasis
+
+Don’t use quotation marks to emphasize UI elements, page titles, and other objects. Instead use
+[bold](#bold).
+
+<DoDontGrid>
+	<DoDont type="do">
+		Go to <b>Settings</b>.
+	</DoDont>
+	<DoDont type="dont">Go to ‘Settings’.</DoDont>
+</DoDontGrid>
+
+#### Shortcuts
+
+##### Mac
+
+- Double quotes:
+  - opening marks: **option** + **[**
+  - closing marks: **option** + **shift** + **[**
+- Single quotes:
+  - opening marks: **option** + **]**
+  - closing marks: **option** + **shift** + **]**
+
+##### Windows
+
+- Double quotes:
+  - opening marks: **Alt** + **0147**
+  - closing marks: **Alt** + **0148**
+- Single quotes:
+  - opening marks: **Alt** + **0145**
+  - closing marks: **Alt** + **0146**
+
+## Overview
+
+Grid is a system for arranging content consistently within the main content area of an Atlassian
+app.
+
+In Figma, grids are set up using
+[Figma layout guides](https://help.figma.com/hc/en-us/articles/360040450513-Create-layout-guides).
+The code equivalent is built using a combination of [primitives](/components/primitives/overview)
+such as box, stack, and inline.
+
+For everything outside of the main content area, including navigation and panel, see the
+[layout component](/components/navigation-system/layout).
+
+<img
+	src={layoutAnatomy}
+	srcDark={layoutAnatomyDark}
+	alt="Layout component anatomy showing the top nav, side nav, main, and panel. Grid sits within main."
+/>
+
+## Grid basics
+
+The Figma grid component has three basic elements:
+
+- **Columns** divide the main content area into 12 equal parts for horizontal structure.
+- **Gutters** are the gaps between columns, providing consistent separation between content.
+- **Margins** are the empty space between the outer columns and the edge of the main content area.
+  They give content clear space.
+
+<img
+	src={gridAnatomy}
+	srcDark={gridAnatomyDark}
+	alt="Figma grid component anatomy showing columns, gutters, and margins."
+/>
+
+Aligning content to the columns supports a variety of layouts in the main content area. For example,
+content can span 12, 6, or 4 columns.
+
+<img
+	src={columnSpan}
+	srcDark={columnSpanDark}
+	alt="Diagram showing content arrangement spanning 12, 6, or 4 grid columns."
+/>
+
+Content can also sit centered within the grid. For example, a centered block can span 8, 10, or 12
+columns.
+
+<img
+	src={columnOffset}
+	srcDark={columnOffsetDark}
+	alt="Diagram showing content arrangement center-aligned on the grid and spanning 8, 10, or 12 grid columns."
+/>
+
+<DoDontGrid>
+	<DoDont
+		type="do"
+		image={{
+			url: gridBasicsDo,
+			urlDarkMode: gridBasicsDoDark,
+			alt: 'Example of content aligning to the grid columns.',
+		}}
+	>
+		Align content within the app's main content area across any number of columns required.
+	</DoDont>
+	<DoDont
+		type="dont"
+		image={{
+			url: gridBasicsDont,
+			urlDarkMode: gridBasicsDontDark,
+			alt: 'Example of content overflowing into grid gutters and margins, breaking visual alignment.',
+		}}
+	>
+		Don't allow content to overflow into gutters or margins. This breaks visual alignment and makes
+		layouts unpredictable.
+	</DoDont>
+</DoDontGrid>
+
+## How to choose what to align to the grid
+
+Within the main content area, align content containers to the grid columns. Examples include cards,
+images, text blocks, tables, and forms.
+
+Small elements, like buttons and icons, do not need to align to this grid. Use
+[space tokens](/foundations/spacing#space-tokens) to manage the space between and within them
+instead.
+
+<img
+	src={spacingTokens}
+	srcDark={spacingTokensDark}
+	alt="Example showing cards aligned to grid columns. The horizontally placed input field and buttons, as well as the content within the card, do not align to the grid columns and are instead managed with space tokens."
+/>
+
+The same applies within content containers. Only top-level containers need to align to the grid. Use
+space tokens for the elements inside them, such as cards and table columns.
+
+<img
+	src={contentContainers}
+	srcDark={contentContainersDark}
+	alt="Example showing kanban columns aligned to the grid, but the cards within them using space tokens."
+/>
+
+Overlays like modals, tooltips, and dropdown menus also sit outside the grid, as they float above
+the page content.
+
+<DoDontGrid>
+	<DoDont
+		type="do"
+		image={{
+			url: alignContentDo,
+			urlDarkMode: alignContentDoDark,
+			alt: 'Example of content containers aligning to the grid columns.',
+		}}
+	>
+		Align content containers to our grid columns, such as cards, images, text blocks, tables, and
+		forms.
+	</DoDont>
+	<DoDont
+		type="dont"
+		image={{
+			url: alignContentDont,
+			urlDarkMode: alignContentDontDark,
+			alt: 'Example of buttons and icons incorrectly aligned to the grid columns instead of using space tokens.',
+		}}
+	>
+		Don't align small elements, such as buttons or icons, to the grid. Instead, use space tokens to
+		manage their spacing.
+	</DoDont>
+</DoDontGrid>
+
+## Nested grids
+
+Space tokens are recommended for aligning content within containers, but you can also apply an
+internal grid.
+
+While the underlying concepts are the same for columns, gutters, and margins, our grid component in
+Figma is only intended for the main content area. When setting up a grid inside a container, use our
+[space tokens](/foundations/spacing#space-tokens).
+
+[Create your own Figma layout guides](https://help.figma.com/hc/en-us/articles/360040450513-Create-layout-guides).
+
+<img
+	src={nestedGrid}
+	srcDark={nestedGridDark}
+	alt="Example showing a card sitting on the main grid. The card has its own nested grid."
+/>
+
+## Grid breakpoints
+
+Breakpoints are based on the viewport width, not the width of the main content area. Showing or
+hiding the side navigation or a panel does not change which breakpoint the grid uses.
+
+These are our default values for the grid in the main content area. Check your app or local system
+for the specific grid values in use, as they may differ.
+
+<BreakpointsTable />
+
+At each breakpoint, the gutter width, margin width, and number of columns adjust within the main
+content area. Breakpoints also affect layout areas like navigation and panels. For details see the
+[layout component](/components/navigation-system/layout).
+
+Design for at least two device sizes from the table above, and preferably more. Always include
+mobile (`xxs`).
+
+<img
+	src={gridBreakpoints}
+	srcDark={gridBreakpointsDark}
+	alt="Example showing how the grid changes across three breakpoint ranges: m – xl, xs – s, and xxs."
+/>
+
+## Grid types
+
+There are two types of grid:
+
+- **Fixed grids** have a maximum width and sit centered in the main content area. This default
+  option comes in two sizes: fixed-wide and fixed-narrow.
+- **Fluid grids** fill the available space in the main content area. Use fluid grids when content
+  expands horizontally and has no natural maximum width. Use sparingly, because at very large
+  viewports, text lines can become too long and visual relationships between elements may break
+  down.
+
+When the main content area is smaller than the maximum width, such as at smaller breakpoints, fixed
+grids behave the same as fluid grids.
+
+<img
+	src={gridTypes}
+	srcDark={gridTypesDark}
+	alt="Side-by-side comparison of fixed and fluid grids on desktop and mobile viewports."
+/>
+
+### Fixed grids
+
+There are two fixed grid options:
+
+- **Fixed-wide** has a maximum width of 1296px (including margins). Use this as the default for most
+  experiences.
+- **Fixed-narrow** has a maximum width of 864px (including margins). Use this for long-form content
+  such as blogs and articles, to limit line length and increase readability. Some internal elements,
+  such as headers, may break out of the grid to span across the page.
+
+<img
+	src={fixedGridTypes}
+	srcDark={fixedGridTypesDark}
+	alt="Side-by-side comparison of fixed-wide and fixed-narrow grids."
+/>
+
+### Choosing between fixed and fluid grids
+
+| Grid type            | Maximum width (margins included) | Use when                                                    | Examples                                |
+| -------------------- | -------------------------------- | ----------------------------------------------------------- | --------------------------------------- |
+| Fixed-wide (default) | 1296px                           | Content benefits from structure but doesn't need full width | Dashboards, directories, search results |
+| Fixed-narrow         | 864px                            | Long-form reading is the primary activity                   | Blogs, articles, documentation          |
+| Fluid                | No maximum                       | Content expands horizontally with no natural maximum width  | Kanban boards, whiteboards              |
+
+<DoDontGrid>
+	<DoDont
+		type="do"
+		image={{
+			url: fixedWideDo,
+			urlDarkMode: fixedWideDoDark,
+			alt: 'Example using a fixed-wide grid for a table directory.',
+		}}
+	>
+		Use fixed-wide grids for structured content, such as dashboards, search results, and
+		directories.
+	</DoDont>
+	<DoDont
+		type="dont"
+		image={{
+			url: fixedWideDont,
+			urlDarkMode: fixedWideDontDark,
+			alt: 'Example using a fixed-wide grid for long-form content.',
+		}}
+	>
+		Don't use fixed-wide grids for long-form content like blogs and articles. Long line lengths
+		impair readability.
+	</DoDont>
+	<DoDont
+		type="do"
+		image={{
+			url: fixedNarrowDo,
+			urlDarkMode: fixedNarrowDoDark,
+			alt: 'Example using a fixed-narrow grid for long-form content.',
+		}}
+	>
+		Use fixed-narrow grids for long-form content, such as blogs and articles.
+	</DoDont>
+	<DoDont
+		type="dont"
+		image={{
+			url: fixedNarrowDont,
+			urlDarkMode: fixedNarrowDontDark,
+			alt: 'Example using a fixed-narrow grid for a kanban board.',
+		}}
+	>
+		Don't use fixed-narrow grids for content that needs more horizontal space. Use fixed-wide or
+		fluid instead.
+	</DoDont>
+	<DoDont
+		type="do"
+		image={{
+			url: fluidDo,
+			urlDarkMode: fluidDoDark,
+			alt: 'Example using a fluid grid for a kanban board.',
+		}}
+	>
+		Use fluid grids for content that expands horizontally, such as kanban boards and whiteboards.
+	</DoDont>
+	<DoDont
+		type="dont"
+		image={{
+			url: fluidDont,
+			urlDarkMode: fluidDontDark,
+			alt: 'Example using a fluid grid for a table directory.',
+		}}
+	>
+		Don't use fluid grids for structured content with a natural width, such as dashboards or
+		directories. Elements lose their visual relationship at large viewports.
+	</DoDont>
+</DoDontGrid>
+
+## Applying grid
+
+The default grid is already built into the Figma layout component.
+
+1. Select your grid type from the component properties panel.
+2. Choose your breakpoint from the responsive menu in the appearance panel.
+
+<img
+	src={applyingGrid}
+	srcDark={applyingGridDark}
+	alt="Screenshot of the Figma layout component with the properties panel showing grid type and responsive selectors."
+/>
+
+You can also use this grid outside of the layout component. Select it from the assets panel in the
+ADS Foundations library, or
+[create your own](https://help.figma.com/hc/en-us/articles/360040450513-Create-layout-guides) using
+your app's values.
+
+**Tip:** Use **Shift + G** (Mac) or **Control + G** (Windows) to show or hide the grid in Figma.
+
+<DoDontGrid>
+	<DoDont
+		type="do"
+		image={{
+			url: gridSpanDo,
+			urlDarkMode: gridSpanDoDark,
+			alt: 'Example of the grid spanning the main content area only.',
+		}}
+	>
+		Span only the main content area. Exclude the side nav and panel.
+	</DoDont>
+	<DoDont
+		type="dont"
+		image={{
+			url: gridSpanDont,
+			urlDarkMode: gridSpanDontDark,
+			alt: 'Example of the grid spanning the side nav and main area.',
+		}}
+	>
+		Don't span the grid across navigation or panel areas.
+	</DoDont>
+	<DoDont
+		type="do"
+		image={{
+			url: breakpointSettingDo,
+			urlDarkMode: breakpointSettingDoDark,
+			alt: 'Screenshot of the Figma responsive setting in the appearance panel.',
+		}}
+	>
+		Change the breakpoint from the responsive setting in the appearance panel.
+	</DoDont>
+	<DoDont
+		type="dont"
+		image={{
+			url: breakpointSettingDont,
+			urlDarkMode: breakpointSettingDontDark,
+			alt: 'Example of manually resizing the grid component.',
+		}}
+	>
+		Don't change the breakpoint by resizing the grid or layout component. The linked grid styles
+		will map incorrectly.
+	</DoDont>
+	<DoDont
+		type="do"
+		image={{
+			url: breakpointViewportDo,
+			urlDarkMode: breakpointViewportDoDark,
+			alt: 'Breakpoint set to the full viewport width.',
+		}}
+	>
+		Set the grid breakpoint to the full viewport width.
+	</DoDont>
+	<DoDont
+		type="dont"
+		image={{
+			url: breakpointViewportDont,
+			urlDarkMode: breakpointViewportDontDark,
+			alt: 'Breakpoint set to the content area width only.',
+		}}
+	>
+		Don't set the breakpoint based on the main content area width. Breakpoints are based on the full
+		viewport width.
+	</DoDont>
+</DoDontGrid>
+
+## Grid and auto layout
+
+Grid is a layout guide and a visual reference for aligning content to columns. To build layouts in
+Figma that adjust as the breakpoint changes, use auto layout to position content along the grid
+columns.
+
+<DoDontGrid>
+	<DoDont
+		type="do"
+		image={{
+			url: autoLayoutDo,
+			urlDarkMode: autoLayoutDoDark,
+			alt: 'Screenshot of Figma auto layout settings.',
+		}}
+	>
+		Use auto layout to build responsive layouts that align to the grid.
+	</DoDont>
+	<DoDont
+		type="dont"
+		image={{
+			url: autoLayoutDont,
+			urlDarkMode: autoLayoutDontDark,
+			alt: 'Example of manually positioning content in Figma.',
+		}}
+	>
+		Don't use absolute positioning or drag-to-place content without auto layout. Manual placement
+		doesn't adapt to changing breakpoints and breaks responsive layouts.
+	</DoDont>
+</DoDontGrid>
+
+## Related
+
+- [Layout](/components/navigation-system/layout) is the component that defines the outer structure
+  of an app, including navigation, panels, and the main content area.
+- [Primitives](/components/primitives/overview) are the box, stack, and inline primitives used to
+  build equivalent layouts in code.
+- [Spacing](/foundations/spacing) uses space tokens to ensure consistent alignment and separation
+  between elements.
+- [ADS Figma libraries](/get-started/design/figma-libraries/atlassians) contain the pre-built grid
+  with default Atlassian breakpoint values.
+- [Auto layout in Figma](https://help.figma.com/hc/en-us/articles/360040451373-Guide-to-auto-layout)
+  is Figma's guide to building responsive layouts that align to grid columns.
+
+The consistent and intentional use of a spacing system creates a more harmonious experience for the
+end user. A spacing system also lays a foundation for responsive design and customisable UI density
+in the future, which will enhance the overall quality and accessibility of our apps.
+
+## 8 pixel base unit
+
+Our spacing system is built around a base unit of 8 pixels. This base unit determines the spacing
+scale and ensures visual consistency across apps.
+
+## Scale
+
+Building off of the 8px base unit, the main foundation of our spacing system is the spacing scale.
+This scale is a limited set of space values that can be used to lay out UI elements in a consistent
+way.
+
+Each spacing value is a multiple of the base unit and ranges from 0px to 80px to allow for
+flexibility while still maintaining consistency across different layouts.
+
+## Space tokens
+
+The 8px base unit also forms the basis of our space token system, as the base unit `space.100`.
+Every space token is a multiple of this base unit, the number suffix representing the percentage of
+the base unit.
+
+For example, `space.200` is 200% of the size of the base unit, therefore represents 16px.
+
+Each space token should be used in place of the raw pixel or REM values when adding space between
+components or objects on a page. Usage examples are detailed below.
+
+<SpacingTokensTable />
+
+### Negative values
+
+Our space token system also includes
+[negative values](https://atlassian.design/components/tokens/all-tokens#space) from
+`space.negative.025` to `space.negative.400` (-2px to -32px) available in code. These can be useful
+for breaking out of a container's padding or for overlapping elements. Before reaching for negative
+tokens, see if you can use the
+[Bleed primitive](https://atlassian.design/components/primitives/bleed/example) which is designed
+specifically to handle negative whitespace.
+
+## Spacing usage
+
+Different use cases require different ranges of spacing units to achieve the best outcomes. Our
+spacing scale can be broken into three different size ranges:
+
+![A horizontal number scale diagram with 0 pixels on the left hand side and 80 pixels on the right hand side, these are the minimum and maximum values on the scale. The 8 pixel unit is highlighted as the space.100 base token. The scale is then broken up into three sections through purple highlighting. There are Small token values from 0 pixels to 8 pixels, Medium token values from 12 pixels to 24 pixels and Large token values from 32 pixels to 80 pixels.](./_assets/spacing-scale.png)
+
+### Small values - 0px to 8px
+
+Use the tokens from `space.0` to `space.100` (0px to 8px) for small and compact pieces of UI.
+
+#### Examples
+
+- Gap between small icons and text
+- Container padding of small components (ie badges, icon buttons, table cells)
+- Gap between repeating elements (ie button groups)
+- Padding within input components
+- Vertical spacing between elements in a card (ie a title and description, a description and
+  actions)
+- Gap between the trigger and elevated element (ie between dropdown button & menu)
+
+### Medium values - 12px to 24px
+
+Use the tokens `space.150` to `space.300` (12px to 24px) for larger and less dense pieces of UI.
+
+#### Examples
+
+- Container padding of larger components (ie buttons)
+- Space between avatar/large icon and content (ie section messages)
+- Vertical spacing between elements in cards
+- Spacing between items in less densely packed or larger components
+
+### Large values - 32px to 80px
+
+Use the tokens `space.400` to `space.1000` (32px to 80px) for the largest pieces of UI and for
+layout elements.
+
+#### Examples
+
+- The space between content on the page (ie spacing between top of page and header)
+- Alignment within larger pieces of content (ie alignment of content in Flag)
+
+## Layout guidelines
+
+A layout is composed of UI elements and components as well as the space between them. Applying these
+guidelines helps customers quickly understand the relationship between elements, allowing them to
+scan and digest page content with ease.
+
+Use these guidelines in combination with space tokens to create layouts that are consistent and easy
+to understand.
+
+### Group by similarity
+
+Users expect elements to be grouped semantically, or grouped in such a way that it provides greater
+context around the information provided.
+
+Using consistent spacing around elements lends them a visual similarity that helps the user
+understand their semantic relationship. For example, a table or list of items should be spaced
+consistently to create the sense of a cohesive unit or collection.
+
+<DoDontGrid>
+	<DoDont type="do" image={{ url: similarityDo, alt: '' }}>
+		Group similar items together using similar spacing.
+	</DoDont>
+	<DoDont type="dont" image={{ url: similarityDont, alt: '' }}>
+		Group similar items differently.
+	</DoDont>
+</DoDontGrid>
+
+### Group by proximity
+
+The distance between elements creates semantic meaning, elements that are placed close to one
+another are assumed to be related.
+
+Use this principle to create meaning by placing more related objects closer together, and less
+related objects further apart. For example, place elements that are part of the same flow or user
+action closer together so users can understand their relation.
+
+<DoDontGrid>
+	<DoDont type="do" image={{ url: proximityDo, alt: '' }}>
+		Group related items close together so that users can scan the content more easily.
+	</DoDont>
+	<DoDont type="dont" image={{ url: proximityDont, alt: '' }}>
+		Group related items far apart.
+	</DoDont>
+</DoDontGrid>
+
+### Create order and hierarchy
+
+Users look for order in visual information to reduce the mental effort required to scan and process
+data. Therefore, the ordering of elements on a page can be used to encourage users to follow a
+certain flow or journey.
+
+Hierarchy is used to rank elements and influence the order in which users view them. The sizing of
+different elements lends more importance to larger elements by drawing focus, and less to
+smaller-sized elements. Similarly, varying the amount of whitespace around an element can be used to
+group elements together or separate them to impart greater importance.
+
+<DoDontGrid>
+	<DoDont type="do" image={{ url: hierarchyDo, alt: '' }}>
+		Use scale and whitespace to rank elements.
+	</DoDont>
+	<DoDont type="dont" image={{ url: hierarchyDont, alt: '' }}>
+		Give every element the same visual importance.
+	</DoDont>
+</DoDontGrid>
+
+### Introduce visual rhythm
+
+Patterns of alternating elements and white space create visual rhythm, which influences way users
+scan a page and focus their attention.
+
+Using a pattern of similar spacing between elements (such as in a table or list) creates a
+predictable rhythm for the user to follow. This consistent rhythm reinforces the similarity in
+importance of each of these elements.
+
+Varying the spacing between and sizing of objects creates a more organic flow and guides the user
+through a page or experience naturally. Variation creates points of attention and contrast between
+objects on the page and improves scannability.
+
+![](./_assets/visual-rhythm.png)
+
+### Use optical adjustment
+
+While using a spacing system improves consistency, the visual harmony of a page may not be perfect
+the first time. The visual weight of an element affects the size and spacing that may be required to
+create balance on the page, and may deviate from standard spacing patterns. Optical adjustments
+should be used to correct these imbalances and maintain the page’s flow.
+
+Optical adjustments require using the spacing scale units and visual intuition to make minor changes
+to the spacing between objects in order to create visual harmony.
+
+<DoDontGrid>
+	<DoDont type="do" image={{ url: opticalAdjustmentDo, alt: '' }}>
+		Adjust spacing to create visual balance.
+	</DoDont>
+	<DoDont type="dont" image={{ url: opticalAdjustmentDont, alt: '' }}>
+		Use standard spacing without considering its alignment with other elements.
+	</DoDont>
+</DoDontGrid>
+
+## Related
+
+- Learn more about [design tokens](https://atlassian.design/tokens/design-tokens)
+- [List of all design tokens](https://atlassian.design/components/tokens/all-tokens)
+
+Design tokens are the new way to apply visual foundations in Atlassian app experiences. We’re
+rolling out tokens to standardize colors, elevations, spacing, and other styles in Atlassian apps.
+
+## What are design tokens?
+
+Design tokens are name and value pairings that represent small, repeatable design decisions. A token
+can be a color, font style, unit of white space, or even a motion animation designed for a specific
+need.
+
+For example, instead of choosing one of many shades of green for an icon, we can apply a design
+token that is consistent with all similar usages across our apps: `color.icon.success`.
+
+![](./_assets/elevation-token-image.png)
+
+## What are themes?
+
+A theme is a collection of token values designed to achieve a certain look or style. Themes are how
+we switch color schemes and styles everywhere using a single set of tokens.
+
+Light mode, dark mode, and high-contrast mode are all examples of theming. Non-color themes are also
+possible: think cozy/comfortable/compact views, reduced motion, or custom typography styles.
+
+![](./_assets/dark-mode-light-mode.png)
+
+## Why use design tokens?
+
+- Features like global theming (dark mode), responsive design, and user customization are possible
+  with tokens.
+- Design tokens simplify the design and development by streamlining decision making and handover
+  between crafts.
+- As Atlassian's visual language evolves, changes can be made once across the system and apps. No
+  more finding and replacing hard-coded values everywhere.
+- We have automated tooling to help designers and developers start using tokens faster.
+- Tokens are how we'll implement our newest visual foundations. This will deliver visual consistency
+  and other improvements to Atlassian UI.
+
+## How to read design token names
+
+Knowing how to read token names will help you find the right token faster when working in designs
+and in code.
+
+![](./_assets/color_token_name.png)
+
+A design token’s name describes how it should be used, and each part communicates one piece of its
+usage.
+
+1. **Foundation**: The type of visual design attribute or foundational style, such as color,
+   elevation, or space.
+2. **Property**: The UI element the token is being applied to, such as a border, background, shadow,
+   or other property.
+3. **Modifier**: Additional details about the token’s purpose, such as its color role, emphasis, or
+   interaction state. Not every token has a modifier. For example, color.text is our default body
+   text color.
+
+Note that token names might look different in different environments and tools:
+
+![](./_assets/Tokens-variable-breakdown.png)
+
+## Find and use tokens
+
+Find all of our available design tokens and their usage descriptions in
+[all tokens](https://atlassian.design/components/tokens/all-tokens).
+
+Search and filter the token list, or use our token picker for extra help.
+
+### Best practices
+
+Choose tokens based on meaning where applicable, not specific values.
+
+<DoDontGrid>
+	<DoDont type="do" image={{ url: doIconColorImage, alt: '' }}>
+		Use design tokens with names and descriptions that fit your specific situation.
+	</DoDont>
+	<DoDont type="dont" image={{ url: dontIconColor, alt: '' }}>
+		Don't use a token just because the colors appear to match. This can break the experience in
+		other themes.
+	</DoDont>
+</DoDontGrid>
+
+Check our foundations for [color](https://atlassian.design/foundations/color),
+[elevation](https://atlassian.design/foundations/elevation), and
+[spacing](https://atlassian.design/foundations/spacing) for additional usage guidance.
+
+## Design token examples
+
+Use these examples to get a better understanding of how different tokens work.
+
+### Color tokens
+
+Here’s an example of color design tokens in use: the default text color and the background color for
+a "danger" button on hover.
+
+![](./_assets/color-token-example.png)
+
+There are dedicated color tokens for text, links, icons, backgrounds, borders, blankets, charts, and
+skeleton loaders.
+
+For more on color token usage, see our
+[color foundation](https://atlassian.design/foundations/color).
+
+### Elevation tokens
+
+Elevation tokens apply to the perceived surface level and shadow.
+
+![](./_assets/elevation-token-image.png)
+
+For more on how and when to apply elevations, see our
+[elevation foundation](https://atlassian.design/foundations/elevation).
+
+### Opacity tokens
+
+Opacity tokens apply transparency to an element. Use `opacity.disabled` for interactive images that
+are disabled (such as disabled avatar), and `opacity.loading` to content sitting underneath a
+loading spinner.
+
+### Space tokens
+
+Space tokens reduce decision making and allow for consistent spacing between elements in a page
+layout. These tokens are designed to be use for horizontal and vertical spacing, in a variety of
+contexts.
+
+For more on how our spacing system, and how to use space in your designs, see our
+[spacing foundation](https://atlassian.design/foundations/spacing).
+
+![](./_assets/token-spaceheading_2.png)
+
+### Typography tokens
+
+To visually align typography across Atlassian apps, typography tokens include font values, including
+font family, font size, font weights, and line heights for all text styles.
+
+For more on how to start working with typography tokens, see our
+[typography foundation](https://atlassian.design/foundations/typography).
+
+![](./_assets/token-typeheading_2.png)
+
+## What's next
+
+- Learn how to [Migrate to tokens](https://atlassian.design/tokens/migrate-to-tokens)
+- [Use tokens in designs](https://atlassian.design/tokens/use-tokens-in-design)
+- [Use tokens in code](https://atlassian.design/tokens/use-tokens-in-code)
+- For additional component examples and code samples, see
+  [components examples](https://atlassian.design/components/tokens/examples).
+
+# Color
+
+Use color tokens to communicate intent, hierarchy, and interaction in Atlassian UI. Start with the
+existing ADS component treatment; use these choices when styling custom UI or reviewing a token
+choice.
+
+## Choose the token family
+
+1. Identify what the color communicates. Use a semantic role for status, validation, actions, or
+   discovery. Use an accent when the hue identifies a category and could change without changing its
+   meaning. See the Color accents guidance for hue and pairing choices.
+2. Choose the background emphasis that fits the intended hierarchy.
+3. Pair it with the text, icon, and border tokens for that role and emphasis.
+4. For interactive UI, apply the state to the element that owns the interaction. Preserve separate
+   cues for persistent selection and keyboard focus.
+
+Apply tokens with `token('color...')` from `@atlaskit/tokens`. Tokens resolve for light and dark
+themes, so use their semantic names instead of copying palette values or hardcoded colors.
+
+## Read token names
+
+Most tokens follow `color.[property].[role].[emphasis].[state]`:
+
+- **Property** describes where the color is applied: `background`, `text`, `icon`, or `border`.
+- **Role** describes its intent: `brand`, `danger`, `warning`, `success`, `information`,
+  `discovery`, `neutral`, `selected`, `focused`, `input`, or `accent.[hue]`.
+- **Emphasis** describes contrast against the default surface: `bold`, `bolder`, `boldest`,
+  `subtle`, `subtler`, or `subtlest`.
+- **State** describes an interaction state such as `hovered` or `pressed`.
+
+Accent tokens place the hue after the role, for example `color.background.accent.blue.subtlest`.
+Look up exceptions such as `color.link`, `color.blanket`, `color.skeleton`, and `color.chart.*` in
+the token catalog rather than extending the pattern.
+
+## Choose a semantic role
+
+| Role           | Choose it for                                     | Example use                         |
+| :------------- | :------------------------------------------------ | :---------------------------------- |
+| `danger`       | Destructive actions, errors, or critical failures | Error message or destructive action |
+| `warning`      | Caution, risk, or something that needs attention  | Risk notice                         |
+| `success`      | A successful, completed, or valid state           | Completion message                  |
+| `information`  | A passive informational message                   | Informational notice                |
+| `brand`        | Primary actions or product identity               | Primary action                      |
+| `discovery`    | Discovery, AI, or a new feature                   | New feature callout                 |
+| `neutral`      | Base surfaces and neutral layout                  | Page or control surface             |
+| `input`        | Form field backgrounds and boundaries             | Text field                          |
+| `selected`     | A persistent current choice                       | Selected row or option              |
+| `focused`      | Keyboard focus indicator; border only             | Focus ring                          |
+| `accent.[hue]` | Categories and labels whose hue is optional       | User-chosen tag                     |
+
+Keep fixed meaning in the semantic role. For example, an error uses `danger` and a successful state
+uses `success`; an accent red or green is for a category whose color does not carry that meaning.
+
+## Pair semantic backgrounds and foregrounds
+
+| Background                                              | Text and icon                                                 |
+| :------------------------------------------------------ | :------------------------------------------------------------ |
+| Semantic `*.bold` or `*.bolder`                         | `color.text.inverse` and `color.icon.inverse`                 |
+| `color.background.warning.bold`                         | `color.text.warning.inverse` and `color.icon.warning.inverse` |
+| Subtle, subtler, subtlest, or default semantic surfaces | Matching role text and icon, such as `color.text.danger`      |
+
+Use the warning-specific inverse pair shown above on a bold warning background. Accent foreground
+pairings are in the Color accents guidance.
+
+```tsx
+// Error banner
+backgroundColor: token('color.background.danger.bold'),
+color: token('color.text.inverse'),
+
+// Category label whose hue carries no status meaning
+backgroundColor: token('color.background.accent.red.bolder'),
+color: token('color.text.inverse'),
+```
+
+## Apply state to the interactive element
+
+### Form fields
+
+Use `color.background.input` for the field background, with `color.background.input.hovered` and
+`color.background.input.pressed` for those states. Use `color.border.input` for the field boundary.
+Start with the ADS form component’s treatment when one owns the control.
+
+### Selection and focus
+
+Use `color.background.selected`, `color.text.selected`, `color.icon.selected`, or
+`color.border.selected` for a persistent choice. Use `color.border.focused` for keyboard focus. When
+an element is both selected and focused, keep the selected treatment and add the focus indicator.
+Don’t use link, brand, or focused tokens to communicate selection. Pair selection color with another
+cue, such as a checkmark, underline, border, or shape change, so selection remains clear without
+color alone.
+
+Apply `hovered` and `pressed` variants to the currently interactive element. Keep a selected item
+recognizable during those temporary states. Icons do not have dedicated hovered or pressed color
+tokens; use a subtle neutral background such as `color.background.neutral.subtle.hovered` or
+`color.background.neutral.subtle.pressed` when the icon’s control needs a surface response.
+
+## Check the rendered result
+
+Inspect the foreground, meaningful borders, and state changes against the final visible background
+in the themes the experience supports. For translucent colors, include the underlying surface when
+checking contrast. Use `color.chart.*` for chart marks and product UI tokens for axes, labels, and
+gridlines.
+
+## Look up exact tokens
+
+Search the ADS token registry when an identifier or pairing is uncertain:
+
+```bash
+atlas ads search "danger background" --type token
+atlas ads token color.background.danger.bold --json
+```
+
+If the Atlas plugin is unavailable, use
+`npx @atlaskit/ads-cli search "danger background" --type token`.
+
+## The palette
+
+<ColorPaletteRamps />
+
+## Picking colors for dark mode
+
+Neutral colors are set up in a way that makes it easy to convert a light theme to a dark theme. If
+you use our [design tokens](https://atlassian.design/tokens/design-tokens) to apply colors, this
+mapping is done for you.
+
+There is a light neutral ramp and an equivalent dark neutral ramp. Neutral100 in the light neutral
+ramp should equate to DarkNeutral100 in the dark neutral ramp.
+
+<img
+	src={paletteNeutralMapping}
+	alt="How light neutral ramp maps to dark neutral ramp in light and dark mode respectively."
+/>
+
+Saturated colors are also easy to convert from a light theme to a dark theme using symmetry. We
+currently have 10 swatches set up in each palette. If the swatches are divided in half, each half
+becomes a mirror.
+
+<img
+	src={paletteSaturatedMapping}
+	alt="How colors in the blue ramp maps across light and dark mode."
+/>
+
+For instance, if a button color is 700 in light theme, it will be 400 in dark theme. If a section
+message background is 100 in light theme, it will be 1000 in dark theme. Design tokens will handle
+these conversions for you.
+
+<img
+	src={paletteJiraBoard}
+	alt="Screenshot of a Confluence page, which is shown half in light mode and half in dark mode. The button background uses B700 in light mode and B400 in dark mode. The section message background uses B100 in light mode and B1000 in dark mode."
+/>
+
+Using symmetry is a great place to start and will cover most use cases. However, it may not work for
+all use cases and color mapping can be adjusted accordingly.
+
+## Dedicated to
+
+These colors have been dedicated to honor the memory of Rosie and Alexandria, and will be woven into
+Atlassian apps and design for years to come.
+
+<ColorPaletteDedication />

@@ -1,0 +1,7 @@
+$ npx @atlaskit/ads-cli search app frame --type docs --limit 5
+Results (1):
+
+App frame
+   ADS  ·  docs
+   Typography tokens and text styles Use text styles when designing in Figma, and…
+   → npx @atlaskit/ads-cli docs app frame

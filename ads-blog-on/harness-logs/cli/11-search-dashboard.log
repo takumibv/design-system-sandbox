@@ -1,0 +1,2 @@
+$ npx @atlaskit/ads-cli search dashboard --type docs --limit 5
+Error: No results found for "dashboard".

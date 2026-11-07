@@ -1,0 +1,2 @@
+$ npx @atlaskit/ads-cli search pattern --type docs --limit 10
+Error: No results found for "pattern".

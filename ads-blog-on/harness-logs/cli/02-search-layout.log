@@ -1,0 +1,7 @@
+$ npx @atlaskit/ads-cli search layout --type docs --limit 10
+Results (1):
+
+Layout
+   ADS  ·  docs
+   Overview Grid is a system for arranging content consistently within the main co…
+   → npx @atlaskit/ads-cli docs layout

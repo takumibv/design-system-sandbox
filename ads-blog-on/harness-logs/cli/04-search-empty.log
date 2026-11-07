@@ -1,0 +1,60 @@
+$ npx @atlaskit/ads-cli search empty state --limit 5
+Results (15):
+
+Components (5):
+
+EmptyState  @atlaskit/empty-state
+   ADS  ·  component  ·  16 props  ·  1 example
+   → npx @atlaskit/ads-cli component EmptyState
+Toggle  @atlaskit/toggle
+   ADS  ·  component  ·  13 props  ·  1 example
+   → npx @atlaskit/ads-cli component Toggle
+Form  @atlaskit/form
+   ADS  ·  component  ·  13 props  ·  1 example
+   → npx @atlaskit/ads-cli component Form
+Flag  @atlaskit/flag
+   ADS  ·  component  ·  15 props  ·  1 example
+   → npx @atlaskit/ads-cli component Flag
+InlineEditableTextfield  @atlaskit/inline-edit
+   ADS  ·  component  ·  16 props  ·  1 example
+   → npx @atlaskit/ads-cli component InlineEditableTextfield
+
+Tokens (3):
+
+motion.listitem.pressed
+   ADS  ·  token  ·  = background-color 100ms cubic-bezier(0.4, 1, 0.6, 1), border-color 100ms cubic-b…
+   → npx @atlaskit/ads-cli token motion.listitem.pressed
+color.chart.categorical.1.hovered
+   ADS  ·  token  ·  = #1868DB
+   → npx @atlaskit/ads-cli token color.chart.categorical.1.hovered
+color.chart.categorical.2.hovered
+   ADS  ·  token  ·  = #6A9A23
+   → npx @atlaskit/ads-cli token color.chart.categorical.2.hovered
+
+Icons (6):
+
+TableCellClearIcon  @atlaskit/icon/core/table-cell-clear
+   ADS  ·  icon  ·  Reserved for clearing the contents of table cells.
+   → npx @atlaskit/ads-cli icon TableCellClearIcon
+AiGenerativeRemoveSilenceIcon  @atlaskit/icon-lab/core/ai-generative-remove-silence
+   ADS  ·  icon  ·  Reserved for silence removal functionality in Loom
+   → npx @atlaskit/ads-cli icon AiGenerativeRemoveSilenceIcon
+StatusWorkflowSuccessIcon  @atlaskit/icon-lab/core/status-workflow-success
+   ADS  ·  icon  ·  Reserved for representing statuses that signal positive outcome — success, acco…
+   → npx @atlaskit/ads-cli icon StatusWorkflowSuccessIcon
+StatusDiscoveryIcon  @atlaskit/icon/core/status-discovery
+   ADS  ·  icon  ·  Reserved for discovery statuses and messaging. Filled status icons provide high…
+   → npx @atlaskit/ads-cli icon StatusDiscoveryIcon
+StatusErrorIcon  @atlaskit/icon/core/status-error
+   ADS  ·  icon  ·  Reserved for error statuses and messaging. Filled status icons provide higher v…
+   → npx @atlaskit/ads-cli icon StatusErrorIcon
+DataZeroFillIcon  @atlaskit/icon-lab/core/data-zero-fill
+   ADS  ·  icon  ·  Reserved for replacing empty data fields with zero.
+   → npx @atlaskit/ads-cli icon DataZeroFillIcon
+
+Docs (1):
+
+Empty state
+   ADS  ·  docs
+   An empty state message appears after someone has completed a task or workflow,…
+   → npx @atlaskit/ads-cli docs empty state

@@ -1,0 +1,78 @@
+Date label
+Date label is a non-interactive label that displays a date and optionally, visually communicates its status.
+ExamplesCodeUsageChangelog
+## Usage
+Use a date label to visually distinguish dates from surrounding content. Date label also supports
+semantic appearances with color and icon, making it easy to scan and display its status at a glance.
+## Parts
+- Label: Text displaying the date.
+- Icon (optional): An icon that corresponds to the appearance. Each appearance has a designated
+icon that displays automatically when enabled.
+## Best practices
+### Only use date label to communicate dates and their status
+Date label should only be used to display dates. To label other things, such as the status of an
+item, consider using Lozenge.
+#### Do
+Use date label to display dates or communicate the status of a date.
+#### Don’t
+Don’t use date label for any other types of information.
+### Use date label dropdown trigger when interactivity is required
+Date labels are non-interactive. If you require an interactive date label that opens a dropdown for
+example a calendar picker, use
+date label dropdown trigger.
+#### Do
+Use a date label dropdown trigger if interactivity is required.
+#### Don’t
+Don’t add custom functionality to the date label.
+### Don't use date labels inline with body text
+Date labels are designed for labelling in structured UI contexts, and not for use inline with body
+text, such as in editor.
+#### Do
+Use date label to display dates for quick recognition.
+#### Don’t
+Don’t use date labels in line with user generated text.
+## Accessibility
+### Use icons that carry appropriate meaning for semantic states
+Date labels come with designated icons for each of its semantic states. These icons are essential
+for accessibility. Without them, users must rely solely on color to distinguish states, which may
+not be perceivable to everyone.
+#### Do
+Use the assigned icons for semantic appearances like an overdue date.
+#### Don’t
+Don’t remove icons for semantic appearances or use icons that don’t carry appropriate meaning.
+## Data Center apps
+For all new features, we recommend using Atlassian Design System and other
+Atlaskit components﻿, (opens new window). For existing code, you can continue to use
+Atlassian User Interface (AUI)﻿, (opens new window).
+## Related
+- For status information, use a lozenge.
+- For tallies or counts, use a badge.
+- To visually label content such as categories and attributes, use a tag.
+- For tagging people, team, space, or projects, use an avatar tag.
+Was this page helpful?YesNo
+We use this feedback to improve our documentation.
+Back to top
+- Design system
+- Get started
+- Foundations
+- Components
+- Rovo UI
+- Tools
+- Release phases
+- Contact us
+- News
+- Featured
+- Design blogs
+- Leadership talks
+- Team stories
+- Other libraries
+- Atlaskit﻿, (opens new window)
+- Forge UI Kit﻿, (opens new window)
+- Brand kit﻿, (opens new window)
+- Careers
+- Life at Atlassian﻿, (opens new window)
+- Design and content roles﻿, (opens new window)
+- Developer roles﻿, (opens new window)
+- Product roles﻿, (opens new window)
+© 2026 AtlassianTrademark﻿, (opens new window)Privacy﻿, (opens new window)License
+ 

@@ -1,0 +1,65 @@
+Page layout
+A collection of components which let you compose an application's page layout.
+## Deprecated
+This package is deprecated. Use our new navigation system.
+ExamplesCodeUsageChangelog
+## Usage
+The page layout component is a series of containers that make up an application viewport. Within the
+page layout you can include sections like the
+top navigation,
+side navigation, and the main content.
+The left sidebar provides navigation for the current workspace. People can personalise their working
+area or get more space to work by resizing, expanding, or collapsing the sidebar.
+Using the page layout component to compose your app experiences gives you useful accessibility
+features such as a skip link menu.
+## Accessibility
+- Consistent and clear hierarchy helps people who navigate the page. Use landmarks, regions,
+headings and titles to outline the page layout so people can see the structure and how sections
+relate to each other.
+- Order items on the page based on their level of importance so people don't have to search for
+them.
+- Provide a unique label for each navigation in the page layout. Make sure that the navigation
+label is meaningful and not direction-based. For example, "Current project" not "Left navigation".
+- Don't include the word "navigation" in your navigation label. The <nav> semantics mean
+assistive technology will already tell people that they are using a navigation.
+### Skip links
+Always include the skip link menu if a substantial number of tab presses are required to reach the
+main content. A log-in page may not require a skip link menu, but on any page with top and/or side
+navigation people will expect to be able to skip to the main content.
+- Make sure there are no more than 4 or 5 elements in the skip link menu unless absolutely
+necessary. Too many options increases cognitive load and requires too many tab presses to bypass
+the skip link menu.
+- Keep the list consistent. If a section of the UI (such as a side panel) is in a skip link menu on
+one page it should be in the skip link menu on all pages where it appears.
+- Names for the sections must be understandable, including for screen reader users. 'Top navigation'
+does not describe the purpose of the navigation element, while 'Jira navigation' or 'global
+navigation' are more descriptive.
+- All skip link text needs to be translated for different locales. This includes section skip link
+labels, as well as the 'skip to:' text at the top of the panel.
+Was this page helpful?YesNo
+We use this feedback to improve our documentation.
+Back to top
+- Design system
+- Get started
+- Foundations
+- Components
+- Rovo UI
+- Tools
+- Release phases
+- Contact us
+- News
+- Featured
+- Design blogs
+- Leadership talks
+- Team stories
+- Other libraries
+- Atlaskit﻿, (opens new window)
+- Forge UI Kit﻿, (opens new window)
+- Brand kit﻿, (opens new window)
+- Careers
+- Life at Atlassian﻿, (opens new window)
+- Design and content roles﻿, (opens new window)
+- Developer roles﻿, (opens new window)
+- Product roles﻿, (opens new window)
+© 2026 AtlassianTrademark﻿, (opens new window)Privacy﻿, (opens new window)License
+ 

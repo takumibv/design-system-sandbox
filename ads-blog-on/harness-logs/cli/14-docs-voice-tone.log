@@ -1,0 +1,250 @@
+$ npx @atlaskit/ads-cli docs voice tone
+<SectionMessage title="">
+	The guidance on this page relates to voice and tone for user interfaces and app experiences. For
+	broader guidance, including marketing, view{' '}
+	<Link href="https://go.atlassian.com/voice-tone">Brand Voice and Tone (Atlassians only)</Link>
+</SectionMessage>
+
+Our voice is essentially Atlassian's personality and is made up of the following traits:
+
+- Bold
+- Optimistic
+- Practical, with a wink
+
+Tone is how we express Atlassian’s voice, and it should change depending on the situation the user
+is in (for example, receiving an error versus successfully completing a project).
+
+Whether it’s writing content for our apps, user interface, websites, or communications, you should
+follow our voice and tone guidelines to ensure people recognize they’re interacting with Atlassian
+wherever they are.
+
+## How to apply Atlassian’s personality traits
+
+How each trait is applied should depend on the audience and situation. Use these questions to help
+you work out the right balance:
+
+- What is the emotional state of the user when they encounter your content or solution, and where
+  are they on their journey?
+- How might our personality traits enhance a moment of celebration?
+- How might our personality traits diffuse a moment of frustration or pain?
+
+<br></br>
+
+### Bold
+
+When we say bold, it’s about motivating teams with the right amount of support at the right time to
+do their best work.
+
+- Offer best practices or just enough help to get the work started.
+- Give accurate information so people can make educated decisions.
+- Understand a person's struggles and desired outcomes, and give just enough information so someone
+  can get where they need to go.
+
+#### When to be more bold
+
+- Person is feeling: confident, interested, trust, anticipation.
+- Examples: power users, admins, daily users.
+
+#### When to be less bold
+
+- Person is feeling: apprehension, confusion, annoyance, fear, anger.
+- Examples: new users, trial users, when introducing a new concept, feature, or app.
+
+<br></br>
+
+### Optimistic
+
+Writing with optimism is understanding where in the journey someone is and highlighting the key
+points that will help them along the way.
+
+- Focus on the most important bits the person needs in the moment. This gives people confidence in
+  our apps.
+- Weave a consistent story across apps and use the same vocabulary across all messaging.
+- Create a seamless flow across experiences. This lets people know that no matter where they’re
+  working, they can expect a familiar, consistent experience.
+- Keep people in the loop by informing them of relevant features, apps, and opportunities for
+  success.
+
+#### When to be more optimistic
+
+- Person is feeling: ambitious, inspired, curious, admiration.
+- Examples: power users, admins, daily users.
+
+#### When to be less optimistic
+
+- Person is feeling: anticipation, unsupported, confused, uncertain.
+- Examples: someone is new to Atlassian, trial users, when introducing a new concept, feature, or
+  app.
+
+<br></br>
+
+### Practical, with a wink
+
+Our practical side means getting to the point and being direct and concise.
+
+- Be on the lookout for opportunities where we can offer a helping hand.
+- Write clear, accurate, and concise content that makes interfaces more usable and consistent — and
+  builds trust.
+- Write content that is understandable for anyone, anywhere, regardless of their culture or language
+  so that everyone feels part of the team.
+
+The ‘with a wink’ part of this trait needs more discernment when applying it to UI and app content
+(as opposed to marketing content) and remember that it isn’t always appropriate to use. Be mindful
+of where someone is at and what they might be experiencing before going beyond the practical.
+
+#### When to be more practical
+
+- Person is feeling: overwhelmed, unsure, hesitant, stressed.
+- Examples: people with deadlines or being blocked by errors, supporting new or occasional users,
+  introducing new features.
+
+#### When you can add the ‘wink’
+
+- Person is feeling: successful, joy, proud, relief.
+- Examples: power users, during social interactions, success messages.
+
+<br></br>
+
+## Voice and tone principles
+
+Atlassian's personality traits help keep our voice consistent across a range of different customer
+and app experiences. We can better support the full spectrum of experience for people by applying
+the following principles.
+
+Our voice and tone principles:
+
+- [Inform to build trust](https://atlassian.design/foundations/content/voice-tone#inform-to-build-trust)
+- [Empower to inspire action](https://atlassian.design/foundations/content/voice-tone#empower-to-inspire-action)
+- [Encourage people along the path](https://atlassian.design/foundations/content/voice-tone#encourage-people-along-the-path)
+- [Motivate by showing possibilities](https://atlassian.design/foundations/content/voice-tone#motivate-by-showing-possibilities)
+- [Satisfy by meeting expectations](https://atlassian.design/foundations/content/voice-tone#satisfy-by-meeting-expectations)
+- [Delight with unexpectedly pleasing experiences](https://atlassian.design/foundations/content/voice-tone#delight-with-unexpectedly-pleasing-experiences)
+
+<br></br>
+
+### Inform to build trust
+
+Be open and clear about the experience.
+
+- Tell people only what they need to know in the moment and nothing more.
+- Be aware of when a user may be new or confused, and tone down the boldness by being more
+  prescriptive.
+- Let people know where they are in their journey and what this part of the app will do.
+
+Write as a knowledgable member of the team. Show up at the right time and be open, humble, and warm.
+Offer direction for the most appropriate next steps.
+
+#### Places to use 'Inform to build trust'
+
+- In-app: [flags](https://atlassian.design/components/flag/usage),
+  [error messages](https://atlassian.design/foundations/content/designing-messages/error-messages),
+  and [spotlights](https://atlassian.design/components/spotlight/usage)
+- New features or apps
+- In confusing, warning, or error states
+
+<br></br>
+
+### Empower to inspire action
+
+Educate where people need it most.
+
+- Offer opportunities to learn at pivotal times to empower people to move in the right direction.
+- Give best practices and recommendations for next steps.
+- Suggest ways to improve or make decisions.
+- Let people know that Atlassian and fellow community members are available to help them make
+  decisions.
+
+Write as if you are educating. You are a teacher with empathy and an understanding of what it’s like
+to be in the weeds. You expect your audience to have a basic understanding.
+
+#### Places to use 'Empower to inspire action'
+
+- In-app: [spotlights](https://atlassian.design/components/spotlight/usage) and
+  [modal dialogs](https://atlassian.design/components/modal-dialog/usage)
+- When something requires an action
+- When guidance is needed
+
+<br></br>
+
+### Encourage people along the path
+
+Inspire by providing support in the right place. Be consistent and dependable.
+
+- Offer waypoints, help, and support if people are feeling confused or frustrated at points along
+  their journey.
+- Be human: give guidance, support, and encouragement along the way.
+- Guide people by revealing information gracefully. Let them know they’re on the right path, they
+  aren’t alone, and that delivering projects and building teams can be challenging.
+
+Write in an upbeat, friendly way. Acknowledge the opportunities in the here-and-now and walk through
+it with them.
+
+#### Places to use 'Encourage people along the path'
+
+- In-app:
+  [information messages](https://atlassian.design/foundations/content/designing-messages/info-messages),
+  [error messages](https://atlassian.design/foundations/content/designing-messages/error-messages),
+  and [section messages](https://atlassian.design/components/section-message/usage)
+- When something requires an action
+
+<br></br>
+
+### Motivate by showing possibilities
+
+Provide incentive and enthusiasm for continued growth.
+
+- Consider why someone would want to do this.
+- Show the possibilities of what can be accomplished by giving examples of how other people
+  accomplish the same task or by presenting the ideal state.
+- Describe the end result by giving expert testimony or offer opportunities for advanced knowledge.
+
+Write like an expert. Focus more on the solution than on the problem. Show people the possible
+benefits.
+
+#### Places to use 'Motivate by showing possibilities'
+
+- In-app: [spotlights](https://atlassian.design/components/spotlight/usage) and
+  [modal dialogs](https://atlassian.design/components/modal-dialog/usage)
+- Educational opportunities — it's a chance to give best practices, and tips and tricks
+
+<br></br>
+
+### Satisfy by meeting expectations
+
+Give people what they need.
+
+- All of our content should be practical at a minimum.
+- Provide quick and thorough answers, guidance, actions, and instructions (rather than trying to
+  lead, inspire, motivate, delight, or encourage).
+- Simply tell people what they need to know and get out of the way.
+
+Write as if you are explaining to your friend how to travel somewhere you’ve visited regularly.
+
+#### Places to use 'Satisfy by meeting expectations'
+
+- In-app:
+  [warning messages](https://atlassian.design/foundations/content/designing-messages/warning-messages),
+  [information messages](https://atlassian.design/foundations/content/designing-messages/info-messages),
+  and
+  [error messages](https://atlassian.design/foundations/content/designing-messages/error-messages)
+- Across all UI and app content
+
+<br></br>
+
+### Delight with unexpectedly pleasing experiences
+
+You can deliver appropriate delight (a ‘wink’) by celebrating success or progress, but only once
+you’ve built trust. Don’t overdo it. 
+
+- Delight means little flourishes, not humor or being cheeky.
+- Always ask yourself what someone might be feeling at that moment and if delight is appropriate.
+  Also question whether it will be understood or appreciated by our global audience.
+- Think about the timing and how frequently a user will see this. Once may amuse, but a dozen times
+  may annoy.
+
+#### Places to use ‘Delight with unexpectedly pleasing experiences’
+
+- In-app:
+  [success messages](https://atlassian.design/foundations/content/designing-messages/success-messages)
+  and [modal dialogs](https://atlassian.design/components/modal-dialog/usage)
+- Social interactions, while introducing new experiences

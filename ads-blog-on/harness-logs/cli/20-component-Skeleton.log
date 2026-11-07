@@ -1,0 +1,29 @@
+$ npx @atlaskit/ads-cli component Skeleton
+Skeleton
+@atlaskit/skeleton
+
+Props (7)
+  borderRadius        0 | "0" | "var(--ds-radius-xsmall)" | "var(--ds-radius-small)" | "var(--ds-radius-medium)" | "var(-…
+  Controls the border radius, or rounding of the skeleton's corners.
+  color               string | undefined
+  Overrides the default color of skeleton, and overrides the default shimmering start color if ShimmeringEndColor also provided.
+  groupName           string | undefined
+  Applied as a data-attribute. Use this to target groups of skeletons with the same name (e.g. for applying custom styles) ``` groupName="my-skeleton" -> <div data-my-skeleton> ```
+  height              string | number
+  Height of the skeleton.
+  isShimmering        boolean | undefined
+  Enables the shimmering animation.
+  ShimmeringEndColor  string | undefined
+  Overrides the default shimmering ending color of skeleton.
+  width               string | number
+  Width of the skeleton.
+
+Examples (1):
+
+Example 1
+  tsx                                                                                                
+  import Skeleton from '@atlaskit/skeleton';                                                         
+  const _default_1: React.JSX.Element[] = [<Skeleton width="200px" height="100px" isShimmering />];  
+  export default _default_1;                                                                         
+
+Design: https://go.atlassian.com/figma-library-ads-101024-1311

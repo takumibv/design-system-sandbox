@@ -1,0 +1,47 @@
+$ npx @atlaskit/ads-cli component InlineMessage
+InlineMessage
+@atlaskit/inline-message
+
+Props (7)
+  appearance     IconAppearance | undefined
+  Set the icon to be used before the title. Options are: connectivity, confirmation, info, warning, and error.
+  children       string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | It…
+  The elements to be displayed by the popup.
+  iconLabel      string | undefined
+  Text to be used as the label for the button icon. You must use this to provide information for people who use assistive technology when there is no title and/or secondaryText.
+  placement      PopupPlacement | undefined
+  The placement to be passed to the popup. Determines where around the text the dialog is displayed.
+  secondaryText  string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | It…
+  Text to display second.
+  spacing        IconSpacing | undefined
+  The spacing of the underlying icon button. Options are: spacious and compact.
+  title          string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | It…
+  Text to display first, bolded for emphasis.
+
+Examples (1):
+
+Example 1
+  tsx                                                                                               
+  import InlineMessage from '@atlaskit/inline-message/inline-message';                              
+  const Examples = (): React.JSX.Element => (                                                       
+    <>                                                                                              
+      <InlineMessage                                                                                
+        title="Success"                                                                             
+        secondaryText="Your changes have been saved successfully."                                  
+        appearance="confirmation"                                                                   
+      />                                                                                            
+      <InlineMessage                                                                                
+        title="Warning"                                                                             
+        secondaryText="This action cannot be undone."                                               
+        appearance="warning"                                                                        
+      />                                                                                            
+      <InlineMessage                                                                                
+        title="Error"                                                                               
+        secondaryText="Something went wrong. Please try again."                                     
+        appearance="error"                                                                          
+      />                                                                                            
+    </>                                                                                             
+  );                                                                                                
+  export default Examples;                                                                          
+
+Design: https://go.atlassian.com/figma-library-ads-13976-99230

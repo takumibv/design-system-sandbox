@@ -1,0 +1,168 @@
+$ npx @atlaskit/ads-cli component Select
+Select
+@atlaskit/select
+
+Props (72)
+  additionalInsideElementRefs     readonly React.RefObject<HTMLElement | null>[] | undefined
+  Element refs outside the menu that should be treated as inside its light-dismiss boundary. Only used by the top-layer menu implementation.
+  allowCreateWhileLoading         any
+  Allow options to be created while the `isLoading` prop is true. Useful to prevent the "create new ..." option being displayed while async results are still being loaded.
+  appearance                      "default" | "subtle" | "none" | undefined
+  autoFocus                       boolean | undefined
+  Focus the control when it is mounted. There are very few cases that this should be used, and using incorrectly may violate accessibility guidelines.
+  blurInputOnSelect               boolean | undefined
+  Remove focus from the input when the user selects an option (handy for dismissing the keyboard on touch devices)
+  cacheOptions                    any
+  If cacheOptions is truthy, then the loaded data will be cached. The cache will remain until `cacheOptions` changes value.
+  classNamePrefix                 string | null | undefined
+  If provided, all inner components will be given a prefixed className attribute. This is useful when styling via CSS classes instead of the Styles API approach.
+  classNames                      ClassNamesConfig<Option, IsMulti, GroupBase<Option>> | undefined
+  Provide classNames based on state for each inner component
+  clearControlLabel               string | undefined
+  Set the `aria-label` for the clear icon button.
+  closeMenuOnSelect               boolean | undefined
+  Close the select menu when the user selects an option
+  components                      Partial<SelectComponents<Option, IsMulti, GroupBase<Option>>> | undefined
+  This complex object includes all the compositional components that are used in `react-select`. If you wish to overwrite a component, pass in an object with the appropriate namespace. If you wish to restyle a component, we recommend using this prop with the `xcss` prop.
+  createOptionPosition            any
+  Sets the position of the createOption element in your options list. Defaults to 'last'
+  defaultInputValue               string | undefined
+  defaultMenuIsOpen               boolean | undefined
+  defaultOptions                  any
+  The default set of options to show before the user starts searching. When set to `true`, the results for loadOptions('') will be autoloaded.
+  defaultValue                    PropsValue<Option> | undefined
+  descriptionId                   string | undefined
+  This sets the aria-describedby attribute. It sets an accessible description for the select, for people who use assistive technology. Use '<HelperMessage>' from '@atlaskit/form' is preferred.
+  filterOption                    ((option: FilterOptionOption<Option>, inputValue: string) => boolean) | null | undefined
+  Custom method to filter whether an option should be displayed in the menu
+  form                            string | undefined
+  Sets the form attribute on the input
+  formatCreateLabel               any
+  Gets the label for the "create new ..." option in the menu. Is given the current input value.
+  formatGroupLabel                ((group: GroupBase<Option>) => React.ReactNode) | undefined
+  Formats group labels in the menu as React components An example can be found in the [Replacing builtins](https://react-select.com/advanced#replacing-builtins) documentation.
+  formatOptionLabel               ((data: Option, formatOptionLabelMeta: FormatOptionLabelMeta<Option>) => React.ReactNode) | ((data:…
+  Formats option labels in the menu and control as React components
+  getNewOptionData                any
+  Returns the data for the new option when it is created. Used to display the value, and is passed to `onChange`.
+  getOptionLabel                  GetOptionLabel<Option> | undefined
+  Resolves option data to a string to be displayed as the label by components Note: Failure to resolve to a string type can interfere with filtering and screen reader support.
+  getOptionValue                  GetOptionValue<Option> | undefined
+  Resolves option data to a string to compare options and specify value attributes
+  hideSelectedOptions             boolean | undefined
+  Hide the selected option from the menu
+  id                              string | undefined
+  The id to set on the SelectContainer component.
+  inputId                         string | undefined
+  The id of the search input
+  inputValue                      string | undefined
+  The value of the search input
+  instanceId                      string | number | undefined
+  Define an id prefix for the select components e.g. {your-id}-value
+  isClearable                     boolean | undefined
+  Is the select value clearable
+  isDisabled                      boolean | undefined
+  Is the select disabled
+  isInvalid                       boolean | undefined
+  Is the select invalid
+  isLoading                       boolean | undefined
+  Is the select in a state of loading (async) Is the select in a state of loading (async) Will cause the select to be displayed in the loading state, even if the Async select is not currently waiting for loadOptions to resolve
+  isMulti                         IsMulti | undefined
+  Support multiple selected options
+  isOptionDisabled                ((option: Option, selectValue: Options<Option>) => boolean) | undefined
+  Override the built-in logic to detect whether an option is disabled An example can be found in the [Replacing builtins](https://react-select.com/advanced#replacing-builtins) documentation.
+  isOptionSelected                ((option: Option, selectValue: Options<Option>) => boolean) | undefined
+  Override the built-in logic to detect whether an option is selected
+  isRequired                      boolean | undefined
+  This prop indicates if the component is required.
+  isSearchable                    boolean | undefined
+  Whether to enable search functionality
+  isValidNewOption                any
+  Determines whether the "create new ..." option should be displayed based on the current input value, select value and options array.
+  label                           string | undefined
+  This sets the aria-label attribute. It sets an accessible name for the select, for people who use assistive technology. Use of a visible label is highly recommended for greater accessibility support.
+  labelId                         string | undefined
+  This sets the aria-labelledby attribute. It sets an accessible name for the select, for people who use assistive technology. Use of a visible label is highly recommended for greater accessibility support.
+  loadingMessage                  ((obj: { inputValue: string; }) => React.ReactNode) | undefined
+  Async: Text to display when loading options
+  loadOptions                     any
+  Function that returns a promise, which is the set of options to be used once the promise resolves.
+  maxMenuHeight                   number | undefined
+  Maximum height of the menu before scrolling
+  menuIsOpen                      boolean | undefined
+  Whether the menu is open
+  menuPlacement                   MenuPlacement | undefined
+  Default placement of the menu in relation to the control. 'auto' will flip when there isn't enough space below the control.
+  menuPortalTarget                HTMLElement | null | undefined
+  Whether the menu should use a portal, and where it should attach An example can be found in the [Portaling](https://react-select.com/advanced#portaling) documentation
+  menuPosition                    MenuPosition | undefined
+  The CSS position value of the menu, when "fixed" extra layout management is required
+  menuRenderMode                  "inline" | "popup" | undefined
+  Controls how the menu is rendered. The default `popup` mode uses the normal transient menu rendering. The `inline` mode renders within the parent layout and keeps the menu open by default. Set `menuIsOpen` to control its visibility.
+  menuShouldScrollIntoView        boolean | undefined
+  Whether the menu should be scrolled into view when it opens
+  minMenuHeight                   number | undefined
+  Minimum height of the menu before flipping
+  name                            string | undefined
+  Name of the HTML Input (optional - without this, no input will be rendered)
+  noOptionsMessage                ((obj: { inputValue: string; }) => React.ReactNode) | ((obj: { inputValue: string; }) => React.Reac…
+  Text to display when there are no options
+  onBlur                          React.FocusEventHandler<HTMLInputElement> | undefined
+  Handle blur events on the control
+  onChange                        ((newValue: OnChangeValue<Option, IsMulti>, actionMeta: ActionMeta<Option>) => void) | undefined
+  Handle change events on the select
+  onClickPreventDefault           boolean | undefined
+  onCreateOption                  any
+  If provided, this will be called with the input value when a new option is created, and `onChange` will **not** be called. Use this when you need more control over what happens when new options are created.
+  onFocus                         React.FocusEventHandler<HTMLInputElement> | undefined
+  Handle focus events on the control
+  onInputChange                   ((newValue: string, actionMeta: InputActionMeta) => void) | undefined
+  Handle change events on the input
+  onKeyDown                       React.KeyboardEventHandler<HTMLDivElement> | undefined
+  Handle key down events on the select
+  onMenuClose                     (() => void) | undefined
+  Handle the menu closing
+  onMenuOpen                      (() => void) | undefined
+  Handle the menu opening
+  onMenuScrollToBottom            ((event: WheelEvent | TouchEvent) => void) | undefined
+  Fired when the user scrolls to the bottom of the menu
+  onMenuScrollToTop               ((event: WheelEvent | TouchEvent) => void) | undefined
+  Fired when the user scrolls to the top of the menu
+  options                         OptionsOrGroups<Option, GroupBase<Option>> | undefined
+  Array of options that populate the select menu
+  pageSize                        number | undefined
+  Number of options to jump in menu when page{up|down} keys are used
+  placeholder                     string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | It…
+  Placeholder for the select value
+  shouldPreventEscapePropagation  boolean | undefined
+  Prevents "Escape" keydown event propagation
+  spacing                         "default" | "compact" | undefined
+  This prop affects the height of the select control. Compact is gridSize() * 4, default is gridSize * 5
+  tabIndex                        number | undefined
+  Sets the tabIndex attribute on the input for focus. Since focus is already managed, the only acceptable value to be used is '-1' in rare cases when removing this field from the document tab order is required.
+  value                           PropsValue<Option> | undefined
+  The value of the select; reflected by the selected option
+
+Examples (1):
+
+Example 1
+  tsx                                                                                               
+  import { Label } from '@atlaskit/form/label/default';                                             
+  import Select from '@atlaskit/select/default';                                                    
+  export default function SelectAppearanceDefault(): React.JSX.Element {                            
+    return (                                                                                        
+      <>                                                                                            
+        <Label htmlFor="default-appearance-example">Favorite fruit</Label>                          
+        <Select                                                                                     
+          inputId="default-appearance-example"                                                      
+          appearance="default"                                                                      
+          options={[                                                                                
+            { label: 'Apple', value: 'a' },                                                         
+            { label: 'Banana', value: 'b' },                                                        
+          ]}                                                                                        
+        />                                                                                          
+      </>                                                                                           
+    );                                                                                              
+  }                                                                                                 
+
+Design: https://go.atlassian.com/figma-library-ads-13212-38027

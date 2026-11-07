@@ -1,0 +1,4 @@
+$ npx @atlaskit/ads-cli init (in a throwaway git repo)
+– Repository-local skills skipped because @atlassian/skills is unavailable; npx @atlaskit/ads-cli remains available
+✓ Created AGENTS.md with ADS setup guidance
+– Atlas CLI is unavailable; use npx @atlaskit/ads-cli for ADS commands

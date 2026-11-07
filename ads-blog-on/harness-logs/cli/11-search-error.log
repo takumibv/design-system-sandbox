@@ -1,0 +1,7 @@
+$ npx @atlaskit/ads-cli search error --type docs --limit 5
+Results (1):
+
+Error
+   ADS  ·  docs
+   Color accents Use accents for categories, projects, and labels when their hue c…
+   → npx @atlaskit/ads-cli docs error

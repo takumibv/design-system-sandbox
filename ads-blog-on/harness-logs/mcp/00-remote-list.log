@@ -1,0 +1,246 @@
+## ads_analyze_a11y
+Analyzes a **string of React/JSX** code for likely accessibility issues (heuristics and/or axe-related paths) and returns hints that often **point to** `ads_suggest_a11y_fixes` or generic axe/WCAG-style context—not every finding maps to a specific ADS component fix.
+
+WHEN TO USE:
+You have component source as text and want automated checks or heuristics before or during a code review.
+
+LIMITATIONS:
+- Does not replace testing in a real browser with assistive technologies or full keyboard traversal.
+- For rendered UI, `ads_analyze_localhost_a11y` (live URL + axe) is preferable when available—it is **only exposed when this MCP runs locally**, not in the remote MCP deployment.
+args: {"code":{"type":"string","description":"Source code of a React component or JSX snippet to analyze (string content only—no file path)."},"componentName":{"type":"string","description":"Optional label for the component under review (for summaries and reports)."},"context":{"type":"string","description":"Optional: how the component is used (e.g. in a form, modal) to improve suggestions."},"includePatternAnalysis":{"type":"boolean","default":true,"description":"When true (default), runs regex-based heuristics on the code string (e.g. unlabeled buttons, missing alt) in addition to other analysis."}}
+
+## ads_get_a11y_guidelines
+Returns Atlassian Design System (ADS) accessibility guidance: best practices and patterns for buttons, interactions, color contrast, forms, and other design-system topics shipped in this tool.
+
+Use this alongside the Context Engine MCP tool `get_accessibility_docs` for Atlassian-wide accessibility standards (e.g. A11YKB); this tool supplies ADS-specific component and pattern guidance.
+
+WHEN TO USE:
+You MUST call this when generating or substantially changing a new interactive or visual user interface built with ADS, or when you need topic-specific ADS guidance (e.g. focus, forms, motion).
+
+DO NOT rely on generic web accessibility advice alone—ADS conventions may differ. Use `get_accessibility_docs` for org-wide standards and this tool for ADS-topic guidance.
+args: {"topic":{"type":"string","description":"ADS accessibility topic key. Omit to receive all topics and the full guideline bundle. Pass a valid key (see response `availableTopics`) or `general` for a focused overview when supported. Known topics: buttons, forms, images, colors, focus, keyboard, screenReaders, aria, wcag, general."}}
+
+## ads_get_all_components
+Returns **every** canonical Atlassian Design System (ADS) component record as separate JSON text chunks (full catalog; large payload). For non-ADS public `@atlaskit/*` packages, use `atlaskit_get_components` or `atlaskit_search_components`.
+
+WHEN TO USE:
+Last resort when `ads_plan` / `ads_search_components` is insufficient and you must enumerate all components. Prefer search for normal component picking.
+
+No parameters.
+args: {}
+
+## ads_plan
+Runs **ads_search_tokens**, **ads_search_icons**, **ads_search_components**, and optionally **atlaskit_search_components** in one call and returns a single JSON payload (each section only if that list was non-empty). Use this as the default way to discover ADS **tokens**, **icons**, and **components** for a UI task. Component results preserve optional `designSource.figmaUrl`; for Figma work, follow the canonical-source and property-verification guidance in `ads_search_components`.
+
+WHEN TO USE:
+**Implementing or iterating on a UI**—new screen, feature, or polish—and you need candidate **token** names, **icon** imports, and **ADS component** packages/props in one pass. Also use when exploring ADS building blocks before you write code.
+
+ADS-FIRST ROUTING:
+Use `components` for canonical ADS components. Use `atlaskitComponents` only as explicit fallback research for public `@atlaskit/*` packages outside the ADS catalog, or after ADS component search has no useful match. This tool does not auto-populate `atlaskitComponents` from `components`.
+
+At least one of `tokens`, `icons`, `components`, or `atlaskitComponents` must contain search terms (use `[]` for lists you do not need).
+
+Prefer supplying **multiple** terms per non-empty array when you know them—broader queries improve recall. Some queries return no rows where metadata is thin; try alternate wording.
+
+This is equivalent to calling the individual search tools; there are no extra merge semantics beyond concatenating results.
+
+Example request:
+```json
+{
+	"tokens": ["spacing", "inverted text", "background primary", "animation"],
+	"icons": ["search", "folder", "user"],
+	"components": ["button", "input", "select", "heading"],
+	"atlaskitComponents": ["editor-core", "onboarding", "page-layout"]
+}
+```
+
+Example token usage:
+```tsx
+import { token } from '@atlaskit/tokens';
+const styles = css({ color: token('color.text'), padding: token('space.100') });
+```
+
+Example icon usage:
+```tsx
+import AddIcon from '@atlaskit/icon/core/add';
+<AddIcon label="Add work item" size="small" />
+```
+args: {"tokens":{"type":"array","items":{"type":"string"},"description":"Search terms for ADS design tokens (fuzzy by default). Use `[]` if you only need icons or components. Prefer **at least two** terms per non-empty list when you know what you need."},"icons":{"type":"array","items":{"type":"string"},"description":"Search terms for ADS icons. Use `[]` if you only need tokens or components. Prefer **at least two** terms per non-empty list when known."},"components":{"type":"array","items":{"type":"string"},"description":"Search terms for canonical ADS components. Use `[]` if you only need tokens, icons, or explicit Atlaskit fallback research. Prefer **at least two** terms per non-empty list when known."},"atlaskitComponents":{"type":"array","items":{"type":"string"},"description":"Search terms for public `@atlaskit/*` components outside the ADS catalog. Use only as explicit fallback research when ADS component search is not enough; this is not auto-populated from `components`. Use `[]` if you only need canonical ADS components. Prefer **at least two** terms per non-empty list when known."},"limit":{"type":"number","default":2,"description":"Max matches **per term** for each non-empty list (default 2). Same limit applies to tokens, icons, ADS components, and explicit Atlaskit component fallback searches."}}
+
+## ads_search_components
+Searches the bundled Atlassian Design System (ADS) component catalog. Returns JSON objects with **name**, **package**, **examples**, **props**, and optional **designSource.figmaUrl** for each match (trimmed payload). When `designSource.figmaUrl` is present, inspect the canonical Figma source before building or implementing the component. Reuse library instances/variables, verify Figma properties against code props, and report unresolved mappings or access; do not infer a missing source.
+
+WHEN TO USE:
+**Selecting which canonical ADS component to use**—package name, examples, and props—before implementation. Use when composing a new view or swapping a primitive. Prefer `ads_plan` when you also need token and icon discovery in one shot.
+
+If you are looking for a public `@atlaskit/*` scoped package that is not part of the ADS component catalog, use `atlaskit_search_components` for fallback research instead of this ADS-only search.
+args: {"terms":{"type":"array","items":{"type":"string"},"description":"Required: one or more search terms (fuzzy over name, package, category, description, keywords, examples). Example: `[\"button\", \"modal\", \"select\"]`."},"limit":{"type":"number","default":2,"description":"Max matches **per term** (default 2)."}}
+
+## ads_search_icons
+Searches the bundled Atlassian Design System **icon** catalog. Returns JSON with **componentName**, **package**, and **usage** for each match.
+
+WHEN TO USE:
+**Choosing an icon** for a control, nav item, empty state, or illustration—find `@atlaskit/icon` import paths and usage notes. Prefer `ads_plan` when you also need tokens and components together.
+
+Example:
+```tsx
+import AddIcon from '@atlaskit/icon/core/add';
+<AddIcon label="Add work item" size="small" />
+```
+args: {"terms":{"type":"array","items":{"type":"string"},"description":"Required: one or more terms; fuzzy match on icon **componentName**, **iconName**, **keywords**, **categorization**, **type**, and **usage**. Example: `[\"search\", \"folder\", \"user\"]`."},"limit":{"type":"number","default":2,"description":"Max matches **per term** (default 2)."}}
+
+## ads_search_tokens
+Searches Atlassian Design System **design tokens** from bundled metadata. Returns compact JSON objects with **name** and **exampleValue** for each match by default (search also considers description, usage guidelines, and CSS property hints in metadata). Set **includeMetadata** to include the canonical token description from the tokens package and shared usage guidelines in each result.
+
+WHEN TO USE:
+**Styling or theming in code**—you need the right `token('…')` names for colors, space, typography, etc. Use during layout and visual work when tokens must match ADS. Prefer `ads_plan` when you also need icons and components in the same step.
+
+Example:
+```tsx
+import { token } from '@atlaskit/tokens';
+const styles = css({ color: token('color.text'), padding: token('space.100') });
+```
+args: {"terms":{"type":"array","items":{"type":"string"},"description":"Required: one or more terms; fuzzy match on token **name**, **description**, **exampleValue**, **usageGuidelines.usage**, and **usageGuidelines.cssProperties**. Example: `[\"spacing\", \"color.text\", \"background\"]`."},"limit":{"type":"number","default":2,"description":"Max matches **per term** (default 2)."},"includeMetadata":{"type":"boolean","default":false,"description":"Include the token description and usage guidelines in each result (default false)."}}
+
+## ads_suggest_a11y_fixes
+Suggests remediation steps for an accessibility issue described in natural language (often pasted from **axe-core**, ESLint, or review).
+
+WHAT YOU GET (varies by match):
+- **Curated hit:** ADS-biased examples and patterns from this server’s recipe map (components, tokens, common fixes).
+- **No strong match:** Generic guidance (e.g. “use ADS components”, labeling, testing)—still useful, but **not** guaranteed to be ADS-specific. May reference axe/atlassian.design resources.
+
+WHEN TO USE:
+After `ads_analyze_a11y` or `ads_analyze_localhost_a11y`, or whenever you have a violation string. For **topic-level** Atlassian Design System accessibility guidance, call `ads_get_a11y_guidelines` (this tool is fix-oriented, not a full guideline browse).
+
+Does not replace manual testing with assistive technologies or keyboard-only navigation.
+args: {"violation":{"type":"string","description":"Human-readable description of the issue (e.g. axe rule help text, \"button has no accessible name\", \"missing alt\"). Used to match curated recipes when possible; otherwise the tool falls back to generic guidance."},"code":{"type":"string","description":"Snippet of the problematic code or markup so the response can be tailored (may be shown in the output for traceability)."},"component":{"type":"string","description":"Optional: React component name involved (e.g. `Button`, `TextField`)—may be ADS or app-specific."},"context":{"type":"string","description":"Optional: where this appears (e.g. modal, table row, page section) or constraints."}}
+
+## ads_migration_guides
+Returns a structured Atlassian Design System (ADS) **migration guide** for a known package or API migration (before/after examples, best practices, links).
+
+WHEN TO USE:
+You are upgrading or refactoring code between ADS packages or APIs and need the official migration pattern for a specific id listed below.
+
+Pass **both** `migration` and `description` using a **matching pair** from the enum (schema enforces valid combinations).
+
+Available migrations:
+- "avatar-xsmall-to-xxsmall": Use when code uses the 16px `xsmall` Avatar size from `@atlaskit/avatar`.,- "interaction-to-entry-point": Use when replacing an existing modal, popup, dropdown, or similar interaction boundary with an EntryPoint. It does not apply to new inline UI, API-only work, or test-only changes.,- "jira-spotlight": Use when code contains `JiraSpotlight` import from `@atlassian/jira-spotlight`,- "single-step": Use when code ONLY has `Spotlight` from `@atlaskit/onboarding` (no JiraSpotlight),- "multi-step": Migrate a multi-step spotlight tour from @atlaskit/onboarding to @atlaskit/spotlight,- "motion": Migrate a single step spotlight with entrance animation from @atlaskit/onboarding to @atlaskit/spotlight using @atlaskit/motion
+args: {"migration":{"type":"string","enum":["avatar-xsmall-to-xxsmall","interaction-to-entry-point","jira-spotlight","single-step","multi-step","motion"],"description":"Migration id from the registry. Must match the guide you want (see tool description list)."},"description":{"type":"string","enum":["- \"avatar-xsmall-to-xxsmall\": Use when code uses the 16px `xsmall` Avatar size from `@atlaskit/avatar`.","- \"interaction-to-entry-point\": Use when replacing an existing modal, popup, dropdown, or similar interaction boundary with an EntryPoint. It does not apply to new inline UI, API-only work, or test-only changes.","- \"jira-spotlight\": Use when code contains `JiraSpotlight` import from `@atlassian/jira-spotlight`","- \"single-step\": Use when code ONLY has `Spotlight` from `@atlaskit/onboarding` (no JiraSpotlight)","- \"multi-step\": Migrate a multi-step spotlight tour from @atlaskit/onboarding to @atlaskit/spotlight","- \"motion\": Migrate a single step spotlight with entrance animation from @atlaskit/onboarding to @atlaskit/spotlight using @atlaskit/motion"],"description":"Human-readable migration label that pairs with `migration` in the schema—choose the entry that matches the selected id."}}
+
+## ads_i18n_conversion_guide
+Returns a **bundled** step-by-step guide for replacing hardcoded UI strings with `formatMessage` (and related patterns) using @jira/platform__react-intl or react-intl: message constants, placeholders, descriptions, and scope/limitations for systematic refactors.
+
+When working with i18n or hardcoded UI strings, use this tool alongside the Context Engine MCP tool `get_i18n_docs` for Atlassian-wide Traduki / i18n standards (message definition, extraction, pluralisation, formatting, workflow); this tool supplies the concrete hardcoded-string → `formatMessage` playbook bundled in ADS MCP.
+
+WHEN TO USE / TYPICAL TRIGGERS:
+- Refactoring JSX or TS literals to i18n; "fix hardcoded string(s)", "convert hardcoded string in [file]", "literal string in JSX".
+- "Convert to i18n", "convert to formatMessage", "translate this string", "internationalize this string", "i18n this string".
+- "Use formatMessage", "use FormattedMessage", "wrap in formatMessage", "fix literal string".
+- ESLint: `Literal string in JSX content should be internationalized. Use FormattedMessage or intl.formatMessage()`.
+- ESLint: `@atlassian/i18n/no-literal-string-in-jsx`.
+args: {"guide":{"type":"string","enum":["hardcoded-string-to-formatmessage"],"description":"Which bundled guide to return. Currently only `hardcoded-string-to-formatmessage` (JSX literals → `formatMessage` / intl patterns)."}}
+
+## ads_get_guidelines
+Returns Atlassian Design System (ADS) **foundations** guidelines as Markdown: the bundled design-system-docs foundations set (not component API docs).
+
+TOPIC COVERAGE:
+- **Content & UX writing**: messaging types (empty state, error, success, warning, info, feature discovery), voice and tone, inclusive language, grammar and style, date/time copy handoff, vocabulary pointers.
+- **Visual foundations**: color (roles, accents, palette, charts, pickers), borders and radius, elevation and z-index, spacing and layout primitives (box/inline/stack), grid, iconography, logos.
+- **Design tokens**: concepts, themes, migration, using tokens in code and in Figma.
+- **Typography**: typefaces, scale, applying text styles and tokens.
+- **Accessibility overview**: building accessible apps and related foundations pages bundled here.
+
+When working with content, use this tool alongside the Context Engine MCP tool `get_content_standards_docs` for Atlassian-wide content standards (CDSTD/BAIT-style org guidance); this tool supplies ADS-specific foundations.
+
+WHAT YOU GET:
+- With `terms`: fuzzy search over keywords and content; concatenated Markdown for matches.
+- Without `terms` (or empty): the full guideline set as Markdown.
+
+WHEN TO USE:
+Use this when you are **building or updating a visual interface**, **writing or reviewing user-facing copy**, or need to **answer foundations questions** about ADS: content patterns, visual appearance, design tokens, typography, spacing, color, grid, motion, and related topics shipped in this bundle.
+
+It is **not** for picking a component’s props or package (use `ads_plan` / `ads_search_components`) or for interactive accessibility rules and patterns (use `ads_get_a11y_guidelines`, with Context Engine `get_accessibility_docs` for org-wide a11y standards).
+args: {"terms":{"type":"array","items":{"type":"string"},"default":[],"description":"Search terms matched against guideline keywords and body (fuzzy). Examples: `[\"empty state\", \"voice tone\"]`, `[\"color tokens\", \"spacing\"]`, `[\"elevation\", \"grid\"]`. Omit or use an empty array to return **all** guidelines as Markdown."},"limit":{"type":"number","default":1,"description":"Max matches **per term** when `terms` is non-empty (default 1). Ignored when returning all guidelines."}}
+
+## ads_get_all_tokens
+Returns **every** ADS design token from bundled metadata (name, canonical token description, example value, shared usage guidelines)—one JSON object per token, **very large** output.
+
+WHEN TO USE:
+Last resort when `ads_plan` / `ads_search_tokens` cannot answer the question and you need the full list (e.g. exhaustive audit). Prefer targeted search for normal development.
+
+No parameters.
+args: {}
+
+## ads_get_all_icons
+Returns **every** ADS icon record as separate JSON text chunks (full catalog; large payload).
+
+WHEN TO USE:
+Last resort when `ads_plan` / `ads_search_icons` is insufficient and you must enumerate all icons. Prefer search for normal icon picking.
+
+No parameters.
+args: {}
+
+## ads_get_lint_rules
+Returns documentation for **Constellation** (Atlassian Design System) ESLint rules shipped with this MCP—rule purpose, examples, and fixes where available.
+
+WHAT YOU GET:
+- No `terms`: JSON array of all rule payloads.
+- With `terms`: fuzzy search (or exact rule name when `exactName` is true); JSON for one or more matching rules.
+
+WHEN TO USE:
+Explaining or fixing an ESLint message from ADS rules (e.g. `icon-label`, `ensure-proper-xcss-usage`, `no-deprecated-apis`), or browsing rule docs without opening the repo. Prefer this over guessing from rule id alone.
+
+This tool does not run ESLint; it only returns bundled documentation.
+args: {"terms":{"type":"array","items":{"type":"string"},"default":[],"description":"Search terms matched against rule name, description, and docs body (fuzzy unless `exactName` is true). Example: `[\"icon-label\", \"xcss\", \"design token\"]`. Omit or empty: return **all** rules as JSON."},"limit":{"type":"number","default":1,"description":"Max matches **per term** when searching (default 1). Not used when returning all rules."},"exactName":{"type":"boolean","default":false,"description":"If true, resolve each term by **exact** ESLint rule name (case-insensitive). If false, fuzzy search across name, description, and content."}}
+
+## atlaskit_get_components
+Returns a compact inventory of public `@atlaskit/*` component packages that are not covered by the Atlassian Design System (ADS) component catalog. Output is names and packages only.
+
+WHEN TO USE:
+Use this for fallback discovery after ADS component search is not enough, or when you need to see which non-ADS `@atlaskit/*` components are available without the full metadata payload. For implementation examples and props, use `atlaskit_search_components`.
+
+No parameters.
+args: {}
+
+## atlaskit_search_components
+Searches the bundled public `@atlaskit/*` component catalog outside the Atlassian Design System (ADS) component catalog. Returns JSON objects with **name**, **package**, **examples**, and **props** for each match (trimmed payload).
+
+WHEN TO USE:
+Use this for fallback research when `ads_search_components` or `ads_plan.components` does not find a useful ADS component, or when the user asks about a specific public `@atlaskit/*` package that is not part of ADS. Prefer canonical ADS components first for standard UI.
+args: {"terms":{"type":"array","items":{"type":"string"},"description":"Required: one or more search terms (fuzzy over name, package, category, description, keywords, examples). Example: `[\"button\", \"modal\", \"select\"]`."},"limit":{"type":"number","default":2,"description":"Max matches **per term** (default 2)."}}
+
+## atlaskit_get_utilities
+Returns a compact inventory of public `@atlaskit/*` utilities (functions, constants, types) that are not covered by the Atlassian Design System (ADS) catalog. Output is names and packages only.
+
+WHEN TO USE:
+Use this for fallback discovery when you need a non-ADS `@atlaskit/*` utility inventory without the full metadata payload. For usage guidance and signatures, use `atlaskit_search_utilities`.
+
+No parameters.
+args: {}
+
+## atlaskit_search_utilities
+Search public `@atlaskit/*` utilities (functions, constants, types) outside the Atlassian Design System (ADS) catalog by name, package, category, description, or keywords.
+
+WHEN TO USE:
+Use this for fallback research when you want to find a non-ADS `@atlaskit/*` utility but do not know its exact name or package.
+args: {"terms":{"type":"array","items":{"type":"string"},"description":"Required: one or more search terms (fuzzy over name, package, category, description, keywords, usageGuidelines). Example: `[\"debounce\", \"a11y\", \"storage\"]`."},"limit":{"type":"number","default":2,"description":"Max matches **per term** (default 2)."}}
+
+## atlaskit_get_hooks
+Returns a compact inventory of public `@atlaskit/*` hooks that are not covered by the Atlassian Design System (ADS) catalog. Output is names and packages only.
+
+WHEN TO USE:
+Use this for fallback discovery when you need a non-ADS `@atlaskit/*` hook inventory without the full metadata payload. For usage guidance, parameters, and return values, use `atlaskit_search_hooks`.
+
+No parameters.
+args: {}
+
+## atlaskit_search_hooks
+Search public `@atlaskit/*` hooks outside the Atlassian Design System (ADS) catalog by name, package, category, description, or keywords.
+
+WHEN TO USE:
+Use this for fallback research when you want to find a non-ADS `@atlaskit/*` hook but do not know its exact name or package.
+args: {"terms":{"type":"array","items":{"type":"string"},"description":"Required: one or more search terms (fuzzy over name, package, category, description, keywords, usageGuidelines). Example: `[\"analytics\", \"storage\", \"layering\"]`."},"limit":{"type":"number","default":2,"description":"Max matches **per term** (default 2)."}}
+
+prompts: n/a MCP error -32601: Method not found
+resources: n/a MCP error -32601: Method not found
+SERVER INSTRUCTIONS: undefined

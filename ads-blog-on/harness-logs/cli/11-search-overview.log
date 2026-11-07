@@ -1,0 +1,7 @@
+$ npx @atlaskit/ads-cli search overview --type docs --limit 5
+Results (1):
+
+Overview
+   ADS  ·  docs
+   Color Use color tokens to communicate intent, hierarchy, and interaction in Atl…
+   → npx @atlaskit/ads-cli docs overview

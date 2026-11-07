@@ -1,0 +1,7 @@
+$ npx @atlaskit/ads-cli search writing --type docs --limit 5
+Results (1):
+
+Writing
+   ADS  ·  docs
+   The guidance on this page relates to voice and tone for user interfaces and app…
+   → npx @atlaskit/ads-cli docs writing
