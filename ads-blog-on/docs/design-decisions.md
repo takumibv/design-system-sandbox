@@ -40,7 +40,7 @@
 ### 文言（I19）
 
 - です・ます調。見出しは名詞（「投稿計画」「自分の担当」「書く人ごと」）。ボタンは動詞で短く（「保存」「削除」「投稿予定を登録」「この週に登録」）。
-- 失敗の文では「すみません」「お願いします」を使わず、原因と次の手を 1〜2 文で書く：[H] `mcp/01-guidelines-all.log:1540-1541`「Avoid using “please” and “sorry”.」、`:1465-1470`（Body：reason / how to act）。日本語の業務アプリとしては謝罪を入れる慣習もあるが、ADS に合わせた [判断]。
+- 失敗の文では「すみません」「お願いします」を使わず、原因と次の手を 1〜2 文で書く：[H] `mcp/01-guidelines-all.log:1540-1541`「Avoid using “please” and “sorry”.」、`:1469-1472`（Body：reason / how to act）。日本語の業務アプリとしては謝罪を入れる慣習もあるが、ADS に合わせた [判断]。
 - 日付は `Intl.DateTimeFormat('ja-JP')` で整形し、手で書式を組まない：[H] `cli/08-docs-navigation.log:19`「Reference the programming i18n library API」。範囲はハイフンを使わず「から」：同 `:95`「use ‘to’ and not hyphens … Hyphens are read out by screen readers」を日本語に置き換えた [判断]。
 
 ### 色（I14）
