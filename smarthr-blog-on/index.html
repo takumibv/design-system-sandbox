@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 自前の CSS はこの 2 つだけ。理由は docs/harness-report.md「自前の CSS」 -->
+    <style>
+      body { margin: 0; background-color: #f8f7f6; }
+      /* ヘッダーの既定色 #00c4cc は白文字とのコントラスト比 2.14:1（axe color-contrast）。CSS に色が直書きでテーマで変えられないため上書きする（5.49:1） */
+      .smarthr-ui-Header.shr-bg-brand { background-color: #00757a; }
+    </style>
+    <title>社内ブログ投稿計画</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

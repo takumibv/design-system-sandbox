@@ -1,0 +1,93 @@
+identical
+S01-plan-member 1440 overflow 0 aria-hidden-focus(1) color-contrast(1)
+S02-plan-guest 1440 overflow 0 ok
+S03-plan-editor 1440 overflow 0 aria-hidden-focus(1) color-contrast(1)
+S04-plan-loading 1440 overflow 0 color-contrast(1)
+S05-plan-error 1440 overflow 0 color-contrast(1)
+S06-plan-empty 1440 overflow 0 color-contrast(1)
+S07-plan-author 1440 overflow 0 aria-hidden-focus(1) color-contrast(1)
+S08-plan-noresult 1440 overflow 0 aria-hidden-focus(1) color-contrast(1)
+S09-plan-period 1440 overflow 0 aria-hidden-focus(1) color-contrast(1)
+S10-plan-add 1440 overflow 0 color-contrast(1)
+S11-plan-add-guest 1440 overflow 0 ok
+S12-plan-deleted 1440 overflow 0 aria-hidden-focus(1) color-contrast(1)
+S13-plan-login 1440 overflow 0 aria-hidden-focus(1) color-contrast(1)
+S20-mine-member 1440 overflow 0 color-contrast(1)
+S21-mine-guest 1440 overflow 0 ok
+S22-mine-editor 1440 overflow 0 color-contrast(1)
+S23-mine-loading 1440 overflow 0 color-contrast(1)
+S24-mine-error 1440 overflow 0 color-contrast(1)
+S25-mine-empty 1440 overflow 0 color-contrast(1)
+S30-members-member 1440 overflow 0 color-contrast(1)
+S31-members-guest 1440 overflow 0 ok
+S32-members-editor 1440 overflow 0 color-contrast(1)
+S33-members-loading 1440 overflow 0 color-contrast(1)
+S34-members-error 1440 overflow 0 color-contrast(1)
+S35-members-empty 1440 overflow 0 color-contrast(1)
+S40-post-own-member 1440 overflow 0 color-contrast(1)
+S41-post-other-member 1440 overflow 0 color-contrast(1)
+S42-post-guest 1440 overflow 0 ok
+S43-post-editor 1440 overflow 0 color-contrast(1)
+S44-post-published 1440 overflow 0 color-contrast(1)
+S45-post-cancelled 1440 overflow 0 color-contrast(1)
+S46-post-loading 1440 overflow 0 color-contrast(1)
+S47-post-error 1440 overflow 0 color-contrast(1)
+S50-post-edit 1440 overflow 0 color-contrast(1)
+S51-post-edit-error 1440 overflow 0 color-contrast(1)
+S52-post-saved 1440 overflow 0 color-contrast(1)
+S53-post-publish 1440 overflow 0 color-contrast(1)
+S54-post-published-ok 1440 overflow 0 color-contrast(1)
+S55-post-delete 1440 overflow 0 color-contrast(1)
+S56-post-delete-error 1440 overflow 0 color-contrast(1)
+S57-post-forbidden 1440 overflow 0 color-contrast(1)
+S58-post-delete-forbidden 1440 overflow 0 color-contrast(1)
+S59-post-added 1440 overflow 0 color-contrast(1)
+S90-notfound 1440 overflow 0 ok
+S91-post-notfound 1440 overflow 0 ok
+S01-plan-member 390 overflow 0 aria-hidden-focus(1)
+S02-plan-guest 390 overflow 0 ok
+S03-plan-editor 390 overflow 0 aria-hidden-focus(1)
+S04-plan-loading 390 overflow 0 ok
+S05-plan-error 390 overflow 0 ok
+S06-plan-empty 390 overflow 0 ok
+S07-plan-author 390 overflow 0 aria-hidden-focus(1)
+S08-plan-noresult 390 overflow 0 aria-hidden-focus(1)
+S09-plan-period 390 overflow 0 aria-hidden-focus(1)
+S10-plan-add 390 overflow 0 ok
+S11-plan-add-guest 390 overflow 0 ok
+S12-plan-deleted 390 overflow 0 aria-hidden-focus(1)
+S13-plan-login 390 overflow 0 aria-hidden-focus(1)
+S20-mine-member 390 overflow 0 ok
+S21-mine-guest 390 overflow 0 ok
+S22-mine-editor 390 overflow 0 ok
+S23-mine-loading 390 overflow 0 ok
+S24-mine-error 390 overflow 0 ok
+S25-mine-empty 390 overflow 0 ok
+S30-members-member 390 overflow 0 ok
+S31-members-guest 390 overflow 0 ok
+S32-members-editor 390 overflow 0 ok
+S33-members-loading 390 overflow 0 ok
+S34-members-error 390 overflow 0 ok
+S35-members-empty 390 overflow 0 ok
+S40-post-own-member 390 overflow 0 ok
+S41-post-other-member 390 overflow 0 ok
+S42-post-guest 390 overflow 0 ok
+S43-post-editor 390 overflow 0 ok
+S44-post-published 390 overflow 0 ok
+S45-post-cancelled 390 overflow 0 ok
+S46-post-loading 390 overflow 0 ok
+S47-post-error 390 overflow 0 ok
+S50-post-edit 390 overflow 0 ok
+S51-post-edit-error 390 overflow 0 ok
+S52-post-saved 390 overflow 0 ok
+S53-post-publish 390 overflow 0 ok
+S54-post-published-ok 390 overflow 0 ok
+S55-post-delete 390 overflow 0 ok
+S56-post-delete-error 390 overflow 0 ok
+S57-post-forbidden 390 overflow 0 ok
+S58-post-delete-forbidden 390 overflow 0 ok
+S59-post-added 390 overflow 0 ok
+S90-notfound 390 overflow 0 ok
+S91-post-notfound 390 overflow 0 ok
+
+[exited with code 0]
