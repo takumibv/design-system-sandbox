@@ -1,0 +1,14 @@
+Alert | deprecated: afterClose→true; message→true; onClose→true; closeText→true
+Space | deprecated: direction→true; split→true
+Card | deprecated: bordered→true; bodyStyle→true; headStyle→true
+Steps | deprecated: direction→true; labelPlacement→true; progressDot→true
+Modal | deprecated: destroyOnClose→true; focusTriggerAfterClose→true; maskClosable→true
+Tag | deprecated: bordered→true
+Statistic | deprecated: valueStyle→true
+Typography | deprecated: 
+Result | deprecated: 
+Empty | deprecated: imageStyle→true
+Dropdown | deprecated: destroyPopupOnHide→true; dropdownRender→true; overlayClassName→true; overlayStyle→true
+Popconfirm | deprecated: destroyTooltipOnHide→true; overlayClassName→true; overlayStyle→true; overlayInnerStyle→true
+Button | deprecated: iconPosition→true
+Badge | deprecated: 

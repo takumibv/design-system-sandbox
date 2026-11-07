@@ -1,0 +1,50 @@
+Scanned 14 files in ./src
+
+  Button — 7 imports across 7 files
+  Flex — 7 imports across 7 files
+  Typography — 6 imports across 6 files
+    Typography.Link: 7 usages
+    Typography.Text: 20 usages
+    Typography.Title: 13 usages
+    Typography.Paragraph: 2 usages
+  App — 5 imports across 5 files
+  Grid — 4 imports across 4 files
+  DatePicker — 4 imports across 4 files
+    DatePicker.RangePicker: 2 usages
+  Form — 4 imports across 4 files
+    Form.Item: 17 usages
+  Card — 4 imports across 4 files
+  Tag — 3 imports across 3 files
+  Result — 3 imports across 3 files
+  Alert — 3 imports across 3 files
+  Dropdown — 2 imports across 2 files
+  Input — 2 imports across 2 files
+    Input.TextArea: 1 usages
+  Select — 2 imports across 2 files
+  Col — 2 imports across 2 files
+  Row — 2 imports across 2 files
+  Table — 2 imports across 2 files
+  Empty — 2 imports across 2 files
+  ConfigProvider — 1 imports across 1 files
+  Layout — 1 imports across 1 files
+    Layout.Header: 1 usages
+    Layout.Content: 1 usages
+    Layout.Footer: 1 usages
+  Menu — 1 imports across 1 files
+  Drawer — 1 imports across 1 files
+  Radio — 1 imports across 1 files
+    Radio.Group: 1 usages
+  Badge — 1 imports across 1 files
+  Skeleton — 1 imports across 1 files
+  Statistic — 1 imports across 1 files
+  Timeline — 1 imports across 1 files
+  Descriptions — 1 imports across 1 files
+  Modal — 1 imports across 1 files
+  Popconfirm — 1 imports across 1 files
+  Steps — 1 imports across 1 files
+  Checkbox — 1 imports across 1 files
+
+Total: 32 components, 78 imports
+
+Non-component antd exports (1):
+  theme — 2 imports across 2 files

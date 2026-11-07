@@ -1,0 +1,45 @@
+Steps (步骤条) — A navigation bar that guides users through the steps of a task.
+
+Property        Type                                                                                                                           Default       Since 
+--------------  -----------------------------------------------------------------------------------------------------------------------------  ------------  ------
+classNames      Record<[SemanticDOM](#semantic-dom), string> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), string>                -             -     
+current         number                                                                                                                         0             -     
+direction       string                                                                                                                         `horizontal`  -     
+iconRender      (oriNode, info: { index, active, item }) => ReactNode                                                                          -             -     
+initial         number                                                                                                                         0             -     
+labelPlacement  string                                                                                                                         `horizontal`  -     
+maxCount        number                                                                                                                         -             -     
+orientation     string                                                                                                                         `horizontal`  -     
+percent         number                                                                                                                         -             4.5.0 
+progressDot     boolean | (iconDot, { index, status, title, content }) => ReactNode                                                            false         -     
+responsive      boolean                                                                                                                        true          -     
+size            string                                                                                                                         `medium`      -     
+status          string                                                                                                                         `process`     -     
+styles          Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>  -             -     
+titlePlacement  string                                                                                                                         `horizontal`  -     
+type            string                                                                                                                         `default`     -     
+variant         `filled` | `outlined`                                                                                                          `filled`      -     
+onChange        (current) => void                                                                                                              -             -     
+items           [StepItem](#stepitem)                                                                                                          []            4.24.0
+
+Steps.StepItem
+
+Property     Type       Default  Since
+-----------  ---------  -------  -----
+content      ReactNode  -        -    
+description  ReactNode  -        -    
+disabled     boolean    false    -    
+icon         ReactNode  -        -    
+status       string     `wait`   -    
+subTitle     ReactNode  -        -    
+title        ReactNode  -        -    
+
+Common Props (inherited by all components, not listed individually)
+
+Property       Type           Default
+-------------  -------------  -------
+className      string         -      
+style          CSSProperties  -      
+rootClassName  string         -      
+
+Extends <div> — supports native HTML div attributes.

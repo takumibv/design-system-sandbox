@@ -1,0 +1,8 @@
+Scanned 14 files. Found 2 issues:
+
+  ⚠ /home/user/design-system-sandbox/antd-blog-on/src/components/PostFormDrawer.tsx:129 [deprecated]
+    Select `optionFilterProp` is deprecated. Deprecated, see `showSearch.optionFilterProp`
+  ⚠ /home/user/design-system-sandbox/antd-blog-on/src/pages/PostsPage.tsx:131 [deprecated]
+    Select `optionFilterProp` is deprecated. Deprecated, see `showSearch.optionFilterProp`
+
+Summary: 2 deprecated, 0 a11y, 0 usage, 0 performance, 0 skipped

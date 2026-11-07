@@ -1,0 +1,542 @@
+[
+  {
+    "id": "S01-plan-member",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S02-plan-guest",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S03-plan-editor",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S04-plan-next",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S05-plan-loading",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S06-plan-error",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S07-plan-empty",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S08-plan-empty-guest",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S10-posts-member",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S11-posts-guest",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S12-posts-editor",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S13-posts-mine",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S14-posts-overdue",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S15-posts-noresult",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S16-posts-loading",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S17-posts-error",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S18-posts-empty",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S20-members-member",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S21-members-guest",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S22-members-editor",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S23-members-loading",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S24-members-error",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S30-detail-own",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S31-detail-other-member",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S32-detail-other-editor",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S33-detail-guest",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S34-detail-published",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S35-detail-cancelled",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S36-detail-loading",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S37-detail-error",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S38-detail-404",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S40-new",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S41-new-week",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S42-new-guest",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S43-edit-own",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S44-edit-forbidden",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S45-edit-save-failed",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S46-publish",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S47-delete-confirm",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S50-saved",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S51-deleted",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S52-delete-failed",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S53-login",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S60-404",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S61-404-guest",
+    "width": 1440,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S01-plan-member",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S02-plan-guest",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S03-plan-editor",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S04-plan-next",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S05-plan-loading",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S06-plan-error",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S07-plan-empty",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S08-plan-empty-guest",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S10-posts-member",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S11-posts-guest",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S12-posts-editor",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S13-posts-mine",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S14-posts-overdue",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S15-posts-noresult",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S16-posts-loading",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S17-posts-error",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S18-posts-empty",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S20-members-member",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S21-members-guest",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S22-members-editor",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S23-members-loading",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S24-members-error",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S30-detail-own",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S31-detail-other-member",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S32-detail-other-editor",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S33-detail-guest",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S34-detail-published",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S35-detail-cancelled",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S36-detail-loading",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S37-detail-error",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S38-detail-404",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S40-new",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S41-new-week",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S42-new-guest",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S43-edit-own",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S44-edit-forbidden",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S45-edit-save-failed",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S46-publish",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S47-delete-confirm",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S50-saved",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S51-deleted",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S52-delete-failed",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S53-login",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S60-404",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  },
+  {
+    "id": "S61-404-guest",
+    "width": 390,
+    "overflow": 0,
+    "violations": []
+  }
+]

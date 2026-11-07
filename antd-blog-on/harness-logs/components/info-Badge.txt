@@ -1,0 +1,36 @@
+Badge (徽标数) — Small numerical value or status descriptor for UI elements.
+
+Property       Type                                                                                                                           Default  Since
+-------------  -----------------------------------------------------------------------------------------------------------------------------  -------  -----
+color          string                                                                                                                         -        -    
+count          ReactNode                                                                                                                      -        -    
+classNames     Record<[SemanticDOM](#semantic-dom), string> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), string>                -        -    
+dot            boolean                                                                                                                        false    -    
+offset         [number, number]                                                                                                               -        -    
+overflowCount  number                                                                                                                         99       -    
+showZero       boolean                                                                                                                        false    -    
+size           `medium` | `small`                                                                                                             -        -    
+status         `success` | `processing` | `default` | `error` | `warning`                                                                     -        -    
+styles         Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>  -        -    
+text           ReactNode                                                                                                                      -        -    
+title          string | null | false                                                                                                          -        6.5.0
+
+Badge.Ribbon
+
+Property    Type                                                                                                                           Default  Since
+----------  -----------------------------------------------------------------------------------------------------------------------------  -------  -----
+classNames  Record<[SemanticDOM](#semantic-dom), string> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), string>                -        -    
+color       string                                                                                                                         -        -    
+placement   `start` | `end`                                                                                                                `end`    -    
+styles      Record<[SemanticDOM](#semantic-dom), CSSProperties> | (info: { props })=> Record<[SemanticDOM](#semantic-dom), CSSProperties>  -        -    
+text        ReactNode                                                                                                                      -        -    
+
+Common Props (inherited by all components, not listed individually)
+
+Property       Type           Default
+-------------  -------------  -------
+className      string         -      
+style          CSSProperties  -      
+rootClassName  string         -      
+
+Extends <span> — supports native HTML span attributes.
