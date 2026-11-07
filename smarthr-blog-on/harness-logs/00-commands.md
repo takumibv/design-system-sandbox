@@ -30,8 +30,20 @@
 
 ## 2. 実装中（部品の確認）
 
-実装中に読んだ個別ガイドは `components/` に追加で保存した（後述の harness-report.md に一覧）。
+| # | コマンド／ツール | 目的 | 結果 |
+| --- | --- | --- | --- |
+| 12 | `cat components/Button.md`（Primary の数）、`selection-component-usage.mdx`（選択部品） | 主ボタンの数と入力部品を決める（design-decisions.md を書く前） | 「1 つの画面で Primary ボタンは最大 1 つ」。4〜5 択は RadioButton、6 個以上の複数選択は MultiCombobox |
+| 13 | `components/FormDialog.md`、`ActionDialog.md`、`NotificationBar.md`、`InformationPanel.md`、`MultiCombobox.md`、`DefinitionList.md`、`Loader.md`、`NotFoundErrorScreen.md`、`FormControl.md`、`Fieldset.md`、`RequiredLabel.md`、`Textarea.md` | 実装前に Props と使い方チェックリストを確認 | NotificationBar を画面全体で使うのはシステムからの通知に限る → 遅れ・空き週の注意は InformationPanel に。FormControl は onInvalid で標準ツールチップを抑える、など |
+| 14 | `node_modules/smarthr-ui/lib/**/*.d.ts`、`smarthr-ui.css`、`lib/components/Header/Header.js` | ガイド（v100.1.0 基準）と実際の v102.1.0 の差を確かめる | **差**：DefinitionList に `items`・`maxColumns` が無い（`DefinitionListItem` を並べ `fullWidth`）。AppHeader のロゴリンクは `target` を受け取れない。`desktopAdditionalContent` はログイン中のユーザーメニュー内にしか出ない。ヘッダー背景色は CSS に直書き。smarthr-ui.css には部品内部で使うユーティリティクラスしか入っていない |
+| 15 | 実行時エラー「useEnvironment は EnvironmentProvider の内側で使用してください」 | — | `mobile-friendly-layout.mdx.txt:52-70` は `useEnvironment` を使えと書くが、`EnvironmentProvider` が必要なことは書いていない |
 
-## 3. 公式 lint
+## 3. 検査
 
-`lint-logs/` を参照（eslint-plugin-smarthr、textlint-rule-preset-smarthr の実行出力）。
+| # | コマンド | 結果（保存先） |
+| --- | --- | --- |
+| 16 | `npx eslint src`（eslint-config-smarthr 14.14.2 / eslint-plugin-smarthr 6.29.2） | 初回は起動せず：「tsconfig.json の compilerOptions.paths に `"@/*"` を指定してください」。追加後 131 件（48 errors）→ 修正後 0 errors・78 warnings（すべて `require-i18n-text`）。`lint-logs/eslint-1st.txt`、`eslint-final.txt` |
+| 17 | `npx textlint`（textlint-rule-preset-smarthr 1.38.3）：UI 文字列を抽出した `lint-logs/ui-strings.txt` と `docs/*.md`、README | `lint-logs/textlint-*.txt` |
+| 18 | `node ../brief/scripts/capture.mjs` | ブリーフの位置からは `@axe-core/playwright` を解決できず失敗（ESM は NODE_PATH を見ない）。同一内容のコピー `scripts/capture.mjs`（`cmp` で一致を確認）で実行 |
+| 19 | `node scripts/capture.mjs states.json`（45 状態 × 1440/390） | 1 回目：color-contrast（ヘッダー）、aria-hidden-focus（ResponseMessage 内のリンク）。修正後は違反 0・横はみ出し 0。`lint-logs/capture-*.txt`、`axe-report-*.json` |
+| 20 | `node scripts/flow-check.cjs`（自作の操作確認） | 追加→公開済み→削除、ログイン、画面遷移で状態が残る、期間の誤り、必須の未入力。`lint-logs/flow-check.txt` |
+
