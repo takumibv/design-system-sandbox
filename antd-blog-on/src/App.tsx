@@ -1,122 +1,58 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import { App as AntApp } from "antd";
+import { useEffect, useRef } from "react";
+import { AppShell } from "./components/AppShell";
+import { PostFormDrawer } from "./components/PostFormDrawer";
+import { useLocation } from "./lib/router";
+import { NotFound } from "./components/NotFound";
+import { MembersPage } from "./pages/MembersPage";
+import { PlanPage } from "./pages/PlanPage";
+import { PostDetailPage } from "./pages/PostDetailPage";
+import { PostsPage } from "./pages/PostsPage";
 
-function App() {
-  const [count, setCount] = useState(0)
+const TITLES: Record<string, string> = { "/": "計画", "/posts": "投稿一覧", "/members": "書く人" };
 
-  return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+/** 撮影・確認用：?flash=… で保存・削除の結果表示を直接出す */
+function useFlash() {
+	const { message, modal } = AntApp.useApp();
+	const done = useRef(false);
+	useEffect(() => {
+		if (done.current) return;
+		done.current = true;
+		const flash = new URLSearchParams(window.location.search).get("flash");
+		if (flash === "saved") message.success("「アクセシビリティ改善の振り返り」を保存しました", 30);
+		if (flash === "created") message.success("「（仮）新しい記事」を登録しました", 30);
+		if (flash === "deleted") message.success("「テストの書き方ガイドライン（仮）」を削除しました", 30);
+		if (flash === "status") message.success("状態を「執筆中」にしました", 30);
+		if (flash === "login") message.success("Slack でログインしました（デモのため、佐藤 美咲としてログインします）", 30);
+		if (flash === "delete-failed")
+			modal.error({ title: "削除できませんでした", content: "通信に失敗しました。投稿予定は残っています。時間をおいてもう一度削除してください。", okText: "閉じる" });
+	}, [message, modal]);
 }
 
-export default App
+export function App() {
+	const { pathname } = useLocation();
+	useFlash();
+
+	let page;
+	let title = "ページが見つかりません";
+	const m = pathname.match(/^\/posts\/([^/]+)$/);
+	if (pathname === "/") page = <PlanPage />;
+	else if (pathname === "/posts") page = <PostsPage />;
+	else if (pathname === "/members") page = <MembersPage />;
+	else if (m) {
+		page = <PostDetailPage id={m[1]} />;
+		title = "投稿の詳細";
+	} else page = <NotFound />;
+	if (TITLES[pathname]) title = TITLES[pathname];
+
+	useEffect(() => {
+		document.title = `${title} | ブログ投稿計画 | Gaji-Labo`;
+	}, [title]);
+
+	return (
+		<AppShell>
+			{page}
+			<PostFormDrawer />
+		</AppShell>
+	);
+}
