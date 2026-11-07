@@ -1,0 +1,42 @@
+$ npx @atlaskit/ads-cli component LozengeDropdownTrigger
+LozengeDropdownTrigger
+@atlaskit/lozenge
+
+Props (14)
+  appearance                "warning" | "default" | "removed" | "discovery" | "danger" | "neutral" | "success" | "information" …
+  The appearance of the lozenge. Supports legacy semantic appearances and new semantic colors. Accent appearance values.
+  aria-controls             string | undefined
+  Identifies the popup element that the trigger controls. Should match the `id` of the popup content for screen readers to understand the relationship. Identifies the popup element that the trigger controls. Should match the `id` of the popup content for screen readers to understand the relationship.
+  aria-expanded             boolean | undefined
+  Announces to assistive technology whether the popup is currently open or closed. Announces to assistive technology whether the popup is currently open or closed.
+  aria-haspopup             boolean | "grid" | "dialog" | "menu" | "listbox" | "tree" | undefined
+  Informs assistive technology that this element triggers a popup. With `platform-dst-top-layer`, it is not set when the popup has no `role`. Informs assistive technology that this element triggers a popup. With `platform-dst-top-layer`, it is not set when the popup has no `role`.
+  aria-label                string | undefined
+  Defines a string value that labels the trigger element for assistive technology. Defines a string value that labels the trigger element for assistive technology.
+  children                  string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<React…
+  Elements to be rendered inside the lozenge. This should ideally be just a word or two. Elements to be rendered inside the lozenge. This should ideally be just a word or two.
+  iconBefore                IconProp | undefined
+  Icon to display before the text content. Should be an ADS icon component. Icon to display before the text content. Should be an ADS icon component.
+  isLoading                 boolean | undefined
+  Whether the dropdown trigger is in a loading state. When true, a spinner is shown and the trigger becomes non-interactive. Whether the dropdown trigger is in a loading state. When true, a spinner is shown and the trigger becomes non-interactive.
+  isSelected                boolean | undefined
+  Whether the dropdown is currently selected/open. Whether the dropdown is currently selected/open.
+  maxWidth                  string | number | undefined
+  max-width of lozenge container. Default to 200px. max-width of lozenge container. Default to 200px.
+  onClick                   ((event: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>, analyticsEvent: UIAnalyticsEvent) =>…
+  Callback fired when the trigger is clicked. The second argument provides an Atlaskit UI analytics event that can be fired to a listening channel. See the [analytics-next documentation](https://atlaskit.atlassian.com/packages/analytics/analytics-next) for more information. Callback fired when the trigger is clicked. The second argument provides an Atlaskit UI analytics event that can be fired to a listening channel. See the [analytics-next documentation](https://atlaskit.atlassian.com/packages/analytics/analytics-next) for more information.
+  spacing                   LozengeSpacing | undefined
+  Controls the overall spacing (padding + height) of the lozenge. - `default` matches the current visual appearance. - `spacious` increases padding and sets the lozenge height to 32px. Controls the overall spacing (padding + height) of the lozenge. - `default` matches the current visual appearance. - `spacious` increases padding and sets the lozenge height to 32px.
+  trailingMetric            string | undefined
+  Numeric metric displayed at the end of the lozenge as a badge. Trailing metric is not supported for accent lozenges.
+  trailingMetricAppearance  "warning" | "default" | "removed" | "discovery" | "danger" | "neutral" | "success" | "information" …
+  Overrides the appearance of the trailing metric badge. If not specified, the trailing metric badge inherits the lozenge appearance. This prop is not supported for accent lozenges. Trailing metric appearance is not supported for accent lozenges.
+
+Examples (1):
+
+Example 1
+  tsx                                                                                               
+  import LozengeDropdownTrigger from '@atlaskit/lozenge/lozenge-dropdown-trigger';                  
+  export default (): React.JSX.Element => (                                                         
+    <LozengeDropdownTrigger appearance="success">Success</LozengeDropdownTrigger>                   
+  );                                                                                                

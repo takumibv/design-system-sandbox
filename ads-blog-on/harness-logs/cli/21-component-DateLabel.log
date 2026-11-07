@@ -1,0 +1,48 @@
+$ npx @atlaskit/ads-cli component DateLabel
+DateLabel
+@atlaskit/date-label
+
+Props (6)
+  appearance     DateLabelAppearance | undefined
+  Controls the visual style of the date label. - `neutral` — default grey border style - `warning` — orange border, used for upcoming/near-due dates - `danger` — red border, used for overdue dates
+  hasIconBefore  boolean | undefined
+  When `true`, an icon is displayed before the label text. The icon shown depends on the `appearance`: - `neutral` → CalendarIcon - `warning` → ClockIcon - `danger` → WarningOutlineIcon
+  iconLabel      string | undefined
+  The accessible label for the icon. This is passed to the icon's `label` prop and is read by screen readers to convey the icon's meaning. Defaults to a contextual string based on the `appearance`: - `neutral` → `'Calendar'` - `warning` → `'Warning'` - `danger` → `'Danger'` Set to `''` to mark the icon as decorative (when the label text alone is sufficient).
+  isSpacious     boolean | undefined
+  When `true`, increases the padding and height of the date label for use in more spacious layouts (e.g. forms or detail views). Sets the height to 32px and increases horizontal padding.
+  label          string
+  The text content to display inside the date label.
+  maxWidth       string | number | undefined
+  The maximum width of the date label. Accepts a number (treated as px) or a string (e.g. `'50%'`). When the label text exceeds this width it will be truncated with an ellipsis.
+
+Examples (1):
+
+Example 1
+  tsx                                                                                               
+  /**                                                                                               
+   * @jsxRuntime classic                                                                            
+   * @jsx jsx                                                                                       
+   */                                                                                               
+  import { cssMap, jsx } from '@atlaskit/css';                                                      
+  import DateLabel from '@atlaskit/date-label/date-label';                                          
+  import { token } from '@atlaskit/tokens';                                                         
+  const styles = cssMap({                                                                           
+    wrapper: {                                                                                      
+      display: 'flex',                                                                              
+      gap: token('space.100'),                                                                      
+      flexWrap: 'wrap',                                                                             
+    },                                                                                              
+  });                                                                                               
+  /**                                                                                               
+   * Basic example showing all three appearances of DateLabel with icons (default).                 
+   */                                                                                               
+  export default function Basic(): React.JSX.Element {                                              
+    return (                                                                                        
+      <div css={styles.wrapper}>                                                                    
+        <DateLabel label="29 Jul 2026" appearance="neutral" testId="date-label" />                  
+        <DateLabel label="29 Jul 2026" appearance="warning" />                                      
+        <DateLabel label="29 Jul 2026" appearance="danger" />                                       
+      </div>                                                                                        
+    );                                                                                              
+  }                                                                                                 

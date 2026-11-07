@@ -1,0 +1,7 @@
+$ npx @atlaskit/ads-cli search table --type docs --limit 5
+Results (1):
+
+Table
+   ADS  ·  docs
+   Design tokens are the new way to apply visual foundations in Atlassian app expe…
+   → npx @atlaskit/ads-cli docs table

@@ -1,0 +1,199 @@
+$ npx @atlaskit/ads-cli docs empty state
+An empty state message appears after someone has completed a task or workflow, or has cleared all
+data associated with certain functionality. For example, clearing their inbox. These messages are a
+way to celebrate, add energy, and motivate people to get on with their next task.
+
+Empty states can appear within a particular functionality or as a full-screen message. When crafting
+an empty state message, remember that most people scan text instead of reading everything. Make
+every word count and avoid irrelevant details.
+
+## Writing best practices
+
+### Titles
+
+- Include an informative, scannable title. Try and limit the number of words as much as possible.
+- Titles are a good place to add wink if it’s appropriate.
+- Write in sentence case and don’t use punctuation unless it's a question.
+- Use the heading to describe the empty state or as an opportunity to tell people what they can do.
+
+### Body copy
+
+- Include the reason for the empty state and where they can go next. If there is nothing for them to
+  do, celebrate finishing a task.
+- Avoid repeating content from the title.
+- Keep messages one to two sentences long. Be considerate of people's time and patience. Be short,
+  to the point, and avoid using jargon.
+- Avoid having people look in another location for more information, but if it can't be avoided, use
+  a link to support content.
+
+### Call to action (CTA)
+
+- When offering an action to perform after an empty state, use imperative verbs such as “Try”,
+  “Remove”, or “Create”, in the CTA to describe what action people will be making instead of vague
+  terms such as “OK”.
+- An option to dismiss or cancel lets people feel reassured that they can opt-out.
+- Limit your CTA to one or two words.
+- Your CTA button should always complement the title of the empty state.
+- Empty states are an opportunity to encourage people to interact further with our apps. While
+  optional they’re a good way to educate people about where they can go next or motivate them to
+  explore.
+
+Be careful of how many call to action buttons are on one page. You don’t want to overwhelm people
+with too many options.
+
+## Voice and tone
+
+You want to leave people feeling motivated, supported, and delighted. Convey accurate emotions and
+make sure people know how to respond. Follow some of the following
+[Atlassian voice and tone principles](https://atlassian.design/foundations/content/voice-tone) to
+build your message:
+
+### Motivate by showing possibilities
+
+Completing a task makes people feel ambitious, inspired, curious. Provide people with the incentive
+and excitement for continued growth in our apps.
+
+Show the possibilities of what can be accomplished by presenting them with next steps, or offer
+opportunities for advanced knowledge. This is always better than leaving people at a dead end.
+
+### Delight with unexpectedly pleasing experiences
+
+We’re celebrating the success or progress of completing a task. Write to convey excitement. You are
+giving a pat on the back for a job well done.
+
+But remember not to overdo it. Timing and repetition are critical. Messages that appear more
+frequently should be more concise and less delightful, for example clearing notifications. If
+messages are appearing repeatedly, consider multiple versions. These are low commitment experiences,
+we want to give flowers not puppies.
+
+Messages that appear after a bigger, optimistic action can be more playful, for example, a modal
+dialog. Remember that depending on the component you use, illustrations can also help to add a wink
+to your message.
+
+## Patterns and UX strategies
+
+If an empty state has more than one potential cause or solution, try one of the following writing
+strategies.
+
+### An empty state vs. a blank slate message
+
+An empty state lets people know when they’ve completed or have cleared a task(s). By contrast, a
+blank slate is a type of message in which people have never come across or tried a new feature
+before. Blank slates promote and encourage people to try something new.
+
+Use text, design elements, and visual clues to differentiate where people are in their journeys.
+
+# Color
+
+Use color tokens to communicate intent, hierarchy, and interaction in Atlassian UI. Start with the
+existing ADS component treatment; use these choices when styling custom UI or reviewing a token
+choice.
+
+## Choose the token family
+
+1. Identify what the color communicates. Use a semantic role for status, validation, actions, or
+   discovery. Use an accent when the hue identifies a category and could change without changing its
+   meaning. See the Color accents guidance for hue and pairing choices.
+2. Choose the background emphasis that fits the intended hierarchy.
+3. Pair it with the text, icon, and border tokens for that role and emphasis.
+4. For interactive UI, apply the state to the element that owns the interaction. Preserve separate
+   cues for persistent selection and keyboard focus.
+
+Apply tokens with `token('color...')` from `@atlaskit/tokens`. Tokens resolve for light and dark
+themes, so use their semantic names instead of copying palette values or hardcoded colors.
+
+## Read token names
+
+Most tokens follow `color.[property].[role].[emphasis].[state]`:
+
+- **Property** describes where the color is applied: `background`, `text`, `icon`, or `border`.
+- **Role** describes its intent: `brand`, `danger`, `warning`, `success`, `information`,
+  `discovery`, `neutral`, `selected`, `focused`, `input`, or `accent.[hue]`.
+- **Emphasis** describes contrast against the default surface: `bold`, `bolder`, `boldest`,
+  `subtle`, `subtler`, or `subtlest`.
+- **State** describes an interaction state such as `hovered` or `pressed`.
+
+Accent tokens place the hue after the role, for example `color.background.accent.blue.subtlest`.
+Look up exceptions such as `color.link`, `color.blanket`, `color.skeleton`, and `color.chart.*` in
+the token catalog rather than extending the pattern.
+
+## Choose a semantic role
+
+| Role           | Choose it for                                     | Example use                         |
+| :------------- | :------------------------------------------------ | :---------------------------------- |
+| `danger`       | Destructive actions, errors, or critical failures | Error message or destructive action |
+| `warning`      | Caution, risk, or something that needs attention  | Risk notice                         |
+| `success`      | A successful, completed, or valid state           | Completion message                  |
+| `information`  | A passive informational message                   | Informational notice                |
+| `brand`        | Primary actions or product identity               | Primary action                      |
+| `discovery`    | Discovery, AI, or a new feature                   | New feature callout                 |
+| `neutral`      | Base surfaces and neutral layout                  | Page or control surface             |
+| `input`        | Form field backgrounds and boundaries             | Text field                          |
+| `selected`     | A persistent current choice                       | Selected row or option              |
+| `focused`      | Keyboard focus indicator; border only             | Focus ring                          |
+| `accent.[hue]` | Categories and labels whose hue is optional       | User-chosen tag                     |
+
+Keep fixed meaning in the semantic role. For example, an error uses `danger` and a successful state
+uses `success`; an accent red or green is for a category whose color does not carry that meaning.
+
+## Pair semantic backgrounds and foregrounds
+
+| Background                                              | Text and icon                                                 |
+| :------------------------------------------------------ | :------------------------------------------------------------ |
+| Semantic `*.bold` or `*.bolder`                         | `color.text.inverse` and `color.icon.inverse`                 |
+| `color.background.warning.bold`                         | `color.text.warning.inverse` and `color.icon.warning.inverse` |
+| Subtle, subtler, subtlest, or default semantic surfaces | Matching role text and icon, such as `color.text.danger`      |
+
+Use the warning-specific inverse pair shown above on a bold warning background. Accent foreground
+pairings are in the Color accents guidance.
+
+```tsx
+// Error banner
+backgroundColor: token('color.background.danger.bold'),
+color: token('color.text.inverse'),
+
+// Category label whose hue carries no status meaning
+backgroundColor: token('color.background.accent.red.bolder'),
+color: token('color.text.inverse'),
+```
+
+## Apply state to the interactive element
+
+### Form fields
+
+Use `color.background.input` for the field background, with `color.background.input.hovered` and
+`color.background.input.pressed` for those states. Use `color.border.input` for the field boundary.
+Start with the ADS form component’s treatment when one owns the control.
+
+### Selection and focus
+
+Use `color.background.selected`, `color.text.selected`, `color.icon.selected`, or
+`color.border.selected` for a persistent choice. Use `color.border.focused` for keyboard focus. When
+an element is both selected and focused, keep the selected treatment and add the focus indicator.
+Don’t use link, brand, or focused tokens to communicate selection. Pair selection color with another
+cue, such as a checkmark, underline, border, or shape change, so selection remains clear without
+color alone.
+
+Apply `hovered` and `pressed` variants to the currently interactive element. Keep a selected item
+recognizable during those temporary states. Icons do not have dedicated hovered or pressed color
+tokens; use a subtle neutral background such as `color.background.neutral.subtle.hovered` or
+`color.background.neutral.subtle.pressed` when the icon’s control needs a surface response.
+
+## Check the rendered result
+
+Inspect the foreground, meaningful borders, and state changes against the final visible background
+in the themes the experience supports. For translucent colors, include the underlying surface when
+checking contrast. Use `color.chart.*` for chart marks and product UI tokens for axes, labels, and
+gridlines.
+
+## Look up exact tokens
+
+Search the ADS token registry when an identifier or pairing is uncertain:
+
+```bash
+atlas ads search "danger background" --type token
+atlas ads token color.background.danger.bold --json
+```
+
+If the Atlas plugin is unavailable, use
+`npx @atlaskit/ads-cli search "danger background" --type token`.

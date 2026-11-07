@@ -1,0 +1,2 @@
+# remote MCP call: ads_plan {"components":["page header","top navigation","table","calendar","status label","date label","avatar group","modal dialog","flag","empty state","section message","tabs","select","date picker","form","spinner","skeleton","tag"],"tokens":["space","text subtle","background warning","background danger"],"icons":["add","calendar","warning","edit","delete"],"limit":1}
+MCP error -32602: Input validation error: Invalid arguments for tool ads_plan: Required at atlaskitComponents

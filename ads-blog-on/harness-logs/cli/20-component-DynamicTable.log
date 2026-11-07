@@ -1,0 +1,7 @@
+$ npx @atlaskit/ads-cli component DynamicTable
+Multiple components match "DynamicTable". Did you mean one of these?
+
+  DynamicTableStateless  @atlaskit/dynamic-table
+      → npx @atlaskit/ads-cli component DynamicTableStateless
+  Dynamic table  @atlaskit/dynamic-table
+      → npx @atlaskit/ads-cli component Dynamic table

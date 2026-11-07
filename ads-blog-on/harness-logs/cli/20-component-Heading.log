@@ -1,0 +1,28 @@
+$ npx @atlaskit/ads-cli component Heading
+Heading
+@atlaskit/heading
+
+Props (5)
+  as        "div" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "span" | undefined
+  Allows the component to be rendered as the specified HTML element, overriding a default element set by the `size` prop.
+  children  string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<React…
+  The text of the heading.
+  color     HeadingColor | undefined
+  Token representing text color with a built-in fallback value. Will apply inverse text color automatically if placed within a Box with bold background color. Defaults to `color.text`.
+  id        string | undefined
+  Unique identifier for the heading HTML element.
+  size      "small" | "xxsmall" | "xsmall" | "medium" | "large" | "xlarge" | "xxlarge"
+  Determines which text styles are applied. A corresponding HTML element is automatically applied from h1 to h6 based on the size. This can be overriden using the `as` prop to allow for more flexibility.
+
+Examples (1):
+
+Example 1
+  tsx                                                                                               
+  import Heading from '@atlaskit/heading/heading';                                                  
+  const _default_1: React.JSX.Element[] = [                                                         
+    <Heading size="xxlarge">Page Title</Heading>,                                                   
+    <Heading size="large" color="color.text.inverse">                                               
+      Inverted section title                                                                        
+    </Heading>,                                                                                     
+  ];                                                                                                
+  export default _default_1;                                                                        

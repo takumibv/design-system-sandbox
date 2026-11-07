@@ -1,0 +1,208 @@
+$ npx @atlaskit/ads-cli docs warning messages
+# Color accents
+
+Use accents for categories, projects, and labels when their hue can change without changing their
+meaning. Choose a semantic color role for status, alerts, validation, primary actions, and discovery
+instead; see the Color guidance.
+
+Start with the existing ADS component treatment for tags and labels. For custom UI, keep the
+background, text, and icon in the same accent hue family.
+
+**Available hues:** `blue`, `teal`, `green`, `lime`, `yellow`, `orange`, `red`, `magenta`, `purple`,
+and `gray`.
+
+Prefer another accent hue, such as orange, to yellow. Yellow accents can appear brown as their
+values adjust to meet contrast requirements.
+
+## Pair hue and emphasis
+
+| Background emphasis     | Text and icon                                 |
+| :---------------------- | :-------------------------------------------- |
+| `subtlest` or `subtler` | Matching accent `default` or `bolder`         |
+| `subtle`                | Matching accent `bolder`                      |
+| `bolder`                | `color.text.inverse` and `color.icon.inverse` |
+
+```tsx
+// A category tag: the blue hue identifies a category, not a status
+backgroundColor: token('color.background.accent.blue.subtlest'),
+color: token('color.text.accent.blue'),
+```
+
+Use `color.chart.*` for chart marks. For other pairings, check the rendered foreground and
+background: text needs 4.5:1 contrast and meaningful UI boundaries need 3:1.
+
+## Choose borders by their purpose
+
+Use `color.border.accent.[hue]` for a meaningful accent border on a non-bold accent background when
+the boundary needs to meet 3:1 contrast. Verify the rendered pair when the boundary communicates a
+control or state. The `.subtle` accent border variant is decorative; use it for visual decoration
+that does not need to identify a boundary or state, not for a required control boundary. A required
+boundary must remain distinguishable without relying on a low-contrast decorative border.
+
+## Verify themes and states
+
+Check the tag or label in its actual component, theme, and interaction states. Confirm that its hue
+still means only the category, its text remains legible, and any required boundary stays visible.
+
+People care about how apps talk to them. YouTube, GitHub, and Slack all have a distinct voice, tone,
+and personality.
+
+Apps engage us, manage to make us feel at home, capture our attention, and earn our loyalty.
+
+Poor messaging contributes to a poor user experience, which leads to dissatisfaction. On the other
+hand, good copy reflects our apps' voice (personality) and enables us to build a better relationship
+with our audience.
+
+In short, good messaging may not be the reason people stay with our apps, but bad messaging could be
+the reason they decide to leave.
+
+## Choose a message type
+
+Use different types of messages to guide people through their tasks. Each message type has a
+consistent visual and writing style to help people know what to expect.
+
+Use these guidelines to choose and write the types of messages:
+
+- [Information message](https://atlassian.design/foundations/content/designing-messages/info-messages)
+  — provides additional information to motivate people.
+- [Error message](https://atlassian.design/foundations/content/designing-messages/error-messages) —
+  alerts people of a problem that has occurred and informs them what to do next.
+- [Success message](https://atlassian.design/foundations/content/designing-messages/success-messages)
+  — celebrates success along with the people using our apps.
+- [Warning message](https://atlassian.design/foundations/content/designing-messages/warning-messages)
+  — gives advanced notice of a potential change that may result in loss of data or an error state.
+- [Feature discovery](https://atlassian.design/foundations/content/designing-messages/feature-discovery)
+  — lets people know about a new feature.
+
+## Select the right component
+
+Use the table to identify the right component for your content.
+
+For example:
+
+- If you want to highlight a new feature to a user, consider using spotlight or empty state.
+- If you want to tell someone they've accomplished a task, consider a flag.
+
+| Component           | Information message | Success message | Warning message | Error message | Feature discovery |
+| ------------------- | ------------------- | --------------- | --------------- | ------------- | ----------------- |
+| **Empty state**     | Yes                 | Yes             |                 |               | Yes               |
+| **Banner**          | Yes                 |                 | Yes             | Yes           |                   |
+| **Flag**            | Yes                 | Yes             | Yes             | Yes           |                   |
+| **Section message** | Yes                 |                 | Yes             | Yes           |                   |
+| **Inline message**  | Yes                 | Yes             | Yes             | Yes           |                   |
+| **Modal dialog**    | Yes                 |                 | Yes             |               |                   |
+| **Spotlight**       |                     |                 |                 |               | Yes               |
+
+### Empty state
+
+Use empty states to show when there is nothing to display in a view, for example, when a board has
+no tasks, someone clears their inbox, or a search returns no results.
+
+Read guidance on writing effective
+[empty state messages](https://atlassian.design/foundations/content/designing-messages/empty-state).
+
+<img
+	src={messagesEmptyState}
+	alt="Empty state encouraging an admin to add people to a Jira project space."
+/>
+
+An empty state can appear as a full-screen message or within panels, tables, and other containers.
+
+[Usage guidance for empty state component](https://atlassian.design/components/empty-state/usage).
+
+### Banner
+
+Use banners only for critical system-level messaging for example, warnings about loss of data or
+functionality.
+
+<img src={messagesBanner} alt="Banner message example with a red error message." />
+
+Banners appear at the top of the screen and shift the content below them.
+
+[Usage guidance for banner component](https://atlassian.design/components/banner/usage).
+
+### Flag
+
+Use flags for confirmations, alerts, and acknowledgments that require minimal user interaction.
+
+<img
+	src={messagesFlag}
+	alt="Example of a flag message with a green tick icon, the heading 'You are now connected', and the text describing a group the user is added to."
+/>
+
+Flags are event-driven messages that appear by overlaying content at the bottom left of the screen,
+emerging from the navigation sidebar.
+
+[Usage guidance for flag component](https://atlassian.design/components/flag/usage).
+
+### Section message
+
+Use section messages to alert the user of something that has happened in a specific section of the
+screen.
+
+<img
+	src={messagesSectionMessages}
+	alt="Example of a section message showing green tick icon, the heading Merged pull request, details of the pull request, and links to the hash and user name, and the time it happened."
+/>
+
+Section messages appear above the affected area (for example, work items in Jira).
+
+[Usage guidance for section message component](https://atlassian.design/components/section-message/usage).
+
+### Inline message
+
+Use inline messages to alert people to a required action or important information.
+
+<img
+	src={messagesInlineDialog}
+	alt="Example of a cursor on a yellow caution icon triggering an inline dialog message."
+/>
+
+Inline messages consist of an icon, message, and sometimes secondary text. People can interact with
+the icon, title, or secondary text to reveal the full inline message.
+
+[Usage guidance for inline message component](https://atlassian.design/components/inline-message/usage).
+
+### Modal dialog
+
+Use modal dialogs to present a short-term task the user needs to perform.
+
+<img
+	src={messagesModal}
+	alt="A modal that presents a task and a dropdown menu, with a clear action."
+/>
+
+Modal dialogs display content in a layer above the page.
+
+[Usage guidance for modal dialog component](https://atlassian.design/components/modal-dialog/usage).
+
+### Spotlight
+
+Use a spotlight to bring attention to a specific part of the UI, such as a button or icon, to
+educate users about key features or workflows.
+
+Read guidance on writing effective
+[feature discovery messages](https://atlassian.design/foundations/content/designing-messages/feature-discovery).
+
+<img
+	src={spotlightSingleStep}
+	alt="Example of a single-step spotlight with content about Jira tasks pointing at a task on a Jira board."
+/>
+
+[Usage guidance for spotlight component](https://atlassian.design/components/spotlight/usage).
+
+## Set the appearance (color and icon)
+
+Messages use colors and icons to help indicate content and urgency.
+
+Make sure you use the right
+[color role for your situation](https://atlassian.design/foundations/color#color-roles). For
+example, yellow typically implies a warning, while green can imply success.
+
+<img
+	src={colorRolesAndIcons}
+	alt="Icons showing different icons and colors we use in messages. Informative messages use a blue circle icon with an i inside, success is a green check icon, warning is a yelowish triangle icon with an exclamation mark, danger is a red diamond icon with an exclamation mark, and discovery or new is a purple circle with a question mark inside."
+/>
+
+Review [guidelines on using icons](https://atlassian.design/foundations/iconography) and
+[usage guidance for the icon component](https://atlassian.design/components/icon/usage).

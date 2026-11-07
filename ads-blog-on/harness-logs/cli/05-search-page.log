@@ -1,0 +1,7 @@
+$ npx @atlaskit/ads-cli search page --type docs --limit 10
+Results (1):
+
+Page
+   ADS  ·  docs
+   People care about how apps talk to them. YouTube, GitHub, and Slack all have a…
+   → npx @atlaskit/ads-cli docs page

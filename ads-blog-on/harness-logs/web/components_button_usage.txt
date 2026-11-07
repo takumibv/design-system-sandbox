@@ -1,0 +1,145 @@
+Button
+A button triggers an event or action. They let users know what will happen next.
+## Neutral selected states
+When the platform-dst-tokens-finesse feature flag is enabled, this component uses the new neutral treatment for selected states.
+ExamplesCodeUsageChangelog
+## Usage
+Buttons are triggers for events or actions. They're a common part of larger experiences such as
+forms﻿, (opens new window) or
+modal dialogs.
+## Parts
+Buttons typically have a label and can include an icon before or after the label.
+- Label: Text describing the button action. Use action verbs or phrases to tell the user what
+will happen next, and follow the
+button label content guidelines.
+- Button: The selectable area of the button.
+- Icon (optional): Most buttons don’t need an icon. Use an icon to add additional affordance
+where the icon has a clear and well-established meaning.
+### Use one primary call to action
+Only include one primary button or call to action (CTA) in a page or area.
+Primary buttons indicate the most important action in a group or area. Having multiple primary CTAs
+in one area can be confusing or visually overwhelming because they compete for attention.
+#### Do
+Use one primary call to action to help people proceed.
+#### Don’t
+Don't use many calls to action in one page or container.
+### Consider button sizes in context
+Make sure the button is large enough to interact with but not visually overwhelming. There is a
+compact button for tight spaces.
+### Use buttons for actions and links for navigation
+Buttons are for actions that affect something on the current page, such as submitting a form,
+playing media, or closing a modal.
+Links navigate to a new page or anchor location, changing the URL.
+In general, don’t use a <button> in place of a link (<a>) or a link in place of a button. HTML
+buttons and links are treated differently by assistive technologies such as screen readers, so using
+the wrong one can make experiences harder to use for some people.
+## Accessibility
+### Avoid disabling buttons
+Avoid disabling buttons, especially in forms. Instead, keep the button pressable, and use validation
+and errors to explain what needs to be done to proceed.
+Disabled buttons don’t explain why the button isn’t usable. They also aren’t reachable in the tab
+order and don’t receive hover, focus, or click events, making them entirely inaccessible to some
+people.
+#### Do
+Use validation or other clear on-screen directions to help people proceed.
+#### Don’t
+Don't disable form submission buttons, as this doesn't give people clear a direction for how to proceed.
+### Never put tooltips on disabled buttons
+Tooltips can't be reached on all devices or by some assitive technologies, and they should never
+appear on elements that aren't interactable.
+Things to consider before using a tooltip:
+- Is this information essential to the user experience? If so, never hide it behind a tooltip.
+Tooltips aren’t easy to discover and aren’t accessible at all on mobile devices. If it isn’t
+essential information, consider if you need to show it at all.
+- Is this information actionable? Being shown things that you can’t use without any next steps
+can be frustrating or confusing. Consider only showing UI that a user can interact with.
+- If the information is still necessary or helpful, consider using helper text or other more
+accessible text that has the same content instead of a tooltip. This gives you more options to
+provide a link to a next step or another relevant action.
+## Best practices
+### Alignment and positioning
+In general, the primary button placement should match the alignment of the button group. For
+example, right aligned button groups place the primary button on the right. Left aligned button
+groups place the primary button on the left.
+- Right align buttons for focussed tasks, series of tasks (such as
+onboarding), and modal dialogs. Right
+aligning buttons is best for experiences with less copy, so users end scanning on the most
+important action (following a Z-pattern).
+- Left align buttons for single-page forms and other full-page tasks where there is a lot of
+content in view. This aligns with how people scan full pages with more content (F-pattern),
+sorting by importance from left to right. Cards can also left-align the primary action, as they’re
+typically part of a larger page experience.
+- Exceptions: Benefits modals and login forms currently center align buttons.
+#### Do
+Right-align buttons for focussed tasks, modal dialogs, and other areas with less content.
+#### Do
+Left align buttons on full-page forms, long lists of cards, or other screens with a lot of full-page content.
+## Content guidelines
+### Use sentence case capitalization
+Only capitalize the first letter of the button and any proper nouns. Most feature names aren’t
+capitalized or considered proper nouns when following
+our capitalization guidance.
+#### Do
+Use sentence-case capitalization.
+#### Don’t
+Don't use title case capitalization or all caps.
+### Keep button labels short
+Keep labels short and free of punctuation. Drop unnecessary articles, such as ‘a’ or ‘the’, for a
+more concise label.
+#### Do
+Use concise, easy to scan button labels to describe the action.
+#### Don’t
+Don't use long, redundant button labels.
+### Use specific labels wherever possible
+Start with the verb and specify what is being acted on. Use dynamic text to make the button very
+specific if possible.
+#### Do
+Use active verbs or phrases that clearly indicate action.
+#### Don’t
+Don't use vague and generic labels that make the user read the dialog before taking action.
+### Make labels consistent with other UI in view
+For example, if a button is part of a larger modal, use the same language in the button as in
+headings and other related text.
+#### Do
+Use consistent language for the button and other text descibing the same action.
+#### Don’t
+Don't use different words to refer to the same action.
+## Data Center apps
+For all new features, we recommend using Atlassian Design System and other
+Atlaskit components﻿, (opens new window). For existing code, you can continue to use
+Atlassian User Interface (AUI)﻿, (opens new window).
+## Related
+- Icon buttons
+- Link buttons
+- Button groups
+- Split buttons
+- Forms
+- Modal dialogs
+- Dropdown menus
+Was this page helpful?YesNo
+We use this feedback to improve our documentation.
+Back to top
+- Design system
+- Get started
+- Foundations
+- Components
+- Rovo UI
+- Tools
+- Release phases
+- Contact us
+- News
+- Featured
+- Design blogs
+- Leadership talks
+- Team stories
+- Other libraries
+- Atlaskit﻿, (opens new window)
+- Forge UI Kit﻿, (opens new window)
+- Brand kit﻿, (opens new window)
+- Careers
+- Life at Atlassian﻿, (opens new window)
+- Design and content roles﻿, (opens new window)
+- Developer roles﻿, (opens new window)
+- Product roles﻿, (opens new window)
+© 2026 AtlassianTrademark﻿, (opens new window)Privacy﻿, (opens new window)License
+ 

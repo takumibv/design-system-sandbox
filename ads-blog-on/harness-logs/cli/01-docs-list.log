@@ -1,0 +1,9 @@
+$ npx @atlaskit/ads-cli docs
+Read ADS reference docs. Choose a topic:
+========================================
+
+Foundations: docs <topic...> — e.g. `docs spacing`, `docs color contrast` (any atlassian.design foundation)
+
+Accessibility: docs a11y [topic] — topics: buttons, forms, images, colors, focus, keyboard, screenReaders, aria, wcag, general
+
+Migrations: docs migration <id> — ids: avatar-xsmall-to-xxsmall, interaction-to-entry-point, jira-spotlight, single-step, multi-step, motion

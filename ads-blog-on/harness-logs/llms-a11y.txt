@@ -1,0 +1,784 @@
+# Atlassian Design System Accessibility
+
+> Comprehensive accessibility guidelines and best practices for building inclusive, accessible user interfaces with the Atlassian Design System. This guide ensures all users, regardless of ability, can effectively interact with Atlassian apps.
+
+## Core Accessibility Principles
+
+### WCAG 2.1 AA Compliance
+The Atlassian Design System is built to meet WCAG 2.1 AA standards, ensuring:
+- **Perceivable**: Information is presented in ways users can perceive
+- **Operable**: Interface components are operable by all users
+- **Understandable**: Information and operation are understandable
+- **Robust**: Content is compatible with current and future assistive technologies
+
+### Inclusive Design Philosophy
+- Design for people, not just compliance
+- Consider accessibility from the start of design
+- Test with real users and assistive technologies
+- Provide multiple ways to accomplish tasks
+
+## Design Tokens for Accessibility
+
+### Color and Contrast
+Use design tokens to ensure proper contrast ratios:
+
+```tsx
+import { token } from '@atlaskit/tokens';
+
+// High contrast text on backgrounds
+const styles = css({
+  color: token('color.text'),
+  backgroundColor: token('color.background.neutral'),
+});
+
+// Ensure 4.5:1 contrast ratio for normal text
+// Ensure 3:1 contrast ratio for large text (18pt+ or 14pt+ bold)
+```
+
+**Critical Color Tokens:**
+- `color.text` - Primary text with proper contrast
+- `color.text.subtle` - Secondary text (use sparingly)
+- `color.text.disabled` - Disabled text (avoid for critical information)
+- `color.border.focused` - Focus indicators
+- `color.background.danger` - Error states
+- `color.background.success` - Success states
+
+### Typography and Readability
+- Use `font.body` for main content (minimum 16px)
+- Use `font.body.small` sparingly (minimum 14px)
+- Maintain line height of at least 1.5 for readability
+- Use `font.weight.medium` or `font.weight.semibold` for emphasis
+- Use `Text` primitive for consistent typography
+- Use `Heading` component for proper heading hierarchy
+
+## Component Accessibility Guidelines
+
+### Interactive Elements
+
+#### Buttons and Pressable Elements
+```tsx
+import { Pressable, Focusable } from '@atlaskit/primitives/compiled';
+import { VisuallyHidden } from '@atlaskit/visually-hidden';
+
+// Always provide accessible labels
+<Focusable as="button" onClick={handleClick}>
+  <Icon />
+  <VisuallyHidden>Save changes</VisuallyHidden>
+</Focusable>
+
+// For icon-only buttons, use aria-label
+<Button aria-label="Close dialog" onClick={handleClose}>
+  <CloseIcon />
+</Button>
+
+// Custom interactive elements with focus ring
+<Focusable
+  as="div"
+  onClick={handleClick}
+  isInset
+>
+  Custom interactive element
+</Focusable>
+
+// Pressable with focus management
+<Pressable onClick={handleClick}>
+  <Focusable as="span">
+    Interactive content
+  </Focusable>
+</Pressable>
+```
+
+**Best Practices:**
+- Never disable buttons without providing alternatives
+- Use descriptive labels that explain the action
+- Ensure focus indicators are visible with `Focusable`
+- Support keyboard navigation (Enter, Space)
+- Use `Pressable` primitive for custom interactive elements
+- Use `Focusable` for elements that need focus management
+- Avoid tooltips on disabled buttons
+
+#### Links and Navigation
+```tsx
+import { Anchor } from '@atlaskit/primitives/compiled';
+
+// External links with proper labeling
+<Anchor href="https://external.com" target="_blank">
+  External resource
+  <VisuallyHidden> (opens in new window)</VisuallyHidden>
+</Anchor>
+```
+
+**Best Practices:**
+- Use descriptive link text (avoid "click here")
+- Indicate when links open in new windows
+- Ensure link purpose is clear from context
+- Use proper heading hierarchy for navigation
+
+### Form Components
+
+#### Input Fields and Labels
+```tsx
+import { TextField } from '@atlaskit/textfield';
+
+// Always associate labels with inputs
+<TextField
+  label="Email address"
+  isRequired
+  aria-describedby="email-help"
+  id="email-input"
+/>
+<div id="email-help">Enter your work email address</div>
+```
+
+**Best Practices:**
+- Use `htmlFor` and `id` to associate labels with inputs
+- Provide helpful error messages and descriptions
+- Use `aria-required` for required fields
+- Group related form elements with `fieldset` and `legend`
+
+#### Form Validation
+```tsx
+// Provide clear, actionable error messages
+<TextField
+  label="Password"
+  isInvalid
+  aria-invalid="true"
+  aria-describedby="password-error"
+/>
+<div id="password-error" role="alert">
+  Password must be at least 8 characters long
+</div>
+```
+
+### Content and Media
+
+#### Images and Alternative Text
+```tsx
+import { Image } from '@atlaskit/image';
+
+// Decorative images
+<Image src="decorative.jpg" alt="" />
+
+// Informative images
+<Image
+  src="chart.png"
+  alt="Bar chart showing Q4 sales increased 25% over Q3"
+/>
+
+// Complex images need detailed descriptions
+<Image
+  src="complex-diagram.png"
+  alt=""
+  aria-describedby="diagram-description"
+/>
+<div id="diagram-description">
+  Detailed description of the diagram content...
+</div>
+```
+
+**Alternative Text Guidelines:**
+- Keep alt text under 125 characters
+- Describe the purpose, not just the content
+- Don't start with "Image of..." or "Picture of..."
+- Leave empty for decorative images
+
+#### Text and Typography
+```tsx
+import { Text } from '@atlaskit/primitives/compiled';
+import { Heading } from '@atlaskit/heading';
+
+// Use semantic heading hierarchy
+<Heading level="h1">Page Title</Heading>
+<Heading level="h2">Section Title</Heading>
+
+// Use Text component for consistent styling
+<Text>Regular paragraph text</Text>
+<Text weight="bold">Important information</Text>
+```
+
+### Layout and Structure
+
+#### Semantic HTML
+```tsx
+import { Box } from '@atlaskit/primitives/compiled';
+
+// Use semantic elements
+<Box as="main">
+  <Box as="section" aria-labelledby="section-heading">
+    <Heading id="section-heading" level="h2">Section Title</Heading>
+    <Box as="article">
+      Content here
+    </Box>
+  </Box>
+</Box>
+```
+
+#### Focus Management
+```tsx
+import { useRef, useEffect } from 'react';
+
+// Manage focus in modals and dialogs
+const modalRef = useRef<HTMLDivElement>(null);
+
+useEffect(() => {
+  if (isOpen && modalRef.current) {
+    modalRef.current.focus();
+  }
+}, [isOpen]);
+```
+
+## ARIA Usage Guidelines
+
+### ARIA Roles and States
+```tsx
+// Use ARIA sparingly - prefer semantic HTML
+<div role="button" tabIndex={0} onClick={handleClick}>
+  Custom button
+</div>
+
+// Live regions for dynamic content
+<div aria-live="polite" role="status">
+  {statusMessage}
+</div>
+
+// Landmarks for page structure
+<nav role="navigation" aria-label="Main navigation">
+  Navigation content
+</nav>
+```
+
+### Common ARIA Patterns
+
+#### Dialog and Modal
+```tsx
+import { ModalDialog } from '@atlaskit/modal-dialog';
+import { Focusable } from '@atlaskit/primitives/compiled';
+
+<ModalDialog
+  onClose={handleClose}
+  aria-labelledby="dialog-title"
+  aria-describedby="dialog-description"
+>
+  <h2 id="dialog-title">Dialog Title</h2>
+  <p id="dialog-description">Dialog description</p>
+  <Focusable as="button" onClick={handleAction}>
+    Action button
+  </Focusable>
+</ModalDialog>
+```
+
+#### Tab Interface
+```tsx
+import { Focusable } from '@atlaskit/primitives/compiled';
+
+// Tab container
+<div role="tablist" aria-label="Settings tabs">
+  <Focusable
+    as="button"
+    role="tab"
+    aria-selected="true"
+    aria-controls="panel-1"
+  >
+    General
+  </Focusable>
+  <Focusable
+    as="button"
+    role="tab"
+    aria-selected="false"
+    aria-controls="panel-2"
+  >
+    Advanced
+  </Focusable>
+</div>
+
+// Tab panels
+<div role="tabpanel" id="panel-1" aria-labelledby="tab-1">
+  General settings content
+</div>
+```
+
+## Keyboard Navigation
+
+### Focus Management
+- Ensure logical tab order
+- Provide visible focus indicators
+- Handle focus trapping in modals
+- Return focus when dialogs close
+
+### Keyboard Shortcuts
+```tsx
+// Support standard keyboard interactions
+const handleKeyDown = (event: KeyboardEvent) => {
+  switch (event.key) {
+    case 'Enter':
+    case ' ':
+      handleActivate();
+      break;
+    case 'Escape':
+      handleClose();
+      break;
+    case 'Tab':
+      // Handle focus management
+      break;
+  }
+};
+```
+
+## Screen Reader Support
+
+### Announcements and Live Regions
+```tsx
+// Announce dynamic content changes using aria-live
+<div aria-live="polite" role="status">
+  {count} items selected
+</div>
+
+// For drag and drop operations
+import { announce } from '@atlaskit/pragmatic-drag-and-drop-live-region';
+
+announce('Task "Clean dishes" moved to list "Doing" from "Todo".');
+```
+
+**Best Practices:**
+- Use `aria-live="polite"` for status updates
+- Use `aria-live="assertive"` for critical alerts
+- Avoid announcing the same message repeatedly
+- Keep live regions in the DOM for consistent announcements
+
+### Skip Links
+```tsx
+// Built-in skip links in navigation system
+import { NavigationSystem } from '@atlaskit/navigation-system';
+
+<NavigationSystem
+  skipLinks={[
+    { id: 'main-content', title: 'Skip to main content' },
+    { id: 'navigation', title: 'Skip to navigation' }
+  ]}
+/>
+
+// Custom skip links
+<a href="#main-content" className="skip-link">
+  Skip to main content
+</a>
+```
+
+## Testing and Validation
+
+### Automated Testing
+```tsx
+// Use Atlassian's accessibility testing utilities
+import { toHaveNoViolations, checkColorContrast } from '@af/accessibility-testing';
+
+expect.extend(toHaveNoViolations);
+
+// Unit test accessibility
+test('should not have accessibility violations', async () => {
+  const { container } = render(<MyComponent />);
+  const results = await axe(container);
+  expect(results).toHaveNoViolations();
+});
+
+// Visual regression test for color contrast
+test('should have sufficient contrast', async () => {
+  const url = getExampleUrl(SomeURL);
+  const { page } = global;
+  await loadPage(page, url);
+
+  const results = await checkColorContrast(page);
+  expect(results.incomplete.length).toEqual(0);
+  expect(results).toHaveNoViolations();
+});
+
+// Enable accessibility audit on unit tests
+// Set environment variable: IS_A11Y_AUDIT_ENABLED=true
+```
+
+### Manual Testing Checklist
+- [ ] Test with keyboard navigation only
+- [ ] Test with screen readers (NVDA, JAWS, VoiceOver)
+- [ ] Test with high contrast mode
+- [ ] Test with zoom (200% and 400%)
+- [ ] Test with reduced motion preferences
+- [ ] Test with different color vision types
+- [ ] Test focus management in modals and dialogs
+- [ ] Test ARIA live regions and announcements
+- [ ] Test skip links functionality
+
+## Common Accessibility Issues
+
+### Avoid These Patterns
+```tsx
+// ❌ Don't rely on color alone for information
+<div style={{ color: 'red' }}>Error message</div>
+
+// ✅ Use multiple indicators
+<div style={{ color: 'red' }} role="alert">
+  <Icon name="error" aria-label="Error" />
+  Error message
+</div>
+
+// ❌ Don't use generic labels
+<button>Click here</button>
+
+// ✅ Use descriptive labels
+<button>Save changes</button>
+
+// ❌ Don't hide focus indicators
+button:focus { outline: none; }
+
+// ✅ Ensure focus is visible
+button:focus { outline: 2px solid token('color.border.focused'); }
+```
+
+## Resources and Tools
+
+### Official Documentation
+- [Atlassian Design System Accessibility](https://atlassian.design/foundations/accessibility)
+- [WCAG 2.1 Guidelines](https://www.w3.org/WAI/WCAG21/quickref/)
+- [ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/)
+
+### Testing Tools
+- [axe DevTools](https://www.deque.com/axe/browser-extensions/)
+- [WAVE Web Accessibility Evaluator](https://wave.webaim.org/)
+- [Lighthouse Accessibility Audit](https://developers.google.com/web/tools/lighthouse)
+
+### Screen Readers
+- [NVDA](https://www.nvaccess.org/) (Windows, free)
+- [JAWS](https://www.freedomscientific.com/products/software/jaws/) (Windows)
+- [VoiceOver](https://www.apple.com/accessibility/vision/) (macOS/iOS, built-in)
+- [TalkBack](https://support.google.com/accessibility/android/answer/6283677) (Android, built-in)
+
+## Component-Specific Accessibility
+
+### Focus Management Components
+```tsx
+import { Focusable } from '@atlaskit/primitives/compiled';
+
+// Built-in focus ring for interactive elements
+<Focusable as="button" isInset>
+  Click me
+</Focusable>
+
+// Custom focus management with inset focus ring
+<Focusable as="div" isInset onClick={handleClick}>
+  Custom interactive element
+</Focusable>
+
+// Focusable with custom styling
+<Focusable
+  as="button"
+  xcss={customStyles}
+  onClick={handleClick}
+>
+  Styled button
+</Focusable>
+```
+
+### Button Components
+- Use `Button` for primary actions
+- Use `ButtonGroup` for related actions
+- Avoid disabled buttons with tooltips
+- Provide loading states with `aria-busy`
+- Use `Pressable` primitive for custom interactive elements
+
+### Form Components
+- Use `TextField`, `Select`, `Checkbox`, `Radio` for consistent behavior
+- Implement proper validation with `aria-invalid`
+- Use `Field` wrapper for consistent labeling
+- Use `MessageWrapper` for form validation announcements
+
+### Navigation Components
+- Use `Breadcrumbs` for hierarchical navigation with proper focus management
+- Use `Tabs` for content organization with ARIA tab patterns
+- Use `Menu` for dropdown navigation with focus trapping
+- Use `NavigationSystem` with built-in skip links
+
+### Feedback Components
+- Use `Flag` for status messages
+- Use `InlineMessage` for contextual feedback
+- Use `Toast` for temporary notifications
+- Use `aria-live` regions for screen reader announcements
+
+### Layout Components
+- Use `PageLayout` with built-in accessibility features
+- Use `Drawer` with proper focus management
+- Use `ModalDialog` with focus trapping and return focus
+- Use `Popup` with accessible focus management
+
+### Data Display Components
+- Use `Table` with proper headers and captions
+- Use `Tree` with keyboard navigation support
+- Use `Avatar` and `AvatarGroup` with proper alt text
+- Use `Badge` and `Lozenge` for status indicators
+
+## Optional
+
+### Advanced ARIA Patterns
+- [Complex Widget Patterns](https://www.w3.org/WAI/ARIA/apg/patterns/)
+- [Live Region Best Practices](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
+- [Focus Management Strategies](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/)
+
+### Drag and Drop Accessibility
+```tsx
+import { announce } from '@atlaskit/pragmatic-drag-and-drop-live-region';
+
+// Always provide alternatives to drag operations
+// Use buttons, menus, and forms for accessible interactions
+// Announce state changes to screen readers
+announce('Item moved successfully');
+```
+
+### Performance Considerations
+- Minimize DOM updates for screen readers
+- Use `aria-live` judiciously
+- Optimize for keyboard navigation performance
+- Use `shouldAnnounce` to prevent unnecessary announcements
+
+### Internationalization
+- Support right-to-left languages
+- Consider cultural accessibility differences
+- Test with translated content
+- Use `VisuallyHidden` instead of `aria-label` for better translation support
+
+### Advanced Focus Management
+```tsx
+// Focus trapping in modals
+import { useFocusManager } from '@atlaskit/popup';
+import { Focusable } from '@atlaskit/primitives/compiled';
+
+// Custom focus restoration
+const handleClose = () => {
+  triggerRef.current?.focus();
+  onClose();
+};
+
+// Custom focusable elements with proper focus management
+<Focusable
+  as="div"
+  tabIndex={0}
+  onKeyDown={(e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      handleActivate();
+    }
+  }}
+>
+  Custom focusable element
+</Focusable>
+```
+
+### Accessibility Testing Tools
+- [@af/accessibility-testing](https://atlassian.design/components/accessibility-testing) - Atlassian's testing utilities
+- [axe-core](https://github.com/dequelabs/axe-core) - Automated accessibility testing
+- [@sa11y/jest](https://github.com/salesforce/sa11y) - Jest integration for accessibility testing
+
+## ADS Fix Patterns for Accessibility Violations
+
+### Form Control Violations
+**Common Issues**: Missing labels, unassociated form controls, missing descriptions
+**ADS Solution**: Use ADS form components that handle accessibility automatically
+
+```tsx
+// ❌ Problematic code
+<input type="email" />
+
+// ✅ ADS solution
+import { TextField } from '@atlaskit/textfield';
+
+<TextField
+  label="Email address"
+  type="email"
+  isRequired
+  aria-describedby="email-help"
+  id="email-input"
+/>
+<div id="email-help">Enter your work email address</div>
+```
+
+### Interactive Element Violations
+**Common Issues**: Missing accessible names, keyboard navigation, focus management
+**ADS Solution**: Use Focusable component for custom elements or Button for standard interactions
+
+```tsx
+// ❌ Problematic code
+<div onClick={handleClick}>Click me</div>
+
+// ✅ ADS solution
+import { Focusable } from '@atlaskit/primitives/compiled';
+import { Button } from '@atlaskit/button';
+
+// For custom interactive elements
+<Focusable
+  as="div"
+  aria-label="Interactive content"
+  onClick={handleClick}
+  onKeyDown={(e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      handleClick();
+    }
+  }}
+>
+  Interactive content
+</Focusable>
+
+// For standard buttons
+<Button aria-label="Action description" onClick={handleAction}>
+  <Icon />
+</Button>
+```
+
+### Image Violations
+**Common Issues**: Missing alt text, decorative images not marked
+**ADS Solution**: Use Image component with proper alt text handling
+
+```tsx
+// ❌ Problematic code
+<img src="chart.png" />
+
+// ✅ ADS solution
+import { Image } from '@atlaskit/image';
+
+// Informative image
+<Image
+  src="chart.png"
+  alt="Bar chart showing Q4 sales increased 25%"
+/>
+
+// Decorative image
+<Image src="decorative.jpg" alt="" />
+
+// Complex image with description
+<Image
+  src="complex-diagram.png"
+  alt=""
+  aria-describedby="diagram-description"
+/>
+<div id="diagram-description">
+  Detailed description of the diagram content...
+</div>
+```
+
+### Color and Contrast Violations
+**Common Issues**: Insufficient contrast, relying on color alone
+**ADS Solution**: Use design tokens for consistent contrast ratios
+
+```tsx
+// ❌ Problematic code
+<div style={{ color: '#ff0000' }}>Error message</div>
+
+// ✅ ADS solution
+import { token } from '@atlaskit/tokens';
+import { Text } from '@atlaskit/primitives/compiled';
+
+// Use design tokens
+const styles = css({
+  color: token('color.text'),
+  backgroundColor: token('color.background.neutral'),
+});
+
+// Use Text component with color prop
+<Text color="color.text.danger">Error message</Text>
+```
+
+### Structure and Semantics Violations
+**Common Issues**: Missing landmarks, improper heading hierarchy, list structure
+**ADS Solution**: Use semantic HTML elements and ADS layout components
+
+```tsx
+// ❌ Problematic code
+<div>Main heading</div>
+<div>Sub heading</div>
+
+// ✅ ADS solution
+import { Text } from '@atlaskit/primitives/compiled';
+import { Box } from '@atlaskit/primitives/compiled';
+
+// Proper heading hierarchy
+<Text as="h1">Main heading</Text>
+<Text as="h2">Sub heading</Text>
+
+// Semantic structure
+<Box as="main">
+  <Box as="section" aria-labelledby="section-heading">
+    <Text as="h2" id="section-heading">Section Title</Text>
+    <Box as="article">Content here</Box>
+  </Box>
+</Box>
+
+// Proper list structure
+<ul>
+  <li>List item 1</li>
+  <li>List item 2</li>
+</ul>
+```
+
+### Focus Management Violations
+**Common Issues**: Missing focus indicators, improper focus order
+**ADS Solution**: Use Focusable component with built-in focus management
+
+```tsx
+// ❌ Problematic code
+button:focus { outline: none; }
+
+// ✅ ADS solution
+import { Focusable } from '@atlaskit/primitives/compiled';
+
+<Focusable
+  as="button"
+  onClick={handleClick}
+  xcss={{
+    ':focus-visible': {
+      outline: '2px solid token(color.border.focus)',
+      outlineOffset: '2px',
+    },
+  }}
+>
+  Click me
+</Focusable>
+```
+
+### Screen Reader Violations
+**Common Issues**: Missing announcements, improper live regions
+**ADS Solution**: Use aria-live regions and proper ARIA attributes
+
+```tsx
+// ❌ Problematic code
+<div>Status updated</div>
+
+// ✅ ADS solution
+<div aria-live="polite" role="status">
+  Status updated successfully
+</div>
+
+// For form validation
+<div role="alert" aria-live="assertive">
+  Please fix the errors above
+</div>
+```
+
+### General Fix Patterns
+
+1. **Replace custom implementations with ADS components**
+   - Use `TextField` instead of raw `<input>`
+   - Use `Button` instead of custom button elements
+   - Use `Focusable` for custom interactive elements
+
+2. **Use design tokens for styling**
+   - Replace hardcoded colors with `token()` function
+   - Use `Text` component with color props
+   - Ensure proper contrast ratios
+
+3. **Implement proper labeling**
+   - Use `aria-label` for icon-only elements
+   - Use `VisuallyHidden` for screen reader text
+   - Associate labels with form controls
+
+4. **Add keyboard support**
+   - Support Enter and Space for activation
+   - Support Escape for closing/canceling
+   - Ensure logical tab order
+
+5. **Test with assistive technologies**
+   - Test with screen readers
+   - Test with keyboard navigation only
+   - Test with high contrast mode

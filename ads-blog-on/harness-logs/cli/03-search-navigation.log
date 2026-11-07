@@ -1,0 +1,51 @@
+$ npx @atlaskit/ads-cli search navigation --limit 5
+Results (12):
+
+Components (5):
+
+Pagination  @atlaskit/pagination
+   ADS  ·  component  ·  13 props  ·  1 example
+   → npx @atlaskit/ads-cli component Pagination
+Breadcrumbs  @atlaskit/breadcrumbs
+   ADS  ·  component  ·  4 props  ·  1 example
+   → npx @atlaskit/ads-cli component Breadcrumbs
+Link  @atlaskit/link
+   ADS  ·  component  ·  5 props  ·  1 example
+   → npx @atlaskit/ads-cli component Link
+TopNav  @atlaskit/navigation-system
+   ADS  ·  component  ·  6 props  ·  1 example
+   → npx @atlaskit/ads-cli component TopNav
+LinkItem  @atlaskit/menu
+   ADS  ·  component  ·  14 props  ·  1 example
+   → npx @atlaskit/ads-cli component LinkItem
+
+Tokens (1):
+
+color.text.subtle
+   ADS  ·  token  ·  = #505258
+   → npx @atlaskit/ads-cli token color.text.subtle
+
+Icons (5):
+
+MenuIcon  @atlaskit/icon/core/menu
+   ADS  ·  icon  ·  Single purpose - Reserved for accessing the menu in global app navigation.
+   → npx @atlaskit/ads-cli icon MenuIcon
+NodeIcon  @atlaskit/icon/core/node
+   ADS  ·  icon  ·  Single purpose - Reserved for a non-expandable item in a page tree.
+   → npx @atlaskit/ads-cli icon NodeIcon
+SidebarCollapseIcon  @atlaskit/icon/core/sidebar-collapse
+   ADS  ·  icon  ·  Single purpose - Reserved for collapsing the navigation sidebar.
+   → npx @atlaskit/ads-cli icon SidebarCollapseIcon
+SidebarExpandIcon  @atlaskit/icon/core/sidebar-expand
+   ADS  ·  icon  ·  Single purpose - Reserved for expanding the navigation sidebar.
+   → npx @atlaskit/ads-cli icon SidebarExpandIcon
+DataVisualizationHeatmapIcon  @atlaskit/icon-lab/core/data-visualization-heatmap
+   ADS  ·  icon  ·  Reserved for representing heatmap data visualizations.
+   → npx @atlaskit/ads-cli icon DataVisualizationHeatmapIcon
+
+Docs (1):
+
+Navigation
+   ADS  ·  docs
+   Date and time formatting is tied to a person’s locale and account settings. Bec…
+   → npx @atlaskit/ads-cli docs navigation

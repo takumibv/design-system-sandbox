@@ -1,0 +1,85 @@
+$ npx @atlaskit/ads-cli component Modal
+Modal
+@atlaskit/modal-dialog
+
+Props (15)
+  autoFocus                  RefObject<HTMLElement | null | undefined> | undefined
+  Pass an element `ref` to focus on a specific element on load. Default behavior is focus is moved to the first interactive element inside the modal dialog.
+  children                   string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<React…
+  Contents of the modal dialog.
+  focusLockAllowlist         ((element: HTMLElement) => boolean) | undefined
+  Callback function which lets you allowlist nodes so they can be interacted with outside of the focus lock. Return `true` if focus lock should handle element, `false` if not.
+  height                     string | number | undefined
+  Height of the modal dialog. When unset the modal dialog will grow to fill the viewport and then start overflowing its contents.
+  isBlanketHidden            boolean | undefined
+  Will remove the blanket tinted background color.
+  label                      string | undefined
+  The label of the modal dialog that is announced to users of assistive technology. This should only be used if there is no modal title being associated to your modal, either via using the modal title component or the `titleId` prop within the `useModal` context.
+  onClose                    OnCloseHandler | undefined
+  Callback function called when the modal dialog is requesting to be closed.
+  onCloseComplete            OnCloseCompleteHandler | undefined
+  Callback function called when the modal dialog has finished closing.
+  onOpenComplete             OnOpenCompleteHandler | undefined
+  Callback function called when the modal dialog has finished opening.
+  onStackChange              OnStackChangeHandler | undefined
+  Callback function called when the modal changes position in the stack.
+  shouldCloseOnOverlayClick  boolean | undefined
+  Calls `onClose` when clicking the blanket behind the modal dialog.
+  shouldReturnFocus          boolean | RefObject<HTMLElement> | undefined
+  ReturnFocus controls what happens when the user exits focus lock mode. If true, focus returns to the element that had focus before focus lock was activated. If false, focus remains where it was when the FocusLock was deactivated. If ref is passed, focus returns to that specific ref element.
+  shouldScrollInViewport     boolean | undefined
+  Will set the scroll boundary to the viewport. If set to false, the scroll boundary is set to the modal dialog body.
+  stackIndex                 number | undefined
+  The stackIndex is a reference to the position (index) of the calling dialog in a modal dialog stack. New modals added to the stack receive the highest stack index of 0. As more modals are added to the stack, their index is dynamically increased according to their new position. Don't alter the modal stack position using `stackIndex` in implementations of third-party libraries (e.g. AUI modal), it may lead to unpredictable bugs, especially if the third party library has its own focus lock. Additionally, each modal in the stack gets a vertical offset based on `stackIndex` value.
+  width                      string | number | undefined
+  Width of the modal dialog. The recommended way to specify modal width is using named size options.
+
+Examples (1):
+
+Example 1
+  tsx                                                                                               
+  import React, { Fragment, useCallback, useState } from 'react';                                   
+  import Button from '@atlaskit/button/default/button';                                             
+  import ModalBody from '@atlaskit/modal-dialog/modal-body';                                        
+  import Modal from '@atlaskit/modal-dialog/modal-dialog';                                          
+  import ModalFooter from '@atlaskit/modal-dialog/modal-footer';                                    
+  import ModalHeader from '@atlaskit/modal-dialog/modal-header';                                    
+  import ModalTitle from '@atlaskit/modal-dialog/modal-title';                                      
+  import ModalTransition from '@atlaskit/modal-dialog/modal-transition';                            
+  import { Text } from '@atlaskit/primitives/compiled/text';                                        
+  export default function Example(): React.JSX.Element {                                            
+    const [isOpen, setIsOpen] = useState(false);                                                    
+    const openModal = useCallback(() => setIsOpen(true), []);                                       
+    const closeModal = useCallback(() => setIsOpen(false), []);                                     
+    return (                                                                                        
+      <Fragment>                                                                                    
+        <Button aria-haspopup="dialog" appearance="primary" onClick={openModal}>                    
+          Open modal                                                                                
+        </Button>                                                                                   
+        <ModalTransition>                                                                           
+          {isOpen && (                                                                              
+            <Modal onClose={closeModal}>                                                            
+              <ModalHeader hasCloseButton>                                                          
+                <ModalTitle>Duplicate this page</ModalTitle>                                        
+              </ModalHeader>                                                                        
+              <ModalBody>                                                                           
+                Duplicating this page will make it a child page of{' '}                             
+                <Text weight="bold">Search - user exploration</Text>, in the{' '}                   
+                <Text weight="bold">Search & Smarts</Text> space.                                   
+              </ModalBody>                                                                          
+              <ModalFooter>                                                                         
+                <Button appearance="subtle" onClick={closeModal}>                                   
+                  Cancel                                                                            
+                </Button>                                                                           
+                <Button appearance="primary" onClick={closeModal}>                                  
+                  Duplicate                                                                         
+                </Button>                                                                           
+              </ModalFooter>                                                                        
+            </Modal>                                                                                
+          )}                                                                                        
+        </ModalTransition>                                                                          
+      </Fragment>                                                                                   
+    );                                                                                              
+  }                                                                                                 
+
+Design: https://go.atlassian.com/figma-library-ads-82128-80670
