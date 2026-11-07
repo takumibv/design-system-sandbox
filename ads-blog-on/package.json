@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint src",
     "preview": "vite preview",
-    "capture": "NODE_PATH=$(npm root -g) node ../brief/scripts/capture.mjs states.json"
+    "capture": "NODE_PATH=$(npm root -g) node scripts/capture.mjs states.json"
   },
   "dependencies": {
     "@atlaskit/app-provider": "^8.3.0",
@@ -28,6 +28,7 @@
     "@atlaskit/form": "^18.3.1",
     "@atlaskit/heading": "^8.0.0",
     "@atlaskit/icon": "^38.0.2",
+    "@atlaskit/image": "^5.2.4",
     "@atlaskit/link": "^5.1.7",
     "@atlaskit/lozenge": "^17.0.6",
     "@atlaskit/menu": "^11.0.5",

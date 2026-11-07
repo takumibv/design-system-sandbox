@@ -148,7 +148,7 @@ export function PostFormPage({ mode }: { mode: "new" | "edit" }) {
 						</Text>
 						{errorCount > 0 && (
 							<Box ref={summaryRef}>
-								<SectionMessage appearance="error" title={`入力内容に${errorCount}件の誤りがあります`}>
+								<SectionMessage appearance="error" headingLevel="h2" title={`入力内容に${errorCount}件の誤りがあります`}>
 									<Box as="ul">
 										{FIELD_ORDER.filter((k) => errors[k]).map((k) => (
 											<Box as="li" key={k}>
@@ -196,12 +196,11 @@ export function PostFormPage({ mode }: { mode: "new" | "edit" }) {
 								value={memberOptions.filter((o) => draft.authorIds.includes(o.value))}
 								onChange={(v) => set("authorIds", v.map((o) => o.value))}
 								isInvalid={!!errors.authorIds}
-								placeholder="名前で探す"
 							/>
 							{errors.authorIds ? (
 								<ErrorMessage>{errors.authorIds}</ErrorMessage>
 							) : (
-								<HelperMessage>共著のときは全員を選んでください。</HelperMessage>
+								<HelperMessage>名前を入力すると候補が絞り込まれます。共著のときは全員を選んでください。</HelperMessage>
 							)}
 						</Box>
 
@@ -214,11 +213,10 @@ export function PostFormPage({ mode }: { mode: "new" | "edit" }) {
 								locale="ja-JP"
 								weekStartDay={1}
 								dateFormat="YYYY/MM/DD"
-								placeholder="未定"
 								shouldShowCalendarButton
 								openCalendarLabel="カレンダーを開く"
 							/>
-							<HelperMessage>未定なら空のままにしてください。</HelperMessage>
+							<HelperMessage>「2026/11/23」の形で入力するか、カレンダーから選んでください。未定なら空のままにしてください。</HelperMessage>
 						</Box>
 
 						<Box>
@@ -256,6 +254,7 @@ export function PostFormPage({ mode }: { mode: "new" | "edit" }) {
 							<Textfield
 								id={ids.url}
 								type="url"
+								autoComplete="url"
 								value={draft.url}
 								onChange={(e) => set("url", e.currentTarget.value)}
 								isInvalid={!!errors.url}

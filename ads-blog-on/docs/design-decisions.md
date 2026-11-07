@@ -53,4 +53,13 @@
 
 ## 実装中の変更
 
-（実装後に追記）
+| 変更 | 理由 | 根拠の種類 |
+| --- | --- | --- |
+| 自前の CSS は `@atlaskit/css` の `cssMap`（トークンのみ）で、週の枠・投稿の区切り線・詳細の dl の 2 列・本文の最大幅・ロゴのリンクの余白の 5 か所だけ書いた。生の CSS ファイル・style 属性は 0 | ADS に「週の区画」「定義リスト」に当たる部品が無い。値はすべて token（`space.*`・`color.border*`・`radius.*`）で、最大幅 1296px／864px はグリッド文書の値 | ハーネス `cli/07-docs-layout.log:194-197` |
+| `@compiled/vite-plugin` と `@atlaskit/tokens/babel-plugin` を入れた | `cssMap` 内の `token()` を静的に解決しないと「The variant object must be statically defined」でビルドが落ちる。Vite での設定方法はハーネスに無かった | 検査（ビルドエラー） |
+| React の StrictMode を外した | 開発時の二重マウントで、URL（`?dialog=delete`）から最初の描画で開いた Modal が中身の無いポータルになる。押して開くと正常 | 検査（Playwright で再現） |
+| 書く人ごとの表の見出しを短くした（「公開済み（期間内）」→「公開済み」、期間は caption に移した） | 390px で見出しが 1 文字ずつ折り返して読めなかった | 検査（スクリーンショット） |
+| 入力欄の placeholder を外し、書式の例を helper text に移した | 公式 lint `no-placeholder` | 検査（lint） |
+| SectionMessage に `headingLevel="h2"` を付けた | 公式 lint `use-heading-level-in-section-message`。lint の文面は `headingLevel={2}` だが型は `"h2"` しか受け付けない | 検査（lint・型） |
+| DateLabel に `maxWidth={320}` | 既定幅では「11月5日(木)（4日超過）」が省略記号で切れ、肝心の「超過」が読めなかった | 検査（スクリーンショット） |
+| 上部のアバターを外し、名前のボタンだけにした | 写真が無く汎用アイコンになり、名前と重複した | その他の自分の判断 |

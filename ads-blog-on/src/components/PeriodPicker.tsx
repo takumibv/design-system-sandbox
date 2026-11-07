@@ -56,7 +56,6 @@ export function PeriodPicker() {
 						locale="ja-JP"
 						weekStartDay={1}
 						dateFormat="YYYY/MM/DD"
-						placeholder="2026/10/12"
 						shouldShowCalendarButton
 						openCalendarLabel="カレンダーを開く"
 						isInvalid={!isValid}
@@ -72,7 +71,6 @@ export function PeriodPicker() {
 						locale="ja-JP"
 						weekStartDay={1}
 						dateFormat="YYYY/MM/DD"
-						placeholder="2027/01/03"
 						shouldShowCalendarButton
 						openCalendarLabel="カレンダーを開く"
 						isInvalid={!isValid}
@@ -86,7 +84,7 @@ export function PeriodPicker() {
 			</Inline>
 			{isValid ? (
 				<Text color="color.text.subtle" size="small">
-					{formatRange(from, to)}を表示しています。
+					{formatRange(from, to)}を表示しています。日付は「2026/11/09」の形で入力するか、カレンダーから選んでください。
 				</Text>
 			) : (
 				<Box id={errorId}>

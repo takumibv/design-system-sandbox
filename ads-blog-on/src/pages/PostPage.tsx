@@ -32,6 +32,8 @@ const styles = cssMap({
 		columnGap: token("space.300"),
 		rowGap: token("space.150"),
 		marginBlock: token("space.0"),
+		marginInline: token("space.0"),
+		paddingInline: token("space.0"),
 	},
 	dd: { marginInlineStart: token("space.0"), overflowWrap: "anywhere" },
 });
@@ -137,7 +139,7 @@ function PublishDialog({ post, onClose }: { post: Post; onClose: () => void }) {
 					</Box>
 					<Box>
 						<Label htmlFor={urlId}>記事 URL</Label>
-						<Textfield id={urlId} value={url} onChange={(e) => setUrl(e.currentTarget.value)} isInvalid={!!urlError} type="url" />
+						<Textfield id={urlId} value={url} onChange={(e) => setUrl(e.currentTarget.value)} isInvalid={!!urlError} type="url" autoComplete="url" />
 						{urlError ? <ErrorMessage>{urlError}</ErrorMessage> : <HelperMessage>あとから編集画面で追加することもできます。</HelperMessage>}
 					</Box>
 				</Stack>
@@ -173,6 +175,7 @@ function StatusControl({ post, editable, onPublish }: { post: Post; editable: bo
 	};
 	return (
 		<DropdownMenu
+			shouldRenderToParent
 			trigger={({ triggerRef, ...props }) => (
 				<LozengeDropdownTrigger
 					{...props}
@@ -243,7 +246,7 @@ export function PostPage() {
 					</Inline>
 
 					{!editable && (
-						<SectionMessage appearance="information" title={user ? "この投稿は閲覧のみです" : "ログインしていないため閲覧のみです"}>
+						<SectionMessage appearance="information" headingLevel="h2" title={user ? "この投稿は閲覧のみです" : "ログインしていないため閲覧のみです"}>
 							<Text as="p">
 								{user
 									? `この投稿を編集できるのは、書く人（${authorNames(post, members)}）と編集担当です。`

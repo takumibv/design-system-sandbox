@@ -38,14 +38,14 @@ export function MembersPage() {
 				/>
 			) : (
 				<DynamicTable
-					caption="書く人ごとの予定と実績"
+					caption="書く人ごとの予定と実績（公開済み・予定は期間内の本数）"
 					head={{
 						cells: [
 							{ key: "name", content: "書く人", isSortable: true },
-							{ key: "published", content: "公開済み（期間内）", isSortable: true },
-							{ key: "planned", content: "予定（期間内）", isSortable: true },
-							{ key: "last", content: "最後の公開日", isSortable: true },
-							{ key: "next", content: "次の予定日", isSortable: true },
+							{ key: "published", content: "公開済み", isSortable: true },
+							{ key: "planned", content: "予定", isSortable: true },
+							{ key: "last", content: "最後の公開", isSortable: true },
+							{ key: "next", content: "次の予定", isSortable: true },
 							{ key: "overdue", content: "予定日超過", isSortable: true },
 						],
 					}}

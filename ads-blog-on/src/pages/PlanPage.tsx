@@ -82,7 +82,7 @@ function Attention({ weeks }: { weeks: Week[] }) {
 	return (
 		<Stack space="space.150">
 			{(overdue.length > 0 || gaps.length > 0) && (
-				<SectionMessage appearance="warning" title="計画に遅れと抜けがあります">
+				<SectionMessage appearance="warning" headingLevel="h2" title="計画に遅れと抜けがあります">
 					<Stack space="space.100">
 						{overdue.length > 0 && (
 							<Box>
@@ -108,6 +108,7 @@ function Attention({ weeks }: { weeks: Week[] }) {
 			{next && (
 				<SectionMessage
 					appearance="information"
+					headingLevel="h2"
 					title={`あなたの次の締切は${formatDate(next.plannedDate!)}です`}
 					actions={[
 						<SectionMessageAction key="me" href="/me">
@@ -150,7 +151,7 @@ export function PlanPage() {
 			</PageHeader>
 
 			{!user && (
-				<SectionMessage appearance="information" title="閲覧のみの表示です">
+				<SectionMessage appearance="information" headingLevel="h2" title="閲覧のみの表示です">
 					<Text as="p">Slack でログインすると、投稿予定を登録したり、自分が書く投稿を編集したりできます。ログインは右上から行えます。</Text>
 				</SectionMessage>
 			)}

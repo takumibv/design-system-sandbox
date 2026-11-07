@@ -30,16 +30,16 @@ export function CategoryTag({ category }: { category: Post["category"] }) {
 export function PlannedDate({ post, today, spacious }: { post: Post; today: string; spacious?: boolean }) {
 	if (post.status === "published") {
 		const d = post.publishedDate ?? post.plannedDate;
-		return d ? <DateLabel label={`${formatDate(d)} 公開`} isSpacious={spacious} hasIconBefore={false} /> : null;
+		return d ? <DateLabel maxWidth={320} label={`${formatDate(d)} 公開`} isSpacious={spacious} hasIconBefore={false} /> : null;
 	}
 	if (!post.plannedDate) {
-		return <DateLabel label="公開予定日 未定" isSpacious={spacious} hasIconBefore={false} />;
+		return <DateLabel maxWidth={320} label="公開予定日 未定" isSpacious={spacious} hasIconBefore={false} />;
 	}
 	const tone = dateTone(post, today);
 	const d = diffDays(post.plannedDate, today);
 	if (tone === "overdue") {
 		return (
-			<DateLabel
+			<DateLabel maxWidth={320}
 				appearance="danger"
 				label={`${formatDate(post.plannedDate)}（${-d}日超過）`}
 				iconLabel="予定日超過"
@@ -49,7 +49,7 @@ export function PlannedDate({ post, today, spacious }: { post: Post; today: stri
 	}
 	if (tone === "near") {
 		return (
-			<DateLabel
+			<DateLabel maxWidth={320}
 				appearance="warning"
 				label={`${formatDate(post.plannedDate)}（${d === 0 ? "今日" : `あと${d}日`}）`}
 				iconLabel="予定日が近い"
@@ -57,7 +57,7 @@ export function PlannedDate({ post, today, spacious }: { post: Post; today: stri
 			/>
 		);
 	}
-	return <DateLabel label={formatDate(post.plannedDate)} isSpacious={spacious} hasIconBefore={false} />;
+	return <DateLabel maxWidth={320} label={formatDate(post.plannedDate)} isSpacious={spacious} hasIconBefore={false} />;
 }
 
 export function authorNames(post: Post, members: Member[]) {

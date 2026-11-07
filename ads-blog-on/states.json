@@ -1,0 +1,324 @@
+[
+ {
+  "id": "S01-plan-member",
+  "path": "/?as=member",
+  "screen": "投稿計画",
+  "user": "ログイン中（一般メンバー id=1）",
+  "state": "通常"
+ },
+ {
+  "id": "S02-plan-guest",
+  "path": "/?as=guest",
+  "screen": "投稿計画",
+  "user": "未ログイン",
+  "state": "通常"
+ },
+ {
+  "id": "S03-plan-editor",
+  "path": "/?as=editor",
+  "screen": "投稿計画",
+  "user": "編集担当 id=2",
+  "state": "通常"
+ },
+ {
+  "id": "S04-plan-loading",
+  "path": "/?state=loading",
+  "screen": "投稿計画",
+  "user": "ログイン中",
+  "state": "読み込み中"
+ },
+ {
+  "id": "S05-plan-error",
+  "path": "/?state=error",
+  "screen": "投稿計画",
+  "user": "ログイン中",
+  "state": "読み込みの失敗"
+ },
+ {
+  "id": "S06-plan-empty",
+  "path": "/?state=empty",
+  "screen": "投稿計画",
+  "user": "ログイン中",
+  "state": "データが無い"
+ },
+ {
+  "id": "S07-plan-period",
+  "path": "/?from=2026-11-01&to=2026-11-30",
+  "screen": "投稿計画",
+  "user": "ログイン中",
+  "state": "期間を指定"
+ },
+ {
+  "id": "S08-plan-period-invalid",
+  "path": "/?from=2026-12-01&to=2026-11-01",
+  "screen": "投稿計画",
+  "user": "ログイン中",
+  "state": "期間の入力誤り"
+ },
+ {
+  "id": "S09-me-member",
+  "path": "/me?as=member",
+  "screen": "自分の担当",
+  "user": "ログイン中",
+  "state": "通常"
+ },
+ {
+  "id": "S10-me-guest",
+  "path": "/me?as=guest",
+  "screen": "自分の担当",
+  "user": "未ログイン",
+  "state": "権限なし（ログインを促す）"
+ },
+ {
+  "id": "S11-me-editor",
+  "path": "/me?as=editor",
+  "screen": "自分の担当",
+  "user": "編集担当",
+  "state": "通常"
+ },
+ {
+  "id": "S12-me-loading",
+  "path": "/me?state=loading",
+  "screen": "自分の担当",
+  "user": "ログイン中",
+  "state": "読み込み中"
+ },
+ {
+  "id": "S13-me-error",
+  "path": "/me?state=error",
+  "screen": "自分の担当",
+  "user": "ログイン中",
+  "state": "読み込みの失敗"
+ },
+ {
+  "id": "S14-me-empty",
+  "path": "/me?state=empty",
+  "screen": "自分の担当",
+  "user": "ログイン中",
+  "state": "データが無い"
+ },
+ {
+  "id": "S15-members-member",
+  "path": "/members?as=member",
+  "screen": "書く人ごと",
+  "user": "ログイン中",
+  "state": "通常"
+ },
+ {
+  "id": "S16-members-guest",
+  "path": "/members?as=guest",
+  "screen": "書く人ごと",
+  "user": "未ログイン",
+  "state": "通常"
+ },
+ {
+  "id": "S17-members-editor",
+  "path": "/members?as=editor",
+  "screen": "書く人ごと",
+  "user": "編集担当",
+  "state": "通常"
+ },
+ {
+  "id": "S18-members-loading",
+  "path": "/members?state=loading",
+  "screen": "書く人ごと",
+  "user": "ログイン中",
+  "state": "読み込み中"
+ },
+ {
+  "id": "S19-members-error",
+  "path": "/members?state=error",
+  "screen": "書く人ごと",
+  "user": "ログイン中",
+  "state": "読み込みの失敗"
+ },
+ {
+  "id": "S20-members-empty",
+  "path": "/members?state=empty",
+  "screen": "書く人ごと",
+  "user": "ログイン中",
+  "state": "データが無い"
+ },
+ {
+  "id": "S21-member-noplan",
+  "path": "/members/10",
+  "screen": "メンバーの投稿",
+  "user": "ログイン中",
+  "state": "データが無い（担当なし）"
+ },
+ {
+  "id": "S22-member-404",
+  "path": "/members/99",
+  "screen": "メンバーの投稿",
+  "user": "ログイン中",
+  "state": "存在しないページ"
+ },
+ {
+  "id": "S23-post-own",
+  "path": "/posts/7?as=member",
+  "screen": "投稿の詳細",
+  "user": "ログイン中（書く人）",
+  "state": "通常（編集できる）"
+ },
+ {
+  "id": "S24-post-others",
+  "path": "/posts/6?as=member",
+  "screen": "投稿の詳細",
+  "user": "ログイン中（書く人でない）",
+  "state": "権限なし（閲覧のみ）"
+ },
+ {
+  "id": "S25-post-guest",
+  "path": "/posts/6?as=guest",
+  "screen": "投稿の詳細",
+  "user": "未ログイン",
+  "state": "権限なし（閲覧のみ）"
+ },
+ {
+  "id": "S26-post-editor",
+  "path": "/posts/6?as=editor",
+  "screen": "投稿の詳細",
+  "user": "編集担当",
+  "state": "通常（編集・削除できる）"
+ },
+ {
+  "id": "S27-post-published",
+  "path": "/posts/1?as=member",
+  "screen": "投稿の詳細",
+  "user": "ログイン中",
+  "state": "公開済み"
+ },
+ {
+  "id": "S28-post-loading",
+  "path": "/posts/6?state=loading",
+  "screen": "投稿の詳細",
+  "user": "ログイン中",
+  "state": "読み込み中"
+ },
+ {
+  "id": "S29-post-error",
+  "path": "/posts/6?state=error",
+  "screen": "投稿の詳細",
+  "user": "ログイン中",
+  "state": "読み込みの失敗"
+ },
+ {
+  "id": "S30-post-404",
+  "path": "/posts/999",
+  "screen": "投稿の詳細",
+  "user": "ログイン中",
+  "state": "存在しないページ"
+ },
+ {
+  "id": "S31-post-delete-confirm",
+  "path": "/posts/6?as=editor&dialog=delete",
+  "screen": "投稿の詳細",
+  "user": "編集担当",
+  "state": "削除の確認"
+ },
+ {
+  "id": "S32-post-publish-dialog",
+  "path": "/posts/7?as=member&dialog=publish",
+  "screen": "投稿の詳細",
+  "user": "ログイン中（書く人）",
+  "state": "公開の記録"
+ },
+ {
+  "id": "S33-new",
+  "path": "/posts/new?as=member",
+  "screen": "投稿予定の登録",
+  "user": "ログイン中",
+  "state": "通常"
+ },
+ {
+  "id": "S34-new-validation",
+  "path": "/posts/new?as=member&validate=1",
+  "screen": "投稿予定の登録",
+  "user": "ログイン中",
+  "state": "入力の誤り"
+ },
+ {
+  "id": "S35-new-from-gap-week",
+  "path": "/posts/new?as=member&date=2026-11-23",
+  "screen": "投稿予定の登録",
+  "user": "ログイン中",
+  "state": "予定の無い週から登録"
+ },
+ {
+  "id": "S36-new-guest",
+  "path": "/posts/new?as=guest",
+  "screen": "投稿予定の登録",
+  "user": "未ログイン",
+  "state": "権限なし"
+ },
+ {
+  "id": "S37-edit-own",
+  "path": "/posts/7/edit?as=member",
+  "screen": "投稿予定の編集",
+  "user": "ログイン中（書く人）",
+  "state": "通常"
+ },
+ {
+  "id": "S38-edit-others",
+  "path": "/posts/6/edit?as=member",
+  "screen": "投稿予定の編集",
+  "user": "ログイン中（書く人でない）",
+  "state": "権限なし"
+ },
+ {
+  "id": "S39-edit-editor",
+  "path": "/posts/6/edit?as=editor",
+  "screen": "投稿予定の編集",
+  "user": "編集担当",
+  "state": "通常"
+ },
+ {
+  "id": "S40-flag-created",
+  "path": "/posts/7?as=member&flag=created",
+  "screen": "投稿の詳細",
+  "user": "ログイン中",
+  "state": "登録の成功"
+ },
+ {
+  "id": "S41-flag-saved",
+  "path": "/posts/7?as=member&flag=saved",
+  "screen": "投稿の詳細",
+  "user": "ログイン中",
+  "state": "保存の成功"
+ },
+ {
+  "id": "S42-flag-save-error",
+  "path": "/posts/7/edit?as=member&flag=save-error",
+  "screen": "投稿予定の編集",
+  "user": "ログイン中",
+  "state": "保存の失敗"
+ },
+ {
+  "id": "S43-flag-deleted",
+  "path": "/?as=editor&flag=deleted",
+  "screen": "投稿計画",
+  "user": "編集担当",
+  "state": "削除の成功"
+ },
+ {
+  "id": "S44-flag-delete-error",
+  "path": "/posts/6?as=editor&flag=delete-error",
+  "screen": "投稿の詳細",
+  "user": "編集担当",
+  "state": "削除の失敗"
+ },
+ {
+  "id": "S45-flag-login",
+  "path": "/?as=member&flag=login",
+  "screen": "投稿計画",
+  "user": "ログイン中",
+  "state": "ログインの通知（デモ）"
+ },
+ {
+  "id": "S46-404",
+  "path": "/no-such-page",
+  "screen": "見つからない",
+  "user": "ログイン中",
+  "state": "存在しないページ"
+ }
+]

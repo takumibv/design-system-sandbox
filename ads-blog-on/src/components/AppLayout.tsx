@@ -16,6 +16,7 @@ import PersonIcon from "@atlaskit/icon/core/person";
 import PeopleGroupIcon from "@atlaskit/icon/core/people-group";
 import { Anchor, Box } from "@atlaskit/primitives/compiled";
 import { token } from "@atlaskit/tokens";
+import Image from "@atlaskit/image/image";
 import { useStore, type Role } from "../store";
 import { PRESET_FLAGS } from "./Flags";
 
@@ -72,6 +73,7 @@ function AccountMenu() {
 	}
 	return (
 		<DropdownMenu
+			shouldRenderToParent
 			placement="bottom-end"
 			trigger={({ triggerRef, ...props }) => (
 				<Button
@@ -110,7 +112,6 @@ function AccountMenu() {
 
 export function AppLayout({ children }: { children: ReactNode }) {
 	const location = useLocation();
-	const { user } = useStore();
 	return (
 		<Root>
 			<TopNav>
@@ -118,7 +119,7 @@ export function AppLayout({ children }: { children: ReactNode }) {
 					sideNavToggleButton={<SideNavToggleButton collapseLabel="メニューを閉じる" expandLabel="メニューを開く" />}
 				>
 					<Anchor href="https://www.gaji.jp/" target="_blank" xcss={styles.logoLink} aria-label="Gaji-Labo（新しいタブで開きます）">
-						<img src="/gaji-labo-logo.svg" alt="" height={20} width={108} />
+						<Image src="/gaji-labo-logo.svg" alt="" height={20} width={108} />
 					</Anchor>
 				</TopNavStart>
 				<TopNavEnd>

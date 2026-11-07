@@ -52,6 +52,7 @@ export function LoadError({ what }: { what: string }) {
 	return (
 		<SectionMessage
 			appearance="error"
+			headingLevel="h2"
 			title={`${what}を読み込めませんでした`}
 			actions={[<SectionMessageAction key="retry" onClick={retry}>もう一度読み込む</SectionMessageAction>]}
 		>
