@@ -55,7 +55,7 @@
 
 | 変更 | 理由 | 根拠の種類 |
 | --- | --- | --- |
-| 自前の CSS は `@atlaskit/css` の `cssMap`（トークンのみ）で、週の枠・投稿の区切り線・詳細の dl の 2 列・本文の最大幅・ロゴのリンクの余白の 5 か所だけ書いた。生の CSS ファイル・style 属性は 0 | ADS に「週の区画」「定義リスト」に当たる部品が無い。値はすべて token（`space.*`・`color.border*`・`radius.*`）で、最大幅 1296px／864px はグリッド文書の値 | ハーネス `cli/07-docs-layout.log:194-197` |
+| 自前の CSS は `@atlaskit/css` の `cssMap` だけで、5 ファイル・12 個のスタイル（AppLayout：ロゴのリンクの余白・top nav の li の黒丸消し・本文の余白と最大幅／PostList：行の余白・行の区切り線・ul の黒丸消し／PlanPage：週の枠・予定の無い週の点線枠／PostPage と PostFormPage：本文の最大幅・詳細の dl の 2 列・dd の余白）。生の CSS ファイル・style 属性は 0 | ADS に「週の区画」「行の区切り」「定義リスト」に当たる部品が無い。色・余白・角丸・線の太さはすべて token。トークンでない値は最大幅 1296px／864px（グリッド文書の値）と `minmax(7rem, max-content)`（dl の列幅）だけ | ハーネス `cli/07-docs-layout.log:194-197` |
 | `@compiled/vite-plugin` と `@atlaskit/tokens/babel-plugin` を入れた | `cssMap` 内の `token()` を静的に解決しないと「The variant object must be statically defined」でビルドが落ちる。Vite での設定方法はハーネスに無かった | 検査（ビルドエラー） |
 | React の StrictMode を外した | 開発時の二重マウントで、URL（`?dialog=delete`）から最初の描画で開いた Modal が中身の無いポータルになる。押して開くと正常 | 検査（Playwright で再現） |
 | 書く人ごとの表の見出しを短くした（「公開済み（期間内）」→「公開済み」、期間は caption に移した） | 390px で見出しが 1 文字ずつ折り返して読めなかった | 検査（スクリーンショット） |

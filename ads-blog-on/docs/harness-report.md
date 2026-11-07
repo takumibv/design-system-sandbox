@@ -74,7 +74,7 @@
 
 - 出たもの：Atlassian 製品と同じ外枠（左の side nav・上の top nav・ページ見出し＋パンくず）、Lozenge／DateLabel／SectionMessage／Flag の使い分け、Atlassian Sans とトークンの色。見た目は Jira・Confluence に近い。
 - 出なかったもの：情報の組み立て方（何を主役にするか）には ADS 固有のものは無く、ここは誰が作っても同じ一般論になる。
-- 自前の CSS は `cssMap`（トークンのみ）で 5 か所だけ（`design-decisions.md`「実装中の変更」）。
+- 自前の CSS は `cssMap` で 5 ファイル・12 個のスタイルだけ（`design-decisions.md`「実装中の変更」）。
 
 ## 6. 公式 lint の最終結果
 

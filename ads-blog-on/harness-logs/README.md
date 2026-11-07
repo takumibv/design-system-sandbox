@@ -51,7 +51,7 @@
 | `mcp/05-search-components.log` | `ads_search_components` terms=[dashboard, list view, board, timeline, calendar view, navigation, sidebar] | ビューの型を探す | Pagination / Focusable / Calendar / InlineEdit / AvatarItem。ビューの型の答えは無い |
 
 ```js
-// mcp.mjs（scratchpad に置いて実行。node mcp.mjs remote|local <tool|list> '<json>'）
+// mcp/mcp.mjs（実行時は scratchpad の作業用ディレクトリで実行した。node mcp.mjs remote|local <tool|list> '<json>'）
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/streamableHttp.js";
 import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js";

@@ -60,7 +60,7 @@ URL のクエリ：`as=guest|member|editor`（未ログイン／佐藤 美咲 id
 | ボタン・リンク | `@atlaskit/button`（Button・LinkButton・ButtonGroup）、`@atlaskit/link`、`@atlaskit/dropdown-menu` |
 | レイアウト・文字 | `@atlaskit/primitives/compiled`（Box・Stack・Inline・Text）、`@atlaskit/heading`、`@atlaskit/css`（cssMap）、`@atlaskit/tokens`、`@atlaskit/image` |
 
-自前の CSS：`cssMap`（値はすべてトークン、最大幅のみグリッド文書の 1296px／864px）で 5 か所。CSS ファイル・style 属性は無し。理由は `docs/design-decisions.md`「実装中の変更」。
+自前の CSS：`cssMap` だけで 5 ファイル・12 個のスタイル（色・余白はすべてトークン。トークンでない値は最大幅 1296px／864px と dl の列幅だけ）。CSS ファイル・style 属性は無し。理由は `docs/design-decisions.md`「実装中の変更」。
 
 ## 依存とサイズ
 
