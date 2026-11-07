@@ -1,0 +1,12 @@
+validation focus: INPUT:true
+created: http://localhost:5173/posts/16?result=created / 1
+status: 1
+url error shown: 1
+published: 1
+gap banner after create: 1
+guest create btn: 0 loggedout banner 1
+deleted: 1 overdue banner gone: true
+no-perm: 1
+save fail banner: 1
+errors []
+（補足）gap banner after create: 1 は正しい。11/23 に予定して登録した記事を、その後今日 11/9 付けで公開記録したため今週に移り、11/23 週は空のまま。

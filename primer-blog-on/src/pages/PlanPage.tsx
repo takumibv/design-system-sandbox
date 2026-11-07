@@ -161,8 +161,7 @@ export function PlanPage() {
                 ) : null}
               </div>
 
-              <ol className={classes.List} aria-label="週ごとの投稿予定">
-                <Stack gap="normal">
+              <Stack as="ol" gap="normal" className={classes.List} aria-label="週ごとの投稿予定">
                   {weeks.map(w => (
                     <li key={w.monday} className={classes.Box}>
                       <div className={w.isThisWeek ? classes.WeekHeaderCurrent : classes.WeekHeader}>
@@ -186,8 +185,7 @@ export function PlanPage() {
                       ) : null}
                     </li>
                   ))}
-                </Stack>
-              </ol>
+              </Stack>
 
               {undated.length > 0 ? (
                 <section aria-labelledby="undated-heading">

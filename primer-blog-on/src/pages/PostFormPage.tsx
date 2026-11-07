@@ -147,7 +147,7 @@ export function PostFormPage({mode}: {mode: 'create' | 'edit'}) {
     <PageLayout containerWidth="medium" padding="normal" rowGap="condensed">
       <PageLayout.Header>
         <PageHeader role="banner" aria-label={title}>
-          <PageHeader.ContextArea>
+          <PageHeader.ContextArea hidden={false}>
             <PageHeader.ParentLink as={RouterLink} to={backTo} hidden={false}>
               {existing ? '投稿予定に戻る' : '計画に戻る'}
             </PageHeader.ParentLink>

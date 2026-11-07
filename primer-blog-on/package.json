@@ -9,7 +9,7 @@
     "lint": "eslint src",
     "lint:css": "stylelint \"src/**/*.css\" --allow-empty-input",
     "preview": "vite preview",
-    "capture": "NODE_PATH=$(npm root -g) node ../brief/scripts/capture.mjs states.json"
+    "capture": "NODE_PATH=$(npm root -g) node scripts/capture.mjs states.json"
   },
   "dependencies": {
     "@primer/octicons-react": "^19.42.0",

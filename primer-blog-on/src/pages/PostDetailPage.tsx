@@ -44,7 +44,7 @@ export function PostDetailPage() {
     <PageLayout containerWidth="large" padding="normal" rowGap="condensed">
       <PageLayout.Header>
         <PageHeader role="banner" aria-label="投稿予定の詳細">
-          <PageHeader.ContextArea>
+          <PageHeader.ContextArea hidden={false}>
             <PageHeader.ParentLink as={RouterLink} to="/" hidden={false}>
               計画に戻る
             </PageHeader.ParentLink>
@@ -52,8 +52,12 @@ export function PostDetailPage() {
           <PageHeader.TitleArea variant="medium">
             <PageHeader.Title as="h1">{post ? post.title : '投稿予定'}</PageHeader.Title>
           </PageHeader.TitleArea>
+        </PageHeader>
+      </PageLayout.Header>
+      <PageLayout.Content as="main" aria-label="本文">
+        <Stack gap="normal">
+          <ResultBanner />
           {post && (editable || deletable) && !demo ? (
-            <PageHeader.Actions>
               <Stack direction="horizontal" gap="condensed" wrap="wrap">
                 {editable ? (
                   <>
@@ -83,13 +87,7 @@ export function PostDetailPage() {
                   </Button>
                 ) : null}
               </Stack>
-            </PageHeader.Actions>
           ) : null}
-        </PageHeader>
-      </PageLayout.Header>
-      <PageLayout.Content as="main" aria-label="本文">
-        <Stack gap="normal">
-          <ResultBanner />
           {demo === 'loading' ? (
             <div aria-busy="true">
               <div role="status">
@@ -256,6 +254,7 @@ function DeleteDialog({
   return (
     <ConfirmationDialog
       title="投稿予定を削除しますか？"
+      width="large"
       confirmButtonContent="投稿予定を削除"
       confirmButtonType="danger"
       cancelButtonContent="キャンセル"
