@@ -46,4 +46,13 @@
 - **削除は Popconfirm で二段階確認**、取りやめは状態変更として確認なし（元に戻せる）。[H] `spec/data-list.md` 164–170行、`spec/feedback.md` 110行。
 - **読み込み中は Skeleton、失敗は Result＋再読み込み、空は Empty＋登録ボタン**。[H] `spec/research-exception.md` 115・125・129行、`spec/research-empty.md`。
 - **権限の無い操作は隠すか置き換え、理由と誰ならできるかを書く**。直接 URL で開いたら 403 の Result。[H] `spec/research-exception.md` 63–71行。
-- テーマ：既定のまま（`colorPrimary` も変えない）。日本語ロケール jaJP。自前 CSS は書かない方針（ヘッダー背景・余白はトークンで変える）。[H] `02-cli-design.md` 330–333行「トークン・アルゴリズム・components を通さない独自 CSS を避ける」。
+- テーマ：既定のまま（`colorPrimary` も変えない）。日本語ロケール jaJP。自前 CSS は書かない方針（ヘッダー背景・余白はトークンで変える）。[H] `02-cli-design.md` 332行「トークン・アルゴリズム・components を通さない独自 CSS を避ける」。
+
+## 実装後の追記（2026-11-07、実装と検査の後）
+
+上の記述は実装前のまま残し、実装で変えた点だけここに書く。
+
+- **テーマは「既定のまま」にできなかった**。axe（WCAG 2.1 AA）で既定トークンの文字色が 4.5:1 を下回った（補助文字 `#8c8c8c` 3.36、リンク・主ボタン `#1677ff` 4.1、danger 文字 `#ff4d4f` 3.26、success 文字 `#52c41a` 2.26、プレースホルダー `#bfbfbf` 1.83、Tag green/orange 約 3.3）。design.md 自身が “For strict accessibility targets, darken colorPrimary through ConfigProvider … rather than inventing one-off colors”（`02-cli-design.md` 225行）と書いているので、既定パレットの濃い段にトークンで寄せた（`src/main.tsx`）。リンク色は `colorPrimary` でなく `colorInfo` から派生することは検査で初めて分かった。
+- カテゴリ Tag の色は green/orange をやめ、magenta/geekblue にした（AA を満たすプリセット）。
+- 空状態の中の登録ボタンは主ボタンにしかけたが、見出し行の主ボタンと重なるので default にした。
+- 一覧・書く人の既定期間の終わりが 12/30 になる不具合（月末＋1 か月）をスクリーンショットで見つけ、12/31 に直した。

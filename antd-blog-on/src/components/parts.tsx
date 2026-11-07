@@ -20,8 +20,8 @@ export const StatusBadge = ({ status }: { status: Status }) => <Badge status={ST
 const CATEGORY_COLOR: Record<Category, string> = {
 	技術: "blue",
 	デザイン: "purple",
-	"チーム・文化": "green",
-	イベント報告: "orange",
+	"チーム・文化": "magenta",
+	イベント報告: "geekblue",
 };
 /** カテゴリ：プリセット色の Tag（分類） */
 export const CategoryTag = ({ category }: { category: Category }) => <Tag color={CATEGORY_COLOR[category]}>{category}</Tag>;
@@ -125,3 +125,11 @@ export const LoadGate = ({ children, rows = 6 }: { children: ReactNode; rows?: n
 		);
 	return <>{children}</>;
 };
+
+/** 任意項目のしるし（jaJP の既定「(オプション)」を「（任意）」に） */
+export const optionalMark = (label: ReactNode, { required }: { required: boolean }) => (
+	<>
+		{label}
+		{!required && <Typography.Text type="secondary">（任意）</Typography.Text>}
+	</>
+);

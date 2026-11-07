@@ -46,7 +46,7 @@ export function MembersPage() {
 				<Flex gap="small" align="center" wrap>
 					<Typography.Link {...linkProps(`/posts?author=${r.id}&from=${fmt(from)}&to=${fmt(to)}`)}>{r.name}</Typography.Link>
 					{viewer.kind === "member" && viewer.member.id === r.id && <Typography.Text strong>（あなた）</Typography.Text>}
-					{r.role === "editor" && <Tag color="green">編集担当</Tag>}
+					{r.role === "editor" && <Tag>編集担当</Tag>}
 				</Flex>
 			),
 		},

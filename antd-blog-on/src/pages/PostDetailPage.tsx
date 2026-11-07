@@ -7,7 +7,7 @@ import type { Status } from "../data/fixtures";
 import { canDelete, canEdit, formatDate, isAuthor, memberName, STATUSES, STATUS_LABEL, today } from "../lib/domain";
 import { linkProps, navigate, setParams, useLocation } from "../lib/router";
 import { members, useStore } from "../store";
-import { AuthorNames, CategoryTag, DueText, LoadGate, StatusBadge } from "../components/parts";
+import { AuthorNames, CategoryTag, DueText, LoadGate, optionalMark, StatusBadge } from "../components/parts";
 
 const FLOW: Status[] = ["idea", "writing", "review", "published"];
 
@@ -196,7 +196,7 @@ function Detail({ id }: { id: string }) {
 				onCancel={() => setParams({ publish: null })}
 				destroyOnHidden
 			>
-				<Form form={publishForm} layout="vertical" initialValues={{ publishedDate: today, url: post.url }} requiredMark="optional">
+				<Form form={publishForm} layout="vertical" initialValues={{ publishedDate: today, url: post.url }} requiredMark={optionalMark}>
 					<Form.Item name="publishedDate" label="公開日" rules={[{ required: true, message: "公開日を入力してください" }]}>
 						<DatePicker format="YYYY年M月D日（ddd）" disabledDate={(d) => d.isAfter(dayjs(today).add(1, "year"))} />
 					</Form.Item>

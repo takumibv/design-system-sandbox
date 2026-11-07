@@ -76,15 +76,11 @@ function WeekContent({ week }: { week: WeekSummary }) {
 			{!week.covered && !week.isPast && week.posts.some((p) => p.status === "cancelled") && (
 				<Typography.Text type="secondary">取りやめの投稿は本数に数えていません</Typography.Text>
 			)}
-			{!week.covered && !week.isPast && (
+			{!week.covered && !week.isPast && canCreate(viewer) && (
 				<div>
-					{canCreate(viewer) ? (
-						<Button type="dashed" icon={<PlusOutlined />} onClick={() => setParams({ new: "1", date: week.start.format("YYYY-MM-DD") })}>
-							この週に予定を入れる
-						</Button>
-					) : (
-						<CreateButton type="default" date={week.start.format("YYYY-MM-DD")} />
-					)}
+					<Button type="dashed" icon={<PlusOutlined />} onClick={() => setParams({ new: "1", date: week.start.format("YYYY-MM-DD") })}>
+						この週に予定を入れる
+					</Button>
 				</div>
 			)}
 		</Flex>

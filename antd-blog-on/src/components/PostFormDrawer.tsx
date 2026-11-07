@@ -4,6 +4,7 @@ import dayjs, { type Dayjs } from "dayjs";
 import { useEffect, useState } from "react";
 import type { Post, Status } from "../data/fixtures";
 import { canCreate, canEdit, CATEGORIES, memberName, STATUSES, STATUS_LABEL, today, type Category } from "../lib/domain";
+import { optionalMark } from "./parts";
 import { setParams, useLocation } from "../lib/router";
 import { members, useStore } from "../store";
 
@@ -108,14 +109,14 @@ export function PostFormDrawer() {
 			);
 	} else {
 		body = (
-			<Form key={editId ?? `new-${date ?? ""}`} form={form} initialValues={initialValues} layout="vertical" onFinish={onFinish} requiredMark="optional" disabled={saving} id="post-form">
+			<Form key={editId ?? `new-${date ?? ""}`} form={form} initialValues={initialValues} layout="vertical" onFinish={onFinish} requiredMark={optionalMark} disabled={saving} id="post-form">
 				{saveError && (
 					<Form.Item>
 						<Alert
 							type="error"
 							showIcon
 							title="保存できませんでした"
-							description="通信に失敗しました。入力した内容は残っています。もう一度「保存」を押してください。"
+							description="通信に失敗しました。入力した内容は残っています。もう一度「保存する」を押してください。"
 						/>
 					</Form.Item>
 				)}

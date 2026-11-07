@@ -44,7 +44,7 @@ function UserArea() {
 				<Flex gap="small" align="center">
 					<UserOutlined />
 					{screens.sm && <span>{viewer.member.name}</span>}
-					{viewer.member.role === "editor" && <Tag color="green">編集担当</Tag>}
+					{viewer.member.role === "editor" && <Tag>編集担当</Tag>}
 					<DownOutlined />
 				</Flex>
 			</Button>

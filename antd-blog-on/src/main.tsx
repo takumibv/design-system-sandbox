@@ -14,6 +14,16 @@ function Themed() {
 		<ConfigProvider
 			locale={jaJP}
 			theme={{
+				// WCAG 2.1 AA（4.5:1）を満たすため、既定パレットの濃い段に寄せる（design.md「colorPrimary を ConfigProvider で濃くする」）
+				token: {
+					colorPrimary: "#0958d9", // blue-7
+					colorError: "#cf1322", // red-7
+					colorSuccess: "#237804", // green-8
+					colorInfo: "#0958d9", // リンク色（colorLink）はここから派生する
+					colorTextDescription: "rgba(0, 0, 0, 0.65)", // = colorTextSecondary
+					colorTextTertiary: "rgba(0, 0, 0, 0.65)",
+					colorTextPlaceholder: "rgba(0, 0, 0, 0.55)",
+				},
 				components: {
 					// ヘッダーは明るい面（surface）にしてロゴを読みやすく。390px では左右の余白を 16px に
 					Layout: { headerBg: base.colorBgContainer, headerPadding: screens.md ? `0 ${base.paddingLG}px` : `0 ${base.padding}px` },

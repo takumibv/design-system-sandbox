@@ -1,0 +1,4 @@
+dist/index.html                              0.41 kB │ gzip:   0.31 kB
+dist/assets/gaji-labo-logo-B_anM8ZC.svg     11.38 kB │ gzip:   3.66 kB
+dist/assets/index-B5BXDqMa.css               2.98 kB │ gzip:   1.13 kB
+dist/assets/index-Cx3Cpvwf.js            1,295.87 kB │ gzip: 410.82 kB
