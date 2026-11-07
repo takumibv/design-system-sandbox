@@ -1,0 +1,22 @@
+     1	---
+     2	title: 'ビューの呼び出し関係'
+     3	description: 'ビューの呼び出し関係は、オブジェクトがどのようなビューとして表れ、またビュー同士がどのような呼び出し関係で繋がるのかを可視化した図です。'
+     4	order: 3
+     5	---
+     6	
+     7	import { Groupbox } from 'smarthr-ui'
+     8	import { ViewRelationshipDiagramNote } from './_components/ViewRelationshipDiagramNote'
+     9	
+    10	ビューの呼び出し関係は、オブジェクトがどのようなビューとして表れ、またビュー同士がどのような呼び出し関係で繋がるのかを可視化した図です。[UIデザイン使用性チェックリストの#4](/products/usability/usability-checklist/#h2-2)に基づく、情報設計のアウトプットの1つです。
+    11	
+    12	<Groupbox className='shr-mt-2'>
+    13	  <ViewRelationshipDiagramNote />
+    14	</Groupbox>
+    15	
+    16	![ビューの呼び出し関係のアウトプット例](./images/view-relationship-diagram.png)
+    17	
+    18	## 注意点
+    19	
+    20	- 複数のユーザーが登場し、それぞれのユーザーに見せるオブジェクトやビューが大きく異なる場合、ユーザーごとに別の図を描きます。
+    21	- 実際のUIで複数のビューを1つの画面内に表示する場合は、該当のビューを矩形で囲むなどしてその旨を図示することがあります。
+    22	- 通常、[オブジェクトモデル](/products/information-architecture/ia-outputs/object-model/)で整理したオブジェクトに関するビューのみで構成されます。

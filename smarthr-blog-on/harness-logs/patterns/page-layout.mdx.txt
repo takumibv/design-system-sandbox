@@ -1,0 +1,1046 @@
+     1	---
+     2	title: 'ページレイアウト'
+     3	description: 'SmartHRプロダクトの基本的なページレイアウトのパターンをまとめています。'
+     4	order: 3
+     5	---
+     6	
+     7	import DoAndDont from '@/components/article/DoAndDont.astro'
+     8	import ImgWithDesc from '@/components/article/ImgWithDesc.astro'
+     9	import Grid from '@/components/article/Grid.astro'
+    10	import Caption from './_components/Caption.astro'
+    11	import { ResponseMessage } from '@/components/ResponseMessage'
+    12	import { Groupbox, Cluster, Text } from 'smarthr-ui'
+    13	
+    14	ビューポート内にどのような要素をどのような順序で配置するかをページレイアウトと呼びます。
+    15	SmartHRプロダクトの基本的なページレイアウトのパターンをまとめています。
+    16	
+    17	## 基本的な考え方
+    18	
+    19	SmartHR全体で一貫性のあるページレイアウトを提供することで、ユーザーはレイアウトを都度学習することなく経験に基づいてUIを予測しながらアプリケーションを利用できます。
+    20	
+    21	適切なページレイアウトの設計には、ユーザーの業務とオブジェクトモデルの理解が必要です。
+    22	ユーザーの利用目的に沿って、オブジェクトの関係性や重要度を表すように設計してください。
+    23	
+    24	### リード文を適切に設定する
+    25	
+    26	リード文とは、ページの目的や内容を簡潔に伝えるためのテキストのことです。[見出し領域](#h4-5)にリード文を表示することで、ユーザーはページ内のすべての要素を確認することなく、ページの目的や内容を素早く理解できます。
+    27	
+    28	SmartHRで提供するページでは、リード文を見出し領域に表示してください。ただし、次のような画面ではリード文は不要です。
+    29	
+    30	- ユーザーが作成したオブジェクトの詳細画面
+    31	
+    32	### ページ内の要素同士を適切にグルーピングする
+    33	
+    34	[視覚的グルーピング](/products/design-patterns/visual-grouping/)を参照して、ページ内の要素を適切にグルーピングしてください。
+    35	
+    36	### ページが過度に長くなることを避ける
+    37	
+    38	多くの情報を1ページに表示するとページが縦方向に長くなってしまいます。縦方向に長いページでは、全体像の把握が難しく、目的の情報への到達が困難になります。特にモバイルでは画面の横幅が狭いため、この傾向が顕著です。
+    39	
+    40	ページが縦方向に長くなってしまう場合には次のような対処を検討してください。
+    41	
+    42	#### コンテンツを省略表示する
+    43	
+    44	すべてのコンテンツを最初から表示せず、一部を省略して表示します。あわせて、[Disclosure](/products/components/disclosure/)を使うことでユーザーが必要に応じてコンテンツをすべて表示できるようにします。
+    45	
+    46	<Grid>
+    47	  <ImgWithDesc description="テキストを省略した場合の初期表示">
+    48	    ![Panel上に見出しと3行のテキストとターシャリボタン「すべてを表示」が表示されている。](./images/text-with-disclosure-closed.png)
+    49	  </ImgWithDesc>
+    50	
+    51	  <ImgWithDesc description="省略されたテキストを展開した場合の表示">
+    52	    ![Panel上に見出しと8行のテキストとターシャリボタン「折りたたむ」が表示されている。](./images/text-with-disclosure-opened.png)
+    53	  </ImgWithDesc>
+    54	</Grid>
+    55	
+    56	#### ページをナビゲーションで分割する
+    57	
+    58	[TabBar](/products/components/tab-bar/)、[SideNav](/products/components/side-nav/)、[SideMenu](/products/components/side-menu/)といった[ナビゲーション](#h4-4)を使ってページを分割します。
+    59	
+    60	TabBarやSideNavを使った例は、[視覚的グルーピング](/products/design-patterns/visual-grouping/#h3-7)を参照してください。
+    61	
+    62	### モバイル
+    63	
+    64	#### 複数カラムのレイアウトを避ける
+    65	
+    66	画面の幅によってコンテンツの可読性を保てなくなるため、モバイルでは複数カラムのレイアウトを避けましょう。代わりに垂直方向に積み上げるか、複数の画面に分けるなど、1度に表示する情報量を減らしてください。
+    67	
+    68	垂直方向に積み上げて解決ができない場合は、アダプティブなレイアウトを検討してください。
+    69	
+    70	<Cluster>
+    71	  <DoAndDont type="dont" width="320px">
+    72	    <Text slot="label">コンテンツが読みにくく、構造を把握しにくい。</Text>
+    73	    <div slot="img">
+    74	```tsx editable hideCode background=BACKGROUND
+    75	<Sidebar>
+    76	  <Panel padding={1} style={{ width: '1rem' }}>
+    77	    <Stack gap={0.5}>
+    78	      <Heading type="blockTitle">複数カラムのレイアウトを避ける</Heading>
+    79	      <p>折り返しの多すぎるコンテンツの理解は難しいです。</p>
+    80	    </Stack>
+    81	  </Panel>
+    82	  <Panel padding={1} style={{ flexGrow: 1 }}>
+    83	    <Stack>
+    84	      <p>構造関係の理解も難しくなります。</p>
+    85	      <p>DOMはそのままに、適切な幅で折り返し垂直方向に積み上げるなど代替レイアウトを検討してください。</p>
+    86	    </Stack>
+    87	  </Panel>
+    88	</Sidebar>
+    89	```
+    90	    </div>
+    91	  </DoAndDont>
+    92	
+    93	  <DoAndDont type="do" width="320px">
+    94	    <Text slot="label">垂直方向に積み上げると最低限の可読性を保てます。</Text>
+    95	    <div slot="img">
+    96	```tsx editable hideCode background=BACKGROUND
+    97	<Stack>
+    98	  <Panel padding={1}>
+    99	    <Stack gap={0.5}>
+   100	      <Heading type="blockTitle">複数カラムのレイアウトを避ける</Heading>
+   101	      <p>折り返しの多すぎるコンテンツの理解は難しいです。</p>
+   102	    </Stack>
+   103	  </Panel>
+   104	  <Panel padding={1}>
+   105	    <Stack>
+   106	      <p>構造関係の理解も難しくなります。</p>
+   107	      <p>DOMはそのままに、適切な幅で折り返し垂直方向に積み上げるなど代替レイアウトを検討してください。</p>
+   108	    </Stack>
+   109	  </Panel>
+   110	</Stack>
+   111	```
+   112	    </div>
+   113	  </DoAndDont>
+   114	</Cluster>
+   115	
+   116	#### 水平方向のスクロールや2次元（垂直・水平方向）スクロールを避ける
+   117	
+   118	水平方向のスクロールや2次元（垂直・水平方向）スクロールは、コンテンツの理解を妨げます。画面幅からコンテンツがあふれる場合は、折り返してください。
+   119	
+   120	ただし、画像や動画・地図など2次元であることが情報を伝える上で重要な場合は、その限りではありません。
+   121	
+   122	## 構成
+   123	
+   124	エラー画面を除き、SmartHRのページは以下の要素と領域によって構成されます。
+   125	
+   126	- ヘッダー（[AppHeader](/products/components/app-header/)）
+   127	- コンテナ領域（[Container](/products/components/layout/container/)）
+   128	    - ナビゲーション（任意）
+   129	    - 見出し領域
+   130	    - コンテンツ領域
+   131	
+   132	### ヘッダー
+   133	
+   134	[AppHeader](/products/components/app-header/)を画面の最上部に配置します。
+   135	
+   136	### コンテナ領域
+   137	
+   138	[Container](/products/components/layout/container/)コンポーネントを使います。コンテナ領域の横幅はサイズ（`size`props）で指定します。サイズの選び方は[Container/コンテナの大きさ](/products/components/layout/container/#h3-0)を参照してください。
+   139	
+   140	コンテナ領域内のレイアウトのパターンは、[種類](#h2-3)を参照してください。
+   141	
+   142	#### ナビゲーション
+   143	
+   144	必要に応じて、ページ内で複数のビューを切り替えるナビゲーションを表示できます。[TabBar](/products/components/tab-bar/)や[SideNav](/products/components/side-nav/)、[SideMenu](/products/components/side-menu/)を使います。
+   145	
+   146	ナビゲーションを表示する場合のレイアウトは、[サイドナビゲーションとコンテンツの2カラム](#h3-12)や、[コレクションとシングルの2カラム](#h3-13)、また、[視覚的グルーピング](/products/design-patterns/visual-grouping/#h3-7)を参照してください。
+   147	
+   148	#### 見出し領域
+   149	
+   150	見出し領域には画面タイトル（[PageHeading](/products/components/heading/page-heading/)）とリード文、それに関連する情報や操作を表示します。
+   151	
+   152	基本的な考え方「[リード文を適切に設定する](#h3-0)」も参照してください。
+   153	
+   154	#### コンテンツ領域
+   155	
+   156	コンテンツ領域には、ページの内容となる伝えたい情報や操作を表示します。主に[セクション](/products/design-patterns/visual-grouping/#h3-5)を表示します。
+   157	
+   158	## レイアウト
+   159	
+   160	### 余白の取り方
+   161	
+   162	[余白の取り方](/products/design-patterns/spacing-layout-pattern/)に従います。
+   163	
+   164	## 種類
+   165	
+   166	代表的なページレイアウトの種類は以下のとおりです。
+   167	モーダルなページについては[モーダルなUI](/products/design-patterns/modal-ui/)を、エラー画面については[ErrorScreen](/products/components/error-screen/)を参照してください。
+   168	
+   169	- コレクション（テーブル）
+   170	- コレクション（リスト）
+   171	- シングル（1カラム）
+   172	- シングル（2カラム）
+   173	- シングル（Panelのある見出し領域）
+   174	- サイドナビゲーションとコンテンツの2カラム
+   175	- コレクションとシングルの2カラム
+   176	
+   177	### コレクション（テーブル）
+   178	
+   179	[よくあるテーブル](/products/design-patterns/smarthr-table/)を用いてオブジェクトを一覧表示するパターンです。
+   180	
+   181	オブジェクトを一覧表示するページで利用します。オブジェクト同士を属性情報で比較するユースケースがある場合に有効です。
+   182	
+   183	見出し領域とよくあるテーブルで構成されます。
+   184	
+   185	![イメージ画像：ヘッダー・見出し領域・よくあるテーブルが垂直方向に積み重なっている](./images/collection.png)
+   186	
+   187	実装例：
+   188	
+   189	```tsx editable hideCode background=DOT canvas=1400 withStyled
+   190	const CollectionTableLayout = () => {
+   191	  const pagination = {
+   192	    currentPage: 1,
+   193	    limitValue: 25,
+   194	    totalCount: 100,
+   195	    totalPages: 4,
+   196	  }
+   197	  const sampleObjects = [...Array(10).fill(0)].map((_, i) => ({
+   198	    id: `${i}`,
+   199	    href: '#',
+   200	    empCode: `SHR${`${i}`.padStart(3, '0')}`,
+   201	    name: `須磨 英子`,
+   202	    status: 'ステータス',
+   203	  }))
+   204	
+   205	  const { totalPages, currentPage, totalCount, limitValue } = pagination
+   206	  const isInitialState = totalCount === 0
+   207	  const hasNoSearchResult = totalCount === 0
+   208	
+   209	  return (
+   210	    <div className="shr-bg-background" style={{ minHeight: '100svh', width: '100%' }}>
+   211	      <div className="shr-z-1 shr-relative">
+   212	        <AppHeader
+   213	          appName="すごいプロダクト"
+   214	          userInfo={{ empCode : "001", firstName : "須磨", lastName : "栄子", }}
+   215	          navigations={[
+   216	            { children: "ダッシュボード", href: "#", current: true },
+   217	            { children: "設定", childNavigations: [
+   218	              { children: "マスター設定", href: "#" },
+   219	            ]},
+   220	          ]}
+   221	        />
+   222	      </div>
+   223	      <NotificationBar type="success" bold onClose={() => {}} className="shr-sticky shr-top-0 shr-z-1">
+   224	        オブジェクトの作成に成功しました。
+   225	      </NotificationBar>
+   226	      <Container>
+   227	        <Stack gap={2}>
+   228	          <Stack gap={1.5}>
+   229	            <Stack>
+   230	              <Cluster align="center" gap={1}>
+   231	                { /* デザインシステムではサイト側のタイトルを書き換えないようにするため、autoPageTitleをfalseにしている。 */ }
+   232	                <PageHeading autoPageTitle={false}>ページタイトル</PageHeading>
+   233	                <DropdownMenuButton trigger="操作">
+   234	                  <Button>オブジェクトの削除</Button>
+   235	                </DropdownMenuButton>
+   236	              </Cluster>
+   237	              <p>ページの説明。詳しくは<HelpLink href="/" target="_blank">ヘルプページ</HelpLink>を参照してください。</p>
+   238	            </Stack>
+   239	            <InformationPanel heading="オブジェクトの処理中です" type="sync">
+   240	              オブジェクトをバックグラウンド処理で処理中です。
+   241	            </InformationPanel>
+   242	          </Stack>
+   243	          <Section>
+   244	            <Stack>
+   245	              <Cluster align="center" justify="space-between">
+   246	                <Heading>オブジェクト一覧</Heading>
+   247	                <Button prefix={<FaCirclePlusIcon />}>オブジェクトを追加</Button>
+   248	              </Cluster>
+   249	
+   250	              <Stack gap={1.5}>
+   251	                <Panel>
+   252	                  {!isInitialState && (
+   253	                    <Cluster justify="space-between" align="center" className="shr-p-1">
+   254	                      <form onSubmit={(e) => e.preventDefault()}>
+   255	                        <Cluster align="center" gap={1}>
+   256	                          <Cluster>
+   257	                            <SearchInput tooltipMessage="オブジェクト名で検索できます。" name="search" />
+   258	                            <Button type="submit">検索</Button>
+   259	                          </Cluster>
+   260	                          <FilterDropdown onApply={() => null}>絞り込みの中身</FilterDropdown>
+   261	                          <Button type="submit" prefix={<FaCloudArrowDownIcon />}>
+   262	                            ダウンロード
+   263	                          </Button>
+   264	                        </Cluster>
+   265	                      </form>
+   266	                      {totalCount > 0 && (
+   267	                        <Cluster gap={1} align="center">
+   268	                          <PageCounter start={1 + (currentPage - 1) * limitValue} end={currentPage * limitValue} total={totalCount} />
+   269	                          <Pagination current={currentPage} total={totalPages} withoutNumbers onClick={() => null} />
+   270	                        </Cluster>
+   271	                      )}
+   272	                    </Cluster>
+   273	                  )}
+   274	
+   275	                  <Table rounded="bottom">
+   276	                    <thead>
+   277	                      <tr>
+   278	                        <ThCheckbox name="allRowCheckbox" disabled={isInitialState || hasNoSearchResult} />
+   279	                        <Th>ステータス</Th>
+   280	                        <Th>社員番号</Th>
+   281	                        <Th>氏名</Th>
+   282	                        <Th>操作</Th>
+   283	                      </tr>
+   284	                    </thead>
+   285	                    {isInitialState ? (
+   286	                      <EmptyTableBody>
+   287	                        <Stack align="center">
+   288	                          <span>オブジェクトはまだ登録されていません。</span>
+   289	                          <div>
+   290	                            <Button size="S" prefix={<FaCirclePlusIcon />}>
+   291	                              項目を追加
+   292	                            </Button>
+   293	                          </div>
+   294	                        </Stack>
+   295	                      </EmptyTableBody>
+   296	                    ) : hasNoSearchResult ? (
+   297	                      <EmptyTableBody>
+   298	                        <p>
+   299	                          <span>お探しの条件に該当するオブジェクトはありません。</span>
+   300	                          <br />
+   301	                          <span>別の条件をお試しください。</span>
+   302	                        </p>
+   303	                      </EmptyTableBody>
+   304	                    ) : (
+   305	                      <tbody>
+   306	                        {sampleObjects.map(({ id, status, href, empCode, name }) => {
+   307	                          const ariaLabelledBy = `name-${id}`
+   308	                          return (
+   309	                            <tr key={id}>
+   310	                              <TdCheckbox name="tableCheckbox" aria-labelledby={ariaLabelledBy} />
+   311	                              <Td contentWidth="1px">
+   312	                                <StatusLabel>{status}</StatusLabel>
+   313	                              </Td>
+   314	                              <Td>{empCode}</Td>
+   315	                              <Td id={ariaLabelledBy}><TextLink href={href}>{name}</TextLink></Td>
+   316	                              <Td contentWidth="1px">
+   317	                                <Cluster inline className="shr-min-w-max">
+   318	                                  <Button size="S" prefix={<FaPenIcon />}>
+   319	                                    操作1
+   320	                                  </Button>
+   321	                                  <Button size="S" prefix={<FaCopyIcon />}>
+   322	                                    操作2
+   323	                                  </Button>
+   324	                                  <Button size="S" prefix={<FaTrashCanIcon/>}>
+   325	                                    操作3
+   326	                                  </Button>
+   327	                                </Cluster>
+   328	                              </Td>
+   329	                            </tr>
+   330	                        )})}
+   331	                      </tbody>
+   332	                  )}
+   333	                  </Table>
+   334	                </Panel>
+   335	                {totalPages > 1 && !isInitialState && !hasNoSearchResult && (
+   336	                  <Center>
+   337	                    <Pagination current={currentPage} total={totalPages} onClick={() => null} />
+   338	                  </Center>
+   339	                )}
+   340	              </Stack>
+   341	            </Stack>
+   342	          </Section>
+   343	
+   344	        </Stack>
+   345	      </Container>
+   346	    </div>
+   347	  )
+   348	}
+   349	
+   350	render(<CollectionTableLayout />)
+   351	```
+   352	
+   353	#### モバイル
+   354	
+   355	コレクション（テーブル）は広い横幅を必要とするため、画面の横幅が狭いモバイルには適していません。代わりに、[コレクション（リスト）](#h3-8)を検討してください。
+   356	
+   357	### コレクション（リスト）
+   358	
+   359	[よくあるリスト](/products/design-patterns/smarthr-list/)を用いてオブジェクトを一覧表示するパターンです。
+   360	
+   361	オブジェクトを一覧表示するページで利用します。狭い領域（主にモバイル）でオブジェクトを一覧表示する場合に有効です。
+   362	
+   363	見出し領域とよくあるリストで構成されます。
+   364	
+   365	![イメージ画像：ヘッダー・見出し領域・よくあるリストが垂直方向に積み重なっている](./images/collection-list.png)
+   366	
+   367	#### 利用例
+   368	
+   369	![実例画像：ヘッダー・見出し領域・よくあるリストが垂直方向に積み重なっている](./images/collection-list-sample.png)
+   370	
+   371	### シングル（1カラム）
+   372	
+   373	オブジェクトの情報を「任意のまとまり（セクション）」に分類し、1カラムで表示するパターンです。
+   374	
+   375	オブジェクトを詳細表示するページで利用します。オブジェクトの情報がすべて並列な関係にある場合に利用してください。
+   376	
+   377	見出し領域と複数のセクションで構成されます。
+   378	
+   379	![イメージ画像：ヘッダー・見出し領域・複数のセクションが垂直方向に積み重なっている](./images/single-1column.png)
+   380	
+   381	#### 実装例
+   382	
+   383	```tsx editable hideCode background=DOT canvas=1400 withStyled
+   384	const SingleOneColumnLayout = () => {
+   385	  const pagination = {
+   386	    currentPage: 1,
+   387	    limitValue: 10,
+   388	    totalCount: 100,
+   389	    totalPages: 10,
+   390	  }
+   391	  const sampleObjects = [...Array(10).fill(0)].map((_, i) => ({
+   392	    id: `${i}`,
+   393	    href: '#',
+   394	    empCode: `SHR${`${i}`.padStart(3, '0')}`,
+   395	    name: `須磨 英子`,
+   396	    status: 'ステータス',
+   397	    department: `営業部`,
+   398	    position: `部長`,
+   399	    employmentType:`正社員`,
+   400	    hireDate: `2012/12/12`,
+   401	  }))
+   402	
+   403	  const { totalPages, currentPage, totalCount, limitValue } = pagination
+   404	  const isInitialState = totalCount === 0
+   405	  const hasNoSearchResult = totalCount === 0
+   406	  return (
+   407	    <div className="shr-bg-background" style={{ minHeight: '100svh', width: '100%' }}>
+   408	      <div className="shr-z-1 shr-relative">
+   409	        <AppHeader
+   410	          appName="機能名"
+   411	          tenants={[{ id: 'smarthr', name: '株式会社SmartHR' }]}
+   412	          currentTenantId="smarthr"
+   413	          helpPageUrl="#"
+   414	          locale={{ onSelectLocale: () => null }}
+   415	          features={[
+   416	            { id: 'app', name: 'アプリ', url: '#', favorite: true },
+   417	          ]}
+   418	          userInfo={{ empCode: '001', email: 'info@example.com', firstName: '須磨', lastName: '栄子' }}
+   419	          navigations={[
+   420	            { children: 'ナビゲーション', href: '#', current: true },
+   421	            { children: 'ナビゲーション', href: '#' },
+   422	            { children: 'ナビゲーション', href: '#' },
+   423	            { children: 'ナビゲーション', href: '#' },
+   424	            {
+   425	              children: 'ナビゲーション',
+   426	              childNavigations: [
+   427	                { children: 'マスター設定', href: '#' },
+   428	              ],
+   429	            },
+   430	          ]}
+   431	          desktopNavigationAdditionalContent={
+   432	            <>
+   433	              <span>最終同期：2024/01/01 10:09</span>
+   434	              <Button size="S" prefix={<FaArrowsRotateIcon />}>
+   435	                データを同期
+   436	              </Button>
+   437	            </>
+   438	          }
+   439	          releaseNote={{
+   440	            indexUrl: '#',
+   441	            links: [{ title: 'リリースノート', url: '#' }],
+   442	          }}
+   443	        />
+   444	      </div>
+   445	      <NotificationBar type="success" bold onClose={() => {}} className="shr-sticky shr-top-0 shr-z-1">
+   446	        オブジェクトの作成に成功しました。
+   447	      </NotificationBar>
+   448	      <Container>
+   449	        <Stack gap={2}>
+   450	          <Stack>
+   451	            <UpwardLink href="#">一覧に戻る</UpwardLink>
+   452	            <Cluster align="center" justify="space-between">
+   453	              <div className="shr-inline-black">
+   454	                <StatusLabel style={{ verticalAlign: 'text-bottom', marginInlineEnd: '0.5rem' }}>ステータス</StatusLabel>
+   455	                { /* デザインシステムではサイト側のタイトルを書き換えないようにするため、autoPageTitleをfalseにしている。 */ }
+   456	                <PageHeading autoPageTitle={false} className="shr-inline">ページタイトル</PageHeading>
+   457	              </div>
+   458	              <Cluster>
+   459	                <Button>ボタン</Button>
+   460	                <Button>ボタン</Button>
+   461	                <Button>ボタン</Button>
+   462	              </Cluster>
+   463	            </Cluster>
+   464	            <p>ページの説明。詳しくは<HelpLink href="/" target="_blank">ヘルプページ</HelpLink>を参照してください。</p>
+   465	          </Stack>
+   466	          <Stack className="shr-mt-1.5">
+   467	            <Cluster align="center" justify="space-between">
+   468	              <Heading>セクションタイトル</Heading>
+   469	              <Button>ボタン</Button>
+   470	            </Cluster>
+   471	            <Panel padding={1.5}>
+   472	              <Stack gap={1.5}>
+   473	                <Stack>
+   474	                  <Heading type="blockTitle">ブロックタイトル</Heading>
+   475	                  <DefinitionList>
+   476	                    <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   477	                    <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   478	                    <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   479	                    <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   480	                    <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   481	                    <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   482	                  </DefinitionList>
+   483	                </Stack>
+   484	                <Stack>
+   485	                  <Heading type="blockTitle">ブロックタイトル</Heading>
+   486	                  <DefinitionList>
+   487	                    <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   488	                    <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   489	                    <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   490	                  </DefinitionList>
+   491	                </Stack>
+   492	              </Stack>
+   493	            </Panel>
+   494	          </Stack>
+   495	          <Stack>
+   496	            <Cluster align="center" justify="space-between">
+   497	              <Heading>セクションタイトル</Heading>
+   498	              <Button prefix={<FaCirclePlusIcon />}>追加</Button>
+   499	            </Cluster>
+   500	            
+   501	            <Stack gap={1.5}>
+   502	              <Panel>
+   503	                {!isInitialState && (
+   504	                  <Cluster justify="space-between" align="center" className="shr-p-1">
+   505	                    <form onSubmit={(e) => e.preventDefault()}>
+   506	                      <Cluster align="center" gap={1}>
+   507	                        <Cluster>
+   508	                          <SearchInput tooltipMessage="社員番号、氏名で検索できます。" name="search" />
+   509	                          <Button type="submit">検索</Button>
+   510	                        </Cluster>
+   511	                        <FilterDropdown onApply={() => null}>絞り込みの中身</FilterDropdown>
+   512	                        <Button type="submit" prefix={<FaCloudArrowDownIcon />}>ダウンロード</Button>
+   513	                      </Cluster>
+   514	                    </form>
+   515	                    {totalCount > 0 && (
+   516	                      <Cluster gap={1} align="center">
+   517	                        <PageCounter start={1 + (currentPage - 1) * limitValue} end={currentPage * limitValue} total={totalCount} />
+   518	                        <Pagination current={currentPage} total={totalPages} withoutNumbers onClick={() => null} />
+   519	                      </Cluster>
+   520	                    )}
+   521	                  </Cluster>
+   522	                )}
+   523	
+   524	                <Table rounded="bottom">
+   525	                  <thead>
+   526	                    <tr>
+   527	                      <ThCheckbox name="allRowCheckbox" disabled={isInitialState || hasNoSearchResult} />
+   528	                      <Th>ステータス</Th>
+   529	                      <Th>社員番号</Th>
+   530	                      <Th>氏名</Th>
+   531	                      <Th>部署</Th>
+   532	                      <Th>役職</Th>
+   533	                      <Th>雇用形態</Th>
+   534	                      <Th>入社日</Th>
+   535	                    </tr>
+   536	                  </thead>
+   537	                  {isInitialState ? (
+   538	                    <EmptyTableBody>
+   539	                      <Stack align="center">
+   540	                        <span>社員はまだ登録されていません。</span>
+   541	                        <Button size="S" prefix={<FaCirclePlusIcon />}>項目を追加</Button>
+   542	                      </Stack>
+   543	                    </EmptyTableBody>
+   544	                  ) : hasNoSearchResult ? (
+   545	                    <EmptyTableBody>
+   546	                      <p>
+   547	                        <span>条件に該当する従業員はいません。</span>
+   548	                        <br />
+   549	                        <span>別の条件をお探し下さい。</span>
+   550	                      </p>
+   551	                    </EmptyTableBody>
+   552	                  ) : (
+   553	                    <tbody>
+   554	                      {sampleObjects.map(({ id, status, href, empCode, name, department, position, employmentType, hireDate }) => {
+   555	                        const ariaLabelledBy = `name-${id}`
+   556	                        return (
+   557	                          <tr key={id}>
+   558	                            <TdCheckbox name="tableCheckbox" aria-labelledby={ariaLabelledBy} />
+   559	                            <Td contentWidth="1px">
+   560	                              <StatusLabel>{status}</StatusLabel>
+   561	                            </Td>
+   562	                            <Td>{empCode}</Td>
+   563	                            <Td id={ariaLabelledBy}><TextLink href={href}>{name}</TextLink></Td>
+   564	                            <Td>{department}</Td>
+   565	                            <Td>{position}</Td>
+   566	                            <Td>{employmentType}</Td>
+   567	                            <Td>{hireDate}</Td>
+   568	                          </tr>
+   569	                        )})}
+   570	                    </tbody>
+   571	                  )}
+   572	                </Table>
+   573	              </Panel>
+   574	              {totalPages > 1 && !isInitialState && !hasNoSearchResult && (
+   575	                <Center>
+   576	                  <Pagination current={currentPage} total={totalPages} onClick={() => null} />
+   577	                </Center>
+   578	              )}
+   579	            </Stack>
+   580	          </Stack>
+   581	        </Stack>
+   582	      </Container>
+   583	    </div>
+   584	  )
+   585	}
+   586	
+   587	render(<SingleOneColumnLayout />)
+   588	
+   589	```
+   590	
+   591	#### モバイル
+   592	
+   593	##### セクションが1つの場合のレイアウト
+   594	
+   595	セクションが1つの場合、コンテンツ領域にPanelを使わずレイアウトできます。Panelの代わりに、コンテンツ領域の背景色が`WHITE`になるよう領域を区切ります。Panelに関連する余白がなくなるため、横幅を広く使いたいケースで特に有効です。
+   596	
+   597	このレイアウトにおける余白の取り方は、[余白の取り方](/products/design-patterns/spacing-layout-pattern/#h3-6)を参照してください。
+   598	
+   599	![イメージ画像：ヘッダー・見出し領域・1つのセクションが垂直方向に積み重なっている。セクションのコンテンツ領域の背景色がWHITEになっている。](./images/single-1column-mobile-single-section.png)
+   600	
+   601	#### 利用例
+   602	
+   603	  <ImgWithDesc description="モバイル">
+   604	      ![実例画像：縦長の画面に、ヘッダー・見出し領域・複数のセクションが垂直方向に積み重なっている](./images/single-1column-sample-mobile.png)
+   605	  </ImgWithDesc>
+   606	
+   607	### シングル（2カラム）
+   608	
+   609	オブジェクトの情報を重要度やユースケースによって「主情報」と「副情報」に分類し、2カラムで表示するパターンです。
+   610	
+   611	オブジェクトを詳細表示するページで利用します。主情報と副情報の情報量・重要度に大きく差がある場合に有効です。例えば次のような場合です。
+   612	
+   613	- ID・更新日時・登録者を確認しながら、書類を閲覧・操作したい
+   614	- 従業員の基本的な情報（名前や部署など）を閲覧しながら、蓄積された過去の情報（経歴やスキル情報など）を閲覧したい
+   615	
+   616	見出し領域と副情報のセクション、主情報のセクションで構成されます。**主情報を表示する領域の横幅は副情報を表示する領域の横幅の2倍以上の幅としてください。**
+   617	
+   618	![イメージ画像：ヘッダー・見出し領域が垂直方向に積み重なっている。その下に、左側に副情報、右側に主情報が並んでいる。](./images/single-2column.png)
+   619	
+   620	実装例：
+   621	
+   622	```tsx editable hideCode background=DOT canvas=1400
+   623	<div className="shr-bg-background" style={{ minHeight: '100svh', width: '100%' }}>
+   624	  <div className="shr-z-1 shr-relative">
+   625	    <AppHeader
+   626	      appName="すごいプロダクト"
+   627	      userInfo={{ empCode : "001", firstName : "須磨", lastName : "栄子", }}
+   628	      navigations={[
+   629	        { children: "ダッシュボード", href: "#", current: true },
+   630	        { children: "設定", childNavigations: [
+   631	          { children: "マスター設定", href: "#" },
+   632	        ]},
+   633	      ]}
+   634	    />
+   635	  </div>
+   636	  <NotificationBar type="success" bold onClose={() => {}} className="shr-sticky shr-top-0 shr-z-1">
+   637	    オブジェクトの作成に成功しました。
+   638	  </NotificationBar>
+   639	  <Container>
+   640	    <Stack gap={2}>
+   641	      <Stack gap={1.5}>
+   642	        <Stack>
+   643	          <UpwardLink href="#">一覧に戻る</UpwardLink>
+   644	          <Sidebar align="center" right>
+   645	            <div className="shr-inline-block">
+   646	              <StatusLabel style={{ verticalAlign: 'text-bottom', marginInlineEnd: '0.5rem' }}>ステータス</StatusLabel>
+   647	              { /* デザインシステムではサイト側のタイトルを書き換えないようにするため、autoPageTitleをfalseにしている。 */ }
+   648	              <PageHeading autoPageTitle={false} className="shr-inline">ページタイトル</PageHeading>
+   649	            </div>
+   650	            <Cluster>
+   651	              <Button>操作</Button>
+   652	              <Button>操作</Button>
+   653	              <Button>操作</Button>
+   654	            </Cluster>
+   655	          </Sidebar>
+   656	          <p>ページの説明。詳しくは<HelpLink href="/" target="_blank">ヘルプページ</HelpLink>を参照してください。</p>
+   657	        </Stack>
+   658	        <InformationPanel heading="オブジェクトの処理中です" type="sync">
+   659	          オブジェクトをバックグラウンド処理で処理中です。
+   660	        </InformationPanel>
+   661	      </Stack>
+   662	      <Sidebar gap={2}>
+   663	        <Stack gap={2} style={{ flexBasis: '1em' }}>
+   664	          <Section>
+   665	            <Stack>
+   666	              <Heading>セクションタイトル</Heading>
+   667	              <Panel padding={1.5}>
+   668	                <Stack gap={2}>
+   669	                  <Stack gap={1.5}>
+   670	                    <Heading type="blockTitle">見出し</Heading>
+   671	                    <DefinitionList>
+   672	                      <DefinitionListItem term="項目">内容</DefinitionListItem>
+   673	                      <DefinitionListItem term="項目">内容</DefinitionListItem>
+   674	                    </DefinitionList>
+   675	                  </Stack>
+   676	                  <Stack gap={1.5}>
+   677	                    <Heading type="blockTitle">見出し</Heading>
+   678	                    <DefinitionList>
+   679	                      <DefinitionListItem term="項目">内容</DefinitionListItem>
+   680	                    </DefinitionList>
+   681	                  </Stack>
+   682	                </Stack>
+   683	              </Panel>
+   684	            </Stack>
+   685	          </Section>
+   686	          <Section>
+   687	            <Stack>
+   688	              <Heading>セクションタイトル</Heading>
+   689	              <Panel padding={1.5}>
+   690	                <Stack gap={2}>
+   691	                  <Stack gap={1.5}>
+   692	                    <Heading type="blockTitle">見出し</Heading>
+   693	                    <DefinitionList>
+   694	                      <DefinitionListItem term="項目">内容</DefinitionListItem>
+   695	                    </DefinitionList>
+   696	                  </Stack>
+   697	                  <Stack gap={1.5}>
+   698	                    <Heading type="blockTitle">見出し</Heading>
+   699	                    <DefinitionList>
+   700	                      <DefinitionListItem term="項目">内容</DefinitionListItem>
+   701	                    </DefinitionList>
+   702	                  </Stack>
+   703	                </Stack>
+   704	              </Panel>
+   705	            </Stack>
+   706	          </Section>
+   707	        </Stack>
+   708	        <Section>
+   709	          <Stack>
+   710	            <Heading>セクションタイトル</Heading>
+   711	            <Panel padding={1.5}>
+   712	              <Stack gap={2}>
+   713	                <Stack gap={1.5}>
+   714	                  <Heading type="blockTitle">見出し</Heading>
+   715	                  <DefinitionList>
+   716	                    <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   717	                    <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   718	                    <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   719	                    <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   720	                    <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   721	                    <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   722	                  </DefinitionList>
+   723	                </Stack>
+   724	                <Stack gap={1.5}>
+   725	                  <Heading type="blockTitle">見出し</Heading>
+   726	                  <DefinitionList>
+   727	                    <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   728	                    <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   729	                    <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   730	                    <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   731	                    <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   732	                    <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   733	                  </DefinitionList>
+   734	                </Stack>
+   735	              </Stack>
+   736	            </Panel>
+   737	          </Stack>
+   738	        </Section>
+   739	      </Sidebar>
+   740	    </Stack>
+   741	  </Container>
+   742	</div>
+   743	```
+   744	
+   745	#### モバイル
+   746	
+   747	シングル（2カラム）は広い横幅を必要とするため、画面の横幅が狭いモバイルには適していません。代わりに、[シングル（1カラム）](#h3-9)として表示してください。副情報と主情報のうち、ユーザーが先に確認する必要のある情報から順番にセクションを表示します。
+   748	
+   749	### シングル（Panelのある見出し領域）
+   750	
+   751	Panelのある見出し領域でコンテンツ領域との境界を明確に示すパターンです。
+   752	
+   753	オブジェクトを詳細表示するページで利用します。見出し領域とコンテンツ領域で、領域の幅が異なる場合に有効です。例えば次のような場合です。
+   754	
+   755	- 二次元スクロールを伴う独自のビューを表示する場合
+   756	    - ツリー図
+   757	    - マトリクス表
+   758	    - グラフ
+   759	
+   760	見出し領域とコンテンツ領域で構成されます。
+   761	
+   762	![イメージ画像：ヘッダー・見出し領域・コンテンツ領域が垂直方向に積み重なっている](./images/single-custom-view.png)
+   763	
+   764	#### モバイル
+   765	
+   766	デスクトップに比べてモバイルでは二次元スクロールを伴う領域の操作がしづらい傾向にあります。シングル（Panelのある見出し領域）のコンテンツが二次元スクロールを伴う場合、モバイルでも同様のレイアウトが適しているか、モバイルに適した他のレイアウトはないか検討してください。  
+   767	例えば、リストのような垂直方向のスクロールで操作できるレイアウトを使うと、モバイルでの操作性を高めることができます。
+   768	
+   769	関連：[モバイルレイアウト/水平方向のスクロールや2次元（垂直・水平方向）スクロールを避ける](https://smarthr.design/products/design-patterns/mobile-friendly-layout/#h3-3)
+   770	
+   771	#### 利用例
+   772	
+   773	<Grid>
+   774	    <ImgWithDesc description="デスクトップ">
+   775	    ![実例画像：横に広い画面に、ヘッダー・見出し領域・コンテンツ領域が垂直方向に積み重なっている](./images/single-custom-view-sample.png)
+   776	    </ImgWithDesc>
+   777	
+   778	    <ImgWithDesc description="モバイル（どうしても二次元スクロールを伴うレイアウトが必要な場合）">
+   779	    ![実例画像：縦長の画面に、ヘッダー・見出し領域・コンテンツ領域が垂直方向に積み重なっている](./images/single-custom-view-sample-mobile.png)
+   780	    </ImgWithDesc>
+   781	</Grid>
+   782	
+   783	### サイドナビゲーションとコンテンツの2カラム
+   784	
+   785	「サイドナビゲーション」と「選択されたコンテンツ」を2カラムで表示するパターンです。
+   786	
+   787	設定画面など、[AppNavi](/products/components/app-navi/)のドロップダウンではサイドナビゲーション項目を十分に表示できない場合に利用します。例えば次のような場合です。
+   788	
+   789	- ナビゲーションがAppNaviのドロップダウンでは収まらない場合
+   790	- ナビゲーション同士を頻繁に行き来する場合
+   791	- ナビゲーションが階層構造になっている場合
+   792	
+   793	サイドナビゲーション領域とコンテンツ領域で構成されます。サイドナビゲーションには[SideMenu](/products/components/side-menu/)を使います。コンテンツ領域はコレクションかシングルのレイアウトをとります。
+   794	
+   795	![イメージ画像：ヘッダーが最上部にある。その下に、左側にサイドナビゲーション、右側にコンテンツが並んでいる。](./images/side-nav-with-contents.png)
+   796	
+   797	実装例：
+   798	
+   799	```tsx editable hideCode background=DOT canvas=1400
+   800	<div className="shr-bg-background" style={{ minHeight: '100svh', width: '100%' }}>
+   801	  <div className="shr-z-1 shr-relative">
+   802	    <AppHeader
+   803	      appName="すごいプロダクト"
+   804	      userInfo={{ empCode : "001", firstName : "須磨", lastName : "栄子", }}
+   805	      navigations={[
+   806	        { children: "ダッシュボード", href: "#", current: true },
+   807	        { children: "設定", childNavigations: [
+   808	          { children: "マスター設定", href: "#" },
+   809	        ]},
+   810	      ]}
+   811	    />
+   812	  </div>
+   813	  <Container>
+   814	    <Sidebar gap={2}>
+   815	      <div style={{ flexBasis: '15em' }}>
+   816	        <SideMenu>
+   817	          <SideMenuGroup heading="グループ1">
+   818	            <SideMenuItem current>項目1</SideMenuItem>
+   819	            <SideMenuItem>項目2</SideMenuItem>
+   820	            <SideMenuItem>項目3</SideMenuItem>
+   821	            <SideMenuItem>項目4</SideMenuItem>
+   822	            <SideMenuItem>項目5</SideMenuItem>
+   823	          </SideMenuGroup>
+   824	          <SideMenuGroup heading="グループ2">
+   825	            <SideMenuItem>項目6</SideMenuItem>
+   826	            <SideMenuItem>項目7</SideMenuItem>
+   827	            <SideMenuItem>項目8</SideMenuItem>
+   828	            <SideMenuItem>項目9</SideMenuItem>
+   829	            <SideMenuItem>項目10</SideMenuItem>
+   830	          </SideMenuGroup>
+   831	        </SideMenu>
+   832	      </div>
+   833	
+   834	      <Stack gap={2}>
+   835	        <Stack>
+   836	          { /* デザインシステムではサイト側のタイトルを書き換えないようにするため、autoPageTitleをfalseにしている。 */ }
+   837	          <PageHeading autoPageTitle={false}>ページタイトル</PageHeading>
+   838	          <p>ページの説明。詳しくは<HelpLink href="/" target="_blank">ヘルプページ</HelpLink>を参照してください。</p>
+   839	        </Stack>
+   840	        <Section>
+   841	          <Stack>
+   842	            <Heading>見出し</Heading>
+   843	            <Panel padding={1.5}>
+   844	              <DefinitionList>
+   845	                <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   846	                <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   847	                <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   848	                <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   849	                <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   850	                <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   851	              </DefinitionList>
+   852	            </Panel>
+   853	          </Stack>
+   854	        </Section>
+   855	        <Section>
+   856	          <Stack>
+   857	            <Heading>見出し</Heading>
+   858	            <Panel padding={1.5}>
+   859	              <DefinitionList>
+   860	                <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   861	                <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   862	                <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   863	                <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   864	                <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   865	                <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   866	              </DefinitionList>
+   867	            </Panel>
+   868	          </Stack>
+   869	        </Section>
+   870	      </Stack>
+   871	    </Sidebar>
+   872	  </Container>
+   873	</div>
+   874	```
+   875	
+   876	#### モバイル
+   877	
+   878	サイドナビゲーションとコンテンツの2カラムは広い横幅を必要とするため、画面の横幅が狭いモバイルには適していません。サイドナビゲーションの操作を、[AppNavi](/products/components/app-navi/)に含めることを検討してください。モバイルではAppNaviが画面全体に表示されるため、デスクトップではAppNaviに操作が収まらない場合でも、モバイルではAppNaviに収まることがあります。
+   879	
+   880	サイドナビゲーションがなくなるため、ページレイアウトは[コレクション（リスト）](#h3-8)、[シングル（1カラム）](#h3-9)のいずれかの形を取ります。
+   881	
+   882	### コレクションとシングルの2カラム
+   883	
+   884	「オブジェクトの一覧」と「オブジェクトの詳細」を2カラムで表示するパターンです。
+   885	
+   886	一覧と詳細が別画面であると不都合がある場合に利用します。例えば次のような場合です。
+   887	
+   888	- オブジェクトを頻繁に切り替える場合
+   889	
+   890	オブジェクトの見出し領域とコレクション領域、シングル領域で構成されます。コレクション領域には[SideNav](/products/components/side-nav/)を使います。シングル領域はシングルのレイアウトを取ります。
+   891	
+   892	![イメージ画像：ヘッダーと見出し領域が垂直方向に積み重なっている。その下に、左側にコレクション、右側にシングルが並んでいる。](./images/single-with-collection.png)
+   893	
+   894	実装例：
+   895	
+   896	```tsx editable hideCode background=DOT canvas=1400
+   897	<div className="shr-bg-background" style={{ minHeight: '100svh', width: '100%' }}>
+   898	  <div className="shr-z-1 shr-relative">
+   899	    <AppHeader
+   900	      appName="すごいプロダクト"
+   901	      userInfo={{ empCode : "001", firstName : "須磨", lastName : "栄子", }}
+   902	      navigations={[
+   903	        { children: "ダッシュボード", href: "#", current: true },
+   904	        { children: "設定", childNavigations: [
+   905	          { children: "マスター設定", href: "#" },
+   906	        ]},
+   907	      ]}
+   908	    />
+   909	  </div>
+   910	  <Container>
+   911	    <Stack gap={2}>
+   912	      <Stack gap={1.5}>
+   913	        <UpwardLink href="#">一覧に戻る</UpwardLink>
+   914	        <Stack>
+   915	          <Sidebar align="center" right>
+   916	            <div className="shr-inline-block">
+   917	              <StatusLabel style={{ verticalAlign: 'text-bottom', marginInlineEnd: '0.5rem' }}>ステータス</StatusLabel>
+   918	              { /* デザインシステムではサイト側のタイトルを書き換えないようにするため、autoPageTitleをfalseにしている。 */ }
+   919	              <PageHeading autoPageTitle={false} size="XXL" className="shr-inline">ページタイトル</PageHeading>
+   920	            </div>
+   921	            <Cluster>
+   922	              <Button>操作</Button>
+   923	              <Button>操作</Button>
+   924	              <Button>操作</Button>
+   925	            </Cluster>
+   926	          </Sidebar>
+   927	          <p>ページの説明。詳しくは<HelpLink href="/" target="_blank">ヘルプページ</HelpLink>を参照してください。</p>
+   928	        </Stack>
+   929	      </Stack>
+   930	      <Panel>
+   931	        <Groupbox rounded bgColor="OVER_BACKGROUND" padding={0}>
+   932	          <Sidebar gap={0}>
+   933	            <Groupbox style={{ flexBasis: '15em' }} padding={{ block: 0.5, inline: 0 }} rounded="left" className="shr-shadow-layer-1" bgColor="WHITE">
+   934	              <SideNav className="shr-bg-white">
+   935	                <SideNavItemAnchor id="nav-1" href="#" current>項目1</SideNavItemAnchor>
+   936	                <SideNavItemAnchor id="nav-2" href="#" >項目2</SideNavItemAnchor>
+   937	                <SideNavItemAnchor id="nav-3" href="#" >項目3</SideNavItemAnchor>
+   938	                <SideNavItemAnchor id="nav-4" href="#" >項目4</SideNavItemAnchor>
+   939	                <SideNavItemAnchor id="nav-5" href="#" >項目5</SideNavItemAnchor>
+   940	                <SideNavItemAnchor id="nav-6" href="#" >項目6</SideNavItemAnchor>
+   941	                <SideNavItemAnchor id="nav-7" href="#" >項目7</SideNavItemAnchor>
+   942	                <SideNavItemAnchor id="nav-8" href="#" >項目8</SideNavItemAnchor>
+   943	                <SideNavItemAnchor id="nav-9" href="#" >項目9</SideNavItemAnchor>
+   944	                <SideNavItemAnchor id="nav-10" href="#">項目10</SideNavItemAnchor>
+   945	              </SideNav>
+   946	            </Groupbox>
+   947	            <Section className="shr-p-1.5">
+   948	              <Stack gap={2}>
+   949	                <Heading size="XL">見出し</Heading>
+   950	                <Section>
+   951	                  <Stack>
+   952	                    <Sidebar right align="center">
+   953	                      <Heading>見出し</Heading>
+   954	                      <Button>操作</Button>
+   955	                    </Sidebar>
+   956	                    <Panel padding={1.5}>
+   957	                      <Stack gap={1.5}>
+   958	                        <p>説明テキスト。</p>
+   959	                        <Stack gap={0.5}>
+   960	                          <Heading type="blockTitle">タイトル</Heading>
+   961	                          <Groupbox>
+   962	                            <Stack>
+   963	                              <p>説明テキスト。</p>
+   964	                              <DefinitionList>
+   965	                                <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   966	                                <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   967	                              </DefinitionList>
+   968	                            </Stack>
+   969	                          </Groupbox>
+   970	                        </Stack>
+   971	                      </Stack>
+   972	                    </Panel>
+   973	                  </Stack>
+   974	                </Section>
+   975	                <Section>
+   976	                  <Stack>
+   977	                    <Sidebar right align="center">
+   978	                      <Heading>見出し</Heading>
+   979	                      <Button>操作</Button>
+   980	                    </Sidebar>
+   981	                    <Panel padding={1.5}>
+   982	                      <Stack gap={1.5}>
+   983	                        <p>説明テキスト。</p>
+   984	                        <Stack gap={0.5}>
+   985	                          <Heading type="blockTitle">タイトル</Heading>
+   986	                          <Groupbox>
+   987	                            <Stack>
+   988	                              <p>説明テキスト。</p>
+   989	                              <DefinitionList>
+   990	                                <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   991	                                <DefinitionListItem maxColumns={3} term="項目">内容</DefinitionListItem>
+   992	                              </DefinitionList>
+   993	                            </Stack>
+   994	                          </Groupbox>
+   995	                        </Stack>
+   996	                      </Stack>
+   997	                    </Panel>
+   998	                  </Stack>
+   999	                </Section>
+  1000	
+  1001	              </Stack>
+  1002	            </Section>
+  1003	          </Sidebar>
+  1004	        </Groupbox>
+  1005	      </Panel>
+  1006	    </Stack>
+  1007	  </Container>
+  1008	</div>
+  1009	```
+  1010	
+  1011	#### モバイル
+  1012	
+  1013	コレクションとシングルの2カラムは広い横幅を必要とするため、画面の横幅が狭いモバイルには適していません。次のいずれかの方法で対処してください。
+  1014	
+  1015	##### コレクションとシングルの2ページに分割する
+  1016	
+  1017	コレクションとシングルの2カラムを、[コレクション（リスト）](#h3-8)と[シングル（1カラム）](#h3-9)の2つのページに分割します。ページレイアウトはそれぞれ[コレクション（リスト）](#h3-8)と[シングル（1カラム）](#h3-9)の形を取ります。
+  1018	
+  1019	<Grid>
+  1020	    <ImgWithDesc description="コレクション（リスト）">
+  1021	    ![実例画像：縦長の画面に、ヘッダー・見出し領域・ナビゲーションのリストが垂直方向に積み重なっている。](./images/collection-and-single-2column-mobile-split-pages-1.png)
+  1022	    </ImgWithDesc>
+  1023	
+  1024	    <ImgWithDesc description="シングル（1カラム）">
+  1025	    ![実例画像：縦長の画面に、ヘッダー・見出し領域・複数のセクションが垂直方向に積み重なっている。](./images/collection-and-single-2column-mobile-split-pages-2.png)
+  1026	    </ImgWithDesc>
+  1027	</Grid>
+  1028	
+  1029	##### [WIP] SideNavをドロワーで表示する
+  1030	
+  1031	<Groupbox className="shr-mt-1">
+  1032	    <ResponseMessage status="info">SideNavをドロワーで表示できるよう、smarthr-uiでの対応を検討中です。</ResponseMessage>
+  1033	</Groupbox>
+  1034	
+  1035	[SideNav](/products/components/side-nav/)を使ったコレクションをドロワーで表示します。コレクションがなくなるため、ページレイアウトは[シングル（1カラム）](#h3-9)の形を取ります。ドロワーは該当のセクション内で開閉できます。ドロワーを開くボタンをセクション内に表示してください。
+  1036	
+  1037	
+  1038	<Grid>
+  1039	    <ImgWithDesc description="ドロワーが閉じている初期状態">
+  1040	    ![実例画像：縦長の画面に、ヘッダー・見出し領域・Panelが垂直方向に積み重なっている。Panel内に、メニューと書かれたボタンと複数のセクションが垂直方向に積み重なっている。](./images/collection-and-single-2column-mobile-drawer-1.png)
+  1041	    </ImgWithDesc>
+  1042	
+  1043	    <ImgWithDesc description="ドロワーが開いた状態">
+  1044	    ![実例画像：縦長の画面に、ヘッダー・見出し領域・Panelが垂直方向に積み重なっている。Panel上に、ナビゲーションのリストが表示されている。](./images/collection-and-single-2column-mobile-drawer-2.png)
+  1045	    </ImgWithDesc>
+  1046	</Grid>
